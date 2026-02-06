@@ -1,0 +1,37 @@
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Data (Keep raw data local usually, unless small sample)
+data/raw/
+data/processed/
+!data/.gitkeep
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
