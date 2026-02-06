@@ -184,5 +184,53 @@ def run_debate(
 
 def save_debate_logs(output_dir: str, debate_result: Dict) -> None:
     os.makedirs(output_dir, exist_ok=True)
+    logs_index: List[Dict] = []
+    severity_counts = {"CRITICAL": 0, "MAJOR": 0, "MINOR": 0}
+    needs_human_review = False
+
+    for entry in debate_result.get("logs", []):
+        entry_type = entry.get("type")
+        round_num = entry.get("round")
+        agent = (entry.get("agent") or "").lower()
+        target = (entry.get("target") or "").lower()
+
+        filename = None
+        if entry_type in ("answer", "revision"):
+            if agent:
+                filename = f"debate_round{round_num}_{agent}.json"
+        elif entry_type == "critique":
+            if agent and target:
+                filename = f"critique_round{round_num}_{agent}_on_{target}.json"
+                critiques = entry.get("data", {}).get("critiques", [])
+                for critique in critiques:
+                    severity = critique.get("severity")
+                    if severity in severity_counts:
+                        severity_counts[severity] += 1
+                        if severity == "CRITICAL":
+                            needs_human_review = True
+
+        if filename:
+            path = os.path.join(output_dir, filename)
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump(entry.get("data"), f, ensure_ascii=False, indent=2)
+            logs_index.append(
+                {
+                    "type": entry_type,
+                    "round": round_num,
+                    "agent": entry.get("agent"),
+                    "target": entry.get("target"),
+                    "file": filename,
+                }
+            )
+
+    summary = {
+        "query": debate_result.get("query"),
+        "max_rounds": debate_result.get("max_rounds"),
+        "final_nla": debate_result.get("final_nla"),
+        "final_ala": debate_result.get("final_ala"),
+        "critique_counts": severity_counts,
+        "needs_human_review": needs_human_review,
+        "logs_index": logs_index,
+    }
     with open(os.path.join(output_dir, "debate_summary.json"), "w", encoding="utf-8") as f:
-        json.dump(debate_result, f, ensure_ascii=False, indent=2)
+        json.dump(summary, f, ensure_ascii=False, indent=2)
