@@ -1,0 +1,10 @@
+{"head": "Harta warisan Minangkabau", "relation": "dibedakan menjadi", "tail": "Harta Pusako Tinggi dan Harta Pusako Rendah", "category": "Klasifikasi Harta", "confidence": 1.0}
+{"head": "Harta Pusako Tinggi", "relation": "adalah", "tail": "harta turun-temurun yang dimiliki oleh suatu kaum secara kolektif", "category": "Definisi Harta", "confidence": 1.0}
+{"head": "Harta Pusako Tinggi", "relation": "diwariskan dari", "tail": "garis ibu (matrilineal)", "category": "Sistem Pewarisan", "confidence": 1.0}
+{"head": "Pengelolaan Harta Pusako Tinggi", "relation": "berada di bawah otoritas", "tail": "Mamak Kepala Waris", "category": "Otoritas Pengelolaan", "confidence": 1.0}
+{"head": "Kepemilikan Harta Pusako Tinggi", "relation": "tetap pada", "tail": "anggota perempuan dalam kaum tersebut", "category": "Hak Kepemilikan", "confidence": 1.0}
+{"head": "Harta Pusako Tinggi", "relation": "tidak boleh diperjualbelikan", "tail": "kecuali dalam kondisi darurat yang diatur secara ketat oleh adat", "category": "Restriksi Harta", "confidence": 1.0}
+{"head": "Contoh kondisi darurat", "relation": "seperti", "tail": "mayat terbujur di tengah rumah", "category": "Contoh Kasus", "confidence": 1.0}
+{"head": "Harta Pusako Rendah", "relation": "adalah", "tail": "harta hasil pencaharian sendiri oleh orang tua selama masa perkawinan", "category": "Definisi Harta", "confidence": 1.0}
+{"head": "Harta Pusako Rendah", "relation": "dapat diwariskan kepada", "tail": "anak kandung sesuai dengan ketentuan hukum Islam atau kesepakatan keluarga", "category": "Sistem Pewarisan", "confidence": 1.0}
+{"head": "Pewarisan Harta Pusako Rendah", "relation": "seringkali memicu ketegangan antara", "tail": "hak kemenakan (berdasarkan adat matrilineal) dan hak anak (berdasarkan hukum nasional/Islam)", "category": "Konflik Hukum", "confidence": 1.0}
