@@ -1,0 +1,15 @@
+langgraph
+langchain-core
+langchain-community
+qdrant-client
+neo4j
+sentence-transformers
+ragas
+pymupdf
+pdfplumber
+openai
+pandas
+numpy
+scikit-learn
+jupyter
+notebook
