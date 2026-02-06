@@ -4,9 +4,9 @@
 **Versi:** 1.0  
 **Tanggal:** 6 Februari 2026  
 **Penulis:** Amien (STIKI/UBHINUS)  
-**Status:** Draft — Siap Eksekusi  
-**Klasifikasi:** Proyek Riset "Serius tapi Santai"  
-**Target Publikasi:** Jurnal Scopus Q1 (Information Fusion / Knowledge-Based Systems / Expert Systems with Applications)
+**Status:** Eksperimentasi Tahap Awal — Riset Aktif  
+**Klasifikasi:** Proyek Riset Fundamental & Eksperimental (Bukan Software Development)  
+**Tujuan Akhir:** Kontribusi Ilmiah (Novelty) & Publikasi Jurnal Scopus Q1
 
 ---
 

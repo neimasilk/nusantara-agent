@@ -1,21 +1,18 @@
-# Nusantara-Agent
+# Nusantara-Agent (Research Repository)
 
 **Neuro-Symbolic Agentic GraphRAG untuk Penalaran Hukum Pluralistik Indonesia**
 
-> **Status:** Riset Aktif ("Serius tapi Santai")  
-> **Target:** Scopus Q1 (Information Fusion / KBS)
+> **🚨 PENTING:** Ini bukan proyek pengembangan software komersial. Repositori ini adalah **repositori riset ilmiah** dengan target publikasi pada jurnal internasional bereputasi (**Scopus Q1**: *Information Fusion*, *Knowledge-Based Systems*, atau *Expert Systems with Applications*).
 
-## Visi Proyek
-Nusantara-Agent adalah sistem Multi-Agent Retrieval-Augmented Generation (RAG) berbasis arsitektur Neuro-Simbolik yang dirancang untuk menavigasi kompleksitas hukum pluralistik di Indonesia (Hukum Nasional, Adat, dan Islam).
+## Fokus Penelitian
+Fokus utama proyek ini adalah pada **kontribusi ilmiah** dan **novelty** di bidang AI & Hukum, mencakup:
+1.  **Arsitektur Novel**: Integrasi Neuro-Simbolik dengan Multi-Agent GraphRAG untuk menangani konflik norma.
+2.  **Konstruksi Pengetahuan**: Metodologi otomatisasi ekstraksi tripel dari teks hukum adat yang tidak terstruktur.
+3.  **Metrik Baru**: Pengembangan *Cultural Consistency Score (CCS)* untuk mengukur keselarasan AI dengan budaya *high-context*.
 
-Proyek ini bukan sekadar pengembangan software, melainkan **penelitian eksperimental** untuk menjawab tantangan:
-*   Bagaimana AI bernalar di tengah konflik norma?
-*   Bagaimana membangun Knowledge Graph hukum adat dari teks antropologi yang tidak terstruktur?
-*   Bagaimana mengukur "pemahaman budaya" (cultural alignment) dalam AI?
-
-## Filosofi "Serius tapi Santai"
-*   **Serius:** Target impak tinggi, metodologi rigor, kontribusi novel untuk komunitas ilmiah global.
-*   **Santai:** Timeline fleksibel (6-12 bulan), mengutamakan intuisi peneliti, terbuka terhadap *trial and error* atau pivot di tengah jalan.
+## Filosofi Riset: "Serius tapi Santai"
+*   **Serius:** Mengikuti metodologi ilmiah yang ketat (Rigorous), melakukan *Ablation Study*, dan memastikan *Reproducibility*.
+*   **Santai:** Pendekatan eksperimental (Trial & Error). Kegagalan teknis dalam eksperimen dianggap sebagai temuan riset yang valid dan akan didokumentasikan sebagai limitasi atau *future work*.
 
 ## Struktur Direktori
 *   `data/`: Penyimpanan data mentah (PDF Jurnal) dan olahan (Knowledge Graph dumps).
