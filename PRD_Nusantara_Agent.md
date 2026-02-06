@@ -26,7 +26,8 @@
 12. [Manajemen Risiko](#12-manajemen-risiko)
 13. [Strategi Publikasi](#13-strategi-publikasi)
 14. [Budget & Resource Estimation](#14-budget--resource-estimation)
-15. [Appendix](#15-appendix)
+15. [Collaborative Framework (Multi-Human, Multi-Agent, Multi-Computer)](#15-collaborative-framework)
+16. [Appendix](#16-appendix)
 
 ---
 
@@ -34,11 +35,11 @@
 
 ### Apa yang Kita Bangun?
 
-**Nusantara-Agent** adalah sistem Multi-Agent Retrieval-Augmented Generation (RAG) berbasis arsitektur Neuro-Simbolik yang dirancang untuk melakukan penalaran hukum pluralistik di Indonesia. Sistem ini mengorkestrasi beberapa agen spesialis — masing-masing mewakili sistem hukum yang berbeda (Nasional, Adat, Islam) — untuk menjawab pertanyaan hukum kompleks yang memerlukan rekonsiliasi antar-norma yang saling bertentangan.
+**Nusantara-Agent** adalah sistem Multi-Agent Retrieval-Augmented Generation (RAG) berbasis arsitektur Neuro-Simbolik yang dirancang untuk melakukan penalaran hukum pluralistik di Indonesia. Sistem ini mengorkestrasi kolaborasi antara **agen AI spesialis** dan **kolaborator manusia** (peneliti/annotator) dalam lingkungan kerja terdistribusi (multi-computer).
 
 ### Mengapa Ini Penting?
 
-Indonesia memiliki sistem hukum pluralistik di mana Hukum Nasional (warisan sipil Belanda), Hukum Adat (ratusan variasi lokal), dan Hukum Islam hidup berdampingan. LLM standar gagal total menangani konflik norma ini karena mereka bekerja secara probabilistik, bukan logis. Tidak ada sistem AI manapun di dunia yang saat ini mampu menalar secara lintas-sistem-hukum dalam konteks budaya "high-context" seperti Indonesia.
+Indonesia memiliki sistem hukum pluralistik yang sangat kompleks. Menangani hal ini memerlukan fusi antara kecepatan pemrosesan AI dan intuisi mendalam dari banyak peneliti manusia. Nusantara-Agent dibangun sebagai ekosistem di mana banyak manusia dan banyak agen bisa bekerja sama secara sinkron lintas perangkat.
 
 ### Mengapa "Santai"?
 
@@ -949,7 +950,38 @@ Jika waktu atau resource terbatas, prioritaskan komponen berikut:
 
 ---
 
-## 15. Appendix
+## 15. Collaborative Framework (Multi-Human, Multi-Agent, Multi-Computer)
+
+Untuk mendukung riset yang dikerjakan oleh banyak orang dan dijalankan di banyak mesin, Nusantara-Agent mengadopsi prinsip **Distributed Research Environment**.
+
+### 15.1 Sinkronisasi Lintas Komputer
+
+| Komponen | Solusi Sinkronisasi | Alasan |
+|----------|---------------------|--------|
+| **Source Code** | Git + GitHub | Standar kolaborasi kode & versioning |
+| **Knowledge Graph** | Neo4j Aura / Shared DB | Satu sumber kebenaran (Single Source of Truth) untuk data graf |
+| **Vector Database** | Qdrant Cloud / Dockerized Shared | Konsistensi hasil retrieval lintas komputer |
+| **API Keys/Secrets** | `.env` (Local) + Vault (Shared) | Keamanan akses DeepSeek API |
+| **Data Mentah (PDF)** | Shared Cloud Drive / DVC | Memastikan semua peneliti bekerja pada korpus yang sama |
+
+### 15.2 Interaksi Multi-Human & Multi-Agent
+
+Sistem dirancang dengan mekanisme **Human-in-the-Loop (HITL)**:
+
+1.  **AI sebagai Drafter**: Agen mengekstrak tripel dan menyusun draf jawaban.
+2.  **Human sebagai Validator**: Peneliti meninjau hasil ekstraksi (Eksperimen 1) dan memberikan feedback melalui file anotasi.
+3.  **Collaborative Refinement**: Feedback manusia diumpankan kembali ke agen supervisor untuk memperbaiki penalaran dalam siklus *self-correction*.
+
+### 15.3 Workflow Peneliti Terdistribusi
+
+Setiap anggota tim riset mengikuti protokol berikut:
+1.  **Environment Parity**: Menggunakan `requirements.txt` dan Docker untuk memastikan hasil eksperimen konsisten di komputer manapun.
+2.  **Atomic Commits**: Mendokumentasikan setiap eksperimen (seperti folder `experiments/`) secara mandiri sehingga bisa di-review oleh anggota tim lain.
+3.  **Shared Memory**: Menggunakan sistem logging terpusat untuk melacak API cost dan efektivitas prompt lintas pengguna.
+
+---
+
+## 16. Appendix
 
 ### A. Contoh Kasus Uji (Golden Test Set Preview)
 
