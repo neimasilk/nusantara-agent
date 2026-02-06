@@ -1,47 +1,52 @@
 % Minangkabau inheritance rules (DRAFT, needs human verification)
-% Facts & simple rules for early experiments.
+% Logic for neuro-symbolic reasoning experiments.
 
-% Lineage
+% --- Facts ---
 matrilineal.
 
+% Gender facts (to be asserted at runtime)
+% female(Person).
+% male(Person).
+
 % Asset classification
-pusako_tinggi_asset(rumah_gadang).
-pusako_tinggi_asset(sawah_ladang).
-pusako_tinggi_asset(hutan_tanah).
-pusako_tinggi_asset(pandam_pakuburan).
-pusako_tinggi_asset(luak_tapian).
-pusako_tinggi_asset(dangau_paladangan).
+asset_type(rumah_gadang, pusako_tinggi).
+asset_type(sawah_ladang, pusako_tinggi).
+asset_type(hutan_tanah, pusako_tinggi).
+asset_type(harta_pencaharian, pusako_rendah).
+asset_type(hibah, pusako_rendah).
 
-pusako_rendah_asset(harta_pencaharian).
-pusako_rendah_asset(hibah).
-pusako_rendah_asset(hadiah).
+% Ownership
+ownership_type(pusako_tinggi, komunal).
+ownership_type(pusako_rendah, keluarga_inti).
 
-% Ownership & distribution
-ownership(pusako_tinggi, komunal).
-ownership(pusako_rendah, komunal).
-distribution(pusako_rendah, musyawarah_keluarga).
-distribution(pusako_rendah, faraidh).
+% --- Inference Rules ---
 
-% Heir roles
-heir_role(pusako_tinggi, anak_perempuan).
-heir_role(pusako_tinggi, kemenakan).
-heir_role(pusako_rendah, anak_laki_laki).
-heir_role(pusako_rendah, anak_perempuan).
+% Pusako Tinggi: Hanya perempuan dalam garis matrilineal yang mewarisi hak pakai
+can_inherit(Person, Asset) :-
+    asset_type(Asset, pusako_tinggi),
+    female(Person).
 
-% Governance
-supervision(pusako_tinggi, mamak).
-management(pusako_tinggi, perempuan).
+% Pusako Rendah: Anak laki-laki dan perempuan berhak (mengikuti kesepakatan/faraidh)
+can_inherit(Person, Asset) :-
+    asset_type(Asset, pusako_rendah),
+    (female(Person) ; male(Person)).
 
-% Restrictions
-no_external_interference(pusako_tinggi).
-transfer_requires_consensus(pusako_tinggi).
+% Role checking
+is_mamak_kepala_waris(Person) :-
+    male(Person),
+    % Di dunia nyata, ini butuh pengecekan silsilah (anak laki-laki tertua garis ibu)
+    % Untuk eksperimen awal, kita asumsikan jika male maka bisa jadi mamak jika tertua
+    true.
 
-% Dispute resolution
-dispute_resolution(sengketa_adat, musyawarah_keluarga).
-dispute_resolution(sengketa_adat, pengadilan_adat_nagari).
+% Conflict Detection: Penjualan pusako tinggi tanpa konsensus
+conflict(Asset, sell) :-
+    asset_type(Asset, pusako_tinggi),
+    \+ consensus_reached.
 
-% Derived rules
-eligible_heir(Asset, Role) :- heir_role(Asset, Role).
+% Dispute Resolution path
+resolution_step(sengketa_adat, 1, musyawarah_keluarga).
+resolution_step(sengketa_adat, 2, pengadilan_adat_nagari).
 
-% Example constraint: pusako_tinggi tidak diwariskan ke anak_laki_laki
-not_eligible_heir(pusako_tinggi, anak_laki_laki).
+% --- Helper Rules ---
+status_waris(Asset, "Hanya untuk Perempuan") :- asset_type(Asset, pusako_tinggi).
+status_waris(Asset, "Laki-laki & Perempuan") :- asset_type(Asset, pusako_rendah).

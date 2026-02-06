@@ -1,0 +1,467 @@
+[
+  {
+    "id": "TC-05-001",
+    "scenario": "Budi adalah seorang laki-laki Minangkabau. Ibunya meninggal dunia dan meninggalkan sebuah Rumah Gadang yang merupakan harta pusako tinggi. Budi menuntut hak waris atas Rumah Gadang tersebut.",
+    "fact_check": {
+      "person": "Budi",
+      "gender": "male",
+      "asset": "rumah_gadang",
+      "asset_type": "pusako_tinggi",
+      "relationships": [
+        "parent(ibu_budi, budi)",
+        "female(ibu_budi)",
+        "male(budi)"
+      ]
+    },
+    "expected_symbolic_result": "deny_inheritance",
+    "reasoning_logic": "Pusako tinggi hanya boleh diwariskan kepada anak perempuan/garis matrilineal perempuan. Laki-laki hanya memiliki hak pakai/pengawasan, bukan hak milik waris.",
+    "complexity": "easy"
+  },
+  {
+    "id": "TC-05-002",
+    "scenario": "Siti adalah seorang perempuan Minangkabau. Ayahnya meninggal dunia dan meninggalkan uang tabungan hasil bekerja sebagai pedagang (harta pencaharian/pusako rendah). Siti dan saudara laki-lakinya, Ali, mendiskusikan pembagian warisan.",
+    "fact_check": {
+      "person": "Siti",
+      "gender": "female",
+      "asset": "harta_pencaharian",
+      "asset_type": "pusako_rendah",
+      "relationships": [
+        "parent(ayah_siti, siti)",
+        "female(siti)"
+      ]
+    },
+    "expected_symbolic_result": "allow_inheritance",
+    "reasoning_logic": "Pusako rendah (harta pencaharian) boleh diwariskan kepada anak laki-laki dan perempuan melalui musyawarah atau hukum Islam (faraidh).",
+    "complexity": "easy"
+  },
+  {
+    "id": "TC-05-003",
+    "scenario": "Keluarga suku Chaniago ingin menjual sawah ladang yang merupakan harta pusako tinggi untuk membiayai bisnis salah satu anggota keluarga. Namun, tidak ada kesepakatan (konsensus) dari seluruh anggota kaum.",
+    "fact_check": {
+      "asset": "sawah_ladang",
+      "asset_type": "pusako_tinggi",
+      "action": "sell",
+      "consensus": false,
+      "relationships": []
+    },
+    "expected_symbolic_result": "conflict_detected",
+    "reasoning_logic": "Penjualan pusako tinggi dilarang keras tanpa konsensus seluruh anggota kaum.",
+    "complexity": "medium"
+  },
+  {
+    "id": "TC-05-004",
+    "scenario": "Ibu Aminah meninggal dunia tanpa memiliki anak perempuan. Ia hanya memiliki seorang anak laki-laki bernama Buyung. Namun, Aminah memiliki seorang saudara perempuan bernama Fatimah, yang memiliki anak perempuan bernama Ani. Siapakah yang mewarisi Rumah Gadang (pusako tinggi) milik Aminah?",
+    "fact_check": {
+      "person": "Ani",
+      "gender": "female",
+      "asset": "rumah_gadang",
+      "asset_type": "pusako_tinggi",
+      "relationships": [
+        "parent(aminah, buyung)",
+        "male(buyung)",
+        "female(aminah)",
+        "sibling(aminah, fatimah)",
+        "female(fatimah)",
+        "parent(fatimah, ani)",
+        "female(ani)"
+      ]
+    },
+    "expected_symbolic_result": "allow_inheritance",
+    "reasoning_logic": "Karena tidak ada anak perempuan (Buyung adalah laki-laki), maka pusako tinggi jatuh ke kemenakan perempuan (Ani) melalui garis saudara perempuan (Fatimah).",
+    "complexity": "hard"
+  },
+  {
+    "id": "TC-05-005",
+    "scenario": "Sebuah keluarga suku Minang punah (punah) karena tidak ada lagi keturunan perempuan. Anggota keluarga laki-laki yang tersisa mengklaim kepemilikan atas sawah ladang pusako tinggi.",
+    "fact_check": {
+      "asset": "sawah_ladang",
+      "asset_type": "pusako_tinggi",
+      "relationships": [
+        "male(ujang)",
+        "not_female_exists"
+      ]
+    },
+    "expected_symbolic_result": "punah_detected",
+    "reasoning_logic": "Harta pusako tinggi dianggap punah jika tidak ada lagi keturunan perempuan dalam garis matrilineal. Laki-laki tidak bisa mewarisinya sebagai hak milik.",
+    "complexity": "hard"
+  },
+  {
+    "id": "TC-05-006",
+    "scenario": "Zubir adalah laki-laki tertua di kaumnya (Mamak Kepala Waris). Ia ingin menjaminkan sawah pusako tinggi untuk membiayai sekolah keponakannya (kemenakan) yang yatim piatu di luar negeri. Seluruh anggota kaum setuju. Apakah tindakan ini secara formal diperbolehkan sebagai hak milik?",
+    "fact_check": {
+      "person": "Zubir",
+      "gender": "male",
+      "asset": "sawah_ladang",
+      "asset_type": "pusako_tinggi",
+      "action": "collateral",
+      "consensus": true,
+      "relationships": [
+        "male(zubir)",
+        "sibling(zubir, f_saudara)",
+        "female(f_saudara)",
+        "parent(f_saudara, kemenakan_x)"
+      ]
+    },
+    "expected_symbolic_result": "deny_inheritance",
+    "reasoning_logic": "Meskipun untuk tujuan baik dan ada konsensus, Mamak Kepala Waris hanya memiliki hak kelola, bukan hak milik. Hak milik/waris tetap pada perempuan. LLM mungkin terkecoh oleh aspek moral/konsensus.",
+    "complexity": "hard"
+  },
+  {
+    "id": "TC-05-007",
+    "scenario": "Sutan memiliki sebidang tanah dari hasil hibah (pusako rendah). Ia meninggal tanpa wasiat. Sutan memiliki satu anak perempuan dan satu keponakan laki-laki dari saudara perempuannya. Siapa yang secara formal mewarisi tanah tersebut?",
+    "fact_check": {
+      "person": "anak_perempuan_sutan",
+      "gender": "female",
+      "asset": "tanah_hibah",
+      "asset_type": "pusako_rendah",
+      "relationships": [
+        "parent(sutan, anak_perempuan_sutan)",
+        "female(anak_perempuan_sutan)",
+        "sibling(sutan, f_saudara)",
+        "female(f_saudara)",
+        "parent(f_saudara, keponakan_l)",
+        "male(keponakan_l)"
+      ]
+    },
+    "expected_symbolic_result": "allow_inheritance",
+    "reasoning_logic": "Untuk pusako rendah (hibah), ahli waris adalah anak kandung (parent-child). LLM mungkin salah mengarahkan ke keponakan karena pengaruh sistem matrilineal pusako tinggi.",
+    "complexity": "hard"
+  },
+  {
+    "id": "TC-05-008",
+    "scenario": "Sebuah rumah gadang (pusako tinggi) tidak memiliki keturunan perempuan di garis pertama (anak), tetapi ada cucu perempuan dari saudara perempuan nenek (kemenakan jauh). Apakah rumah gadang tersebut dianggap punah?",
+    "fact_check": {
+      "asset": "rumah_gadang",
+      "asset_type": "pusako_tinggi",
+      "relationships": [
+        "female(cucu_perempuan_jauh)",
+        "kemenakan(cucu_perempuan_jauh, x)"
+      ]
+    },
+    "expected_symbolic_result": "not_punah",
+    "reasoning_logic": "Selama masih ada keturunan perempuan dalam kaum (termasuk kemenakan), pusako tinggi tidak punah. LLM mungkin menganggap punah jika hanya melihat garis anak langsung.",
+    "complexity": "hard"
+  },
+  {
+    "id": "TC-05-009",
+    "scenario": "Andi (laki-laki) ingin menuntut hak milik atas sawah pusako tinggi karena ia adalah satu-satunya anggota keluarga yang tersisa yang menggarap sawah tersebut selama 30 tahun.",
+    "fact_check": {
+      "person": "andi",
+      "gender": "male",
+      "asset": "sawah_ladang",
+      "asset_type": "pusako_tinggi",
+      "relationships": [
+        "male(andi)"
+      ]
+    },
+    "expected_symbolic_result": "deny_inheritance",
+    "reasoning_logic": "Pengabdian waktu tidak mengubah status hukum pusako tinggi. Laki-laki tetap tidak bisa memiliki hak milik. LLM mungkin memberikan simpati hukum (adverse possession) yang salah.",
+    "complexity": "hard"
+  },
+  {
+    "id": "TC-05-010",
+    "scenario": "Harta hasil tembilang emas (pusako rendah) akan dibagikan. Keluarga memutuskan untuk mengabaikan hukum Islam (faraidh) dan membaginya sama rata antara anak laki-laki dan perempuan melalui musyawarah. Apakah ini secara formal sah dalam adat Minangkabau?",
+    "fact_check": {
+      "asset": "harta_tembilang_emas",
+      "asset_type": "pusako_rendah",
+      "action": "distribution",
+      "consensus": true
+    },
+    "expected_symbolic_result": "allow_inheritance",
+    "reasoning_logic": "Pusako rendah mengutamakan musyawarah keluarga. Jika mufakat tercapai, pembagian sama rata adalah sah. LLM mungkin bersikeras pada faraidh secara kaku.",
+    "complexity": "medium"
+  },
+  {
+    "id": "TC-05-011",
+    "scenario": "Seorang Mamak Kepala Waris menjual tanah pusako tinggi untuk membayar hutang pribadi. Ia mengklaim memiliki wewenang penuh atas harta kaum. Apakah tindakan ini sah secara formal?",
+    "fact_check": {
+      "asset": "tanah_kaum",
+      "asset_type": "pusako_tinggi",
+      "action": "sell",
+      "consensus": false
+    },
+    "expected_symbolic_result": "conflict_detected",
+    "reasoning_logic": "Mamak tidak punya wewenang menjual tanpa konsensus dan bukan untuk kepentingan kaum (darurat). LLM harus bisa mendeteksi penyalahgunaan wewenang ini.",
+    "complexity": "medium"
+  },
+  {
+    "id": "TC-05-012",
+    "scenario": "Rina adalah keponakan perempuan dari pihak ibu (kemenakan) almarhumah Siti. Siti tidak punya anak. Rina ingin menempati rumah gadang Siti. Apakah Rina memiliki hak waris/pakai secara formal?",
+    "fact_check": {
+      "person": "rina",
+      "gender": "female",
+      "asset": "rumah_gadang",
+      "asset_type": "pusako_tinggi",
+      "relationships": [
+        "female(rina)",
+        "kemenakan(rina, siti_brother)",
+        "sibling(siti, siti_brother)",
+        "female(siti)"
+      ]
+    },
+    "expected_symbolic_result": "allow_inheritance",
+    "reasoning_logic": "Kemenakan perempuan mewarisi pusako tinggi jika tidak ada anak perempuan. Ini adalah inti matrilineal.",
+    "complexity": "medium"
+  },
+  {
+    "id": "TC-05-013",
+    "scenario": "Harta yang diperoleh dari hadiah pernikahan (pusako rendah) diklaim oleh Mamak Kepala Waris sebagai harta kaum yang harus masuk ke kantong komunal. Apakah klaim ini benar secara formal?",
+    "fact_check": {
+      "asset": "hadiah_nikah",
+      "asset_type": "pusako_rendah",
+      "action": "communal_claim",
+      "consensus": false
+    },
+    "expected_symbolic_result": "deny_inheritance",
+    "reasoning_logic": "Pusako rendah adalah milik keluarga inti/pribadi, bukan komunal kaum. LLM mungkin bingung dengan definisi 'pusako'.",
+    "complexity": "hard"
+  },
+  {
+    "id": "TC-05-014",
+    "scenario": "Seorang laki-laki Minangkabau ingin mewariskan rumah hasil kerjanya sendiri di perantauan (pusako rendah) HANYA kepada anak laki-lakinya, mengabaikan anak perempuannya. Apakah ini diperbolehkan dalam prinsip musyawarah adat?",
+    "fact_check": {
+      "person": "anak_perempuan",
+      "gender": "female",
+      "asset": "rumah_rantau",
+      "asset_type": "pusako_rendah",
+      "relationships": [
+        "parent(ayah, anak_perempuan)",
+        "female(anak_perempuan)"
+      ]
+    },
+    "expected_symbolic_result": "allow_inheritance",
+    "reasoning_logic": "Anak perempuan tetap memiliki hak dasar atas pusako rendah. Pengabaian total tanpa alasan syar'i/mufakat adalah pelanggaran. LLM mungkin salah menganggap laki-laki bebas menentukan pusako rendah.",
+    "complexity": "hard"
+  },
+  {
+    "id": "TC-05-015",
+    "scenario": "Sawah pusako tinggi digadaikan oleh Mamak untuk biaya penguburan anggota kaum perempuan yang meninggal dan tidak punya biaya. Konsensus tercapai. Apakah ini secara formal sah?",
+    "fact_check": {
+      "asset": "sawah_adat",
+      "asset_type": "pusako_tinggi",
+      "action": "pawn",
+      "consensus": true
+    },
+    "expected_symbolic_result": "allow_inheritance",
+    "reasoning_logic": "Ini adalah salah satu dari 4 kondisi darurat (mayat terbujur di tengah rumah) yang membolehkan gadai pusako tinggi. LLM harus mengenali pengecualian ini.",
+    "complexity": "hard"
+  },
+  {
+    "id": "TC-05-016",
+    "scenario": "Seorang anak laki-laki menuntut pembagian warisan tanah ayahnya di Padang berdasarkan KUHPerdata (pembagian sama rata antara laki-laki dan perempuan). Tanah tersebut ternyata adalah harta pusako tinggi kaum ibunya. Siapakah yang berhak?",
+    "fact_check": {
+      "person": "anak_laki_laki",
+      "gender": "male",
+      "asset": "tanah_kaum",
+      "asset_type": "pusako_tinggi",
+      "relationships": [
+        "male(anak_laki_laki)"
+      ]
+    },
+    "expected_symbolic_result": "deny_inheritance",
+    "reasoning_logic": "Pusako tinggi tetap tunduk pada hukum adat (matrilineal) meskipun ada tuntutan berdasarkan hukum nasional. Anak laki-laki tidak berhak atas hak milik pusako tinggi.",
+    "complexity": "hard"
+  },
+  {
+    "id": "TC-05-017",
+    "scenario": "Berdasarkan Yurisprudensi MA No. 179 K/Sip/1961, harta pencaharian (pusako rendah) dari seorang ayah jatuh ke tangan anak-anaknya. Seorang keponakan (kemenakan) menuntut harta tersebut berdasarkan adat matrilineal lama. Apakah tuntutan kemenakan secara formal ditolak?",
+    "fact_check": {
+      "person": "kemenakan",
+      "gender": "female",
+      "asset": "harta_pencaharian",
+      "asset_type": "pusako_rendah",
+      "relationships": [
+        "female(kemenakan)",
+        "kemenakan(kemenakan, paman)"
+      ]
+    },
+    "expected_symbolic_result": "deny_inheritance",
+    "reasoning_logic": "Untuk pusako rendah, yurisprudensi MA menguatkan hak anak di atas kemenakan. Rule engine harus menolak kemenakan jika ada anak (default pusako rendah).",
+    "complexity": "hard"
+  },
+  {
+    "id": "TC-05-018",
+    "scenario": "Tanah ulayat nagari dipinjamkan kepada sebuah perusahaan dengan izin dari Ninik Mamak dan Kerapatan Adat Nagari (KAN). Salah satu anggota kaum menggugat karena merasa tidak mendapat bagian. Apakah gugatan ini valid jika konsensus adat sudah tercapai?",
+    "fact_check": {
+      "asset": "tanah_ulayat",
+      "asset_type": "pusako_tinggi",
+      "action": "lease",
+      "consensus": true
+    },
+    "expected_symbolic_result": "allow_inheritance",
+    "reasoning_logic": "Pengelolaan tanah ulayat oleh KAN dengan mufakat adalah sah secara adat. Gugatan individu terhadap mufakat kaum biasanya lemah.",
+    "complexity": "medium"
+  },
+  {
+    "id": "TC-05-019",
+    "scenario": "Seseorang yang bukan anggota suku Minangkabau (orang luar) membeli tanah pusako tinggi yang dijual secara rahasia oleh seorang anggota kaum tanpa sepengetahuan Mamak. Apakah transaksi ini sah secara formal?",
+    "fact_check": {
+      "asset": "tanah_pusako",
+      "asset_type": "pusako_tinggi",
+      "action": "sell",
+      "consensus": false
+    },
+    "expected_symbolic_result": "conflict_detected",
+    "reasoning_logic": "Penjualan pusako tinggi ke orang luar tanpa konsensus kaum adalah 'batal demi hukum' adat.",
+    "complexity": "hard"
+  },
+  {
+    "id": "TC-05-020",
+    "scenario": "Sepasang suami istri di Padang bercerai. Mereka memiliki rumah yang dibeli bersama selama pernikahan. Suami ingin membawa rumah tersebut sebagai harta miliknya sendiri. Bagaimana status formal harta ini dalam adat?",
+    "fact_check": {
+      "asset": "rumah_bersama",
+      "asset_type": "pusako_rendah",
+      "action": "individual_claim",
+      "consensus": false
+    },
+    "expected_symbolic_result": "conflict_detected",
+    "reasoning_logic": "Harta pencaharian (pusako rendah) yang diperoleh selama nikah adalah milik bersama (suarang beragih) yang harus dibagi, bukan diklaim sepihak.",
+    "complexity": "medium"
+  },
+  {
+    "id": "TC-05-021",
+    "scenario": "Seorang paman (Mamak) menghibahkan harta pusako tinggi kepada anak kandungnya sendiri tanpa persetujuan saudara perempuannya. Apakah hibah ini sah secara formal?",
+    "fact_check": {
+      "asset": "pusako_tinggi_hibah",
+      "asset_type": "pusako_tinggi",
+      "action": "hibah",
+      "consensus": false
+    },
+    "expected_symbolic_result": "conflict_detected",
+    "reasoning_logic": "Mamak tidak boleh menghibahkan pusako tinggi (milik kaum) kepada anak kandungnya (beda kaum dalam matrilineal) tanpa mufakat kaum.",
+    "complexity": "hard"
+  },
+  {
+    "id": "TC-05-022",
+    "scenario": "Seorang perempuan Minang meninggal tanpa anak, tanpa saudara perempuan, dan tanpa kemenakan perempuan. Harta pusako tingginya diklaim oleh saudara laki-laki satu-satunya. Apakah klaim ini sah?",
+    "fact_check": {
+      "person": "saudara_laki",
+      "gender": "male",
+      "asset": "tanah_waris",
+      "asset_type": "pusako_tinggi",
+      "relationships": [
+        "male(saudara_laki)"
+      ]
+    },
+    "expected_symbolic_result": "punah_detected",
+    "reasoning_logic": "Tanpa keturunan perempuan, harta tersebut punah sebatang kara dan harus dikelola oleh kaum yang lebih luas, bukan menjadi hak milik laki-laki.",
+    "complexity": "hard"
+  },
+  {
+    "id": "TC-05-023",
+    "scenario": "Harta pusako rendah (pencaharian) dari ibu yang meninggal dunia akan dibagikan kepada anak laki-laki dan perempuannya. Apakah pembagian ini diperbolehkan?",
+    "fact_check": {
+      "person": "anak_laki_laki",
+      "gender": "male",
+      "asset": "emas_pencaharian",
+      "asset_type": "pusako_rendah",
+      "relationships": [
+        "parent(ibu, anak_laki_laki)",
+        "male(anak_laki_laki)"
+      ]
+    },
+    "expected_symbolic_result": "allow_inheritance",
+    "reasoning_logic": "Pusako rendah diwarisi oleh anak kandung, baik laki-laki maupun perempuan.",
+    "complexity": "easy"
+  },
+  {
+    "id": "TC-05-024",
+    "scenario": "Seorang anggota kaum menggadaikan sawah pusako tinggi untuk biaya sekolah anaknya. Anggota kaum lain tidak setuju (tidak ada konsensus). Apakah tindakan ini diperbolehkan?",
+    "fact_check": {
+      "asset": "sawah_kaum",
+      "asset_type": "pusako_tinggi",
+      "action": "pawn",
+      "consensus": false
+    },
+    "expected_symbolic_result": "conflict_detected",
+    "reasoning_logic": "Gadai pusako tinggi tanpa konsensus untuk kepentingan pribadi (sekolah anak) bukan termasuk kategori darurat adat yang diizinkan.",
+    "complexity": "hard"
+  },
+  {
+    "id": "TC-05-025",
+    "scenario": "Seorang ayah di perantauan ingin menghibahkan seluruh harta pencaharian kepada anak-anaknya. Adat Minangkabau modern (Yurisprudensi MA) mengakui hal ini. Apakah secara formal ini diizinkan?",
+    "fact_check": {
+      "person": "anak",
+      "gender": "female",
+      "asset": "harta_ayah",
+      "asset_type": "pusako_rendah",
+      "relationships": [
+        "parent(ayah, anak)"
+      ]
+    },
+    "expected_symbolic_result": "allow_inheritance",
+    "reasoning_logic": "Pusako rendah memang ditujukan untuk anak kandung dalam praktik hukum kontemporer dan adat modern.",
+    "complexity": "easy"
+  },
+  {
+    "id": "TC-05-026",
+    "scenario": "Sengketa waris pusako tinggi tidak bisa diselesaikan di tingkat keluarga. Para pihak langsung membawa kasus ke Pengadilan Negeri tanpa melalui Pengadilan Adat Nagari (KAN). Apakah prosedur ini benar menurut tata krama hukum adat?",
+    "fact_check": {
+      "asset": "rumah_gadang",
+      "asset_type": "pusako_tinggi",
+      "action": "litigation",
+      "dispute_step": "skip_kan"
+    },
+    "expected_symbolic_result": "conflict_detected",
+    "reasoning_logic": "Secara formal adat, sengketa harus diselesaikan 'bajanjang naiak, batanggo turun' (melalui KAN sebelum ke PN).",
+    "complexity": "medium"
+  },
+  {
+    "id": "TC-05-027",
+    "scenario": "Harta pusako rendah berupa emas perhiasan ibu akan diberikan kepada anak perempuannya sebagai bekal pernikahan. Apakah ini sah?",
+    "fact_check": {
+      "person": "anak_p",
+      "gender": "female",
+      "asset": "emas_ibu",
+      "asset_type": "pusako_rendah",
+      "relationships": [
+        "parent(ibu, anak_p)",
+        "female(anak_p)"
+      ]
+    },
+    "expected_symbolic_result": "allow_inheritance",
+    "reasoning_logic": "Sah, pusako rendah diwariskan ke anak kandung.",
+    "complexity": "easy"
+  },
+  {
+    "id": "TC-05-028",
+    "scenario": "Seorang laki-laki yang menikahi perempuan Minang (orang semenda) ingin menguasai harta pusako tinggi keluarga istrinya setelah istrinya meninggal. Apakah ia berhak secara formal?",
+    "fact_check": {
+      "person": "suami_semenda",
+      "gender": "male",
+      "asset": "rumah_istri",
+      "asset_type": "pusako_tinggi",
+      "relationships": [
+        "male(suami_semenda)"
+      ]
+    },
+    "expected_symbolic_result": "deny_inheritance",
+    "reasoning_logic": "Orang semenda (suami) tidak punya hak waris atas pusako tinggi keluarga istri. Hak tersebut kembali ke kaum istri.",
+    "complexity": "medium"
+  },
+  {
+    "id": "TC-05-029",
+    "scenario": "Sebuah harta pusako tinggi berupa sawah ladang diwariskan kepada tiga orang anak perempuan almarhumah pemilik asli. Bagaimana status kepemilikan mereka?",
+    "fact_check": {
+      "asset": "sawah_bersama",
+      "asset_type": "pusako_tinggi",
+      "ownership": "communal"
+    },
+    "expected_symbolic_result": "allow_inheritance",
+    "reasoning_logic": "Benar, anak-anak perempuan mewarisi hak pakai secara komunal.",
+    "complexity": "easy"
+  },
+  {
+    "id": "TC-05-030",
+    "scenario": "Keponakan laki-laki (kemenakan) ingin menjual tanah pusako tinggi untuk membayar hutang judi paman (Mamak)-nya. Konsensus kaum menolak. Apakah tindakan ini bisa dipaksakan secara formal?",
+    "fact_check": {
+      "asset": "tanah_adat",
+      "asset_type": "pusako_tinggi",
+      "action": "sell",
+      "consensus": false
+    },
+    "expected_symbolic_result": "conflict_detected",
+    "reasoning_logic": "Tanpa konsensus dan bukan alasan darurat yang sah, pusako tinggi tidak bisa dijual.",
+    "complexity": "medium"
+  }
+]

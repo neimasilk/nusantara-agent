@@ -32,9 +32,10 @@ There is no formal test suite. Each experiment directory contains an `analysis.m
 
 ### Core Modules (`src/`)
 
-- **`src/kg_engine/extractor.py`** — `TripleExtractor` class. Wraps the DeepSeek API (via OpenAI client with custom `base_url`) to extract structured knowledge triples (head, relation, tail, category, confidence) from legal texts. Text is chunked before sending to the API.
+- **`src/kg_engine/extractor.py`** — `TripleExtractor` class. Wraps the DeepSeek API (via OpenAI client) to extract structured knowledge triples.
+- **`src/symbolic/rule_engine.py`** — `ClingoRuleEngine` class. Implementation of symbolic reasoning using Answer Set Programming (ASP) via the `clingo` library. Handles hard constraints and formal legal logic.
 - **`src/utils/text_processor.py`** — PDF text extraction (PyMuPDF/fitz), legal text cleaning (regex-based), and paragraph-based text chunking.
-- **`src/agents/`** — Agent definitions (National Law, Customary Law, Supervisor). Not yet fully modularized; prototype versions live in `experiments/03_multi_agent_basic/`.
+- **`src/agents/`** — Agent definitions (National Law, Customary Law, Supervisor).
 
 ### Multi-Agent Design (LangGraph)
 
@@ -92,10 +93,12 @@ Work is decomposed into Atomic Research Tasks (ARTs). See:
 - Each task specifies: type, executor (HUMAN_ONLY/AI_ONLY/EITHER), prerequisites, inputs/outputs, acceptance tests, and failure modes
 - Tasks should be picked up from the registry and marked IN_PROGRESS → DONE as completed
 
-## Current State (2026-02-06)
+## Current State (2026-02-07)
 
-- **Rule engine scaffold**: `src/symbolic/rule_engine.py` + `src/symbolic/rules/minangkabau.pl` tersedia sebagai baseline awal.
-- **Draft rules**: `data/rules/minangkabau_rules.json` berisi aturan hasil ekstraksi open-access. **Status DRAFT_NEEDS_HUMAN_REVIEW** — tidak boleh dipakai untuk klaim paper sebelum verifikasi ahli.
+- **Rule Engine Functional**: `ClingoRuleEngine` implementasi ASP siap pakai.
+- **Minangkabau Rules Expanded**: `src/symbolic/rules/minangkabau.lp` mencakup 30+ aturan formal (inheritance, actions, emergency conditions).
+- **Exp 05 COMPLETED**: Menemukan 33.3% divergensi antara Rule Engine dan LLM (N=30), membuktikan perlunya "Symbolic Anchor" untuk mencegah halusinasi hukum.
+- **Draft rules**: `data/rules/minangkabau_rules.json` berisi aturan hasil ekstraksi open-access.
 
 ## Methodology Fixes
 

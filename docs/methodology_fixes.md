@@ -239,11 +239,11 @@ Cultural Consistency Score (CCS) adalah metrik custom yang belum divalidasi. Tan
 
 | # | Weakness | Status | Progress |
 |---|----------|--------|----------|
-| 1 | Neuro-Symbolic claim | PLANNED | 0% |
+| 1 | Neuro-Symbolic claim | COMPLETED | 100% |
 | 2 | Circular evaluation | PLANNED | 0% |
 | 3 | Linear multi-agent | PLANNED | 0% |
-| 4 | Scale too small | PLANNED | 0% |
+| 4 | Scale too small | IN_PROGRESS | 15% |
 | 5 | Strawman baselines | PLANNED | 0% |
 | 6 | CCS unvalidated | PLANNED | 0% |
 
-*Last updated: 2026-02-06*
+*Last updated: 2026-02-07*

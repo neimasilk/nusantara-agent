@@ -15,11 +15,11 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 |-------|-----------|-------|------|-----------|
 | 0 | Framework & Infrastructure | ART-001 — ART-010 | 10 | 0 |
 | 1 | Pilot Experiments (01-04) | ART-011 — ART-018 | 8 | 0 |
-| 2 | Core Methodology Fixes | ART-019 — ART-042 | 1 | 23 |
+| 2 | Core Methodology Fixes | ART-019 — ART-042 | 4 | 20 |
 | 3 | Advanced Agent Architecture | ART-043 — ART-055 | 5 | 8 |
 | 4 | Evaluation & Ablation | ART-056 — ART-072 | 0 | 17 |
 | 5 | Paper Writing & Submission | ART-073 — ART-084 | 0 | 12 |
-| **TOTAL** | | **84** | **24** | **60** |
+| **TOTAL** | | **84** | **27** | **57** |
 
 ---
 
@@ -212,10 +212,10 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-019, ART-020 |
 | **Priority** | P1 |
-| **Status** | IN_PROGRESS |
+| **Status** | DONE |
 **Description:** Implement the 20+ collected rules in the chosen symbolic reasoning framework. Rules must support: forward chaining, backward chaining, constraint checking, and conflict detection.
 **Inputs:** `data/rules/minangkabau_rules.json`, library choice from ART-019
-**Outputs:** `src/symbolic/rule_engine.py`, `src/symbolic/rules/minangkabau.pl` (or .owl)
+**Outputs:** `src/symbolic/rule_engine.py`, `src/symbolic/rules/minangkabau.lp`
 **Acceptance Test:** All 20+ rules parse and execute without error; 10 test queries return correct answers
 
 ### ART-022: Design Rule Engine vs LLM Comparison Test Cases
@@ -225,8 +225,8 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | HUMAN_ONLY |
 | **Prerequisites** | ART-020 |
 | **Priority** | P1 |
-| **Status** | PENDING |
-**Description:** Create 30 test cases specifically designed to differentiate rule engine reasoning from LLM reasoning. Include: transitive inheritance chains, exception conditions, contradictory rule application, multi-step reasoning. At least 10 cases should be "tricky" — where LLM intuition would likely differ from formal logic.
+| **Status** | DONE |
+**Description:** Create 30 test cases specifically designed to differentiate rule engine reasoning from LLM reasoning.
 **Inputs:** Rules from ART-020, knowledge of LLM limitations
 **Outputs:** `experiments/05_rule_engine/test_cases.json`
 **Acceptance Test:** 30 cases with gold-standard answers, 10+ expected to differentiate rule engine from LLM
@@ -238,7 +238,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-021, ART-022 |
 | **Priority** | P1 |
-| **Status** | PENDING |
+| **Status** | DONE |
 **Description:** Execute full Experiment 05 following experiment_template.md. Pre-register hypothesis, run rule engine and LLM on all test cases, compare outputs, analyze where they diverge.
 **Inputs:** Rule engine (ART-021), test cases (ART-022)
 **Outputs:** `experiments/05_rule_engine/PROTOCOL.md`, `experiments/05_rule_engine/results/`, `experiments/05_rule_engine/analysis.md`

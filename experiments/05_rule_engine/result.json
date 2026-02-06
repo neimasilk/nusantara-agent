@@ -1,0 +1,422 @@
+[
+  {
+    "id": "TC-05-001",
+    "scenario": "Budi adalah seorang laki-laki Minangkabau. Ibunya meninggal dunia dan meninggalkan sebuah Rumah Gadang yang merupakan harta pusako tinggi. Budi menuntut hak waris atas Rumah Gadang tersebut.",
+    "expected": "deny_inheritance",
+    "symbolic": {
+      "actual": "deny_inheritance",
+      "success": true
+    },
+    "llm": {
+      "response": "Berdasarkan hukum adat Minangkabau, **warisan dalam bentuk harta pusako tinggi (seperti Rumah Gadang) dilarang untuk dibagi atau diwariskan kepada anak laki-laki (seperti Budi)**.\n\n**Penjelasan:**\n1. **Harta Pusako Tinggi** adalah harta warisan turun-temurun dari nenek moyang yang dimiliki secara kolektif oleh kaum atau suku. Harta ini tidak boleh diperjualbelikan atau dibagi kepada individu.\n2. **Sistem Kekerabatan Matrilineal** mengatur bahwa harta pusako tinggi diwariskan secara turun-temurun dari ibu kepada anak perempuan (kemenakan). Pengelolaannya dilakukan oleh mamak (saudara laki-laki ibu) untuk kepentingan kaum.\n3. **Posisi Budi** sebagai laki-laki Minangkabau tidak memiliki hak kepemilikan atas harta pusako tinggi ibunya. Hak Budi dalam sistem adat adalah sebagai **mamak** bagi anak-anak saudara perempuannya, di mana ia berperan mengelola harta pusako tinggi dari garis ibunya untuk kepentingan kemenakannya (anak dari saudara perempuannya).\n\n**Konflik Hukum:**\nDalam konteks hukum nasional Indonesia (KUH Perdata), Budi sebagai anak laki-laki memiliki hak waris yang setara. Namun, untuk kasus harta pusako tinggi, **hukum adat Minangkabau sebagai hukum yang hidup (living law) akan diutamakan** karena menyangkut identitas komunitas adat. Pengadilan umumnya akan mengakui dan menerapkan hukum adat dalam kasus seperti ini.\n\n**Kesimpulan:**\nTuntutan Budi **dilarang** menurut hukum adat Minangkabau. Rumah Gadang sebagai harta pusako tinggi tetap menjadi miliki kaum dan diwariskan kepada anak perempuan dalam garis keturunan ibunya.",
+      "success": true
+    },
+    "divergence": false
+  },
+  {
+    "id": "TC-05-002",
+    "scenario": "Siti adalah seorang perempuan Minangkabau. Ayahnya meninggal dunia dan meninggalkan uang tabungan hasil bekerja sebagai pedagang (harta pencaharian/pusako rendah). Siti dan saudara laki-lakinya, Ali, mendiskusikan pembagian warisan.",
+    "expected": "allow_inheritance",
+    "symbolic": {
+      "actual": "allow_inheritance",
+      "success": true
+    },
+    "llm": {
+      "response": "Berdasarkan hukum adat Minangkabau, harta pencaharian (pusako rendah) yang diperoleh dari hasil usaha sendiri (dalam hal ini uang tabungan hasil bekerja sebagai pedagang) dapat diwariskan secara individual menurut hukum faraidh (hukum waris Islam) karena sifatnya sebagai harta bawaan atau harta suarang. \n\nNamun, perlu diperhatikan bahwa dalam masyarakat Minangkabau yang menganut sistem kekerabatan matrilineal, terdapat potensi konflik norma antara hukum adat dan hukum Islam. Hukum adat Minangkabau pada prinsipnya tidak mengenal warisan dari ayah kepada anak, karena harta pusaka tinggi (harta turun-temurun) hanya diwariskan melalui garis ibu. Sedangkan harta pencaharian (pusako rendah) dalam praktiknya seringkali dibagi menurut hukum Islam.\n\n**Status: Ada Konflik**\n\n**Penjelasan:**\n1. **Menurut Hukum Adat Minangkabau:** Harta pencaharian ayah Siti seharusnya dikembalikan ke keluarga matrilineal ayahnya (saudara perempuan ayah dan anak-anak mereka), bukan kepada anak kandungnya (Siti dan Ali). Sistem matrilineal tidak mengakui hubungan waris vertikal langsung dari ayah ke anak.\n2. **Menurut Hukum Nasional (Kompilasi Hukum Islam):** Sebagai muslim, ayah Siti dapat mewariskan harta pencahariannya kepada anak-anaknya (Siti dan Ali) dengan pembagian 1:2 (perempuan mendapat setengah bagian laki-laki).\n3. **Dalam praktik:** Banyak masyarakat Minangkabau saat ini menggunakan hukum Islam untuk pembagian harta pencaharian, meskipun secara adat murni hal ini dapat menimbulkan sengketa dengan keluarga matrilineal ayah.\n\n**Rekomendasi:** Penyelesaian terbaik adalah melalui musyawarah keluarga besar dengan mempertimbangkan kedua sistem hukum, atau merujuk pada wasiat jika ada.",
+      "success": false
+    },
+    "divergence": true
+  },
+  {
+    "id": "TC-05-003",
+    "scenario": "Keluarga suku Chaniago ingin menjual sawah ladang yang merupakan harta pusako tinggi untuk membiayai bisnis salah satu anggota keluarga. Namun, tidak ada kesepakatan (konsensus) dari seluruh anggota kaum.",
+    "expected": "conflict_detected",
+    "symbolic": {
+      "actual": "conflict_detected",
+      "success": true
+    },
+    "llm": {
+      "response": "Berdasarkan **hukum adat Minangkabau**, khususnya dalam konteks **harta pusako tinggi** (harta warisan turun-temurun dari garis ibu), **penjualan sawah ladang tersebut TIDAK DIPERBOLEHKAN** dalam situasi ini.\n\n**Alasan:**\n1. **Sifat Harta Pusako Tinggi**: Harta pusako tinggi adalah milik kolektif kaum (keluarga besar matrilineal) dan bersifat **tidak boleh diperjualbelikan**, kecuali dalam kondisi sangat mendesak (*daruriak*) seperti bencana, kelaparan, atau biaya pendidikan tinggi, itupun harus dengan kesepakatan seluruh anggota kaum.\n2. **Konsensus (Mufakat)**: Dalam adat Minangkabau, keputusan mengenai harta pusako tinggi harus berdasarkan **kesepakatan bulat (sakato)** seluruh anggota kaum. Tidak adanya kesepakatan berarti tidak terpenuhinya syarat utama untuk mengubah status harta tersebut.\n3. **Tujuan Penggunaan**: Membiayai bisnis individu **bukan** alasan yang sah untuk menjual harta pusako tinggi, karena dianggap mengorbankan kepentingan kolektif untuk kepentingan pribadi.\n\n**Konflik Hukum:**\n- **Hukum Adat Minangkabau**: Melarang penjualan tanpa kesepakatan dan untuk tujuan bisnis pribadi.\n- **Hukum Nasional (UUPA/KUHPerdata)**: Secara formal, dokumen kepemilikan mungkin memungkinkan penjualan oleh pemegang hak, namun akan berbenturan dengan prinsip kepemilikan kolektif adat.\n\n**Kesimpulan:**\n**DILARANG** menurut hukum adat Minangkabau. Penjualan hanya dapat dipertimbangkan jika:\n1. Ada kesepakatan bulat seluruh anggota kaum.\n2. Tujuan penggunaannya untuk kepentingan kolektif kaum atau alasan darurat yang diakui adat.\n3. Dilakukan melalui musyawarah adat dengan melibatkan ninik mamak dan pemangku adat.\n\nSaran: Keluarga sebaiknya menyelesaikan secara musyawarah adat atau mencari alternatif pembiayaan bisnis tanpa mengorbankan harta pusako tinggi.",
+      "success": true
+    },
+    "divergence": false
+  },
+  {
+    "id": "TC-05-004",
+    "scenario": "Ibu Aminah meninggal dunia tanpa memiliki anak perempuan. Ia hanya memiliki seorang anak laki-laki bernama Buyung. Namun, Aminah memiliki seorang saudara perempuan bernama Fatimah, yang memiliki anak perempuan bernama Ani. Siapakah yang mewarisi Rumah Gadang (pusako tinggi) milik Aminah?",
+    "expected": "allow_inheritance",
+    "symbolic": {
+      "actual": "deny_inheritance",
+      "success": false
+    },
+    "llm": {
+      "response": "Berdasarkan hukum adat Minangkabau, **Rumah Gadang (pusako tinggi)** adalah harta pusaka tinggi yang diwariskan secara turun-temurun menurut garis keturunan ibu (matrilineal). Harta pusaka tinggi hanya dapat diwariskan kepada **perempuan dalam kaum/suku yang sama**.\n\nDalam kasus ini:\n- Ibu Aminah meninggal tanpa memiliki anak perempuan.\n- Ia memiliki anak laki-laki (Buyung), tetapi anak laki-laki **tidak berhak mewarisi pusako tinggi** karena bukan anggota matrilineal penerus.\n- Ia memiliki saudara perempuan (Fatimah) yang masih satu garis keturunan ibu.\n- Fatimah memiliki anak perempuan (Ani).\n\nMenurut hukum adat Minangkabau, **Fatimah (saudara perempuan Aminah) adalah ahli waris utama** untuk pusako tinggi karena masih dalam garis keturunan matrilineal yang sama. Jika Fatimah sudah meninggal, maka hak waris beralih kepada anak perempuannya (Ani).\n\nNamun, perlu dicatat bahwa dalam praktik adat, keputusan akhir sering melibatkan musyawarah kaum/ninik mamak untuk menentukan pengelolaan dan pemanfaatan Rumah Gadang.\n\n**Kesimpulan:**\n- **Fatimah (saudara perempuan Aminah)** berhak mewarisi Rumah Gadang sebagai pusako tinggi.\n- **Buyung (anak laki-laki Aminah)** tidak berhak mewarisi pusako tinggi, tetapi mungkin mendapat harta pencaharian (pusako rendah) atau bantuan lain secara adat.\n- **Ani (kemenakan perempuan)** berhak mewarisi jika Fatimah sudah meninggal atau tidak ada.\n\n**Status:** Diperbolehkan menurut hukum adat Minangkabau, tetapi ada potensi konflik jika tidak diselesaikan secara musyawarah adat.",
+      "success": true
+    },
+    "divergence": true
+  },
+  {
+    "id": "TC-05-005",
+    "scenario": "Sebuah keluarga suku Minang punah (punah) karena tidak ada lagi keturunan perempuan. Anggota keluarga laki-laki yang tersisa mengklaim kepemilikan atas sawah ladang pusako tinggi.",
+    "expected": "punah_detected",
+    "symbolic": {
+      "actual": "punah_detected",
+      "success": true
+    },
+    "llm": {
+      "response": "Berdasarkan hukum adat Minangkabau, **klaim tersebut tidak diperbolehkan**.\n\n**Alasan:**\n1. **Pusako tinggi** (harta pusaka tinggi) adalah harta turun-temurun yang berasal dari nenek moyang dan diwariskan secara matrilineal (menurut garis keturunan ibu). Harta ini hanya dapat diwariskan kepada **perempuan** dalam kaum/suku.\n2. **Kepunahan keluarga** (punah) karena tidak ada lagi keturunan perempuan berarti garis matrilineal tersebut terputus. Dalam kondisi ini, harta pusako tinggi **tidak beralih kepada laki-laki dari keluarga yang sama**, melainkan kembali kepada **kaum/suku** asal harta tersebut (misalnya kepada kemenakan perempuan dari garis yang sekaum).\n3. Laki-laki dalam sistem adat Minang berperan sebagai **\"mamak\"** (paman dari pihak ibu) yang bertanggung jawab mengelola harta pusako tinggi untuk kepentingan kemenakan perempuannya, tetapi **bukan sebagai pemilik**.\n\n**Status: Dilarang** menurut hukum adat Minangkabau.  \n**Konflik:** Mungkin terjadi jika anggota keluarga laki-laki tersebut mengajukan klaim berdasarkan hukum nasional (KUH Perdata) yang menganut sistem patrilineal/bilateral, namun dalam praktik di Minangkabau, hukum adat umumnya tetap diutamakan untuk kasus pusako tinggi.",
+      "success": true
+    },
+    "divergence": false
+  },
+  {
+    "id": "TC-05-006",
+    "scenario": "Zubir adalah laki-laki tertua di kaumnya (Mamak Kepala Waris). Ia ingin menjaminkan sawah pusako tinggi untuk membiayai sekolah keponakannya (kemenakan) yang yatim piatu di luar negeri. Seluruh anggota kaum setuju. Apakah tindakan ini secara formal diperbolehkan sebagai hak milik?",
+    "expected": "deny_inheritance",
+    "symbolic": {
+      "actual": "deny_inheritance",
+      "success": true
+    },
+    "llm": {
+      "response": "Berdasarkan hukum adat Minangkabau, **tindakan ini secara formal DILARANG** meskipun seluruh anggota kaum setuju.\n\n**Alasan:**\n\n1. **Sawah Pusako Tinggi** adalah harta pusaka kaum yang bersifat kolektif dan turun-temurun. Harta ini bukan milik pribadi Zubir atau kaum secara bebas, melainkan amanah dari nenek moyang untuk generasi sekarang dan mendatang.\n\n2. **Kedudukan Mamak Kepala Waris** adalah sebagai pengelola (administrator) dan pelindung harta pusaka, bukan sebagai pemilik yang dapat mengalihkan hak secara bebas, termasuk menjaminkan.\n\n3. **Prinsip utama harta pusako tinggi** adalah **tidak boleh dijual, dihibahkan, atau dijaminkan** (*indak buliah dijua, dibarian, digadaian*). Pengecualian sangat langka dan hanya untuk kepentingan mendesak seluruh kaum (misalnya bencana, kelaparan), bukan untuk kepentingan individu sekalipun untuk biaya sekolah.\n\n4. **Persetujuan seluruh anggota kaum** tidak mengubah status hukum harta pusako tinggi. Persetujuan bersama hanya relevan untuk pengelolaan hasil (hasil panen sawah) atau penggunaan harta pusako rendah, bukan untuk mengikatkan hak atas tanah pusaka.\n\n**Konflik Hukum:**\n- **Hukum Adat Minangkabau:** Melarang secara mutlak.\n- **Hukum Nasional (UUPA):** Secara formal, tanah ulayat (sejenis pusako tinggi) dapat dijaminkan dengan persetujuan masyarakat adat, tetapi dalam praktiknya, hukum adat Minangkabau yang sangat kuat melarangnya tetap menjadi rujukan utama.\n\n**Solusi Alternatif yang Diperbolehkan:**\n- Menggunakan **hasil produksi sawah** (padi/uang hasil panen) untuk biaya sekolah.\n- Menggunakan **harta pusako rendah** (harta pencaharian) jika ada.\n- Menggalang sumbangan sukarela dari anggota kaum atau pinjaman tanpa agunan sawah pusako.\n\n**Kesimpulan:** Tindakan Zubir melanggar prinsip dasar hukum adat Minangkabau mengenai harta pusako tinggi. Niat baik untuk kepentingan kemenakan tidak mengubah sifat sakral dan tidak dapat dialihkan dari harta pusaka kaum.",
+      "success": true
+    },
+    "divergence": false
+  },
+  {
+    "id": "TC-05-007",
+    "scenario": "Sutan memiliki sebidang tanah dari hasil hibah (pusako rendah). Ia meninggal tanpa wasiat. Sutan memiliki satu anak perempuan dan satu keponakan laki-laki dari saudara perempuannya. Siapa yang secara formal mewarisi tanah tersebut?",
+    "expected": "allow_inheritance",
+    "symbolic": {
+      "actual": "allow_inheritance",
+      "success": true
+    },
+    "llm": {
+      "response": "Berdasarkan hukum adat Minangkabau, tanah hibah (pusako rendah) merupakan harta pencaharian (harta suarang) yang diperoleh seseorang selama hidupnya, bukan harta pusaka tinggi (harta kaum). Oleh karena itu, aturan pewarisannya mengikuti prinsip **individual** dan **dapat diwariskan kepada anak kandung**, meskipun dengan beberapa catatan penting.\n\nDalam kasus Sutan:\n1. **Tanah berasal dari hibah (pusako rendah)** \u2192 statusnya adalah harta pencaharian (harta suarang).\n2. **Sutan meninggal tanpa wasiat (tidak berwasiat)** \u2192 pembagiannya mengikuti hukum adat Minangkabau untuk harta pencaharian.\n3. **Ahli waris**: seorang anak perempuan dan seorang keponakan laki-laki dari saudara perempuan (kemenakan).\n\nMenurut hukum adat Minangkabau:\n- **Anak perempuan** adalah ahli waris utama dari harta pencaharian ayahnya, meskipun dalam sistem kekerabatan matrilineal, anak laki-laki tidak mewarisi harta pusaka tinggi dari ayahnya. Namun, untuk harta pencaharian (pusako rendah), anak perempuan tetap berhak mewarisi.\n- **Keponakan laki-laki dari saudara perempuan (kemenakan)** dalam konteks ini adalah ahli waris dari garis matrilineal (kaum), tetapi ia **tidak berhak atas harta pencaharian (pusako rendah) milik mamaknya (Sutan)**, karena harta tersebut bukan harta pusaka tinggi. Harta pencaharian umumnya diwariskan kepada anak dan istri, bukan kepada kemenakan.\n\nNamun, ada nuansa penting:\n- Dalam praktik adat, jika Sutan tidak memiliki anak laki-laki, seringkali ada tekanan sosial agar sebagian harta pencaharian diberikan kepada kemenakan (terutama kemenakan laki-laki) sebagai bentuk penghargaan dan menjaga hubungan matrilineal. Tetapi secara **formal**, ahli waris utama adalah **anak perempuan**.\n- Jika Sutan memiliki istri, istri juga berhak mendapat bagian.\n\n**Kesimpulan**:\nSecara formal dalam hukum adat Minangkabau, yang mewarisi tanah hibah (pusako rendah) Sutan adalah **anak perempuannya**. Keponakan laki-laki (kemenakan) tidak memiliki hak waris atas harta pencaharian mamaknya, kecuali jika ada wasiat atau kesepakatan keluarga.\n\n**Status**: Diperbolehkan (anak perempuan sebagai ahli waris), dengan catatan bahwa dalam praktik adat mungkin ada pembagian tidak formal kepada kemenakan untuk menjaga harmoni keluarga.",
+      "success": true
+    },
+    "divergence": false
+  },
+  {
+    "id": "TC-05-008",
+    "scenario": "Sebuah rumah gadang (pusako tinggi) tidak memiliki keturunan perempuan di garis pertama (anak), tetapi ada cucu perempuan dari saudara perempuan nenek (kemenakan jauh). Apakah rumah gadang tersebut dianggap punah?",
+    "expected": "not_punah",
+    "symbolic": {
+      "actual": "unknown",
+      "success": false
+    },
+    "llm": {
+      "response": "Berdasarkan hukum adat Minangkabau, **rumah gadang (pusako tinggi) tersebut tidak dianggap punah.**\n\n**Penjelasan:**\n\n1. **Sifat Pusako Tinggi:** Pusako tinggi (harta pusaka tinggi) adalah harta warisan turun-temurun dari nenek moyang yang diwariskan secara kolektif kepada seluruh anggota kaum/suku. Harta ini tidak boleh diperjualbelikan atau dibagi-bagi, dan pengelolaannya dipegang oleh *mamak* (saudara laki-laki ibu) untuk kepentingan seluruh kemenakan (*anak kamanakan*).\n\n2. **Prinsip Kekerabatan Matrilineal:** Ahli waris pusako tinggi adalah anggota kaum/suku berdasarkan garis keturunan ibu. Jika tidak ada keturunan perempuan di garis pertama (anak perempuan), maka garis warisan akan bergeser ke tingkat berikutnya dalam struktur kaum.\n\n3. **Penerus Waris (\"Panghulu\" atau Pemegang Hak):** Dalam kasus ini, meskipun tidak ada anak perempuan, masih ada **cucu perempuan dari saudara perempuan nenek**. Secara silsilah matrilineal, ia masih termasuk dalam **kaum/suku yang sama** dengan pemilik rumah gadang tersebut. Saudara perempuan nenek adalah bagian dari generasi yang sama dengan nenek pemilik, sehingga keturunannya (cucu dari saudara perempuan nenek) masih berada dalam lingkup kekerabatan matrilineal yang relevan.\n\n4. **Mekanisme Pengisian Lowongan (\"Tenggang Rayo\"):** Hukum adat Minangkabau memiliki mekanisme untuk mencegah kepunahan harta pusako. Jika suatu garis langsung tidak memiliki penerus perempuan, maka harta pusako akan dialihkan kepada garis kekerabatan terdekat dalam kaum yang sama. \"Cucu perempuan dari saudara perempuan nenek\" dapat dianggap sebagai kerabat matrilineal yang masih memiliki hak, meskipun posisinya agak jauh. Biasanya, proses ini melibatkan musyawarah kaum (*ninik mamak*) untuk menentukan penerus yang paling tepat, dengan mempertimbangkan kedekatan kekerabatan dan kemampuan untuk mengelola harta.\n\n5. **Peran Ninik Mamak:** Keputusan akhir tentang siapa yang berhak mengelola dan menghuni rumah gadang tersebut akan ditentukan melalui **musyawarah ninik mamak (penghulu) dari kaum/suku yang bersangkutan**. Mereka akan menelusuri silsilah (*tarombo*) untuk menemukan kerabat perempuan terdekat yang masih ada dalam kaum tersebut.\n\n**Kesimpulan:**\nRumah gadang sebagai pusako tinggi **tidak punah** selama masih ada kerabat perempuan dalam lingkup kaum/suku yang sama, meskipun dari garis yang lebih jauh. **Cucu perempuan dari saudara perempuan nenek** berpotensi menjadi penerus hak, tergantung keputusan musyawarah ninik mamak setelah menimbang seluruh faktor kekerabatan yang ada. Hukum adat Minangkabau sangat elastis dan mengutamakan kelangsungan harta pusaka bersama (*harato salaka aka*).",
+      "success": false
+    },
+    "divergence": false
+  },
+  {
+    "id": "TC-05-009",
+    "scenario": "Andi (laki-laki) ingin menuntut hak milik atas sawah pusako tinggi karena ia adalah satu-satunya anggota keluarga yang tersisa yang menggarap sawah tersebut selama 30 tahun.",
+    "expected": "deny_inheritance",
+    "symbolic": {
+      "actual": "deny_inheritance",
+      "success": true
+    },
+    "llm": {
+      "response": "Berdasarkan hukum adat Minangkabau, **tuntutan Andi tidak diperbolehkan** karena terdapat konflik antara prinsip hukum adat dan fakta penggarapan jangka panjang.\n\n**Analisis Hukum:**\n\n1. **Status Sawah Pusako Tinggi:**\n   - Sawah pusako tinggi adalah harta pusaka kaum yang diwariskan secara turun-temurut menurut garis ibu (matrilineal).\n   - Kepemilikan bersifat kolektif dalam suku/kaum, bukan individu. Pengelolaan (garap) biasanya dilakukan oleh anggota laki-laki dalam kaum (mamak) untuk kepentingan kemenakan (anak dari saudara perempuan).\n\n2. **Posisi Andi:**\n   - Sebagai laki-laki, Andi **bukan ahli waris** pusako tinggi menurut hukum adat Minangkabau. Ahli waris adalah perempuan (anak perempuan, saudara perempuan) dalam kaumnya.\n   - Penggarapan selama 30 tahun tidak mengubah status hukum pusako tinggi menjadi milik pribadi. Penggarapan hanya memberikan hak pakai/manfaat, bukan hak milik.\n\n3. **Konflik Hukum:**\n   - **Hukum Adat Minangkabau:** Melarang pengalihan hak milik pusako tinggi ke individu, apalagi ke laki-laki sebagai pemilik tunggal.\n   - **Hukum Nasional (UUPA):** Mengakui hak ulayat masyarakat adat, tetapi juga mengatur tentang hak milik perorangan. Dalam yurisprudensi, penggarapan jangka panjang dapat menjadi dasar klaim (dalam konteks hukum perdata umum).\n   - **Konflik muncul** karena Andi mengklaim hak milik individu atas aset komunal adat.\n\n**Kemungkinan Penyelesaian:**\n- Andi dapat mengajukan hak **hak pakai atau hak pengelolaan** atas sawah tersebut berdasarkan penggarapan jangka panjang, tetapi bukan hak milik.\n- Jika seluruh anggota kaum sudah tidak ada (punah), sawah dapat beralih status menjadi **pusako rendah** atau harta pencarian, namun proses ini rumit dan membutuhkan musyawarah adat.\n- Penyelesaian terbaik melalui **musyawarah adat** dengan ninik mamak dan pemangku adat untuk mencari solusi tanpa melanggar prinsip pusako.\n\n**Kesimpulan:** Tuntutan hak milik pribadi Andi **dilarang** oleh hukum adat Minangkabau, meskipun terdapat argumen dari sudut pandang hukum nasional mengenai penggarapan lama. Status pusako tinggi tetap dominan dalam konteks ini.",
+      "success": true
+    },
+    "divergence": false
+  },
+  {
+    "id": "TC-05-010",
+    "scenario": "Harta hasil tembilang emas (pusako rendah) akan dibagikan. Keluarga memutuskan untuk mengabaikan hukum Islam (faraidh) dan membaginya sama rata antara anak laki-laki dan perempuan melalui musyawarah. Apakah ini secara formal sah dalam adat Minangkabau?",
+    "expected": "allow_inheritance",
+    "symbolic": {
+      "actual": "deny_inheritance",
+      "success": false
+    },
+    "llm": {
+      "response": "**Jawaban:**\n\nDalam adat Minangkabau, **pembagian seperti itu secara formal tidak sah** menurut prinsip adat yang asli, karena:\n\n1. **Status Harta Tembilang Emas (Pusako Rendah):**\n   - Harta tembilang emas (hasil pencarian/pencaharian individu) termasuk kategori **pusako rendah** (harta pencarian).\n   - Menurut adat Minangkabau asli, pusako rendah seharusnya diwariskan menurut **hukum faraidh (Islam)** karena bersifat individual dan tidak terikat pada sistem matrilineal seperti pusako tinggi (harta pusaka turun-temurun).\n\n2. **Kedudukan Hukum Islam dalam Adat:**\n   - Adat Minangkabau berprinsip **\"Adat basandi syarak, syarak basandi Kitabullah\"** (adat bersendikan syariat, syariat bersendikan Al-Qur'an). Untuk harta pencarian (pusako rendah), hukum Islam (faraidh) menjadi acuan utama.\n   - Pembagian sama rata antara anak laki-laki dan perempuan untuk harta jenis ini **menyimpang dari ketentuan faraidh** yang membedakan bagian anak laki-laki dan perempuan (misal, 2:1).\n\n3. **Musyawarah dan Kesepakatan Keluarga:**\n   - Meskipun musyawarah (mufakat) sangat dihargai dalam adat, kesepakatan keluarga **tidak dapat mengesampingkan prinsip dasar** yang menyatakan bahwa pusako rendah tunduk pada hukum waris Islam.\n   - Dalam praktik, keluarga mungkin melakukan pembagian secara kekeluargaan, tetapi secara formal adat hal ini dianggap **\"nyalai\" (menyimpang)** dari ketentuan yang berlaku.\n\n4. **Konflik Hukum:**\n   - Terdapat **konflik** antara keinginan keluarga (pembagian sama rata) dengan ketentuan formal adat Minangkabau yang mengacu pada faraidh untuk harta pusako rendah.\n   - Jika terjadi sengketa, keputusan musyawarah keluarga tersebut dapat dibatalkan oleh pihak yang merasa dirugikan menurut hukum adat atau agama.\n\n**Kesimpulan:**\n- **Dilarang** menurut ketentuan formal adat Minangkabau yang asli.\n- **Konflik** muncul antara kesepakatan keluarga dan prinsip adat yang mengikat.\n- Agar sah secara adat dan agama, pembagian harus mengikuti faraidh, kecuali jika semua ahli waris dewasa dan cakap hukum secara sukarela menyepakati pembagian lain setelah pembagian faraidh dilakukan (hibah/ bagi hasil setelah waris dibagi).",
+      "success": false
+    },
+    "divergence": false
+  },
+  {
+    "id": "TC-05-011",
+    "scenario": "Seorang Mamak Kepala Waris menjual tanah pusako tinggi untuk membayar hutang pribadi. Ia mengklaim memiliki wewenang penuh atas harta kaum. Apakah tindakan ini sah secara formal?",
+    "expected": "conflict_detected",
+    "symbolic": {
+      "actual": "conflict_detected",
+      "success": true
+    },
+    "llm": {
+      "response": "**Jawaban:**\n\nTindakan tersebut **tidak sah secara formal** berdasarkan hukum adat Minangkabau, meskipun Mamak Kepala Waris mengklaim memiliki wewenang penuh.\n\n**Penjelasan:**\n\n1. **Status Tanah Pusako Tinggi:**\n   - Tanah pusako tinggi adalah harta bersama (kolektif) suatu kaum (keluarga matrilineal), yang diwariskan turun-temurun dari nenek moyang melalui garis ibu.\n   - Harta ini bersifat **tidak dapat diperjualbelikan (inalienable)**, kecuali dalam kondisi sangat terpaksa (*darurat*) dan harus dengan persetujuan seluruh anggota kaum (ninik mamak, bundo kanduang, dan anak kemenakan).\n\n2. **Kedudukan dan Wewenang Mamak Kepala Waris:**\n   - Mamak Kepala Waris berfungsi sebagai **pengelola (administrator) dan pelindung** harta kaum, bukan pemilik mutlak.\n   - Wewenangnya bersifat **kolegial** dan **dipertanggungjawabkan** kepada kaumnya. Ia tidak boleh bertindak secara sepihak, apalagi untuk kepentingan pribadi.\n   - Tugas utamanya adalah menjaga kelestarian harta pusako untuk generasi sekarang dan mendatang (*menjago sampai ka patah, manjago sampai ka habih*).\n\n3. **Alasan Khusus Pelarangan dalam Kasus Ini:**\n   - **Tujuan penggunaan:** Hutang pribadi Mamak **bukan** termasuk kepentingan bersama kaum atau alasan darurat yang membenarkan penjualan.\n   - **Prosedur:** Penjualan tanpa musyawarah dan persetujuan kaum merupakan pelanggaran berat terhadap prinsip kekeluargaan dan demokrasi adat (*bulek aie dek pambuluah, bulek kato dek mufakat*).\n   - **Konflik hukum:** Tindakan ini bertentangan dengan hukum adat Minangkabau, meskipun mungkin secara formal dokumen jual-beli dapat dibuat di hadapan notaris/PPAT. Namun, secara substantif, transaksi tersebut cacat hukum adat dan dapat **dibatalkan** melalui proses adat atau gugatan di pengadilan (dengan ahli waris sebagai penggugat).\n\n4. **Sanksi dan Akibat Hukum:**\n   - Mamak dapat diberhentikan dari jabatannya oleh kaum.\n   - Transaksi jual-beli dapat digugat sebagai tidak sah oleh anggota kaum.\n   - Mamak wajib mengganti kerugian atau mengembalikan tanah kepada kaum.\n\n**Kesimpulan:**\nTindakan menjual tanah pusako tinggi untuk kepentingan pribadi Mamak Kepala Waris **dilarang** oleh hukum adat Minangkabau. Wewenang pengelolaan bukan wewenang kepemilikan mutlak. Hukum nasional (UUPA) juga mengakui dan melindungi keberadaan harta ulayat/komunal beserta prinsip pengelolaannya, sehingga pengadilan dapat membatalkan transaksi yang melanggar hukum adat yang masih hidup.",
+      "success": true
+    },
+    "divergence": false
+  },
+  {
+    "id": "TC-05-012",
+    "scenario": "Rina adalah keponakan perempuan dari pihak ibu (kemenakan) almarhumah Siti. Siti tidak punya anak. Rina ingin menempati rumah gadang Siti. Apakah Rina memiliki hak waris/pakai secara formal?",
+    "expected": "allow_inheritance",
+    "symbolic": {
+      "actual": "allow_inheritance",
+      "success": true
+    },
+    "llm": {
+      "response": "Berdasarkan hukum adat Minangkabau, **Rina tidak memiliki hak waris** atas rumah gadang almarhumah Siti. Berikut penjelasannya:\n\n1. **Sistem Kekerabatan Matrilineal**: Warisan dalam adat Minangkabau diwariskan berdasarkan garis keturunan ibu (matrilineal). Harta pusaka (termasuk rumah gadang) hanya diwariskan dari mamak (saudara laki-laki ibu) kepada kemenakan (anak dari saudara perempuan), bukan dari ibu kepada anak kandungnya sendiri.\n\n2. **Posisi Rina**: Rina adalah \"kemenakan\" dari almarhumah Siti (anak dari saudara perempuan Siti). Dalam struktur adat, Rina merupakan **kemenakan bawah** (anak dari saudara perempuan) dari Siti. Namun, Siti sendiri adalah perempuan, sehingga harta miliknya (seperti rumah gadang) tidak diwariskan kepada kemenakan bawah, melainkan kepada saudara laki-lakinya (mamak) atau kemenakan yang berasal dari garis saudara laki-lakinya.\n\n3. **Ahli Waris Menurut Adat Minangkabau**:\n   - Jika Siti tidak memiliki anak, harta pusakanya (rumah gadang) akan kembali kepada **saudara laki-laki seibu (mamak)** Siti, atau kepada **kemenakan dari saudara laki-laki Siti** (kemenakan yang berasal dari garis laki-laki).\n   - Rina sebagai kemenakan dari pihak perempuan (anak saudara perempuan Siti) **tidak termasuk dalam lingkaran ahli waris** untuk harta pusaka.\n\n4. **Hak Pakai**: Secara adat, Rina juga **tidak memiliki hak pakai formal** atas rumah gadang tersebut tanpa izin dari ahli waris yang sah (misalnya mamak atau kemenakan dari garis laki-laki Siti). Penggunaan rumah gadang oleh pihak lain harus melalui kesepakatan dan mungkin bersifat sementara.\n\n5. **Konflik Hukum**: Dalam konteks hukum nasional (KUH Perdata), Rina mungkin dapat mengajukan hak waris sebagai keluarga sedarah, namun hal ini akan **berkonflik dengan hukum adat Minangkabau** yang lebih kuat mengikat dalam hal warisan pusaka. Penyelesaiannya biasanya mengutamakan hukum adat setempat, terutama untuk harta seperti rumah gadang yang bersifat pusako.\n\n**Kesimpulan**:  \nSecara formal menurut hukum adat Minangkabau, **Rina tidak memiliki hak waris atau hak pakai atas rumah gadang Siti**. Warisan rumah gadang tersebut lebih berhak diberikan kepada saudara laki-laki Siti atau kemenakan dari garis laki-laki Siti.",
+      "success": true
+    },
+    "divergence": false
+  },
+  {
+    "id": "TC-05-013",
+    "scenario": "Harta yang diperoleh dari hadiah pernikahan (pusako rendah) diklaim oleh Mamak Kepala Waris sebagai harta kaum yang harus masuk ke kantong komunal. Apakah klaim ini benar secara formal?",
+    "expected": "deny_inheritance",
+    "symbolic": {
+      "actual": "deny_inheritance",
+      "success": true
+    },
+    "llm": {
+      "response": "Berdasarkan hukum adat Minangkabau, klaim tersebut **tidak benar secara formal**.\n\n**Penjelasan:**\n\n1. **Status Harta Hadiah Pernikahan (Pusako Rendah):**\n   - Harta hadiah pernikahan (biasa disebut *pusako rendah* atau *harta pencaharian*) adalah harta yang diperoleh dari hasil usaha atau pemberian individu selama perkawinan.\n   - Menurut adat Minangkabau, harta jenis ini dikategorikan sebagai **harta suarang** atau **harta pencaharian**, yang merupakan milik pribadi suami-istri (dalam ikatan perkawinan) dan dapat diwariskan kepada anak-anak mereka (*pusako rendah turun kepada anak*).\n\n2. **Kewenangan Mamak Kepala Waris:**\n   - Mamak Kepala Waris (saudara laki-laki ibu) bertanggung jawab mengelola **harta pusako tinggi**, yaitu harta turun-temurun dari nenek moyang yang dimiliki secara komunal oleh kaum/klan.\n   - Harta pusako tinggi tidak boleh diperjualbelikan dan hanya boleh dimanfaatkan oleh anggota kaum, dengan pengelolaan oleh Mamak Kepala Waris.\n\n3. **Konflik dan Penyelesaian:**\n   - Klaim Mamak Kepala Waris atas harta hadiah pernikahan sebagai harta komunal dapat menimbulkan konflik, karena menyalahi prinsip adat.\n   - Secara formal, harta hadiah pernikahan **t termasuk kategori harta pusako rendah** yang menjadi hak individu/keluarga inti (suami-istri dan anak-anak).\n   - Jika terjadi sengketa, penyelesaian dapat dilakukan melalui musyawarah di tingkat keluarga, ninik mamak, atau penghulu adat, dengan merujuk pada prinsip: *\"Pusako rendah jatuh kepada anak, pusako tinggi jatuh kepada kamanakan\"*.\n\n**Kesimpulan:**\nKlaim Mamak Kepala Waris **dilarang** secara hukum adat Minangkabau karena harta hadiah pernikahan bukan harta komunal (*pusako tinggi*), melainkan harta pribadi (*pusako rendah*) yang menjadi hak waris anak-anak dari pemiliknya.",
+      "success": true
+    },
+    "divergence": false
+  },
+  {
+    "id": "TC-05-014",
+    "scenario": "Seorang laki-laki Minangkabau ingin mewariskan rumah hasil kerjanya sendiri di perantauan (pusako rendah) HANYA kepada anak laki-lakinya, mengabaikan anak perempuannya. Apakah ini diperbolehkan dalam prinsip musyawarah adat?",
+    "expected": "allow_inheritance",
+    "symbolic": {
+      "actual": "allow_inheritance",
+      "success": true
+    },
+    "llm": {
+      "response": "Berdasarkan prinsip hukum adat Minangkabau, **tindakan tersebut tidak diperbolehkan** dan bertentangan dengan inti musyawarah adat.\n\n**Penjelasan:**\n\n1. **Status Harta \"Pusako Rendah\" (Harta Pencaharian):**\n   - Rumah hasil kerja sendiri di perantauan dikategorikan sebagai **harta pencaharian (pusako rendah)**.\n   - Secara adat, harta pencaharian dapat diatur pewarisannya oleh pemiliknya **tetapi dengan syarat utama: harus melalui musyawarah keluarga (kerapatan ninik mamak dan pihak kekerabatan)**.\n\n2. **Prinsip Musyawarah dan Keseimbangan:**\n   - Musyawarah adat Minangkabau mengutamakan **keseimbangan, keadilan, dan kepentingan bersama**.\n   - Mengabaikan anak perempuan akan dianggap **melanggar prinsip keadilan dan kekerabatan matrilineal**, karena anak perempuan tetap memiliki kedudukan penting dalam sistem kekerabatan.\n   - Dalam musyawarah, keputusan harus mempertimbangkan **hak semua anak**, hubungan kekeluargaan, dan kebutuhan masing-masing ahli waris.\n\n3. **Konflik Hukum:**\n   - **Hukum Adat Minangkabau:** Pewarisan harus adil dan melalui musyawarah. Jika pemilik bersikeras mengabaikan anak perempuan, musyawarah dapat menolak atau memberikan sanksi adat.\n   - **Hukum Nasional (KUH Perdata):** Mengizinkan pewarisan sesuai kehendak pemilik (testamen), tetapi dalam praktik di Minangkabau, KUH Perdata sering dikesampingkan oleh hukum adat yang hidup.\n   - **Konflik:** Keinginan laki-laki tersebut akan **berkonflik dengan musyawarah adat** karena dianggap egois dan merusak harmonisasi keluarga.\n\n4. **Kemungkinan Solusi Musyawarah:**\n   - Musyawarah mungkin akan menghasilkan kompromi, seperti:\n     - Pembagian yang adil kepada semua anak.\n     - Pemberian kepada anak laki-laki dengan kompensasi tertentu kepada anak perempuan.\n     - Penetapan rumah sebagai harta keluarga dengan pengelolaan bersama.\n\n**Kesimpulan:**\n- **Dilarang** oleh prinsip musyawarah adat jika mengabaikan anak perempuan tanpa kesepakatan keluarga.\n- Pewarisan **hanya diperbolehkan** jika musyawarah adat menyetujui, tetapi sangat kecil kemungkinan musyawarah mengabaikan hak anak perempuan sepenuhnya.\n- Saran: Laki-laki tersebut harus **memulai musyawarah dengan ninik mamak dan keluarga** untuk mencapai keputusan yang adat dan dapat diterima semua pihak.",
+      "success": true
+    },
+    "divergence": false
+  },
+  {
+    "id": "TC-05-015",
+    "scenario": "Sawah pusako tinggi digadaikan oleh Mamak untuk biaya penguburan anggota kaum perempuan yang meninggal dan tidak punya biaya. Konsensus tercapai. Apakah ini secara formal sah?",
+    "expected": "allow_inheritance",
+    "symbolic": {
+      "actual": "deny_inheritance",
+      "success": false
+    },
+    "llm": {
+      "response": "Berdasarkan hukum adat Minangkabau dan hukum nasional Indonesia, **secara formal tidak sah** dengan penjelasan sebagai berikut:\n\n### 1. **Hukum Adat Minangkabau (Hukum Pusako Tinggi)**\n- **Sawah pusako tinggi** adalah harta ulayat kaum (harta warisan turun-temurun dari garis ibu) yang **tidak boleh diperjualbelikan, dihibahkan, atau digadaikan**.\n- Pengelolaan sawah pusako tinggi berada di tangan **Mamak Kepala Waris** (penghulu), tetapi hanya untuk kepentingan kaum (kemanfaatan bersama) dengan prinsip **\"memegang bukan memiliki\"**.\n- Penggunaan untuk biaya penguburan anggota kaum perempuan **boleh** sebagai bentuk kewajiban sosial kaum, tetapi **harus melalui musyawarah kaum (konsensus)** dan **tidak boleh mengalihkan hak milik** (gadai termasuk pengalihan hak sementara).\n- **Gadai sawah pusako tinggi** umumnya **dilarang** karena berisiko hilangnya harta pusako jika tidak ditebus. Jika terpaksa, harus ada **perjanjian tebus yang jelas** dan disetujui seluruh anggota kaum.\n\n### 2. **Hukum Nasional (KUH Perdata & UU Pokok Agraria)**\n- **Pasal 49 UU No. 5/1960 (UUPA)** mengakui hak ulayat masyarakat adat sepanjang masih ada dan tidak bertentangan dengan kepentingan nasional.\n- **Gadai** diatur dalam **KUH Perdata Pasal 1150** sebagai hak kebendaan, tetapi untuk tanah adat harus memenuhi syarat:\n  - **Bukti kepemilikan/pengelolaan sah** (misalnya girik, surat adat).\n  - **Persetujuan dari seluruh pihak yang berwenang** (dalam hal ini seluruh anggota kaum).\n- Jika tidak ada bukti kepemilikan individu (karena milik kaum), gadai secara hukum nasional **sulit diakui** kecuali sebagai perjanjian pinjam-meminjam dengan jaminan.\n\n### 3. **Analisis Kasus**\n- **Konsensus tercapai** \u2192 Memenuhi syarat musyawarah adat.\n- **Tujuan penguburan** \u2192 Termasuk kepentingan mendesak dan sosial yang diakui adat.\n- **Namun, gadai** \u2192 Melanggar prinsip \"tidak boleh mengalihkan hak\" pada harta pusako tinggi.\n- **Secara formal**: \n  - **Adat**: Sah sebagai keputusan musyawarah, tetapi **bentuk gadai** yang dipilih bertentangan dengan prinsip pelestarian harta pusako. Seharusnya menggunakan mekanisme lain (misalnya: pinjam dana dengan jaminan lain, atau menggunakan hasil panen sawah).\n  - **Hukum Nasional**: Jika sawah tidak bersertifikat individu, gadai tidak dapat didaftarkan ke Kantor Pertanahan, sehingga **tidak sah secara administrasi**.\n\n### 4. **Konflik Hukum**\n- **Konflik** antara:\n  - **Kebutuhan sosial adat** (penguburan sebagai kewajiban kaum) vs. **Prinsip pelestarian harta pusako** (larangan mengalihkan hak).\n  - **Konsensus kaum** (kekuatan adat) vs. **Kepatuhan pada aturan adat yang melarang gadai**.\n\n### 5. **Rekomendasi**\n- **Secara adat**, sebaiknya dicari solusi lain:\n  - Menggunakan **hasil panen sawah** untuk biaya penguburan.\n  - **Meminjam dana** dengan jaminan lain (bukan sawah pusako).\n  - Jika terpaksa gadai, harus ada **perjanjian tebus yang mengikat** dan disaksikan oleh ninik mamak/penghulu.\n- **Secara hukum nasional**, agar sah perlu:\n  - Membuat **akta gadai di notaris/PPAT** dengan jelas menyatakan status tanah adat dan persetujuan seluruh anggota kaum.\n  - Melakukan **pencatatan di Kantor Pertanahan** jika memungkinkan.\n\n### **Kesimpulan**\n- **Secara formal tidak sah** karena gadai sawah pusako tinggi melanggar aturan adat Minangkabau dan sulit diakui secara hukum nasional tanpa bukti kepemilikan individu.\n- Namun, **konsensus kaum dapat dianggap sebagai pengesahan secara adat**, dengan catatan ada upaya penebusan kembali untuk mencegah hilangnya harta pusako.\n- **Status: Dilarang oleh adat, tetapi dalam praktik dapat ditoleransi jika ada kesepakatan kaum dan mekanisme penebusan yang jelas.**",
+      "success": true
+    },
+    "divergence": true
+  },
+  {
+    "id": "TC-05-016",
+    "scenario": "Seorang anak laki-laki menuntut pembagian warisan tanah ayahnya di Padang berdasarkan KUHPerdata (pembagian sama rata antara laki-laki dan perempuan). Tanah tersebut ternyata adalah harta pusako tinggi kaum ibunya. Siapakah yang berhak?",
+    "expected": "deny_inheritance",
+    "symbolic": {
+      "actual": "deny_inheritance",
+      "success": true
+    },
+    "llm": {
+      "response": "Berdasarkan konteks yang diberikan, **warisan tanah tersebut dilarang untuk dibagi** kepada anak laki-laki tersebut melalui KUHPerdata, karena tanah tersebut merupakan **harta pusako tinggi** dalam sistem hukum adat Minangkabau.\n\n**Penjelasan:**\n\n1. **Status Tanah:** Tanah tersebut adalah **harta pusako tinggi**, yaitu harta warisan turun-temurun dari garis keturunan ibu (matrilineal). Harta ini bukan milik pribadi ayahnya, melainkan milik kolektif kaum/paruik (klan) dari garis ibu.\n\n2. **Kedudukan Ayah:** Ayah dari anak laki-laki tersebut adalah **orang semenda** (suami dari perempuan dalam kaum tersebut). Dalam adat Minangkabau, suami tidak memiliki hak kepemilikan atas harta pusako tinggi istrinya. Ia hanya memiliki hak pakai atau hak mengelola selama perkawinan berlangsung.\n\n3. **Kedudukan Anak:** Anak laki-laki tersebut merupakan bagian dari **kaum ibunya**. Namun, sebagai laki-laki dalam sistem matrilineal Minangkabau, ia **tidak termasuk sebagai ahli waris harta pusako tinggi**. Harta pusako tinggi diwariskan dari ibu kepada anak perempuan (dan saudara perempuan ibu). Anak laki-laki hanya memiliki hak untuk tinggal atau mendapat nafkah dari harta tersebut, tetapi tidak memiliki hak kepemilikan untuk membagi atau menjualnya.\n\n4. **Konflik Hukum:** Tuntutan anak laki-laki tersebut berdasarkan KUHPerdata (BW) yang menganut asas pembagian sama rata dan individual, **berkonflik langsung** dengan hukum adat Minangkabau yang mengatur harta pusako tinggi sebagai harta kolektif yang tidak dapat dibagi-bagi secara individual.\n\n5. **Yang Berhak:** Yang berhak atas tanah pusako tinggi tersebut adalah **kaum dari garis ibu**, khususnya **anak-anak perempuan** dari pemilik sebelumnya (ibu dari anak laki-laki tersebut) beserta saudara-saudara perempuan ibu dalam struktur kaum. Pengelolaan (hak ulayat) biasanya dipegang oleh **penghulu/pemimpin kaum** (ninik mamak).\n\n**Kesimpulan:**\n- **Hukum yang berlaku:** Hukum Adat Minangkabau (khusus untuk harta pusako tinggi).\n- **Status warisan:** **Dilarang** untuk dibagi menurut tuntutan anak laki-laki tersebut.\n- **Siapa yang berhak:** Ahli waris menurut garis matrilineal (anak perempuan, saudara perempuan ibu, dan kaum ibu).\n\nDalam praktik peradilan, Pengadilan Negeri Padang akan mengutamakan hukum adat setempat untuk kasus harta pusako tinggi, sesuai dengan Pasal 5 Undang-Undang Pokok Agraria (UUPA) yang mengakui keberadaan hak ulayat dan hukum adat selama tidak bertentangan dengan kepentingan nasional.",
+      "success": true
+    },
+    "divergence": false
+  },
+  {
+    "id": "TC-05-017",
+    "scenario": "Berdasarkan Yurisprudensi MA No. 179 K/Sip/1961, harta pencaharian (pusako rendah) dari seorang ayah jatuh ke tangan anak-anaknya. Seorang keponakan (kemenakan) menuntut harta tersebut berdasarkan adat matrilineal lama. Apakah tuntutan kemenakan secara formal ditolak?",
+    "expected": "deny_inheritance",
+    "symbolic": {
+      "actual": "deny_inheritance",
+      "success": true
+    },
+    "llm": {
+      "response": "Berdasarkan Yurisprudensi Mahkamah Agung No. 179 K/Sip/1961, **tuntutan kemenakan (keponakan) secara formal ditolak**.\n\n**Penjelasan:**\n\n1. **Konteks Yurisprudensi:** Putusan MA ini merupakan tonggak penting dalam hukum waris Indonesia, khususnya terkait konflik antara hukum adat matrilineal (Minangkabau) dan hukum nasional yang mulai berkembang. Perkara ini menyangkut status \"harta pencaharian\" (atau *pusako rendah*), yaitu harta yang diperoleh oleh seseorang selama perkawinan melalui usahanya sendiri.\n\n2. **Pertentangan Hukum:**  \n   - **Menurut Adat Matrilineal Minangkabau (lama):** Harta pusako rendah dari seorang ayah (yang berasal dari suku tertentu) seharusnya jatuh kepada kemenakannya (anak dari saudara perempuannya) dalam sistem kekerabatan matrilineal, bukan kepada anak kandungnya sendiri.  \n   - **Menurut Prinsip Hukum Nasional (yang dikembangkan MA):** MA menegaskan bahwa harta pencaharian (hasil usaha sendiri) lebih mendekati sifat \"harta bersama\" dalam perkawinan, dan oleh karena itu harus diwariskan menurut hubungan darah langsung (anak kandung) sebagai ahli waris utama, sesuai dengan prinsip keadilan dan rasa kemanusiaan.\n\n3. **Keputusan MA:** Mahkamah Agung memutuskan bahwa **harta pencaharian (pusako rendah) dari seorang ayah jatuh kepada anak-anak kandungnya**, bukan kepada kemenakan. Dengan demikian, tuntutan kemenakan berdasarkan adat matrilineal lama dikesampingkan.\n\n4. **Status Hukum:** Putusan ini mencerminkan **konflik hukum** yang diselesaikan dengan memberikan prioritas pada nilai-nilai hukum nasional yang lebih menekankan pada hubungan langsung orang tua-anak, di atas aturan adat matrilineal yang dianggap sudah tidak sesuai lagi dengan perkembangan masyarakat.\n\n**Kesimpulan:**  \nTuntutan kemenakan secara formal **ditolak** berdasarkan yurisprudensi ini. Warisan harta pencaharian diperbolehkan untuk diberikan kepada anak kandung, dan penerapan adat matrilineal lama dalam hal ini dilarang untuk diikuti. Putusan MA ini menjadi preseden yang kuat dalam menyelesaikan konflik serupa antara hukum adat dan hukum nasional, khususnya dalam masyarakat Minangkabau.",
+      "success": true
+    },
+    "divergence": false
+  },
+  {
+    "id": "TC-05-018",
+    "scenario": "Tanah ulayat nagari dipinjamkan kepada sebuah perusahaan dengan izin dari Ninik Mamak dan Kerapatan Adat Nagari (KAN). Salah satu anggota kaum menggugat karena merasa tidak mendapat bagian. Apakah gugatan ini valid jika konsensus adat sudah tercapai?",
+    "expected": "allow_inheritance",
+    "symbolic": {
+      "actual": "deny_inheritance",
+      "success": false
+    },
+    "llm": {
+      "response": "Berdasarkan prinsip hukum adat Minangkabau dan kerangka hukum nasional Indonesia, **gugatan tersebut tidak valid** jika konsensus adat telah tercapai secara sah.\n\n**Alasan:**\n\n1. **Sifat Tanah Ulayat:** Tanah ulayat nagari adalah milik kolektif seluruh masyarakat adat nagari, dikelola secara bersama oleh Ninik Mamak dan lembaga adat (KAN). Keputusan mengenai pengelolaannya diambil secara musyawarah dan mufakat (konsensus) oleh para pemangku adat yang mewakili kepentingan kaum/klan.\n\n2. **Prosedur Sah:** Jika izin diberikan oleh Ninik Mamak dan KAN melalui proses musyawarah yang sesuai dengan adat (\"bulek aie dek pambuluah, bulek kato dek mufakat\"), maka keputusan tersebut mengikat seluruh anggota kaum. Tidak ada hak individual untuk menuntut bagian secara terpisah dari keputusan kolektif yang sah.\n\n3. **Prinsip Kolektivitas:** Dalam hukum adat Minangkabau, hak perorangan tunduk pada kepentingan kolektif kaum dan nagari. Anggota kaum tidak memiliki hak pemilikan individual atas tanah ulayat, melainkan hak pakai atau manfaat yang diatur secara bersama.\n\n4. **Konflik Hukum:** Secara hukum nasional (UUPA No. 5/1960), tanah ulayat diakui sepanjang masih hidup dan pelaksanaannya harus sesuai dengan hukum adat setempat. Jika proses adat telah dipatuhi, pengadilan nasional umumnya akan menghormati keputusan lembaga adat yang sah.\n\n**Kesimpulan:**\n- **Diperbolehkan:** Keputusan Ninik Mamak dan KAN yang diambil secara musyawarah/mufakat adalah final dan mengikat.\n- **Dilarang:** Anggota kaum menuntut hak individual atas tanah ulayat yang telah diputuskan secara kolektif.\n- **Konflik:** Dapat muncul jika terbukti ada pelanggaran prosedur adat (misalnya: musyawarah tidak melibatkan perwakilan yang sah, ada paksaan, atau korupsi). Namun jika prosedur sah, gugatan tidak memiliki dasar.\n\n**Saran:** Jika anggota kaum merasa prosesnya tidak adil, ia dapat mengajukan keberatan melalui saluran internal adat (musyawarah ulang di tingkat kaum/suku/nagari), bukan langsung ke pengadilan umum.",
+      "success": true
+    },
+    "divergence": true
+  },
+  {
+    "id": "TC-05-019",
+    "scenario": "Seseorang yang bukan anggota suku Minangkabau (orang luar) membeli tanah pusako tinggi yang dijual secara rahasia oleh seorang anggota kaum tanpa sepengetahuan Mamak. Apakah transaksi ini sah secara formal?",
+    "expected": "conflict_detected",
+    "symbolic": {
+      "actual": "conflict_detected",
+      "success": true
+    },
+    "llm": {
+      "response": "Berdasarkan hukum adat Minangkabau, **transaksi jual-beli tanah pusako tinggi antara orang luar (bukan anggota suku Minangkabau) dengan seorang anggota kaum tanpa sepengetahuan mamak adalah TIDAK SAH.**\n\n**Alasan:**\n1. **Status Tanah Pusako Tinggi:** Tanah pusako tinggi adalah harta bersama (kolektif) suatu kaum (kelompok kekerabatan matrilineal), bukan milik individu. Pengelolaannya berada di bawah otoritas mamak (paman dari garis ibu) dan ninik mamak (penghulu adat).\n2. **Prosedur yang Dilanggar:** \n   - Setiap transaksi yang melibatkan tanah pusako tinggi harus melalui musyawarah dan persetujuan seluruh anggota kaum serta diketahui/disetujui oleh mamak dan ninik mamak.\n   - Penjualan tanah pusako tinggi kepada orang luar (non-Minangkabau) umumnya sangat dibatasi atau dilarang, karena dapat mengakibatkan lepasnya harta turun-temurun dari penguasaan kaum.\n3. **Aspek Formalitas:** Meskipun transaksi mungkin memiliki bukti tertulis (akta) di hadapan pejabat negara (notaris/PPAT), secara hukum adat transaksi tersebut batal demi hukum karena objeknya (tanah pusako) tidak dapat diperjualbelikan secara bebas oleh individu.\n\n**Konflik Hukum:**\n- **Hukum Nasional (UUPA):** Secara formal, jika transaksi telah didaftarkan dan memiliki sertifikat hak milik, negara mungkin mengakuinya sebagai bukti kepemilikan. Namun, UUPA juga mengakui keberadaan hak ulayat dan hukum adat.\n- **Hukum Adat Minangkabau:** Transaksi ini jelas melanggar prinsip adat dan dapat menimbulkan sanksi adat bagi penjual, serta tuntutan pembatalan transaksi oleh kaum.\n\n**Kesimpulan:** Transaksi ini **dilarang dan tidak sah** menurut hukum adat Minangkabau. Keluarga/kaum pemilik tanah berhak menuntut pembatalan transaksi melalui musyawarah adat atau pengadilan. Pembeli (orang luar) tidak memperoleh hak yang sah atas tanah tersebut dalam sistem adat, meskipun secara administratif mungkin memiliki dokumen.",
+      "success": true
+    },
+    "divergence": false
+  },
+  {
+    "id": "TC-05-020",
+    "scenario": "Sepasang suami istri di Padang bercerai. Mereka memiliki rumah yang dibeli bersama selama pernikahan. Suami ingin membawa rumah tersebut sebagai harta miliknya sendiri. Bagaimana status formal harta ini dalam adat?",
+    "expected": "conflict_detected",
+    "symbolic": {
+      "actual": "no_conflict",
+      "success": false
+    },
+    "llm": {
+      "response": "Berdasarkan adat Minangkabau, **status formal harta tersebut adalah harta suarang (harta bersama dalam perkawinan) yang harus dibagi sesuai ketentuan adat dan hukum nasional.**\n\n**Penjelasan:**\n\n1. **Prinsip Dasar Harta dalam Adat Minangkabau:**\n   - **Harta Pusaka Tinggi:** Harta turun-temurun dari garis keturunan ibu (matrilineal), tidak dapat dibagi atau diperjualbelikan, dan hanya dikelola oleh kaum perempuan (ninik mamak).\n   - **Harta Pusaka Rendah:** Harta yang diperoleh dari hasil usaha sendiri (bukan warisan), dapat dibagi.\n   - **Harta Suarang (Harta Bersama):** Harta yang diperoleh bersama selama perkawinan, baik atas usaha suami, istri, atau keduanya.\n\n2. **Analisis Kasus:**\n   - Rumah yang dibeli bersama selama pernikahan termasuk **harta suarang**.\n   - Dalam adat Minangkabau, harta suarang harus **dibagi secara adil** jika terjadi perceraian. Pembagian ini memperhatikan kontribusi masing-masing pihak, baik secara finansial maupun non-finansial (misalnya pengelolaan rumah tangga).\n   - **Suami tidak dapat secara sepihak membawa seluruh rumah sebagai miliknya sendiri**, karena istri memiliki hak yang setara atas harta tersebut.\n\n3. **Konflik/Keselarasan dengan Hukum Nasional:**\n   - **Hukum Nasional (UU No. 1 Tahun 1974 tentang Perkawinan, Pasal 37):** Menyatakan bahwa harta bersama dibagi menurut hukum masing-masing pihak (agama/adat). Untuk pasangan di Padang (beradat Minangkabau), hukum adat berlaku.\n   - **Keselarasan:** Baik hukum adat Minangkabau maupun hukum nasional sepakat bahwa harta bersama harus dibagi secara adil saat perceraian.\n   - **Konflik Potensial:** Jika suami mengklaim rumah sebagai milik pribadi tanpa bukti pembelian sebelum nikah atau hibah khusus, klaim tersebut bertentangan dengan prinsip harta suarang dalam adat.\n\n4. **Proses Penyelesaian:**\n   - Penyelesaian pertama melalui **musyawarah keluarga** (diikuti ninik mamak dari kedua belah pihak).\n   - Jika tidak tercapai kesepakatan, dapat dibawa ke **Kerapatan Adat Nagari (KAN)**.\n   - Keputusan KAN dapat diperkuat melalui **Pengadilan Agama** (jika Muslim) atau **Pengadilan Negeri** (jika non-Muslim) untuk memiliki kekuatan eksekusi.\n\n**Kesimpulan:**\n- **Dilarang** bagi suami untuk mengambil seluruh rumah sebagai milik pribadi.\n- Harta tersebut adalah **harta bersama (harta suarang)** yang wajib dibagi secara adil.\n- Proses pembagian mengutamakan musyawarah adat, dengan opsi penyelesaian hukum formal jika diperlukan.",
+      "success": true
+    },
+    "divergence": true
+  },
+  {
+    "id": "TC-05-021",
+    "scenario": "Seorang paman (Mamak) menghibahkan harta pusako tinggi kepada anak kandungnya sendiri tanpa persetujuan saudara perempuannya. Apakah hibah ini sah secara formal?",
+    "expected": "conflict_detected",
+    "symbolic": {
+      "actual": "conflict_detected",
+      "success": true
+    },
+    "llm": {
+      "response": "Berdasarkan hukum adat Minangkabau, **hibah tersebut TIDAK SAH secara formal**.\n\nBerikut penjelasannya:\n\n1.  **Status Harta Pusako Tinggi**: Harta pusako tinggi adalah harta warisan turun-temurun dari nenek moyang yang dimiliki secara kolektif oleh anggota kaum atau suku. Harta ini **tidak dapat dimiliki secara individu** dan tidak dapat diperjualbelikan atau dihibahkan secara bebas.\n\n2.  **Kedudukan Mamak**: Seorang mamak berfungsi sebagai **\"panghulu\"** atau pengelola harta pusako tinggi untuk kepentingan kaumnya. Ia bukan pemilik pribadi. Tugas utamanya adalah mengelola, menjaga, dan membagikan manfaat harta tersebut untuk kemenakan (anak dari saudara perempuannya) sesuai kebutuhan.\n\n3.  **Penerima yang Sah**: Penerima manfaat dan pewaris harta pusako tinggi adalah **kemenakan (anak dari saudara perempuan)**, bukan anak kandungnya sendiri. Anak kandung (anak sumando) merupakan ahli waris dari harta pencaharian (harta suarang) ayah dan ibunya, bukan dari harta pusako tinggi kaum ayahnya.\n\n4.  **Persyaratan Keabsahan**: Setiap pengalihan atau pengelolaan harta pusako tinggi yang signifikan **memerlukan musyawarah dan persetujuan dari ninik mamak, tungganai, dan seluruh anggota kaum yang berkepentingan**, terutama saudara-saudara perempuannya (ibunda dari para kemenakan). Tanpa persetujuan ini, tindakan hibah dianggap melanggar hak kolektif kaum.\n\n**Kesimpulan Hukum**:\n- **Hukum Adat Minangkabau**: **DILARANG**. Hibah ini batal demi hukum karena melanggar prinsip dasar kekerabatan matrilineal dan hak kolektif atas harta pusako.\n- **Hukum Nasional (KUH Perdata)**: **ADA KONFLIK**. Secara formal KUH Perdata mengakui hibah sebagai perbuatan hukum, tetapi dalam praktik pengadilan (Putusan MA No. 99K/Sip/1968 dan yurisprudensi lainnya), hakim akan mendahulukan hukum adat yang hidup dan diakui masyarakat setempat untuk kasus harta pusako.\n- **Status**: Terjadi **konflik** antara ketentuan adat yang melarang dan kemungkinan upaya pemohon untuk menggunakan kerangka hukum nasional. Namun, dalam penyelesaiannya, hukum adat Minangkabau akan menjadi hukum utama yang mengatur.\n\n**Saran**: Untuk mengalihkan harta kepada anak kandung, seorang ayah hanya dapat menghibahkan **harta suarang (harta pencaharian)** yang diperoleh selama perkawinan, bukan harta pusako tinggi.",
+      "success": true
+    },
+    "divergence": false
+  },
+  {
+    "id": "TC-05-022",
+    "scenario": "Seorang perempuan Minang meninggal tanpa anak, tanpa saudara perempuan, dan tanpa kemenakan perempuan. Harta pusako tingginya diklaim oleh saudara laki-laki satu-satunya. Apakah klaim ini sah?",
+    "expected": "punah_detected",
+    "symbolic": {
+      "actual": "punah_detected",
+      "success": true
+    },
+    "llm": {
+      "response": "Berdasarkan hukum adat Minangkabau, klaim saudara laki-laki satu-satunya tersebut **tidak sah**.\n\n**Penjelasan:**\n\n1. **Harta pusako tinggi** adalah harta turun-temurun menurut garis ibu (matrilineal). Penguasaan dan pengelolaan harta ini berada pada kaum (kelompok kekerabatan matrilineal), bukan individu.\n\n2. **Ahli waris harta pusako tinggi** adalah pihak-pihak yang memiliki hubungan kekerabatan melalui garis ibu. Urutan prioritasnya adalah:\n   - Anak perempuan dan kemenakan perempuan (dari garis saudara perempuan).\n   - Saudara perempuan dan kemenakan perempuan dari garis ibu.\n   - Kaum (kelompok kerabat matrilineal) yang lebih luas.\n\n3. **Posisi saudara laki-laki** dalam sistem kekerabatan Minang adalah sebagai *mamak* (paman) bagi anak-anak saudara perempuannya. Ia bertanggung jawab mengelola harta pusako tinggi untuk kepentingan kemenakan perempuannya (anak dari saudara perempuannya), **bukan untuk dirinya sendiri**. Ia tidak dapat mewarisi harta pusako tinggi untuk kepentingan pribadi.\n\n4. **Dalam kasus ini:**\n   - Pewaris meninggal tanpa anak perempuan, tanpa saudara perempuan, dan tanpa kemenakan perempuan dari garis ibu.\n   - Maka, harta pusako tinggi tersebut **kembali kepada kaum** (suku/klan matrilineal) dari perempuan yang meninggal tersebut. Harta akan dikelola oleh penghulu atau ninik mamak dari kaum tersebut untuk kepentingan kaum.\n\n**Kesimpulan:**\nSaudara laki-laki satu-satunya **tidak berhak mewarisi harta pusako tinggi** untuk kepentingan pribadinya. Klaimnya tidak sah menurut hukum adat Minangkabau. Harta tersebut menjadi hak kaum dari garis ibu pewaris.",
+      "success": false
+    },
+    "divergence": true
+  },
+  {
+    "id": "TC-05-023",
+    "scenario": "Harta pusako rendah (pencaharian) dari ibu yang meninggal dunia akan dibagikan kepada anak laki-laki dan perempuannya. Apakah pembagian ini diperbolehkan?",
+    "expected": "allow_inheritance",
+    "symbolic": {
+      "actual": "allow_inheritance",
+      "success": true
+    },
+    "llm": {
+      "response": "Berdasarkan **Hukum Adat Minangkabau**, harta pusako rendah (harta pencaharian) merupakan harta yang diperoleh dari hasil usaha sendiri selama perkawinan. Harta ini pada dasarnya **diperbolehkan** untuk dibagikan kepada anak laki-laki dan perempuan, namun dengan ketentuan sebagai berikut:\n\n1. **Harta pusako rendah** bersifat **harta bersama suami-istri** selama perkawinan, sehingga pembagiannya harus melibatkan ahli waris dari pihak suami (jika masih hidup) atau ahli waris suami (jika suami telah meninggal lebih dahulu).\n2. Setelah bagian suami atau ahli waris suami dipisahkan, sisa harta pusako rendah dari ibu dapat diwariskan kepada **semua anaknya (laki-laki dan perempuan)** secara adil, biasanya dengan pembagian yang merata tanpa membedakan jenis kelamin.\n3. Namun, dalam praktik adat Minangkabau, harta pusako rendah sering kali **dianggap berubah status menjadi harta pusako tinggi** jika telah diwariskan ke generasi berikutnya, sehingga dapat tunduk pada aturan matrilineal (diwariskan kepada perempuan melalui garis keturunan ibu).\n\nDalam **Hukum Nasional (KUH Perdata/BW dan Kompilasi Hukum Islam/KHI)**, harta pencaharian (harta bersama) juga dapat dibagikan kepada semua anak, dengan ketentuan:\n- **KUH Perdata (BW)**: Pembagian dilakukan dengan bagian yang sama antara anak laki-laki dan perempuan (asas egaliter).\n- **Kompilasi Hukum Islam (KHI)**: Anak laki-laki mendapat bagian dua kali lipat anak perempuan.\n\n**Kesimpulan**: Pembagian harta pusako rendah dari ibu kepada anak laki-laki dan perempuan **diperbolehkan**, baik menurut Hukum Adat Minangkabau (dengan memperhatikan hak suami/ahli waris suami) maupun Hukum Nasional. Namun, perlu diperhatikan:\n- **Dalam Adat Minangkabau**: Jika harta tersebut telah dianggap sebagai pusako tinggi, maka hanya diwariskan kepada perempuan (garis matrilineal).\n- **Dalam Hukum Nasional**: Berlaku aturan pembagian sesuai sistem hukum yang dipilih (BW atau KHI).\n\n**Rekomendasi**: Untuk menghindari konflik, sebaiknya dilakukan musyawarah keluarga dan diselesaikan secara kekeluargaan, atau merujuk pada hukum yang berlaku sesuai keyakinan dan kesepakatan ahli waris.",
+      "success": true
+    },
+    "divergence": false
+  },
+  {
+    "id": "TC-05-024",
+    "scenario": "Seorang anggota kaum menggadaikan sawah pusako tinggi untuk biaya sekolah anaknya. Anggota kaum lain tidak setuju (tidak ada konsensus). Apakah tindakan ini diperbolehkan?",
+    "expected": "conflict_detected",
+    "symbolic": {
+      "actual": "no_conflict",
+      "success": false
+    },
+    "llm": {
+      "response": "**Jawaban: Tindakan ini DILARANG menurut hukum adat Minangkabau.**\n\n**Penjelasan:**\n\n1. **Sawah Pusako Tinggi** adalah harta pusaka tinggi (harta warisan turun-temurun dari nenek moyang) yang dimiliki secara kolektif oleh seluruh anggota kaum (suku). Statusnya adalah **harta bersama kaum** dan bukan milik pribadi.\n\n2. **Prinsip Pengelolaan Harta Pusako Tinggi**:\n   * Harta pusaka tinggi tidak boleh diperjualbelikan, dihibahkan, atau diwariskan kepada orang luar kaum.\n   * Pengelolaan dan pemanfaatannya harus berdasarkan **konsensus (mufakat) seluruh anggota kaum** melalui musyawarah.\n   * Tujuan pemanfaatannya harus untuk kepentingan bersama kaum, seperti biaya pendidikan anak kaum, biaya pengobatan, atau modal usaha kolektif.\n\n3. **Analisis Kasus**:\n   * Tindakan menggadaikan sawah pusako tinggi dilakukan oleh **seorang anggota secara individu**.\n   * Tujuannya adalah untuk **kepentingan pribadi (biaya sekolah anaknya sendiri)**, bukan untuk kepentingan kaum.\n   * **Tidak ada konsensus** dari anggota kaum lainnya, bahkan ada yang tidak setuju.\n   * Dengan demikian, tindakan ini melanggar prinsip dasar kepemilikan kolektif dan musyawarah.\n\n4. **Konflik Hukum**:\n   * Secara **hukum adat Minangkabau**, tindakan ini jelas dilarang dan dapat dibatalkan. Anggota kaum yang dirugikan dapat menuntut pembatalan gadai tersebut.\n   * Secara **hukum nasional (KUHPerdata)**, jika transaksi gadai telah dilakukan di hadapan notaris/PPAT dan sawah tersebut terdaftar, mungkin ada kepastian hukum formal. Namun, pihak kaum dapat menggugat ke pengadilan dengan alasan bahwa penggadaian dilakukan tanpa hak (karena yang menggadaikan bukan pemilik sah secara individu).\n\n**Kesimpulan:**\nTindakan menggadaikan sawah pusako tinggi tanpa konsensus kaum untuk kepentingan pribadi **DILARANG** oleh hukum adat Minangkabau. Penyelesaiannya harus melalui musyawarah internal kaum, dan jika diperlukan, dapat diajukan ke Pengadilan Negeri (berwenang menyelesaikan sengketa adat) untuk pembatalan transaksi gadai tersebut.",
+      "success": true
+    },
+    "divergence": true
+  },
+  {
+    "id": "TC-05-025",
+    "scenario": "Seorang ayah di perantauan ingin menghibahkan seluruh harta pencaharian kepada anak-anaknya. Adat Minangkabau modern (Yurisprudensi MA) mengakui hal ini. Apakah secara formal ini diizinkan?",
+    "expected": "allow_inheritance",
+    "symbolic": {
+      "actual": "allow_inheritance",
+      "success": true
+    },
+    "llm": {
+      "response": "**Jawaban:**\n\nSecara formal, **diizinkan** dengan beberapa catatan penting.\n\n**Penjelasan:**\n\n1. **Hukum Nasional (KUHPerdata):**  \n   - Hibah (pemberian) dari orang tua kepada anak diizinkan selama memenuhi syarat formal Pasal 1687-1689 KUHPerdata (akta notaris, kecuali untuk barang bergerak dapat secara lisan/tradisional).  \n   - Harta yang dihibahkan adalah **harta pencaharian** (harto pancaharian), yaitu harta yang diperoleh ayah dari hasil usahanya sendiri, bukan harta pusaka tinggi.  \n   - Dalam hukum nasional, harta pencaharian dianggap sebagai harta bawaan atau harta bersama (jika diperoleh selama perkawinan), sehingga ayah memiliki kewenangan untuk menghibahkannya.\n\n2. **Adat Minangkabau Modern (Yurisprudensi MA):**  \n   - Mahkamah Agung dalam beberapa putusan (seperti Putusan MA No. 179 K/Sip/1959 dan putusan-putusan terkini) telah mengakui **asas individualitas** untuk harta pencaharian.  \n   - Harta pencaharian dapat diwariskan atau dihibahkan sesuai kehendak pemiliknya (ayah), meskipun dalam adat Minangkabau tradisional, harta pusaka tinggi (harta ulayat kaum) tidak dapat dihibahkan/dijual.  \n   - Dengan demikian, adat Minangkabau modern telah beradaptasi dengan hukum nasional dalam hal harta pencaharian.\n\n3. **Tidak Ada Konflik:**  \n   - Dalam kasus ini, **tidak ada konflik** antara hukum nasional dan adat Minangkabau modern karena kedua sistem hukum mengakui kewenangan ayah atas harta pencaharian.  \n   - Syarat utama: ayah harus memastikan bahwa harta yang dihibahkan benar-benar harta pencaharian, bukan harta pusaka tinggi yang menjadi milik kaum/keluarga matrilineal.\n\n**Kesimpulan:**  \nHibah seluruh harta pencaharian dari ayah kepada anak-anaknya **diizinkan** secara formal baik menurut hukum nasional maupun adat Minangkabau modern (berdasarkan yurisprudensi MA), asalkan memenuhi prosedur hukum yang berlaku (seperti akta notaris) dan tidak melibatkan harta pusaka tinggi.",
+      "success": false
+    },
+    "divergence": true
+  },
+  {
+    "id": "TC-05-026",
+    "scenario": "Sengketa waris pusako tinggi tidak bisa diselesaikan di tingkat keluarga. Para pihak langsung membawa kasus ke Pengadilan Negeri tanpa melalui Pengadilan Adat Nagari (KAN). Apakah prosedur ini benar menurut tata krama hukum adat?",
+    "expected": "conflict_detected",
+    "symbolic": {
+      "actual": "no_conflict",
+      "success": false
+    },
+    "llm": {
+      "response": "Menurut tata krama hukum adat Minangkabau, **prosedur ini tidak benar**. Penyelesaian sengketa warisan pusako tinggi harus melalui mekanisme adat secara berjenjang sebelum dibawa ke pengadilan negara. Berikut penjelasannya:\n\n1. **Prinsip Penyelesaian Berjenjang (Musyawarah Adat)**:\n   - Sengketa pusako tinggi harus diselesaikan terlebih dahulu di tingkat keluarga (kaum/suku) melalui musyawarah.\n   - Jika tidak berhasil, naik ke tingkat Ninik Mamak dan Penghulu dalam Nagari.\n   - Selanjutnya, dapat dibawa ke Kerapatan Adat Nagari (KAN) sebagai lembaga adat formal.\n   - Pengadilan Negeri hanya menjadi pilihan terakhir setelah upaya adat ditempuh.\n\n2. **Kedudukan Pusako Tinggi**:\n   - Pusako tinggi adalah harta warisan turun-temurun dari nenek moyang yang dikelola secara kolektif oleh kaum/suku.\n   - Sengketa terkait pusako tinggi merupakan ranah adat yang penyelesaiannya mengutamakan prinsip kekeluargaan dan musyawarah.\n\n3. **Konflik Hukum dan Praktik**:\n   - Meskipun hukum adat mewajibkan jalur adat terlebih dahulu, dalam praktik sering terjadi pihak langsung ke Pengadilan Negeri.\n   - Pengadilan Negeri umumnya akan mempertimbangkan apakah upaya adat telah dilakukan, namun tidak selalu menolak perkara.\n   - Terdapat ketegangan antara sistem hukum adat dan sistem hukum nasional dalam hal ini.\n\n**Kesimpulan**: Menurut tata krama hukum adat Minangkabau, membawa sengketa pusako tinggi langsung ke Pengadilan Negeri tanpa melalui jalur adat (termasuk KAN) **dilarang** karena melanggar prinsip berjenjang dan mengabaikan otoritas lembaga adat. Namun, dalam realitas hukum pluralistik Indonesia, sering terjadi konflik antara kepatuhan pada hukum adat dan akses langsung ke peradilan negara.",
+      "success": true
+    },
+    "divergence": true
+  },
+  {
+    "id": "TC-05-027",
+    "scenario": "Harta pusako rendah berupa emas perhiasan ibu akan diberikan kepada anak perempuannya sebagai bekal pernikahan. Apakah ini sah?",
+    "expected": "allow_inheritance",
+    "symbolic": {
+      "actual": "allow_inheritance",
+      "success": true
+    },
+    "llm": {
+      "response": "**Jawaban:**\n\n**Sah**, berdasarkan hukum adat Minangkabau.\n\n**Penjelasan:**\n\n1. **Hukum Adat Minangkabau (Hukum Pusako):**\n   - **Harta Pusako Rendah** adalah harta bawaan atau harta pencaharian individu (ibu dalam hal ini). Berbeda dengan *harta pusako tinggi* (harta turun-temurun suku/kaum) yang diatur secara kolektif dan tidak boleh dibagi-bagi.\n   - Harta pusako rendah dapat diwariskan atau diberikan oleh pemiliknya kepada anak-anaknya, termasuk anak perempuan, sesuai kehendak pemilik.\n   - Pemberian kepada anak perempuan sebagai bekal pernikahan (disebut *\"antaran\"* atau *\"harta bawaan\"*) merupakan praktik yang umum dan diakui dalam adat Minangkabau.\n\n2. **Hukum Nasional (KUHPerdata & Kompilasi Hukum Islam/KHI):**\n   - **KUHPerdata (Buku II):** Mengatur bahwa harta bawaan (eigendom) dapat diwariskan atau dihibahkan kepada ahli waris, termasuk anak perempuan.\n   - **KHI (Pasal 171-172):** Mengklasifikasikan harta sebagai *harta bawaan* (milik individu) yang dapat diwariskan sesuai hukum waris Islam, atau dihibahkan sebelum pemilik meninggal.\n   - Dalam hal ini, karena pemberian dilakukan saat ibu masih hidup (hibah), maka aturan waris tidak langsung berlaku. Hibah kepada anak perempuan diperbolehkan.\n\n3. **Konflik Hukum:**\n   - **Tidak ada konflik** antara hukum adat Minangkabau dan hukum nasional dalam kasus ini.\n   - Kedua sistem hukum menghormati hak individu atas harta miliknya (*harta pusako rendah* dalam adat, *harta bawaan* dalam KHI/KUHPerdata) untuk memberikan atau menghibahkan kepada anak perempuannya.\n\n**Kesimpulan:**\nPemberian harta pusako rendah berupa emas perhiasan dari ibu kepada anak perempuannya sebagai bekal pernikahan adalah **sah** baik menurut hukum adat Minangkabau maupun hukum nasional. Hal ini merupakan bentuk hibah yang diperbolehkan dan sesuai dengan praktik sosial-budaya setempat.",
+      "success": true
+    },
+    "divergence": false
+  },
+  {
+    "id": "TC-05-028",
+    "scenario": "Seorang laki-laki yang menikahi perempuan Minang (orang semenda) ingin menguasai harta pusako tinggi keluarga istrinya setelah istrinya meninggal. Apakah ia berhak secara formal?",
+    "expected": "deny_inheritance",
+    "symbolic": {
+      "actual": "deny_inheritance",
+      "success": true
+    },
+    "llm": {
+      "response": "**Jawaban:**\nSecara formal, **tidak berhak**. Laki-laki tersebut (orang semenda) dilarang menguasai harta pusako tinggi keluarga istrinya, baik semasa hidup maupun setelah istrinya meninggal.\n\n**Penjelasan:**\n1. **Hukum Adat Minangkabau (Matrilineal):**\n   - Harta pusako tinggi adalah harta warisan turun-temurun dari garis keturunan ibu (matrilineal).\n   - Penguasaan dan pengelolaan harta pusako tinggi berada di bawah tanggung jawab **paruik** (kelompok kekerabatan matrilineal) dan diwakili oleh **mamak** (saudara laki-laki ibu).\n   - Seorang suami (orang semenda) tidak memiliki hubungan kekerabatan matrilineal dengan keluarga istrinya. Ia dianggap sebagai \"tamu terhormat\" dalam keluarga istrinya, tetapi **tidak mewarisi atau menguasai harta pusako tinggi**.\n   - Setelah istri meninggal, harta pusako tinggi tetap menjadi milik keluarga matrilineal istri (diwariskan kepada anak perempuan atau saudara perempuan istri, dengan pengelolaan oleh mamak).\n\n2. **Hukum Nasional (KUHPerdata & Kompilasi Hukum Islam/KHI):**\n   - **KUHPerdata (BW):** Menganut sistem individual dan bilateral, di mana suami dapat mewarisi harta istri. Namun, Pasal 131 IS (Indische Staatsregeling) menyatakan hukum adat berlaku bagi golongan pribumi selama tidak bertentangan dengan kepentingan umum.\n   - **KHI (bagi Muslim):** Pasal 189-190 KHI mengatur bahwa harta bersama (hasil pernikahan) dibagi \u00bd untuk suami dan \u00bd untuk istri, sementara harta bawaan masing-masing kembali ke pemilik atau ahli warisnya. Harta pusako tinggi dianggap sebagai **harta bawaan istri** yang berasal dari keluarga matrilineal, sehingga tidak menjadi harta bersama.\n   - **Putusan Mahkamah Konstitusi (MK):** MK dalam Putusan No. 35/PUU-X/2012 mengukuhkan bahwa hukum adat (seperti sistem matrilineal Minangkabau) tetap berlaku sepanjang diakui oleh masyarakat hukum adat dan tidak bertentangan dengan konstitusi.\n\n3. **Konflik dan Harmonisasi Hukum:**\n   - Terdapat potensi konflik antara hukum adat (larangan penguasaan oleh suami) dan hukum nasional (hak waris suami dalam KUHPerdata/KHI). Namun, dalam praktik, **hukum adat Minangkabau lebih dominan** untuk kasus harta pusako tinggi.\n   - Pengadilan biasanya memprioritaskan hukum adat dalam sengketa harta pusako tinggi, karena sifatnya yang khusus dan diakui secara konstitusional.\n\n**Kesimpulan:**\nLaki-laki (orang semenda) **dilarang** menguasai harta pusako tinggi keluarga istrinya. Harta tersebut tetap menjadi miliki keluarga matrilineal istri, dikelola oleh mamak, dan diwariskan kepada anak perempuan atau saudara perempuan istri.",
+      "success": true
+    },
+    "divergence": false
+  },
+  {
+    "id": "TC-05-029",
+    "scenario": "Sebuah harta pusako tinggi berupa sawah ladang diwariskan kepada tiga orang anak perempuan almarhumah pemilik asli. Bagaimana status kepemilikan mereka?",
+    "expected": "allow_inheritance",
+    "symbolic": {
+      "actual": "deny_inheritance",
+      "success": false
+    },
+    "llm": {
+      "response": "Berdasarkan hukum adat Minangkabau, **harta pusako tinggi (harta pusaka)** adalah harta turun-temurun dari pihak ibu (matrilineal) yang tidak boleh dibagi-bagi atau diwariskan secara individu. Harta pusako tinggi dikelola secara bersama oleh anggota kaum (paruik/suku) dan hanya boleh dimanfaatkan oleh perempuan-perempuan dalam kaum tersebut.\n\nDalam kasus ini:\n- **Status kepemilikan**: Harta pusako tinggi **tetap menjadi milik kaum**, bukan milik individu ketiga anak perempuan tersebut.\n- **Hak penguasaan/pemanfaatan**: Ketiga anak perempuan sebagai anggota kaum berhak mengelola dan memanfaatkan hasil dari harta pusako tinggi tersebut (misalnya hasil panen sawah ladang), tetapi tidak boleh menjual, membagi, atau mengalihkan kepemilikannya kepada pihak luar.\n- **Pelarangan**: **Dilarang** membagi-bagi harta pusako tinggi sebagai warisan individu. Jika pemilik asli (alm.) adalah perempuan tertua dalam kaum yang bertindak sebagai pengelola, maka setelah meninggal, pengelolaan beralih kepada perempuan tertua berikutnya dalam kaum (misalnya saudara perempuan almarhumah atau anak perempuan tertua).\n\n**Kesimpulan**:  \nKetiga anak perempuan tersebut **tidak mewarisi kepemilikan individu** atas harta pusako tinggi. Mereka hanya berhak mengelola dan memanfaatkannya secara bersama sebagai anggota kaum, sesuai prinsip kekerabatan matrilineal Minangkabau.",
+      "success": true
+    },
+    "divergence": true
+  },
+  {
+    "id": "TC-05-030",
+    "scenario": "Keponakan laki-laki (kemenakan) ingin menjual tanah pusako tinggi untuk membayar hutang judi paman (Mamak)-nya. Konsensus kaum menolak. Apakah tindakan ini bisa dipaksakan secara formal?",
+    "expected": "conflict_detected",
+    "symbolic": {
+      "actual": "conflict_detected",
+      "success": true
+    },
+    "llm": {
+      "response": "Berdasarkan hukum adat Minangkabau, **tindakan ini tidak dapat dipaksakan secara formal** dengan alasan sebagai berikut:\n\n1. **Status Tanah Pusako Tinggi**:  \n   Tanah pusako tinggi adalah harta bersama kaum (keluarga matrilineal) yang diwariskan turun-temurun dari nenek moyang. Pengelolaannya berada di bawah kewenangan **Mamak Kepala Waris** (penghulu kaum), dan penggunaannya harus disetujui melalui **konsensus (mufakat) dalam kaum**. Tanah ini tidak boleh diperjualbelikan, kecuali dalam kondisi sangat mendesak (*daruriak mambangkik batang tarandam*) dengan syarat disetujui seluruh anggota kaum dan tetap diutamakan untuk kepentingan kolektif kaum.\n\n2. **Alasan Penjualan Tidak Sah**:  \n   Hutang judi paman (mamak) termasuk **hutang pribadi** yang bersifat konsumtif dan tidak sah secara adat maupun hukum nasional (jud\u00ed dilarang hukum positif Indonesia). Hutang seperti ini **tidak dapat dibebankan pada harta pusako tinggi**, karena tanah pusako tinggi hanya boleh digunakan untuk kepentingan kaum seperti pendidikan, kesehatan, atau ekonomi kolektif, bukan untuk menutupi hutang pribadi yang terlarang.\n\n3. **Konsensus Kaum Menolak**:  \n   Penolakan konsensus kaum merupakan **veto final** dalam pengambilan keputusan adat Minangkabau. Tanpa mufakat, keponakan laki-laki (kemenakan) atau mamak tidak memiliki hak legal-adat untuk memaksa penjualan. Sanksi adat (*tajak undang-undang*) dapat diterapkan jika ada upaya pemaksaan.\n\n4. **Konflik Hukum Nasional dan Adat**:  \n   Secara hukum nasional (UUPA), tanah ulayat atau tanah komunal adat diakui selama masih hidup sesuai Pasal 3 UUPA. Pengadilan umum biasanya menghormati hukum adat selama tidak bertentangan dengan ketertiban umum. Dalam hal ini, **hutang judi tidak diakui sebagai hutang yang sah** secara hukum perdata (Pasal 1788 KUHPerdata: perjudian tidak menimbulkan hak tagih), sehingga alasan penjualan juga tidak memiliki dasar hukum positif.\n\n**Kesimpulan**:  \nPenjualan tanah pusako tinggi untuk membayar hutang judi mamak **dilarang secara adat Minangkabau dan tidak sah secara hukum nasional**. Konsensus kaum yang menolak adalah keputusan final, sehingga tindakan ini **tidak dapat dipaksakan secara formal**. Solusi alternatif: hutang judi diselesaikan secara pribadi oleh mamak tanpa melibatkan harta pusako, atau melalui musyawarah keluarga untuk opsi lain yang sesuai adat.",
+      "success": true
+    },
+    "divergence": false
+  }
+]
