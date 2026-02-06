@@ -46,6 +46,62 @@ Proyek ini mengandalkan **Human-in-the-Loop** untuk memastikan kualitas data huk
 3.  **Communication:**
     Gunakan GitHub Issues untuk melacak bug dan ide-ide eksperimen baru.
 
-## 5. Filosofi Kerja Terdistribusi
-- **Atomic Experiments:** Simpan setiap percobaan di folder `experiments/` dengan dokumentasi lengkap agar peneliti lain bisa mereplikasi hasilnya di komputer mereka.
-- **Fail Fast, Pivot Early:** Jika hasil eksperimen di komputer Anda menunjukkan kegagalan teknis yang signifikan, dokumentasikan segera di `docs/critique_and_risk_assessment.md`.
+## 5. Review Gate Process
+
+Setiap eksperimen dan deliverable WAJIB melalui review sebelum dianggap selesai:
+
+### Layer 1: Self-Critique
+- Peneliti (manusia atau AI) menjawab 10 pertanyaan devil's advocate dari `docs/review_protocol.md`
+- Tulis hasilnya di `experiments/NN_nama/REVIEW.md`
+- Minimum: jawaban substantif untuk setiap pertanyaan
+
+### Layer 2: Adversarial AI Review
+- Jalankan reviewer otomatis menggunakan LLM **INDEPENDEN** (bukan DeepSeek):
+  ```bash
+  python -m src.review.adversarial_reviewer experiments/NN_nama/
+  ```
+- Membutuhkan `ANTHROPIC_API_KEY` atau `OPENAI_API_KEY` di `.env`
+- Output: `experiments/NN_nama/ai_review.json`
+
+### Layer 3: Human Review
+- Minimal 1 reviewer manusia membaca REVIEW.md + ai_review.json
+- Keputusan: PASS / CONDITIONAL PASS / FAIL
+- Dokumentasikan di bagian bawah REVIEW.md
+
+### Kapan Review Diperlukan?
+| Milestone | Layers yang Diperlukan |
+|-----------|----------------------|
+| Eksperimen selesai | Layer 1 + 2 |
+| Integrasi ke pipeline | Layer 1 + 2 + 3 |
+| Draft paper section | Layer 1 + 2 + 3 |
+| Pre-submission | Layer 1 + 2 + 3 |
+
+## 6. Task Assignment Protocol
+
+Pekerjaan diorganisir sebagai Atomic Research Tasks (ART). Lihat `docs/task_registry.md` untuk daftar lengkap.
+
+### Cara Mengambil Task
+1. Buka `docs/task_registry.md`
+2. Cari task dengan status PENDING dan prerequisites yang sudah DONE
+3. Periksa field **Executor** — pastikan kamu eligible (HUMAN_ONLY / AI_ONLY / EITHER)
+4. Update status menjadi IN_PROGRESS dan isi "Assigned To"
+5. Setelah selesai, update menjadi DONE
+
+### Aturan Task
+- Setiap task memiliki **Acceptance Test** — task baru DONE jika semua test pass
+- Jika stuck, buat catatan di task description dan eskalasi
+- Task yang memakan waktu > 4 jam harus dipecah menjadi sub-tasks
+- Lihat `docs/task_template.md` untuk format lengkap
+
+## 7. Failure Registry
+
+Setiap kegagalan, hasil negatif, atau pendekatan yang ditinggalkan HARUS dicatat di `docs/failure_registry.md`:
+- Kegagalan yang terdokumentasi bernilai ilmiah
+- Failure registry menjadi sumber utama untuk Limitations section di paper
+- Jangan menghapus entry — ini catatan historis
+
+## 8. Filosofi Kerja Terdistribusi
+- **Atomic Experiments:** Simpan setiap percobaan di folder `experiments/` dengan PROTOCOL.md, REVIEW.md, dan analysis.md agar peneliti lain bisa mereplikasi hasilnya.
+- **Fail Fast, Pivot Early:** Jika hasil eksperimen menunjukkan kegagalan, dokumentasikan segera di `docs/failure_registry.md` dan `docs/critique_and_risk_assessment.md`.
+- **No Circular Evaluation:** Jangan gunakan DeepSeek untuk mengevaluasi output DeepSeek. Gunakan LLM independen atau annotator manusia.
+- **Quantify Everything:** Hindari bahasa kualitatif seperti "BERHASIL" tanpa metrik. Gunakan angka, statistical tests, dan confidence intervals.

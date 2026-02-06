@@ -14,6 +14,16 @@ Fokus utama proyek ini adalah pada **kontribusi ilmiah** dan **novelty** di bida
 *   **Serius:** Mengikuti metodologi ilmiah yang ketat (Rigorous), melakukan *Ablation Study*, dan memastikan *Reproducibility*.
 *   **Santai:** Pendekatan eksperimental (Trial & Error). Kegagalan teknis dalam eksperimen dianggap sebagai temuan riset yang valid dan akan didokumentasikan sebagai limitasi atau *future work*.
 
+## Status Terkini (2026-02-06)
+*   Rule engine scaffold tersedia di `src/symbolic/rule_engine.py` dan draft rules di `data/rules/minangkabau_rules.json` (**DRAFT_NEEDS_HUMAN_REVIEW**).
+*   Advanced agent architecture: parallel execution, debate, self-correction, dan routing sudah tersedia di `src/agents/`.
+*   Eksperimen 07 (advanced orchestration) sudah di-pre-register di `experiments/07_advanced_orchestration/PROTOCOL.md` dan siap dibuat runner.
+
+## Milestone Berikutnya
+1.  Verifikasi rules Minangkabau (ART-020).
+2.  Buat 30 test cases (ART-022).
+3.  Jalankan Experiment 05 (ART-023) setelah ART-020/022 selesai.
+
 ## Struktur Direktori
 *   `data/`: Penyimpanan data mentah (PDF Jurnal) dan olahan (Knowledge Graph dumps).
 *   `src/`: Source code untuk agen, pipeline ekstraksi, dan logika orkestrasi.

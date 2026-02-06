@@ -1,0 +1,106 @@
+import os
+from typing import Annotated, TypedDict, List
+from pathlib import Path
+
+from dotenv import load_dotenv
+from langchain_openai import ChatOpenAI
+from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage
+from langgraph.graph import StateGraph, END
+
+load_dotenv()
+
+
+class AgentState(TypedDict):
+    messages: Annotated[List[BaseMessage], lambda x, y: x + y]
+    national_context: str
+    adat_context: str
+    final_synthesis: str
+
+
+def _get_llm() -> ChatOpenAI:
+    return ChatOpenAI(
+        api_key=os.getenv("DEEPSEEK_API_KEY"),
+        base_url="https://api.deepseek.com",
+        model="deepseek-chat",
+    )
+
+
+def _read_graph_data(graph_data_path: str) -> str:
+    path = Path(graph_data_path)
+    if not path.exists():
+        return "[ERROR] Knowledge Graph data tidak ditemukan."
+    return path.read_text(encoding="utf-8")
+
+
+def _national_agent(llm: ChatOpenAI, state: AgentState):
+    query = state["messages"][0].content
+    prompt = (
+        "Kamu adalah pakar hukum perdata nasional Indonesia. "
+        f"Analisis pertanyaan ini berdasarkan KUHPerdata: '{query}'. "
+        "Fokus pada hak anak kandung dan aturan harta pencaharian (gono-gini)."
+    )
+    response = llm.invoke([SystemMessage(content=prompt)])
+    return {"national_context": response.content}
+
+
+def _adat_agent(llm: ChatOpenAI, graph_data_path: str, state: AgentState):
+    graph_data = _read_graph_data(graph_data_path)
+    query = state["messages"][0].content
+    prompt = (
+        "Kamu adalah tetua adat Minangkabau. "
+        "Analisis pertanyaan ini berdasarkan data Knowledge Graph adat berikut: "
+        f"{graph_data}. Pertanyaan: '{query}'. "
+        "Fokus pada hak kemenakan dan perbedaan Pusako Tinggi vs Pusako Rendah."
+    )
+    response = llm.invoke([SystemMessage(content=prompt)])
+    return {"adat_context": response.content}
+
+
+def _supervisor_agent(llm: ChatOpenAI, state: AgentState):
+    national = state.get("national_context", "")
+    adat = state.get("adat_context", "")
+    query = state["messages"][0].content
+    prompt = (
+        "Kamu adalah Hakim Supervisor yang ahli dalam pluralisme hukum. "
+        f"Tugasmu adalah mensintesis jawaban dari perspektif Nasional: {national} "
+        f"dan perspektif Adat: {adat}. Pertanyaan User: {query}. "
+        "Akui adanya konflik norma dan jelaskan solusi pluralistik."
+    )
+    response = llm.invoke([SystemMessage(content=prompt)])
+    return {"final_synthesis": response.content}
+
+
+def build_parallel_orchestrator(graph_data_path: str = "experiments/01_triple_extraction/result.json"):
+    llm = _get_llm()
+
+    workflow = StateGraph(AgentState)
+    workflow.add_node("start", lambda state: {})
+    workflow.add_node("national_law", lambda state: _national_agent(llm, state))
+    workflow.add_node("adat_law", lambda state: _adat_agent(llm, graph_data_path, state))
+    workflow.add_node("adjudicator", lambda state: _supervisor_agent(llm, state))
+
+    workflow.set_entry_point("start")
+    workflow.add_edge("start", "national_law")
+    workflow.add_edge("start", "adat_law")
+    workflow.add_edge("national_law", "adjudicator")
+    workflow.add_edge("adat_law", "adjudicator")
+    workflow.add_edge("adjudicator", END)
+
+    return workflow.compile()
+
+
+def run_parallel_query(query: str, graph_data_path: str = "experiments/01_triple_extraction/result.json"):
+    app = build_parallel_orchestrator(graph_data_path=graph_data_path)
+    inputs = {"messages": [HumanMessage(content=query)]}
+    return app.invoke(inputs)
+
+
+if __name__ == "__main__":
+    q = (
+        "Seorang ayah Minangkabau meninggal. "
+        "Dia meninggalkan rumah yang dibeli dari hasil kerjanya sendiri. "
+        "Siapa yang lebih berhak: anak kandungnya atau kemenakannya?"
+    )
+    state = run_parallel_query(q)
+    print("\n--- FINAL SYNTHESIS ---\n")
+    print(state.get("final_synthesis", "N/A"))
