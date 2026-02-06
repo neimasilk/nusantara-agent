@@ -17,5 +17,12 @@ Jika dalam perjalanannya proyek ini menemui hambatan teknis, berikut adalah arah
 *   **Hybrid Knowledge Engineering:** Mengurangi ketergantungan pada otomatisasi penuh (Bottom-Up) dengan memperkuat struktur ontologi manual (Top-Down).
 *   **Depth over Breadth:** Jika 3 domain adat terlalu luas, fokus akan dipersempit ke satu domain (misal: Minangkabau) dengan kedalaman data yang lebih tinggi.
 
-## 3. Komitmen Riset
-Meskipun risiko teridentifikasi, proyek tetap dilanjutkan sesuai rencana awal (PRD v1.0) untuk menguji batas kemampuan teknologi (DeepSeek + GraphRAG) dalam domain hukum pluralistik. Kegagalan dalam fase eksperimen akan diperlakukan sebagai data riset yang berharga untuk dipublikasikan.
+## 3. Update Pasca-Pilot (Eksperimen 1-3)
+Berdasarkan hasil eksperimen awal pada Februari 2026, beberapa risiko awal telah berhasil dimitigasi:
+
+*   **Mitigasi Semantic Loss (Exp 1):** DeepSeek terbukti mampu membedakan nuansa hukum yang halus (misal: memisahkan 'Otoritas Mamak' vs 'Kepemilikan Perempuan'). Risiko ini diturunkan dari *Tinggi* ke *Sedang/Terkendali*.
+*   **Mitigasi Ambiguity (Exp 3):** Pendekatan Multi-Agent terbukti mampu menangani ambiguitas bukan dengan memberikan satu jawaban kaku, melainkan dengan sintesis pluralistik yang menghormati kedua sistem hukum. Ini membuktikan bahwa sistem bisa menghindari jebakan "reduksionisme".
+*   **Mitigasi Graph Complexity (Exp 2):** Struktur tripel yang dihasilkan ternyata sangat *queryable* dan *traversable*, membuktikan bahwa pipeline Neuro-Symbolic ini layak diteruskan ke skala yang lebih besar.
+
+## 4. Komitmen Riset
+Meskipun beberapa risiko telah dimitigasi, proyek tetap mempertahankan kewaspadaan terhadap kualitas data (OCR) dan skalabilitas agen. Fase selanjutnya akan fokus pada pengolahan data massal dengan tetap merujuk pada prinsip-prinsip mitigasi yang telah diperbarui ini.
