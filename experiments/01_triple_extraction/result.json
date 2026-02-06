@@ -1,0 +1,80 @@
+{
+    "triples": [
+        {
+            "head": "Harta Pusako Tinggi",
+            "relation": "adalah kategori dari",
+            "tail": "harta warisan",
+            "category": "pewarisan",
+            "confidence": 1.0
+        },
+        {
+            "head": "Harta Pusako Rendah",
+            "relation": "adalah kategori dari",
+            "tail": "harta warisan",
+            "category": "pewarisan",
+            "confidence": 1.0
+        },
+        {
+            "head": "Harta Pusako Tinggi",
+            "relation": "dimiliki secara kolektif oleh",
+            "tail": "kaum",
+            "category": "kepemilikan",
+            "confidence": 1.0
+        },
+        {
+            "head": "Harta Pusako Tinggi",
+            "relation": "diwariskan berdasarkan",
+            "tail": "garis ibu (matrilineal)",
+            "category": "pewarisan",
+            "confidence": 1.0
+        },
+        {
+            "head": "Mamak Kepala Waris",
+            "relation": "memiliki otoritas pengelolaan atas",
+            "tail": "Harta Pusako Tinggi",
+            "category": "otoritas",
+            "confidence": 1.0
+        },
+        {
+            "head": "anggota perempuan dalam kaum",
+            "relation": "memiliki kepemilikan atas",
+            "tail": "Harta Pusako Tinggi",
+            "category": "kepemilikan",
+            "confidence": 1.0
+        },
+        {
+            "head": "Harta Pusako Tinggi",
+            "relation": "tidak boleh diperjualbelikan",
+            "tail": "kecuali dalam kondisi darurat yang diatur adat",
+            "category": "larangan",
+            "confidence": 1.0
+        },
+        {
+            "head": "Harta Pusako Rendah",
+            "relation": "adalah harta hasil pencaharian sendiri oleh",
+            "tail": "orang tua selama masa perkawinan",
+            "category": "kepemilikan",
+            "confidence": 1.0
+        },
+        {
+            "head": "Harta Pusako Rendah",
+            "relation": "dapat diwariskan kepada",
+            "tail": "anak kandung",
+            "category": "pewarisan",
+            "confidence": 1.0
+        },
+        {
+            "head": "Harta Pusako Rendah",
+            "relation": "diwariskan sesuai dengan",
+            "tail": "ketentuan hukum Islam atau kesepakatan keluarga",
+            "category": "pewarisan",
+            "confidence": 1.0
+        }
+    ],
+    "conflicts": [
+        {
+            "description": "Ketegangan antara hak kemenakan berdasarkan adat matrilineal dan hak anak berdasarkan hukum nasional/Islam dalam pewarisan Harta Pusako Rendah",
+            "involved_entities": ["hak kemenakan (berdasarkan adat matrilineal)", "hak anak (berdasarkan hukum nasional/Islam)"]
+        }
+    ]
+}
