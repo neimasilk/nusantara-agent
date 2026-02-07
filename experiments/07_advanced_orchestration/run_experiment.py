@@ -15,6 +15,7 @@ sys.path.append(os.getcwd())
 
 from src.agents import run_debate, save_debate_logs, route_query
 from src.agents.orchestrator import build_parallel_orchestrator
+from src.utils.token_usage import extract_token_usage as _extract_token_usage, merge_usage as _add_usage
 
 load_dotenv()
 
@@ -25,31 +26,6 @@ def _get_llm() -> ChatOpenAI:
         base_url="https://api.deepseek.com",
         model="deepseek-chat",
     )
-
-
-def _extract_token_usage(message) -> Dict[str, int]:
-    usage = getattr(message, "usage_metadata", None) or {}
-    response_metadata = getattr(message, "response_metadata", None) or {}
-    token_usage = response_metadata.get("token_usage", {}) if isinstance(response_metadata, dict) else {}
-
-    prompt_tokens = usage.get("input_tokens", token_usage.get("prompt_tokens", 0))
-    completion_tokens = usage.get("output_tokens", token_usage.get("completion_tokens", 0))
-    total_tokens = usage.get("total_tokens", token_usage.get("total_tokens", 0))
-
-    if not total_tokens:
-        total_tokens = prompt_tokens + completion_tokens
-
-    return {
-        "prompt_tokens": int(prompt_tokens or 0),
-        "completion_tokens": int(completion_tokens or 0),
-        "total_tokens": int(total_tokens or 0),
-    }
-
-
-def _add_usage(acc: Dict[str, int], usage: Dict[str, int]) -> None:
-    acc["prompt_tokens"] += int(usage.get("prompt_tokens", 0))
-    acc["completion_tokens"] += int(usage.get("completion_tokens", 0))
-    acc["total_tokens"] += int(usage.get("total_tokens", 0))
 
 
 def _load_queries(path: Path) -> List[Dict[str, str]]:

@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage
 from langgraph.graph import StateGraph, END
+from ..utils.token_usage import extract_token_usage as _extract_token_usage
 
 load_dotenv()
 
@@ -33,25 +34,6 @@ def _read_graph_data(graph_data_path: str) -> str:
     if not path.exists():
         return "[ERROR] Knowledge Graph data tidak ditemukan."
     return path.read_text(encoding="utf-8")
-
-
-def _extract_token_usage(message: BaseMessage) -> Dict[str, int]:
-    usage = getattr(message, "usage_metadata", None) or {}
-    response_metadata = getattr(message, "response_metadata", None) or {}
-    token_usage = response_metadata.get("token_usage", {}) if isinstance(response_metadata, dict) else {}
-
-    prompt_tokens = usage.get("input_tokens", token_usage.get("prompt_tokens", 0))
-    completion_tokens = usage.get("output_tokens", token_usage.get("completion_tokens", 0))
-    total_tokens = usage.get("total_tokens", token_usage.get("total_tokens", 0))
-
-    if not total_tokens:
-        total_tokens = prompt_tokens + completion_tokens
-
-    return {
-        "prompt_tokens": int(prompt_tokens or 0),
-        "completion_tokens": int(completion_tokens or 0),
-        "total_tokens": int(total_tokens or 0),
-    }
 
 
 def _national_agent(llm: ChatOpenAI, state: AgentState):
