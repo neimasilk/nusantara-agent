@@ -1,37 +1,68 @@
 {
   "round": 2,
   "agent": "ALA",
-  "answer": "Saya adalah Adat Law Agent (ALA) yang dirancang untuk memberikan informasi hukum adat secara umum. Pertanyaan Anda spesifik mengenai makna 'sentana' dan posisinya dalam pewarisan keluarga menurut adat Bali. Pengetahuan saya tidak memiliki sumber khusus yang mendetail tentang adat Bali. Berdasarkan pemahaman umum, dalam konteks Bali, istilah 'sentana' sering merujuk pada ahli waris atau keturunan dalam sistem kekerabatan yang umumnya bersifat patrilineal. Namun, untuk penjelasan yang akurat dan otoritatif mengenai definisi, hak, dan mekanisme pewarisannya dalam adat Bali, Anda disarankan untuk berkonsultasi langsung dengan tetua, pakar adat Bali, atau literatur khusus mengenai hukum adat Bali.",
+  "answer": "Saya tidak dapat menjawab pertanyaan tentang makna 'sentana' dalam adat Bali karena pengetahuan saya terbatas pada adat Minangkabau. Berdasarkan konteks yang diberikan, hanya sistem pewarisan matrilineal Minangkabau yang dapat dijelaskan.",
   "claims": [
     {
       "id": "C1",
-      "statement": "Istilah 'sentana' dalam konteks adat Bali umumnya merujuk pada ahli waris atau keturunan.",
+      "statement": "Dalam adat Minangkabau, kemenakan (anak dari saudara perempuan) adalah penerima utama Harta Pusako Tinggi.",
       "evidence": [
-        "general_knowledge"
+        "source_id_1"
       ],
-      "confidence": 0.6,
+      "confidence": 1.0,
       "assumptions": [
         "A1"
       ]
     },
     {
       "id": "C2",
-      "statement": "Sistem kekerabatan dan pewarisan adat Bali umumnya bersifat patrilineal, berbeda dengan sistem matrilineal Minangkabau.",
+      "statement": "Harta Pusako Tinggi diwariskan berdasarkan garis ibu dan dikelola oleh Mamak Kepala Waris.",
       "evidence": [
-        "general_knowledge",
-        "context_provided"
+        "source_id_1"
       ],
-      "confidence": 0.7,
+      "confidence": 1.0,
       "assumptions": [
-        "A2"
+        "A1"
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Harta Pusako Tinggi dimiliki secara kolektif oleh kaum dan tidak boleh diperjualbelikan.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A1"
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Harta Pusako Rendah adalah harta hasil pencaharian orang tua dan dapat diwariskan kepada anak kandung.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A1"
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Dalam pewarisan Pusako Rendah dapat muncul ketegangan antara hak anak kandung dan hak kemenakan.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A1"
       ]
     }
   ],
   "uncertainties": [
-    "U1",
-    "U2"
+    "U1: Makna dan posisi 'sentana' dalam adat Bali."
   ],
   "open_questions": [
-    "Q1"
+    "Q1: Bagaimana sistem kekerabatan dan pewarisan dalam adat Bali secara spesifik?"
   ]
 }

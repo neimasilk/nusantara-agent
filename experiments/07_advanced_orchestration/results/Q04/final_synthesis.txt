@@ -1,27 +1,8 @@
-**Jawaban Final: Perbandingan Peran Mamak (Adat Minangkabau) dan Hak Anak (Hukum Nasional)**
+**Sintesis Perbandingan:**
+Peran mamak dalam adat Minangkabau berpusat pada hubungan avunkular (paman-kemenakan) dan pengelolaan harta pusaka tinggi (kolektif, matrilineal). Hak anak dalam hukum nasional (KUHPerdata) berporos pada hubungan parental (orang tua-anak) dan pewarisan individual atas harta pencaharian orang tuanya.
 
-**1. Perbedaan Mendasar:**
-- **Sumber Otoritas & Hubungan Hukum:**  
-  - *Adat Minangkabau*: Berporos pada sistem **matrilineal** dan hubungan **horizontal**. **Mamak** (saudara laki-laki ibu) adalah pemegang otoritas adat utama bagi **kemenakan** (anak saudara perempuannya), bertanggung jawab atas bimbingan adat, pendidikan karakter, dan pengelolaan **harta pusaka tinggi** (harta turun-temurun kaum) secara kolektif.
-  - *Hukum Nasional*: Berporos pada hubungan **bilateral** dan **vertikal**. **Orang tua kandung** (ayah dan ibu) memegang kekuasaan orang tua secara bersama-sama untuk pengasuhan dan pendidikan anak. Hak anak bersifat **individual**, terutama atas **harta pencaharian** (harta bersama orang tua).
+**Konflik Norma & Trade-off:**
+Konflik muncul karena dua logika berbeda: adat menekankan kelangsungan *kaum* (kelompok matrilineal) melalui mamak, sementara hukum nasional menjamin hak individual anak atas orang tua kandungnya. Trade-off-nya antara stabilitas sistem kekerabatan kolektif (adat) dengan kepastian dan perlindungan hukum individual (nasional).
 
-- **Subjek & Jenis Harta:**  
-  - *Adat*: Harta **pusako tinggi** dikelola secara kolektif oleh mamak untuk kaumnya; warisan mengalir secara matrilineal (dari ibu ke anak perempuan). Harta ayah dapat diwariskan kepada kemanakannya (bukan anak kandungnya).
-  - *Hukum Nasional*: Harta **pencaharian/pusako rendah** diwariskan secara individual kepada anak kandung (laki-laki dan perempuan) berdasarkan hubungan darah langsung.
-
-**2. Konflik Norma & Trade-off:**
-- **Kolektivitas vs. Individualitas:** Adat menekankan **kolektivitas kaum** dan keberlanjutan garis matrilineal, sementara hukum nasional melindungi **hak individual anak** dalam keluarga inti.
-- **Otoritas Ganda:** Anak dalam masyarakat Minangkabau berada di bawah dua otoritas: **mamak** (dalam konteks adat dan harta pusaka) dan **orang tua kandung** (dalam konteks nafkah dan pengasuhan sehari-hari). Hal ini dapat menimbulkan kompleksitas dalam penentuan kepentingan terbaik anak.
-- **Aspek Gender:** Adat memberikan peran sentral kepada perempuan sebagai penerus garis keturunan dan harta pusaka, tetapi otoritas pengelolaan dipegang oleh laki-laki (mamak). Hukum nasional, meski secara prinsip egaliter, dalam praktik waris (KUHPerdata) masih mengandung bias gender.
-
-**3. Keputusan Pluralistik:**
-Kedua sistem memiliki logika dan tujuan yang sah:
-- **Adat Minangkabau** menjaga kohesi sosial, identitas kolektif, dan kelestarian harta leluhur.
-- **Hukum Nasional** menjamin kepastian hukum, perlindungan hak individual anak, dan kesetaraan dalam keluarga inti.
-
-**Pendekatan yang direkomendasikan** adalah **koeksistensi adaptif**, dengan prinsip:
-- **Subsidiaritas:** Hukum nasional menghormati dan mengakomodasi praktik adat sejauh tidak melanggar hak-hak dasar anak (seperti hak atas identitas, pendidikan, dan perlindungan dari penelantaran).
-- **Kontekstualisasi:** Penyelesaian kasus harus mempertimbangkan **konteks sosial** (misalnya, apakah keluarga masih kuat memegang adat) dan **jenis harta** (pusako tinggi vs. harta pencaharian).
-- **Harmonisasi Progresif:** Dalam hal harta pencaharian, hukum nasional dapat menjadi acuan utama untuk menjamin hak anak. Untuk harta pusako tinggi, mekanisme adat (dengan pengawasan mamak dan kaum) dapat dipertahankan, dengan catatan harus ada transparansi dan akuntabilitas untuk mencegah penyalahgunaan wewenang.
-
-Dengan demikian, perbedaan ini bukan sekadar pertentangan, tetapi cerminan dari **pluralisme hukum** yang memerlukan pengelolaan secara bijaksana agar nilai-nilai kolektif adat dan hak individual anak dapat beriringan.
+**Keputusan Pluralistik:**
+Kedua sistem dapat berjalan paralel dengan mengakui ruang berlakunya masing-masing. Hukum nasional mengatur harta pencaharian (pusako rendah) untuk anak kandung. Adat mengatur harta pusaka tinggi melalui mamak. Pendekatan ini menghormati otonomi hukum adat dalam lingkupnya sambil menjamin hak anak secara nasional.

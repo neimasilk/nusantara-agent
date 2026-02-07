@@ -5,27 +5,27 @@
   "critiques": [
     {
       "id": "K1",
-      "target_claim_id": "C1",
-      "issue_type": "overclaim",
-      "description": "Klaim bahwa 'hukum nasional (yang lebih tinggi) mengatasi hukum adat' merupakan generalisasi yang berlebihan dan tidak akurat secara konstitusional. Pasal 18B ayat (2) UUD 1945 justru mengakui dan menghormati kesatuan-kesatuan masyarakat hukum adat beserta hak-hak tradisionalnya. Prinsip 'lex superior' dari UU No. 12/2011 tidak serta-merta membuat semua norma hukum nasional mengatasi hukum adat, terutama dalam ranah privat seperti waris adat. Konflik diselesaikan melalui uji keselarasan, bukan hierarki mutlak.",
+      "target_claim_id": "C2",
+      "issue_type": "domain_mismatch",
+      "description": "Klaim C2 merujuk pada Pasal 131 IS (Indische Staatsregeling) sebagai dasar hukum. Namun, IS adalah produk hukum kolonial yang masih berlaku berdasarkan Aturan Peralihan, bukan sumber hukum utama yang mengatur pengakuan hukum adat pasca-kemerdekaan. Penggunaan IS sebagai 'evidence' utama menciptakan kesan bahwa pengakuan hukum adat bersumber dari hukum kolonial, bukan dari konstitusi dan UU nasional (seperti UUPA, UU Pokok Agraria, UU Kekuasaan Kehakiman). Ini adalah domain mismatch karena konteks pertanyaan adalah sistem hukum Indonesia saat ini.",
       "severity": "MAJOR",
-      "suggested_fix": "Klaim harus direvisi untuk mencerminkan prinsip konstitusional pengakuan dan penghormatan terhadap hukum adat, serta mekanisme penyelesaian konflik yang lebih kompleks, seperti uji apakah hukum adat tersebut masih hidup dan tidak bertentangan dengan kepentingan umum atau HAM."
+      "suggested_fix": "Ganti atau tambah evidence dengan sumber hukum nasional yang lebih relevan, seperti penjelasan Pasal 5 UU No. 5 Tahun 1960 (UUPA) yang secara eksplisit mengakui hak ulayat dan hukum adat, atau konsistensi dengan Pasal 18B ayat (2) UUD 1945 yang telah disebutkan di C1. IS dapat disebut sebagai latar belakang historis, bukan dasar hukum utama."
     },
     {
       "id": "K2",
-      "target_claim_id": "C3",
-      "issue_type": "evidence_gap",
-      "description": "Klaim tentang pembedaan 'harta pencaharian' dan 'harta pusaka adat' sebagai mekanisme penyelesaian tidak didukung oleh bukti peraturan perundang-undangan nasional yang tegas. Doktrin dan yurisprudensi yang dirujuk terlalu umum. Dalam konteks matrilineal Minangkabau misalnya, konsep 'harta suarang' dan 'harta pusako' memiliki kompleksitas tinggi, dan pengakuan hukum nasional terhadap pembedaan ini dalam penyelesaian sengketa tidak diatur secara eksplisit dalam UU.",
+      "target_claim_id": "C5",
+      "issue_type": "overclaim",
+      "description": "Klaim C5 menyatakan 'Hakim wajib menggunakan hukum adat yang hidup di masyarakat sebagai dasar putusan sesuai UU Kekuasaan Kehakiman.' Pernyataan ini terlalu absolut (overclaim). Pasal 5 ayat (3) UU No. 48/2009 berbunyi: 'Hakim wajib menggali, mengikuti, dan memahami nilai-nilai hukum dan rasa keadilan yang hidup dalam masyarakat.' Ini tidak identik dengan 'menggunakan hukum adat sebagai dasar putusan'. Hakim memiliki kewajiban untuk 'menggali dan memahami', tetapi putusan akhir harus berdasarkan hukum (Pasal 10 ayat (1) UU yang sama), yang bisa berupa hukum tertulis. Hukum adat digunakan jika tidak diatur oleh hukum tertulis atau sebagai pertimbangan untuk menemukan hukum (rechtsvinding), bukan kewajiban mutlak sebagai dasar satu-satunya.",
       "severity": "MAJOR",
-      "suggested_fix": "Perlu merujuk pada yurisprudensi Mahkamah Agung yang lebih spesifik (misalnya, putusan-putusan mengenai waris Minangkabau) yang menunjukkan bagaimana pengadilan membedakan dan membagi kedua jenis harta tersebut, atau mengakui keterbatasan pengadilan dalam mengintervensi harta pusaka."
+      "suggested_fix": "Reformulasi klaim menjadi: 'Hakim memiliki kewajiban untuk menggali dan memahami hukum adat yang hidup (Pasal 5 ayat (3) UU Kekuasaan Kehakiman) dan dapat menggunakannya sebagai dasar atau pertimbangan putusan, terutama jika tidak diatur oleh hukum tertulis atau untuk mencapai keadilan substantif.'"
     },
     {
       "id": "K3",
-      "target_claim_id": "C4",
-      "issue_type": "logic_gap",
-      "description": "Terdapat ketidakkonsistenan logis antara klaim C4 yang menyatakan pengadilan 'dapat membatalkan keputusan adat' dengan prinsip dalam jawaban yang menyebutkan 'menghormati harta pusaka adat'. Logika ini mengasumsikan pengadilan selalu menjadi forum akhir yang superior. Padahal, UU No. 6/2014 tentang Desa menguatkan penyelesaian sengketa melalui musyawarah desa/adat. Selain itu, klaim bahwa pengadilan 'akan mendahulukan hukum nasional untuk harta non-pusaka' terlalu deterministik dan mengabaikan kemungkinan pengadilan menerapkan hukum adat secara penuh berdasarkan asas konkordansi atau kehendak para pihak.",
+      "target_claim_id": "C6",
+      "issue_type": "evidence_gap",
+      "description": "Klaim C6 menyatakan hakim dapat memodifikasi pembagian harta pencaharian untuk melindungi hak anak, dengan merujuk pada 'Praktek di Pengadilan' dan 'Prinsip kepentingan terbaik anak'. Namun, tidak ada bukti hukum positif (peraturan perundang-undangan atau yurisprudensi) yang dikutip untuk mendukung klaim bahwa modifikasi terhadap aturan adat matrilineal dalam hal harta pencaharian secara spesifik diizinkan atau lazim dilakukan oleh pengadilan. Prinsip 'kepentingan terbaik anak' memang ada (misalnya dalam UU Perlindungan Anak), tetapi penerapannya untuk mengesampingkan atau memodifikasi aturan pembagian harta warisan adat matrilineal membutuhkan dasar hukum atau putusan pengadilan yang lebih konkret sebagai evidence.",
       "severity": "MAJOR",
-      "suggested_fix": "Perlu menjelaskan bahwa kewenangan pengadilan untuk membatalkan keputusan adat bersifat sangat terbatas, terutama jika menyangkut harta pusaka. Mekanisme lebih tepat digambarkan sebagai: pengadilan memeriksa apakah proses adat sudah final dan adil, baru kemudian, jika ada pelanggaran hak dasar anak yang serius, pengadilan dapat melakukan intervensi terbatas berdasarkan asas kepentingan terbaik anak, bukan serta-merta membatalkan keputusan adat."
+      "suggested_fix": "Tambahkan evidence yang lebih kuat, seperti: (1) Pasal 4 UU No. 35 Tahun 2014 tentang Perlindungan Anak yang mewajibkan negara menjamin pemenuhan hak anak, yang dapat dijadikan pertimbangan hakim; atau (2) Rujukan pada yurisprudensi Mahkamah Agung (jika ada) yang menunjukkan hakim mempertimbangkan kepentingan anak dalam sengketa waris adat. Jika tidak ada, akui sebagai analisis hukum atau kemungkinan (possibility) berdasarkan prinsip umum, bukan sebagai klaim pasti."
     }
   ]
 }

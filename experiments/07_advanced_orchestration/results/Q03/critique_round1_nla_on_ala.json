@@ -7,25 +7,25 @@
       "id": "K1",
       "target_claim_id": "C1",
       "issue_type": "evidence_gap",
-      "description": "Klaim bahwa harta pusako rendah 'dapat diwariskan kepada anak kandung' tidak didukung secara spesifik oleh sumber yang dirujuk (source_id_1). Sumber tersebut hanya menyatakan bahwa harta pusako rendah 'dapat diwariskan kepada anak kandung' tanpa menjelaskan apakah ini merupakan aturan adat yang pasti atau hanya salah satu opsi yang mungkin. Tidak ada penjelasan mengenai kondisi, batasan, atau prosedur adat yang mengatur pewarisan tersebut, sehingga klaim terkesan terlalu umum dan mengabaikan kemungkinan kompleksitas dalam praktik adat.",
+      "description": "Klaim C1 menyatakan definisi 'tanah pusako rendah' sebagai 'harta hasil pencaharian sendiri oleh orang tua selama masa perkawinan', namun bukti yang dirujuk (source_id_1) tidak dijelaskan isinya. Tidak ada informasi apakah sumber tersebut merupakan dokumen hukum, putusan pengadilan, atau literatur adat yang otoritatif, sehingga validitas definisi ini tidak dapat diverifikasi.",
       "severity": "MAJOR",
-      "suggested_fix": "Perjelas dasar hukum adat Minangkabau yang spesifik mengenai pewarisan harta pusako rendah kepada anak kandung, termasuk merujuk pada aturan adat tertulis (seperti Petatah Petitih), putusan lembaga adat, atau doktrin hukum adat yang diakui. Jika ada variasi atau pengecualian, hal tersebut harus diungkapkan untuk memberikan gambaran yang lebih akurat."
+      "suggested_fix": "Sebutkan secara spesifik isi atau jenis sumber (misalnya: 'Putusan Mahkamah Agung No. ...' atau 'Kitab Adat Minangkabau halaman ...') yang mendukung definisi tersebut, atau akui ketidakpastian ini dalam bagian 'uncertainties'."
     },
     {
       "id": "K2",
       "target_claim_id": "C2",
       "issue_type": "overclaim",
-      "description": "Klaim bahwa hak kemenakan 'berlaku kuat untuk harta pusako tinggi... bukan untuk harta pusako rendah' bersifat terlalu absolut dan dapat menyesatkan. Dalam praktik adat Minangkabau, meskipun prinsip matrilineal lebih kuat pada harta pusako tinggi, tidak berarti kemenakan sama sekali tidak memiliki klaim atau kepentingan terhadap harta pusako rendah, terutama jika harta tersebut telah bercampur atau dikelola secara kolektif oleh kaum. Klaim ini mengabaikan kemungkinan tumpang tindih atau sengketa yang justru menjadi inti permasalahan.",
+      "description": "Klaim C2 menyatakan 'Harta pusako rendah dapat diwariskan kepada anak kandung sesuai ketentuan hukum Islam atau kesepakatan keluarga' dengan confidence 1.0. Pernyataan ini terlalu umum dan mengabaikan kemungkinan konflik antara hukum adat dan hukum Islam, serta tidak mempertimbangkan situasi di mana ada wasiat yang bertentangan atau aturan adat setempat yang lebih spesifik.",
       "severity": "MAJOR",
-      "suggested_fix": "Sampaikan bahwa meskipun prinsip matrilineal lebih dominan pada harta pusako tinggi, dalam sengketa nyata, klaim kemenakan terhadap harta pusako rendah tidak serta-merta gugur. Perlu dianalisis lebih lanjut faktor-faktor seperti sejarah pengelolaan, kontribusi pihak, dan kesepakatan keluarga sebelumnya. Hindari pernyataan yang bersifat dikotomis mutlak."
+      "suggested_fix": "Kurangi confidence (misalnya menjadi 0.7) dan tambahkan catatan bahwa pewarisan dapat dipengaruhi oleh interaksi kompleks antara hukum adat, agama, dan kesepakatan, serta perlu verifikasi fakta kasus lebih lanjut."
     },
     {
       "id": "K3",
-      "target_claim_id": "C3",
+      "target_claim_id": "C4",
       "issue_type": "logic_gap",
-      "description": "Klaim bahwa penyelesaian harus mengutamakan musyawarah untuk mufakat, keadilan, dan kerukunan, meskipun secara prinsip benar, tidak diikuti dengan kerangka logis yang menghubungkannya dengan klaim C1 dan C2. Jawaban ALA terkesan 'loncat' dari kesimpulan hukum adat (anak kandung berhak) langsung ke rekomendasi musyawarah, tanpa menjelaskan bagaimana kedua hal tersebut berhubungan. Jika berdasarkan adat anak kandung sudah berhak, mengapa masih perlu musyawarah yang mungkin mengubah hasil? Atau, apakah musyawarah justru merupakan mekanisme adat untuk menentukan siapa yang berhak? Hubungan ini tidak jelas.",
-      "severity": "MAJOR",
-      "suggested_fix": "Jelaskan secara logis posisi musyawarah dalam sistem hukum adat Minangkabau. Apakah musyawarah merupakan langkah wajib sebelum menerapkan aturan adat, atau merupakan mekanisme untuk menafsirkan dan menerapkan aturan adat yang fleksibel? Hubungkan rekomendasi musyawarah dengan ketidakpastian (U1, U2) yang telah diidentifikasi, sehingga terlihat bahwa musyawarah adalah alat untuk menjawab ketidakpastian tersebut, bukan sekadar rekomendasi umum."
+      "description": "Klaim C4 menyimpulkan bahwa 'Tuntutan kemenakan berdasarkan adat Minangkabau lebih tepat untuk harta pusako tinggi' dengan asumsi bahwa 'kemenakan yang dimaksud adalah anak dari saudara perempuan (untuk garis matrilineal)'. Namun, dari konteks yang diberikan, tidak ada informasi yang menyebutkan hubungan kekerabatan spesifik kemenakan tersebut. Kesimpulan ini melompati fakta penting dan dapat menyesatkan jika kemenakan yang dimaksud berasal dari garis lain.",
+      "severity": "CRITICAL",
+      "suggested_fix": "Tambahkan pertanyaan klarifikasi dalam 'open_questions' mengenai hubungan kekerabatan antara kemenakan dan almarhum, atau reformulasi klaim menjadi bersyarat: 'Jika kemenakan tersebut adalah anak dari saudara perempuan dalam sistem matrilineal, maka tuntutannya secara adat lebih relevan untuk harta pusako tinggi.'"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "round": 1,
+  "round": 2,
   "agent": "ALA",
   "target": "NLA",
   "critiques": [
@@ -7,25 +7,25 @@
       "id": "K1",
       "target_claim_id": "C1",
       "issue_type": "evidence_gap",
-      "description": "Klaim bahwa 'Pusako tinggi adalah harta bawaan kaum (suku/paruik) yang dikuasai secara kolektif berdasarkan garis ibu (matrilineal)' tidak didukung oleh bukti spesifik dari sumber konteks. Jawaban NLA tidak mengutip pasal, putusan pengadilan, atau literatur adat yang secara eksplisit mendefinisikan karakteristik pusako tinggi sebagai harta kolektif kaum.",
+      "description": "Klaim C1 menyatakan 'Hukum nasional mengakui keberadaan dan penerapan hukum adat sepanjang masih hidup dan tidak bertentangan dengan peraturan perundang-undangan.' Namun, evidence hanya merujuk pada 'source_id_1' tanpa penjelasan lebih lanjut. Tidak ada rujukan spesifik pada pasal UU (misalnya, Pasal 18B ayat (2) UUD 1945, Pasal 5 UU No. 1 Tahun 2023 tentang Kitab Undang-Undang Hukum Pidana, atau Pasal 2 UU No. 1 Tahun 1974 tentang Perkawinan) yang menjadi dasar pengakuan hukum adat secara nasional. Hal ini menimbulkan kesenjangan bukti yang signifikan.",
       "severity": "MAJOR",
-      "suggested_fix": "Tambahkan referensi spesifik seperti Pasal 18B ayat (2) UUD 1945, yurisprudensi Mahkamah Agung (misal: Putusan MA No. 179K/Sip/1972), atau literatur adat (misal: 'Adat Minangkabau' oleh Datuak Sangguno Dirajo) yang secara tegas mendefinisikan sifat kolektif pusako tinggi."
+      "suggested_fix": "Tambahkan rujukan spesifik pada pasal-pasal peraturan perundang-undangan yang mengakui hukum adat, seperti Pasal 18B ayat (2) UUD 1945 atau ketentuan dalam UU Pokok Agraria, untuk memperkuat landasan klaim."
     },
     {
       "id": "K2",
-      "target_claim_id": "C2",
-      "issue_type": "logic_gap",
-      "description": "Klaim bahwa hak pengelolaan pusako tinggi beralih kepada 'saudara laki-laki mamak yang lain atau kemenakan laki-laki terdekat' mengandung ketidakjelasan hierarki. Tidak dijelaskan prioritas peralihan jika terdapat beberapa calon (misal: saudara laki-laki vs kemenakan), atau apakah peralihan ini otomatis atau melalui musyawarah adat.",
-      "severity": "MAJOR",
-      "suggested_fix": "Jelaskan mekanisme peralihan yang lebih rinci, misalnya: 'Berdasarkan prinsip adat, hak pengelolaan pertama-tama beralih kepada saudara laki-laki seibu (dunsanak), baru kemudian kepada kemenakan laki-laki tertua (kamanakan) jika tidak ada saudara laki-laki, melalui musyawarah kaum (mufakat ninik mamak).'"
+      "target_claim_id": "C6",
+      "issue_type": "overclaim",
+      "description": "Klaim C6 menyatakan 'Yurisprudensi Mahkamah Agung cenderung mengakui hukum adat Minangkabau mengenai status pusako tinggi yang tidak dapat diwariskan kepada anak kandung.' Evidence hanya merujuk pada 'source_id_1' tanpa menyebutkan putusan Mahkamah Agung yang spesifik (misalnya, nomor putusan, tahun, atau pokok perkara). Klaim ini bersifat generalisasi yang berlebihan karena tidak didukung oleh bukti yurisprudensi yang konkret, sehingga dapat menyesatkan.",
+      "severity": "CRITICAL",
+      "suggested_fix": "Sebutkan minimal satu putusan Mahkamah Agung yang relevan (misalnya, Putusan MA No. 179K/Sip/1972 atau putusan lain) sebagai bukti spesifik, atau reformulasi klaim menjadi lebih hati-hati dengan menyatakan bahwa terdapat kecenderungan dalam yurisprudensi tanpa mengklaim kepastian mutlak."
     },
     {
       "id": "K3",
-      "target_claim_id": "C3",
-      "issue_type": "overclaim",
-      "description": "Klaim bahwa 'KUHPerdata tidak mengatur peralihan hak atas pusako tinggi' terlalu absolut. Meskipun KUHPerdata tidak mengatur substansi pusako tinggi, Pasal 131 IS dan asas konkordansi dapat menimbulkan konflik yurisdiksi. Dalam praktik, pengadilan negeri dapat mengadili sengketa pusako tinggi dengan merujuk hukum adat sebagai 'living law'.",
-      "severity": "MINOR",
-      "suggested_fix": "Kualifikasi klaim menjadi: 'KUHPerdata tidak mengatur substansi peralihan hak atas pusako tinggi, namun pengadilan dapat mengakui dan menegakkannya berdasarkan Pasal 18B UUD 1945 dan yurisprudensi, selama tidak bertentangan dengan hukum nasional yang bersifat memaksa.'"
+      "target_claim_id": "C4",
+      "issue_type": "logic_gap",
+      "description": "Klaim C4 menyatakan 'Ahli waris pusako tinggi menurut adat Minangkabau adalah kemenakan, yaitu anak dari saudara perempuan pewaris (mamak).' Namun, terdapat kesenjangan logika karena tidak mempertimbangkan situasi di mana mamak tidak memiliki saudara perempuan atau kemenakan. Dalam praktik adat, jika tidak ada kemenakan, ahli waris dapat beralih kepada anggota kaum lainnya (misalnya, saudara perempuan dari ibu yang sama). Klaim ini terlalu menyederhanakan tanpa mengakui kompleksitas pewarisan dalam kondisi khusus.",
+      "severity": "MAJOR",
+      "suggested_fix": "Tambahkan kualifikasi pada klaim, misalnya dengan menyatakan bahwa 'Pada umumnya, ahli waris pusako tinggi adalah kemenakan, namun dalam kondisi tertentu dapat berlaku mekanisme lain sesuai hierarki kekerabatan matrilineal.' Hal ini akan mencerminkan fleksibilitas hukum adat."
     }
   ]
 }

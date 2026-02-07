@@ -6,26 +6,26 @@
     {
       "id": "K1",
       "target_claim_id": "C1",
-      "issue_type": "domain_mismatch",
-      "description": "Klaim C1 menyatakan konteks membahas sistem pewarisan adat Minangkabau, namun target jawaban ALA sepenuhnya mengabaikan permintaan pengguna tentang adat Jawa. ALA gagal memenuhi peran sebagai agen hukum adat yang seharusnya mampu memberikan informasi lintas sistem adat, atau setidaknya mengarahkan ke sumber yang tepat, bukan sekadar menyatakan ketidaktahuan.",
-      "severity": "CRITICAL",
-      "suggested_fix": "ALA seharusnya memberikan penjelasan umum tentang konsep 'gono-gini' dan 'harta bawaan' dalam kerangka hukum adat Indonesia, mengakui perbedaan antar sistem, dan memberikan referensi atau arah konsultasi yang lebih spesifik untuk adat Jawa, bukan hanya menolak menjawab."
+      "issue_type": "overclaim",
+      "description": "Klaim C1 menyatakan 'Konteks hanya membahas sistem pewarisan harta dalam adat Minangkabau, bukan adat Jawa.' Namun, konteks yang diberikan (source_id_1) tidak secara eksplisit menyatakan bahwa pembahasannya hanya terbatas pada adat Minangkabau. Klaim ini menggeneralisasi batasan konteks tanpa bukti yang cukup bahwa tidak ada informasi lain yang relevan.",
+      "severity": "MAJOR",
+      "suggested_fix": "Ubah klaim menjadi: 'Konteks yang diberikan (source_id_1) membahas sistem pewarisan harta dalam adat Minangkabau, dan tidak menyebutkan adat Jawa secara spesifik.'"
     },
     {
       "id": "K2",
-      "target_claim_id": "C1",
-      "issue_type": "overclaim",
-      "description": "Klaim C1 hanya menyatakan fakta bahwa konteks membahas Minangkabau, tetapi asumsi A1 (yang tidak didefinisikan) dan struktur jawaban secara implisit mengklaim bahwa ALA hanya berwenang atau berpengetahuan pada adat Minangkabau. Ini adalah overclaim karena peran ALA seharusnya lebih luas. Ketidakmampuan menjawab dijustifikasi dengan pembatasan domain yang tidak dinyatakan sebelumnya.",
+      "target_claim_id": "C2",
+      "issue_type": "evidence_gap",
+      "description": "Klaim C2 menyatakan 'Dalam adat Minangkabau, Harta Pusako Tinggi dimiliki kolektif oleh kaum dan diwariskan secara matrilineal.' Meskipun ini sesuai dengan konteks, klaim tidak merujuk pada bukti spesifik dari source_id_1 yang mendukung pernyataan tentang kepemilikan kolektif dan pewarisan matrilineal. Tanpa kutipan atau penjelasan bukti, validitas klaim sulit diverifikasi.",
       "severity": "MAJOR",
-      "suggested_fix": "Jawaban harus transparan tentang lingkup pengetahuannya. Misalnya: 'Pengetahuan saya sebagai ALA lebih kuat pada sistem adat matrilineal seperti Minangkabau. Untuk pertanyaan spesifik tentang adat Jawa yang patrilineal, meskipun konsep 'gono-gini' dan 'harta bawaan' dikenal, detail penerapannya dapat berbeda. Saya merekomendasikan...'"
+      "suggested_fix": "Tambahkan kutipan atau deskripsi bukti dari source_id_1 yang mendukung klaim tentang kepemilikan kolektif dan pewarisan matrilineal Harta Pusako Tinggi."
     },
     {
       "id": "K3",
-      "target_claim_id": "C1",
+      "target_claim_id": "C3",
       "issue_type": "logic_gap",
-      "description": "Logika dari C1 ke kesimpulan untuk 'tidak menjawab' mengandung gap. Fakta bahwa konteks tentang Minangkabau tidak serta-merta membatalkan kewajiban ALA untuk menanggapi pertanyaan pengguna tentang Jawa. ALA bisa menarik prinsip umum dari konteks yang ada (misalnya, pentingnya klasifikasi harta) sebagai pengantar, sebelum mengakui keterbatasan pada detail Jawa.",
+      "description": "Klaim C3 menyatakan 'Harta Pusako Rendah dalam adat Minangkabau adalah harta hasil pencaharian orang tua selama perkawinan.' Namun, konteks (source_id_1) mungkin tidak secara eksplisit mendefinisikan Harta Pusako Rendah sebagai 'hasil pencaharian orang tua selama perkawinan'. Ada kemungkinan definisi ini mengandung asumsi yang tidak sepenuhnya didukung oleh bukti, seperti apakah mencakup semua jenis harta atau hanya tertentu.",
       "severity": "MAJOR",
-      "suggested_fix": "Bangun logika yang lebih konstruktif: 1) Akui pertanyaan pengguna. 2) Jelaskan bahwa konteks yang diberikan mengilustrasikan kompleksitas klasifikasi harta dalam satu sistem adat (Minangkabau). 3) Nyatakan bahwa dalam adat Jawa, klasifikasi serupa (gono-gini/bawaan) juga ada tetapi aturannya berbeda. 4) Kemudian berikan disclaimers dan saran konsultasi."
+      "suggested_fix": "Perjelas definisi Harta Pusako Rendah dengan merujuk pada bukti spesifik dari source_id_1, atau tambahkan catatan tentang ketidakpastian jika definisi tidak eksplisit dalam konteks."
     }
   ]
 }

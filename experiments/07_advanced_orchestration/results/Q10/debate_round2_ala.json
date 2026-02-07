@@ -1,48 +1,67 @@
 {
   "round": 2,
   "agent": "ALA",
-  "answer": "Mekanisme penyelesaiannya dimulai dengan mengidentifikasi jenis harta warisan. Untuk Harta Pusako Tinggi (harta komunal kaum), prinsip matrilineal tetap berlaku dan diwariskan kepada kemenakan (anggota kaum), di mana hukum nasional umumnya menghormati hak ulayat dan harta komunal adat. Untuk Harta Pusako Rendah (harta pencaharian orang tua), penyelesaian dilakukan melalui musyawarah keluarga (Sapakat) yang dipimpin oleh Ninik Mamak dan melibatkan Alim Ulama, dengan mengacu pada ketentuan hukum Islam sebagai dasar pembagian bagi anak kandung, sambil mempertimbangkan kesepakatan keluarga yang adil dan prinsip kekeluargaan. Mekanisme ini mengutamakan musyawarah untuk mufakat, mengakomodasi hukum Islam, dan menjaga persaudaraan.",
+  "answer": "Mekanisme penyelesaian dibedakan berdasarkan jenis harta. Untuk Harta Pusako Tinggi (komunal), hukum waris matrilineal mutlak berlaku dan hukum nasional tidak dapat menggesernya. Untuk Harta Pusako Rendah (pencaharian), penyelesaian utamanya melalui musyawarah dalam kerapatan adat yang melibatkan ninik mamak, alim ulama, dan cerdik pandai untuk mencapai mufakat, dengan mempertimbangkan hak anak dan tanggung jawab sosial terhadap kemenakan. Hukum nasional diakui, tetapi penyelesaian kekeluargaan dan adat lebih diutamakan sesuai filosofi 'Adat basandi syarak, syarak basandi Kitabullah'. Solusi terbaik adalah kesepakatan keluarga tertulis yang membagi harta dengan mempertimbangkan kebutuhan anak dan tanggung jawab terhadap kemenakan.",
   "claims": [
     {
       "id": "C1",
-      "statement": "Harta Pusako Tinggi diwariskan berdasarkan prinsip matrilineal kepada kemenakan, dan hukum nasional biasanya menghormati hak ulayat dan harta komunal adat.",
+      "statement": "Harta Pusako Tinggi diwariskan secara mutlak berdasarkan garis matrilineal dan hukum nasional tidak dapat menggeser aturan ini.",
       "evidence": [
-        "context_1"
+        "source_id_1"
       ],
-      "confidence": 0.9,
-      "assumptions": [
-        "A1"
-      ]
+      "confidence": 1.0,
+      "assumptions": []
     },
     {
       "id": "C2",
-      "statement": "Harta Pusako Rendah diselesaikan melalui musyawarah keluarga dengan mengacu pada hukum Islam untuk pembagian bagi anak kandung, sambil mempertimbangkan kesepakatan keluarga yang adil.",
+      "statement": "Konflik untuk Harta Pusako Rendah diselesaikan dengan musyawarah dalam kerapatan adat yang dipimpin ninik mamak, alim ulama, dan cerdik pandai untuk mencapai mufakat.",
       "evidence": [
-        "context_1"
+        "source_id_1"
       ],
-      "confidence": 0.9,
-      "assumptions": [
-        "A2"
-      ]
+      "confidence": 1.0,
+      "assumptions": []
     },
     {
       "id": "C3",
-      "statement": "Mekanisme penyelesaian konflik hak waris dalam adat Minangkabau mengutamakan musyawarah untuk mufakat dengan melibatkan unsur adat dan agama.",
+      "statement": "Penyelesaian mengacu pada prinsip 'Adat basandi syarak, syarak basandi Kitabullah' yang mengharmonisasikan adat dan nilai Islam.",
       "evidence": [
-        "context_1"
+        "source_id_1"
       ],
-      "confidence": 0.9,
-      "assumptions": [
-        "A3"
-      ]
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C4",
+      "statement": "Hukum nasional diakui sebagai fakta legal, tetapi penyelesaian secara kekeluargaan dan adat lebih diutamakan sebelum jalur hukum formal.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C5",
+      "statement": "Solusi terbaik adalah kesepakatan keluarga tertulis (wasiat/ikrar) yang membagi harta dengan mempertimbangkan kebutuhan anak dan tanggung jawab sosial terhadap kemenakan.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C6",
+      "statement": "Hukum adat diakui oleh negara melalui pasal 18B UUD 1945.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
     }
   ],
   "uncertainties": [
-    "U1: Sejauh mana hukum nasional secara spesifik mengakui dan melindungi Harta Pusako Tinggi sebagai harta komunal adat dalam praktik yudisial.",
-    "U2: Tingkat keberhasilan musyawarah keluarga dalam menyelesaikan konflik Harta Pusako Rendah jika terjadi perbedaan penafsiran yang tajam antara hukum Islam dan kesepakatan adat."
+    "Tidak ada ketidakpastian berdasarkan konteks yang diberikan."
   ],
   "open_questions": [
-    "Q1: Bagaimana jika musyawarah keluarga untuk Harta Pusako Rendah tidak mencapai mufakat, apa langkah mediasi atau penyelesaian formal berikutnya yang diakui baik oleh adat maupun hukum nasional?",
-    "Q2: Apakah terdapat mekanisme pencatatan atau pengesahan formal terhadap hasil musyawarah adat untuk Harta Pusako Rendah agar diakui oleh hukum nasional?"
+    "Bagaimana detail prosedur dan kekuatan hukum dari kesepakatan keluarga tertulis (ikrar) tersebut dalam kerangka hukum nasional?"
   ]
 }

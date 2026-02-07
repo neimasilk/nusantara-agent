@@ -1,28 +1,10 @@
-**Jawaban Final: Pluralisme Hukum dalam Pewarisan Adat Bali**
+**Jawaban Final:**
 
-Berdasarkan sintesis dari kedua agen, terdapat perbedaan tingkat pengetahuan dan kepastian mengenai makna dan posisi *sentana*.
+Dalam adat Bali, **sentana** adalah anak angkat yang diangkat untuk melanjutkan keturunan dan memelihara orang tua, terutama dalam keluarga tanpa anak laki-laki kandung. Posisinya dalam pewarisan menunjukkan **konflik norma** antara hukum adat dan hukum nasional (KUHPerdata).
 
-### 1. Makna dan Posisi Sentana (Berdasarkan NLA)
-*   **Makna:** *Sentana* adalah penerus garis keturunan (*purusa*) dan pemujaan leluhur (*pitra puja*). Terdapat hierarki:
-    *   **Sentana Rajeg (Utama):** Anak laki-laki kandung.
-    *   **Sentana Tidak Rajeg:** Dapat mencakup anak perempuan (misalnya, melalui perkawinan *nyentana* di mana suami masuk keluarga istri) atau orang yang diangkat secara adat.
-*   **Posisi dalam Pewarisan:** Sistem pewarisan adat Bali bersifat **patrilineal dengan kecenderungan mayorat laki-laki**. Posisi sentana sangat sentral:
-    *   **Anak laki-laki kandung (Sentana Rajeg)** memiliki hak utama dan pertama untuk mewarisi, khususnya harta pusaka (*awig-awig*) yang tidak terpecah, serta tanggung jawab utama melanjutkan keluarga dan upacara keagamaan.
-    *   **Anak perempuan kandung** dalam sistem biasa (*purusa*) umumnya bukan sentana utama. Hak warisnya lebih terbatas, seringkali berupa pemberian (*memejang*) saat perkawinan. Namun, melalui perkawinan *nyentana*, anak perempuan dapat menjadi sentana bagi orang tuanya.
+**Trade-off:**
+- **Hukum Adat Bali:** Mengakui sentana sebagai ahli waris utama orang tua angkat, khususnya untuk harta pencaharian (*gono-gini*). Penyelesaian sengketa di masyarakat adat cenderung mengikuti ini.
+- **KUHPerdata:** Anak angkat bukan ahli waris berdasarkan keturunan; hak waris hanya dapat diberikan melalui wasiat, memberikan kepastian hukum formal tetapi mengabaikan konteks sosial-budaya.
 
-### 2. Konflik Norma dan Trade-off
-**Konflik utama** terletak pada perbedaan asas antara hukum adat Bali dan hukum perdata nasional (KUHPerdata):
-*   **Hukum Adat Bali:** Menganut asas **diskriminatif berdasarkan gender dan status** (patrilineal, mayorat laki-laki). Nilai yang diutamakan adalah kelangsungan garis keturunan (*purusa*), kesatuan harta pusaka, dan kelestarian upacara keagamaan.
-*   **KUHPerdata (BW):** Menganut asas **kesamaan derajat** bagi semua anak kandung (laki-laki dan perempuan) dalam pembagian warisan. Nilai yang diutamakan adalah keadilan individual dan persamaan hak.
-
-**Trade-off:** Penerapan murni hukum adat dapat dianggap tidak adil bagi anak perempuan dalam sistem biasa. Sebaliknya, penerapan murni KUHPerdata dapat mengancam kelangsungan sistem kekerabatan, upacara adat, dan keutuhan harta pusaka yang menjadi fondasi identitas masyarakat Bali.
-
-### 3. Keputusan Pluralistik
-Dalam kerangka hukum Indonesia yang mengakui pluralisme hukum (Pasal 18B UUD 1945), **hukum adat Bali adalah hukum primer yang mengatur pewarisan bagi masyarakat Bali yang tunduk padanya.** KUHPerdata berlaku secara **subsider** jika aturan adat tidak lengkap atau tidak jelas.
-
-Oleh karena itu:
-1.  **Kedudukan Hukum:** Konsep *sentana* dan sistem pewarisannya adalah hukum yang hidup (*living law*) dan diakui bagi masyarakat Bali.
-2.  **Pembagian Warisan:** Untuk harta warisan, aturan adat Bali (dengan posisi sentral *Sentana Rajeg*) yang pertama kali diterapkan, bukan pembagian sama rata menurut KUHPerdata.
-3.  **Jalur Penyelesaian:** Sengketa harus pertama kali dilihat melalui prinsip dan lembaga adat Bali. Pengadilan negara, jika diminta, seharusnya mendudukkan hukum adat sebagai hukum yang berlaku, bukan langsung menerapkan KUHPerdata.
-
-**Kesimpulan:** *Sentana* adalah inti dari sistem pewarisan adat Bali yang patrilineal. Posisinya menciptakan hierarki hak waris yang berbeda dengan hukum nasional, mencerminkan trade-off antara keadilan individual dan pelestarian sistem kolektif berbasis kekerabatan dan agama. Pengakuan pluralisme hukum mensyaratkan penghormatan terhadap sistem adat ini sebagai aturan utama bagi komunitasnya.
+**Keputusan Pluralistik:**
+Penyelesaian harus mempertimbangkan **komunitas hukum** si pewaris. Bagi masyarakat Bali yang masih memegang adat, hukum adat Bali seharusnya menjadi pedoman utama. Untuk mengantisipasi konflik dengan sistem nasional, disarankan melakukan pengangkatan secara resmi melalui penetapan pengadilan dan dibuatkan wasiat. Pendekatan ini menghormati pluralisme hukum dengan mengutamakan hukum adat dalam konteksnya, sambil membangun jembatan dengan sistem hukum negara untuk kepastian.

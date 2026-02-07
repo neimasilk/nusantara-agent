@@ -146,9 +146,9 @@ Living document yang mencatat setiap kegagalan, hasil negatif, dan pendekatan ya
 - **Eksperimen:** 07_advanced_orchestration
 - **Kategori:** NEGATIVE_RESULT
 - **Severity:** MAJOR
-- **Deskripsi:** Skor otomatis Kimi menunjukkan advanced orchestration (parallel + debate + self-correction + routing) memiliki skor lebih rendah dibanding baseline sequential (Exp 03 re-run) pada 12 query.
-- **Expected vs Actual:** Expected: peningkatan >= 10% pada minimal 2 metrik kualitas. Actual: semua metrik turun (Accuracy -0.25, Completeness -0.33, Cultural -0.17).
-- **Root Cause:** Debat menambah langkah namun tidak menambah evidence; jawaban menjadi lebih panjang tetapi tidak lebih tepat menurut evaluator.
+- **Deskripsi:** Skor otomatis Kimi menunjukkan advanced orchestration (parallel + debate + self-correction + routing) memiliki skor lebih rendah dibanding baseline sequential (Exp 03 re-run) pada 12 query, bahkan setelah revisi prompt evidence-grounded.
+- **Expected vs Actual:** Expected: peningkatan >= 10% pada minimal 2 metrik kualitas. Actual: semua metrik turun (Accuracy -0.67, Completeness -0.67, Cultural -0.33).
+- **Root Cause:** Debat mengurangi detail untuk menjaga grounding, tetapi tidak menambah evidence baru; output jadi lebih ringkas namun kehilangan coverage.
 - **Implikasi untuk Paper:** Klaim peningkatan kualitas dari debate/self-correction harus dikualifikasi; perlu evaluasi ulang dan/atau perbaikan protokol debat.
 - **Tindakan:** ACKNOWLEDGED
 - **Detail Tindakan:** Analisis failure mode, perbaiki prompt debat, tambah evidence grounding, dan validasi ulang dengan human annotation.

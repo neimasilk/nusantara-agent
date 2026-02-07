@@ -5,27 +5,27 @@
   "critiques": [
     {
       "id": "K1",
-      "target_claim_id": "C1",
-      "issue_type": "evidence_gap",
-      "description": "Klaim C1 menyatakan harta bawaan 'tetap menjadi milik pribadi' berdasarkan UU Perkawinan dan yurisprudensi. Namun, dalam adat Jawa, status harta bawaan bisa berubah menjadi harta bersama (gono-gini) jika terjadi percampuran (vermenging) atau pengelolaan bersama yang signifikan selama perkawinan. Jawaban NLA tidak menyebutkan pengecualian atau modifikasi adat ini, sehingga menciptakan kesan bahwa pemisahan harta bawaan bersifat mutlak.",
+      "target_claim_id": "C4",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa harta gono-gini 'dibagi dua (½ untuk suami, ½ untuk istri)' dalam adat Jawa merupakan generalisasi yang berlebihan. Konteks yang disediakan hanya menyebutkan 'dibagi dua', tetapi tidak menjelaskan apakah pembagian itu selalu setara 50:50. Dalam praktik adat Jawa, pembagian bisa dipengaruhi oleh berbagai faktor seperti kontribusi, kesepakatan, atau kondisi sosial, dan tidak selalu bersifat matematis setengah-setengah.",
       "severity": "MAJOR",
-      "suggested_fix": "Perjelas bahwa dalam adat Jawa, harta bawaan dapat berubah status menjadi gono-gini jika tercampur atau dikelola bersama, dan sebutkan sumber adat atau yurisprudensi yang mendukung modifikasi ini (misalnya, Putusan Pengadilan Negeri yang mengakui konsep percampuran harta)."
+      "suggested_fix": "Klaim seharusnya lebih hati-hati dengan menyatakan bahwa harta gono-gini 'umumnya dibagi dua' atau 'dibagi secara adil sesuai prinsip bersama', dan mengakui bahwa proporsi pembagian yang tepat dapat bervariasi berdasarkan interpretasi adat setempat atau putusan pengadilan."
     },
     {
       "id": "K2",
-      "target_claim_id": "C2",
-      "issue_type": "overclaim",
-      "description": "Klaim C2 menyatakan pembagian gono-gini 'ideal 50:50'. Pernyataan ini terlalu menyederhanakan. Dalam praktik adat Jawa dan putusan pengadilan, pembagian tidak selalu setara. Faktor seperti kontribusi ekonomi, jerih payah, dan peran domestik dapat dipertimbangkan, sehingga pembagian bisa proporsional (misalnya, 60:40). Klaim 'ideal 50:50' tidak didukung secara eksplisit oleh UU Perkawinan Pasal 35 yang hanya menyebut 'harta bersama' tanpa menentukan proporsi.",
+      "target_claim_id": "C3",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa 'Hukum nasional mengakui konsep harta bersama (gono-gini) dan harta bawaan' berdasarkan Pasal 35 UU Perkawinan memiliki kesenjangan bukti. Konteks yang dikutip tidak secara eksplisit menghubungkan terminologi 'gono-gini' (istilah adat) dengan 'harta bersama' dalam UU. UU menggunakan istilah 'harta bersama' dan 'harta bawaan' yang merupakan terjemahan yuridis, tetapi pengakuan formal atas istilah 'gono-gini' itu sendiri serta detail sinkronisasi aturan pembagian adat dengan UU tidak dijelaskan.",
       "severity": "MAJOR",
-      "suggested_fix": "Revisi klaim untuk mencerminkan bahwa pembagian 50:50 adalah salah satu asas, tetapi dalam praktik adat dan yurisprudensi, pengadilan dapat menetapkan pembagian yang tidak setara berdasarkan kontribusi masing-masing pihak. Sertakan contoh putusan pengadilan yang menunjukkan variasi pembagian."
+      "suggested_fix": "Perlu ditambahkan penjelasan bahwa UU Perkawinan mengakui prinsip yang serupa dengan konsep adat (harta bersama vs bawaan), dan bahwa hukum adat (termasuk gono-gini) berlaku sepanjang tidak bertentangan dengan UU, sebagaimana diatur dalam Pasal 35 ayat (2) UU Perkawinan dan ketentuan lain tentang pengakuan hukum adat."
     },
     {
       "id": "K3",
-      "target_claim_id": "C3",
+      "target_claim_id": "C5",
       "issue_type": "logic_gap",
-      "description": "Klaim C3 menyatakan konsep adat Jawa 'telah diakomodir oleh hukum nasional, khususnya dalam Pasal 35 UU Perkawinan'. Namun, ada logika yang terputus: Pasal 35 UU Perkawinan mengatur harta bawaan dan harta bersama secara umum, tetapi tidak secara eksplisit mengadopsi terminologi atau mekanisme spesifik adat Jawa seperti 'gono-gini'. Pengakomodiran lebih tepat terjadi melalui penafsiran pengadilan (yurisprudensi) yang menerapkan asas-asas adat dalam kerangka UU, bukan melalui pengaturan langsung dalam pasal tersebut.",
+      "description": "Terdapat celah logika antara klaim bahwa harta bawaan 'tidak dibagi saat perkawinan berakhir' dengan realitas hukum. Meskipun secara prinsip harta bawaan tetap milik individu, dalam praktik hukum (nasional dan adat) dapat terjadi pencampuran (vermenging) atau peningkatan nilai (appreciatie) selama perkawinan yang memunculkan klaim pembagian. Pernyataan yang absolut bahwa harta bawaan 'tidak dibagi' mengabaikan kompleksitas ini.",
       "severity": "MAJOR",
-      "suggested_fix": "Perbaiki logika dengan menyatakan bahwa meskipun UU Perkawinan tidak menyebut 'gono-gini' secara eksplisit, konsepnya selaras dengan pengaturan harta bersama dalam Pasal 35, dan pengakuan hukum adat secara umum didasarkan pada Pasal 18B UUD 1945. Penekanan harus pada penerapan oleh pengadilan, bukan pengakomodiran literal oleh UU."
+      "suggested_fix": "Klaim harus diperhalus dengan menyatakan bahwa harta bawaan pada dasarnya tetap menjadi hak penuh pemiliknya dan tidak masuk dalam pembagian harta bersama, namun dapat menjadi subjek sengketa atau klaim jika terjadi pencampuran dengan harta bersama atau adanya peningkatan nilai akibat usaha bersama selama perkawinan."
     }
   ]
 }

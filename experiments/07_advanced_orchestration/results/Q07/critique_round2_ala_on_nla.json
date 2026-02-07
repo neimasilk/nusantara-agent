@@ -5,27 +5,27 @@
   "critiques": [
     {
       "id": "K1",
-      "target_claim_id": "C1",
-      "issue_type": "evidence_gap",
-      "description": "Klaim bahwa Pasal 18B UUD 1945 mengakui hukum adat Bali patrilineal sebagai konflik utama terlalu umum dan tidak spesifik. Pasal 18B mengakui kesatuan masyarakat hukum adat dan hak-hak tradisionalnya, tetapi tidak secara eksplisit mengakui aturan patrilineal tertentu. NLA gagal mengutip sumber hukum adat yang konkret (seperti Perda Bali, Awig-awig, atau putusan pengadilan adat) yang secara tegas melarang anak perempuan mewarisi 'druwe'. Tanpa rujukan spesifik, klaim tentang 'pengakuan konstitusi' terhadap norma patrilineal menjadi lemah.",
+      "target_claim_id": "C2",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa 'KUHPerdata berlaku secara subsidiir bagi masyarakat Bali' adalah generalisasi yang berlebihan. Konteks yang diberikan hanya menyebut Pasal 131 IS sebagai kerangka umum, tanpa bukti spesifik bahwa prinsip subsidiaritas ini secara otomatis dan penuh berlaku dalam sengketa waris adat Bali. Penerapan KUHPerdata sangat bergantung pada pengakuan dan penundukan sukarela masyarakat hukum adat, yang dalam praktik seringkali tidak terjadi.",
       "severity": "MAJOR",
-      "suggested_fix": "Perkuat klaim dengan merujuk pada sumber hukum adat Bali yang lebih spesifik dan mengikat, seperti ketentuan dalam Awig-awig Desa Pakraman setempat, Peraturan Daerah Provinsi Bali No. 4 Tahun 2019 tentang Desa Pakraman, atau yurisprudensi Mahkamah Agung/Pengadilan Negeri di Bali yang mengakui aturan patrilineal untuk harta 'druwe'."
+      "suggested_fix": "Klaim seharusnya lebih hati-hati, misalnya: 'Secara teoritis berdasarkan Pasal 131 IS, KUHPerdata dapat berlaku secara subsidiir, namun dalam praktik penyelesaian sengketa waris adat Bali, hukum adat seringkali menjadi primair dan penerapan KUHPerdata sangat terbatas.'"
     },
     {
       "id": "K2",
-      "target_claim_id": "C2",
-      "issue_type": "logic_gap",
-      "description": "NLA menyajikan dikotomi penyelesaian yang terlalu sederhana: jika 'druwe' pakai hukum adat, jika harta pencaharian pakai KUHPerdata. Logika ini mengabaikan kompleksitas penerapan hukum dalam praktik. Pertama, klasifikasi harta seringkali tidak hitam-putih; tanah bisa memiliki unsur keduanya. Kedua, meski diklasifikasikan sebagai 'druwe', Pengadilan Negeri tidak serta merta menolak gugatan anak perempuan. Pengadilan dapat melakukan penemuan hukum dengan mempertimbangkan asas keadilan, perubahan sosial, dan konstitusi (Pasal 28D UUD 1945 tentang hak atas pengakuan hukum). NLA tidak membahas kemungkinan interpretasi progresif ini.",
+      "target_claim_id": "C4",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa 'Tuntutan atas harta bersama (gono-gini) memiliki peluang lebih besar untuk dikabulkan bagi anak perempuan' tidak didukung oleh bukti dalam konteks yang diberikan. Konteks hanya menyebutkan perbedaan perlakuan hukum terhadap kedua jenis harta, tetapi tidak memberikan indikasi atau preseden mengenai 'peluang lebih besar' untuk dikabulkan. Ini merupakan inferensi probabilistik yang tidak berdasar pada bukti yang disajikan.",
       "severity": "MAJOR",
-      "suggested_fix": "Kembangkan analisis dengan mengakui bahwa klasifikasi harta adalah langkah pertama yang kompleks. Kemudian, bahas bagaimana Pengadilan Negeri dapat melakukan uji diskriminasi terhadap hukum adat yang membedakan berdasarkan gender jika dianggap bertentangan dengan konstitusi atau CEDAW (yang telah diratifikasi), meski untuk harta 'druwe'. Sertakan referensi pada putusan pengadilan yang menunjukkan kecenderungan ini."
+      "suggested_fix": "Klaim seharusnya bersifat deskriptif mengenai perbedaan perlakuan hukum, bukan prediktif mengenai peluang. Misalnya: 'Hukum adat dan KUHPerdata membedakan perlakuan terhadap harta bersama dan harta warisan turun-temurun, di mana tuntutan atas harta bersama mungkin menemukan dasar hukum yang lebih kuat dalam kerangka KUHPerdata atau penafsiran adat yang egaliter.'"
     },
     {
       "id": "K3",
-      "target_claim_id": "C3",
-      "issue_type": "overclaim",
-      "description": "NLA menyatakan 'Perempuan pemohon memiliki dasar hukum kuat' jika tanah adalah harta pencaharian. Ini adalah klaim yang terlalu optimis (overclaim). Meski KUHPerdata Pasal 852 memberikan hak yang sama, penerapannya di pengadilan terhadap latar belakang hukum adat yang kuat di Bali tidaklah sederhana. 'Dasar hukum kuat' mengabaikan faktor-faktor praktis seperti: (1) beban pembuktian yang berat bagi pemohon untuk menunjukkan tanah itu murni harta pencaharian, (2) kemungkinan resistensi dari keluarga dan masyarakat adat, (3) potensi panjangnya proses beracara jika melibatkan penilaian ahli adat. Klaim ini menciptakan ekspektasi yang mungkin tidak realistis bagi klien.",
-      "severity": "MAJOR",
-      "suggested_fix": "Ubah klaim menjadi lebih berimbang dan realistis. Misalnya: 'Secara normatif, KUHPerdata memberikan posisi yang menguntungkan bagi pemohon jika tanah dapat dibuktikan sebagai harta pencaharian. Namun, secara praktis, kekuatan argumen ini sangat bergantung pada kemampuan pembuktian dan bagaimana pengadilan menimbangnya terhadap keberadaan hukum adat setempat yang masih hidup dan diakui.'"
+      "target_claim_id": "C6",
+      "issue_type": "logic_gap",
+      "description": "Terdapat lompatan logika dari pernyataan bahwa pengadilan 'akan memeriksa' menjadi daftar faktor yang spesifik (Keabsahan MDP 2010, sifat tanah, prinsip keadilan). Konteks yang dirujuk (paragraf 9) hanya menyebutkan bahwa pengadilan dapat memeriksa keabsahan keputusan adat dan mempertimbangkan prinsip keadilan, tetapi tidak secara eksplisit menyatakan bahwa ketiga faktor tersebut akan selalu dan bersama-sama diperiksa sebagai suatu paket. Urgensi dan bobot masing-masing faktor bisa sangat bervariasi tergantung kasus.",
+      "severity": "MINOR",
+      "suggested_fix": "Klaim seharusnya lebih lunak dan tidak menyatakan sebagai prosedur tetap. Misalnya: 'Dalam proses litigasi, pengadilan berwenang untuk, antara lain, memeriksa keabsahan keputusan lembaga adat seperti MDP 2010, menilai sifat objek sengketa, dan mempertimbangkan prinsip-prinsip keadilan dan kesetaraan gender.'"
     }
   ]
 }

@@ -1,63 +1,83 @@
 {
   "round": 1,
   "agent": "NLA",
-  "answer": "Mekanisme penyelesaian konflik antara hukum nasional yang mengakui hak anak dan hukum adat matrilineal dalam hal waris dilakukan dengan langkah-langkah berikut:\n1. **Identifikasi Jenis Harta**: Pisahkan antara **harta pencaharian** (harta bersama suami-istri) dan **harta pusaka adat** (harta turun-temurun garis ibu).\n2. **Aturan Pembagian**:\n   - **Harta Pencaharian**: Tunduk pada hukum nasional (KUHPerdata/UU Perkawinan). Harta dibagi sebagai harta bersama, lalu bagian almarhum/almh diwariskan kepada anak (ahli waris golongan I) berdasarkan Pasal 832 KUHPerdata.\n   - **Harta Pusaka Adat**: Dapat diatur oleh hukum adat matrilineal sepanjang tidak melanggar hukum nasional dan HAM. Anak tetap memiliki hak melalui garis ibunya dalam sistem matrilineal tersebut.\n3. **Forum Penyelesaian Sengketa**:\n   - **Pengadilan Negeri** (untuk WNI non-adat) akan mendahulukan hukum nasional.\n   - **Pengadilan Agama** (bagi Muslim) akan mempertimbangkan hukum adat yang tidak bertentangan dengan hukum Islam dan peraturan perundang-undangan.\n   - **Lembaga Adat** dapat menjadi forum awal, tetapi keputusannya dapat dibatalkan pengadilan jika melanggar hak anak.\n4. **Prinsip Pengutamaan**: Dalam konflik hierarkis, hukum nasional (terutama UU Perlindungan Anak) didahulukan atas hukum adat untuk menjamin **kepentingan terbaik anak** dan hak-hak dasarnya.",
+  "answer": "Mekanisme penyelesaian bersifat bertingkat: utamakan musyawarah adat, jika gagal ajukan ke pengadilan. Pengadilan akan menerapkan hukum adat waris matrilineal sebagai hukum khusus (lex specialis) bagi komunitasnya, tetapi dapat melakukan modifikasi untuk harta pencaharian guna melindungi hak anak berdasarkan prinsip kepentingan terbaik anak.",
   "claims": [
     {
       "id": "C1",
-      "statement": "Hukum nasional (undang-undang) memiliki kedudukan lebih tinggi daripada hukum adat dalam hierarki hukum Indonesia, sehingga dalam konflik harus didahulukan.",
+      "statement": "Hukum adat diakui berlaku sebagai hukum khusus (lex specialis) bagi komunitasnya berdasarkan Pasal 2 Aturan Peralihan UUD 1945 dan Pasal 131 IS.",
       "evidence": [
         "Pasal 2 Aturan Peralihan UUD 1945",
-        "UU No. 12 Tahun 2011 tentang Pembentukan Peraturan Perundang-undangan"
+        "Pasal 131 IS"
       ],
-      "confidence": 0.95,
+      "confidence": 1.0,
       "assumptions": [
-        "Konflik yang dimaksud adalah antara ketentuan hukum nasional yang bersifat memaksa dan hukum adat yang bertentangan"
+        "Konteks membahas masyarakat adat yang masih terikat dengan komunitasnya"
       ]
     },
     {
       "id": "C2",
-      "statement": "KUHPerdata menganut sistem kewarisan bilateral dan mengakui hak waris anak sebagai ahli waris golongan I (Pasal 832 KUHPerdata).",
+      "statement": "Dalam sistem matrilineal, hak waris untuk harta pusaka tinggi mengikuti garis ibu.",
       "evidence": [
-        "Pasal 832 KUHPerdata",
-        "Pasal 250 KUHPerdata"
+        "Sistem matrilineal Minangkabau, Maluku"
       ],
-      "confidence": 0.98,
+      "confidence": 0.9,
       "assumptions": [
-        "Anak yang dimaksud adalah anak sah menurut hukum"
+        "Pewaris adalah anggota masyarakat adat matrilineal yang masih berlaku"
       ]
     },
     {
       "id": "C3",
-      "statement": "Hukum adat diakui keberlakuannya sepanjang hidup dalam masyarakat dan tidak bertentangan dengan peraturan perundang-undangan yang lebih tinggi serta nilai-nilai HAM.",
+      "statement": "Penyelesaian sengketa diawali dengan musyawarah adat oleh keluarga besar dan ninik mamak.",
       "evidence": [
-        "UU No. 12 Tahun 2011 tentang Pembentukan Peraturan Perundang-undangan",
-        "Pasal 2 dan 3 UU No. 1 Tahun 1974 tentang Perkawinan"
+        "Mekanisme penyelesaian secara adat"
       ],
       "confidence": 0.9,
       "assumptions": [
-        "Masyarakat adat tersebut masih secara nyata menjalankan tradisinya"
+        "Komunitas adat masih menjalankan mekanisme musyawarah"
       ]
     },
     {
       "id": "C4",
-      "statement": "Mekanisme penyelesaian mensyaratkan pembedaan antara harta pencaharian (tunduk pada hukum nasional) dan harta pusaka adat (dapat diatur hukum adat).",
+      "statement": "Jika musyawarah adat gagal, penyelesaian dapat dilakukan di Pengadilan Agama atau Negeri, di mana hakim wajib mendasarkan putusan pada hukum adat yang berlaku.",
       "evidence": [
-        "Yurisprudensi Mahkamah Agung (Putusan MA No. 16 K/SIP/1956)",
-        "Praktik hukum di masyarakat matrilineal"
+        "Pasal 5 ayat (3) UU No. 48/2009"
       ],
-      "confidence": 0.85,
+      "confidence": 1.0,
       "assumptions": [
-        "Jenis harta dapat diidentifikasi secara jelas dalam sengketa"
+        "Sengketa diajukan ke pengadilan yang berwenang"
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Pengadilan dapat melakukan modifikasi dalam penerapan hukum adat, khususnya untuk pembagian harta pencaharian (gono-gini), guna melindungi hak dan kepentingan terbaik anak.",
+      "evidence": [
+        "Yurisprudensi MA No. 16K/AG/2010",
+        "Prinsip perlindungan anak"
+      ],
+      "confidence": 0.8,
+      "assumptions": [
+        "Terdapat harta pencaharian dan konflik terkait hak anak"
+      ]
+    },
+    {
+      "id": "C6",
+      "statement": "Hak anak atas nafkah dari harta orang tua tetap dilindungi berdasarkan UU Perlindungan Anak meskipun hukum adat waris matrilineal berlaku.",
+      "evidence": [
+        "Pasal 45 UU No. 35/2009"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Anak merupakan ahli waris yang berhak atas nafkah"
       ]
     }
   ],
   "uncertainties": [
-    "U1: Sejauh mana pengadilan (khususnya di daerah otonom) secara konsisten mendahulukan hukum nasional atas hukum adat dalam praktik penanganan sengketa waris yang melibatkan anak.",
-    "U2: Batas definitif antara 'harta pusaka adat' dan 'harta pencaharian' dalam masyarakat matrilineal kontemporer, terutama untuk harta yang diperoleh selama perkawinan."
+    "Batasan pasti 'tidak bertentangan dengan UUD' dalam konteks hak anak individual versus hak kolektif adat.",
+    "Tingkat fleksibilitas dan variasi penerapan hukum adat matrilineal modern di berbagai daerah."
   ],
   "open_questions": [
-    "Q1: Apakah terdapat instrumen hukum atau peraturan daerah khusus yang telah berhasil merekonsiliasi hak waris anak dengan sistem matrilineal tanpa mengabaikan prinsip hukum nasional?",
-    "Q2: Bagaimana efektivitas lembaga adat sebagai mediator dalam menyelesaikan sengketa semacam ini sebelum dibawa ke pengadilan formal?"
+    "Bagaimana jika anak menolak sistem matrilineal dan mengklaim hak waris berdasarkan KUHPerdata?",
+    "Bagaimana mekanisme pembuktian dan pengklasifikasian harta pusaka versus harta pencaharian di pengadilan?"
   ]
 }

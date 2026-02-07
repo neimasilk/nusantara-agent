@@ -1,61 +1,80 @@
 {
   "round": 1,
   "agent": "NLA",
-  "answer": "Konflik ini diselesaikan dengan mengidentifikasi status hukum pewaris dan klasifikasi jenis hartanya. Prinsip utamanya adalah asas personalitas hukum adat (Pasal 131 IS) dan yurisprudensi Mahkamah Agung. Jika pewaris masih terikat masyarakat adat Minangkabau, untuk harta pusako rendah berlaku hukum adat matrilineal (hak pada kemenakan). Jika pewaris telah meninggalkan lingkungan adatnya, atau untuk harta pencaharian (gono-gini), dapat diterapkan KUHPerdata/UU Perkawinan (hak pada anak kandung). Penyelesaian diawali dengan mediasi melibatkan tokoh adat, dan jika gagal, pengadilan akan memutus berdasarkan pembuktian atas dua faktor kunci tersebut.",
+  "answer": "Harta pencaharian (pusako rendah) tunduk pada UU Perkawinan 1974 sebagai hukum nasional, sehingga anak kandung adalah ahli waris utama. Kemenakan tidak berhak atas harta pencaharian kecuali dapat dibuktikan sebagai harta pusako tinggi atau ada perjanjian khusus. Penyelesaian prioritas melalui musyawarah dengan pedoman UU, dan jika gagal, pengadilan akan mengutamakan UU Perkawinan 1974.",
   "claims": [
     {
       "id": "C1",
-      "statement": "Hukum yang berlaku bagi seseorang ditentukan oleh asas personalitas hukum adat (Pasal 131 IS), di mana hukum adat adalah hukum utama bagi masyarakat yang masih mempertahankannya.",
+      "statement": "Harta pencaharian (harta bersama) diatur secara nasional oleh Pasal 35 UU Perkawinan 1974 yang mengikat semua warga negara, termasuk masyarakat Minangkabau.",
       "evidence": [
-        "Pasal_131_IS",
-        "Putusan_MA_179_K_Sip_1961"
+        "Pasal 35 UU Perkawinan 1974"
       ],
-      "confidence": 0.95,
+      "confidence": 1.0,
       "assumptions": [
-        "Pasal 131 IS masih diakui sebagai dasar berlakunya hukum adat."
+        "Harta yang disengketakan adalah harta pencaharian/pusako rendah, bukan pusako tinggi"
       ]
     },
     {
       "id": "C2",
-      "statement": "Harta pusako rendah dalam masyarakat Minangkabau tunduk pada sistem kewarisan matrilineal, sehingga hak waris berada pada kemenakan (anak dari saudara perempuan), bukan anak kandung pewaris.",
+      "statement": "Berdasarkan Pasal 37 UU Perkawinan 1974, bila perkawinan putus karena kematian, separuh harta bersama menjadi hak pasangan yang hidup lebih lama dan separuh lagi menjadi harta warisan.",
       "evidence": [
-        "Doktrin_Hukum_Adat_Minangkabau"
+        "Pasal 37 UU Perkawinan 1974"
       ],
-      "confidence": 0.9,
+      "confidence": 1.0,
       "assumptions": [
-        "Harta yang diperebutkan telah teridentifikasi dan terbukti sebagai harta pusako rendah, bukan harta pencaharian."
+        "Perkawinan putus karena kematian salah satu pihak"
       ]
     },
     {
       "id": "C3",
-      "statement": "Harta pencaharian (gono-gini) yang diperoleh selama perkawinan diatur UU No. 1/1974 dan menjadi harta bersama, yang pewarisannya dapat tunduk pada KUHPerdata, memberikan hak kepada anak kandung.",
+      "statement": "Anak kandung adalah ahli waris utama dari harta warisan (separuh harta pencaharian) tersebut, baik menurut KUHPerdata untuk non-Muslim maupun Kompilasi Hukum Islam (KHI) untuk Muslim.",
       "evidence": [
-        "UU_No_1_1974_Pasal_35_3",
-        "KUHPerdata_Pasal_852"
+        "KUHPerdata Pasal 852",
+        "KHI Pasal 176"
       ],
-      "confidence": 0.95,
+      "confidence": 1.0,
       "assumptions": [
-        "UU No. 1/1974 berlaku bagi para pihak dan harta tersebut memenuhi definisi harta bersama."
+        "Pewaris tidak memiliki ahli waris lain yang lebih prioritas dalam golongan pertama"
       ]
     },
     {
       "id": "C4",
-      "statement": "Pengadilan akan memeriksa status keterikatan pewaris pada hukum adat dan jenis harta untuk menentukan hukum yang berlaku, sebagaimana dijabarkan dalam yurisprudensi Mahkamah Agung.",
+      "statement": "Kemenakan dalam sistem adat Minangkabau bukan ahli waris menurut UU Perkawinan, KUHPerdata, atau KHI untuk harta pencaharian.",
       "evidence": [
-        "Putusan_MA_396_K_Pdt_1983"
+        "Analisis hierarki hukum dan asas personalitas"
       ],
       "confidence": 0.9,
       "assumptions": [
-        "Putusan MA tersebut masih menjadi acuan dan fakta di persidangan dapat dibuktikan."
+        "Tidak ada perjanjian atau penghibahan khusus dari almarhum kepada kemenakan"
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Pengadilan, dalam menyelesaikan sengketa, harus mendahulukan UU Perkawinan 1974 sebagai hukum nasional.",
+      "evidence": [
+        "Asas lex specialis dan yurisprudensi MA"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "Kasus diajukan ke pengadilan yang berwenang"
+      ]
+    },
+    {
+      "id": "C6",
+      "statement": "Hukum adat dapat dipertimbangkan sebagai kearifan lokal tetapi tidak boleh mengesampingkan hak anak kandung yang dijamin undang-undang.",
+      "evidence": [
+        "Pasal 2 Aturan Peralihan UUD 1945 dan asas konflik hukum"
+      ],
+      "confidence": 0.8,
+      "assumptions": [
+        "Tidak ada ketentuan khusus dalam peraturan daerah yang sah dan tidak bertentangan dengan UU"
       ]
     }
   ],
   "uncertainties": [
-    "U1: Sejauh mana kriteria 'meninggalkan lingkungan hukum adat' ditafsirkan oleh pengadilan (misalnya: domisili, pola hidup, pernyataan diri).",
-    "U2: Batas dan bukti hukum untuk membedakan 'harta pusako rendah' dengan 'harta pencaharian' dalam praktik, terutama jika hartanya telah bercampur."
+    "U1: Apakah ada percampuran (vermenging) antara harta pencaharian dengan harta pusako tinggi dalam kasus konkret, yang dapat memengaruhi status hukumnya."
   ],
   "open_questions": [
-    "Q1: Apakah terdapat perkembangan yurisprudensi terbaru dari Mahkamah Agung yang mulai mengakui hak anak kandung atas harta pusako berdasarkan asas keadilan atau kebutuhan, meskipun pewaris masih terikat adat?",
-    "Q2: Bagaimana efektivitas mediasi yang melibatkan ninik mamak dalam menyelesaikan sengketa waris lintas generasi seperti ini di era modern?"
+    "Q1: Bagaimana mekanisme pembuktian dan pemisahan yang efektif antara harta pencaharian dan harta pusako tinggi jika terjadi percampuran dalam praktik?"
   ]
 }

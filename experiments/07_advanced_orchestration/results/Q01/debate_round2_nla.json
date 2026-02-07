@@ -1,51 +1,81 @@
 {
   "round": 2,
   "agent": "NLA",
-  "answer": "Berdasarkan KUHPerdata, pembagian waris jika pewaris (suami) meninggalkan istri dan dua anak kandung, tanpa wasiat, adalah sebagai berikut:\n\n1. **Tahap Pemisahan Harta Bersama (Gono-Gini):** Harta bersama suami-istri dibagi dua. Separuh menjadi hak mutlak istri yang masih hidup. Separuh lainnya, ditambah seluruh harta pribadi suami (jika ada), menjadi harta warisan yang akan dibagi.\n2. **Tahap Pembagian Harta Warisan:** Dari total harta warisan tersebut:\n   - **Istri** mendapat bagian pasti (legitieme portie) sebesar **1/4 (seperempat)**.\n   - **Sisa 3/4 (tiga perempat)** dibagi sama rata kepada **kedua anak**. Dengan demikian, masing-masing anak mendapat **3/8** dari harta warisan.\n\n**Ilustrasi:** Jika total harta bersama Rp1 M, maka istri mendapat Rp500 juta dari pemisahan harta. Harta warisan suami Rp500 juta. Istri mendapat Rp125 juta (1/4) sebagai ahli waris, dan masing-masing anak mendapat Rp187,5 juta (3/8). Total akhir istri Rp625 juta, masing-masing anak Rp187,5 juta.",
+  "answer": "Menurut KUHPerdata, harta bersama dibagi dua terlebih dahulu: ½ untuk istri dan ½ masuk harta warisan. Harta warisan (½ harta bersama + harta pribadi pewaris) kemudian dibagi: istri mendapat ⅓, dan dua anak bersama-sama mendapat ⅔ (dibagi rata).",
   "claims": [
     {
       "id": "C1",
-      "statement": "Harta bersama (gono-gini) suami-istri harus dipisahkan terlebih dahulu, di mana istri berhak atas 1/2 bagian sebagai miliknya sendiri.",
+      "statement": "Harta bersama perkawinan dibagi dua, ½ untuk istri dan ½ masuk ke harta warisan pewaris.",
       "evidence": [
-        "Pasal 119 KUHPerdata"
+        "CONTEXT"
       ],
       "confidence": 1.0,
       "assumptions": [
-        "A1",
-        "A2"
+        "Tidak ada perjanjian perkawinan lain"
       ]
     },
     {
       "id": "C2",
-      "statement": "Setelah pemisahan, harta warisan (bagian suami dari harta bersama plus harta pribadinya) dibagikan kepada ahli waris Golongan I (istri dan anak).",
+      "statement": "Harta warisan terdiri dari ½ harta bersama ditambah seluruh harta pribadi pewaris.",
       "evidence": [
-        "Pasal 832-833 KUHPerdata"
+        "CONTEXT"
       ],
       "confidence": 1.0,
       "assumptions": [
-        "A1",
-        "A2"
+        "Tidak ada perjanjian perkawinan lain"
       ]
     },
     {
       "id": "C3",
-      "statement": "Dalam Golongan I, istri yang ditinggalkan berhak atas 1/4 bagian dari harta warisan, sementara sisanya dibagi rata kepada semua anak.",
+      "statement": "Istri dan dua anak adalah ahli waris berdasarkan Pasal 852a BW.",
       "evidence": [
-        "Pasal 852a KUHPerdata (SEMA No. 3/1963)"
+        "CONTEXT"
       ],
       "confidence": 1.0,
       "assumptions": [
-        "A1",
-        "A2",
-        "A3"
+        "Tidak ada ahli waris lain yang lebih berhak"
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Bagian warisan untuk istri adalah ⅓ dari harta warisan.",
+      "evidence": [
+        "CONTEXT"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Tidak ada wasiat yang mengurangi bagian wajib"
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Bagian warisan untuk dua anak bersama-sama adalah ⅔ dari harta warisan, dibagi rata.",
+      "evidence": [
+        "CONTEXT"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Anak-anak adalah ahli waris sah dan tidak ada yang diasingkan"
+      ]
+    },
+    {
+      "id": "C6",
+      "statement": "Bagian ⅔ untuk anak merupakan bagian mutlak (legitieme portie) menurut KUHPerdata.",
+      "evidence": [
+        "CONTEXT"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Tidak ada wasiat yang melanggar bagian wajib"
       ]
     }
   ],
   "uncertainties": [
-    "U1: Apakah ada harta pribadi (bawaan/hibah/warisan) milik suami atau istri yang perlu diperhitungkan secara terpisah? Analisis utama mengasumsikan seluruh harta adalah harta bersama."
+    "Apakah semua harta adalah harta bersama atau ada harta pribadi pewaris.",
+    "Apakah ada wasiat dari pewaris yang mempengaruhi pembagian."
   ],
   "open_questions": [
-    "Q1: Bagaimana jika salah satu atau kedua anak tersebut adalah anak luar kawin yang telah diakui? Bagaimana kedudukan dan bagian waris mereka?",
-    "Q2: Apa langkah hukum yang harus ditempuh untuk memperoleh kepastian dan eksekusi pembagian ini (misalnya, melalui penetapan ahli waris di Pengadilan Negeri)?"
+    "Apakah ahli waris yang dimaksud adalah anak kandung sah atau termasuk anak angkat?",
+    "Apakah ada utang pewaris yang harus dilunasi terlebih dahulu dari harta warisan?"
   ]
 }

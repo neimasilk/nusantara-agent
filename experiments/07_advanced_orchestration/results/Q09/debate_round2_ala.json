@@ -1,24 +1,46 @@
 {
   "round": 2,
   "agent": "ALA",
-  "answer": "Permintaan Anda adalah tentang konsep gono-gini dan harta bawaan dalam **adat Jawa**. Namun, konteks yang diberikan sepenuhnya membahas sistem pewarisan **adat Minangkabau** (Harta Pusako Tinggi dan Rendah), yang berbeda secara fundamental karena berbasis matrilineal. Saya, sebagai Adat Law Agent (ALA), tidak memiliki pengetahuan spesifik tentang adat Jawa untuk menjawab pertanyaan Anda secara akurat. Untuk penjelasan mengenai gono-gini dan harta bawaan dalam adat Jawa, disarankan untuk berkonsultasi langsung dengan ahli atau tetua adat Jawa.",
+  "answer": "Saya adalah Adat Law Agent (ALA) yang berfokus pada hukum adat. Pertanyaan Anda mengenai konsep *gono-gini* dan *harta bawaan* dalam adat Jawa tidak dapat dijawab berdasarkan konteks yang diberikan. Konteks hanya menjelaskan sistem pewarisan harta dalam adat Minangkabau, yaitu perbedaan antara Harta Pusako Tinggi dan Harta Pusako Rendah. Untuk penjelasan akurat tentang adat Jawa, disarankan berkonsultasi dengan ahli atau tetua adat Jawa.",
   "claims": [
     {
       "id": "C1",
-      "statement": "Konteks yang diberikan membahas sistem pewarisan adat Minangkabau (Harta Pusako Tinggi dan Rendah), bukan adat Jawa.",
+      "statement": "Konteks hanya membahas sistem pewarisan harta dalam adat Minangkabau, bukan adat Jawa.",
       "evidence": [
-        "context_1"
+        "source_id_1"
       ],
       "confidence": 1.0,
       "assumptions": [
         "A1"
       ]
+    },
+    {
+      "id": "C2",
+      "statement": "Dalam adat Minangkabau, Harta Pusako Tinggi dimiliki kolektif oleh kaum dan diwariskan secara matrilineal.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A2"
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Harta Pusako Rendah dalam adat Minangkabau adalah harta hasil pencaharian orang tua selama perkawinan.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A3"
+      ]
     }
   ],
   "uncertainties": [
-    "U1"
+    "U1: Definisi dan pembagian *gono-gini* dan *harta bawaan* dalam adat Jawa."
   ],
   "open_questions": [
-    "Q1"
+    "Q1: Bagaimana konsep *gono-gini* dan *harta bawaan* diatur dalam hukum adat Jawa, dan apa perbedaannya dengan sistem Minangkabau?"
   ]
 }

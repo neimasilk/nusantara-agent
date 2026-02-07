@@ -1,48 +1,62 @@
 {
   "round": 1,
   "agent": "ALA",
-  "answer": "Mekanisme penyelesaian konflik antara hukum nasional yang mengakui hak anak dan adat matrilineal dalam waris dilakukan dengan langkah-langkah terstruktur berdasarkan prinsip adat Minangkabau. Pertama, identifikasi jenis harta: Harta Pusako Tinggi (kolektif kaum) tetap diwariskan secara matrilineal kepada kemenakan, sementara Harta Pusako Rendah (hasil pencaharian orang tua) diselesaikan melalui musyawarah keluarga (Sapakat) yang dipimpin Ninik Mamak dan Alim Ulama. Untuk Pusako Rendah, musyawarah mengacu pada ketentuan hukum Islam sebagai dasar pembagian bagi anak kandung, dengan mempertimbangkan kesepakatan keluarga yang adil dan prinsip 'adat basandi syarak, syarak basandi Kitabullah'. Mamak Kepala Waris berperan sebagai penengah untuk menjaga persaudaraan. Dengan demikian, adat telah mengakomodasi hukum Islam untuk Pusako Rendah, sementara Pusako Tinggi dipertahankan sebagai identitas kolektif.",
+  "answer": "Mekanisme penyelesaian dibedakan berdasarkan jenis harta. Harta Pusako Tinggi mutlak diwariskan secara matrilineal dan hukum nasional tidak berlaku. Untuk Harta Pusako Rendah, penyelesaian utama adalah melalui musyawarah dalam Kerapatan Adat untuk mencapai mufakat yang mempertimbangkan hak anak dan tanggung jawab sosial terhadap kemenakan, dengan mengutamakan penyelesaian kekeluargaan sebelum jalur hukum formal.",
   "claims": [
     {
       "id": "C1",
-      "statement": "Harta Pusako Tinggi diwariskan secara matrilineal kepada kemenakan dan tidak boleh diperjualbelikan, sementara Harta Pusako Rendah dapat diwariskan kepada anak kandung.",
+      "statement": "Harta Pusako Tinggi diwariskan mutlak berdasarkan garis matrilineal dan hukum nasional tidak dapat menggeser aturan ini.",
       "evidence": [
-        "source_context"
+        "source_id_1"
       ],
-      "confidence": 0.95,
+      "confidence": 1.0,
       "assumptions": [
-        "A1"
+        "Asumsi bahwa konteks merujuk pada masyarakat adat Minangkabau."
       ]
     },
     {
       "id": "C2",
-      "statement": "Mekanisme penyelesaian konflik untuk Harta Pusako Rendah dilakukan melalui musyawarah keluarga (Sapakat) yang melibatkan Ninik Mamak dan Alim Ulama, dengan mengacu pada hukum Islam dan kesepakatan adil.",
+      "statement": "Harta Pusako Rendah dapat diwariskan kepada anak kandung dan merupakan sumber potensi konflik antara hak anak dan hak kemenakan.",
       "evidence": [
-        "source_context"
+        "source_id_1"
       ],
-      "confidence": 0.9,
-      "assumptions": [
-        "A2"
-      ]
+      "confidence": 1.0,
+      "assumptions": []
     },
     {
       "id": "C3",
-      "statement": "Adat Minangkabau mengakomodasi hukum Islam dalam pewarisan Harta Pusako Rendah, dengan prinsip 'adat basandi syarak, syarak basandi Kitabullah'.",
+      "statement": "Mekanisme utama penyelesaian konflik untuk Harta Pusako Rendah adalah musyawarah dalam Kerapatan Adat yang dipimpin ninik mamak, alim ulama, dan cerdik pandai untuk mencapai mufakat.",
       "evidence": [
-        "source_context"
+        "source_id_1"
       ],
-      "confidence": 0.85,
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C4",
+      "statement": "Penyelesaian secara kekeluargaan dan adat lebih diutamakan sebelum jalur hukum formal ditempuh.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C5",
+      "statement": "Hukum adat diakui oleh negara melalui Pasal 18B UUD 1945.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
       "assumptions": [
-        "A3"
+        "Asumsi bahwa penjelasan dalam konteks mengenai pengakuan negara adalah benar."
       ]
     }
   ],
   "uncertainties": [
-    "U1: Sejauh mana hukum nasional secara spesifik mengakui atau membatasi penerapan prinsip matrilineal untuk Harta Pusako Tinggi dalam praktik saat ini.",
-    "U2: Tingkat efektivitas musyawarah adat dalam menyelesaikan konflik jika terjadi sengketa berat antar pihak keluarga."
+    "Tidak ada penjelasan detail tentang prosedur atau batasan 'kondisi darurat yang sangat ketat' untuk memperjualbelikan Harta Pusako Tinggi."
   ],
   "open_questions": [
-    "Q1: Bagaimana jika musyawarah adat untuk Harta Pusako Rendah tidak mencapai mufakat? Apakah ada mekanisme naik banding ke lembaga adat yang lebih tinggi atau ke pengadilan negara?",
-    "Q2: Apakah terdapat dokumen atau putusan adat tertulis yang secara eksplisit mengatur pembagian Harta Pusako Rendah antara anak dan kemenakan sebagai pedoman musyawarah?"
+    "Bagaimana jika musyawarah adat untuk Harta Pusako Rendah gagal mencapai mufakat, apakah mekanisme hukum nasional kemudian berlaku secara penuh?"
   ]
 }

@@ -1,63 +1,65 @@
 {
   "round": 2,
   "agent": "NLA",
-  "answer": "Pluralisme hukum di Indonesia adalah situasi di mana lebih dari satu sistem atau norma hukum berlaku secara sah dalam wilayah negara yang sama. Fenomena ini terjadi terutama karena: 1) Pengakuan konstitusional terhadap keberagaman (Pasal 18B ayat (2) dan Pasal 29 ayat (2) UUD 1945) yang mengakui kesatuan masyarakat hukum adat dan hak-hak tradisionalnya; 2) Penerapan asas personalitas keagamaan, di mana hukum yang berlaku bagi seseorang sangat dipengaruhi oleh identitas agamanya, khususnya dalam hukum keluarga dan waris (dasar hukumnya antara lain UU No. 1 Tahun 1974 tentang Perkawinan dan Kompilasi Hukum Islam); 3) Keberagaman hukum adat yang bersifat lokal dan tidak seragam di seluruh Indonesia; serta 4) Keterbatasan KUHPerdata (hukum perdata Barat warisan kolonial) dalam mengakomodasi seluruh keragaman budaya dan keyakinan masyarakat Indonesia, sehingga tidak dimaksudkan sebagai hukum yang tunggal. Akibatnya, untuk mengatur hubungan hukum yang sama (misalnya hak anak dan harta bersama dalam perkawinan), dapat berlaku norma dari KUHPerdata, hukum adat setempat, atau hukum agama (terutama Islam melalui KHI), tergantung pada identitas agama, domisili adat, pilihan para pihak, dan yurisdiksi pengadilan yang berwenang.",
+  "answer": "Pluralisme hukum di Indonesia adalah situasi di mana lebih dari satu sistem hukum (nasional/KUHPerdata, adat, dan agama) berlaku secara bersamaan. Hal ini terjadi karena faktor sejarah kolonial, keberagaman budaya, dan unifikasi hukum yang tidak tuntas. Tidak ada satu peraturan nasional yang mengatur seluruh aspek hukum perdata untuk semua warga, sehingga terjadi pilihan hukum. Dasar pengakuannya antara lain UU No. 1 Tahun 1974 tentang Perkawinan dan yurisprudensi. Akibatnya, aturan tentang hak anak kandung dan harta bersama (gono-gini) sangat bervariasi tergantung hukum yang diterapkan, menimbulkan ketidakpastian yang dapat diatasi dengan perjanjian perkawinan.",
   "claims": [
     {
       "id": "C1",
-      "statement": "Pluralisme hukum di Indonesia adalah situasi sah di mana lebih dari satu sistem hukum berlaku, disebabkan oleh pengakuan konstitusional terhadap keberagaman.",
+      "statement": "Pluralisme hukum di Indonesia adalah situasi di mana lebih dari satu sistem atau norma hukum berlaku dan diakui.",
       "evidence": [
-        "Pasal 18B ayat (2) UUD 1945",
-        "Pasal 29 ayat (2) UUD 1945"
+        "context_par_1"
       ],
-      "confidence": 0.95,
-      "assumptions": [
-        "Pembacaan terhadap pasal-pasal UUD 1945 tersebut mengakui eksistensi masyarakat hukum adat dan kebebasan beragama sebagai dasar pluralisme hukum."
-      ]
+      "confidence": 1.0,
+      "assumptions": []
     },
     {
       "id": "C2",
-      "statement": "Asas personalitas keagamaan menyebabkan hukum yang berlaku bagi seseorang dalam bidang keluarga dan waris ditentukan oleh identitas agamanya.",
+      "statement": "Pluralisme hukum terjadi karena faktor kolonial, keberagaman budaya, dan unifikasi hukum yang tidak tuntas.",
       "evidence": [
-        "UU No. 1 Tahun 1974 tentang Perkawinan",
-        "Kompilasi Hukum Islam (KHI)"
+        "context_par_1"
       ],
-      "confidence": 0.9,
-      "assumptions": [
-        "Undang-undang dan kompilasi tersebut masih berlaku efektif dan menjadi rujukan utama bagi kelompok agamanya masing-masing."
-      ]
+      "confidence": 1.0,
+      "assumptions": []
     },
     {
       "id": "C3",
-      "statement": "KUHPerdata (BW) tidak dimaksudkan sebagai hukum tunggal di Indonesia karena keterbatasannya dalam mengakomodasi keragaman budaya dan keyakinan.",
+      "statement": "Lebih dari satu norma berlaku karena tidak ada peraturan nasional yang secara tegas dan komprehensif mengatur seluruh aspek hukum perdata untuk semua warga.",
       "evidence": [
-        "Asas Konkordansi dalam sejarah hukum Indonesia",
-        "KUHPerdata (Burgerlijk Wetboek)"
+        "context_par_2"
       ],
-      "confidence": 0.85,
-      "assumptions": [
-        "KUHPerdata dipahami sebagai produk hukum warisan kolonial yang tidak secara komprehensif menggantikan sistem hukum yang sudah ada sebelumnya."
-      ]
+      "confidence": 1.0,
+      "assumptions": []
     },
     {
       "id": "C4",
-      "statement": "Hukum yang berlaku untuk suatu perkara (e.g., hak anak dan harta) bergantung pada faktor seperti agama, adat, pilihan para pihak, dan yurisdiksi pengadilan.",
+      "statement": "Dasar hukum pengakuan pluralisme termasuk UU No. 1 Tahun 1974 tentang Perkawinan dan yurisprudensi Mahkamah Agung.",
       "evidence": [
-        "UU No. 1 Tahun 1974 tentang Perkawinan Pasal 29",
-        "UU No. 7 Tahun 1989 tentang Peradilan Agama"
+        "context_par_2"
       ],
-      "confidence": 0.9,
-      "assumptions": [
-        "Masyarakatakat umumnya tunduk pada hukum berdasarkan identitasnya dan sengketa diselesaikan di lembaga peradilan yang sesuai."
-      ]
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C5",
+      "statement": "Aturan mengenai hak anak kandung dan harta pencaharian (gono-gini) sangat bervariasi antara KUHPerdata, hukum adat, dan hukum agama.",
+      "evidence": [
+        "context_par_3",
+        "context_par_3_A",
+        "context_par_3_B"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C6",
+      "statement": "Pluralisme dapat menimbulkan ketidakpastian hukum, dan penyelesaiannya tergantung pada hukum yang dipilih/diamalkan serta lembaga peradilan yang mengadili.",
+      "evidence": [
+        "context_par_4"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
     }
   ],
-  "uncertainties": [
-    "U1: Batas-batas konkret pengakuan 'sepanjang masih hidup dan sesuai dengan perkembangan masyarakat' dalam Pasal 18B UUD 1945 dapat berbeda penafsirannya di berbagai daerah dan kasus.",
-    "U2: Tingkat harmonisasi dan potensi konflik antar sistem hukum (KUHPerdata, Hukum Adat, Hukum Agama) dalam praktik sehari-hari di masyarakat yang sangat majemuk."
-  ],
-  "open_questions": [
-    "Q1: Bagaimana mekanisme penyelesaian konflik hukum (choice of law) yang ideal dan adil ketika para pihak dalam suatu sengketa tunduk pada sistem hukum yang berbeda?",
-    "Q2: Sejauh mana upaya unifikasi atau harmonisasi hukum nasional (khususnya hukum materiil) dapat dan harus dilakukan tanpa mengabaikan prinsip pengakuan terhadap pluralisme hukum yang menjadi ciri Indonesia?"
-  ]
+  "uncertainties": [],
+  "open_questions": []
 }

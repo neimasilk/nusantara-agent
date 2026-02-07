@@ -1,13 +1,13 @@
 {
   "round": 2,
   "agent": "ALA",
-  "answer": "Perbedaan peran mamak dalam adat Minangkabau dan hak anak dalam hukum nasional terletak pada sumber otoritas, subjek hukum, jenis harta, dan mekanisme pengelolaannya. Mamak berperan sebagai pengelola harta kolektif kaum (pusako tinggi) untuk kemenakan dalam sistem matrilineal, sementara hak anak dalam hukum nasional bersifat individual atas harta pencaharian orang tua (pusako rendah) berdasarkan hubungan darah langsung.",
+  "answer": "Peran mamak dalam adat Minangkabau berfokus pada pengelolaan harta pusaka tinggi secara kolektif untuk kesejahteraan kemenakan menurut garis ibu, sementara hak anak dalam hukum nasional bersifat individual dan terutama terkait harta pencaharian (pusako rendah) orang tuanya.",
   "claims": [
     {
       "id": "C1",
-      "statement": "Mamak dalam adat Minangkabau memiliki otoritas untuk mengelola harta pusako tinggi (harta turun-temurun kaum) secara kolektif untuk kepentingan kemenakan (anak dari saudara perempuannya).",
+      "statement": "Mamak bertanggung jawab mengelola harta kaum (pusako tinggi) yang dimiliki turun-temurun menurut garis ibu.",
       "evidence": [
-        "source_context"
+        "source_id_1"
       ],
       "confidence": 1.0,
       "assumptions": [
@@ -16,9 +16,9 @@
     },
     {
       "id": "C2",
-      "statement": "Hak anak dalam hukum nasional adalah hak individual untuk mewarisi harta pusako rendah (harta pencaharian orang tua) yang timbul dari hubungan darah langsung.",
+      "statement": "Kewajiban utama mamak adalah memelihara, membimbing, dan menjamin kesejahteraan kemenakannya (anak dari saudara perempuannya).",
       "evidence": [
-        "source_context"
+        "source_id_1"
       ],
       "confidence": 1.0,
       "assumptions": [
@@ -27,20 +27,53 @@
     },
     {
       "id": "C3",
-      "statement": "Perbedaan mendasar terletak pada sifat hak (kolektif vs individual) dan jenis harta yang diatur (pusako tinggi vs pusako rendah), masing-masing dengan mekanisme pewarisan dan pengelolaan yang berbeda.",
+      "statement": "Mamak berperan sebagai penengah, penasihat, dan pelindung dalam urusan adat bagi kemenakannya.",
       "evidence": [
-        "source_context"
+        "source_id_1"
       ],
       "confidence": 1.0,
       "assumptions": [
         "A3"
       ]
+    },
+    {
+      "id": "C4",
+      "statement": "Anak berhak mewarisi harta pencaharian orang tuanya (harta suarang/pusako rendah) yang diperoleh selama perkawinan.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A4"
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Hak anak dalam hukum nasional diatur secara individual dan universal, tanpa membedakan garis keturunan ibu atau ayah.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A5"
+      ]
+    },
+    {
+      "id": "C6",
+      "statement": "Pusako tinggi adalah harta kolektif kaum yang pada prinsipnya tidak boleh diperjualbelikan, sedangkan pusako rendah adalah harta pencaharian yang dapat diwariskan kepada anak kandung.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A6"
+      ]
     }
   ],
   "uncertainties": [
-    "U1: Batasan kondisi 'darurat' yang memungkinkan penjualan harta pusako tinggi tidak dijelaskan secara rinci dalam konteks."
+    "U1: Tidak ada ketidakpastian yang tercatat dari konteks yang diberikan."
   ],
   "open_questions": [
-    "Q1: Bagaimana hukum nasional mengakomodasi atau berinteraksi dengan sistem pengelolaan harta pusako tinggi oleh mamak dalam praktik sehari-hari di Minangkabau?"
+    "Q1: Bagaimana mekanisme konkret pengelolaan harta pusako tinggi oleh mamak dalam situasi modern?"
   ]
 }

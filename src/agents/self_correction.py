@@ -54,6 +54,9 @@ def _build_revision_prompt(
         "- Perbaiki klaim yang dikritik dengan evidence yang lebih kuat.\n"
         "- Jika kritik valid, ubah klaim / turunkan confidence.\n"
         "- Jika kritik tidak valid, jelaskan alasan singkat di assumptions.\n\n"
+        "- HANYA gunakan evidence dari CONTEXT.\n"
+        "- Maksimal 6 klaim, ringkas.\n"
+        "- Jika evidence tidak ada, pindahkan ke uncertainties.\n"
         "OUTPUT WAJIB JSON dengan skema:\n"
         "{\n"
         '  "round": 1,\n'

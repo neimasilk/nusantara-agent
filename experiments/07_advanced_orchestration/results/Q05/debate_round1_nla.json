@@ -1,63 +1,63 @@
 {
   "round": 1,
   "agent": "NLA",
-  "answer": "Syarat sah perjanjian menurut Pasal 1320 KUHPerdata ada empat, terbagi menjadi dua kelompok:\n\n1. **Syarat Subjektif** (menyangkut subjek):\n   a. **Kesepakatan** (sepakat mereka yang mengikatkan dirinya).\n   b. **Kecakapan** (kecakapan untuk membuat suatu perjanjian).\n\n2. **Syarat Objektif** (menyangkut objek):\n   c. **Objek Tertentu** (suatu hal tertentu).\n   d. **Sebab yang Halal** (suatu sebab yang halal).\n\n**Dampak jika syarat tidak terpenuhi:**\n- Jika **syarat subjektif** (a atau b) tidak terpenuhi, perjanjian bersifat **dapat dibatalkan** (*voidable*). Perjanjian tetap berlaku hingga diajukan pembatalan ke pengadilan oleh pihak yang berhak.\n- Jika **syarat objektif** (c atau d) tidak terpenuhi, perjanjian **batal demi hukum** (*void*). Perjanjian dianggap tidak pernah ada sejak awal dan tidak menimbulkan akibat hukum.\n\n**Kaitannya dengan Hak Anak Kandung & Harta Pencaharian:**\n- Hak anak kandung (seperti nafkah dan waris) dilindungi hukum. Perjanjian orang tua yang menghilangkan hak dasar anak dapat dianggap memiliki **sebab yang tidak halal** dan dapat dibatalkan.\n- Harta pencaharian dalam KUHPerdata mengikuti sistem **pemisahan harta bawaan dengan persatuan penghasilan**. Untuk menyimpang dari sistem ini, dapat dibuat **Perjanjian Kawin** (Prenuptial Agreement) sebelum nikah dengan akta notaris, yang juga harus memenuhi syarat Pasal 1320 KUHPerdata.",
+  "answer": "Syarat sah perjanjian menurut Pasal 1320 KUHPerdata ada empat: sepakat (kesepakatan), kecakapan, suatu hal tertentu (objek tertentu), dan suatu sebab yang halal (kausa halal). Dampak ketidakterpenuhannya berbeda: jika syarat subjektif (kesepakatan atau kecakapan) tidak terpenuhi, perjanjian dapat dibatalkan (voidable); jika syarat objektif (objek tertentu atau kausa halal) tidak terpenuhi, perjanjian batal demi hukum (null and void).",
   "claims": [
     {
       "id": "C1",
-      "statement": "Syarat sah perjanjian diatur secara limitatif dalam Pasal 1320 KUHPerdata, terdiri dari empat syarat yang terbagi menjadi syarat subjektif (kesepakatan dan kecakapan) dan syarat objektif (objek tertentu dan sebab yang halal).",
+      "statement": "Syarat sah perjanjian menurut Pasal 1320 KUHPerdata adalah sepakat, kecakapan, suatu hal tertentu, dan suatu sebab yang halal.",
       "evidence": [
-        "Pasal_1320_KUHPerdata"
+        "Pasal 1320 KUHPerdata"
       ],
       "confidence": 1.0,
-      "assumptions": [
-        "KUHPerdata merupakan sumber hukum perdata yang berlaku dan diakui."
-      ]
+      "assumptions": []
     },
     {
       "id": "C2",
-      "statement": "Ketidakpenuhan syarat subjektif (kesepakatan atau kecakapan) mengakibatkan perjanjian dapat dibatalkan (voidable), sementara ketidakpenuhan syarat objektif (objek tertentu atau sebab yang halal) mengakibatkan perjanjian batal demi hukum (void).",
+      "statement": "Syarat sepakat dan kecakapan merupakan syarat subjektif.",
       "evidence": [
-        "Doktrin_Hukum_Perdata_Indonesia",
-        "Yurisprudensi_terkait_Pasal_1320_KUHPerdata"
+        "Pasal 1320 KUHPerdata"
       ],
-      "confidence": 0.95,
-      "assumptions": [
-        "Pembagian konsekuensi hukum ini merupakan penafsiran yang diterima secara umum dalam doktrin dan yurisprudensi."
-      ]
+      "confidence": 1.0,
+      "assumptions": []
     },
     {
       "id": "C3",
-      "statement": "Perjanjian yang dibuat oleh orang tua yang menghilangkan hak dasar anak (seperti nafkah) dapat dibatalkan karena dianggap memiliki sebab yang tidak halal, melanggar kewajiban hukum.",
+      "statement": "Syarat suatu hal tertentu dan suatu sebab yang halal merupakan syarat objektif.",
       "evidence": [
-        "Pasal_1338_KUHPerdata",
-        "Pasal_45_UU_No_35_Tahun_2014",
-        "Yurisprudensi_terkait_hak_anak"
+        "Pasal 1320 KUHPerdata"
       ],
-      "confidence": 0.9,
-      "assumptions": [
-        "Hak dasar anak untuk mendapat nafkah merupakan kewajiban hukum orang tua yang tidak dapat dikesampingkan secara sepihak."
-      ]
+      "confidence": 1.0,
+      "assumptions": []
     },
     {
       "id": "C4",
-      "statement": "Aturan default harta dalam perkawinan menurut KUHPerdata adalah pemisahan harta bawaan dengan persatuan penghasilan, dan untuk menyimpanginya dapat dibuat Perjanjian Kawin (prenuptial agreement) sebelum nikah dengan akta notaris.",
+      "statement": "Jika syarat subjektif tidak terpenuhi, perjanjian dapat dibatalkan (voidable).",
       "evidence": [
-        "Pasal_119_KUHPerdata",
-        "Pasal_128_KUHPerdata",
-        "Pasal_139_KUHPerdata"
+        "Pasal 1320 KUHPerdata"
       ],
       "confidence": 1.0,
-      "assumptions": [
-        "Tidak ada perubahan atau pengaturan khusus lain yang berlaku bagi para pihak."
-      ]
+      "assumptions": []
+    },
+    {
+      "id": "C5",
+      "statement": "Jika syarat objektif tidak terpenuhi, perjanjian batal demi hukum (null and void).",
+      "evidence": [
+        "Pasal 1320 KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C6",
+      "statement": "Anak di bawah umur termasuk dalam golongan yang tidak cakap menurut hukum untuk membuat perjanjian.",
+      "evidence": [
+        "Pasal 1330 KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
     }
   ],
-  "uncertainties": [
-    "U1: Batasan dan interpretasi 'sebab yang halal' dapat berkembang seiring putusan pengadilan dan nilai sosial, terutama terkait perjanjian dalam konteks keluarga."
-  ],
-  "open_questions": [
-    "Q1: Bagaimana praktik dan penafsiran pengadilan mengenai 'sebab yang halal' dalam perjanjian-perjanjian keluarga kontemporer yang kompleks?",
-    "Q2: Apa saja implikasi prosedural dan pembuktian yang spesifik ketika mengajukan pembatalan perjanjian berdasarkan cacat kesepakatan (seperti paksaan atau penipuan) dalam sengketa keluarga?"
-  ]
+  "uncertainties": [],
+  "open_questions": []
 }

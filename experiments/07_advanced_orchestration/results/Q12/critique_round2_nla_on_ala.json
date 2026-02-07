@@ -5,27 +5,27 @@
   "critiques": [
     {
       "id": "K1",
-      "target_claim_id": "C2",
+      "target_claim_id": "C1",
       "issue_type": "evidence_gap",
-      "description": "Klaim bahwa pluralisme hukum terjadi karena 'pengakuan konstitusional (UUD 1945 mengakui masyarakat hukum adat)' tidak didukung oleh bukti yang spesifik dalam sumber konteks yang diberikan. Sumber hanya menyebut 'faktor sejarah' dan 'realitas sosio-kultural', tanpa kutipan langsung atau rujukan pada pasal konstitusi tertentu.",
+      "description": "Klaim C1 menyatakan pluralisme hukum terjadi karena pengakuan negara terhadap keragaman suku dan agama, dengan merujuk pada context_paragraph_1 dan context_paragraph_2. Namun, kedua paragraf tersebut hanya menjelaskan definisi dan contoh pluralisme hukum, bukan secara eksplisit menyatakan bahwa penyebabnya adalah pengakuan negara terhadap keragaman suku dan agama. Tidak ada kutipan langsung atau bukti yang menunjukkan pernyataan kausal tersebut berasal dari konteks yang diberikan.",
       "severity": "MAJOR",
-      "suggested_fix": "Perjelas bukti untuk aspek konstitusional. Jika tidak ada dalam sumber, nyatakan sebagai asumsi atau hapus dari klaim. Atau, rujuk pasal spesifik UUD 1945 (seperti Pasal 18B ayat 2) sebagai bukti tambahan yang relevan."
+      "suggested_fix": "Klaim sebaiknya direvisi untuk mencerminkan apa yang sebenarnya dijelaskan dalam konteks, misalnya: 'Pluralisme hukum di Indonesia ditandai oleh keberlakuan hukum nasional, agama, dan adat secara berdampingan.' Atau, tambahkan referensi ke sumber lain yang secara eksplisit membahas penyebab pengakuan negara."
     },
     {
       "id": "K2",
-      "target_claim_id": "C3",
+      "target_claim_id": "C5",
       "issue_type": "overclaim",
-      "description": "Klaim menyatakan 'Harta Pusako Rendah dapat diatur oleh hukum agama atau kesepakatan keluarga, yang juga diakui oleh hukum nasional.' Namun, sumber konteks hanya menyebutkan 'Harta Pusako Rendah... lebih fleksibel dan dapat diatur berdasarkan hukum Islam' dan 'dapat menjadi objek sengketa antara kemenakan dan anak kandung'. Tidak ada pernyataan eksplisit bahwa hukum nasional mengakui pengaturan berdasarkan hukum agama atau kesepakatan keluarga untuk harta ini.",
+      "description": "Klaim C5 menyatakan 'Hak kemenakan terhadap Harta Pusako Rendah sangat lemah atau tidak ada secara hukum formal.' Pernyataan 'tidak ada secara hukum formal' adalah overclaim. Konteks (context_section_2) menjelaskan bahwa hak kemenakan terhadap Harta Pusako Rendah 'sangat lemah' dan 'hampir tidak ada', tetapi ini adalah penjelasan dalam konteks hukum adat dan praktik sosial. Tidak ada bukti dalam konteks yang diberikan bahwa hukum nasional formal (seperti UU) secara tegas menyatakan hak kemenakan 'tidak ada'. Klaim ini menggeneralisasi penjelasan kontekstual menjadi pernyataan absolut tentang status hukum formal.",
       "severity": "MAJOR",
-      "suggested_fix": "Reformulasi klaim untuk mencerminkan apa yang benar-benar ada dalam sumber: bahwa Harta Pusako Rendah menjadi arena fleksibilitas dan potensi konflik antar sistem, tanpa menyimpulkan pengakuan formal oleh hukum nasional. Atau, tambahkan bukti dari luar sumber yang mendukung pengakuan tersebut."
+      "suggested_fix": "Revisi klaim untuk lebih akurat mencerminkan penjelasan dalam konteks, misalnya: 'Dalam konteks Harta Pusako Rendah, hak waris kemenakan menurut hukum adat sangat lemah dan hampir tidak diakui, sehingga hak anak kandung dan pasangan lebih dominan.' Hapus frasa 'tidak ada secara hukum formal'."
     },
     {
       "id": "K3",
-      "target_claim_id": "C4",
+      "target_claim_id": "C6",
       "issue_type": "logic_gap",
-      "description": "Klaim menyimpulkan bahwa mekanisme harmonisasi seperti musyawarah telah dikembangkan oleh masyarakat adat untuk menyelesaikan konflik. Namun, sumber konteks yang dirujuk ('titik_tegangan') justru menggambarkan potensi konflik yang 'seringkali memunculkan ketegangan' dan 'menjadi sumber sengketa'. Sumber 'kesimpulan_netral' menyebut 'harmonisasi' sebagai bagian dari fenomena, tetapi tidak secara eksplisit menghubungkannya dengan mekanisme yang telah berhasil dikembangkan oleh masyarakat.",
-      "severity": "MAJOR",
-      "suggested_fix": "Reformulasi klaim untuk lebih akurat mencerminkan konten sumber: bahwa meskipun ada upaya harmonisasi (musyawarah), pluralisme juga menciptakan titik tegangan dan sengketa yang nyata. Atau, cari bukti spesifik dalam sumber tentang keberhasilan mekanisme musyawarah dalam menyelesaikan konflik antar norma."
+      "description": "Klaim C6 menyimpulkan bahwa 'Ahli waris utama Harta Pusako Rendah adalah anak kandung dan pasangan hidup.' Namun, konteks (context_section_2) tidak secara eksplisit mendaftar 'ahli waris utama'. Konteks menjelaskan bahwa Harta Pusako Rendah tunduk pada hukum waris Islam (faraidh) dan hukum nasional, yang kemudian memberikan hak waris kepada anak dan pasangan. Kesimpulan bahwa mereka adalah 'ahli waris utama' adalah inferensi logis dari penjelasan tersebut, tetapi tidak secara langsung dinyatakan dalam bukti yang dirujuk. Ada jeda antara bukti ('diatur oleh faraidh dan hukum nasional') dengan klaim ('ahli waris utama adalah...').",
+      "severity": "MINOR",
+      "suggested_fix": "Perkuat klaim dengan menghubungkannya lebih langsung ke bukti, atau rephrase untuk lebih mencerminkan inferensi: 'Karena Harta Pusako Rendah sering diatur oleh hukum waris Islam (faraidh) dan hukum nasional, maka anak kandung dan pasangan hidup umumnya menjadi penerima hak waris yang dominan.'"
     }
   ]
 }

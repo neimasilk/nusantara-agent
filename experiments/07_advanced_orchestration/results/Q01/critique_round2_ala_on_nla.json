@@ -5,27 +5,35 @@
   "critiques": [
     {
       "id": "K1",
-      "target_claim_id": "C3",
+      "target_claim_id": "C1",
       "issue_type": "evidence_gap",
-      "description": "NLA mengutip Pasal 852a KUHPerdata (SEMA No. 3/1963) sebagai dasar pembagian 1/4 untuk istri dan sisanya untuk anak. Namun, SEMA No. 3/1963 hanya mengatur pembagian warisan antara janda/duda dengan anak-anak dari perkawinan yang sama, tanpa menyebutkan pembagian harta bersama terlebih dahulu. NLA tidak menyebutkan dasar hukum untuk tahap pemisahan harta bersama yang menjadi prasyarat sebelum pembagian warisan.",
+      "description": "Klaim 'Harta bersama perkawinan dibagi dua, ½ untuk istri dan ½ masuk ke harta warisan pewaris' tidak didukung oleh referensi spesifik ke pasal KUHPerdata dalam evidence. Meskipun benar sebagai prinsip, jawaban NLA gagal mengutip Pasal 119 BW yang mengatur pemisahan harta bersama sebelum pembagian warisan, sehingga menciptakan kesan bahwa ini adalah asumsi tanpa dasar hukum eksplisit.",
       "severity": "MAJOR",
-      "suggested_fix": "Tambahkan rujukan ke Pasal 119 KUHPerdata untuk pemisahan harta bersama dan jelaskan bahwa SEMA No. 3/1963 hanya berlaku untuk pembagian harta warisan setelah pemisahan tersebut."
+      "suggested_fix": "Sebutkan Pasal 119 KUHPerdata (BW) sebagai dasar hukum untuk pemisahan harta bersama menjadi bagian masing-masing suami dan istri sebelum pewarisan."
     },
     {
       "id": "K2",
-      "target_claim_id": "C2",
-      "issue_type": "logic_gap",
-      "description": "NLA menyatakan bahwa harta warisan terdiri dari 'bagian suami dari harta bersama plus harta pribadinya', tetapi dalam ilustrasi perhitungan hanya menggunakan contoh harta bersama Rp1 M tanpa mempertimbangkan kemungkinan adanya harta pribadi. Hal ini menciptakan kesan bahwa semua harta adalah harta bersama, padahal dalam klaim disebutkan adanya kemungkinan harta pribadi.",
-      "severity": "MINOR",
-      "suggested_fix": "Perjelas dalam ilustrasi bahwa contoh hanya untuk harta bersama, dan jika ada harta pribadi, perhitungan akan berbeda. Atau berikan contoh terpisah untuk harta pribadi."
+      "target_claim_id": "C3",
+      "issue_type": "overclaim",
+      "description": "Klaim 'Istri dan dua anak adalah ahli waris berdasarkan Pasal 852a BW' adalah overclaim. Pasal 852a BW mengatur bagian warisan untuk suami/istri yang hidup terlama beserta anak-anak, tetapi tidak secara eksklusif mendefinisikan siapa ahli warisnya. Status ahli waris istri dan anak ditentukan lebih dahulu oleh Pasal 832 BW (golongan waris). NLA menggabungkan dua konsep berbeda (status ahli waris dan besaran bagian) menjadi satu klaim yang menyesatkan.",
+      "severity": "MAJOR",
+      "suggested_fix": "Pisahkan klaim: (1) Istri dan anak adalah ahli waris berdasarkan Pasal 832 BW (golongan I). (2) Besaran bagian mereka diatur menurut Pasal 852a BW."
     },
     {
       "id": "K3",
-      "target_claim_id": "C1",
-      "issue_type": "domain_mismatch",
-      "description": "NLA mengandalkan Pasal 119 KUHPerdata untuk pemisahan harta bersama, namun tidak menyebutkan bahwa ketentuan ini berlaku berdasarkan sistem hukum yang dianut (persatuan harta sebagai dasar). Dalam praktik, sistem pembagian harta bisa berbeda berdasarkan perkawinan (dengan perjanjian kawin atau tanpa). Asumsi bahwa semua harta adalah harta bersama mungkin tidak selalu benar.",
+      "target_claim_id": "C4",
+      "issue_type": "logic_gap",
+      "description": "Klaim 'Bagian warisan untuk istri adalah ⅓ dari harta warisan' mengandung logic gap karena tidak menjelaskan kondisi penerapannya. Pasal 852a BW menyebut bagian ⅓ untuk suami/istri yang hidup terlama hanya jika pewaris meninggalkan keturunan (anak). Jika tidak ada keturunan, bagiannya berbeda. NLA menyajikan ⅓ sebagai kebenaran mutlak tanpa menyebutkan syarat 'jika ada anak', sehingga berisiko menyesatkan jika diterapkan pada kasus tanpa anak.",
+      "severity": "CRITICAL",
+      "suggested_fix": "Kualifikasi klaim dengan menambahkan syarat: 'Bagian warisan untuk istri adalah ⅓ dari harta warisan, sebagaimana diatur Pasal 852a BW, apabila pewaris meninggalkan keturunan (anak).'"
+    },
+    {
+      "id": "K4",
+      "target_claim_id": "C6",
+      "issue_type": "overclaim",
+      "description": "Klaim 'Bagian ⅔ untuk anak merupakan bagian mutlak (legitieme portie) menurut KUHPerdata' adalah overclaim. Istilah 'bagian mutlak' lebih tepat merujuk pada legitieme portie (bagian wajib) yang diatur dalam Pasal 913 BW, yang besarnya setengah dari bagian menurut undang-undang jika ada wasiat. NLA menggunakan terminologi yang ambigu dan tidak tepat karena dalam pembagian ab intestato (tanpa wasiat) menurut Pasal 852a, bagian ⅔ untuk anak adalah bagian menurut undang-undang, bukan 'bagian mutlak' dalam konteks wasiat.",
       "severity": "MAJOR",
-      "suggested_fix": "Sebutkan bahwa analisis ini berdasarkan asumsi tidak ada perjanjian kawin dan semua harta diperoleh selama perkawinan. Jika ada perjanjian kawin atau harta bawaan, pembagian akan mengikuti ketentuan yang berbeda."
+      "suggested_fix": "Ganti klaim dengan: 'Bagian ⅔ untuk anak merupakan bagian menurut undang-undang (Pasal 852a BW). Bagian ini dapat menjadi dasar perhitungan legitieme portie (bagian wajib) jika ada wasiat, sebagaimana diatur dalam Pasal 913 BW.'"
     }
   ]
 }

@@ -1,13 +1,24 @@
 {
   "round": 1,
   "agent": "ALA",
-  "answer": "Berdasarkan adat Minangkabau, ketika seorang mamak meninggal, hak atas Pusako Tinggi (harta warisan turun-temurun) tidak berpindah kepada ahli waris pribadinya (seperti istri atau anak kandung). Pusako Tinggi tetap menjadi milik kolektif kaum (klan matrilineal). Yang berhak melanjutkan kepemilikan dan pengelolaannya adalah kemenakan (anak dari saudara perempuan almarhum) dalam kaum yang sama, dengan otoritas pengelolaan beralih kepada mamak kepala waris berikutnya.",
+  "answer": "Ketika seorang mamak meninggal, Harta Pusako Tinggi tetap menjadi milik kolektif kaum (garis keturunan ibu). Yang berhak penuh adalah anggota perempuan dalam kaum, dan otoritas pengelolaannya beralih kepada Mamak Kepala Waris berikutnya yang ditunjuk menurut adat.",
   "claims": [
     {
       "id": "C1",
-      "statement": "Pusako Tinggi adalah harta warisan turun-temurun yang dimiliki secara kolektif oleh kaum (klan matrilineal).",
+      "statement": "Harta Pusako Tinggi adalah milik kolektif kaum (garis keturunan ibu) dan bukan milik pribadi mamak.",
       "evidence": [
-        "source_context_1"
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A1: 'source_id_1' merujuk pada keseluruhan CONTEXT yang diberikan."
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Yang berhak penuh atas Harta Pusako Tinggi adalah anggota perempuan dalam kaum (seperti saudara perempuan almarhum mamak, anak-anak perempuannya, dan kemenakan perempuan dari garis ibu).",
+      "evidence": [
+        "source_id_1"
       ],
       "confidence": 1.0,
       "assumptions": [
@@ -15,43 +26,54 @@
       ]
     },
     {
-      "id": "C2",
-      "statement": "Ketika seorang mamak meninggal, Pusako Tinggi tidak menjadi hak pribadi ahli waris pribadinya (istri/anak kandung).",
-      "evidence": [
-        "source_context_1"
-      ],
-      "confidence": 1.0,
-      "assumptions": [
-        "A2"
-      ]
-    },
-    {
       "id": "C3",
-      "statement": "Yang berhak melanjutkan kepemilikan dan pengelolaan Pusako Tinggi adalah kemenakan (anak dari saudara perempuannya) dalam kaum yang sama.",
+      "statement": "Otoritas pengelolaan Harta Pusako Tinggi beralih kepada Mamak Kepala Waris berikutnya dalam kaum yang ditunjuk menurut adat.",
       "evidence": [
-        "source_context_1"
+        "source_id_1"
       ],
       "confidence": 1.0,
       "assumptions": [
-        "A3"
+        "A1"
       ]
     },
     {
       "id": "C4",
-      "statement": "Otoritas pengelolaan Pusako Tinggi beralih kepada mamak kepala waris berikutnya dalam kaum.",
+      "statement": "Harta Pusako Tinggi diwariskan secara matrilineal (mengikuti garis ibu) dari generasi ke generasi dalam satu kaum.",
       "evidence": [
-        "source_context_1"
+        "source_id_1"
       ],
       "confidence": 1.0,
       "assumptions": [
-        "A4"
+        "A1"
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Harta Pusako Tinggi tidak boleh diperjualbelikan, kecuali dalam kondisi darurat yang ketat dan disepakati seluruh kaum.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A1"
+      ]
+    },
+    {
+      "id": "C6",
+      "statement": "Seorang mamak berposisi sebagai pengelola (wali harta) Pusako Tinggi untuk kemenakannya, bukan pemilik mutlak.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A1"
       ]
     }
   ],
   "uncertainties": [
-    "U1: Tidak ada ketidakpastian signifikan dalam konteks yang diberikan, karena penjelasan bersifat umum dan normatif."
+    "Tidak ada ketidakpastian karena semua klaim didukung penuh oleh CONTEXT."
   ],
   "open_questions": [
-    "Q1: Bagaimana mekanisme penyelesaian sengketa jika terjadi perselisihan antar kemenakan atau antara kemenakan dengan ahli waris pribadi mamak terkait pengelolaan Pusako Tinggi?"
+    "Bagaimana mekanisme formal penunjukan Mamak Kepala Waris berikutnya jika tidak ada kesepakatan dalam kaum?"
   ]
 }

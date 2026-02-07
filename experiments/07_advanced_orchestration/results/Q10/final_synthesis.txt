@@ -1,34 +1,9 @@
-### **Jawaban Final: Mekanisme Penyelesaian Konflik Hak Waris dalam Pluralisme Hukum**
+Mekanisme penyelesaian bersifat berjenjang dan membedakan jenis harta.
 
-Konflik ini merupakan benturan klasik antara **hukum nasional (state law)** yang menganut asas bilateral dan menjamin hak waris anak, dengan **hukum adat (customary law)** matrilineal (seperti di Minangkabau) yang menempatkan hak waris pada garis ibu (kemenakan). Mekanisme penyelesaiannya tidak bersifat "kalah-menang", tetapi melalui **diferensiasi objek (harta)** dan **hirarki forum**.
+**Konflik & Trade-off:**
+Hukum nasional (UU Perkawinan, UU Perlindungan Anak) mengakui hak anak, sementara hukum adat matrilineal Minangkabau menempatkan hak waris utama pada kemenakan (garis perempuan). Terjadi tarik-menarik antara kepentingan terbaik anak (nasional) dengan kelestarian sistem komunal adat (lokal).
 
----
-
-### **Mekanisme Penyelesaian**
-
-1.  **Identifikasi dan Pemisahan Jenis Harta**:
-    *   **Harta Pusaka Tinggi/Pusako Tinggi**: Harta komunal turun-temurun dalam garis matrilineal (kaum/suku). Hukum nasional umumnya **menghormati dan mengakui** keabsahan pengaturan harta ini oleh hukum adat. Hak waris anak kandung (dari garis ayah) tidak berlaku di sini; yang berhak adalah kemenakan (anggota kaum).
-    *   **Harta Pencaharian/Pusako Rendah**: Harta yang diperoleh orang tua selama perkawinan. Harta ini tunduk pada **hukum nasional** (KUHPerdata/UU Perkawinan) dan hukum Islam (bagi yang Muslim). Setelah dibagi sebagai harta bersama, bagian almarhum/almh diwariskan kepada anak kandung sebagai ahli waris.
-
-2.  **Langkah Penyelesaian Sengketa**:
-    *   **Musyawarah Adat dan Keluarga (Sapakat)**: Merupakan **forum pertama dan utama**. Dipimpin Ninik Mamak dengan melibatkan Alim Ulama, terutama untuk Harta Pencaharian. Tujuannya mencapai mufakat yang mengakomodasi kepentingan anak, kesepakatan keluarga, dan prinsip agama.
-    *   **Intervensi Pengadilan Negeri/Agama**: Jika musyawarah gagal, atau hak dasar anak (misalnya, hingga menyebabkan keterlantaran) dilanggar oleh keputusan adat, pengadilan adalah forum final. Pengadilan akan:
-        *   Menegakkan hukum nasional untuk **Harta Pencaharian** guna melindungi hak anak.
-        *   Menghormati pengaturan adat untuk **Harta Pusaka Tinggi**, sepanjang tidak secara nyata bertentangan dengan prinsip-prinsip hukum dasar atau HAM.
-        *   Berwenang membatalkan atau menyesuaikan keputusan adat yang dinilai melanggar ketentuan undang-undang yang bersifat memaksa (*ius cogens*), seperti UU Perlindungan Anak.
-
----
-
-### **Trade-off dan Analisis Pluralistik**
-
-*   **Trade-off**: Pilihan antara **kepastian hukum dan hak individual** (yang dijamin negara) versus **kelestarian budaya, kohesi sosial, dan otonomi masyarakat adat**. Memaksakan hukum nasional secara penuh dapat merusak struktur sosial matrilineal. Sebaliknya, penerapan adat secara kaku dapat mengabaikan hak anak yang diakui secara konstitusional.
-*   **Keputusan Pluralistik**: Sistem ini tidak memilih salah satu secara mutlak, tetapi **membuat kompromi berbasis konteks**. Mekanisme diferensiasi harta adalah bentuk "pluralisme hukum kooperatif", di mana negara dan masyarakat adat memiliki yurisdiksi yang berbeda berdasarkan sifat objek sengketa. **Hak anak dilindungi secara penuh dalam domain harta pencaharian (milik negara), tetapi dibatasi dalam domain harta pusaka (milik masyarakat adat)**.
-
-### **Kesimpulan**
-
-Mekanisme penyelesaiannya bersifat **bertingkat dan selektif**:
-1.  Awali dengan **musyawarah adat**.
-2.  Pisahkan **harta secara hukum** (pusaka vs. pencaharian).
-3.  Gunakan **forum pengadilan** sebagai pengakhir, yang akan menerapkan hukum nasional secara dominan untuk harta pencaharian guna melindungi hak anak, sambil tetap memberikan pengakuan (*recognition*) terhadap hukum adat untuk harta pusaka komunal.
-
-Dengan demikian, penyelesaian konflik ini mencerminkan **pluralisme hukum praktis** Indonesia, di mana kepentingan negara, masyarakat adat, dan individu (anak) diakomodasi melalui pembagian ranah kewenangan yang jelas.
+**Mekanisme Pluralistik:**
+1. **Penyelesaian Adat Primer:** Semua pihak wajib menyelesaikan sengketa lewat musyawarah dalam **kerapatan adat** (ninik mamak, alim ulama) untuk mencapai mufakat, terutama untuk harta pencaharian (*pusako rendah*). Harta komunal (*pusako tinggi*) tunduk mutlak pada aturan matrilineal.
+2. **Jalur Pengadilan:** Jika musyawarah adat gagal, sengketa dapat diajukan ke pengadilan. Hakim wajib mendahulukan dan meneliti hukum adat setempat (Pasal 5 UU Kekuasaan Kehakiman) sebagai hukum yang hidup.
+3. **Keputusan Hakim:** Hakim akan berpedoman pada hukum adat matrilineal, namun dapat melakukan modifikasi (misalnya, memberikan bagian dari harta pencaharian untuk anak) dengan pertimbangan **kepentingan terbaik anak** sebagai prinsip pengubah (*modifying factor*). Solusi terbaik adalah mendorong **kesepakatan keluarga tertulis** yang diakui secara adat dan hukum.

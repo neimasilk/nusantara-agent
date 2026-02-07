@@ -1,54 +1,80 @@
 {
   "round": 2,
   "agent": "NLA",
-  "answer": "Kasus ini menyangkut konflik antara hukum waris KUHPerdata (yang mengutamakan anak kandung) dan hukum adat Minangkabau (yang mengutamakan kemenakan dalam sistem matrilineal) atas harta pusako rendah. Penyikapan harus didasarkan pada hierarki dan asas hukum nasional Indonesia. Berdasarkan Pasal 131 IS dan yurisprudensi Mahkamah Agung (seperti Putusan No. 179 K/Sip/1961), hukum adat adalah hukum utama bagi masyarakat yang masih mempertahankannya. Oleh karena itu, langkah pertama adalah mengidentifikasi status pewaris: apakah ia masih terikat dengan masyarakat hukum adat Minangkabau atau telah meninggalkannya. Selanjutnya, perlu diklasifikasi jenis hartanya: apakah benar-benar harta pusako rendah (tunduk pada hukum adat) atau harta pencaharian/gono-gini (tunduk pada UU No. 1/1974 tentang Perkawinan). Jika pewaris masih terikat adat dan harta tersebut adalah pusako rendah, maka hukum adat berlaku dan kemenakan berhak. Jika pewaris telah meninggalkan adat, KUHPerdata dapat diterapkan. Penyelesaian terbaik diawali dengan mediasi melibatkan ninik mamak, dan jika gagal, dapat diajukan ke pengadilan yang akan memutus berdasarkan pembuktian atas dua aspek tersebut.",
+  "answer": "Harta pencaharian (pusako rendah) tunduk pada UU Perkawinan 1974 sebagai hukum nasional, sehingga anak kandung adalah ahli waris utama. Kemenakan tidak berhak atas harta pencaharian kecuali dapat dibuktikan sebagai harta pusako tinggi atau ada perjanjian khusus. Penyelesaian prioritas melalui musyawarah dengan pedoman UU, dan jika gagal, Pengadilan akan memutus berdasarkan UU Perkawinan 1974.",
   "claims": [
     {
       "id": "C1",
-      "statement": "Hukum adat adalah hukum utama bagi masyarakat yang masih mempertahankannya, berdasarkan Pasal 131 IS dan yurisprudensi Mahkamah Agung (Putusan No. 179 K/Sip/1961).",
+      "statement": "Harta pencaharian (harta bersama) diatur secara nasional oleh Pasal 35 UU Perkawinan 1974 yang mengikat semua warga negara, termasuk masyarakat Minangkabau.",
       "evidence": [
-        "Pasal_131_IS",
-        "MA_179_K_Sip_1961"
+        "Pasal 35 UU Perkawinan 1974"
       ],
-      "confidence": 0.95,
+      "confidence": 1.0,
       "assumptions": [
-        "Pasal 131 IS masih diakui dalam sistem hukum Indonesia",
-        "Putusan MA tersebut masih relevan dan berlaku"
+        "Harta yang disengketakan adalah harta pencaharian/pusako rendah"
       ]
     },
     {
       "id": "C2",
-      "statement": "Penyelesaian kasus bergantung pada identifikasi status pewaris (terikat atau tidak dengan hukum adat Minangkabau) dan klasifikasi jenis harta (pusako rendah atau pencaharian).",
+      "statement": "Berdasarkan Pasal 37 UU Perkawinan 1974, bila perkawinan putus karena kematian, separuh harta bersama menjadi hak pasangan yang hidup lebih lama dan separuh lagi menjadi harta warisan.",
       "evidence": [
-        "MA_396_K_Pdt_1983",
-        "UU_1_1974_Pasal_35"
+        "Pasal 37 UU Perkawinan 1974"
       ],
-      "confidence": 0.9,
+      "confidence": 1.0,
       "assumptions": [
-        "Pembuktian status dan jenis harta dapat dilakukan secara faktual",
-        "Tidak ada perubahan hukum yang mendasar pasca putusan MA tersebut"
+        "Perkawinan putus karena kematian salah satu pihak"
       ]
     },
     {
       "id": "C3",
-      "statement": "Untuk harta pusako rendah, hukum adat Minangkabau (sistem matrilineal) memberikan hak waris kepada kemenakan, bukan anak kandung.",
+      "statement": "Anak kandung adalah ahli waris utama dari harta warisan (separuh harta pencaharian) berdasarkan KUHPerdata (non-Muslim) atau Kompilasi Hukum Islam (Muslim).",
       "evidence": [
-        "Doktrin_Hukum_Adat_Minangkabau",
-        "MA_179_K_Sip_1961"
+        "KUHPerdata Pasal 852",
+        "Kompilasi Hukum Islam Pasal 176"
       ],
-      "confidence": 0.85,
+      "confidence": 1.0,
       "assumptions": [
-        "Harta yang disengketakan memang memenuhi definisi 'pusako rendah' menurut adat",
-        "Masyarakat setempat masih mengakui dan menjalankan sistem tersebut"
+        "Pewaris adalah orang tua kandung dari anak tersebut"
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Kemenakan dalam sistem adat Minangkabau bukan ahli waris menurut UU Perkawinan, KUHPerdata, atau KHI untuk harta pencaharian.",
+      "evidence": [
+        "Analisis hierarki hukum dan asas personalitas"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "Klaim kemenakan hanya berdasarkan hukum adat matrilineal"
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Pengadilan harus mendahulukan UU Perkawinan 1974 dalam menyelesaikan sengketa harta pencaharian.",
+      "evidence": [
+        "Asas lex specialis derogat legi generali dan perkembangan hukum nasional"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "Tidak ada peraturan yang lebih baru yang mengesampingkan UU Perkawinan 1974"
+      ]
+    },
+    {
+      "id": "C6",
+      "statement": "Hukum adat dapat dipertimbangkan sebagai kearifan lokal tetapi tidak boleh mengesampingkan hak anak kandung berdasarkan undang-undang.",
+      "evidence": [
+        "Pasal 2 Aturan Peralihan UUD 1945 dan yurisprudensi MA"
+      ],
+      "confidence": 0.8,
+      "assumptions": [
+        "Hukum adat yang diajukan bertentangan dengan ketentuan UU"
       ]
     }
   ],
   "uncertainties": [
-    "U1: Batasan 'meninggalkan lingkungan hukum adat' tidak didefinisikan secara tegas dalam peraturan tertulis, sehingga interpretasi dapat bervariasi.",
-    "U2: Dalam praktik, pengadilan mungkin menerapkan pendekatan progresif yang mempertimbangkan keadilan substantif, termasuk kebutuhan anak kandung, meski untuk harta pusako."
+    "U1: Apakah ada percampuran atau bukti bahwa harta tersebut sebenarnya adalah harta pusako tinggi (warisan matrilineal) dan bukan murni harta pencaharian?"
   ],
   "open_questions": [
-    "Q1: Bagaimana mekanisme pembuktian yang efektif untuk menentukan bahwa seseorang telah 'meninggalkan' hukum adat Minangkabau?",
-    "Q2: Apakah terdapat perkembangan yurisprudensi terbaru Mahkamah Agung yang mengimbangi hak anak kandung dalam kasus waris adat Minangkabau tanpa mengabaikan sistem matrilineal?"
+    "Q1: Apakah pernah ada perjanjian atau penghibahan khusus dari almarhum/almarhumah kepada kemenakan terkait harta tersebut?"
   ]
 }

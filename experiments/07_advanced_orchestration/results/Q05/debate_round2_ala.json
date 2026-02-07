@@ -1,57 +1,79 @@
 {
   "round": 2,
   "agent": "ALA",
-  "answer": "Pertanyaan Anda mengacu pada hukum nasional (KUHPerdata). Berdasarkan Pasal 1320 KUHPerdata, syarat sah suatu perjanjian ada empat:\n1. **Kesepakatan para pihak** yang bebas (tidak ada paksaan, kekeliruan, atau penipuan).\n2. **Kecakapan bertindak** para pihak (cakap hukum, misalnya sudah dewasa dan sehat akal).\n3. **Objek tertentu**, yaitu hal yang diperjanjikan harus jelas atau dapat ditentukan.\n4. **Sebab (kausa) yang halal**, yaitu isi perjanjian tidak boleh bertentangan dengan undang-undang, ketertiban umum, atau kesusilaan.\n\n**Dampak jika syarat tidak terpenuhi:**\n- Jika syarat **nomor 1 atau 2** tidak terpenuhi, perjanjian bersifat **dapat dibatalkan** (voidable). Artinya, hanya pihak yang dirugikan (misalnya pihak yang tidak cakap atau berada di bawah paksaan) yang dapat meminta pembatalan perjanjian ke pengadilan.\n- Jika syarat **nomor 3 atau 4** tidak terpenuhi, perjanjian **batal demi hukum** (null and void) sejak awal. Perjanjian dianggap tidak pernah ada dan tidak menimbulkan akibat hukum.\n\n**Catatan dari Perspektif Adat:** Sebagai Adat Law Agent, saya perlu menegaskan bahwa dalam konteks masyarakat adat Minangkabau, khususnya untuk perjanjian yang melibatkan harta pusako (seperti harta ulayat kaum), syarat sah menurut KUHPerdata ini harus berjalan beriringan dengan syarat-syarat adat. Misalnya, kesepakatan harus melibatkan persetujuan dari mamak kepala waris dan ninik mamak, serta objek perjanjian tidak boleh melanggar larangan adat (seperti larangan menjual harta pusako tinggi). Ketidakpenuhan syarat adat dapat menyebabkan perjanjian dianggap tidak sah atau menimbulkan sengketa dalam komunitas adat, terlepas dari pemenuhan syarat KUHPerdata.",
+  "answer": "Syarat sah perjanjian menurut KUHPerdata, dalam perspektif adat Minangkabau, mencakup kesepakatan tanpa paksaan, kecakapan para pihak, objek tertentu, dan kausa yang halal (tidak bertentangan dengan adat, agama, atau hukum). Jika syarat tidak terpenuhi, perjanjian dianggap tidak sah menurut adat dan dapat dibatalkan oleh Mamak Kepala Waris dan ninik mamak, terutama jika melibatkan Harta Pusako Tinggi yang berakibat pada sanksi adat.",
   "claims": [
     {
       "id": "C1",
-      "statement": "Syarat sah perjanjian menurut KUHPerdata diatur dalam Pasal 1320, meliputi kesepakatan, kecakapan, objek tertentu, dan sebab yang halal.",
+      "statement": "Syarat sah perjanjian dalam adat Minangkabau mencakup kesepakatan tanpa paksaan.",
       "evidence": [
-        "KUHPerdata_Pasal_1320"
+        "CONTEXT: 'Kesepakatan para pihak – harus ada kata sepakat tanpa paksaan.'"
       ],
       "confidence": 1.0,
       "assumptions": [
-        "Pertanyaan merujuk pada hukum perdata nasional Indonesia."
+        "Prinsip ini sejalan dengan KUHPerdata."
       ]
     },
     {
       "id": "C2",
-      "statement": "Jika syarat kesepakatan atau kecakapan tidak terpenuhi, perjanjian dapat dibatalkan (voidable).",
+      "statement": "Syarat sah perjanjian dalam adat Minangkabau mencakup kecakapan para pihak.",
       "evidence": [
-        "Doktrin_hukum_perdata_Indonesia"
+        "CONTEXT: 'Kecakapan para pihak – pihak yang membuat perjanjian harus sudah dewasa dan berakal sehat.'"
       ],
-      "confidence": 0.9,
+      "confidence": 1.0,
       "assumptions": [
-        "Penafsiran hukum sesuai doktrin yang berlaku umum."
+        "Prinsip ini sejalan dengan KUHPerdata."
       ]
     },
     {
       "id": "C3",
-      "statement": "Jika syarat objek tertentu atau sebab yang halal tidak terpenuhi, perjanjian batal demi hukum (null and void).",
+      "statement": "Syarat sah perjanjian dalam adat Minangkabau mencakup objek tertentu.",
       "evidence": [
-        "Doktrin_hukum_perdata_Indonesia"
+        "CONTEXT: 'Objek tertentu – hal yang diperjanjikan harus jelas.'"
       ],
-      "confidence": 0.9,
+      "confidence": 1.0,
       "assumptions": [
-        "Penafsiran hukum sesuai doktrin yang berlaku umum."
+        "Prinsip ini sejalan dengan KUHPerdata."
       ]
     },
     {
       "id": "C4",
-      "statement": "Dalam konteks adat Minangkabau, perjanjian terkait harta pusako harus memenuhi syarat adat (seperti persetujuan mamak kepala waris) di samping syarat KUHPerdata.",
+      "statement": "Syarat sah perjanjian dalam adat Minangkabau mencakup kausa yang halal, yaitu tidak bertentangan dengan adat, agama, atau hukum.",
       "evidence": [
-        "Pengetahuan_Adat_Minangkabau"
+        "CONTEXT: 'Kausa yang halal – tujuan perjanjian tidak boleh bertentangan dengan adat, agama, atau hukum.'"
       ],
-      "confidence": 0.95,
+      "confidence": 1.0,
       "assumptions": [
-        "Konteks perjanjian melibatkan aset adat Minangkabau."
+        "Prinsip ini sejalan dengan KUHPerdata."
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Jika syarat sah tidak terpenuhi, perjanjian dianggap tidak sah menurut adat dan dapat dibatalkan oleh Mamak Kepala Waris dan ninik mamak.",
+      "evidence": [
+        "CONTEXT: 'Perjanjian dianggap **tidak sah menurut adat**.', '**Mamak Kepala Waris** dan **ninik mamak** dapat membatalkan perjanjian tersebut.'"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Konteks ini berlaku untuk transaksi yang melibatkan harta adat."
+      ]
+    },
+    {
+      "id": "C6",
+      "statement": "Pelanggaran syarat dalam perjanjian yang melibatkan Harta Pusako Tinggi dapat berakibat sanksi adat.",
+      "evidence": [
+        "CONTEXT: 'Jika melibatkan **Harta Pusako Tinggi**, pelanggaran dapat berakibat sanksi adat karena harta ini adalah milik kolektif kaum dan tidak boleh diperjualbelikan kecuali dalam kondisi darurat yang diatur adat.'"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Harta Pusako Tinggi adalah milik kolektif kaum."
       ]
     }
   ],
   "uncertainties": [
-    "U1: Batasan spesifik 'kondisi darurat' yang memperbolehkan transaksi harta pusako tinggi dalam adat Minangkabau dapat bervariasi antar nagari."
+    "Dampak spesifik jika syarat tidak terpenuhi untuk perjanjian yang tidak melibatkan harta adat tidak dijelaskan dalam konteks."
   ],
   "open_questions": [
-    "Q1: Bagaimana mekanisme penyelesaian jika suatu perjanjian memenuhi syarat KUHPerdata tetapi melanggar syarat adat Minangkabau?"
+    "Bagaimana mekanisme pembatalan perjanjian yang tidak sah secara detail menurut adat Minangkabau?"
   ]
 }

@@ -7,25 +7,25 @@
       "id": "K1",
       "target_claim_id": "C1",
       "issue_type": "evidence_gap",
-      "description": "Klaim bahwa MDP Bali 2010 menekankan 'kesetaraan gender dan hak individual' tidak didukung oleh bukti spesifik dari isi peraturan tersebut. Jawaban tidak mengutip pasal atau prinsip spesifik dari MDP Bali 2010 yang secara eksplisit mengatur hal ini, sehingga klaim terkesan sebagai asumsi umum.",
-      "severity": "MAJOR",
-      "suggested_fix": "Sebutkan pasal atau konsideran spesifik dari MDP Bali 2010 yang menjadi dasar klaim, misalnya pasal yang mengatur tentang hak waris anak perempuan atau prinsip persamaan hak."
+      "description": "Klaim C1 menyatakan konflik antara 'MDP Bali 2010' (yang diasumsikan sebagai hukum positif) dengan norma adat patrilineal Bali, namun tidak ada bukti dalam sumber yang diberikan (source_id_1) yang menjelaskan isi, status hukum, atau bahkan keberadaan 'MDP Bali 2010'. Istilah ini tidak didefinisikan dan tidak ada konteks hukum yang mendukung klaim bahwa dokumen tersebut mewakili 'hukum negara' yang mengakui hak individu perempuan.",
+      "severity": "CRITICAL",
+      "suggested_fix": "Hapus referensi ke 'MDP Bali 2010' atau ganti dengan referensi hukum yang valid dan terdokumentasi (misalnya, UU No. 1 Tahun 1974 tentang Perkawinan, Kompilasi Hukum Islam, atau peraturan daerah Bali yang relevan) yang secara spesifik mengatur hak waris perempuan. Jika tidak ada, nyatakan ketidakpastian ini secara eksplisit."
     },
     {
       "id": "K2",
       "target_claim_id": "C2",
-      "issue_type": "overclaim",
-      "description": "Klaim bahwa konflik 'melibatkan benturan setidaknya tiga sistem norma' (termasuk Hukum Agama) bersifat spekulatif dan tidak didukung oleh fakta kasus yang diberikan dalam prompt. Prompt hanya menyebutkan 'hukum negara' dan 'hukum adat Bali'. Pengenalan Hukum Agama sebagai elemen potensial adalah asumsi yang mungkin tidak relevan untuk semua kasus.",
+      "issue_type": "logic_gap",
+      "description": "Klaim C2 menarik analogi antara konflik di Bali dengan adat Minangkabau. Namun, logika analoginya lemah karena membandingkan sistem patrilineal (Bali) dengan sistem matrilineal (Minangkabau) tanpa menjelaskan relevansi atau titik persamaan substantif yang memungkinkan perbandingan tersebut. Klaim ini mengasumsikan bahwa 'konflik serupa' terjadi, padahal sifat konflik (patrilineal vs. matrilineal, hak individu vs. kolektif) bisa sangat berbeda secara fundamental.",
       "severity": "MAJOR",
-      "suggested_fix": "Batasi analisis pada dua sistem norma yang secara eksplisit disebutkan (hukum negara dan adat), atau klarifikasi bahwa pengenalan hukum agama hanya bersifat hipotetis dan kondisional ('jika pihak-pihak yang bersengketa menganut agama tertentu')."
+      "suggested_fix": "Jelaskan dengan jelas parameter persamaan yang mendasari analogi (misalnya, konflik antara hukum negara yang individualistis dengan hukum adat yang kolektif, terlepas dari sistem kekerabatannya). Atau, hindari analogi yang berpotensi menyesatkan dan fokus pada analisis konflik spesifik dalam konteks Bali."
     },
     {
       "id": "K3",
-      "target_claim_id": "C1",
-      "issue_type": "domain_mismatch",
-      "description": "Analisis konflik hanya berfokus pada level prinsip (universal-kesetaraan vs partikular-kekerabatan) tanpa menyentuh mekanisme hukum konkret untuk penyelesaian sengketa. Sebagai analisis hukum, jawaban seharusnya juga membahas hierarki atau mekanisme penengah antara hukum negara dan adat di Indonesia (misalnya, peran pengadilan, asas lex specialis, atau putusan Mahkamah Konstitusi).",
+      "target_claim_id": "C4",
+      "issue_type": "overclaim",
+      "description": "Klaim C4 ('Hukum nasional sering kali lebih melindungi hak individu dan anak kandung dibandingkan adat') merupakan generalisasi yang terlalu luas dan tidak didukung oleh bukti dalam konteks yang diberikan. Klaim ini mengabaikan kompleksitas pluralisme hukum di Indonesia, di mana hukum nasional (seperti UU Perkawinan, KHI) sering kali mengakomodasi atau berinteraksi dengan hukum adat, dan tidak selalu lebih 'pro-individu' dalam semua aspek.",
       "severity": "MAJOR",
-      "suggested_fix": "Lengkapi analisis dengan membahas kerangka hukum formal untuk menyelesaikan benturan semacam ini, misalnya dengan merujuk pada UU No. 1 Tahun 1974 tentang Perkawinan, UU No. 3 Tahun 2006 tentang Peradilan Agama (jika relevan), atau yurisprudensi yang mengakui hukum adat sepanjang tidak bertentangan dengan hukum nasional."
+      "suggested_fix": "Batasi klaim pada konteks spesifik kasus waris yang sedang dibahas, atau nyatakan sebagai hipotesis/pertanyaan terbuka. Ganti dengan pernyataan yang lebih hati-hati, misalnya: 'Dalam beberapa kasus sengketa waris, pengadilan nasional cenderung menerapkan hukum yang lebih mengakui hak anak kandung, yang dapat berbenturan dengan prinsip-prinsip hukum adat tertentu.'"
     }
   ]
 }

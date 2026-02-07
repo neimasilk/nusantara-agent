@@ -1,59 +1,79 @@
 {
   "round": 2,
   "agent": "NLA",
-  "answer": "Berdasarkan analisis hukum perdata nasional yang mengakui supremasi hukum adat untuk objek khusus seperti pusako tinggi, hak atas pusako tinggi dalam adat Minangkabau tidak beralih melalui sistem kewarisan individual KUHPerdata. Saat seorang mamak (saudara laki-laki ibu) meninggal, yang berhak atas pusako tinggi yang dikelolanya adalah kaum/paruik (kelompok kekerabatan matrilineal) dari almarhum mamak itu sendiri. Pengelolaan (ganggam bauntuak) atas harta tersebut beralih kepada penerus dalam kaum tersebut, biasanya kemenakan laki-lakinya (anak dari saudara perempuannya). Anak kandung almarhum mamak tidak mempunyai hak waris atas pusako tinggi tersebut. Hak waris anak kandung menurut KUHPerdata hanya terbatas pada harta pribadi atau harta pencaharian (pusako rendah) ayahnya, setelah penyelesaian harta bersama dengan istrinya.",
+  "answer": "Berdasarkan hukum nasional yang mengakui hukum adat, dalam adat Minangkabau, yang berhak atas pusako tinggi ketika seorang mamak meninggal adalah kemenakan (anak dari saudara perempuan) sesuai sistem matrilineal. Mamak berkedudukan sebagai pengelola, bukan pemilik mutlak, sehingga pusako tinggi tidak menjadi harta warisan pribadi yang dapat diwariskan kepada anak kandungnya.",
   "claims": [
     {
       "id": "C1",
-      "statement": "Pusako tinggi adalah harta bawaan kaum (suku/paruik) yang dikuasai secara kolektif berdasarkan garis ibu (matrilineal), bukan milik pribadi mamak yang hanya berstatus sebagai pengelola.",
+      "statement": "Hukum nasional mengakui keberadaan dan penerapan hukum adat sepanjang masih hidup dan tidak bertentangan dengan peraturan perundang-undangan.",
       "evidence": [
-        "source_context"
+        "source_id_1"
       ],
-      "confidence": 0.95,
+      "confidence": 1.0,
       "assumptions": [
         "A1"
       ]
     },
     {
       "id": "C2",
-      "statement": "Saat mamak meninggal, hak pengelolaan (ganggam bauntuak) atas pusako tinggi beralih kepada saudara laki-laki mamak yang lain atau kemenakan laki-laki terdekat (anak dari saudara perempuannya) dalam kaum yang sama, bukan kepada anak kandung mamak.",
+      "statement": "Dalam adat Minangkabau, pusako tinggi adalah harta ulayat kaum yang diwariskan secara turun-temurut menurut garis ibu (matrilineal).",
       "evidence": [
-        "source_context"
+        "source_id_1"
       ],
-      "confidence": 0.95,
+      "confidence": 1.0,
       "assumptions": [
         "A2"
       ]
     },
     {
       "id": "C3",
-      "statement": "Hukum adat Minangkabau mengenai pusako tinggi diutamakan berlaku berdasarkan pengakuan konstitusional (Pasal 18B UUD 1945) dan asas subsidiaritas KUHPerdata, sehingga KUHPerdata tidak mengatur peralihan hak atas pusako tinggi.",
+      "statement": "Mamak dalam adat Minangkabau berkedudukan sebagai pengelola atau pemangku pusako tinggi, bukan sebagai pemilik mutlak.",
       "evidence": [
-        "source_context"
+        "source_id_1"
       ],
-      "confidence": 0.9,
+      "confidence": 1.0,
       "assumptions": [
         "A3"
       ]
     },
     {
       "id": "C4",
-      "statement": "Anak kandung almarhum mamak berhak mewarisi harta pribadi atau harta pencaharian (pusako rendah) ayahnya menurut KUHPerdata, setelah pemisahan harta bersama dengan istrinya.",
+      "statement": "Ahli waris pusako tinggi menurut adat Minangkabau adalah kemenakan, yaitu anak dari saudara perempuan pewaris (mamak).",
       "evidence": [
-        "source_context"
+        "source_id_1"
       ],
-      "confidence": 0.9,
+      "confidence": 1.0,
       "assumptions": [
         "A4"
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Anak kandung dari mamak hanya berhak atas harta pencaharian (harta suarang) orang tuanya, bukan atas pusako tinggi.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A5"
+      ]
+    },
+    {
+      "id": "C6",
+      "statement": "Yurisprudensi Mahkamah Agung cenderung mengakui hukum adat Minangkabau mengenai status pusako tinggi yang tidak dapat diwariskan kepada anak kandung.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A6"
       ]
     }
   ],
   "uncertainties": [
-    "U1: Tingkat kepatuhan dan konsistensi penerapan hukum adat ini di seluruh wilayah Minangkabau dalam praktik kontemporer, mengingat potensi pengaruh sistem hukum nasional dan nilai-nilai individual.",
-    "U2: Mekanisme pasti penunjukan penerus pengelola (apakah otomatis berdasarkan kedudukan atau melalui musyawarah) jika terdapat lebih dari satu calon yang memenuhi syarat dalam kaum."
+    "U1: Tidak dijelaskan detail mekanisme pembagian jika mamak tidak memiliki saudara perempuan atau kemenakan."
   ],
   "open_questions": [
-    "Q1: Bagaimana penyelesaian hukum jika terjadi sengketa antara kemenakan (ahli waris adat) dengan anak kandung mamak mengenai status suatu harta, apakah termasuk pusako tinggi atau pusako rendah, terutama jika tidak ada bukti kepemilikan yang jelas?",
-    "Q2: Apakah terdapat perkembangan yurisprudensi atau aturan khusus dari pemerintah daerah yang memodifikasi atau memperjelas pengalihan hak pengelolaan pusako tinggi di era modern?"
+    "Q1: Bagaimana penyelesaian jika terjadi klaim campur antara harta hasil pengelolaan pusako tinggi dan harta pencaharian murni?"
   ]
 }

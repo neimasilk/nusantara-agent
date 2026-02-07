@@ -6,26 +6,26 @@
     {
       "id": "K1",
       "target_claim_id": "C1",
-      "issue_type": "evidence_gap",
-      "description": "Klaim C1 menyebut wasiat 'harus memenuhi bentuk formal tertentu' dan merujuk Pasal 874 BW. Namun, Pasal 874 hanya menyebut 'dibuat dengan akta notaris atau olographic'. Tidak ada penjelasan lebih lanjut tentang syarat formalitas yang krusial seperti kehadiran saksi, penanggalan, atau tanda tangan. Ini menimbulkan kesan bahwa Pasal 874 sudah lengkap, padahal syarat formal diatur dalam Pasal 938, 940, dan 945 BW. Rujukan tunggal ke Pasal 874 menciptakan gap bukti yang signifikan.",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa wasiat 'bersifat formal' adalah generalisasi yang berlebihan. Pasal 992 KUHPerdata memang mengatur formalitas wasiat tertulis, namun Pasal 931-934 KUHPerdata mengakui wasiat lisan (nuncupative) dalam keadaan tertentu, seperti di hadapan saksi di tempat terjadinya bencana. Dengan hanya menyebut 'formal', jawaban mengabaikan keberadaan dan syarat wasiat lisan.",
       "severity": "MAJOR",
-      "suggested_fix": "Perluas referensi bukti untuk mencakup Pasal-pasal yang mengatur syarat formal wasiat, seperti Pasal 938 (wasiat umum), Pasal 940 (wasiat rahasia), dan Pasal 945 (wasiat olografis). Klaim harus diperjelas bahwa 'bentuk formal tertentu' merujuk pada ketentuan-ketentuan tersebut, bukan hanya Pasal 874."
+      "suggested_fix": "Klaim harus diperbaiki menjadi: 'Wasiat menurut KUHPerdata umumnya merupakan perbuatan hukum sepihak yang bersifat formal (tertulis), namun dalam keadaan luar biasa diakui wasiat lisan. Wasiat dapat ditarik kembali dan baru berlaku efektif setelah pewaris meninggal.'"
     },
     {
       "id": "K2",
-      "target_claim_id": "C3",
-      "issue_type": "logic_gap",
-      "description": "Klaim C3 menyatakan besaran legitieme portie untuk dua anak atau lebih adalah '2/3 dari seluruh harta peninggalan, dibagi rata'. Pernyataan ini tidak lengkap secara logis karena tidak menjelaskan dasar perhitungan 'seluruh harta peninggalan'. Menurut Pasal 913 BW, legitieme portie dihitung dari 'harta peninggalan yang ada pada saat meninggalnya pewaris, dikurangi utang-utangnya'. Dengan tidak menyebut pengurangan utang, klaim berisiko menyesatkan pembaca untuk berpikir perhitungannya adalah dari bruto, bukan neto.",
-      "severity": "MAJOR",
-      "suggested_fix": "Perbaiki klaim dengan menambahkan penjelasan krusial bahwa 'seluruh harta peninggalan' yang dimaksud adalah harta bersih (net estate), yaitu harta pada saat meninggal dikurangi seluruh utang-utang pewaris. Contoh: '...2/3 dari harta peninggalan bersih (setelah dikurangi utang), dibagi rata di antara mereka'."
+      "target_claim_id": "C2",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa 'kebebasan berwasiat dibatasi oleh hak mutlak (legitieme portie) ahli waris dalam garis lurus, yaitu anak atau orang tua' tidak lengkap dan menimbulkan kesan bahwa orang tua selalu berhak. Pasal 913 ayat (1) KUHPerdata menyebutkan bahwa bagian mutlak hanya diberikan kepada ahli waris dalam garis lurus ke bawah (anak, cucu). Orang tua (garis lurus ke atas) hanya berhak atas legitieme portie jika pewaris tidak meninggalkan keturunan, sebagaimana diatur dalam Pasal 914a KUHPerdata. Penyebutan 'orang tua' tanpa kualifikasi ini dapat menyesatkan.",
+      "severity": "CRITICAL",
+      "suggested_fix": "Klaim harus direvisi untuk mencerminkan hierarki: 'Kebebasan berwasiat dibatasi oleh hak mutlak (legitieme portie) ahli waris. Utamanya, ahli waris dalam garis lurus ke bawah (anak, cucu) berhak. Orang tua hanya berhak atas bagian mutlak jika pewaris tidak meninggalkan keturunan (Pasal 914a).'"
     },
     {
       "id": "K3",
       "target_claim_id": "C4",
-      "issue_type": "overclaim",
-      "description": "Klaim C4 menyatakan 'dalam praktik, dapat mencakup separuh dari harta hasil usaha bersama yang dapat dibuktikan' dan merujuk yurisprudensi. Pernyataan ini merupakan overclaim karena menyarankan aturan umum yang mungkin tidak selalu berlaku. KUHPerdata (Pasal 119) mengatur pembagian harta bersama separuh-separuh, tetapi kemampuan untuk mewasiatkan bagian dari harta bersama sangat bergantung pada status hukum harta tersebut (apakah benar-benar bersama atau sudah dipisahkan), ada/tidaknya perjanjian kawin, dan putusan pengadilan dalam sengketa tertentu. Menyajikannya sebagai praktik umum tanpa kualifikasi yang memadai dapat menyesatkan.",
-      "severity": "MAJOR",
-      "suggested_fix": "Kualifikasi klaim dengan jelas. Sebutkan bahwa ini adalah kemungkinan, bukan kepastian, dan sangat bergantung pada konteks fakta, pembuktian, serta tidak adanya perjanjian kawin yang mengatur lain. Lebih baik menyatakan: 'Dalam beberapa kasus sengketa, berdasarkan yurisprudensi, bagian testator dari harta hasil usaha bersama yang dapat dibuktikan mungkin dapat diwasiatkan, namun hal ini bersifat kasuistis dan bergantung pada putusan pengadilan'."
+      "issue_type": "logic_gap",
+      "description": "Klaim bahwa 'Harta bersama (gono-gini) harus dibagi dua terlebih dahulu' mengandung logika yang tidak lengkap dan berpotensi salah jika diterapkan secara universal. Pasal 119 KUHPerdata (BW) mengatur pembagian separuh untuk harta bersama dalam perkawinan berdasarkan persatuan bulat (algehele gemeenschap van goederen), yang tidak lagi otomatis berlaku. UU No. 1 Tahun 1974 tentang Perkawinan (Pasal 35-37) dan Kompilasi Hukum Islam (KHI) memiliki ketentuan berbeda mengenai harta bersama dan cara pembagiannya. Asumsi bahwa KUHPerdata selalu berlaku untuk 'gono-gini' adalah domain mismatch, karena istilah dan konsep 'gono-gini' lebih kuat terkait dengan hukum adat dan hukum Islam di Indonesia.",
+      "severity": "CRITICAL",
+      "suggested_fix": "Klaim harus diklarifikasi dengan konteks hukum yang berlaku: 'Dasar perhitungan bagian mutlak adalah harta bersih pewaris. Jika pewaris meninggal dalam perkawinan, perlu ditentukan rezim harta perkawinan yang berlaku (berdasarkan KUHPerdata, UU Perkawinan, atau Hukum Islam/Adat) untuk memisahkan bagian harta yang menjadi hak pewaris dari harta bersama. Hanya bagian pewaris inilah yang menjadi dasar perhitungan legitieme portie.'"
     }
   ]
 }

@@ -5,27 +5,27 @@
   "critiques": [
     {
       "id": "K1",
-      "target_claim_id": "C1",
-      "issue_type": "overclaim",
-      "description": "Klaim bahwa 'sentana' adalah 'penerus garis keturunan dan pemujaan leluhur' terlalu menyederhanakan. Dalam hukum adat Bali, 'sentana' memiliki makna yang lebih kompleks dan berlapis, mencakup aspek spiritual (menjaga kelangsungan pemujaan leluhur/pitra puja), sosial (melanjutkan garis purusa), dan hukum (hak atas warisan). Penyebutan hanya sebagai 'penerus' mengaburkan dimensi kewajiban dan tanggung jawab spiritual yang melekat.",
+      "target_claim_id": "C2",
+      "issue_type": "evidence_gap",
+      "description": "Klaim menyatakan 'Menurut KUHPerdata, sentana tidak termasuk ahli waris dari orang tua angkat kecuali melalui wasiat.' Namun, tidak ada rujukan spesifik ke pasal KUHPerdata yang mendukung pernyataan ini. Meskipun asumsi menyebut 'Pasal 852 KUHPerdata', klaim utama tidak secara eksplisit mengutipnya sebagai bukti, menciptakan kesenjangan antara pernyataan dan dukungannya.",
       "severity": "MAJOR",
-      "suggested_fix": "Perjelas bahwa 'sentana' adalah posisi dalam keluarga yang bertanggung jawab untuk melanjutkan garis keturunan (purusa) dan melaksanakan kewajiban pemujaan leluhur (pitra puja), yang kemudian membawa konsekuensi hak waris. Sebutkan bahwa status ini lebih dari sekadar 'penerus' biasa."
+      "suggested_fix": "Perbaikan konkret: Dalam klaim, sebutkan secara eksplisit pasal yang relevan (mis., Pasal 852 KUHPerdata) sebagai bagian dari pernyataan atau pastikan bukti yang dirujuk secara langsung mengutip pasal tersebut."
     },
     {
       "id": "K2",
-      "target_claim_id": "C2",
-      "issue_type": "evidence_gap",
-      "description": "Klaim bahwa sistem pewarisan adat Bali bersifat 'mayorat laki-laki' memerlukan kualifikasi. Istilah 'mayorat' lebih umum dikaitkan dengan sistem di mana anak tertua (biasanya laki-laki) mewarisi seluruh atau sebagian besar harta. Dalam konteks Bali, meski patrilineal, pembagian bisa lebih kompleks dan tidak selalu menganut mayorat murni. Hak utama anak laki-laki kandung sering kali terkait dengan harta pusaka (tanah dan benda sakral) yang tak terbagi, sementara harta pencaharian (druwe gabro) dapat dibagi. Bukti dari 'source_id_1' perlu dijelaskan lebih rinci untuk mendukung pernyataan 'mayorat' ini.",
+      "target_claim_id": "C4",
+      "issue_type": "overclaim",
+      "description": "Klaim menyatakan 'Dalam praktik peradilan, hukum adat Bali diutamakan untuk masyarakat Bali yang masih memegang adat...' Pernyataan ini bersifat generalisasi yang kuat. Meskipun ada putusan Mahkamah Agung yang dirujuk, tidak semua kasus atau pengadilan mungkin secara otomatis mengutamakan hukum adat; penerapannya bisa bergantung pada konteks spesifik kasus, kesadaran hakim, atau keberadaan peraturan lain. Klaim ini mengesampingkan kemungkinan variasi dalam praktik peradilan.",
       "severity": "MAJOR",
-      "suggested_fix": "Ganti atau kualifikasi istilah 'mayorat laki-laki'. Lebih tepat menjelaskan bahwa sistem pewarisan adat Bali bersifat patrilineal dengan prioritas pada anak laki-laki kandung (terutama yang tertua) untuk mewarisi dan mengelola harta pusaka (awig-awig) yang tidak terpecah, sementara pembagian harta lain dapat mengikuti aturan yang berbeda. Sertakan referensi yang lebih spesifik tentang sifat pembagian waris dalam adat Bali."
+      "suggested_fix": "Perbaikan konkret: Kualifikasi klaim dengan kata-kata seperti 'cenderung diutamakan' atau 'sering diutamakan berdasarkan putusan tertentu', dan akui bahwa prioritas bisa bervariasi tergantung kondisi."
     },
     {
       "id": "K3",
-      "target_claim_id": "C4",
-      "issue_type": "overclaim",
-      "description": "Klaim bahwa 'hukum adat Bali digunakan sebagai hukum primer' dalam penyelesaian sengketa waris di pengadilan merupakan generalisasi yang berisiko. Meski diakui sebagai hukum yang hidup, penerapannya di pengadilan tidak otomatis dan seragam. Pengadilan (khususnya Pengadilan Negeri) akan melakukan pemeriksaan mendalam (rechtvinding) untuk menentukan hukum adat mana yang benar-benar hidup dan diakui oleh masyarakat hukum adat setempat. Proses ini bisa melibatkan ahli adat (keterangan sentana/sesepuh) dan mempertimbangkan peraturan desa adat (awig-awig). Pernyataan ini mengabaikan kompleksitas proses pembuktian dan penerapan hukum adat di ranah peradilan negara.",
-      "severity": "CRITICAL",
-      "suggested_fix": "Ubah klaim menjadi: 'Dalam penyelesaian sengketa waris masyarakat Bali, pengadilan dapat menerapkan hukum adat Bali sebagai hukum yang mengatur, setelah melalui proses penemuan hukum (rechtvinding) untuk memastikan aturan adat mana yang masih hidup dan diakui oleh masyarakat bersangkutan. KUHPerdata dapat berlaku secara subsider jika aturan adat tidak lengkap atau tidak dapat dibuktikan.' Ini lebih mencerminkan dinamika aktual di pengadilan."
+      "target_claim_id": "C5",
+      "issue_type": "logic_gap",
+      "description": "Klaim menyatakan 'Harta pencaharian (gono-gini) dalam adat Bali lebih fleksibel dan dapat diwariskan kepada semua anak kandung dan sentana.' Namun, ada lompatan logika: fleksibilitas harta pencaharian tidak secara otomatis berarti dapat diwariskan kepada 'semua' anak kandung dan sentana. Mungkin ada aturan adat atau preferensi keluarga yang membatasi pembagian, atau prioritas tertentu (mis., anak laki-laki kandung terlebih dahulu). Klaim ini mengasumsikan kesetaraan penuh tanpa menjelaskan dasar atau batasannya.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perbaikan konkret: Jelaskan dasar fleksibilitas (mis., berdasarkan kesepakatan keluarga atau putusan adat) dan akui bahwa pembagian mungkin tidak selalu merata atau mencakup semua pihak tanpa syarat."
     }
   ]
 }

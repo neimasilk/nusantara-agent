@@ -1,51 +1,80 @@
 {
   "round": 1,
   "agent": "NLA",
-  "answer": "Dalam adat Jawa, konsep gono-gini dan harta bawaan dibedakan berdasarkan waktu perolehan dan status kepemilikannya. Harta bawaan (bandha dhedhasar atau sesakan) adalah harta yang dimiliki masing-masing pihak sebelum perkawinan dan tetap menjadi milik pribadi. Sementara itu, harta gono-gini (bandha gono gini) adalah harta yang diperoleh bersama selama perkawinan, baik dari usaha bersama maupun usaha salah satu pihak, dan dianggap sebagai harta bersama dengan pembagian ideal 50:50. Konsep adat ini selaras dengan ketentuan Pasal 35 UU No. 1 Tahun 1974 tentang Perkawinan, yang mengakui harta bawaan dan harta bersama. Dalam praktik hukum, harta yang tidak dapat dibuktikan sebagai bawaan akan dianggap sebagai bagian dari gono-gini.",
+  "answer": "Dalam adat Jawa, konsep gono-gini dan harta bawaan dibedakan berdasarkan asal dan status kepemilikan harta. Gono-gini adalah harta bersama yang diperoleh selama perkawinan, sedangkan harta bawaan adalah harta pribadi yang dimiliki sebelum nikah atau diperoleh sebagai warisan/hibah. Hukum nasional (UU Perkawinan) mengakui dan mengatur kedua konsep ini, dengan harta bersama dibagi rata saat perkawinan berakhir, sementara harta bawaan tetap menjadi milik individu.",
   "claims": [
     {
       "id": "C1",
-      "statement": "Harta bawaan dalam adat Jawa adalah harta yang dimiliki masing-masing pihak sebelum perkawinan dan tetap menjadi milik pribadi.",
+      "statement": "Harta gono-gini dalam adat Jawa adalah harta yang diperoleh suami-istri selama perkawinan melalui usaha atau kerja sama.",
       "evidence": [
-        "UU_No_1_Tahun_1974_Pasal_35",
-        "Yurisprudensi_Pengadilan_Terkait_Adat_Jawa"
+        "CONTEXT: 'Harta Gono-Gini (Harta Pencaharian/Bersama): Merupakan harta yang diperoleh suami-istri selama perkawinan melalui usaha atau kerja sama.'"
       ],
-      "confidence": 0.9,
+      "confidence": 1.0,
       "assumptions": [
-        "A1"
+        "Definisi ini mewakili konsep adat Jawa yang diakui."
       ]
     },
     {
       "id": "C2",
-      "statement": "Harta gono-gini dalam adat Jawa adalah harta yang diperoleh bersama selama perkawinan dan merupakan harta bersama dengan pembagian ideal 50:50.",
+      "statement": "Harta bawaan dalam adat Jawa adalah harta yang dimiliki masing-masing pihak sebelum perkawinan atau diperoleh sebagai warisan atau hibah.",
       "evidence": [
-        "UU_No_1_Tahun_1974_Pasal_35",
-        "Yurisprudensi_Pengadilan_Terkait_Adat_Jawa"
+        "CONTEXT: 'Harta Bawaan (Harta Asal/Separated Property): Merupakan harta yang dimiliki masing-masing pihak sebelum perkawinan, atau diperoleh selama perkawinan sebagai warisan atau hibah.'"
       ],
-      "confidence": 0.9,
+      "confidence": 1.0,
       "assumptions": [
-        "A2"
+        "Definisi ini mewakili konsep adat Jawa yang diakui."
       ]
     },
     {
       "id": "C3",
-      "statement": "Konsep gono-gini dan harta bawaan dalam adat Jawa telah diakomodir oleh hukum nasional, khususnya dalam Pasal 35 UU Perkawinan.",
+      "statement": "Hukum nasional mengakui konsep harta bersama (gono-gini) dan harta bawaan sebagaimana diatur dalam Pasal 35 UU No. 1 Tahun 1974 tentang Perkawinan.",
       "evidence": [
-        "UU_No_1_Tahun_1974_Pasal_35",
-        "Pasal_18B_Ayat_2_UUD_1945"
+        "CONTEXT: 'Pasal 35 UU No. 1/1974 mengakui adanya \"harta bersama\" (hasil dari usaha suami-istri selama perkawinan) dan \"harta bawaan\" (harta milik masing-masing pihak sebelum perkawinan, serta harta yang diperoleh sebagai hadiah atau warisan selama perkawinan).'"
       ],
-      "confidence": 0.85,
+      "confidence": 1.0,
       "assumptions": [
-        "A3"
+        "Kutipan konteks merujuk pada ketentuan hukum yang tepat."
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Dalam adat Jawa, harta gono-gini dianggap milik bersama dan jika perkawinan putus, dibagi dua (½ untuk suami, ½ untuk istri).",
+      "evidence": [
+        "CONTEXT: 'Dalam adat Jawa, harta ini dianggap milik bersama... Pembagian: Jika perkawinan putus (karena perceraian atau kematian), harta gono-gini dibagi dua (½ untuk suami, ½ untuk istri).'"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Pernyataan ini menggambarkan aturan pembagian dalam adat Jawa."
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Harta bawaan dalam adat Jawa tetap menjadi milik individu yang membawanya dan tidak dibagi saat perkawinan berakhir.",
+      "evidence": [
+        "CONTEXT: 'Dalam adat Jawa, harta ini tetap menjadi milik individu yang membawanya, tidak bercampur dengan harta bersama.'",
+        "CONTEXT: 'Status: Tetap menjadi hak penuh pemiliknya dan tidak dibagi saat perkawinan berakhir...'"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Pernyataan ini menggambarkan status harta bawaan dalam adat Jawa."
+      ]
+    },
+    {
+      "id": "C6",
+      "statement": "Hukum adat Jawa diakui keberlakuannya berdasarkan Pasal 18B ayat (2) UUD 1945 dan Pasal 2 Aturan Peralihan UUD 1945, selama tidak bertentangan dengan hukum nasional.",
+      "evidence": [
+        "CONTEXT: 'Hukum Adat (seperti adat Jawa) diakui keberlakuannya berdasarkan Pasal 18B ayat (2) UUD 1945 dan Pasal 2 Aturan Peralihan UUD 1945, selama tidak bertentangan dengan asas hukum nasional dan keadilan.'"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Kutipan konteks merujuk pada dasar hukum yang tepat."
       ]
     }
   ],
   "uncertainties": [
-    "U1: Variasi penafsiran dan penerapan konsep gono-gini di berbagai komunitas adat Jawa secara spesifik.",
-    "U2: Tingkat pembuktian yang diperlukan untuk menetapkan suatu harta sebagai harta bawaan dalam praktik pengadilan."
+    "Tidak ada informasi detail tentang variasi penerapan konsep ini di berbagai komunitas Jawa yang berbeda."
   ],
   "open_questions": [
-    "Q1: Bagaimana mekanisme pembagian gono-gini jika terdapat kontribusi yang tidak seimbang antara suami dan istri selama perkawinan?",
-    "Q2: Apakah hasil atau keuntungan dari pengelolaan harta bawaan selama perkawinan secara otomatis menjadi bagian dari gono-gini?"
+    "Bagaimana mekanisme pembuktian kepemilikan harta bawaan secara spesifik dalam penyelesaian sengketa di pengadilan menurut hukum adat Jawa?"
   ]
 }

@@ -4,64 +4,97 @@
   "final_nla": {
     "round": 2,
     "agent": "NLA",
-    "answer": "Konflik norma dalam kasus ini adalah benturan antara hukum adat Bali (patrilineal) yang diakui konstitusi dan hukum nasional (KUHPerdata) yang egaliter. Penyelesaiannya bergantung pada klasifikasi harta warisan: (1) Jika tanah adalah 'druwe' (harta asal turun-temurun patrilineal), hukum adat Bali memiliki kedudukan kuat. (2) Jika tanah adalah harta pencaharian ('gono-gini') orang tua, maka KUHPerdata berlaku, di mana anak perempuan berhak atas bagian yang sama. Perempuan pemohon memiliki dasar hukum kuat dengan membuktikan tanah sebagai harta pencaharian dan mengajukan gugatan ke Pengadilan Negeri berdasarkan KUHPerdata.",
+    "answer": "Konflik norma terjadi antara hukum adat patrilineal tradisional Bali dengan penafsiran baru hukum adat yang lebih egaliter (seperti dalam Keputusan MDP 2010), dengan KUHPerdata berperan sebagai pembanding. Sifat tanah (harta bersama vs. harta warisan turun-temurun/druwe) adalah faktor penentu utama. Penyelesaian idealnya melalui musyawarah di lingkungan Desa Pakraman sesuai awig-awig dan keputusan MDP 2010.",
     "claims": [
       {
         "id": "C1",
-        "statement": "Konflik norma utama adalah antara hukum adat Bali (patrilineal) yang diakui Pasal 18B UUD 1945 dan hukum nasional (KUHPerdata Pasal 852) yang memberikan hak waris sama pada semua anak.",
+        "statement": "Konflik norma adalah benturan antara hukum adat patrilineal tradisional Bali dengan penafsiran baru hukum adat yang lebih egaliter seperti dalam Keputusan MDP 2010.",
         "evidence": [
-          "Pasal 18B UUD 1945",
-          "Pasal 852 KUHPerdata"
+          "context_par_1",
+          "context_par_2",
+          "context_par_4"
         ],
-        "confidence": 0.95,
+        "confidence": 0.9,
         "assumptions": [
-          "MDP Bali 2010 merefleksikan hukum adat patrilineal Bali yang masih berlaku"
+          "Keputusan MDP 2010 dianggap sebagai penafsiran hukum adat yang mengakui hak waris perempuan."
         ]
       },
       {
         "id": "C2",
-        "statement": "Penyelesaian konflik ditentukan oleh jenis harta warisan: hukum adat mengatur 'druwe' (harta asal turun-temurun), sedangkan KUHPerdata mengatur harta pencaharian ('gono-gini').",
+        "statement": "KUHPerdata berlaku secara subsidiir bagi masyarakat Bali karena hukum adat masih sangat kuat.",
         "evidence": [
-          "Doktrin hukum adat Bali",
-          "Pasal 119 KUHPerdata tentang harta bersama"
+          "context_par_6"
         ],
         "confidence": 0.9,
         "assumptions": [
-          "Tanah warisan dapat diklasifikasikan secara jelas sebagai 'druwe' atau harta pencaharian"
+          "Analisis mengacu pada Pasal 131 IS yang disebut dalam konteks umum."
         ]
       },
       {
         "id": "C3",
-        "statement": "Perempuan pemohon memiliki argumen hukum kuat untuk menuntut warisan jika dapat membuktikan tanah tersebut adalah harta pencaharian orang tuanya, bukan 'druwe' murni.",
+        "statement": "Sifat tanah (harta bersama/gono-gini atau harta warisan turun-temurun/druwe) adalah faktor penentu utama dalam menilai kekuatan tuntutan.",
         "evidence": [
-          "Pasal 852 dan 119 KUHPerdata",
-          "Yurisprudensi MA tentang harta bersama"
+          "context_par_7",
+          "context_par_8"
+        ],
+        "confidence": 0.9,
+        "assumptions": [
+          "Klasifikasi harta dalam konteks ini mengikuti kerangka hukum adat Bali dan KUHPerdata."
+        ]
+      },
+      {
+        "id": "C4",
+        "statement": "Tuntutan atas harta bersama (gono-gini) memiliki peluang lebih besar untuk dikabulkan bagi anak perempuan dibandingkan tuntutan atas harta warisan turun-temurun (druwe).",
+        "evidence": [
+          "context_par_8"
         ],
         "confidence": 0.85,
         "assumptions": [
-          "Pemohon dapat menyediakan bukti atas status harta tersebut"
+          "Hukum adat yang berlaku masih membedakan perlakuan terhadap kedua jenis harta tersebut."
+        ]
+      },
+      {
+        "id": "C5",
+        "statement": "Penyelesaian konflik yang paling ideal dan diutamakan oleh hukum adalah melalui musyawarah di lingkungan Desa Pakraman sesuai awig-awig dan keputusan MDP 2010.",
+        "evidence": [
+          "context_par_9"
+        ],
+        "confidence": 0.9,
+        "assumptions": [
+          "Lembaga Desa Pakraman dan MDP diakui memiliki kewenangan untuk menyelesaikan sengketa adat."
+        ]
+      },
+      {
+        "id": "C6",
+        "statement": "Dalam litigasi, pengadilan akan memeriksa keabsahan Keputusan MDP 2010, sifat tanah sengketa, dan prinsip keadilan serta kesetaraan.",
+        "evidence": [
+          "context_par_9"
+        ],
+        "confidence": 0.85,
+        "assumptions": [
+          "Prosedur dan pertimbangan pengadilan didasarkan pada kerangka hukum nasional yang dijelaskan."
         ]
       }
     ],
     "uncertainties": [
-      "U1: Sejauh mana Pengadilan Negeri akan mengakui dan menerapkan MDP Bali 2010 sebagai hukum yang hidup ('living law') dalam praktik.",
-      "U2: Apakah terdapat putusan pengadilan sebelumnya di Bali dengan fakta serupa yang dapat dijadikan acuan (yurisprudensi)."
+      "Isi spesifik dan status hukum pasti dari Keputusan MDP Bali 2010 yang dirujuk.",
+      "Bukti konkret mengenai apakah tanah sengketa merupakan harta bersama atau harta warisan turun-temurun."
     ],
     "open_questions": [
-      "Q1: Apa bukti konkret yang dapat digunakan untuk membedakan 'tanah keluarga' sebagai 'druwe' turun-temurun atau sebagai harta pencaharian orang tua?",
-      "Q2: Apakah telah ada upaya mediasi di tingkat Desa Pakraman sebelum kasus ini diajukan, dan apa hasilnya?"
+      "Bagaimana mekanisme dan otoritas Majelis Desa Pakraman (MDP) dalam menetapkan dan mengubah penafsiran hukum adat waris?",
+      "Apakah terdapat yurisprudensi Mahkamah Agung terkini yang secara spesifik mengatur konflik serupa antara MDP 2010 dan adat patrilineal Bali?"
     ]
   },
   "final_ala": {
     "round": 2,
     "agent": "ALA",
-    "answer": "Konflik norma ini merupakan benturan antara hukum negara (MDP Bali 2010) yang mengakui hak waris individual dan kesetaraan gender, dengan hukum adat patrilineal Bali yang mengutamakan kelestarian harta keluarga dalam garis laki-laki dan hak komunal. Dari perspektif adat Minangkabau, konflik ini mirip dengan ketegangan antara pengaturan Harta Pusako Tinggi (komunal, diwariskan ke garis ibu/kemenakan) dan Harta Pusako Rendah (dapat diwariskan ke anak). Penyelesaian memerlukan musyawarah untuk mencari titik temu, misalnya dengan memisahkan jenis harta dan skema pembagian yang adil.",
+    "answer": "Konflik norma terjadi antara hukum positif (MDP Bali 2010) yang mungkin mengakui hak individu perempuan, dengan norma adat patrilineal Bali yang membatasi hak waris berdasarkan garis laki-laki. Dalam analogi adat Minangkabau, konflik serupa adalah benturan antara hak kolektif kaum (harta pusaka tinggi) dengan hak individu (anak kandung). Penyelesaian memerlukan musyawarah untuk mencari titik temu antara sistem hukum yang berbeda.",
     "claims": [
       {
         "id": "C1",
-        "statement": "Sumber konflik utama adalah benturan antara klaim berbasis hukum negara (MDP Bali 2010) yang bersifat universal dan individual, dengan penolakan berbasis hukum adat patrilineal Bali yang bersifat komunal dan tradisional.",
+        "statement": "Konflik norma dalam kasus Bali adalah benturan antara norma hukum negara (MDP Bali 2010) dengan norma adat patrilineal setempat.",
         "evidence": [
-          "context_1"
+          "source_id_1"
         ],
         "confidence": 0.9,
         "assumptions": [
@@ -70,40 +103,54 @@
       },
       {
         "id": "C2",
-        "statement": "Dalam perspektif adat Minangkabau, konflik serupa dapat dianalogikan dengan ketegangan antara pengaturan Harta Pusako Tinggi (warisan turun-temurun kaum, diwariskan ke garis ibu/kemenakan) dan Harta Pusako Rendah (harta pencaharian, dapat diwariskan ke anak).",
+        "statement": "Dalam analogi adat Minangkabau, konflik serupa adalah benturan antara hak kolektif kaum atas harta pusaka dengan hak individu anak kandung.",
         "evidence": [
-          "context_2"
+          "source_id_1"
         ],
-        "confidence": 0.85,
+        "confidence": 0.9,
         "assumptions": [
           "A2"
         ]
       },
       {
         "id": "C3",
-        "statement": "Inti konflik melibatkan benturan tiga sistem norma: hukum negara (kesetaraan gender), hukum adat (patrilineal), dan potensi hukum agama (misalnya Islam), yang masing-masing memiliki logika pembagian warisan berbeda.",
+        "statement": "Harta pusaka tinggi dalam adat Minangkabau adalah milik kolektif kaum, diwariskan secara matrilineal, dan tidak boleh diperjualbelikan.",
         "evidence": [
-          "context_3"
+          "source_id_1"
+        ],
+        "confidence": 0.9,
+        "assumptions": []
+      },
+      {
+        "id": "C4",
+        "statement": "Hak kemenakan (anak dari saudara perempuan) lebih kuat daripada hak anak kandung sendiri dalam hal harta pusaka tinggi Minangkabau.",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 0.9,
+        "assumptions": []
+      },
+      {
+        "id": "C5",
+        "statement": "Penyelesaian konflik norma memerlukan musyawarah untuk mencari titik temu antara sistem hukum yang berbeda.",
+        "evidence": [
+          "source_id_1"
         ],
         "confidence": 0.8,
-        "assumptions": [
-          "A3"
-        ]
+        "assumptions": []
       }
     ],
     "uncertainties": [
-      "U1",
-      "U2"
+      "U1: Isi spesifik dan ketentuan hak perempuan dalam MDP Bali 2010 tidak dijelaskan dalam konteks."
     ],
     "open_questions": [
-      "Q1",
-      "Q2"
+      "Q1: Bagaimana mekanisme musyawarah dan prinsip 'Adat basandi syarak' dapat diterapkan untuk menyelesaikan konflik serupa di luar komunitas Minangkabau?"
     ]
   },
   "critique_counts": {
-    "CRITICAL": 1,
-    "MAJOR": 11,
-    "MINOR": 0
+    "CRITICAL": 2,
+    "MAJOR": 8,
+    "MINOR": 2
   },
   "needs_human_review": true,
   "logs_index": [

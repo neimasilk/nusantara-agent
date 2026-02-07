@@ -13,10 +13,10 @@
   },
   "graph_data_path": "experiments/01_triple_extraction/result.json",
   "timing_seconds": {
-    "retrieval_parallel": 100.5422,
-    "debate": 295.7111,
-    "supervisor": 21.641,
-    "total": 417.8943
+    "retrieval_parallel": 107.8751,
+    "debate": 234.8261,
+    "supervisor": 9.3945,
+    "total": 352.0957
   },
   "artifacts": {
     "debate_summary": "experiments\\07_advanced_orchestration\\results\\Q11\\debate_summary.json",

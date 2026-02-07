@@ -1,58 +1,79 @@
 {
   "round": 1,
   "agent": "NLA",
-  "answer": "Dalam hukum adat Bali, 'sentana' adalah konsep kunci yang berarti 'penerus' atau 'orang yang mengisi' garis keturunan (purusa) dan pemujaan leluhur (pitra puja). Posisinya dalam pewarisan keluarga adalah sebagai ahli waris utama, dengan sistem yang bersifat patrilineal dan mayorat laki-laki. Anak laki-laki kandung (sentana rajeg) memegang hak utama, khususnya atas harta pusaka yang tidak terbagi. Anak perempuan dapat menjadi sentana dalam perkawinan nyentana (suami masuk keluarga istri). Hukum nasional (Pasal 131 IS, Pasal 18B UUD 1945) mengakui hukum adat ini sebagai hukum yang hidup, sehingga aturan KUHPerdata tentang pembagian waris yang sama rata tidak berlaku primer bagi masyarakat Bali yang tunduk pada adatnya.",
+  "answer": "Dalam adat Bali, sentana adalah anak angkat yang diangkat terutama dalam keluarga tanpa anak laki-laki kandung untuk melanjutkan keturunan dan memelihara orang tua angkat. Posisinya dalam pewarisan keluarga tunduk pada dualisme hukum: menurut KUHPerdata, sentana bukan ahli waris kecuali melalui wasiat, tetapi menurut hukum adat Bali yang diutamakan dalam praktik peradilan, sentana dapat menjadi ahli waris utama dari orang tua angkat, khususnya untuk harta drajat (turun-temurun). Harta pencaharian (gono-gini) lebih fleksibel dan dapat diwariskan kepada sentana. Untuk kepastian hukum, disarankan melakukan pengangkatan secara resmi dan membuat wasiat.",
   "claims": [
     {
       "id": "C1",
-      "statement": "Dalam hukum adat Bali, 'sentana' adalah penerus garis keturunan dan pemujaan leluhur, dengan anak laki-laki kandung sebagai sentana utama (sentana rajeg).",
+      "statement": "Dalam adat Bali, sentana merujuk pada anak angkat yang diambil untuk melanjutkan keturunan dan memelihara orang tua angkat, terutama dalam keluarga tanpa anak laki-laki kandung.",
       "evidence": [
         "source_id_1"
       ],
-      "confidence": 0.95,
+      "confidence": 1.0,
       "assumptions": [
-        "A1"
+        "Definisi ini berlaku umum dalam konteks adat Bali yang dianalisis."
       ]
     },
     {
       "id": "C2",
-      "statement": "Sistem pewarisan adat Bali bersifat patrilineal dengan mayorat laki-laki, di mana anak laki-laki kandung memiliki hak utama atas harta pusaka (awig-awig) yang tidak terpecah.",
+      "statement": "Menurut KUHPerdata, sentana tidak termasuk ahli waris dari orang tua angkat kecuali melalui wasiat.",
       "evidence": [
         "source_id_1"
       ],
-      "confidence": 0.9,
+      "confidence": 1.0,
       "assumptions": [
-        "A2"
+        "Pasal 852 KUHPerdata menjadi acuan yang dimaksud."
       ]
     },
     {
       "id": "C3",
-      "statement": "Hukum nasional Indonesia (Pasal 131 IS dan Pasal 18B UUD 1945) mengakui hukum adat, termasuk hukum adat Bali, sebagai hukum yang hidup (living law) dalam masyarakat sepanjang tidak bertentangan dengan kepentingan nasional.",
+      "statement": "Menurut hukum adat Bali, sentana dapat menjadi ahli waris utama dari orang tua angkat, terutama jika diangkat untuk tujuan penerus keturunan (palakrama).",
       "evidence": [
-        "source_id_2",
-        "source_id_3"
+        "source_id_1"
       ],
-      "confidence": 0.98,
+      "confidence": 1.0,
       "assumptions": [
-        "A3"
+        "Pengangkatan dilakukan secara sah menurut adat."
       ]
     },
     {
       "id": "C4",
-      "statement": "Dalam penyelesaian sengketa waris masyarakat Bali di pengadilan, hukum adat Bali digunakan sebagai hukum primer, sedangkan KUHPerdata berlaku secara subsider jika aturan adat tidak lengkap.",
+      "statement": "Dalam praktik peradilan, hukum adat Bali diutamakan untuk masyarakat Bali yang masih memegang adat dalam menyelesaikan sengketa waris yang melibatkan sentana.",
       "evidence": [
         "source_id_1"
       ],
-      "confidence": 0.85,
+      "confidence": 1.0,
       "assumptions": [
-        "A4"
+        "Putusan Mahkamah Agung seperti No. 179 K/Sip/1974 mencerminkan kecenderungan ini."
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Harta pencaharian (gono-gini) dalam adat Bali lebih fleksibel dan dapat diwariskan kepada semua anak kandung dan sentana.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Harta tersebut dipisahkan dari harta drajat (turun-temurun)."
+      ]
+    },
+    {
+      "id": "C6",
+      "statement": "Untuk kepastian hukum, disarankan melakukan pengangkatan sentana secara resmi melalui penetapan pengadilan dan membuat wasiat.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Rekomendasi ini didasarkan pada analisis untuk menghindari sengketa."
       ]
     }
   ],
   "uncertainties": [
-    "U1: Batasan dan variasi praktik 'nyentana' serta pembagian harta pencaharian (druwe gabro) di berbagai wilayah (desa adat) di Bali dapat berbeda-beda."
+    "U1: Besaran atau proporsi pasti pembagian warisan harta pencaharian (gono-gini) kepada sentana dibandingkan dengan anak kandung tidak dirinci dalam konteks."
   ],
   "open_questions": [
-    "Q1: Bagaimana pengadilan menilai dan membuktikan keberlakuan hukum adat Bali yang spesifik dalam suatu sengketa waris konkret? Q2: Bagaimana posisi anak angkat atau sentana yang diangkat melalui upacara adat dalam hierarki pewarisan dibandingkan dengan anak kandung perempuan dalam sistem purusa?"
+    "Q1: Bagaimana mekanisme penyelesaian sengketa jika dalam satu keluarga terjadi peralihan dari tata hukum adat ke hukum nasional (KUHPerdata) terkait status waris sentana?"
   ]
 }

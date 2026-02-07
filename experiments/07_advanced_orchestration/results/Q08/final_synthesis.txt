@@ -1,19 +1,5 @@
-**Konsep Harta Bersama (Gono-Gini) dan Pemahaman Sosial di Komunitas Adat**
+Konsep "gono-gini" dalam KUHPerdata adalah harta bersama suami-istri yang dibagi 50:50. Secara sosial, pemahaman komunitas adat sangat bervariasi. Misalnya, di Minangkabau (matrilineal), harta bersama ("Harta Suko") adalah harta pencaharian yang dapat diwariskan ke anak, berbeda dengan harta warisan turun-temurun ("Harta Pusako Tinggi") milik kolektif kaum yang diwariskan ke kemenakan (garis ibu).
 
-Secara hukum nasional (KUHPerdata), **gono-gini** adalah rezim default perkawinan di mana harta yang diperoleh selama perkawinan menjadi milik bersama suami-istri dan dibagi dua sama rata jika perkawinan berakhir. Anak tidak memiliki hak langsung atas harta ini selama perkawinan; hak mereka baru muncul sebagai ahli waris setelah orang tua meninggal.
+**Konflik & Trade-off:** Terjadi ketegangan antara prinsip kesetaraan 50:50 (hukum nasional) dengan aturan adat yang mungkin tidak membagi secara setara atau mengutamakan pihak tertentu (seperti kemenakan dalam sistem matrilineal). Trade-off-nya antara kepastian hukum universal dan pengakuan terhadap keanekaragaman budaya serta otonomi komunitas adat.
 
-Secara sosial di berbagai komunitas adat, pemahaman tentang "harta bersama" sangat bervariasi dan sering berbeda dari konsep KUHPerdata. Misalnya:
-*   **Minangkabau (matrilineal)**: Tidak mengenal gono-gini. Harta dibedakan antara **Harta Pusako Tinggi** (milik kolektif garis keturunan ibu, diwariskan kepada kemenakan) dan **Harta Pusako Rendah** (harta pencaharian suami-istri).
-*   **Komunitas adat lain** (seperti Jawa, Bali, atau Batak): Konsep "harta keluarga" sering dipahami lebih luas, melibatkan hak moral anak dan nilai kolektivitas keluarga inti, sehingga harta dianggap milik bersama suami, istri, dan anak.
-
-**Konflik Norma dan Trade-off:**
-Terjadi ketegangan antara **kepastian hukum universal** (KUHPerdata) dengan **keberagaman nilai kultural dan keadilan komunal**. Menerapkan KUHPerdata secara kaku dapat mengabaikan sistem kekerabatan dan logika distribusi harta yang hidup di masyarakat adat. Sebaliknya, hanya mengandalkan pemahaman adat yang sangat beragam dapat menimbulkan ketidakpastian hukum dan potensi ketidaksetaraan, terutama bagi pihak yang lebih lemah dalam struktur adat.
-
-**Keputusan Pluralistik:**
-Sebagai Hakim Supervisor, keputusan harus bersifat **kontekstual dan mengakui pluralisme hukum**.
-1.  **Prinsip utama** adalah keadilan substantif dengan mempertimbangkan latar sistem kekerabatan dan kesepakatan sosial setempat.
-2.  Dalam sengketa, **hukum adat yang masih hidup dan diterima komunitas** harus diakui sebagai hukum yang berlaku (sesuai Pasal 18B UUD 1945).
-3.  Jika terjadi sengketa antar-warga yang berbeda sistem hukumnya, atau jika nilai inti seperti keadilan bagi anak dan pihak rentan terancam, maka **KUHPerdata dapat berfungsi sebagai kerangka pengaman (safety net)**.
-4.  **Perjanjian perkawinan** menjadi instrumen kunci untuk menjembatani kedua sistem secara damai sejak awal.
-
-Dengan demikian, tidak ada satu jawaban absolut. Penyelesaian yang adil memerlukan navigasi yang hati-hati antara logika hukum nasional, realitas sosial-adat, dan perlindungan terhadap pihak-pihak yang rentan dalam setiap konteks spesifik.
+**Keputusan Pluralistik:** Penyelesaian harus kontekstual, mempertimbangkan hukum positif, hukum adat setempat yang hidup, dan keadilan substantif. Mekanisme musyawarah keluarga (seperti di Minangkabau) yang dipimpin tokoh adat dapat menjadi jalan tengah untuk mencapai mufakat dan menjaga kerukunan sosial.

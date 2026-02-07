@@ -1,71 +1,67 @@
 {
   "round": 2,
   "agent": "NLA",
-  "answer": "Perbedaan peran mamak dalam adat Minangkabau dan hak anak dalam hukum nasional dapat dianalisis dari tiga aspek utama:\n\n1. **Dasar Hubungan Hukum dan Kewenangan**\n   - **Hukum Nasional**: Hubungan hukum utama bersifat vertikal antara orang tua kandung (ayah dan ibu) dengan anak. Kedua orang tua memegang kekuasaan orang tua (ouderlijke macht) secara bersama-sama untuk pengasuhan, pendidikan, dan kepentingan terbaik anak.\n   - **Adat Minangkabau (Mamak)**: Hubungan hukum dominan bersifat horizontal antara mamak (saudara laki-laki ibu) dengan kemanakan (anak dari saudara perempuannya). Mamak bertanggung jawab atas bimbingan adat, pendidikan karakter, dan pengurusan harta pusaka kaum. Ayah kandung berperan terutama dalam nafkah dan kasih sayang secara pribadi, dengan kewenangan adat yang lebih terbatas.\n\n2. **Hak Anak Atas Harta Pencaharian (Gono-Gini)**\n   - **Hukum Nasional**: Anak-anak (laki-laki dan perempuan) adalah ahli waris utama dari harta bersama orang tua mereka. Hak waris bersifat individual dan langsung.\n   - **Adat Minangkabau**: Hak anak atas harta orang tua tidak langsung. Harta ibu kembali ke kaumnya (kelompok matrilineal), dengan anak perempuan sebagai penerus utama. Harta ayah dapat diwariskan kepada kemanakannya (anak dari saudara perempuannya) dalam sistem matrilineal, bukan otomatis ke anak kandung. Mamak berperan sebagai pengelola harta kaum.\n\n3. **Titik Perbedaan Utama**\n   - **Lini Kewenangan**: Hukum nasional vertikal (orang tua-anak); adat Minangkabau horizontal (mamak-kemanakan).\n   - **Sistem Kekerabatan**: Hukum nasional bilateral; adat Minangkabau matrilineal.\n   - **Fungsi Pengasuhan**: Hukum nasional menempatkan orang tua kandung sebagai penanggung jawab utama; adat Minangkabau menempatkan mamak sebagai penanggung jawab utama dalam konteks adat dan sosial.\n   - **Kedudukan Ayah Kandung**: Dalam hukum nasional, ayah adalah pemegang kekuasaan orang tua; dalam adat Minangkabau, ayah berperan sebagai 'tamu terhormat' dalam sistem kekerabatan istrinya.\n\nKesimpulan: Hukum nasional berporos pada hubungan biologis orang tua-anak dalam keluarga inti (nuclear family), sementara adat Minangkabau berporos pada hubungan matrilineal mamak-kemanakan dalam keluarga besar (extended family).",
+  "answer": "Perbedaan utama terletak pada struktur hubungan hukum dan konteks harta. Hukum nasional berporos pada hubungan vertikal orang tua-anak, sedangkan adat Minangkabau berporos pada hubungan avunkular kemenakan-mamak. Dalam hukum nasional, orang tua adalah wali alamiah dan anak adalah ahli waris utama dari harta orang tuanya. Dalam adat Minangkabau, mamak adalah pelindung adat dan sistem waris matrilineal memisahkan alur waris harta pusaka dari mamak ke kemenakan, bukan dari ayah ke anak.",
   "claims": [
     {
       "id": "C1",
-      "statement": "Dalam hukum nasional, hubungan hukum utama bersifat vertikal antara orang tua kandung dan anak, dengan kedua orang tua memegang kekuasaan orang tua secara bersama-sama.",
+      "statement": "Dasar hubungan hukum dalam KUHPerdata adalah hubungan parental (orang tua-anak), sedangkan dalam adat Minangkabau adalah hubungan avunkular (kemenakan-mamak).",
       "evidence": [
-        "Pasal 45-50 UU No. 1 Tahun 1974 tentang Perkawinan",
-        "Pasal 299 KUHPerdata"
+        "source_id_1"
       ],
       "confidence": 1.0,
-      "assumptions": [
-        "Analisis mengacu pada hukum perdata nasional Indonesia yang berlaku umum"
-      ]
+      "assumptions": []
     },
     {
       "id": "C2",
-      "statement": "Dalam adat Minangkabau, hubungan hukum dominan bersifat horizontal antara mamak dan kemanakan, dengan mamak bertanggung jawab atas bimbingan adat dan pengurusan harta pusaka kaum.",
+      "statement": "Dalam KUHPerdata, orang tua (terutama ayah) adalah wali alamiah yang mewakili anak dalam tindakan hukum.",
       "evidence": [
-        "Sistem kekerabatan matrilineal Minangkabau"
+        "source_id_3"
       ],
-      "confidence": 0.9,
-      "assumptions": [
-        "Deskripsi adat Minangkabau didasarkan pada pemahaman umum sistem matrilineal yang diakui"
-      ]
+      "confidence": 1.0,
+      "assumptions": []
     },
     {
       "id": "C3",
-      "statement": "Hak anak atas harta pencaharian orang tua dalam hukum nasional bersifat langsung dan individual, dengan anak sebagai ahli waris utama.",
+      "statement": "Dalam adat Minangkabau, mamak berperan sebagai pelindung dan penasihat adat yang merepresentasikan kemenakan dalam urusan adat dan sosial kaum.",
       "evidence": [
-        "Pasal 35 UU No. 1 Tahun 1974 tentang Perkawinan",
-        "Pasal 128 KUHPerdata",
-        "Pasal 852-857 KUHPerdata"
+        "source_id_3"
       ],
       "confidence": 1.0,
-      "assumptions": [
-        "Analisis mengacu pada hukum waris dalam KUHPerdata untuk yang tunduk padanya"
-      ]
+      "assumptions": []
     },
     {
       "id": "C4",
-      "statement": "Dalam adat Minangkabau, hak anak atas harta orang tua tidak langsung; harta ibu kembali ke kaumnya secara matrilineal, sedangkan harta ayah dapat diwariskan kepada kemanakannya.",
+      "statement": "Menurut KUHPerdata, anak adalah ahli waris utama dari harta peninggalan kedua orang tuanya, termasuk bagian dari harta bersama.",
       "evidence": [
-        "Sistem waris matrilineal Minangkabau"
+        "source_id_2"
       ],
-      "confidence": 0.9,
-      "assumptions": [
-        "Deskripsi didasarkan pada prinsip adat murni Minangkabau, dengan mengakui adanya praktik penyesuaian modern"
-      ]
+      "confidence": 1.0,
+      "assumptions": []
     },
     {
       "id": "C5",
-      "statement": "Perbedaan mendasar terletak pada poros hubungan: hukum nasional berpusat pada keluarga inti (nuclear family) secara bilateral, sedangkan adat Minangkabau berpusat pada keluarga besar matrilineal (extended family) dengan mamak sebagai poros kewenangan adat.",
+      "statement": "Dalam sistem matrilineal adat Minangkabau, harta pusaka diwariskan dari mamak kepada kemenakan, bukan dari ayah kandung kepada anaknya.",
       "evidence": [
-        "Perbandingan struktur kekeluargaan bilateral vs. matrilineal"
+        "source_id_2"
       ],
-      "confidence": 0.95,
-      "assumptions": [
-        "Analisis bersifat komparatif tanpa menilai superioritas salah satu sistem"
-      ]
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C6",
+      "statement": "Hak anak terhadap harta ayah kandungnya dalam adat Minangkabau tidak sekuat atau sejelas pengaturannya dalam hukum nasional.",
+      "evidence": [
+        "source_id_2"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
     }
   ],
   "uncertainties": [
-    "U1: Tingkat penerapan prinsip adat Minangkabau murni dalam masyarakat Minangkabau kontemporer dapat bervariasi akibat pengaruh hukum nasional dan nilai-nilai modern."
+    "Batasan detail 'fleksibel' dalam pengaturan harta pencaharian (harta suko) di adat Minangkabau kontemporer."
   ],
   "open_questions": [
-    "Q1: Bagaimana mekanisme resolusi ketika terjadi perbedaan penerapan antara prinsip adat matrilineal dan hak anak berdasarkan hukum nasional dalam kasus-kasus spesifik?"
+    "Bagaimana mekanisme konkrit pembagian harta pencaharian untuk anak dalam praktik adat Minangkabau saat ini? Apakah ada pola baku?"
   ]
 }

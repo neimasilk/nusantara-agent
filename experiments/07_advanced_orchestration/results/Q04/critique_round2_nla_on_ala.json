@@ -7,25 +7,25 @@
       "id": "K1",
       "target_claim_id": "C1",
       "issue_type": "evidence_gap",
-      "description": "Klaim C1 menyatakan mamak 'memiliki otoritas untuk mengelola harta pusako tinggi... untuk kepentingan kemenakan' dan merujuk pada 'source_context' sebagai bukti. Namun, dalam jawaban target, tidak ada kutipan atau referensi spesifik dari konteks sumber yang secara eksplisit mendukung pernyataan tentang otoritas pengelolaan mamak. Hal ini menimbulkan kesenjangan bukti (evidence gap) karena klaim tidak ditopang oleh bukti yang terlihat atau teridentifikasi.",
+      "description": "Klaim C1 menyatakan mamak bertanggung jawab mengelola harta kaum (pusako tinggi). Namun, sumber yang dirujuk (source_id_1) tidak dijelaskan isinya. Tidak ada bukti spesifik yang dikutip untuk mendukung pernyataan tentang tanggung jawab pengelolaan ini, sehingga menimbulkan gap evidence.",
       "severity": "MAJOR",
-      "suggested_fix": "Perbaiki klaim C1 dengan menyertakan kutipan langsung atau parafrase yang jelas dari konteks sumber yang menjelaskan peran dan otoritas mamak dalam mengelola harta pusako tinggi untuk kemenakan. Misalnya: 'Menurut sumber [sebutkan], mamak berperan sebagai pengelola harta pusako tinggi...'"
+      "suggested_fix": "Sebutkan bagian spesifik dari source_id_1 yang menjelaskan tanggung jawab mamak dalam mengelola harta pusako tinggi, atau tambahkan sumber lain yang mendukung klaim tersebut."
     },
     {
       "id": "K2",
-      "target_claim_id": "C2",
-      "issue_type": "domain_mismatch",
-      "description": "Klaim C2 mendefinisikan 'harta pusako rendah' sebagai 'harta pencaharian orang tua' dan menyatakan bahwa hak anak dalam hukum nasional adalah hak individual untuk mewarisinya. Namun, istilah 'pusako rendah' adalah terminologi adat Minangkabau, bukan terminologi hukum nasional (seperti Kitab Undang-Undang Hukum Perdata atau Kompilasi Hukum Islam). Penggunaan terminologi adat untuk mendeskripsikan konsep hukum nasional menimbulkan ketidakcocokan domain (domain mismatch) yang dapat membingungkan dan mengurangi keakuratan analisis perbandingan.",
+      "target_claim_id": "C5",
+      "issue_type": "overclaim",
+      "description": "Klaim C5 menyatakan hak anak dalam hukum nasional diatur 'tanpa membedakan garis keturunan ibu atau ayah'. Ini adalah generalisasi yang berlebihan karena hukum nasional (misalnya, UU Perkawinan, KUHPerdata) dalam konteks waris masih mengakui pembedaan berdasarkan hubungan hukum (anak sah, anak di luar nikah) yang dapat terkait dengan garis keturunan. Pernyataan ini mengabaikan kompleksitas aturan hukum positif Indonesia.",
       "severity": "MAJOR",
-      "suggested_fix": "Gunakan terminologi hukum nasional yang tepat. Sebagai contoh, ubah klaim menjadi: 'Hak anak dalam hukum nasional (misalnya, berdasarkan KUHPerdt atau KHI) adalah hak individual untuk mewarisi harta bawaan atau harta bersama orang tua (yang dalam konteks adat Minangkabau dapat disetarakan dengan konsep pusako rendah).'"
+      "suggested_fix": "Kurangi generalisasi. Nyatakan bahwa prinsip umum dalam hukum nasional adalah kesetaraan, namun dalam praktik waris, status hukum anak (sah/tidak sah) dapat mempengaruhi haknya, yang berbeda dengan sistem matrilineal Minangkabau."
     },
     {
       "id": "K3",
-      "target_claim_id": "C3",
-      "issue_type": "overclaim",
-      "description": "Klaim C3 menyimpulkan bahwa perbedaan mendasar terletak pada 'sifat hak (kolektif vs individual) dan jenis harta yang diatur (pusako tinggi vs pusako rendah), masing-masing dengan mekanisme pewarisan dan pengelolaan yang berbeda.' Meskipun ini adalah perbedaan penting, klaim ini cenderung menyederhanakan (overclaim) dengan tidak mengakui bahwa dalam praktik atau interpretasi tertentu mungkin ada tumpang tindih, konflik, atau variasi. Misalnya, hukum nasional juga mengakui hak kolektif dalam bentuk tertentu (seperti harta bersama), dan adat mungkin memiliki mekanisme untuk kepentingan individu dalam kerangka kolektif. Klaim yang terlalu tegas tanpa kualifikasi dapat mengabaikan kompleksitas interaksi sistem hukum.",
-      "severity": "MINOR",
-      "suggested_fix": "Kualifikasi klaim C3 untuk mencerminkan bahwa perbedaan tersebut adalah pola umum atau kecenderungan dominan, bukan pemisahan yang mutlak. Contoh: 'Secara umum, perbedaan mendasar dapat dilihat dari sifat hak yang cenderung kolektif dalam adat (terkait pusako tinggi) versus individual dalam hukum nasional (terkait harta pencaharian), meskipun dalam praktiknya dapat terjadi interaksi dan penyesuaian.'"
+      "target_claim_id": "C6",
+      "issue_type": "logic_gap",
+      "description": "Klaim C6 menghubungkan 'pusako rendah' dengan 'harta pencaharian yang dapat diwariskan kepada anak kandung'. Namun, tidak dijelaskan logika atau sumber yang menghubungkan definisi 'pusako rendah' (dari konteks adat) dengan mekanisme waris kepada 'anak kandung' dalam kerangka hukum nasional. Ada lompatan logika dari domain adat ke domain hukum nasional tanpa penjelasan penghubung.",
+      "severity": "MAJOR",
+      "suggested_fix": "Jelaskan hubungannya: Misalnya, dalam interaksi hukum adat dan nasional, harta pencaharian (pusako rendah) sering dianggap sebagai harta bersama suami-istri yang kemudian diwariskan menurut hukum nasional (KUHPerdata/UU Perkawinan) kepada anak-anak mereka, berbeda dengan status pusako tinggi."
     }
   ]
 }

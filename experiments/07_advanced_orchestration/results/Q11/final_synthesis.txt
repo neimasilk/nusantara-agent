@@ -1,18 +1,8 @@
-### **Jawaban Final: Kedudukan Wasiat dalam KUHPerdata vs. Hukum Adat Minangkabau**
+**Kedudukan & Batasan Wasiat (KUHPerdata):**
+Wasiat adalah perbuatan hukum sepihak (Pasal 899) yang berlaku setelah pewaris meninggal. Kebebasannya dibatasi **bagian mutlak (legitieme portie)** ahli waris garis lurus (Pasal 913). Anak kandung berhak mendapat bagian wajib: 1/2 (jika tunggal) atau 2/3 dibagi rata (jika ≥2) dari harta peninggalan (setelah bagi harta bersama). Wasiat yang melanggar ini dapat digugat (Pasal 914-918).
 
-**1. Konflik Norma yang Mendasar**
-- **KUHPerdata (BW):** Wasiat adalah **instrumen individual** yang mengutamakan kehendak bebas si pembuat (testator), meski dibatasi oleh **bagian mutlak (*legitieme portie*)** ahli waris dalam garis lurus (anak/orang tua). Batasannya bersifat **matematis-legal** (misal: untuk dua anak, maksimal 1/3 harta dapat diwasiatkan).
-- **Hukum Adat Minangkabau:** Wasiat adalah **instrumen sosial** yang tunduk pada struktur kolektif. Untuk **Harta Pusako Tinggi** (harta turun-temurun matrilineal), wasiat **tidak diakui sama sekali**. Untuk **Harta Pusako Rendah** (harta pencaharian), wasiat diakui tetapi **harus melalui musyawarah keluarga besar** dan menyeimbangkan hak kemenakan (garis ibu) dengan hak anak/istri (garis perdata/Islam). Batasannya bersifat **kolektif dan kontekstual**.
+**Konflik dengan Hukum Adat Minangkabau:**
+Terjadi trade-off antara kepastian hukum nasional (hak anak) dengan kelestarian adat (posisi kemenakan). Harta Pusako Tinggi tidak dapat diwasiatkan (milik kaum). Untuk Harta Pusako Rendah, wasiat kepada kemenakan tetap wajib menghormati bagian mutlak anak.
 
-**2. Trade-off dan Ketegangan**
-- **Kepastian Hukum vs. Keadilan Komunal:** KUHPerdata menawarkan kepastian melalui rumusan bagian mutlak yang tetap, tetapi dapat mengabaikan ikatan dan tanggung jawab sosial dalam sistem kekerabatan adat. Sebaliknya, hukum adat mengutamakan harmoni komunal, tetapi dapat menimbulkan ketidakpastian bagi individu yang ingin mengamankan hak anak kandungnya melalui wasiat.
-- **Individualisme vs. Kolektivisme:** KUHPerdata berpusat pada hak individu pemilik harta, sementara hukum adat Minangkabau menempatkan harta (terutama Pusako Tinggi) sebagai milik kolektif kaum, sehingga kedaulatan individu untuk berwasiat sangat terbatas.
-
-**3. Keputusan Pluralistik**
-Dalam konteks Indonesia yang majemuk, kedudukan wasiat tidak dapat ditentukan secara tunggal. **Pendekatan yang tepat adalah kontekstual:**
-
-- **Jika sengketa muncul di pengadilan umum,** hakim akan **menguji fakta lapangan** terlebih dahulu: Apakah masyarakat pihak-pihak masih hidup dalam tatanan adat Minangkabau? Apakah harta yang diwasiatkan merupakan **Pusako Tinggi atau Pusako Rendah**?
-- Untuk **Harta Pusako Tinggi**, wasiat **batal demi hukum** menurut adat, dan pengadilan seharusnya mengakui hak mutlak kemenakan sebagai ahli waris berdasarkan hukum adat yang masih hidup (*living law*).
-- Untuk **Harta Pusako Rendah**, pengadilan dapat melakukan **konkordansi** (perpaduan) norma: mengakui prinsip musyawarah adat sebagai batasan prosedural, sambil mempertimbangkan asas keadilan substantif dari KUHPerdata dan hukum Islam (bagian anak/istri). Wasiat yang dibuat secara sepihak tanpa musyawarah berisiko dibatalkan atau direvisi.
-
-**Kesimpulan:** Batasan wasiat tidak hanya tentang "berapa bagian" (seperti dalam BW), tetapi juga **"harta apa" dan "dalam komunitas mana"**. Dalam masyarakat adat Minangkabau, legitimasi wasiat bergantung pada kesesuaiannya dengan **prinsip kolektivitas, musyawarah, dan pembedaan jenis harta**, yang seringkali lebih menentukan daripada ketentuan bagian mutlak dalam KUHPerdata.
+**Keputusan Pluralistik:**
+Dalam konflik, wasiat harus tunduk pada batasan bagian mutlak anak kandung menurut KUHPerdata, karena merupakan hukum utama untuk waris individu. Namun, penyelesaian di masyarakat Minangkabau dapat melalui musyawarah adat untuk mencapai kesepakatan tanpa mengabaikan hak hukum anak.

@@ -4,131 +4,138 @@
   "final_nla": {
     "round": 2,
     "agent": "NLA",
-    "answer": "Pluralisme hukum di Indonesia adalah situasi di mana lebih dari satu sistem atau norma hukum berlaku secara sah dalam wilayah negara yang sama. Fenomena ini terjadi terutama karena: 1) Pengakuan konstitusional terhadap keberagaman (Pasal 18B ayat (2) dan Pasal 29 ayat (2) UUD 1945) yang mengakui kesatuan masyarakat hukum adat dan hak-hak tradisionalnya; 2) Penerapan asas personalitas keagamaan, di mana hukum yang berlaku bagi seseorang sangat dipengaruhi oleh identitas agamanya, khususnya dalam hukum keluarga dan waris (dasar hukumnya antara lain UU No. 1 Tahun 1974 tentang Perkawinan dan Kompilasi Hukum Islam); 3) Keberagaman hukum adat yang bersifat lokal dan tidak seragam di seluruh Indonesia; serta 4) Keterbatasan KUHPerdata (hukum perdata Barat warisan kolonial) dalam mengakomodasi seluruh keragaman budaya dan keyakinan masyarakat Indonesia, sehingga tidak dimaksudkan sebagai hukum yang tunggal. Akibatnya, untuk mengatur hubungan hukum yang sama (misalnya hak anak dan harta bersama dalam perkawinan), dapat berlaku norma dari KUHPerdata, hukum adat setempat, atau hukum agama (terutama Islam melalui KHI), tergantung pada identitas agama, domisili adat, pilihan para pihak, dan yurisdiksi pengadilan yang berwenang.",
+    "answer": "Pluralisme hukum di Indonesia adalah situasi di mana lebih dari satu sistem hukum (nasional/KUHPerdata, adat, dan agama) berlaku secara bersamaan. Hal ini terjadi karena faktor sejarah kolonial, keberagaman budaya, dan unifikasi hukum yang tidak tuntas. Tidak ada satu peraturan nasional yang mengatur seluruh aspek hukum perdata untuk semua warga, sehingga terjadi pilihan hukum. Dasar pengakuannya antara lain UU No. 1 Tahun 1974 tentang Perkawinan dan yurisprudensi. Akibatnya, aturan tentang hak anak kandung dan harta bersama (gono-gini) sangat bervariasi tergantung hukum yang diterapkan, menimbulkan ketidakpastian yang dapat diatasi dengan perjanjian perkawinan.",
     "claims": [
       {
         "id": "C1",
-        "statement": "Pluralisme hukum di Indonesia adalah situasi sah di mana lebih dari satu sistem hukum berlaku, disebabkan oleh pengakuan konstitusional terhadap keberagaman.",
+        "statement": "Pluralisme hukum di Indonesia adalah situasi di mana lebih dari satu sistem atau norma hukum berlaku dan diakui.",
         "evidence": [
-          "Pasal 18B ayat (2) UUD 1945",
-          "Pasal 29 ayat (2) UUD 1945"
+          "context_par_1"
         ],
-        "confidence": 0.95,
-        "assumptions": [
-          "Pembacaan terhadap pasal-pasal UUD 1945 tersebut mengakui eksistensi masyarakat hukum adat dan kebebasan beragama sebagai dasar pluralisme hukum."
-        ]
+        "confidence": 1.0,
+        "assumptions": []
       },
       {
         "id": "C2",
-        "statement": "Asas personalitas keagamaan menyebabkan hukum yang berlaku bagi seseorang dalam bidang keluarga dan waris ditentukan oleh identitas agamanya.",
+        "statement": "Pluralisme hukum terjadi karena faktor kolonial, keberagaman budaya, dan unifikasi hukum yang tidak tuntas.",
         "evidence": [
-          "UU No. 1 Tahun 1974 tentang Perkawinan",
-          "Kompilasi Hukum Islam (KHI)"
+          "context_par_1"
         ],
-        "confidence": 0.9,
-        "assumptions": [
-          "Undang-undang dan kompilasi tersebut masih berlaku efektif dan menjadi rujukan utama bagi kelompok agamanya masing-masing."
-        ]
+        "confidence": 1.0,
+        "assumptions": []
       },
       {
         "id": "C3",
-        "statement": "KUHPerdata (BW) tidak dimaksudkan sebagai hukum tunggal di Indonesia karena keterbatasannya dalam mengakomodasi keragaman budaya dan keyakinan.",
+        "statement": "Lebih dari satu norma berlaku karena tidak ada peraturan nasional yang secara tegas dan komprehensif mengatur seluruh aspek hukum perdata untuk semua warga.",
         "evidence": [
-          "Asas Konkordansi dalam sejarah hukum Indonesia",
-          "KUHPerdata (Burgerlijk Wetboek)"
+          "context_par_2"
         ],
-        "confidence": 0.85,
-        "assumptions": [
-          "KUHPerdata dipahami sebagai produk hukum warisan kolonial yang tidak secara komprehensif menggantikan sistem hukum yang sudah ada sebelumnya."
-        ]
+        "confidence": 1.0,
+        "assumptions": []
       },
       {
         "id": "C4",
-        "statement": "Hukum yang berlaku untuk suatu perkara (e.g., hak anak dan harta) bergantung pada faktor seperti agama, adat, pilihan para pihak, dan yurisdiksi pengadilan.",
+        "statement": "Dasar hukum pengakuan pluralisme termasuk UU No. 1 Tahun 1974 tentang Perkawinan dan yurisprudensi Mahkamah Agung.",
         "evidence": [
-          "UU No. 1 Tahun 1974 tentang Perkawinan Pasal 29",
-          "UU No. 7 Tahun 1989 tentang Peradilan Agama"
+          "context_par_2"
         ],
-        "confidence": 0.9,
-        "assumptions": [
-          "Masyarakatakat umumnya tunduk pada hukum berdasarkan identitasnya dan sengketa diselesaikan di lembaga peradilan yang sesuai."
-        ]
+        "confidence": 1.0,
+        "assumptions": []
+      },
+      {
+        "id": "C5",
+        "statement": "Aturan mengenai hak anak kandung dan harta pencaharian (gono-gini) sangat bervariasi antara KUHPerdata, hukum adat, dan hukum agama.",
+        "evidence": [
+          "context_par_3",
+          "context_par_3_A",
+          "context_par_3_B"
+        ],
+        "confidence": 1.0,
+        "assumptions": []
+      },
+      {
+        "id": "C6",
+        "statement": "Pluralisme dapat menimbulkan ketidakpastian hukum, dan penyelesaiannya tergantung pada hukum yang dipilih/diamalkan serta lembaga peradilan yang mengadili.",
+        "evidence": [
+          "context_par_4"
+        ],
+        "confidence": 1.0,
+        "assumptions": []
       }
     ],
-    "uncertainties": [
-      "U1: Batas-batas konkret pengakuan 'sepanjang masih hidup dan sesuai dengan perkembangan masyarakat' dalam Pasal 18B UUD 1945 dapat berbeda penafsirannya di berbagai daerah dan kasus.",
-      "U2: Tingkat harmonisasi dan potensi konflik antar sistem hukum (KUHPerdata, Hukum Adat, Hukum Agama) dalam praktik sehari-hari di masyarakat yang sangat majemuk."
-    ],
-    "open_questions": [
-      "Q1: Bagaimana mekanisme penyelesaian konflik hukum (choice of law) yang ideal dan adil ketika para pihak dalam suatu sengketa tunduk pada sistem hukum yang berbeda?",
-      "Q2: Sejauh mana upaya unifikasi atau harmonisasi hukum nasional (khususnya hukum materiil) dapat dan harus dilakukan tanpa mengabaikan prinsip pengakuan terhadap pluralisme hukum yang menjadi ciri Indonesia?"
-    ]
+    "uncertainties": [],
+    "open_questions": []
   },
   "final_ala": {
     "round": 2,
     "agent": "ALA",
-    "answer": "Pluralisme hukum di Indonesia mengacu pada situasi di mana beberapa sistem hukum—yaitu hukum adat, hukum agama (terutama Islam), dan hukum nasional—berlaku secara berdampingan dalam satu masyarakat. Fenomena ini terjadi karena faktor sejarah (hukum adat telah ada sebelum negara modern), pengakuan konstitusional (UUD 1945 mengakui masyarakat hukum adat), dan realitas sosio-kultural masyarakat Indonesia yang majemuk. Masyarakat, seperti di Minangkabau, telah mengembangkan mekanisme untuk mengharmonisasikan norma-norma yang berbeda ini dalam kehidupan sehari-hari, terutama melalui musyawarah dan prinsip kearifan lokal.\n\nDalam konteks Minangkabau, contoh nyata pluralisme ini terlihat pada pengaturan harta waris. Harta Pusako Tinggi diatur sepenuhnya oleh hukum adat matrilineal, diwariskan melalui garis ibu kepada kemenakan, dan dikelola oleh mamak. Sementara itu, Harta Pusako Rendah (harta pencaharian) lebih fleksibel, dapat diatur berdasarkan hukum Islam (untuk pembagian kepada anak kandung) atau kesepakatan keluarga, yang juga diakui oleh hukum nasional. Dengan demikian, lebih dari satu norma dapat berlaku secara bersamaan untuk objek dan konteks yang berbeda.",
+    "answer": "Pluralisme hukum di Indonesia terjadi karena pengakuan negara terhadap keragaman suku dan agama, sehingga hukum nasional, agama (Islam), dan adat dapat berlaku berdampingan. Dalam adat Minangkabau, Harta Pusako Tinggi diatur murni oleh hukum adat matrilineal dengan kemenakan sebagai ahli waris utama. Sementara, Harta Pusako Rendah menjadi wilayah interaksi hukum adat, hukum Islam (faraidh), dan hukum nasional, di mana hak waris anak kandung dan pasangan lebih dominan. Hak kemenakan terhadap Harta Pusako Rendah sangat lemah atau tidak ada secara hukum formal. Pluralisme ini menunjukkan hukum adat dominan untuk harta kolektif, sedangkan harta pencaharian melibatkan pilihan dan kesepakatan antar sistem hukum.",
     "claims": [
       {
         "id": "C1",
-        "statement": "Pluralisme hukum di Indonesia adalah keadaan di mana beberapa sistem hukum (adat, agama, dan nasional) berlaku berdampingan.",
+        "statement": "Pluralisme hukum di Indonesia terjadi karena pengakuan negara terhadap keragaman suku dan agama.",
         "evidence": [
-          "source_context_penjelasan_umum"
+          "context_paragraph_1",
+          "context_paragraph_2"
         ],
-        "confidence": 0.95,
-        "assumptions": [
-          "A1"
-        ]
+        "confidence": 1.0,
+        "assumptions": []
       },
       {
         "id": "C2",
-        "statement": "Pluralisme hukum terjadi karena faktor sejarah, pengakuan konstitusional, dan kemajemukan sosio-kultural masyarakat Indonesia.",
+        "statement": "Harta Pusako Tinggi diatur murni oleh hukum adat Minangkabau yang matrilineal.",
         "evidence": [
-          "source_context_kesimpulan_netral"
+          "context_section_1"
         ],
-        "confidence": 0.9,
-        "assumptions": [
-          "A2"
-        ]
+        "confidence": 1.0,
+        "assumptions": []
       },
       {
         "id": "C3",
-        "statement": "Dalam masyarakat Minangkabau, Harta Pusako Tinggi diatur sepenuhnya oleh hukum adat matrilineal (hak kemenakan), sedangkan Harta Pusako Rendah dapat diatur oleh hukum agama atau kesepakatan keluarga.",
+        "statement": "Kemenakan adalah ahli waris utama Harta Pusako Tinggi bersama anggota perempuan dalam kaum.",
         "evidence": [
-          "source_context_perbedaan_pusako",
-          "source_context_titik_tegangan"
+          "context_section_1"
         ],
-        "confidence": 0.95,
-        "assumptions": [
-          "A3"
-        ]
+        "confidence": 1.0,
+        "assumptions": []
       },
       {
         "id": "C4",
-        "statement": "Masyarakat adat seperti Minangkabau telah mengembangkan mekanisme harmonisasi (seperti musyawarah) untuk menyelesaikan potensi konflik antar norma yang berbeda.",
+        "statement": "Harta Pusako Rendah menjadi wilayah interaksi hukum adat, hukum Islam (faraidh), dan hukum nasional.",
         "evidence": [
-          "source_context_titik_tegangan",
-          "source_context_kesimpulan_netral"
+          "context_section_2"
         ],
-        "confidence": 0.85,
-        "assumptions": [
-          "A4"
-        ]
+        "confidence": 1.0,
+        "assumptions": []
+      },
+      {
+        "id": "C5",
+        "statement": "Hak kemenakan terhadap Harta Pusako Rendah sangat lemah atau tidak ada secara hukum formal.",
+        "evidence": [
+          "context_section_2"
+        ],
+        "confidence": 1.0,
+        "assumptions": []
+      },
+      {
+        "id": "C6",
+        "statement": "Ahli waris utama Harta Pusako Rendah adalah anak kandung dan pasangan hidup.",
+        "evidence": [
+          "context_section_2"
+        ],
+        "confidence": 1.0,
+        "assumptions": []
       }
     ],
-    "uncertainties": [
-      "U1: Sejauh mana pengadilan nasional secara konsisten mengakui dan menegakkan pembagian waris berdasarkan Harta Pusako Tinggi dalam kasus sengketa yang melibatkan pihak di luar komunitas adat."
-    ],
-    "open_questions": [
-      "Q1: Bagaimana dinamika dan hasil harmonisasi antara ketiga sistem hukum tersebut dalam kasus-kasus waris kontemporer di perkotaan, di mana ikatan kekerabatan matrilineal mungkin melemah?"
-    ]
+    "uncertainties": [],
+    "open_questions": []
   },
   "critique_counts": {
-    "CRITICAL": 1,
-    "MAJOR": 11,
-    "MINOR": 0
+    "CRITICAL": 0,
+    "MAJOR": 10,
+    "MINOR": 2
   },
-  "needs_human_review": true,
+  "needs_human_review": false,
   "logs_index": [
     {
       "type": "answer",

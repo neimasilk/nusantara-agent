@@ -1,25 +1,9 @@
-### **Jawaban Final: Syarat Sah Perjanjian dalam KUHPerdata dan Dampak Ketidakpenuhan**
+**Jawaban Final:**
 
-Berdasarkan analisis kedua agen, berikut adalah sintesis jawaban:
+Syarat sah perjanjian menurut Pasal 1320 KUHPerdata adalah: (1) kesepakatan, (2) kecakapan, (3) objek tertentu, dan (4) kausa yang halal. Dampak ketidakpenuhannya dibedakan: pelanggaran syarat subjektif (1 & 2) membuat perjanjian **dapat dibatalkan** (voidable), sedangkan pelanggaran syarat objektif (3 & 4) membuatnya **batal demi hukum** (null void).
 
-**1. Syarat Sah Perjanjian Menurut KUHPerdata (Pasal 1320):**
-- **Kesepakatan** para pihak (tanpa paksaan, kekeliruan, atau penipuan).
-- **Kecakapan** bertindak (misalnya, sudah dewasa dan sehat akal).
-- **Objek tertentu** (hal yang diperjanjikan harus jelas atau dapat ditentukan).
-- **Sebab (kausa) yang halal** (tidak bertentangan dengan undang-undang, ketertiban umum, atau kesusilaan).
+**Konflik & Trade-off Norma:**
+Perspektif adat Minangkabau (ALA) mengadopsi empat syarat yang sama, tetapi menambahkan kriteria "tidak bertentangan dengan adat" dalam kausa halal. Sanksi dan otoritas pembatalannya berbeda: dalam adat, otoritas berada pada **Mamak Kepala Waris** dan **ninik mamak**, terutama untuk transaksi yang melibatkan harta kolektif (Harta Pusako Tinggi), dengan konsekuensi sanksi adat.
 
-**2. Dampak Jika Syarat Tidak Terpenuhi:**
-- **Syarat subjektif** (kesepakatan atau kecakapan) tidak terpenuhi → perjanjian **dapat dibatalkan** (*voidable*). Hanya pihak yang dirugikan yang dapat mengajukan pembatalan ke pengadilan.
-- **Syarat objektif** (objek tertentu atau sebab yang halal) tidak terpenuhi → perjanjian **batal demi hukum** (*void*). Perjanjian dianggap tidak pernah ada sejak awal.
-
-**3. Konflik Norma dan Trade-off:**
-- **Hukum Nasional (KUHPerdata)** menekankan kepastian hukum universal dan perlindungan individu (misalnya, hak anak untuk nafkah dapat menjadi bagian dari "sebab yang halal").
-- **Hukum Adat (Minangkabau)** menambahkan syarat komunitas, seperti persetujuan **mamak/ninik mamak** untuk perjanjian terkait harta pusako. Perjanjian yang sah menurut KUHPerdata bisa dianggap tidak sah dalam komunitas adat jika melanggar prinsip adat (contoh: larangan menjual harta pusako tinggi).
-- **Trade-off:** Kepatuhan pada KUHPerdata memberikan kepastian hukum nasional, tetapi dapat mengabaikan legitimasi sosial dan keberlanjutan sistem adat. Sebaliknya, mengutamakan syarat adat mungkin menghambat transaksi komersial modern namun menjaga kohesi komunitas.
-
-**4. Keputusan Pluralistik:**
-Dalam konteks Indonesia yang mengakui pluralisme hukum (Pasal 18B ayat (2) UUD 1945), **kedua sistem harus dipertimbangkan secara kontekstual**:
-- Untuk perjanjian umum (non-adat), syarat dan dampak menurut KUHPerdata berlaku penuh.
-- Untuk perjanjian yang melibatkan aset atau komunitas adat (seperti harta pusako Minangkabau), **syarat tambahan dari hukum adat setempat harus dipenuhi** agar perjanjian memiliki legitimasi lengkap. Penyelesaian sengketa sebaiknya mengutamakan musyawarah adat sebelum menggunakan jalur pengadilan nasional.
-
-**Ringkasan:** Syarat sah perjanjian mengacu pada Pasal 1320 KUHPerdata dengan dampak berbeda berdasarkan jenis syarat. Dalam praktik pluralistik, legitimasi perjanjian juga bergantung pada kesesuaian dengan norma adat setempat jika objek atau pihak-pihaknya terikat pada sistem hukum adat.
+**Keputusan Pluralistik:**
+Dalam sistem hukum nasional, KUHPerdata berlaku sebagai hukum umum. Namun, dalam komunitas adat Minangkabau, untuk perjanjian yang melibatkan subjek atau objek adat (seperti Harta Pusako), mekanisme dan legitimasi pembatalan menurut hukum adat dapat diakui secara bersamaan, sejauh tidak bertentangan dengan ketertiban umum. Penyelesaian sengketa dapat melibatkan kedua kerangka hukum secara komplementer.

@@ -6,26 +6,26 @@
     {
       "id": "K1",
       "target_claim_id": "C1",
-      "issue_type": "overclaim",
-      "description": "Klaim bahwa konsep gono-gini 'tidak dikenal dalam sistem adat Minangkabau asli' adalah generalisasi yang berlebihan. Meskipun istilah dan mekanisme formalnya berasal dari KUHPerdata, konsep harta bersama hasil pencaharian suami-istri (yang menjadi inti gono-gini) secara substansial dikenal dalam adat Minangkabau sebagai Harta Pusako Rendah atau Sako. Klaim ini mengabaikan kemungkinan konvergensi konseptual antara hukum adat dan nasional.",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa harta bersama suami-istri disebut 'Harta Suko' tidak didukung oleh sumber yang diberikan (source_id_1). Istilah yang lebih umum dikenal dalam literatur adat Minangkabau untuk harta bersama adalah 'Harta Pencaharian' atau 'Harta Sumbangan', sementara 'Harta Suko' bukanlah istilah baku yang lazim digunakan.",
       "severity": "MAJOR",
-      "suggested_fix": "Reformulasi klaim menjadi: 'Konsep harta bersama (gono-gini) dalam bentuk dan mekanisme hukum perdata nasional (KUHPerdata) tidak identik dengan pengaturan harta bersama dalam sistem adat Minangkabau asli, yang memiliki klasifikasi dan jalur waris yang berbeda.'"
+      "suggested_fix": "Ganti istilah 'Harta Suko' dengan istilah yang lebih tepat dan didukung sumber, seperti 'Harta Pencaharian' atau 'Harta Sumbangan', dan pastikan referensi sumber mendukung penggunaan istilah tersebut."
     },
     {
       "id": "K2",
       "target_claim_id": "C2",
-      "issue_type": "evidence_gap",
-      "description": "Klaim tentang pembagian Harta Pusako Tinggi dan Rendah disajikan sebagai fakta yang pasti, namun tidak disertai penjelasan mengenai sifat 'kolektif' Harta Pusako Tinggi dan bagaimana status Harta Pusako Rendah dalam konteks perceraian atau kematian salah satu pasangan. Bukti dari 'source_context' tidak dijelaskan lebih lanjut, sehingga klaim terkesan sebagai pernyataan umum tanpa dukungan spesifik.",
-      "severity": "MINOR",
-      "suggested_fix": "Tambahkan penjelasan singkat atau contoh konkret dari 'source_context' yang mendukung pernyataan tentang perbedaan dan jalur waris kedua jenis harta tersebut, atau akui bahwa penjelasan ini merupakan penyederhanaan dari sistem yang kompleks."
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa Harta Pusako Rendah 'dapat diwariskan kepada anak kandung' merupakan penyederhanaan yang berpotensi menyesatkan. Dalam adat Minangkabau, pewarisan Harta Pusako Rendah seringkali melibatkan kompleksitas di mana hak kemenakan (berdasarkan adat) dan hak anak (berdasarkan hukum Islam) dapat bersaing, dan tidak selalu otomatis jatuh ke anak kandung.",
+      "severity": "MAJOR",
+      "suggested_fix": "Klarifikasi klaim dengan menyatakan bahwa meskipun Harta Pusako Rendah pada prinsipnya dapat diwariskan kepada anak, dalam praktiknya sering terjadi ketegangan dengan hak kemenakan dan penyelesaiannya memerlukan musyawarah (seperti yang diakui dalam C5 dan C6)."
     },
     {
       "id": "K3",
-      "target_claim_id": "C3",
+      "target_claim_id": "C4",
       "issue_type": "logic_gap",
-      "description": "Klaim bahwa pemahaman sosial adat 'bertentangan dengan filosofi pembagian setara 50:50 dalam gono-gini' mengandung lompatan logika. 'Bertentangan' menyiratkan oposisi biner, padahal dalam praktiknya mungkin terdapat tumpang tindih, adaptasi, atau bahkan pengakuan terhadap prinsip keadilan yang berbeda (bukan kesetaraan matematis 50:50) yang tidak serta merta bertentangan. Klaim ini tidak mempertimbangkan kemungkinan koeksistensi atau interpretasi yang berbeda atas 'pembagian setara'.",
-      "severity": "MAJOR",
-      "suggested_fix": "Ganti kata 'bertentangan' dengan frasa yang lebih bernuansa seperti 'seringkali berbeda secara mendasar dari' atau 'tidak selalu sejalan dengan', dan elaborasi bahwa perbedaan tersebut terletak pada penekanan pada asal-usul dan kepemilikan kolektif versus pencapaian individu dalam perkawinan."
+      "description": "Terdapat kesenjangan logika antara klaim C4 ('adat sangat kuat mengutamakan hak kemenakan atas Harta Pusako Tinggi') dengan konteks pembahasan utama jawaban tentang Harta Pusako Rendah. Penekanan pada kekuatan hak kemenakan atas Harta Pusako Tinggi, tanpa penjelasan transisi yang jelas, dapat mengaburkan fokus pembahasan tentang ketegangan yang justru terjadi pada Harta Pusako Rendah (seperti dalam C5).",
+      "severity": "MINOR",
+      "suggested_fix": "Hubungkan klaim ini secara eksplisit dengan menjelaskan bahwa prinsip kuat hak kemenakan atas Harta Pusako Tinggi inilah yang kemudian 'merembes' atau menciptakan ketegangan dalam pengaturan Harta Pusako Rendah, sehingga konteksnya menjadi lebih jelas."
     }
   ]
 }

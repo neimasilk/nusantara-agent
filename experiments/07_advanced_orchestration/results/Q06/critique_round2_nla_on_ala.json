@@ -5,27 +5,27 @@
   "critiques": [
     {
       "id": "K1",
-      "target_claim_id": "C1",
-      "issue_type": "evidence_gap",
-      "description": "Klaim bahwa 'sentana' merujuk pada ahli waris atau keturunan hanya didukung oleh 'general_knowledge' dengan kepercayaan rendah (0.6). ALA gagal merujuk pada sumber otoritatif seperti literatur hukum adat Bali (misalnya, 'Awig-awig' desa adat) atau putusan pengadilan yang mengakui hak-hak sentana, sehingga meninggalkan kesenjangan bukti yang signifikan.",
+      "target_claim_id": null,
+      "issue_type": "domain_mismatch",
+      "description": "Agent ALA menyatakan tidak dapat menjawab pertanyaan tentang makna 'sentana' dalam adat Bali karena keterbatasan domain pengetahuannya. Namun, agent tetap memberikan jawaban yang berfokus pada sistem pewarisan Minangkabau. Ini adalah domain mismatch karena pertanyaan awal (dari round 1) spesifik menanyakan tentang 'sentana' dalam konteks Bali, bukan meminta perbandingan atau penjelasan sistem lain. Agent gagal mengakui bahwa jawabannya tidak relevan dengan pertanyaan yang diajukan.",
       "severity": "MAJOR",
-      "suggested_fix": "Sebutkan setidaknya satu sumber spesifik seperti 'Buku Hukum Adat Bali' karya I Gusti Gde Raka atau referensi pada Awig-awig desa adat tertentu yang mendefinisikan 'sentana'."
+      "suggested_fix": "Agent seharusnya secara tegas menyatakan ketidakmampuan menjawab pertanyaan spesifik tentang 'sentana' di Bali dan menolak untuk memberikan jawaban yang tidak relevan. Pernyataan seperti 'hanya sistem pewarisan matrilineal Minangkabau yang dapat dijelaskan' menciptakan kesan bahwa penjelasan tersebut adalah jawaban pengganti, padahal tidak menjawab pertanyaan."
     },
     {
       "id": "K2",
-      "target_claim_id": "C2",
-      "issue_type": "overclaim",
-      "description": "Klaim bahwa sistem kekerabatan Bali 'umumnya bersifat patrilineal' adalah penyederhanaan berlebihan. Dalam praktiknya, sistem pewarisan adat Bali (terutama bagi warga biasa/Bali Aga) seringkali bersifat parental/bilateral, di mana anak laki-laki dan perempuan dapat mewarisi, berbeda dengan sistem patrilineal ketat seperti di Batak. Pernyataan ini berisiko menyesatkan tanpa penjelasan nuansa.",
+      "target_claim_id": null,
+      "issue_type": "logic_gap",
+      "description": "Terdapat kesenjangan logika antara pernyataan 'Saya tidak dapat menjawab' dengan tindakan agent yang tetap melanjutkan untuk menjelaskan sistem Minangkabau secara detail. Jika agent benar-benar tidak memiliki pengetahuan tentang Bali, maka tidak ada dasar logis untuk mengisi ruang jawaban dengan sistem yang berbeda. Struktur jawaban (dengan klaim C1-C5) justru memperkuat kesan bahwa agent sedang menjawab suatu pertanyaan, padahal pertanyaannya adalah tentang Bali.",
       "severity": "MAJOR",
-      "suggested_fix": "Klarifikasi bahwa 'patrilineal' berlaku terutama untuk kalangan tertentu (misalnya, bangsawan/triwangsa), dan sebutkan variasi sistem parental/bilateral yang juga ada dalam masyarakat Bali."
+      "suggested_fix": "Logika yang konsisten adalah: 1) Identifikasi pertanyaan berada di luar domain pengetahuan. 2) Tahan diri untuk tidak menghasilkan klaim apa pun yang terkait dengan pertanyaan tersebut. 3) Jika ingin memberikan konteks perbandingan, harus dinyatakan secara eksplisit bahwa itu adalah informasi dari domain lain yang TIDAK menjawab pertanyaan asli."
     },
     {
       "id": "K3",
       "target_claim_id": "C1",
-      "issue_type": "domain_mismatch",
-      "description": "ALA sebagai 'Adat Law Agent' seharusnya memiliki pengetahuan mendalam tentang istilah-istilah kunci dalam hukum adat berbagai daerah, termasuk 'sentana' di Bali. Namun, jawaban hanya mengandalkan pengetahuan umum dan mengalihkan ke ahli eksternal, menunjukkan ketidakmampuan domain dalam memberikan analisis hukum adat yang mendalam sebagaimana diharapkan dari peran agen spesialis.",
-      "severity": "CRITICAL",
-      "suggested_fix": "Perluas basis pengetahuan dengan memasukkan prinsip-prinsip hukum adat Bali yang relevan, seperti perbedaan antara 'purusa' (keturunan laki-laki) dan 'sentana' (ahli waris yang sah), serta kaitannya dengan hak waris atas tanah 'tanah ayahan desa'."
+      "issue_type": "overclaim",
+      "description": "Meskipun klaim C1-C5 didukung oleh sumber tentang Minangkabau (source_id_1), agent melakukan overclaim dengan menyajikannya dalam konteks jawaban atas pertanyaan tentang Bali. Ini menciptakan risiko bahwa pengguna akan menganggap informasi tentang Minangkabau memiliki relevansi langsung atau merupakan bagian dari jawaban untuk memahami 'sentana', yang tidak benar. Agent 'mengklaim' ruang jawaban dengan informasi yang, meskipun faktual dalam domainnya, tidak sesuai dengan permintaan.",
+      "severity": "MAJOR",
+      "suggested_fix": "Hindari overclaim dengan memisahkan secara jelas antara: (a) pengakuan ketidakmampuan menjawab pertanyaan target, dan (b) penawaran informasi tambahan dari domain lain. Jika memilih untuk memberikan informasi tambahan, harus dengan pernyataan pembatas yang sangat kuat, misalnya: 'Sebagai informasi tambahan yang tidak terkait langsung dengan pertanyaan Anda, dalam sistem adat Minangkabau...'"
     }
   ]
 }

@@ -6,26 +6,26 @@
     {
       "id": "K1",
       "target_claim_id": "C1",
-      "issue_type": "overclaim",
-      "description": "Klaim bahwa 'KUHPerdata secara prinsip tidak berlaku bagi masyarakat Minangkabau' adalah pernyataan yang terlalu luas dan dapat menyesatkan. Dalam sistem hukum Indonesia, KUHPerdata berlaku sebagai hukum umum (lex generalis), sementara hukum adat dan hukum Islam berperan sebagai hukum khusus (lex specialis). KUHPerdata tetap berlaku, terutama jika tidak bertentangan dengan hukum adat yang masih hidup dan diakui, atau dalam hal-hal yang tidak diatur oleh hukum adat. Pernyataan ini mengabaikan prinsip unifikasi dan kodifikasi hukum nasional.",
+      "issue_type": "evidence_gap",
+      "description": "Klaim C1 menyatakan bahwa bagian mutlak (legitieme portie) dalam KUHPerdata harus diberikan kepada ahli waris dalam garis lurus. Namun, sumber yang dirujuk (source_id_1) tidak memberikan bukti spesifik tentang definisi atau penerapan legitieme portie dalam KUHPerdata. Tidak ada kutipan pasal atau penjelasan yang mendukung klaim ini.",
       "severity": "MAJOR",
-      "suggested_fix": "Klaim seharusnya dirumuskan dengan lebih hati-hati, misalnya: 'Dalam praktik pewarisan masyarakat Minangkabau, ketentuan KUHPerdata (khususnya mengenai legitieme portie) umumnya tidak diterapkan secara langsung, karena telah digantikan oleh prinsip-prinsip hukum adat dan hukum Islam yang hidup dan diakui sebagai hukum yang berlaku bagi masyarakat tersebut.'"
+      "suggested_fix": "Tambahkan referensi spesifik ke pasal-pasal KUHPerdata yang mengatur legitieme portie (misalnya, Pasal 913-918 KUHPerdata) untuk mendukung klaim."
     },
     {
       "id": "K2",
-      "target_claim_id": "C2",
-      "issue_type": "evidence_gap",
-      "description": "Klaim bahwa 'Wasiat atas Harta Pusako Tinggi tidak diakui' tidak didukung oleh bukti yang memadai dari konteks yang diberikan. Konteks hanya menyebutkan bahwa 'Harta pusako tinggi ... tidak boleh diwariskan kepada anak kandung' dan 'pengaturannya tunduk pada hukum adat'. Namun, tidak ada pernyataan eksplisit dalam konteks yang melarang atau menyatakan 'tidak diakui'-nya wasiat atas harta tersebut. Ketidakbolehan mewariskan kepada anak kandung tidak serta-merta identik dengan ketidakmampuan mutlak untuk membuat wasiat. Klaim ini memerlukan dukungan bukti yang lebih spesifik dari sumber hukum adat Minangkabau.",
+      "target_claim_id": "C4",
+      "issue_type": "logic_gap",
+      "description": "Klaim C4 menyatakan bahwa untuk Harta Pusako Rendah, wasiat diakui tetapi harus menghormati bagian mutlak anak kandung sesuai KUHPerdata. Namun, tidak ada penjelasan logis mengapa Harta Pusako Rendah tunduk pada ketentuan KUHPerdata sementara Harta Pusako Tinggi tidak. Sumber yang dirujuk (source_id_1) tidak menjelaskan dasar hukum atau logika penerapan dualisme hukum ini.",
       "severity": "MAJOR",
-      "suggested_fix": "Klaim seharusnya lebih akurat dengan merujuk pada sifat kolektif dan pengelolaan Harta Pusako Tinggi, misalnya: 'Karena Harta Pusako Tinggi bersifat kolektif dan dikelola untuk kepentingan kaum, ruang bagi individu untuk membuat wasiat (testamen) atas harta tersebut sangatlah terbatas atau bahkan tidak ada, karena individu bukan pemilik mutlak.' Atau, tambahkan referensi doktrin atau yurisprudensi adat yang secara tegas melarang wasiat atas harta jenis ini."
+      "suggested_fix": "Jelaskan dasar hukum atau prinsip yang membedakan penerapan KUHPerdata antara Harta Pusako Tinggi dan Rendah, misalnya berdasarkan sifat kepemilikan pribadi vs. komunal."
     },
     {
       "id": "K3",
-      "target_claim_id": "C3",
-      "issue_type": "logic_gap",
-      "description": "Klaim ini menyatakan adanya 'dualisme hak' antara kemenakan dan anak kandung/istri atas Harta Pencaharian, dengan kemenakan memiliki hak 'menurut adat' dan anak/istri memiliki hak 'menurut hukum Islam'. Namun, penjelasan ini tidak secara logis menghubungkan bagaimana 'dualisme' ini beroperasi sebagai 'batasan' bagi wasiat. Apakah wasiat hanya sah jika memenuhi kedua sistem hukum? Atau wasiat bisa sah di satu sistem tetapi tidak di sistem lain? Klaim tentang batasan menjadi kabur tanpa menjelaskan mekanisme atau hierarki penyelesaian konflik antara kedua sumber hak tersebut dalam konteks pembuatan wasiat.",
+      "target_claim_id": "C5",
+      "issue_type": "overclaim",
+      "description": "Klaim C5 menyatakan bahwa 'Kemenakan bukan ahli waris utama Harta Pusako Rendah menurut hukum nasional.' Ini adalah overclaim karena sumber yang dirujuk (source_id_1) tidak secara eksplisit membahas status kemenakan sebagai ahli waris Harta Pusako Rendah dalam konteks hukum nasional. Klaim ini menggeneralisasi tanpa bukti yang cukup.",
       "severity": "MAJOR",
-      "suggested_fix": "Perjelas mekanisme batasannya. Misalnya: 'Wasiat atas Harta Pencaharian dibatasi oleh kemungkinan timbulnya sengketa hukum. Jika wasiat tersebut mengabaikan hak kemenakan secara total, ia dapat dibatalkan melalui proses adat atau ditolak pengesahannya di pengadilan agama (yang juga memperhatikan hukum adat yang masih hidup). Sebaliknya, wasiat yang mengabaikan anak kandung dapat bertentangan dengan Kompilasi Hukum Islam. Oleh karena itu, wasiat yang damai biasanya merupakan hasil musyawarah yang mengakomodasi kedua kepentingan.'"
+      "suggested_fix": "Kurangi klaim menjadi 'Berdasarkan sumber, kemenakan tidak disebut sebagai ahli waris utama Harta Pusako Rendah' atau cari bukti tambahan yang mendukung pernyataan tentang hukum nasional."
     }
   ]
 }

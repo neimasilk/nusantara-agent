@@ -101,9 +101,9 @@ python experiments/07_advanced_orchestration/eval_scores.py --scores experiments
 
 | Metrik | Threshold | Hasil Aktual | PASS/FAIL |
 |--------|-----------|--------------|-----------|
-| Accuracy | >= +10% | -0.25 (vs baseline) | FAIL |
-| Completeness | >= +10% | -0.33 (vs baseline) | FAIL |
-| Cultural Sensitivity | >= +10% | -0.17 (vs baseline) | FAIL |
+| Accuracy | >= +10% | -0.67 (vs baseline) | FAIL |
+| Completeness | >= +10% | -0.67 (vs baseline) | FAIL |
+| Cultural Sensitivity | >= +10% | -0.33 (vs baseline) | FAIL |
 | Efficiency | <= 1.2x baseline | Belum diukur | TBD |
 
 ### 3.2 Analisis Kegagalan (WAJIB)

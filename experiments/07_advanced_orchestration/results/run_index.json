@@ -14,10 +14,10 @@
     },
     "graph_data_path": "experiments/01_triple_extraction/result.json",
     "timing_seconds": {
-      "retrieval_parallel": 101.2242,
-      "debate": 186.2043,
-      "supervisor": 29.7315,
-      "total": 317.16
+      "retrieval_parallel": 84.4821,
+      "debate": 221.5727,
+      "supervisor": 9.8109,
+      "total": 315.8657
     },
     "artifacts": {
       "debate_summary": "experiments\\07_advanced_orchestration\\results\\Q01\\debate_summary.json",
@@ -39,10 +39,10 @@
     },
     "graph_data_path": "experiments/01_triple_extraction/result.json",
     "timing_seconds": {
-      "retrieval_parallel": 81.2433,
-      "debate": 220.2362,
-      "supervisor": 18.8356,
-      "total": 320.315
+      "retrieval_parallel": 86.5293,
+      "debate": 214.3452,
+      "supervisor": 7.1784,
+      "total": 308.053
     },
     "artifacts": {
       "debate_summary": "experiments\\07_advanced_orchestration\\results\\Q02\\debate_summary.json",
@@ -64,10 +64,10 @@
     },
     "graph_data_path": "experiments/01_triple_extraction/result.json",
     "timing_seconds": {
-      "retrieval_parallel": 83.9897,
-      "debate": 268.3813,
-      "supervisor": 32.2016,
-      "total": 384.5726
+      "retrieval_parallel": 65.4464,
+      "debate": 253.7443,
+      "supervisor": 8.3898,
+      "total": 327.5805
     },
     "artifacts": {
       "debate_summary": "experiments\\07_advanced_orchestration\\results\\Q03\\debate_summary.json",
@@ -89,10 +89,10 @@
     },
     "graph_data_path": "experiments/01_triple_extraction/result.json",
     "timing_seconds": {
-      "retrieval_parallel": 115.9259,
-      "debate": 242.3146,
-      "supervisor": 23.6517,
-      "total": 381.8922
+      "retrieval_parallel": 87.8148,
+      "debate": 232.9712,
+      "supervisor": 9.0148,
+      "total": 329.8007
     },
     "artifacts": {
       "debate_summary": "experiments\\07_advanced_orchestration\\results\\Q04\\debate_summary.json",
@@ -114,10 +114,10 @@
     },
     "graph_data_path": "experiments/01_triple_extraction/result.json",
     "timing_seconds": {
-      "retrieval_parallel": 89.0955,
-      "debate": 264.2138,
-      "supervisor": 18.4716,
-      "total": 371.7809
+      "retrieval_parallel": 107.0157,
+      "debate": 225.4242,
+      "supervisor": 11.6963,
+      "total": 344.1361
     },
     "artifacts": {
       "debate_summary": "experiments\\07_advanced_orchestration\\results\\Q05\\debate_summary.json",
@@ -139,10 +139,10 @@
     },
     "graph_data_path": "experiments/01_triple_extraction/result.json",
     "timing_seconds": {
-      "retrieval_parallel": 86.485,
-      "debate": 190.8954,
-      "supervisor": 23.8859,
-      "total": 301.2663
+      "retrieval_parallel": 101.4856,
+      "debate": 216.3781,
+      "supervisor": 9.8679,
+      "total": 327.7316
     },
     "artifacts": {
       "debate_summary": "experiments\\07_advanced_orchestration\\results\\Q06\\debate_summary.json",
@@ -164,10 +164,10 @@
     },
     "graph_data_path": "experiments/01_triple_extraction/result.json",
     "timing_seconds": {
-      "retrieval_parallel": 70.5896,
-      "debate": 198.1996,
-      "supervisor": 22.6807,
-      "total": 291.4699
+      "retrieval_parallel": 101.9388,
+      "debate": 211.127,
+      "supervisor": 9.2231,
+      "total": 322.2889
     },
     "artifacts": {
       "debate_summary": "experiments\\07_advanced_orchestration\\results\\Q07\\debate_summary.json",
@@ -189,10 +189,10 @@
     },
     "graph_data_path": "experiments/01_triple_extraction/result.json",
     "timing_seconds": {
-      "retrieval_parallel": 71.976,
-      "debate": 250.7372,
-      "supervisor": 23.557,
-      "total": 346.2702
+      "retrieval_parallel": 99.7697,
+      "debate": 218.843,
+      "supervisor": 9.3089,
+      "total": 327.9216
     },
     "artifacts": {
       "debate_summary": "experiments\\07_advanced_orchestration\\results\\Q08\\debate_summary.json",
@@ -214,10 +214,10 @@
     },
     "graph_data_path": "experiments/01_triple_extraction/result.json",
     "timing_seconds": {
-      "retrieval_parallel": 109.6885,
-      "debate": 214.4419,
-      "supervisor": 17.3525,
-      "total": 341.4829
+      "retrieval_parallel": 111.786,
+      "debate": 220.4804,
+      "supervisor": 8.4508,
+      "total": 340.7172
     },
     "artifacts": {
       "debate_summary": "experiments\\07_advanced_orchestration\\results\\Q09\\debate_summary.json",
@@ -239,10 +239,10 @@
     },
     "graph_data_path": "experiments/01_triple_extraction/result.json",
     "timing_seconds": {
-      "retrieval_parallel": 88.5895,
-      "debate": 252.71,
-      "supervisor": 26.1931,
-      "total": 367.4927
+      "retrieval_parallel": 100.9779,
+      "debate": 211.1268,
+      "supervisor": 10.1361,
+      "total": 322.2407
     },
     "artifacts": {
       "debate_summary": "experiments\\07_advanced_orchestration\\results\\Q10\\debate_summary.json",
@@ -264,10 +264,10 @@
     },
     "graph_data_path": "experiments/01_triple_extraction/result.json",
     "timing_seconds": {
-      "retrieval_parallel": 100.5422,
-      "debate": 295.7111,
-      "supervisor": 21.641,
-      "total": 417.8943
+      "retrieval_parallel": 107.8751,
+      "debate": 234.8261,
+      "supervisor": 9.3945,
+      "total": 352.0957
     },
     "artifacts": {
       "debate_summary": "experiments\\07_advanced_orchestration\\results\\Q11\\debate_summary.json",
@@ -289,10 +289,10 @@
     },
     "graph_data_path": "experiments/01_triple_extraction/result.json",
     "timing_seconds": {
-      "retrieval_parallel": 84.3938,
-      "debate": 221.625,
-      "supervisor": 24.1757,
-      "total": 330.1946
+      "retrieval_parallel": 109.6661,
+      "debate": 227.7323,
+      "supervisor": 7.5575,
+      "total": 344.9559
     },
     "artifacts": {
       "debate_summary": "experiments\\07_advanced_orchestration\\results\\Q12\\debate_summary.json",

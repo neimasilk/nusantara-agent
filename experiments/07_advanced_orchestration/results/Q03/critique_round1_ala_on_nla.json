@@ -6,26 +6,26 @@
     {
       "id": "K1",
       "target_claim_id": "C1",
-      "issue_type": "evidence_gap",
-      "description": "Klaim bahwa Pasal 131 IS masih diakui sebagai dasar berlakunya hukum adat tidak didukung dengan bukti aktual. Pasal 131 IS adalah bagian dari Indische Staatsregeling yang sudah tidak berlaku sejak kemerdekaan. Referensi ke putusan MA tahun 1961 juga terlalu tua dan tidak mencerminkan perkembangan hukum terkini.",
-      "severity": "CRITICAL",
-      "suggested_fix": "Gunakan dasar hukum yang masih berlaku seperti UU No. 1/1974 tentang Perkawinan, UU No. 3/2006 tentang Peradilan Agama, atau Putusan Mahkamah Konstitusi yang relevan. Tambahkan referensi yurisprudensi MA yang lebih baru (setelah tahun 2000)."
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa Pasal 35 UU Perkawinan 1974 'mengikat semua warga negara, termasuk masyarakat Minangkabau' adalah generalisasi yang berlebihan dan mengabaikan asas personalitas hukum dan keberlakuan hukum adat bagi masyarakat hukum adat. UU Perkawinan 1974 tidak serta-merta meniadakan hukum adat dalam pengaturan harta bersama, khususnya bagi masyarakat yang masih hidup dalam sistem adat yang kuat seperti Minangkabau. Pasal 2 dan 3 UU Perkawinan 1974 sendiri mengakui keberadaan hukum adat dan hukum lain yang hidup dalam masyarakat.",
+      "severity": "MAJOR",
+      "suggested_fix": "Klaim harus dikualifikasi dengan menyatakan bahwa UU Perkawinan 1974 berlaku secara nasional, namun penerapannya terhadap masyarakat Minangkabau dapat mengalami interaksi atau konflik dengan hukum adat setempat yang masih diakui. Analisis harus mempertimbangkan asas personalitas hukum dan yurisprudensi Mahkamah Agung terkait penyelesaian konflik hukum ini."
     },
     {
       "id": "K2",
-      "target_claim_id": "C2",
-      "issue_type": "overclaim",
-      "description": "Klaim bahwa harta pusako rendah 'tunduk pada sistem kewarisan matrilineal' terlalu menyederhanakan. Dalam praktik, ada variasi lokal (luhak) dan perkembangan adaptasi hukum adat Minangkabau yang mengakomodasi hak anak kandung dalam kondisi tertentu, terutama melalui mekanisme hibah atau wasiat.",
-      "severity": "MAJOR",
-      "suggested_fix": "Sebutkan bahwa meskipun prinsip matrilineal dominan, ada pengecualian dan modifikasi dalam praktik adat kontemporer. Berikan contoh putusan pengadilan yang menunjukkan fleksibilitas penerapan hukum adat Minangkabau."
+      "target_claim_id": "C4",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa 'Kemenakan dalam sistem adat Minangkabau bukan ahli waris menurut UU Perkawinan, KUHPerdata, atau KHI' benar secara literal, namun gagal mengakui dan menganalisis posisi kemenakan dalam sistem kekerabatan matrilineal Minangkabau. Dalam adat Minangkabau, kemenakan (terutama kemenakan laki-laki) adalah ahli waris utama dari harta pusako tinggi (harta turun-temurun). Klaim ini menciptakan kesan bahwa kemenakan tidak memiliki hak apapun, padahal sengketa sering muncul justru karena klaim kemenakan atas harta yang dianggap sebagai pusako tinggi atau percampuran harta. Bukti berupa literatur adat Minangkabau atau yurisprudensi tentang sengketa serupa tidak disertakan.",
+      "severity": "CRITICAL",
+      "suggested_fix": "Tambahkan analisis tentang posisi kemenakan dalam hukum adat Minangkabau dan potensi klaim mereka. Sertakan bukti seperti prinsip 'pusako tinggi' dan 'pusako rendah', serta bagaimana pengadilan (misalnya dalam Putusan Mahkamah Agung atau Pengadilan Negeri di Sumatera Barat) pernah mempertimbangkan klaim kemenakan, meskipun akhirnya mungkin tidak mengabulkan untuk harta pencaharian murni."
     },
     {
       "id": "K3",
-      "target_claim_id": "C4",
+      "target_claim_id": "C5",
       "issue_type": "logic_gap",
-      "description": "Klaim bahwa pengadilan akan memeriksa status keterikatan pewaris pada hukum adat dan jenis harta mengandung logika sirkular. Untuk menentukan hukum mana yang berlaku, pengadilan harus terlebih dahulu menentukan status hukum pewaris, tetapi status itu sendiri ditentukan oleh hukum mana yang berlaku. Tidak ada kriteria operasional yang jelas tentang bagaimana 'keterikatan pada hukum adat' dinilai.",
+      "description": "Klaim bahwa 'Pengadilan, dalam menyelesaikan sengketa, harus mendahulukan UU Perkawinan 1974 sebagai hukum nasional' mengandung lompatan logika yang mengabaikan proses berjenjang dalam penyelesaian konflik hukum. Asas lex specialis (Pasal 35 UU Perkawinan) vs. lex generalis (hukum adat) bukan satu-satunya pertimbangan. Pengadilan seringkali terlebih dahulu melakukan identifikasi dan kualifikasi fakta (apakah harta tersebut benar-benar harta pencaharian murni atau ada unsur pusako tinggi), serta mempertimbangkan asas keadilan dan kemanfaatan. Langsung berasumsi pengadilan 'harus mendahulukan' UU Perkawinan mengabaikan kemungkinan bahwa hukum adat dapat diakui sebagai hukum yang hidup (living law) berdasarkan Pasal 5 ayat (1) UU No. 48 Tahun 2009 tentang Kekuasaan Kehakiman.",
       "severity": "MAJOR",
-      "suggested_fix": "Berikan kriteria konkret yang digunakan pengadilan untuk menilai keterikatan pada hukum adat, seperti: tempat tinggal, pengakuan masyarakat adat, partisipasi dalam kegiatan adat, atau pernyataan diri. Rujuk pada putusan MA yang menjelaskan parameter tersebut."
+      "suggested_fix": "Perbaiki logika dengan menjelaskan tahapan yang mungkin diambil pengadilan: (1) Mengkualifikasi hubungan hukum dan jenis harta; (2) Jika terbukti harta pencaharian murni, maka UU Perkawinan 1974 menjadi acuan utama; (3) Namun, jika terdapat percampuran atau klaim berdasarkan adat, pengadilan dapat mempertimbangkan hukum adat sebagai unsur dalam menemukan hukum (rechtsvinding), meskipun mungkin tidak mengesampingkan hak anak kandung yang dijamin UU."
     }
   ]
 }

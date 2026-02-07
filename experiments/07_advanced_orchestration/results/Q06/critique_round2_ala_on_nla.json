@@ -7,25 +7,25 @@
       "id": "K1",
       "target_claim_id": "C1",
       "issue_type": "evidence_gap",
-      "description": "Klaim bahwa 'sentana' berarti 'penerus garis keturunan (purusa) dan pemujaan leluhur (pitra puja)' tidak didukung oleh bukti yang memadai. Istilah 'pitra puja' tidak dijelaskan atau dikaitkan secara eksplisit dengan definisi sentana dalam sumber yang dirujuk. Definisi ini tampaknya merupakan interpretasi atau elaborasi yang tidak sepenuhnya didasarkan pada bukti tekstual dari hukum adat Bali.",
+      "description": "Klaim C1 menyatakan sentana 'terutama dalam keluarga tanpa anak laki-laki kandung.' Namun, sumber yang dirujuk (source_id_1) tidak memberikan bukti spesifik bahwa ini adalah kondisi utama atau satu-satunya. Pengangkatan sentana bisa juga terjadi dalam konteks lain, seperti untuk memperkuat hubungan sosial atau melanjutkan garis keturunan meskipun ada anak kandung.",
       "severity": "MAJOR",
-      "suggested_fix": "Hapus referensi pada 'pitra puja' dari definisi sentana, atau sertakan kutipan langsung dari sumber hukum adat (seperti Awig-Awig Desa Adat) yang secara eksplisit mendefinisikan sentana dengan istilah tersebut. Fokus pada definisi inti sentana sebagai penerus garis keturunan (purusa)."
+      "suggested_fix": "Perjelas bahwa pengangkatan sentana sering kali terkait dengan ketiadaan anak laki-lahi, tetapi bukan satu-satunya alasan. Sebutkan kemungkinan konteks lain atau tambahkan sumber yang mendukung pernyataan 'terutama'."
     },
     {
       "id": "K2",
-      "target_claim_id": "C2",
+      "target_claim_id": "C5",
       "issue_type": "overclaim",
-      "description": "Klaim bahwa sistem pewarisan adat Bali memiliki 'kecenderungan mayorat laki-laki' terlalu menyederhanakan dan berpotensi menyesatkan. Mayorat biasanya mengacu pada hak waris anak sulung laki-laki. Dalam konteks Bali, meskipun patrilineal, pembagian waris dapat melibatkan anak laki-laki lainnya, dan sistem 'mayorat' tidak selalu diterapkan secara universal di semua wilayah atau jenis harta (misalnya, untuk harta pencaharian).",
+      "description": "Klaim C5 menyatakan harta pencaharian 'lebih fleksibel dapat diwariskan kepada semua anak kandung dan sentana.' Pernyataan ini terlalu umum dan tidak mempertimbangkan variasi aturan di tingkat desa adat (pakraman). Fleksibilitas ini mungkin tidak berlaku seragam di seluruh Bali, dan bisa ada pembatasan tertentu terhadap sentana.",
       "severity": "MAJOR",
-      "suggested_fix": "Ganti frasa 'dengan kecenderungan mayorat laki-laki' dengan deskripsi yang lebih akurat, seperti 'dengan hak waris utama pada anak laki-laki (terutama yang tertua dalam konteks tertentu)' atau 'dengan pembagian yang lebih besar kepada anak laki-laki, terutama untuk harta pusaka'. Sertakan penjelasan bahwa penerapan 'mayorat' dapat bervariasi."
+      "suggested_fix": "Kualifikasi klaim dengan menyebutkan bahwa fleksibilitas ini umum dalam prinsip adat Bali, tetapi pelaksanaannya dapat bervariasi tergantung aturan setempat (awig-awig)."
     },
     {
       "id": "K3",
-      "target_claim_id": "C4",
-      "issue_type": "logic_gap",
-      "description": "Klaim bahwa hak waris anak kandung 'dibedakan berdasarkan... jenis perkawinan orang tua' tidak dijelaskan lebih lanjut dan menimbulkan kebingungan. Jawaban tidak menjelaskan bagaimana jenis perkawinan (misalnya, perkawinan biasa vs. nyentana) mempengaruhi status dan hak waris anak. Tanpa penjelasan ini, klaim tersebut terasa tidak lengkap dan meninggalkan kesenjangan logika bagi pembaca.",
-      "severity": "MAJOR",
-      "suggested_fix": "Perluas penjelasan untuk menyertakan contoh konkret. Misalnya, jelaskan bahwa anak dari perkawinan nyentana (di mana suami masuk keluarga istri) dapat mengubah status anak perempuan menjadi sentana bagi orang tuanya, sehingga hak warisnya menjadi setara atau berbeda dengan anak laki-laki dalam konteks keluarga tersebut."
+      "target_claim_id": "C6",
+      "issue_type": "domain_mismatch",
+      "description": "Klaim C6 merekomendasikan 'pengangkatan sentana secara resmi melalui penetapan pengadilan dan membuat wasiat' berdasarkan PP No. 54 Tahun 2007. Rekomendasi ini berasal dari hukum positif (nasional), sementara konteks pembahasan adalah hukum adat Bali. Hal ini menimbulkan potensi konflik atau ketidaksesuaian, karena prosedur adat mungkin tidak selalu mensyaratkan penetapan pengadilan.",
+      "severity": "CRITICAL",
+      "suggested_fix": "Pisahkan rekomendasi untuk kepastian hukum nasional dari deskripsi status hukum adat. Jelaskan bahwa saran ini untuk mengamankan posisi di luar lingkup adat, dan akui bahwa dalam sistem adat murni, pengesahan mungkin melalui upacara dan pengakuan masyarakat."
     }
   ]
 }

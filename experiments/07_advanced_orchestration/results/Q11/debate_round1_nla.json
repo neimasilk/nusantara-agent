@@ -1,58 +1,71 @@
 {
   "round": 1,
   "agent": "NLA",
-  "answer": "Kedudukan wasiat menurut KUHPerdata (BW) adalah sebagai pernyataan kehendak sepihak yang bersifat pribadi, dapat ditarik kembali, dan harus memenuhi bentuk formal tertentu (Pasal 874 BW). Fungsinya untuk menunjuk ahli waris, memberikan hibah wasiat, dan mengatur pembagian harta di luar ketentuan waris tanpa wasiat (ab-intestato).\n\nWasiat memiliki batasan utama terhadap bagian mutlak (legitieme portie) ahli waris dalam garis lurus, yaitu anak (sah atau diakui) dan orang tua. Berdasarkan Pasal 913 BW:\n1. Untuk satu anak, legitieme portie-nya adalah 1/2 dari bagian waris ab-intestato.\n2. Untuk dua anak atau lebih, legitieme portie mereka bersama adalah 2/3 dari seluruh harta peninggalan, dibagi rata.\n3. Untuk orang tua (jika tidak ada anak), legitieme portie mereka bersama adalah 1/2 dari seluruh harta peninggalan, dibagi rata.\n\nWasiat tidak boleh mengurangi atau menghilangkan hak atas bagian mutlak ini. Harta yang dapat diwasiatkan hanya terbatas pada harta milik pribadi testator dan, dalam praktik, separuh dari harta yang dapat dibuktikan sebagai hasil usaha bersama selama perkawinan, setelah dikurangi hutang dan hak legitieme portie ahli waris.",
+  "answer": "Wasiat menurut KUHPerdata adalah perbuatan hukum sepihak yang bersifat formal, dapat ditarik kembali, dan baru berlaku efektif setelah pewaris meninggal. Kebebasan berwasiat dibatasi oleh hak mutlak (legitieme portie) ahli waris dalam garis lurus, yaitu anak atau orang tua. Besar bagian mutlak adalah 1/2 harta peninggalan untuk satu anak, atau 2/3 dibagi rata untuk dua anak atau lebih. Harta bersama (gono-gini) harus dibagi dua terlebih dahulu, dan hanya bagian pewaris yang menjadi dasar perhitungan bagian mutlak. Wasiat yang melanggar bagian mutlak dapat digugat untuk dikurangi.",
   "claims": [
     {
       "id": "C1",
-      "statement": "Wasiat menurut KUHPerdata adalah pernyataan kehendak sepihak, pribadi, dapat ditarik kembali, dan harus memenuhi bentuk formal.",
+      "statement": "Wasiat menurut KUHPerdata adalah perbuatan hukum sepihak yang bersifat formal, dapat ditarik kembali, dan baru berlaku setelah pewaris meninggal.",
       "evidence": [
-        "Pasal_874_KUHPerdata"
+        "Pasal 874-1132",
+        "Pasal 897",
+        "Pasal 899",
+        "Pasal 992"
       ],
       "confidence": 1.0,
       "assumptions": [
-        "Definisi dan sifat wasiat mengacu pada ketentuan Buku II KUHPerdata."
+        "Analisis mengacu pada KUHPerdata sebagai hukum positif bagi golongan warga negara Indonesia yang tunduk padanya."
       ]
     },
     {
       "id": "C2",
-      "statement": "Wasiat memiliki batasan terhadap bagian mutlak (legitieme portie) ahli waris dalam garis lurus (anak dan orang tua).",
+      "statement": "Kebebasan berwasiat dibatasi oleh hak mutlak (legitieme portie) ahli waris dalam garis lurus, yaitu anak atau orang tua.",
       "evidence": [
-        "Pasal_913_KUHPerdata"
+        "Pasal 913"
       ],
       "confidence": 1.0,
       "assumptions": [
-        "Ketentuan Pasal 913 BW berlaku dan tidak dikesampingkan."
+        "Penerima bagian mutlak hanya ahli waris dalam garis lurus seperti dijelaskan dalam konteks."
       ]
     },
     {
       "id": "C3",
-      "statement": "Besaran legitieme portie untuk dua anak atau lebih adalah 2/3 dari seluruh harta peninggalan, dibagi rata di antara mereka.",
+      "statement": "Besar bagian mutlak adalah 1/2 harta peninggalan untuk satu anak, atau 2/3 dibagi rata untuk dua anak atau lebih.",
       "evidence": [
-        "Pasal_913_KUHPerdata"
+        "Pasal 913"
       ],
       "confidence": 1.0,
       "assumptions": [
-        "Tidak ada ahli waris lain yang berhak atas legitieme portie dan harta peninggalan telah dikurangi hutang."
+        "Perhitungan didasarkan pada harta peninggalan setelah pemisahan harta bersama."
       ]
     },
     {
       "id": "C4",
-      "statement": "Harta yang dapat diwasiatkan terbatas pada harta milik pribadi testator dan, dalam praktik, dapat mencakup separuh dari harta hasil usaha bersama yang dapat dibuktikan.",
+      "statement": "Harta bersama (gono-gini) harus dibagi dua terlebih dahulu, dan hanya bagian pewaris yang menjadi dasar perhitungan bagian mutlak.",
       "evidence": [
-        "Pasal_119_KUHPerdata",
-        "Yurisprudensi_harta_campuran"
+        "Pasal 119 KUHPerdata jo. Pasal 35 UU Perkawinan"
       ],
-      "confidence": 0.9,
+      "confidence": 1.0,
       "assumptions": [
-        "Tidak ada perjanjian kawin yang mengatur lain dan harta bersama dapat diidentifikasi serta dipisahkan."
+        "Pewaris meninggal dalam keadaan berkeluarga dan hartanya mencakup harta bersama."
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Wasiat yang melanggar bagian mutlak dapat digugat untuk dikurangi melalui tuntutan legitieme portie.",
+      "evidence": [
+        "Pasal 914-918"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Ahli waris yang berhak mengajukan gugatan adalah penerima bagian mutlak."
       ]
     }
   ],
   "uncertainties": [
-    "U1: Penghitungan dan pembuktian bagian 'harta bersama' atau 'harta hasil usaha bersama' dalam perkawinan menurut KUHPerdata sering kali kompleks dan bergantung pada fakta serta pembuktian di pengadilan."
+    "Ketentuan khusus mengenai anak luar kawin yang diakui (Pasal 863) tidak dijelaskan lebih rinci dalam konteks pertanyaan utama."
   ],
   "open_questions": [
-    "Q1: Bagaimana mekanisme penuntutan hak legitieme portie oleh ahli waris jika wasiat dianggap melanggar batasannya, dan apa konsekuensi hukum bagi wasiat yang melanggar?"
+    "Bagaimana mekanisme perhitungan dan penyesuaian wasiat jika nilai harta warisan berubah antara waktu pembuatan wasiat dan saat pewaris meninggal?"
   ]
 }

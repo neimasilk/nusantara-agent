@@ -4,91 +4,132 @@
   "final_nla": {
     "round": 2,
     "agent": "NLA",
-    "answer": "Dalam adat Jawa, konsep gono-gini dan harta bawaan dibedakan berdasarkan asal dan status kepemilikan harta dalam perkawinan. Harta bawaan (bandha dhedhasar/sesakan) adalah harta milik pribadi suami atau istri yang dibawa sebelum perkawinan dan tetap menjadi milik pribadi. Sementara itu, harta gono-gini (bandha gono gini) adalah harta bersama yang diperoleh selama perkawinan, baik dari usaha bersama maupun usaha salah satu pihak, dengan pembagian ideal 50:50. Konsep adat ini selaras dengan ketentuan Pasal 35 UU No. 1 Tahun 1974 tentang Perkawinan, yang mengakui harta bawaan dan harta bersama. Pembuktian status harta bawaan sangat penting, karena jika tidak dapat dibuktikan, harta tersebut akan dianggap sebagai bagian dari harta gono-gini.",
+    "answer": "Dalam adat Jawa, gono-gini adalah harta bersama yang diperoleh selama perkawinan dan dibagi rata saat perkawinan berakhir, sedangkan harta bawaan adalah harta pribadi milik masing-masing pihak sebelum perkawinan atau dari warisan/hibah, yang tidak dibagi dan tetap menjadi hak pemiliknya. Perbedaan ini diakui dan diatur dalam kerangka hukum nasional, terutama UU No. 1 Tahun 1974 tentang Perkawinan.",
     "claims": [
       {
         "id": "C1",
-        "statement": "Harta bawaan dalam adat Jawa adalah harta milik pribadi suami atau istri yang dimiliki sebelum perkawinan dan tetap menjadi milik pribadi.",
+        "statement": "Harta Gono-Gini dalam adat Jawa adalah harta yang diperoleh suami-istri selama perkawinan melalui usaha atau kerja sama.",
         "evidence": [
-          "UU_No_1_Tahun_1974_Pasal_35",
-          "Pasal_119_KUHPerdata"
+          "context_par_2"
         ],
-        "confidence": 0.95,
+        "confidence": 1.0,
+        "assumptions": [
+          "Konsep ini dianalisis melalui lensa hukum nasional dan adat."
+        ]
+      },
+      {
+        "id": "C2",
+        "statement": "Harta Bawaan dalam adat Jawa adalah harta yang dimiliki masing-masing pihak sebelum perkawinan atau diperoleh sebagai warisan/hibah selama perkawinan.",
+        "evidence": [
+          "context_par_2"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "Konsep ini dianalisis melalui lensa hukum nasional dan adat."
+        ]
+      },
+      {
+        "id": "C3",
+        "statement": "Harta Gono-Gini dibagi dua (½ untuk suami, ½ untuk istri) saat perkawinan putus, baik karena perceraian maupun kematian.",
+        "evidence": [
+          "context_par_2",
+          "context_par_4"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "Pembagian ini mengacu pada aturan hukum nasional (Pasal 37 UU Perkawinan)."
+        ]
+      },
+      {
+        "id": "C4",
+        "statement": "Harta Bawaan tetap menjadi milik individu yang membawanya dan tidak dibagi saat perkawinan berakhir.",
+        "evidence": [
+          "context_par_2"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "Status ini sejalan dengan pengaturan harta pribadi dalam KUHPerdata dan UU Perkawinan."
+        ]
+      },
+      {
+        "id": "C5",
+        "statement": "Konsep Gono-Gini dan Harta Bawaan dalam adat Jawa diakui keberlakuannya berdasarkan Pasal 18B ayat (2) UUD 1945 dan Pasal 2 Aturan Peralihan UUD 1945.",
+        "evidence": [
+          "context_par_1"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "Pengakuan ini berlaku selama tidak bertentangan dengan asas hukum nasional dan keadilan."
+        ]
+      },
+      {
+        "id": "C6",
+        "statement": "Dalam penyelesaian sengketa, pengadilan akan menerapkan hukum nasional (UU Perkawinan) sebagai hukum utama.",
+        "evidence": [
+          "context_par_5"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "Penerapan ini kecuali para pihak secara tegas tunduk pada hukum adat tertentu yang tidak bertentangan."
+        ]
+      }
+    ],
+    "uncertainties": [
+      "Tidak ada ketidakpastian yang diidentifikasi dari konteks yang diberikan."
+    ],
+    "open_questions": [
+      "Bagaimana mekanisme pembuktian kepemilikan Harta Bawaan yang telah tercampur dalam praktik adat Jawa jika tidak diatur lebih detail dalam konteks?"
+    ]
+  },
+  "final_ala": {
+    "round": 2,
+    "agent": "ALA",
+    "answer": "Saya adalah Adat Law Agent (ALA) yang berfokus pada hukum adat. Pertanyaan Anda mengenai konsep *gono-gini* dan *harta bawaan* dalam adat Jawa tidak dapat dijawab berdasarkan konteks yang diberikan. Konteks hanya menjelaskan sistem pewarisan harta dalam adat Minangkabau, yaitu perbedaan antara Harta Pusako Tinggi dan Harta Pusako Rendah. Untuk penjelasan akurat tentang adat Jawa, disarankan berkonsultasi dengan ahli atau tetua adat Jawa.",
+    "claims": [
+      {
+        "id": "C1",
+        "statement": "Konteks hanya membahas sistem pewarisan harta dalam adat Minangkabau, bukan adat Jawa.",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 1.0,
         "assumptions": [
           "A1"
         ]
       },
       {
         "id": "C2",
-        "statement": "Harta gono-gini dalam adat Jawa adalah harta bersama yang diperoleh selama perkawinan dengan pembagian ideal 50:50 antara suami dan istri.",
+        "statement": "Dalam adat Minangkabau, Harta Pusako Tinggi dimiliki kolektif oleh kaum dan diwariskan secara matrilineal.",
         "evidence": [
-          "UU_No_1_Tahun_1974_Pasal_35"
+          "source_id_1"
         ],
-        "confidence": 0.95,
+        "confidence": 1.0,
         "assumptions": [
           "A2"
         ]
       },
       {
         "id": "C3",
-        "statement": "Konsep gono-gini dan harta bawaan dalam adat Jawa telah diakomodir dan distandardisasi dalam hukum nasional, khususnya Pasal 35 UU Perkawinan.",
+        "statement": "Harta Pusako Rendah dalam adat Minangkabau adalah harta hasil pencaharian orang tua selama perkawinan.",
         "evidence": [
-          "UU_No_1_Tahun_1974_Pasal_35",
-          "Pasal_18B_UUD_1945"
-        ],
-        "confidence": 0.9,
-        "assumptions": [
-          "A3"
-        ]
-      },
-      {
-        "id": "C4",
-        "statement": "Pembuktian status harta bawaan sangat penting, karena jika tidak dapat dibuktikan, harta tersebut akan dianggap sebagai bagian dari harta bersama (gono-gini).",
-        "evidence": [
-          "Yurisprudensi_Perkara_Harta_Bersama"
-        ],
-        "confidence": 0.85,
-        "assumptions": [
-          "A4"
-        ]
-      }
-    ],
-    "uncertainties": [
-      "U1: Variasi penerapan konsep gono-gini dan harta bawaan di berbagai komunitas adat Jawa, karena adat Jawa tidak sepenuhnya seragam dan dapat dipengaruhi oleh lokalitas dan strata sosial.",
-      "U2: Besaran pembagian harta gono-gini yang tidak selalu tepat 50:50 dalam praktik adat, karena dapat disesuaikan dengan kontribusi, kesepakatan, atau putusan adat setempat."
-    ],
-    "open_questions": [
-      "Q1: Bagaimana mekanisme pembuktian harta bawaan yang efektif dalam sengketa hukum di pengadilan, mengingat seringkali tidak ada dokumentasi tertulis pada masyarakat adat?",
-      "Q2: Bagaimana penyelesaian sengketa harta gono-gini jika salah satu pihak (suami/istri) tidak memiliki penghasilan selama perkawinan, misalnya karena mengurus rumah tangga?"
-    ]
-  },
-  "final_ala": {
-    "round": 2,
-    "agent": "ALA",
-    "answer": "Permintaan Anda adalah tentang konsep gono-gini dan harta bawaan dalam **adat Jawa**. Namun, konteks yang diberikan sepenuhnya membahas sistem pewarisan **adat Minangkabau** (Harta Pusako Tinggi dan Rendah), yang berbeda secara fundamental karena berbasis matrilineal. Saya, sebagai Adat Law Agent (ALA), tidak memiliki pengetahuan spesifik tentang adat Jawa untuk menjawab pertanyaan Anda secara akurat. Untuk penjelasan mengenai gono-gini dan harta bawaan dalam adat Jawa, disarankan untuk berkonsultasi langsung dengan ahli atau tetua adat Jawa.",
-    "claims": [
-      {
-        "id": "C1",
-        "statement": "Konteks yang diberikan membahas sistem pewarisan adat Minangkabau (Harta Pusako Tinggi dan Rendah), bukan adat Jawa.",
-        "evidence": [
-          "context_1"
+          "source_id_1"
         ],
         "confidence": 1.0,
         "assumptions": [
-          "A1"
+          "A3"
         ]
       }
     ],
     "uncertainties": [
-      "U1"
+      "U1: Definisi dan pembagian *gono-gini* dan *harta bawaan* dalam adat Jawa."
     ],
     "open_questions": [
-      "Q1"
+      "Q1: Bagaimana konsep *gono-gini* dan *harta bawaan* diatur dalam hukum adat Jawa, dan apa perbedaannya dengan sistem Minangkabau?"
     ]
   },
   "critique_counts": {
-    "CRITICAL": 2,
-    "MAJOR": 10,
+    "CRITICAL": 1,
+    "MAJOR": 11,
     "MINOR": 0
   },
   "needs_human_review": true,

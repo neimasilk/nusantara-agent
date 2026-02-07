@@ -7,25 +7,25 @@
       "id": "K1",
       "target_claim_id": "C2",
       "issue_type": "overclaim",
-      "description": "Klaim menyatakan bahwa Pusako Tinggi 'tidak menjadi hak pribadi ahli waris pribadinya (istri/anak kandung)' tanpa kualifikasi. Namun, dalam praktik adat Minangkabau, meskipun hak milik kolektif tidak berpindah, ahli waris pribadi (istri/anak) mungkin memiliki hak tertentu atas hasil pengelolaan atau bagian tertentu dari harta untuk nafkah, terutama jika ada harta yang telah bercampur (Pusako Rendah). Klaim yang absolut dapat menyesatkan.",
+      "description": "Klaim menyatakan 'Yang berhak penuh atas Harta Pusako Tinggi adalah anggota perempuan dalam kaum (seperti saudara perempuan almarhum mamak, anak-anak perempuannya, dan kemenakan perempuan dari garis ibu).' Namun, CONTEXT tidak secara eksplisit menyebut 'anak-anak perempuannya' (anak perempuan dari mamak yang meninggal) sebagai pihak yang berhak penuh. Dalam sistem matrilineal Minangkabau, anak perempuan dari seorang mamak (yang merupakan ayah mereka) biasanya bukan bagian dari kaum ibu si mamak, melainkan bagian dari kaum ibu mereka sendiri (garis ibu si anak). Oleh karena itu, memasukkan 'anak-anak perempuannya' sebagai pihak yang berhak adalah overclaim yang tidak didukung CONTEXT.",
       "severity": "MAJOR",
-      "suggested_fix": "Kualifikasi klaim: 'Secara prinsip adat, hak milik dan penguasaan penuh atas Pusako Tinggi tidak beralih kepada ahli waris pribadi (istri/anak kandung). Namun, dalam praktiknya, dapat timbul hak nafkah atau pengelolaan terbatas bagi ahli waris pribadi, terutama terkait harta yang telah bercampur atau jika diatur dalam wasiat/waris.'"
+      "suggested_fix": "Revisi klaim menjadi: 'Yang berhak penuh atas Harta Pusako Tinggi adalah anggota perempuan dalam kaum (garis keturunan ibu) dari almarhum mamak, seperti saudara perempuan kandungnya (seibu) dan kemenakan perempuan dari garis ibu.' Hapus referensi 'anak-anak perempuannya'."
     },
     {
       "id": "K2",
       "target_claim_id": "C3",
       "issue_type": "evidence_gap",
-      "description": "Klaim menyebut 'kemenakan (anak dari saudara perempuannya)' sebagai pihak yang berhak tanpa membedakan jenis kemenakan. Dalam adat Minangkabau, terdapat hierarki dan klasifikasi kemenakan (seperti kemenakan bawah daguak, kemenakan dibawah lutuik, kemenakan jauh). Hak dan tanggung jawab mereka bisa berbeda. Jawaban ALA terlalu menyederhanakan tanpa merujuk pada kompleksitas ini.",
+      "description": "Klaim menyatakan 'Otoritas pengelolaan Harta Pusako Tinggi beralih kepada Mamak Kepala Waris berikutnya dalam kaum yang ditunjuk menurut adat.' CONTEXT memang menyebut 'Mamak Kepala Waris' sebagai pengelola, tetapi tidak ada penjelasan atau bukti dalam CONTEXT bahwa proses peralihan otoritas ini terjadi 'ketika seorang mamak meninggal'. CONTEXT hanya menjelaskan struktur dan prinsip umum, bukan mekanisme suksesi spesifik pasca-kematian. Ada gap antara pernyataan umum tentang peran Mamak Kepala Waris dan klaim spesifik tentang peralihan otoritas saat kematian.",
       "severity": "MAJOR",
-      "suggested_fix": "Perjelas dengan menyebutkan bahwa yang dimaksud adalah 'kemenakan dalam garis matrilineal yang sama, dengan prioritas biasanya pada kemenakan dekat (seperti anak dari saudara perempuan kandung)', dan akui adanya variasi dan hierarki dalam kelompok kemenakan berdasarkan kedekatan genealogis."
+      "suggested_fix": "Kualifikasi klaim dengan menambahkan asumsi atau mengubahnya menjadi: 'Berdasarkan prinsip adat, diyakini bahwa otoritas pengelolaan Harta Pusako Tinggi akan beralih kepada Mamak Kepala Waris berikutnya dalam kaum yang ditunjuk menurut adat.' Atau, hapus konteks 'ketika seorang mamak meninggal' dari klaim ini dan fokus pada peran umum."
     },
     {
       "id": "K3",
-      "target_claim_id": "C4",
-      "issue_type": "logic_gap",
-      "description": "Klaim menyatakan 'otoritas pengelolaan Pusako Tinggi beralih kepada mamak kepala waris berikutnya dalam kaum' tanpa menjelaskan proses penunjukan atau penentuan siapa 'mamak kepala waris berikutnya'. Mekanisme suksesi ini kritis dan tidak otomatis; bisa melalui musyawarah, senioritas, atau penunjukan sebelumnya. Kelalaian ini menimbulkan ketidakjelasan prosedural.",
-      "severity": "MAJOR",
-      "suggested_fix": "Tambahkan penjelasan tentang mekanisme suksesi: 'Otoritas pengelolaan beralih kepada mamak yang ditunjuk atau diakui sebagai pengganti melalui musyawarah kaum (ninik mamak), biasanya berdasarkan senioritas, kemampuan, atau wasiat almarhum mamak sebelumnya.'"
+      "target_claim_id": "C5",
+      "issue_type": "overclaim",
+      "description": "Klaim menyatakan 'Harta Pusako Tinggi tidak boleh diperjualbelikan, kecuali dalam kondisi darurat yang ketat dan disepakati seluruh kaum.' CONTEXT menyebutkan 'tidak boleh diperjualbelikan' dan 'hanya boleh digadaikan dalam kondisi sangat darurat', namun tidak ada penyebutan eksplisit tentang persyaratan 'disepakati seluruh kaum'. CONTEXT hanya menyatakan 'setelah musyawarah dan kesepakatan dalam kaum', yang bisa diinterpretasikan sebagai kesepakatan para pemangku kepentingan/pengelola, tetapi tidak secara definitif 'seluruh kaum'. Ini adalah elaborasi yang melebihi bukti yang diberikan.",
+      "severity": "MINOR",
+      "suggested fix": "Revisi klaim agar lebih sesuai dengan CONTEXT: 'Harta Pusako Tinggi tidak boleh diperjualbelikan, dan hanya boleh digadaikan dalam kondisi sangat darurat setelah musyawarah dan kesepakatan dalam kaum.' Hapus frasa 'yang ketat dan disepakati seluruh kaum'."
     }
   ]
 }

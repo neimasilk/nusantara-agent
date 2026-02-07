@@ -1,31 +1,31 @@
 {
-  "round": 2,
+  "round": 1,
   "agent": "ALA",
   "target": "NLA",
   "critiques": [
     {
       "id": "K1",
       "target_claim_id": "C1",
-      "issue_type": "evidence_gap",
-      "description": "Klaim bahwa sistem persatuan harta adalah rezim default dalam KUHPerdata tidak lengkap karena tidak menyebutkan bahwa Pasal 119 KUHPerdata hanya berlaku bagi mereka yang tunduk pada KUHPerdata berdasarkan Pasal 2 KUHPerdata. Bagi golongan pribumi (inlanders) yang tunduk pada hukum adat, sistem harta perkawinan mengikuti hukum adat masing-masing, bukan KUHPerdata.",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa harta bersama dalam KUHPerdata adalah 'persatuan bulat harta suami-istri sejak perkawinan' merupakan generalisasi yang tidak akurat. KUHPerdata mengenal dua rezim harta perkawinan: persatuan bulat (pasal 119) dan persatuan hasil (pasal 128). Pasal 128 mengatur harta bersama yang hanya mencakup harta yang diperoleh selama perkawinan, bukan seluruh harta sejak awal. Jawaban NLA menggabungkan kedua konsep ini menjadi satu klaim yang menyesatkan.",
       "severity": "MAJOR",
-      "suggested_fix": "Tambahkan penjelasan bahwa Pasal 119 KUHPerdata hanya berlaku bagi mereka yang tunduk pada KUHPerdata, sedangkan bagi golongan pribumi berlaku hukum adat masing-masing sesuai Pasal 2 KUHPerdata."
+      "suggested_fix": "Perjelas perbedaan antara dua rezim harta perkawinan dalam KUHPerdata: (1) Persatuan Bulat (Pasal 119) yang mencakup semua harta bawaan dan perolehan, dan (2) Persatuan Hasil (Pasal 128) yang hanya mencakup harta yang diperoleh selama perkawinan. Sebutkan bahwa dalam praktik, persatuan hasil lebih umum digunakan."
     },
     {
       "id": "K2",
-      "target_claim_id": "C2",
-      "issue_type": "domain_mismatch",
-      "description": "Klaim bahwa anak tidak memiliki hak langsung atas harta bersama selama perkawinan berlangsung hanya benar dalam kerangka KUHPerdata murni. Dalam beberapa sistem hukum adat (misalnya hukum adat Bali atau Batak), anak sudah memiliki hak tertentu atas harta keluarga sejak lahir, termasuk hak untuk dilibatkan dalam pengelolaan harta keluarga.",
-      "severity": "MAJOR",
-      "suggested_fix": "Sebutkan bahwa dalam beberapa sistem hukum adat, anak memiliki hak langsung atas harta keluarga sejak lahir, dan berikan contoh konkret seperti hak anak laki-laki dalam sistem patrilineal Batak atas harta pusaka."
+      "target_claim_id": "C3",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa 'Anak tidak memiliki hak langsung atas harta bersama orang tuanya selama perkawinan masih utuh' tidak didukung oleh bukti hukum yang memadai. Meskipun benar bahwa hak anak umumnya muncul dalam konteks warisan, terdapat situasi khusus di mana anak dapat memiliki hak langsung, misalnya melalui perwakilan hukum dalam kasus pengurusan harta atau dalam konteks perlindungan hak anak. Jawaban NLA gagal mengakui nuansa ini.",
+      "severity": "MINOR",
+      "suggested_fix": "Kualifikasi klaim dengan menyebutkan bahwa secara umum anak tidak memiliki hak langsung untuk membagi atau menguasai harta bersama selama perkawinan, namun akui adanya pengecualian potensial berdasarkan yurisprudensi atau undang-undang khusus (misalnya, perlindungan anak)."
     },
     {
       "id": "K3",
-      "target_claim_id": "C4",
-      "issue_type": "overclaim",
-      "description": "Klaim bahwa KUHPerdata menjadi hukum yang diterapkan dalam sengketa formal terlalu menyederhanakan. Dalam praktik peradilan, hakim seringkali mengakomodasi hukum adat melalui yurisprudensi, bahkan tanpa perjanjian perkawinan tertulis. Putusan Mahkamah Agung No. 179 K/Sip/1972 mengakui keberlakuan hukum adat dalam pembagian harta bersama.",
+      "target_claim_id": "C5",
+      "issue_type": "logic_gap",
+      "description": "Klaim tentang konflik antara prinsip 50:50 KUHPerdata dan aturan adat mengandung kesenjangan logika karena mengasumsikan bahwa KUHPerdata selalu berlaku. Dalam sistem hukum Indonesia, hukum adat diakui dan dapat mengesampingkan KUHPerdata untuk masyarakat hukum adat tertentu (Pasal 2 UUPA, Pasal 3 UU Perkawinan). Oleh karena itu, 'konflik' seringkali diselesaikan dengan mengutamakan hukum adat yang hidup, bukan sekadar benturan antara dua sistem yang setara.",
       "severity": "MAJOR",
-      "suggested_fix": "Sebutkan bahwa dalam praktik peradilan, hakim dapat mengakomodasi hukum adat melalui penafsiran dan yurisprudensi, dan berikan contoh putusan Mahkamah Agung yang relevan."
+      "suggested_fix": "Perbaiki logika dengan menjelaskan hierarki dan hubungan antara hukum nasional (KUHPerdata/UU Perkawinan) dan hukum adat. Tegaskan bahwa untuk masyarakat hukum adat, hukum adat yang hidup dapat menjadi hukum yang berlaku, sehingga 'konflik' perlu dilihat dari sudut pandang asas hukum mana yang primer berdasarkan subjek hukumnya."
     }
   ]
 }

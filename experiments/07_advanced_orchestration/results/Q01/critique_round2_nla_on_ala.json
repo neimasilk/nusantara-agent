@@ -7,25 +7,25 @@
       "id": "K1",
       "target_claim_id": "C1",
       "issue_type": "evidence_gap",
-      "description": "Klaim C1 menyatakan bahwa istri mendapat 1/4 bagian berdasarkan KUHPerdata, namun tidak merujuk pada pasal spesifik yang mengatur bagian istri ketika ada anak. Bukti yang diberikan hanya 'KUHPerdata_Buku_II_Bagian_Kedua' yang terlalu umum. Tanpa rujukan pasal, klaim ini kurang dapat diverifikasi dan berpotensi tidak akurat jika mengabaikan kondisi lain (misalnya, status perkawinan atau harta bersama).",
+      "description": "Klaim C1 menyatakan bahwa pembagian diatur dalam Pasal 852 KUHPerdata, tetapi tidak ada kutipan langsung dari pasal tersebut dalam bukti yang diberikan (source_id_1). Jawaban tidak menunjukkan isi atau interpretasi Pasal 852, sehingga klaim ini tidak didukung oleh bukti yang terlihat.",
       "severity": "MAJOR",
-      "suggested_fix": "Sebutkan pasal spesifik KUHPerdata yang mendukung klaim ini, misalnya Pasal 852a KUHPerdata (bagian istri jika ada anak)."
+      "suggested_fix": "Sertakan kutipan teks atau penjelasan isi Pasal 852 KUHPerdata dari sumber yang relevan untuk mendukung klaim bahwa pasal tersebut mengatur pembagian waris untuk istri dan dua anak."
     },
     {
       "id": "K2",
-      "target_claim_id": "C2",
+      "target_claim_id": "C4",
       "issue_type": "logic_gap",
-      "description": "Klaim C2 menyatakan dua anak bersama-sama mendapat 3/4 bagian dan dibagi rata, sehingga masing-masing anak mendapat 3/8. Namun, logika pembagian ini mengasumsikan tidak ada ketentuan lain yang mempengaruhi (misalnya, anak luar kawin atau anak angkat). Jawaban tidak menyebutkan asumsi bahwa semua anak adalah anak sah dan dalam hubungan perkawinan yang sama, yang dapat mempengaruhi pembagian.",
-      "severity": "MINOR",
-      "suggested_fix": "Tambah asumsi eksplisit dalam klaim atau uncertainties bahwa analisis ini berlaku untuk anak sah dari perkawinan yang sama dengan istri yang disebutkan."
+      "description": "Klaim C4 menyatakan bahwa bagian 3/4 untuk anak dibagi rata, tetapi tidak ada penjelasan logis atau dasar hukum yang mendukung pembagian rata tersebut. Dalam KUHPerdata, pembagian rata di antara anak-anak adalah prinsip umum, tetapi klaim ini tidak menghubungkannya dengan ketentuan spesifik (misalnya, Pasal 852 atau prinsip kesetaraan ahli waris golongan I).",
+      "severity": "MAJOR",
+      "suggested_fix": "Jelaskan dasar hukum atau prinsip dalam KUHPerdata yang mewajibkan pembagian rata di antara anak-anak, seperti merujuk pada ketentuan tentang ahli waris golongan I atau pasal yang relevan."
     },
     {
       "id": "K3",
-      "target_claim_id": "C3",
-      "issue_type": "domain_mismatch",
-      "description": "Klaim C3 menyatakan aturan KUHPerdata tidak berlaku untuk Harta Pusako Tinggi dalam Adat Minangkabau. Meskipun benar secara umum, klaim ini tidak disertai penjelasan tentang konteks penerapan KUHPerdata vs. hukum adat. Hal ini dapat menimbulkan kebingungan karena jawaban utama membahas KUHPerdata, sementara klaim ini masuk ke domain adat tanpa klarifikasi kapan masing-masing sistem berlaku.",
-      "severity": "MAJOR",
-      "suggested_fix": "Perjelas dalam klaim atau jawaban utama bahwa analisis KUHPerdata hanya berlaku untuk harta pribadi (bukan Harta Pusako), dan sebutkan bahwa Harta Pusako Tinggi diatur sepenuhnya oleh hukum adat matrilineal."
+      "target_claim_id": "C6",
+      "issue_type": "overclaim",
+      "description": "Klaim C6 menyatakan bahwa 'KUHPerdata tidak mengenal pembedaan Harta Pusako Tinggi dan Rendah seperti dalam adat Minangkabau.' Namun, pernyataan ini tidak relevan dengan konteks pertanyaan yang hanya menanyakan pembagian waris menurut KUHPerdata. Klaim ini merupakan overclaim karena memasukkan perbandingan dengan sistem hukum adat tanpa dasar kebutuhan dalam jawaban.",
+      "severity": "MINOR",
+      "suggested_fix": "Hapus klaim C6 karena tidak diperlukan untuk menjawab pertanyaan. Fokus hanya pada penjelasan pembagian waris menurut KUHPerdata tanpa membandingkan dengan sistem hukum lain."
     }
   ]
 }

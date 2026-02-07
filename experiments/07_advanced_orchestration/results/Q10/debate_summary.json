@@ -4,118 +4,148 @@
   "final_nla": {
     "round": 2,
     "agent": "NLA",
-    "answer": "Mekanisme penyelesaian konflik antara hak anak menurut hukum nasional dan hukum adat matrilineal dilakukan dengan langkah-langkah berikut:\n1. **Identifikasi Jenis Harta**: Pisahkan antara **harta pencaharian** (harta bersama suami-istri) dan **harta pusaka adat** (harta turun-temurun garis ibu).\n2. **Atur Harta Pencaharian**: Harta pencaharian tunduk pada hukum nasional (KUHPerdata/UU Perkawinan). Setelah dibagi, bagian almarhum/almh diwariskan kepada anak sebagai ahli waris sesuai hukum waris nasional yang bilateral.\n3. **Hormati Harta Pusaka**: Harta pusaka adat diatur oleh hukum adat matrilineal. Anak tetap memiliki hak melalui garis ibunya sebagai bagian dari keluarga matrilineal tersebut.\n4. **Lindungi Hak Anak**: Jika penerapan adat menyebabkan anak terlantar atau hak dasarnya dilanggar, pengadilan dapat melakukan intervensi berdasarkan UU Perlindungan Anak untuk menjamin kepentingan terbaik anak.\n5. **Forum Penyelesaian Sengketa**: Sengketa diselesaikan melalui:\n   - **Musyawarah adat** terlebih dahulu.\n   - **Pengadilan Negeri** (atau Pengadilan Agama bagi Muslim) sebagai forum akhir yang akan mendahulukan hukum nasional untuk harta non-pusaka dan menjamin hak anak, sekaligus menghormati harta pusaka adat sepanjang tidak bertentangan dengan hukum dan HAM.\nPrinsip utamanya: Hukum nasional (yang lebih tinggi) mengatasi hukum adat dalam hal perlindungan hak anak, kecuali untuk harta pusaka adat murni.",
+    "answer": "Mekanisme penyelesaiannya bersifat berjenjang. Penyelesaian secara adat (musyawarah keluarga, keputusan penghulu) didahulukan. Jika gagal, sengketa dapat diajukan ke Pengadilan. Hakim akan menggunakan hukum adat matrilineal sebagai dasar putusan (Pasal 5 ayat (3) UU Kekuasaan Kehakiman), namun dengan modifikasi untuk harta pencaharian guna melindungi hak anak, mengikuti prinsip kepentingan terbaik anak.",
     "claims": [
       {
         "id": "C1",
-        "statement": "Hukum nasional (undang-undang) memiliki kedudukan lebih tinggi daripada hukum adat dalam hierarki hukum Indonesia, sehingga dalam konflik hak anak, hukum nasional didahulukan.",
+        "statement": "Hukum adat diakui dan dihormati dalam sistem hukum nasional berdasarkan Pasal 18B ayat (2) UUD 1945 dan Pasal 2 Aturan Peralihan UUD 1945.",
         "evidence": [
-          "Pasal 2 Aturan Peralihan UUD 1945",
-          "UU No. 12 Tahun 2011 tentang Pembentukan Peraturan Perundang-undangan"
+          "Pasal 18B ayat (2) UUD 1945",
+          "Pasal 2 Aturan Peralihan UUD 1945"
         ],
-        "confidence": 0.95,
-        "assumptions": [
-          "Konflik yang dimaksud melibatkan norma yang saling bertentangan secara langsung"
-        ]
+        "confidence": 1.0,
+        "assumptions": []
       },
       {
         "id": "C2",
-        "statement": "Hak waris anak dijamin oleh hukum nasional (KUHPerdata dan UU Perkawinan) secara bilateral, bertentangan dengan prinsip matrilineal.",
+        "statement": "Untuk masyarakat pribumi, hukum adat mereka berlaku sebagai hukum khusus, sementara KUHPerdata berlaku sebagai hukum umum.",
         "evidence": [
-          "Pasal 832 KUHPerdata",
-          "Pasal 250 KUHPerdata",
-          "UU No. 1 Tahun 1974 tentang Perkawinan"
+          "Pasal 131 IS/Indische Staatsregeling"
         ],
-        "confidence": 0.95,
+        "confidence": 1.0,
         "assumptions": [
-          "Anak yang dimaksud adalah anak sah"
+          "Pertanyaan mengacu pada masyarakat adat setempat."
         ]
       },
       {
         "id": "C3",
-        "statement": "Mekanisme penyelesaian mensyaratkan pembedaan antara harta pencaharian (tunduk pada hukum nasional) dan harta pusaka adat (dapat diatur hukum adat).",
+        "statement": "Mekanisme penyelesaian sengketa diawali dengan penyelesaian secara adat melalui musyawarah dan keputusan penghulu adat.",
         "evidence": [
-          "Praktik yurisprudensi dan doktrin hukum adat Indonesia"
+          "Analisis Tahap 3: Penyelesaian secara Adat (Primer)"
         ],
-        "confidence": 0.9,
-        "assumptions": [
-          "Masyarakat adat yang dimaksud masih mengakui dan memisahkan kedua jenis harta tersebut"
-        ]
+        "confidence": 1.0,
+        "assumptions": []
       },
       {
         "id": "C4",
-        "statement": "Pengadilan Negeri adalah forum kompeten yang berwenang menyelesaikan sengketa dan dapat membatalkan keputusan adat yang melanggar hak anak yang dijamin undang-undang.",
+        "statement": "Jika penyelesaian adat gagal, sengketa dapat diajukan ke Pengadilan (Agama atau Negeri).",
         "evidence": [
-          "Yurisprudensi Mahkamah Agung (misal Putusan MA No. 16 K/SIP/1956)",
-          "UU No. 35 Tahun 2014 tentang Perlindungan Anak"
+          "Analisis Tahap 3: Penyelesaian secara Hukum Nasional"
+        ],
+        "confidence": 1.0,
+        "assumptions": []
+      },
+      {
+        "id": "C5",
+        "statement": "Hakim wajib menggunakan hukum adat yang hidup di masyarakat sebagai dasar putusan sesuai UU Kekuasaan Kehakiman.",
+        "evidence": [
+          "Pasal 5 ayat (3) UU No. 48/2009 tentang Kekuasaan Kehakiman"
+        ],
+        "confidence": 1.0,
+        "assumptions": []
+      },
+      {
+        "id": "C6",
+        "statement": "Dalam putusannya, hakim dapat melakukan modifikasi, khususnya dalam pembagian harta pencaharian, untuk melindungi hak dan kepentingan terbaik anak.",
+        "evidence": [
+          "Analisis Tahap 3: Perlindungan Hak Anak",
+          "Praktek di Pengadilan",
+          "Prinsip terakhir: kepentingan terbaik anak"
         ],
         "confidence": 0.9,
         "assumptions": [
-          "Sengketa telah diajukan ke pengadilan dan tidak diselesaikan secara adat"
+          "Konteks sengketa melibatkan hak anak."
         ]
       }
     ],
     "uncertainties": [
-      "U1: Sejauh mana pengadilan dalam praktiknya konsisten menerapkan pembedaan harta pencaharian dan pusaka di semua daerah adat matrilineal.",
-      "U2: Batasan konkret 'tidak bertentangan dengan HAM' sebagai syarat berlakunya hukum adat, khususnya dalam interpretasi kepentingan terbaik anak."
+      "U1: Batasan spesifik 'tidak bertentangan dengan UUD dan prinsip negara hukum' dalam Pasal 2 Aturan Peralihan UUD 1945 dapat menimbulkan penafsiran berbeda-beda dalam kasus konkret."
     ],
     "open_questions": [
-      "Q1: Bagaimana mekanisme pembuktian dan alokasi beban pembuktian untuk membedakan harta pencaharian dan harta pusaka adat dalam suatu sengketa waris?",
-      "Q2: Apakah terdapat perbedaan signifikan dalam pendekatan penyelesaian antara Pengadilan Negeri, Pengadilan Agama, dan lembaga adat di berbagai daerah matrilineal di Indonesia?"
+      "Q1: Bagaimana mekanisme konkret hakim menentukan dan membuktikan keberlakuan hukum adat matrilineal tertentu dalam suatu perkara di pengadilan?"
     ]
   },
   "final_ala": {
     "round": 2,
     "agent": "ALA",
-    "answer": "Mekanisme penyelesaiannya dimulai dengan mengidentifikasi jenis harta warisan. Untuk Harta Pusako Tinggi (harta komunal kaum), prinsip matrilineal tetap berlaku dan diwariskan kepada kemenakan (anggota kaum), di mana hukum nasional umumnya menghormati hak ulayat dan harta komunal adat. Untuk Harta Pusako Rendah (harta pencaharian orang tua), penyelesaian dilakukan melalui musyawarah keluarga (Sapakat) yang dipimpin oleh Ninik Mamak dan melibatkan Alim Ulama, dengan mengacu pada ketentuan hukum Islam sebagai dasar pembagian bagi anak kandung, sambil mempertimbangkan kesepakatan keluarga yang adil dan prinsip kekeluargaan. Mekanisme ini mengutamakan musyawarah untuk mufakat, mengakomodasi hukum Islam, dan menjaga persaudaraan.",
+    "answer": "Mekanisme penyelesaian dibedakan berdasarkan jenis harta. Untuk Harta Pusako Tinggi (komunal), hukum waris matrilineal mutlak berlaku dan hukum nasional tidak dapat menggesernya. Untuk Harta Pusako Rendah (pencaharian), penyelesaian utamanya melalui musyawarah dalam kerapatan adat yang melibatkan ninik mamak, alim ulama, dan cerdik pandai untuk mencapai mufakat, dengan mempertimbangkan hak anak dan tanggung jawab sosial terhadap kemenakan. Hukum nasional diakui, tetapi penyelesaian kekeluargaan dan adat lebih diutamakan sesuai filosofi 'Adat basandi syarak, syarak basandi Kitabullah'. Solusi terbaik adalah kesepakatan keluarga tertulis yang membagi harta dengan mempertimbangkan kebutuhan anak dan tanggung jawab terhadap kemenakan.",
     "claims": [
       {
         "id": "C1",
-        "statement": "Harta Pusako Tinggi diwariskan berdasarkan prinsip matrilineal kepada kemenakan, dan hukum nasional biasanya menghormati hak ulayat dan harta komunal adat.",
+        "statement": "Harta Pusako Tinggi diwariskan secara mutlak berdasarkan garis matrilineal dan hukum nasional tidak dapat menggeser aturan ini.",
         "evidence": [
-          "context_1"
+          "source_id_1"
         ],
-        "confidence": 0.9,
-        "assumptions": [
-          "A1"
-        ]
+        "confidence": 1.0,
+        "assumptions": []
       },
       {
         "id": "C2",
-        "statement": "Harta Pusako Rendah diselesaikan melalui musyawarah keluarga dengan mengacu pada hukum Islam untuk pembagian bagi anak kandung, sambil mempertimbangkan kesepakatan keluarga yang adil.",
+        "statement": "Konflik untuk Harta Pusako Rendah diselesaikan dengan musyawarah dalam kerapatan adat yang dipimpin ninik mamak, alim ulama, dan cerdik pandai untuk mencapai mufakat.",
         "evidence": [
-          "context_1"
+          "source_id_1"
         ],
-        "confidence": 0.9,
-        "assumptions": [
-          "A2"
-        ]
+        "confidence": 1.0,
+        "assumptions": []
       },
       {
         "id": "C3",
-        "statement": "Mekanisme penyelesaian konflik hak waris dalam adat Minangkabau mengutamakan musyawarah untuk mufakat dengan melibatkan unsur adat dan agama.",
+        "statement": "Penyelesaian mengacu pada prinsip 'Adat basandi syarak, syarak basandi Kitabullah' yang mengharmonisasikan adat dan nilai Islam.",
         "evidence": [
-          "context_1"
+          "source_id_1"
         ],
-        "confidence": 0.9,
-        "assumptions": [
-          "A3"
-        ]
+        "confidence": 1.0,
+        "assumptions": []
+      },
+      {
+        "id": "C4",
+        "statement": "Hukum nasional diakui sebagai fakta legal, tetapi penyelesaian secara kekeluargaan dan adat lebih diutamakan sebelum jalur hukum formal.",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 1.0,
+        "assumptions": []
+      },
+      {
+        "id": "C5",
+        "statement": "Solusi terbaik adalah kesepakatan keluarga tertulis (wasiat/ikrar) yang membagi harta dengan mempertimbangkan kebutuhan anak dan tanggung jawab sosial terhadap kemenakan.",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 1.0,
+        "assumptions": []
+      },
+      {
+        "id": "C6",
+        "statement": "Hukum adat diakui oleh negara melalui pasal 18B UUD 1945.",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 1.0,
+        "assumptions": []
       }
     ],
     "uncertainties": [
-      "U1: Sejauh mana hukum nasional secara spesifik mengakui dan melindungi Harta Pusako Tinggi sebagai harta komunal adat dalam praktik yudisial.",
-      "U2: Tingkat keberhasilan musyawarah keluarga dalam menyelesaikan konflik Harta Pusako Rendah jika terjadi perbedaan penafsiran yang tajam antara hukum Islam dan kesepakatan adat."
+      "Tidak ada ketidakpastian berdasarkan konteks yang diberikan."
     ],
     "open_questions": [
-      "Q1: Bagaimana jika musyawarah keluarga untuk Harta Pusako Rendah tidak mencapai mufakat, apa langkah mediasi atau penyelesaian formal berikutnya yang diakui baik oleh adat maupun hukum nasional?",
-      "Q2: Apakah terdapat mekanisme pencatatan atau pengesahan formal terhadap hasil musyawarah adat untuk Harta Pusako Rendah agar diakui oleh hukum nasional?"
+      "Bagaimana detail prosedur dan kekuatan hukum dari kesepakatan keluarga tertulis (ikrar) tersebut dalam kerangka hukum nasional?"
     ]
   },
   "critique_counts": {
-    "CRITICAL": 1,
+    "CRITICAL": 2,
     "MAJOR": 9,
-    "MINOR": 2
+    "MINOR": 1
   },
   "needs_human_review": true,
   "logs_index": [

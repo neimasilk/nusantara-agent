@@ -6,26 +6,26 @@
     {
       "id": "K1",
       "target_claim_id": "C1",
-      "issue_type": "overclaim",
-      "description": "Klaim bahwa konsep gono-gini 'tidak dikenal' dalam sistem adat Minangkabau yang asli adalah generalisasi yang berlebihan. Meskipun bukan konsep asli, interaksi dengan hukum nasional dan praktik sosial telah membuat pemahaman tentang pembagian harta perkawinan menjadi lebih kompleks. Pernyataan ini mengabaikan kemungkinan adanya akulturasi atau reinterpretasi konsep dalam masyarakat Minangkabau kontemporer.",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa konsep harta bersama disebut 'Harta Suko' dan dikategorikan sebagai 'Harta Pusako Rendah' hanya didukung oleh satu sumber (source_id_1). Istilah 'Harta Suko' tidak umum ditemukan dalam literatur hukum adat Minangkabau yang lebih luas, di mana istilah yang lebih lazim adalah 'harta pencarian' atau 'harta suarang'. Klaim ini memerlukan konfirmasi dari sumber-sumber primer adat atau literatur akademis lain untuk memvalidasi terminologi spesifik tersebut.",
       "severity": "MAJOR",
-      "suggested_fix": "Ubah klaim menjadi lebih bernuansa, misalnya: 'Konsep harta bersama (gono-gini) dalam bentuknya yang setara 50:50 bukan merupakan konsep asli dalam sistem adat Minangkabau, yang lebih menekankan pembedaan berdasarkan asal-usul harta.'"
+      "suggested_fix": "Tambahkan referensi dari sumber lain yang mengonfirmasi penggunaan istilah 'Harta Suko' dan kategorisasinya sebagai 'Harta Pusako Rendah'. Jika istilah tersebut bersifat lokal atau kurang umum, nyatakan ketidakpastian tersebut dalam bagian 'uncertainties'."
     },
     {
       "id": "K2",
-      "target_claim_id": "C3",
-      "issue_type": "evidence_gap",
-      "description": "Klaim bahwa pemahaman sosial di komunitas adat Minangkabau 'bertentangan dengan filosofi gono-gini' tidak didukung oleh bukti yang cukup dalam konteks sumber. Pernyataan ini bersifat spekulatif dan mengasumsikan adanya oposisi biner, padahal dalam praktiknya mungkin terdapat tumpang tindih atau negosiasi antara sistem adat dan konsep hukum nasional.",
+      "target_claim_id": "C4",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa pengaturan Harta Pusako Rendah 'menciptakan ketegangan' antara hak kemenakan dan hak anak kandung disajikan sebagai fakta umum yang pasti terjadi. Meskipun potensi ketegangan ada, sumber tunggal (source_id_1) mungkin tidak cukup untuk menyimpulkan bahwa ini adalah fenomena sosial yang selalu atau umumnya terjadi. Klaim ini menggeneralisasi dinamika sosial yang kompleks dan mungkin bervariasi antar nagari, keluarga, dan konteks sejarah.",
       "severity": "MAJOR",
-      "suggested_fix": "Lunakkan klaim dan hubungkan dengan ketidakpastian yang telah diidentifikasi (U1). Misalnya: 'Pemahaman sosial tradisional memisahkan harta berdasarkan asal-usul, yang pada prinsipnya berbeda dengan filosofi pembagian setara dalam gono-gini, meskipun dalam praktik mungkin terjadi adaptasi.'"
+      "suggested_fix": "Lunakkan klaim dengan menggunakan kata-kata seperti 'dapat menimbulkan ketegangan' atau 'sering kali memunculkan potensi konflik'. Atau, tambahkan bukti pendukung lain yang mendemonstrasikan prevalensi ketegangan ini dalam praktik sosial Minangkabau."
     },
     {
       "id": "K3",
-      "target_claim_id": "C2",
-      "issue_type": "domain_mismatch",
-      "description": "Klaim tentang pembedaan Harta Pusako Tinggi dan Rendah, meskipun akurat secara konseptual, disajikan sebagai fakta statis tanpa konteks dinamika sosial. Penjelasan ini tidak mengakui bahwa klasifikasi dan pengelolaan harta ini bisa berubah seiring waktu, dipengaruhi faktor seperti migrasi, ekonomi, dan interaksi dengan hukum negara.",
-      "severity": "MINOR",
-      "suggested_fix": "Tambahkan catatan tentang sifat dinamis dari klasifikasi adat ini. Misalnya, sisipkan: 'Pembedaan ini merupakan kerangka ideal; dalam realitas sosial, garis antara kedua jenis harta ini bisa menjadi kabur, terutama di perkotaan atau dalam keluarga yang telah lama meninggalkan kampung halaman.'"
+      "target_claim_id": "C5",
+      "issue_type": "logic_gap",
+      "description": "Terdapat kesenjangan logika antara klaim C4 (tentang ketegangan) dan C5 (tentang penyelesaian melalui musyawarah). Jawaban menyiratkan bahwa musyawarah yang dipimpin ninik mamak adalah mekanisme penyelesaian yang efektif untuk ketegangan tersebut, tetapi tidak dijelaskan bagaimana musyawarah tersebut secara spesifik menengahi antara prinsip matrilineal (hak kemenakan) dan prinsip Islam/keadilan (hak anak). Proses dan kriteria pengambilan keputusan dalam musyawarah tersebut tidak diuraikan, meninggalkan klaim C5 sebagai pernyataan yang terlalu sederhana dan tidak terhubung secara logis dengan kompleksitas konflik yang disebutkan di C4.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perluas klaim C5 untuk menjelaskan secara singkat bagaimana musyawarah dan prinsip 'mufakat' bekerja dalam menyelesaikan ketegangan ini (misalnya, dengan mempertimbangkan kebutuhan anak, kontribusi suami, dan kewajiban terhadap kaum). Atau, akui dalam 'open_questions' bahwa mekanisme spesifik musyawarah ini memerlukan penjelasan lebih lanjut."
     }
   ]
 }

@@ -1,48 +1,63 @@
 {
   "round": 1,
   "agent": "ALA",
-  "answer": "Konsep harta bersama (gono-gini) dalam hukum perdata nasional (KUHPerdata) mengatur pembagian harta yang diperoleh selama perkawinan secara setara antara suami dan istri. Namun, dalam banyak komunitas adat di Indonesia, konsep ini tidak selalu diterima atau dipahami dengan cara yang sama. Sebagai contoh, dalam sistem adat Minangkabau yang matrilineal, harta dibedakan secara tegas menjadi Harta Pusako Tinggi (milik kolektif kaum, diwariskan melalui garis ibu) dan Harta Pusako Rendah (harta pencaharian suami-istri). Pemahaman sosial di komunitas adat sering kali menekankan pada asal-usul, kepemilikan kolektif, dan jalur waris yang spesifik sesuai dengan nilai dan struktur kekerabatan setempat, yang dapat berbeda atau bahkan bertentangan dengan prinsip pembagian 50:50 dalam gono-gini.",
+  "answer": "Dalam adat Minangkabau, harta bersama suami-istri disebut 'Harta Suko' dan dikategorikan sebagai 'Harta Pusako Rendah', yaitu harta hasil pencaharian selama perkawinan. Ini berbeda dari 'Harta Pusako Tinggi' yang merupakan harta warisan turun-temurun milik kolektif kaum dan diwariskan secara matrilineal kepada kemenakan. Harta Pusako Rendah dimiliki oleh suami-istri dan dapat diwariskan kepada anak kandung. Secara sosial, pengaturan harta ini menciptakan ketegangan antara hak kemenakan (berdasarkan adat) dan hak anak kandung (berdasarkan hukum Islam dan keadilan), yang diselesaikan melalui musyawarah keluarga (mufakat) yang dipimpin ninik mamak.",
   "claims": [
     {
       "id": "C1",
-      "statement": "Konsep harta bersama (gono-gini) berasal dari hukum perdata nasional (KUHPerdata) dan tidak dikenal dalam sistem adat Minangkabau asli.",
+      "statement": "Dalam adat Minangkabau, harta bersama suami-istri disebut 'Harta Suko' dan dikategorikan sebagai 'Harta Pusako Rendah'.",
       "evidence": [
-        "source_context"
+        "source_id_1"
       ],
-      "confidence": 0.9,
-      "assumptions": [
-        "A1"
-      ]
+      "confidence": 1.0,
+      "assumptions": []
     },
     {
       "id": "C2",
-      "statement": "Dalam adat Minangkabau, harta dibedakan menjadi Harta Pusako Tinggi (kolektif, matrilineal) dan Harta Pusako Rendah (pencaharian suami-istri), dengan jalur waris yang jelas dan terpisah.",
+      "statement": "Harta Pusako Rendah adalah harta hasil pencaharian sendiri selama perkawinan, dimiliki oleh suami-istri, dan dapat diwariskan kepada anak kandung.",
       "evidence": [
-        "source_context"
+        "source_id_1"
       ],
-      "confidence": 0.9,
-      "assumptions": [
-        "A2"
-      ]
+      "confidence": 1.0,
+      "assumptions": []
     },
     {
       "id": "C3",
-      "statement": "Pemahaman sosial di komunitas adat seperti Minangkabau memandang harta melalui lensa kolektivitas dan asal-usul, yang bertentangan dengan filosofi pembagian setara 50:50 dalam gono-gini.",
+      "statement": "Harta Pusako Tinggi adalah harta warisan turun-temurun yang dimiliki secara kolektif oleh kaum (kelompok kekerabatan matrilineal) dan diwariskan berdasarkan garis ibu kepada kemenakan.",
       "evidence": [
-        "source_context"
+        "source_id_1"
       ],
-      "confidence": 0.85,
-      "assumptions": [
-        "A3"
-      ]
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C4",
+      "statement": "Secara sosial, adat Minangkabau sangat kuat mengutamakan hak kemenakan atas Harta Pusako Tinggi.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C5",
+      "statement": "Dalam konteks Harta Pusako Rendah, terjadi ketegangan antara hak kemenakan (berdasarkan prinsip matrilineal adat) dan hak anak kandung (berdasarkan hukum Islam dan rasa keadilan).",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C6",
+      "statement": "Musyawarah keluarga (mufakat) yang dipimpin oleh ninik mamak sangat penting untuk menyelesaikan pengaturan harta secara adil dan menjaga kerukunan.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
     }
   ],
-  "uncertainties": [
-    "U1: Sejauh mana konsep gono-gini telah diadopsi atau dimodifikasi oleh komunitas adat lain di Indonesia di luar Minangkabau.",
-    "U2: Tingkat ketegangan aktual antara hak anak dan hak kemenakan dalam pewarisan Harta Pusako Rendah di masyarakat Minangkabau kontemporer."
-  ],
-  "open_questions": [
-    "Q1: Bagaimana mekanisme penyelesaian sengketa harta ketika terjadi benturan antara hukum adat (seperti di Minangkabau) dengan hukum nasional (KUHPerdata) mengenai harta bersama?",
-    "Q2: Apakah terdapat variasi pemahaman dan penerapan konsep 'harta bersama' di antara berbagai komunitas adat patrilineal atau bilateral di Indonesia?"
-  ]
+  "uncertainties": [],
+  "open_questions": []
 }

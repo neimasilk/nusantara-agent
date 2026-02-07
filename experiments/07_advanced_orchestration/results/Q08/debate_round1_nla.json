@@ -1,46 +1,65 @@
 {
   "round": 1,
   "agent": "NLA",
-  "answer": "Konsep harta bersama (gono-gini) dalam KUHPerdata mengacu pada sistem persatuan harta (gemeenschap van goederen) sebagai ketentuan default (Pasal 119). Harta yang diperoleh selama perkawinan menjadi milik bersama suami-istri, sedangkan harta bawaan dan warisan/hibah selama nikah tetap menjadi harta pribadi. Pembagiannya dilakukan secara sama rata (masing-masing ½) saat perkawinan berakhir. Anak kandung tidak memiliki hak langsung atas harta bersama ini selama perkawinan berlangsung; hak mereka baru timbul sebagai ahli waris atas harta peninggalan orang tua setelah terjadi kematian dan pemisahan harta bersama.\n\nSecara sosial di beberapa komunitas adat, konsep ini sering dipahami lebih luas sebagai harta keluarga yang melibatkan hak moral anak, bahkan sebelum orang tua meninggal. Pemahaman ini didasarkan pada nilai kekeluargaan yang menyeluruh, di mana harta dipandang sebagai milik keluarga inti (termasuk anak), dan sistem kewarisan sering kali tidak dipisahkan secara tajam dari harta perkawinan. Namun, dalam penyelesaian sengketa hukum formal, ketentuan KUHPerdata yang memisahkan hak suami-istri dari hak waris anak akan berlaku, kecuali ada perjanjian perkawinan yang mengakomodasi nilai adat.",
+  "answer": "Harta bersama (gono-gini) dalam KUHPerdata adalah persatuan bulat harta suami-istri sejak perkawinan, dibagi rata saat putus. Pemahaman sosialnya di komunitas adat bervariasi berdasarkan sistem kekerabatan (patrilineal, matrilineal, bilateral), yang memengaruhi cakupan, pengelolaan, dan pembagian harta, serta hak anak.",
   "claims": [
     {
       "id": "C1",
-      "statement": "Dalam KUHPerdata, harta bersama (gono-gini) mengacu pada sistem persatuan harta (gemeenschap van goederen) sebagai ketentuan default, di mana harta yang diperoleh selama perkawinan menjadi milik bersama suami-istri.",
+      "statement": "Dalam KUHPerdata, harta bersama adalah persatuan bulat harta suami-istri sejak perkawinan dan dibagi sama rata (50:50) saat perkawinan putus.",
       "evidence": [
-        "Pasal 119 KUHPerdata"
+        "Pasal 119 KUHPerdata",
+        "Pasal 128 KUHPerdata"
       ],
       "confidence": 1.0,
-      "assumptions": [
-        "Konteks mengacu pada KUHPerdata Indonesia (Burgerlijk Wetboek)"
-      ]
+      "assumptions": []
     },
     {
       "id": "C2",
-      "statement": "Anak kandung tidak memiliki hak langsung atas harta bersama orang tua selama perkawinan berlangsung; hak mereka timbul sebagai ahli waris setelah kematian orang tua dan pemisahan harta bersama.",
+      "statement": "Anak tidak memiliki hak langsung atas harta bersama orang tuanya selama perkawinan masih utuh, haknya muncul dalam konteks warisan dan nafkah.",
       "evidence": [
-        "Pasal 852 KUHPerdata dan prinsip pemisahan hukum harta perkawinan dengan hukum waris"
+        "Pasal 852 KUHPerdata",
+        "Pasal 45 UU No. 1/1974 jo. Pasal 301 KUHPerdata"
       ],
       "confidence": 1.0,
-      "assumptions": [
-        "Tidak ada perjanjian perkawinan yang mengubah ketentuan default"
-      ]
+      "assumptions": []
     },
     {
       "id": "C3",
-      "statement": "Di banyak komunitas adat, konsep harta bersama dipahami secara lebih luas sebagai harta keluarga yang melibatkan hak moral anak, mencerminkan nilai kolektivitas dan kekerabatan.",
+      "statement": "Pemahaman sosial 'gono-gini' di komunitas adat sangat bervariasi dan dipengaruhi oleh sistem kekerabatan seperti patrilineal, matrilineal, dan bilateral.",
       "evidence": [
-        "Deskripsi praktik sosial dalam komunitas adat seperti Jawa, Bali, atau Minangkabau"
+        "Contoh masyarakat Jawa, Minangkabau, dan Batak"
       ],
-      "confidence": 0.9,
-      "assumptions": [
-        "Konteks merujuk pada variasi pemahaman sosial yang umum di masyarakat adat Indonesia"
-      ]
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C4",
+      "statement": "Dalam masyarakat Minangkabau yang matrilineal, harta asal istri (harta pusaka rendah) diwariskan secara turun-temurun kepada anak perempuan.",
+      "evidence": [
+        "Deskripsi sistem matrilineal Minangkabau"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C5",
+      "statement": "Hak anak dalam masyarakat adat sangat ditentukan oleh sistem kekerabatan dan seringkali berbeda berdasarkan gender dan garis keturunan.",
+      "evidence": [
+        "Prinsip 'sesuai kedudukan adat' pada sistem patrilineal dan matrilineal"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C6",
+      "statement": "Terdapat ketegangan antara prinsip kesetaraan dalam hukum nasional dengan prinsip kolektivitas dan garis keturunan dalam hukum adat.",
+      "evidence": [
+        "Konflik pembagian 50:50 dengan aturan adat yang tidak setara"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
     }
   ],
-  "uncertainties": [
-    "U1: Tingkat pengakuan formal dan variasi spesifik konsep harta bersama di setiap komunitas adat, karena keragaman hukum adat di Indonesia."
-  ],
-  "open_questions": [
-    "Q1: Bagaimana mekanisme penyelesaian sengketa ketika pemahaman adat tentang hak anak atas harta bersama berbenturan dengan ketentuan KUHPerdata di pengadilan?"
-  ]
+  "uncertainties": [],
+  "open_questions": []
 }

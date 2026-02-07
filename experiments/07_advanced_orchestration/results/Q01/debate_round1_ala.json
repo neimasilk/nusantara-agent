@@ -1,13 +1,13 @@
 {
   "round": 1,
   "agent": "ALA",
-  "answer": "Menurut KUHPerdata (BW), jika pewaris meninggalkan istri dan dua anak, pembagian warisnya adalah sebagai berikut:\n1. Istri mendapat bagian 1/4 (seperempat) dari harta warisan.\n2. Sisanya, yaitu 3/4 (tiga perempat), dibagi rata kepada kedua anak.\n3. Dengan demikian, masing-masing anak mendapat bagian sebesar 3/8 dari total harta warisan.\n\nPembagian ini berdasarkan Pasal 852a KUHPerdata, yang mengatur bagian ahli waris golongan pertama (anak dan keturunannya) beserta pasangan yang hidup terlama.",
+  "answer": "Menurut KUHPerdata, jika pewaris meninggalkan istri dan dua anak, istri mendapat 1/4 bagian harta warisan, sementara dua anak bersama-sama mendapat 3/4 bagian, yang kemudian dibagi rata di antara mereka (masing-masing 3/8 atau 37.5%).",
   "claims": [
     {
       "id": "C1",
-      "statement": "Dalam KUHPerdata, jika pewaris meninggalkan istri dan dua anak, istri mendapat 1/4 bagian dan dua anak bersama-sama mendapat 3/4 bagian harta warisan.",
+      "statement": "Pembagian warisan menurut KUHPerdata untuk pewaris dengan istri dan dua anak diatur dalam Pasal 852 KUHPerdata.",
       "evidence": [
-        "Pasal_852a_KUHPerdata"
+        "source_id_1"
       ],
       "confidence": 1.0,
       "assumptions": [
@@ -16,21 +16,60 @@
     },
     {
       "id": "C2",
-      "statement": "Bagian 3/4 untuk dua anak tersebut dibagi rata, sehingga masing-masing anak mendapat 3/8 dari total harta warisan.",
+      "statement": "Istri mendapat bagian seperempat (1/4) dari harta warisan.",
       "evidence": [
-        "Pasal_852a_KUHPerdata",
-        "Prinsip_pembagian_merata_antar_ahli_waris_segolongan"
+        "source_id_1"
       ],
       "confidence": 1.0,
       "assumptions": [
         "A2"
       ]
+    },
+    {
+      "id": "C3",
+      "statement": "Dua anak bersama-sama mendapat tiga perempat (3/4) dari harta warisan.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A2"
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Bagian 3/4 untuk anak dibagi rata, sehingga masing-masing anak mendapat 3/8 (37.5%) dari total harta.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A2"
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "KUHPerdata tidak mengenal pembedaan harta waris seperti Harta Pusako Tinggi dan Rendah dalam adat Minangkabau.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C6",
+      "statement": "Dalam KUHPerdata, kemenakan bukan ahli waris golongan pertama dan hanya dapat mewaris jika tidak ada saudara, orang tua, atau nenek pewaris.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
     }
   ],
   "uncertainties": [
-    "U1"
+    "Apakah semua harta yang ditinggalkan pewaris merupakan harta bersama atau harta pribadi, karena dapat mempengaruhi bagian yang diwariskan."
   ],
   "open_questions": [
-    "Q1"
+    "Bagaimana jika salah satu anak telah meninggal lebih dahulu dan memiliki keturunan? Apakah pembagian menurut KUHPerdata tetap sama?"
   ]
 }

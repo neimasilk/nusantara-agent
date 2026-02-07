@@ -14,10 +14,10 @@
 
 | Metrik | Rata-rata |
 |--------|-----------|
-| Accuracy | 4.5833 |
-| Completeness | 4.5833 |
-| Cultural Sensitivity | 4.6667 |
-| Total (sum) | 13.8333 |
+| Accuracy | 4.1667 |
+| Completeness | 4.2500 |
+| Cultural Sensitivity | 4.5000 |
+| Total (sum) | 12.9167 |
 
 ### Baseline Sequential (Exp 03 re-run)
 
@@ -32,17 +32,17 @@
 
 | Metrik | Delta |
 |--------|-------|
-| Accuracy | -0.2500 |
-| Completeness | -0.3334 |
-| Cultural Sensitivity | -0.1666 |
-| Total (sum) | -0.7500 |
+| Accuracy | -0.6666 |
+| Completeness | -0.6667 |
+| Cultural Sensitivity | -0.3333 |
+| Total (sum) | -1.6666 |
 
 Catatan: Skor ini berasal dari evaluator LLM independen (Kimi) dan **bukan** human annotation. Ini mengurangi circularity pada level evaluator, tetapi belum menggantikan validasi manusia (lihat Exp 06).
 
 ## Observasi Kualitatif
 
-1. Advanced orchestration belum menunjukkan peningkatan kuantitatif terhadap baseline pada skor Kimi (semua metrik turun).
-2. Output debat lebih terstruktur, tetapi tampaknya ada trade-off terhadap ringkasnya jawaban yang menurunkan completeness.
+1. Revisi prompt debat memperketat evidence grounding, tetapi skor Kimi justru menurun dibanding baseline.
+2. Jawaban menjadi lebih ringkas namun kehilangan detail penting → completeness turun.
 3. Cultural framing tetap baik, namun tidak melampaui baseline pada skor evaluator.
 
 ## Keterbatasan

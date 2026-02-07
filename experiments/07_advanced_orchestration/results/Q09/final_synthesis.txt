@@ -1,15 +1,5 @@
-**Jawaban Final: Konflik Norma dan Keputusan Pluralistik**
+**Jawaban Final:** Konsep gono-gini (harta bersama perkawinan) dan harta bawaan (harta pribadi) dalam adat Jawa diakui secara hukum nasional (UU Perkawinan) dan adat. Namun, konteks yang diberikan hanya menjelaskan sistem pewarisan adat Minangkabau, bukan Jawa.
 
-Berdasarkan analisis kedua agen, terdapat **konflik norma informasi** yang mendasar:
-1. **NLA** memberikan analisis spesifik tentang adat Jawa, mengacu pada hukum nasional (Pasal 35 UU Perkawinan) yang mengakui pembedaan antara *harta bawaan* (milik pribadi sebelum nikah) dan *harta gono-gini* (harta bersama selama nikah, idealnya dibagi 50:50).
-2. **ALA** menyatakan bahwa pengetahuannya terbatas pada adat Minangkabau (matrilineal) dan tidak dapat memberikan analisis akurat tentang adat Jawa, sehingga merekomendasikan konsultasi dengan ahli adat Jawa.
+**Konflik & Trade-off:** Terdapat ketegangan antara klaim NLA (yang menjelaskan hukum Jawa berdasarkan pengetahuan umum) dan ALA (yang menolak menjawab karena konteks tidak relevan). Trade-off-nya adalah antara memberikan informasi umum yang diakui secara hukum versus berpegang ketat pada sumber konteks yang tersedia.
 
-**Trade-off dan Rekomendasi Pluralistik:**
-- **Trade-off**: Mengandalkan hanya pada sumber hukum nasional (seperti NLA) berisiko mengabaikan keragaman praktik adat Jawa yang tidak seragam di berbagai daerah dan strata sosial. Sebaliknya, menolak analisis sama sekali (seperti ALA) menghambat akses terhadap pengetahuan yang telah terstandardisasi secara hukum.
-- **Keputusan**: Dalam konteks hukum Indonesia yang mengakui pluralisme hukum (Pasal 18B UUD 1945), pendekatan yang paling tepat adalah **sintesis berlapis**:
-    1. **Lapisan Hukum Nasional**: Secara umum, Pasal 35 UU Perkawinan menjadi acuan utama, membedakan harta bawaan (milik individu) dan harta bersama (gono-gini).
-    2. **Lapisan Adat**: Pengakuan bahwa praktik adat Jawa dapat bervariasi (misalnya, pembagian tidak selalu 50:50, atau mekanisme pembuktian harta bawaan yang non-dokumenter).
-    3. **Lapisan Penyelesaian**: Untuk kepastian hukum, pembuktian status harta bawaan sangat penting. Jika tidak terbukti, harta dianggap bagian dari gono-gini.
-
-**Kesimpulan**:  
-Konsep gono-gini dan harta bawaan dalam adat Jawa secara umum telah diadopsi dalam hukum nasional, tetapi penerapannya dalam praktik adat memerlukan pendekatan kontekstual. Untuk sengketa konkret, disarankan konsultasi dengan **ahli adat Jawa setempat** sekaligus merujuk pada ketentuan hukum nasional, dengan catatan bahwa pembuktian dan kesepakatan adat lokal dapat memengaruhi hasil akhir.
+**Keputusan Pluralistik:** Dalam pluralisme hukum, pengadilan akan mengakui dan menerapkan hukum adat Jawa (gono-gini dan harta bawaan) selama tidak bertentangan dengan hukum nasional. Namun, untuk analisis spesifik, diperlukan konsultasi dengan ahli atau tetua adat Jawa dan pembuktian di pengadilan, karena konteks yang diberikan tidak memadai.

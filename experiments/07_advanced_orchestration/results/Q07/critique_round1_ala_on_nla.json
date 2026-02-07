@@ -7,25 +7,25 @@
       "id": "K1",
       "target_claim_id": "C1",
       "issue_type": "evidence_gap",
-      "description": "Klaim bahwa MDP Bali 2010 mengatur sistem waris patrilineal yang membatasi hak waris perempuan atas harta asal (druwe) tidak didukung oleh kutipan pasal spesifik dari MDP Bali 2010. Bukti hanya menyebutkan 'MDP Bali 2010' secara umum tanpa rujukan normatif yang konkret, sehingga tidak dapat diverifikasi substansi aturannya.",
+      "description": "Klaim menyatakan bahwa Keputusan MDP 2010 adalah 'penafsiran baru hukum adat yang lebih egaliter'. Namun, konteks hanya menyebutkan bahwa MDP 2010 'mengatur tentang pembagian warisan yang lebih adil dan mengakui hak perempuan'. Tidak ada bukti dalam konteks yang menunjukkan bahwa ini adalah 'penafsiran baru' yang diakui secara luas dalam hukum adat Bali, atau bahwa ia secara sah mengubah atau menafsirkan ulang prinsip patrilineal. Status hukum dan penerimaan keputusan ini tidak jelas.",
       "severity": "MAJOR",
-      "suggested_fix": "Sebutkan pasal atau ketentuan spesifik dalam MDP Bali 2010 yang secara eksplisit mengatur pembatasan hak waris perempuan atas tanah druwe untuk mendukung klaim."
+      "suggested_fix": "Klaim harus direvisi untuk mencerminkan ketidakpastian ini, misalnya: 'Konflik norma potensial muncul antara hukum adat patrilineal tradisional Bali dengan adanya Keputusan Majelis Desa Pakraman (MDP) Bali Tahun 2010 yang mengatur pembagian warisan yang lebih adil, meskipun status hukum dan penerapannya memerlukan klarifikasi lebih lanjut.'"
     },
     {
       "id": "K2",
-      "target_claim_id": "C3",
-      "issue_type": "domain_mismatch",
-      "description": "Klaim mengacu pada KUHPerdata Pasal 119 dan UU No. 1 Tahun 1974 Pasal 35 untuk mengatur harta bersama (gono-gini), namun tidak mempertimbangkan konteks hukum adat Bali. Di Bali, konsep 'druwe' (harta asal) dan 'gono-gini' (harta pencaharian) memiliki pengaturan tersendiri dalam hukum adat yang mungkin berbeda dengan ketentuan KUHPerdata, terutama terkait pembagiannya. Asumsi bahwa perkawinan tunduk pada KUHPerdata bisa keliru jika masyarakat adat memilih hukum adat.",
+      "target_claim_id": "C4",
+      "issue_type": "logic_gap",
+      "description": "Klaim menyimpulkan bahwa jika tanah adalah harta bersama (gono-gini), maka bagian orang tua (ibu) akan menjadi harta warisan yang dibagikan ke semua anak, sehingga memperkuat posisi anak perempuan. Logika ini melompati langkah penting: pertama, perlu ditentukan apakah tanah tersebut memang harta bersama (fakta tidak diberikan). Kedua, meskipun menjadi harta warisan, pembagiannya masih dapat tunduk pada hukum adat setempat yang mungkin tetap membedakan berdasarkan gender, kecuali ada aturan khusus (seperti MDP 2010) yang mengaturnya. Klaim mengasumsikan bahwa status 'harta warisan' secara otomatis mengesampingkan hukum adat patrilineal.",
       "severity": "MAJOR",
-      "suggested_fix": "Analisis terlebih dahulu apakah perkawinan orang tua dalam kasus ini tunduk pada hukum adat Bali atau hukum nasional. Kemudian, jelaskan bagaimana konsep 'gono-gini' diinterpretasikan dan dibagi dalam kerangka hukum adat Bali sebelum menerapkan KUHPerdata."
+      "suggested_fix": "Klaim harus lebih hati-hati dan bersyarat: 'Jika tanah terbukti sebagai harta bersama (gono-gini), maka bagian almarhumah ibu akan masuk ke dalam harta warisan. Selanjutnya, mekanisme pembagian harta warisan tersebut akan bergantung pada aturan yang berlaku, yang mungkin merujuk pada hukum adat (patrilineal atau penyesuaian seperti MDP 2010) atau KUHPerdata secara subsidiir, sehingga posisi anak perempuan dapat diperkuat tergantung pada aturan mana yang diterapkan.'"
     },
     {
       "id": "K3",
-      "target_claim_id": "C4",
+      "target_claim_id": "C6",
       "issue_type": "overclaim",
-      "description": "Klaim bahwa hukum adat dapat dikesampingkan oleh hukum nasional jika bertentangan dengan prinsip keadilan atau HAM merupakan generalisasi yang berlebihan tanpa dukungan yurisprudensi yang spesifik. Bukti hanya menyebut 'Yurisprudensi MA RI' secara umum, tanpa putusan atau prinsip hukum yang konkret. Selain itu, Pasal 18B ayat (2) UUD 194 justru mengakui dan menghormati kesatuan masyarakat hukum adat, sehingga pengesampingan hukum adat bukan hal yang otomatis.",
-      "severity": "MAJOR",
-      "suggested_fix": "Sebutkan putusan Mahkamah Agung atau pengadilan yang spesifik dan relevan (misalnya, dari lingkungan Bali) yang menunjukkan kondisi di mana hukum adat waris dikesampingkan demi prinsip keadilan atau HAM, serta analisis parameter yang digunakan pengadilan."
+      "description": "Klaim menyatakan dengan pasti bahwa 'dalam litigasi, pengadilan akan menguji keabsahan dan substansi Keputusan MDP 2010'. Ini adalah overclaim karena memprediksi tindakan pengadilan secara spesifik. Meskipun logis jika pengadilan mempertimbangkan keputusan desa adat yang relevan, tidak ada jaminan bahwa pengadilan akan secara formal 'menguji keabsahan' sebuah keputusan desa adat. Pengadilan mungkin lebih fokus pada fakta sengketa, hukum adat yang berlaku secara umum, dan prinsip keadilan, tanpa proses pengujian formal terhadap produk hukum desa pakraman seperti terhadap peraturan perundang-undangan.",
+      "severity": "MINOR",
+      "suggested_fix": "Klaim harus direvisi untuk mengurangi kepastian dan lebih menggambarkan kemungkinan: 'Dalam proses litigasi, kemungkinan besar pengadilan akan mempertimbangkan keberadaan dan substansi Keputusan MDP 2010 sebagai salah satu faktor, di samping meneliti sifat hukum tanah sengketa dan menerapkan prinsip-prinsip keadilan serta kesetaraan yang dijamin UUD 1945.'"
     }
   ]
 }

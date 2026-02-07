@@ -6,26 +6,26 @@
     {
       "id": "K1",
       "target_claim_id": "C1",
-      "issue_type": "evidence_gap",
-      "description": "Klaim bahwa 'Harta Pusako Rendah dapat diwariskan kepada anak kandung' tidak didukung oleh bukti yang memadai dari konteks sumber. Konteks sumber hanya menyebutkan bahwa Harta Pusako Rendah 'dapat diwariskan kepada anak kandung' sebagai salah satu kemungkinan, tetapi tidak menjelaskan mekanisme, syarat, atau batasannya. Tidak ada rujukan spesifik pada aturan adat atau hukum yang secara tegas mengizinkan pewarisan kepada anak.",
+      "issue_type": "overclaim",
+      "description": "Klaim menyatakan hukum nasional 'tidak dapat menggeser' aturan waris matrilineal untuk Harta Pusako Tinggi. Ini adalah overclaim karena hukum nasional (seperti UU Perkawinan, UU Peradilan Agama) dapat berlaku dan berinteraksi dengan hukum adat dalam praktik peradilan, meskipun Pasal 18B UUD 1945 mengakui keberadaan masyarakat hukum adat. Klaim tersebut mengabaikan kemungkinan konflik norma dan penyelesaiannya di pengadilan.",
       "severity": "MAJOR",
-      "suggested_fix": "Perjelas bahwa pewarisan Harta Pusako Rendah kepada anak kandung bukanlah hak otomatis, tetapi merupakan hasil dari musyawarah (Sapakat) yang mempertimbangkan prinsip keadilan dan hukum Islam. Sertakan penjelasan bahwa tanpa kesepakatan, status pewarisannya dapat berbeda."
+      "suggested_fix": "Revisi klaim menjadi: 'Harta Pusako Tinggi secara prinsip diwariskan berdasarkan garis matrilineal menurut hukum adat Minangkabau, dan pengakuan negara terhadap hukum adat membatasi penerapan langsung hukum waris nasional dalam konteks ini.'"
     },
     {
       "id": "K2",
-      "target_claim_id": "C2",
-      "issue_type": "logic_gap",
-      "description": "Klaim bahwa mekanisme penyelesaian konflik untuk Harta Pusako Rendah 'mengacu pada hukum Islam' tidak diikuti dengan penjelasan bagaimana hukum Islam diintegrasikan dengan prinsip matrilineal. Terdapat potensi konflik logis karena hukum Islam (misalnya, Kompilasi Hukum Islam) memberikan hak waris kepada anak kandung, sementara adat matrilineal lebih mengutamakan kemenakan. Jawaban tidak menjelaskan bagaimana kedua sistem ini direkonsiliasi jika terjadi pertentangan.",
-      "severity": "MAJOR",
-      "suggested_fix": "Jelaskan secara spesifik prinsip atau kaidah hukum Islam mana yang digunakan dalam musyawarah (misalnya, bagian untuk anak laki-laki dan perempuan). Kemudian, jelaskan bagaimana Ninik Mamak dan Alim Ulama menyeimbangkannya dengan kewajiban adat terhadap kemenakan, mungkin dengan contoh pembagian proporsional."
+      "target_claim_id": "C3",
+      "issue_type": "evidence_gap",
+      "description": "Klaim merujuk pada 'Kerapatan Adat yang dipimpin ninik mamak, alim ulama, dan cerdik pandai' sebagai mekanisme utama. Namun, sumber yang dirujuk (source_id_1) tidak secara eksplisit menyebutkan bahwa alim ulama dan cerdik pandai adalah bagian wajib dari kerapatan tersebut untuk penyelesaian konflik Harta Pusako Rendah. Ini menciptakan evidence gap karena komposisi kerapatan adat bisa bervariasi.",
+      "severity": "MINOR",
+      "suggested_fix": "Revisi klaim menjadi: 'Mekanisme utama penyelesaian konflik untuk Harta Pusako Rendah adalah musyawarah dalam Kerapatan Adat (seperti yang melibatkan ninik mamak) untuk mencapai mufakat.' Hapus penyebutan spesifik 'alim ulama, dan cerdik pandai' jika tidak didukung bukti teks."
     },
     {
       "id": "K3",
-      "target_claim_id": "C3",
-      "issue_type": "overclaim",
-      "description": "Klaim bahwa 'Adat Minangkabau mengakomodasi hukum Islam dalam pewarisan Harta Pusako Rendah' merupakan generalisasi yang berlebihan. Konteks sumber hanya menyebutkan bahwa hukum Islam menjadi 'dasar pertimbangan', bukan bahwa adat secara formal mengakomodasinya. Frasa 'mengakomodasi' mengimplikasikan adaptasi struktural, yang mungkin tidak sepenuhnya akurat karena adat Minangkabau tetap berakar pada sistem matrilineal.",
-      "severity": "MINOR",
-      "suggested_fix": "Ubah klaim menjadi lebih hati-hati, misalnya: 'Dalam musyawarah untuk Harta Pusako Rendah, prinsip hukum Islam sering dijadikan sebagai salah satu bahan pertimbangan untuk mencapai kesepakatan yang adil, sejalan dengan filosofi adat basandi syarak.'"
+      "target_claim_id": "C5",
+      "issue_type": "logic_gap",
+      "description": "Klaim 'Hukum adat diakui oleh negara melalui Pasal 18B UUD 1945' benar, tetapi terdapat logic gap karena klaim ini berdiri sendiri tanpa kaitan logis yang jelas dengan mekanisme penyelesaian konflik harta pusako yang dijelaskan dalam jawaban. Pengakuan konstitusional tidak secara otomatis menjelaskan bagaimana mekanisme musyawarah adat beroperasi atau mengikat.",
+      "severity": "MAJOR",
+      "suggested_fix": "Hapus klaim C5 sebagai klaim terpisah, atau integrasikan sebagai premis pendukung dalam klaim lain (misalnya, C3 atau C4) dengan penjelasan: 'Mekanisme musyawarah adat ini memiliki dasar pengakuan negara sebagaimana diatur dalam Pasal 18B UUD 1945.'"
     }
   ]
 }

@@ -7,25 +7,25 @@
       "id": "K1",
       "target_claim_id": "C1",
       "issue_type": "evidence_gap",
-      "description": "Klaim bahwa pluralisme hukum diakui oleh 'konstitusi dan perundang-undangan' hanya didukung oleh dua pasal UUD 1945. Bukti ini tidak mencukupi karena gagal menyebutkan peraturan perundang-undangan lain yang secara operasional mengakui dan mengatur pluralisme hukum, seperti UU No. 39/1999 tentang HAM, UU No. 12/2011 tentang Pembentukan Peraturan Perundang-undangan (Pasal 5), atau putusan-putusan Mahkamah Konstitusi yang memperkuat pengakuan tersebut.",
+      "description": "Klaim C1 menyatakan pluralisme hukum diakui, namun bukti CONTEXT_1 hanya mendeskripsikan situasinya. Tidak ada bukti yang secara eksplisit menyatakan bahwa sistem-sistem hukum adat dan agama tersebut 'diakui' secara formal oleh negara, yang merupakan elemen kunci dari definisi pluralisme hukum. Pengakuan formal memerlukan rujukan pada konstitusi, undang-undang, atau putusan pengadilan.",
       "severity": "MAJOR",
-      "suggested_fix": "Perluas daftar bukti untuk mencakup peraturan perundang-undangan di bawah UUD yang secara eksplisit mengatur penerapan hukum adat dan agama, serta yurisprudensi penting yang menafsirkan pasal-pasal konstitusi tersebut."
+      "suggested_fix": "Tambahkan bukti yang menunjukkan pengakuan formal, misalnya Pasal 18B ayat (2) UUD 1945 yang mengakui kesatuan masyarakat hukum adat, atau Pasal 2 UU No. 1 Tahun 1974 tentang Perkawinan yang mengakui hukum agama dan kepercayaan."
     },
     {
       "id": "K2",
-      "target_claim_id": "C2",
-      "issue_type": "overclaim",
-      "description": "Klaim bahwa asas personalitas keagamaan berlaku 'khususnya dalam hukum keluarga dan waris' merupakan penyederhanaan yang berlebihan. Dalam praktik, penerapan hukum waris Islam sangat kompleks dan sering kali tumpang tindih atau berkonflik dengan hukum adat dan hukum nasional (misalnya, terkait hak anak perempuan atau ahli waris pengganti). Klaim ini mengabaikan batasan penerapan KHI (hanya untuk muslim) dan keberadaan aturan lain seperti UU Perkawinan yang berlaku untuk semua warga negara.",
+      "target_claim_id": "C3",
+      "issue_type": "logic_gap",
+      "description": "Klaim C3 menyimpulkan bahwa penyebab pluralisme adalah 'tidak ada peraturan nasional yang secara tegas dan komprehensif mengatur'. Ini adalah simplifikasi logika sebab-akibat. Bukti CONTEXT_2 hanya menyatakan bahwa lebih dari satu norma berlaku karena tidak ada unifikasi. Namun, penyebab utamanya bukan sekadar 'ketiadaan' aturan, melainkan kebijakan politik-historis (seperti politik hukum kolonial dan kompromi pasca-kemerdekaan) yang sengaja mempertahankan keberagaman sistem hukum. Kesimpulan C3 mengabaikan faktor 'kehendak politik' sebagai akar penyebab.",
       "severity": "MAJOR",
-      "suggested_fix": "Klarifikasi klaim dengan menyebutkan bahwa asas personalitas keagamaan terutama diakui dalam bidang-bidang tertentu (perkawinan, perwalian, waris bagi muslim) namun dengan batasan dan sering berinteraksi dengan sistem hukum lain, serta sebutkan contoh aturan yang membatasi atau mengatur interaksi tersebut."
+      "suggested_fix": "Perbaiki klaim untuk mencerminkan akar penyebab yang lebih mendalam: 'Keberlangsungan pluralisme hukum disebabkan oleh kebijakan politik-historis yang mempertahankan sistem hukum yang berbeda-beda, di mana unifikasi hukum perdata materiil nasional belum terealisasi secara komprehensif.'"
     },
     {
       "id": "K3",
-      "target_claim_id": "C3",
-      "issue_type": "logic_gap",
-      "description": "Klaim menghubungkan 'keterbatasan KUHPerdata' sebagai 'penyebab' pluralisme hukum mengandung kesalahan logika. KUHPerdata (BW) berlaku sebagai hukum umum (subsidiair) berdasarkan asas konkordansi. Pluralisme hukum bukanlah 'akibat' dari keterbatasannya, tetapi merupakan pilihan politik-hukum yang diakui sejak awal (sebelum dan sesudah kemerdekaan) karena realitas masyarakat majemuk. Logika yang disajikan terbalik: pluralisme ada oleh karena pengakuan terhadap keragaman, dan KUHPerdata mengisi celah di mana hukum adat/agama tidak mengatur, bukan sebaliknya.",
-      "severity": "CRITICAL",
-      "suggested_fix": "Reformulasi klaim untuk menyatakan bahwa keberlakuan KUHPerdata yang bersifat umum dan subsidiari, bersanding dengan pengakuan terhadap hukum adat dan agama yang bersifat khusus, merupakan manifestasi dari pluralisme hukum itu sendiri, bukan penyebabnya. Penyebab utamanya adalah pengakuan konstitusional terhadap keragaman."
+      "target_claim_id": "C5",
+      "issue_type": "overclaim",
+      "description": "Klaim C5 menyatakan konsep harta bersama 'tidak dalam KUHPerdata yang menganut asas pemisahan harta'. Ini adalah pernyataan yang terlalu umum dan dapat menyesatkan. KUHPerdata (BW) memang menganut asas pemisahan harta (Pasal 119), namun dalam praktik peradilan dan perkembangan yurisprudensi (misalnya putusan-putusan Mahkamah Agung), asas 'harta bersama' atau 'gono-gini' sering diakui dan diterapkan secara analog atau sebagai hukum tidak tertulis, khususnya bagi pasangan yang menikah tanpa perjanjian perkawinan. Klaim ini mengabaikan dinamika dan penerapan hukum di dalam sistem hukum nasional itu sendiri.",
+      "severity": "MAJOR",
+      "suggested_fix": "Klarifikasi klaim menjadi: 'Konsep harta bersama (gono-gini) diakui secara eksplisit dalam hukum adat (misalnya Jawa) dan Hukum Islam (KHI). Sementara KUHPerdata menganut asas pemisahan harta secara normatif, dalam praktik peradilan di Indonesia, asas harta bersama sering diterima melalui yurisprudensi.'"
     }
   ]
 }

@@ -4,64 +4,94 @@
   "final_nla": {
     "round": 2,
     "agent": "NLA",
-    "answer": "Berdasarkan KUHPerdata, pembagian waris jika pewaris (suami) meninggalkan istri dan dua anak kandung, tanpa wasiat, adalah sebagai berikut:\n\n1. **Tahap Pemisahan Harta Bersama (Gono-Gini):** Harta bersama suami-istri dibagi dua. Separuh menjadi hak mutlak istri yang masih hidup. Separuh lainnya, ditambah seluruh harta pribadi suami (jika ada), menjadi harta warisan yang akan dibagi.\n2. **Tahap Pembagian Harta Warisan:** Dari total harta warisan tersebut:\n   - **Istri** mendapat bagian pasti (legitieme portie) sebesar **1/4 (seperempat)**.\n   - **Sisa 3/4 (tiga perempat)** dibagi sama rata kepada **kedua anak**. Dengan demikian, masing-masing anak mendapat **3/8** dari harta warisan.\n\n**Ilustrasi:** Jika total harta bersama Rp1 M, maka istri mendapat Rp500 juta dari pemisahan harta. Harta warisan suami Rp500 juta. Istri mendapat Rp125 juta (1/4) sebagai ahli waris, dan masing-masing anak mendapat Rp187,5 juta (3/8). Total akhir istri Rp625 juta, masing-masing anak Rp187,5 juta.",
+    "answer": "Menurut KUHPerdata, harta bersama dibagi dua terlebih dahulu: ½ untuk istri dan ½ masuk harta warisan. Harta warisan (½ harta bersama + harta pribadi pewaris) kemudian dibagi: istri mendapat ⅓, dan dua anak bersama-sama mendapat ⅔ (dibagi rata).",
     "claims": [
       {
         "id": "C1",
-        "statement": "Harta bersama (gono-gini) suami-istri harus dipisahkan terlebih dahulu, di mana istri berhak atas 1/2 bagian sebagai miliknya sendiri.",
+        "statement": "Harta bersama perkawinan dibagi dua, ½ untuk istri dan ½ masuk ke harta warisan pewaris.",
         "evidence": [
-          "Pasal 119 KUHPerdata"
+          "CONTEXT"
         ],
         "confidence": 1.0,
         "assumptions": [
-          "A1",
-          "A2"
+          "Tidak ada perjanjian perkawinan lain"
         ]
       },
       {
         "id": "C2",
-        "statement": "Setelah pemisahan, harta warisan (bagian suami dari harta bersama plus harta pribadinya) dibagikan kepada ahli waris Golongan I (istri dan anak).",
+        "statement": "Harta warisan terdiri dari ½ harta bersama ditambah seluruh harta pribadi pewaris.",
         "evidence": [
-          "Pasal 832-833 KUHPerdata"
+          "CONTEXT"
         ],
         "confidence": 1.0,
         "assumptions": [
-          "A1",
-          "A2"
+          "Tidak ada perjanjian perkawinan lain"
         ]
       },
       {
         "id": "C3",
-        "statement": "Dalam Golongan I, istri yang ditinggalkan berhak atas 1/4 bagian dari harta warisan, sementara sisanya dibagi rata kepada semua anak.",
+        "statement": "Istri dan dua anak adalah ahli waris berdasarkan Pasal 852a BW.",
         "evidence": [
-          "Pasal 852a KUHPerdata (SEMA No. 3/1963)"
+          "CONTEXT"
         ],
         "confidence": 1.0,
         "assumptions": [
-          "A1",
-          "A2",
-          "A3"
+          "Tidak ada ahli waris lain yang lebih berhak"
+        ]
+      },
+      {
+        "id": "C4",
+        "statement": "Bagian warisan untuk istri adalah ⅓ dari harta warisan.",
+        "evidence": [
+          "CONTEXT"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "Tidak ada wasiat yang mengurangi bagian wajib"
+        ]
+      },
+      {
+        "id": "C5",
+        "statement": "Bagian warisan untuk dua anak bersama-sama adalah ⅔ dari harta warisan, dibagi rata.",
+        "evidence": [
+          "CONTEXT"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "Anak-anak adalah ahli waris sah dan tidak ada yang diasingkan"
+        ]
+      },
+      {
+        "id": "C6",
+        "statement": "Bagian ⅔ untuk anak merupakan bagian mutlak (legitieme portie) menurut KUHPerdata.",
+        "evidence": [
+          "CONTEXT"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "Tidak ada wasiat yang melanggar bagian wajib"
         ]
       }
     ],
     "uncertainties": [
-      "U1: Apakah ada harta pribadi (bawaan/hibah/warisan) milik suami atau istri yang perlu diperhitungkan secara terpisah? Analisis utama mengasumsikan seluruh harta adalah harta bersama."
+      "Apakah semua harta adalah harta bersama atau ada harta pribadi pewaris.",
+      "Apakah ada wasiat dari pewaris yang mempengaruhi pembagian."
     ],
     "open_questions": [
-      "Q1: Bagaimana jika salah satu atau kedua anak tersebut adalah anak luar kawin yang telah diakui? Bagaimana kedudukan dan bagian waris mereka?",
-      "Q2: Apa langkah hukum yang harus ditempuh untuk memperoleh kepastian dan eksekusi pembagian ini (misalnya, melalui penetapan ahli waris di Pengadilan Negeri)?"
+      "Apakah ahli waris yang dimaksud adalah anak kandung sah atau termasuk anak angkat?",
+      "Apakah ada utang pewaris yang harus dilunasi terlebih dahulu dari harta warisan?"
     ]
   },
   "final_ala": {
     "round": 2,
     "agent": "ALA",
-    "answer": "Menurut KUHPerdata, jika pewaris meninggalkan istri dan dua anak, pembagian warisnya adalah sebagai berikut:\n1. Istri mendapat bagian sebesar **1/4 (seperempat)** dari harta warisan.\n2. Dua anak bersama-sama mendapat bagian **3/4 (tiga perempat)** dari harta warisan, yang kemudian dibagi rata di antara mereka.\n3. Dengan demikian, masing-masing anak mendapat bagian sebesar **3/8** dari total harta warisan.\n\nPenting untuk dicatat bahwa analisis ini murni berdasarkan KUHPerdata. Dalam konteks Adat Minangkabau, sistem pewarisan ini tidak berlaku untuk **Harta Pusako Tinggi**, yang diatur oleh hukum adat matrilineal dan diwariskan kepada kemenakan (anak dari saudara perempuan pewaris). Harta pencaharian (Harta Pusako Rendah) dapat menjadi area di mana hak anak dipertimbangkan, tetapi penyelesaiannya sering melalui musyawarah adat.",
+    "answer": "Menurut KUHPerdata, jika pewaris meninggalkan istri dan dua anak, istri mendapat 1/4 bagian harta warisan, sementara dua anak bersama-sama mendapat 3/4 bagian. Bagian untuk anak tersebut kemudian dibagi rata di antara mereka, sehingga masing-masing anak mendapat 3/8 (37.5%) dari total harta warisan.",
     "claims": [
       {
         "id": "C1",
-        "statement": "Dalam KUHPerdata, istri dari pewaris yang meninggalkan dua anak berhak atas 1/4 bagian harta warisan.",
+        "statement": "Pembagian waris menurut KUHPerdata untuk pewaris yang meninggalkan istri dan dua anak diatur dalam Pasal 852 KUHPerdata.",
         "evidence": [
-          "KUHPerdata_Buku_II_Bagian_Kedua"
+          "source_id_1"
         ],
         "confidence": 1.0,
         "assumptions": [
@@ -70,9 +100,9 @@
       },
       {
         "id": "C2",
-        "statement": "Dalam KUHPerdata, dua anak dari pewaris tersebut bersama-sama berhak atas 3/4 bagian harta warisan, yang dibagi rata.",
+        "statement": "Istri mendapat bagian seperempat (1/4) dari harta warisan.",
         "evidence": [
-          "KUHPerdata_Buku_II_Bagian_Kedua"
+          "source_id_1"
         ],
         "confidence": 1.0,
         "assumptions": [
@@ -81,27 +111,58 @@
       },
       {
         "id": "C3",
-        "statement": "Aturan pembagian waris menurut KUHPerdata tidak berlaku untuk Harta Pusako Tinggi dalam Adat Minangkabau.",
+        "statement": "Dua anak bersama-sama mendapat tiga perempat (3/4) dari harta warisan.",
         "evidence": [
-          "Sistem_Adat_Minangkabau_Matrilineal"
+          "source_id_1"
         ],
         "confidence": 1.0,
         "assumptions": [
-          "A2"
+          "A1"
         ]
+      },
+      {
+        "id": "C4",
+        "statement": "Bagian 3/4 untuk anak tersebut dibagi rata di antara mereka.",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "A1"
+        ]
+      },
+      {
+        "id": "C5",
+        "statement": "Masing-masing anak mendapat 3/8 (setara dengan 37.5%) dari total harta warisan.",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "A1"
+        ]
+      },
+      {
+        "id": "C6",
+        "statement": "KUHPerdata tidak mengenal pembedaan Harta Pusako Tinggi dan Rendah seperti dalam adat Minangkabau.",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 1.0,
+        "assumptions": []
       }
     ],
     "uncertainties": [
-      "U1: Tidak ada ketidakpastian mengenai aturan KUHPerdata untuk kasus ini, karena aturannya jelas dan terdefinisi."
+      "U1: Jenis kelamin anak tidak mempengaruhi pembagian menurut KUHPerdata, seperti yang disebutkan dalam konteks."
     ],
     "open_questions": [
-      "Q1: Bagaimana penyelesaian konflik jika harta pewaris merupakan campuran antara Harta Pusako Rendah dan harta pribadi lainnya, dan keluarga ingin menyelesaikannya di luar pengadilan umum?"
+      "Q1: Apakah semua harta yang ditinggalkan pewaris adalah harta bersama atau harta pribadi, karena dapat mempengaruhi bagian yang diwariskan?"
     ]
   },
   "critique_counts": {
-    "CRITICAL": 3,
-    "MAJOR": 7,
-    "MINOR": 2
+    "CRITICAL": 1,
+    "MAJOR": 10,
+    "MINOR": 3
   },
   "needs_human_review": true,
   "logs_index": [

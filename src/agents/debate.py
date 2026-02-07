@@ -42,10 +42,17 @@ def _build_answer_prompt(
     round_num: int,
 ) -> str:
     return (
-        f"Kamu adalah {agent_label}. Jawab secara terstruktur dan ringkas.\n"
+        f"Kamu adalah {agent_label}. Jawab terstruktur, ringkas, dan evidence-grounded.\n"
         f"ROUND: {round_num}\n"
         f"QUERY: {query}\n"
         f"CONTEXT: {context}\n"
+        "\n"
+        "ATURAN KETAT:\n"
+        "- HANYA buat klaim yang bisa didukung evidence dari CONTEXT.\n"
+        "- Jika evidence tidak ada, masukkan ke uncertainties.\n"
+        "- Maksimal 6 klaim, setiap klaim 1 kalimat singkat.\n"
+        "- Jangan menambah informasi baru di luar CONTEXT.\n"
+        "- Jawaban ringkas (<= 1200 karakter).\n"
         "\n"
         "OUTPUT WAJIB JSON dengan skema:\n"
         "{\n"
@@ -77,7 +84,9 @@ def _build_critique_prompt(
         f"Kamu adalah {agent_label}. Kritik jawaban agent {target_label}.\n"
         f"ROUND: {round_num}\n"
         f"TARGET ANSWER: {json.dumps(target_answer, ensure_ascii=False)}\n\n"
-        "Buat minimal 3 kritik spesifik. Output WAJIB JSON dengan skema:\n"
+        "Buat minimal 3 kritik spesifik.\n"
+        "Fokus pada: evidence_gap, logic_gap, overclaim, dan klaim tanpa dasar.\n"
+        "Output WAJIB JSON dengan skema:\n"
         "{\n"
         '  "round": 1,\n'
         '  "agent": "NLA" | "ALA",\n'

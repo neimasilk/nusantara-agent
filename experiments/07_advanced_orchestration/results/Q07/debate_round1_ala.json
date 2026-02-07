@@ -1,38 +1,55 @@
 {
   "round": 1,
   "agent": "ALA",
-  "answer": "Konflik norma ini merupakan benturan antara hukum negara (MDP Bali 2010) yang mengakui hak waris individual dan kesetaraan gender, dengan hukum adat (patrilineal Bali) yang mengutamakan kelestarian harta keluarga dalam garis laki-laki dan hak komunal. Konflik diperparah jika ada campuran hukum agama (seperti Islam) yang memiliki aturan waris berbeda. Intinya, ini adalah pertentangan antara prinsip universal-kesetaraan (hukum positif) dan partikular-kekerabatan (hukum adat).",
+  "answer": "Konflik norma terjadi antara hukum positif (MDP Bali 2010) yang mungkin mengakui hak individu perempuan, dengan norma adat patrilineal Bali yang membatasi hak waris berdasarkan garis laki-laki. Dalam analogi adat Minangkabau, konflik serupa adalah benturan antara hak kolektif kaum (harta pusaka) dengan hak individu anak kandung.",
   "claims": [
     {
       "id": "C1",
-      "statement": "Sumber konflik utama adalah klaim berbasis hukum negara (MDP Bali 2010) yang menekankan kesetaraan gender dan hak individual, berhadapan dengan penolakan berbasis hukum adat patrilineal Bali yang menekankan hak komunal dan kelanggengan harta dalam garis laki-laki.",
+      "statement": "Konflik norma dalam kasus ini adalah benturan antara norma hukum negara (MDP Bali 2010) dengan norma adat patrilineal Bali.",
       "evidence": [
-        "MDP Bali 2010",
-        "Sistem Patrilineal Bali"
+        "source_id_1"
       ],
-      "confidence": 0.9,
+      "confidence": 1.0,
       "assumptions": [
         "A1"
       ]
     },
     {
       "id": "C2",
-      "statement": "Konflik ini melibatkan benturan setidaknya tiga sistem norma: Hukum Negara, Hukum Adat, dan potensial Hukum Agama (jika berlaku), yang masing-masing memiliki sumber legitimasi dan logika pembagian yang berbeda.",
+      "statement": "Dalam analogi adat Minangkabau, konflik serupa terjadi antara hak kolektif kaum atas harta pusaka dengan hak individu anak kandung.",
       "evidence": [
-        "Teori Pluralisme Hukum"
+        "source_id_1"
       ],
-      "confidence": 0.85,
+      "confidence": 1.0,
       "assumptions": [
         "A2"
       ]
+    },
+    {
+      "id": "C3",
+      "statement": "Adat Minangkabau mempertahankan hak kolektif kaum atas harta pusaka tinggi, di mana hak kemenakan lebih kuat daripada hak anak kandung.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C4",
+      "statement": "Hukum nasional sering kali lebih melindungi hak individu dan anak kandung dibandingkan adat.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 0.9,
+      "assumptions": []
     }
   ],
   "uncertainties": [
-    "U1",
-    "U2"
+    "U1: Isi spesifik dan ketentuan hukum dalam MDP Bali 2010 tidak dijelaskan dalam konteks.",
+    "U2: Detail spesifik sistem patrilineal Bali dan penerapannya dalam kasus ini tidak diuraikan."
   ],
   "open_questions": [
-    "Q1",
-    "Q2"
+    "Q1: Bagaimana mekanisme penyelesaian sengketa waris antara hukum adat dan hukum negara di Bali?",
+    "Q2: Apakah MDP Bali 2010 memiliki klausul khusus yang mengakomodasi atau mengecualikan hukum adat patrilineal?"
   ]
 }

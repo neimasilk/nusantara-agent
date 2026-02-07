@@ -1,86 +1,86 @@
 [
   {
     "query_id": "Q01",
-    "accuracy": 4,
+    "accuracy": 3,
     "completeness": 4,
     "cultural_sensitivity": 5,
-    "notes": "Tepat pada substansi KUHPerdata, lengkap menyentuh konflik dengan adat Minangkabau, serta framing yang sangat menghormati nilai lokal tanpa stereotip."
+    "notes": "Inti pasal 852 KUHPerdata benar (istri 1/4, anak-bersama 3/4), tapi memunculkan 'konflik NLA vs ALA' yang tidak lazim; tidak ada sumber hukum resmi 'NLA/ALA' sehingga menimbulkan kekeliruan. Penjelasan pemisahan harta bersama bagus. Tidak menyebut perbedaan jika ada anak luar kawin atau harta tidak bersama."
   },
   {
     "query_id": "Q02",
     "accuracy": 5,
     "completeness": 5,
     "cultural_sensitivity": 5,
-    "notes": "Tepat: pusako tinggi milik kaum, pengelolaan turun ke kemenakan laki-laki; kontras dengan hukum nasional dijelaskan; framing menghormati adat."
+    "notes": "Klaim utama akurat: kemenakan (bukan anak kandung) yang menerima pusako tinggi. Menyebut kerangka pluralisme hukum & penegasan bahwa mamak hanya pengelola. Tidak ada stereotip atau generalisasi negatif."
   },
   {
-    "accuracy": 5,
-    "completeness": 5,
-    "cultural_sensitivity": 5,
-    "notes": "Semua klaim tepat, membedakan pusako tinggi/rendah dan status pewaris; menutup semua aspek mediasi-adat hingga yurisprudensi; bahasa menghormati struktur matrilineal tanpa stereotip.",
-    "query_id": "Q03"
+    "query_id": "Q03",
+    "accuracy": 3,
+    "completeness": 3,
+    "cultural_sensitivity": 3,
+    "notes": "Benar bahwa KUHPerdata mengutamakan anak kandung dan adat Minang matrilineal, tapi salah klasifikasi tanah pusako rendah sebagai objek KUHPerdata (seharusnya tetap adat). Tidak menyebut Yurisprudensi MA 1960 yang menjadi dasar pengecualian. Solusi musyawarah valid tapi generik."
   },
   {
     "query_id": "Q04",
     "accuracy": 5,
     "completeness": 5,
     "cultural_sensitivity": 5,
-    "notes": "Tidak menyebut konflik seperti diminta; semua klaim akurat, lengkap, dan penuh penghormatan terhadap adat"
+    "notes": "Semua klaim akurat, tidak overclaim; membanding dua sistem tanpa menyebut konflik sesuai instruksi; bahasa menghormati adat Minang, tidak mereduksi."
   },
   {
     "query_id": "Q05",
     "accuracy": 5,
     "completeness": 5,
     "cultural_sensitivity": 5,
-    "notes": "Semua klaim Pasal 1320 tepat, dampak void/voidable benar, serta konflik norma nasional-adat dijelaskan lengkap tanpa stereotip."
+    "notes": "Tepat menyebut Pasal 1320, klasifikasi void vs voidable, serta dampak pelanggaran; lengkap karena menambah konteks adat Minangkabau dan mekanisme pluralistik; bahasa menghormati adat tanpa stereotip."
   },
   {
     "query_id": "Q06",
-    "accuracy": 5,
-    "completeness": 5,
-    "cultural_sensitivity": 5,
-    "notes": "Semua klaim utama akurat, tidak overclaim; menjelaskan hierarki sentana, perbedaan sentana rajeg/tidak rajeg, serta konflik dengan KUHPerdata. Menyentuh aspek nasional (UU Pluralisme Hukum) dan adat Bali secara lengkap. Bahasa menghormati nilai adat, tidak stereotip."
+    "accuracy": 3,
+    "completeness": 3,
+    "cultural_sensitivity": 4,
+    "notes": "Benar soal sentana sebagai anak angkat & fungsi sosialnya, tapi menyatakan 'konflik norma' tanpa menjelaskan bahwa UUPK 2021 sudah mengakui anak angkat sebagai ahli waris (jika proses pengangkatan memenuhi syarat) sehingga overclaim 'hanya melalui wasiat'. Kurang menyebut peran sentana dalam krama desa/pura & mekanisme penyamaan status melalui 'nyentana'. Framing 'pluralistik' cukup sensitif."
   },
   {
     "query_id": "Q07",
     "accuracy": 5,
     "completeness": 5,
     "cultural_sensitivity": 5,
-    "notes": "Tepat menyebut tiga tumpang-tindih hukum, klasifikasi druwe vs gono-gini, serta mekanisme mediasi adat; tidak overclaim, menghormati nilai komunal Bali."
+    "notes": "Semua klaim akurat (MDP Bali 2010, patrilineal, druwe/gono-gini), menyinggung musyawarah Desa Pakraman, pengadilan, KUHPerdata subsidiari; framing menghormati adat tanpa stereotip."
   },
   {
     "query_id": "Q08",
     "accuracy": 5,
     "completeness": 5,
     "cultural_sensitivity": 5,
-    "notes": "Semua klaim akurat, tak overclaim; menyinggung nasional dan multi-adat; framing menghormati keragaman budaya."
+    "notes": "ringkas"
   },
   {
     "query_id": "Q09",
-    "accuracy": 2,
+    "accuracy": 1,
     "completeness": 1,
-    "cultural_sensitivity": 1,
-    "notes": "Jawaban tidak menjawab pertanyaan langsung tentang perbedaan gono-gini dan harta bawaan dalam adat Jawa. Lebih fokus pada konflik norma dan rekomendasi pluralistik. Informasi spesifik adat Jawa sangat minim."
+    "cultural_sensitivity": 2,
+    "notes": "Menyebut istilah benar tapi langsung nyatakan bahwa penjelasan yang diberikan soal Minang, bukan Jawa; inti pertanyaan tidak terjawab."
   },
   {
     "query_id": "Q10",
     "accuracy": 5,
     "completeness": 5,
     "cultural_sensitivity": 5,
-    "notes": "Tepat bedakan harta pusaka/pencaharian, urutkan forum adat-pengadilan, hormati matrilineal tanpa stereotip."
+    "notes": "Tepat: membedakan pusako tinggi/rendah, mekanisme pluralistik, modifying factor, dan kerapatan adat. Tidak overclaim, hormat terhadap matrilineal."
   },
   {
     "query_id": "Q11",
-    "accuracy": 4,
-    "completeness": 5,
-    "cultural_sensitivity": 5,
-    "notes": "Jawaban sangat akurat dan bernuansa; hanya minor gap: tidak menyebut secara eksplisit angka 1/3 bagian mutlak BW untuk dua anak, tapi esensi batasan matematis sudah tersirat. Lengkap membanding kedua sistem, sensitif terhadap konteks adat Minang."
-  },
-  {
-    "query_id": "Q12",
     "accuracy": 5,
     "completeness": 5,
     "cultural_sensitivity": 5,
-    "notes": "Semua klaim akurat, tidak overclaim; mencakup konstitusi, sejarah, asas personalitas, contoh konflik waris Minangkabau, mekanisme penyelesaian, serta trade-off. Bahasa netral, menghormati konteks adat dan agama."
+    "notes": "Semua klaim KUHPerdata akurat; menyebut pasal dan angka legitieme portie tepat. Lengkap: nasional (KUHPer) + batasan + mekanisme gugat, plus kontras langsung dengan adat Minang. Bahasa menghormati adat, tidak mereduksi, dan menawarkan penyelesaian musyawarah."
+  },
+  {
+    "accuracy": 5,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Semua klaim tepat, tidak overclaim; menjelaskan tiga sistem, sebab historis-sosial, konflik, dan mekanisme penyelesaian; contoh Minangkabau disampaikan tanpa stereotip.",
+    "query_id": "Q12"
   }
 ]

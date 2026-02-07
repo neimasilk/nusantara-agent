@@ -1,59 +1,58 @@
 {
   "round": 1,
   "agent": "ALA",
-  "answer": "Sebagai Adat Law Agent (ALA), saya akan menjawab dengan merujuk pada hukum adat Minangkabau, yang merupakan sistem hukum yang hidup dan berlaku bagi masyarakatnya. Pertanyaan Anda menggabungkan konsep dari KUHPerdata (hukum umum) dengan realitas hukum adat. Berikut penjelasan terstruktur:\n\n1. **Kedudukan dan Batasan Wasiat dalam Kerangka Hukum Adat Minangkabau:**\n   - Dalam hukum adat Minangkabau, **kedudukan wasiat sangat terbatas** dan tidak dapat disamakan dengan konsep wasiat dalam KUHPerdata. Kebebasan individu untuk mengatur hartanya setelah meninggal dibatasi secara ketat oleh prinsip kekeluargaan dan kepemilikan komunal.\n   - **Batasannya terhadap ahli waris** ditentukan oleh jenis harta, bukan oleh bagian mutlak (legitieme portie) sebagaimana dalam KUHPerdata.\n\n2. **Pembagian Harta dan Ruang Lingkup Wasiat:**\n   - **Harta Pusako Tinggi (harta turun-temurun kaum):** **Wasiat atas harta ini tidak diakui**. Harta Pusako Tinggi adalah milik kolektif kaum (garis ibu) dan diwariskan secara otomatis kepada kemenakan dalam garis matrilineal. Seorang individu hanya berstatus pengelola, bukan pemilik mutlak, sehingga tidak berhak mewasiatkannya.\n   - **Harta Pencaharian (Harta Pusako Rendah atau Suko):** **Wasiat dimungkinkan, tetapi dengan batasan adat yang kuat**. Harta ini berasal dari usaha pribadi. Secara adat murni, harta ini seharusnya diwariskan kepada **kemenakan** (saudara dari garis ibu), karena laki-laki (ayah) memiliki kewajiban utama kepada kaumnya. Namun, dalam perkembangan dan praktiknya, sering terjadi penyesuaian dengan hukum Islam dan rasa keadilan terhadap anak kandung.\n\n3. **Ahli Waris 'Mutlak' Menurut Adat:**\n   - **Untuk Harta Pusako Tinggi:** Ahli waris mutlak adalah **anggota kaum dari garis ibu (kemenakan)**. Hak mereka bersifat kolektif dan tidak dapat dikesampingkan.\n   - **Untuk Harta Pencaharian:** Terdapat **dualisme kepentingan**. Ahli waris yang memiliki hak kuat adalah **kemenakan** (menurut adat matrilineal). Namun, **anak kandung dan istri** juga diakui memiliki hak moral dan sering kali diakui secara hukum (Islam/nasional). Wasiat dapat menjadi alat untuk mengakomodasi hak anak kandung, tetapi jika dilakukan secara sepihak dan mengabaikan kemenakan sepenuhnya, akan bertentangan dengan prinsip kekerabatan adat dan berpotensi menimbulkan sengketa.\n\n4. **Prinsip Pembatas Utama:**\n   - Batasan terkuat bagi wasiat dalam adat Minangkabau adalah **prinsip musyawarah (mufakat) dan keseimbangan sosial**. Setiap pengaturan harta, termasuk wasiat, idealnya harus melalui kesepakatan keluarga besar untuk menjaga harmoni antara hak keluarga inti (anak-istri) dan tanggung jawab terhadap kaum (kemenakan).\n   - Prinsip adat **\"Adat basandi syarak, syarak basandi Kitabullah\"** menuntut pengaturan yang tidak hanya adil secara komunal tetapi juga tidak bertentangan dengan ajaran Islam, yang juga mengakui hak anak dan istri.\n\n**Kesimpulan:** Dalam hukum adat Minangkabau, wasiat tidak memiliki kedudukan bebas seperti dalam KUHPerdata. Konsep \"bagian mutlak ahli waris\" ala KUHPerdata digantikan oleh **hak komunal kaum atas Pusako Tinggi** dan **dualisme hak antara kemenakan dan anak kandung atas Harta Pencaharian**. Keabsahan dan kedamaian sebuah wasiat sangat bergantung pada sejauh mana ia dihasilkan melalui musyawarah dan menghormati kedua lingkaran kekerabatan ini.",
+  "answer": "Dalam KUHPerdata, wasiat adalah pernyataan kehendak tentang harta setelah meninggal, tetapi dibatasi oleh bagian mutlak (legitieme portie) ahli waris garis lurus. Di Minangkabau, wasiat tidak berlaku untuk Harta Pusako Tinggi karena bukan milik pribadi dan diwariskan matrilineal kepada kemenakan. Untuk Harta Pusako Rendah, wasiat diakui tetapi tetap terikat batasan bagian mutlak anak kandung menurut KUHPerdata, sehingga kemenakan tidak dapat menggeser hak anak melalui wasiat.",
   "claims": [
     {
       "id": "C1",
-      "statement": "KUHPerdata secara prinsip tidak berlaku bagi masyarakat Minangkabau yang memegang hukum adat dan hukum Islam dalam hal warisan.",
+      "statement": "Dalam KUHPerdata, wasiat dibatasi oleh bagian mutlak (legitieme portie) yang harus diberikan kepada ahli waris dalam garis lurus.",
       "evidence": [
-        "context_1"
+        "source_id_1"
       ],
-      "confidence": 0.95,
-      "assumptions": [
-        "A1"
-      ]
+      "confidence": 1.0,
+      "assumptions": []
     },
     {
       "id": "C2",
-      "statement": "Wasiat atas Harta Pusako Tinggi tidak diakui dalam hukum adat Minangkabau karena harta tersebut adalah milik kolektif kaum dan diwariskan secara otomatis menurut garis matrilineal.",
+      "statement": "Wasiat tidak berlaku untuk Harta Pusako Tinggi di Minangkabau karena harta tersebut bukan milik pribadi dan diwariskan secara matrilineal.",
       "evidence": [
-        "context_1"
+        "source_id_1"
       ],
-      "confidence": 0.98,
-      "assumptions": [
-        "A2"
-      ]
+      "confidence": 1.0,
+      "assumptions": []
     },
     {
       "id": "C3",
-      "statement": "Untuk Harta Pencaharian (Pusako Rendah), wasiat dimungkinkan tetapi dibatasi oleh dualisme hak antara kemenakan (menurut adat) dan anak kandung/istri (menurut hukum Islam dan perkembangan praktik).",
+      "statement": "Ahli waris utama Harta Pusako Tinggi adalah kemenakan (anak dari saudara perempuan).",
       "evidence": [
-        "context_1"
+        "source_id_1"
       ],
-      "confidence": 0.9,
-      "assumptions": [
-        "A3"
-      ]
+      "confidence": 1.0,
+      "assumptions": []
     },
     {
       "id": "C4",
-      "statement": "Prinsip musyawarah (mufakat) dan keseimbangan sosial merupakan pembatas utama dan pengabsah wasiat dalam adat Minangkabau, menggantikan konsep bagian mutlak (legitieme portie) dari KUHPerdata.",
+      "statement": "Untuk Harta Pusako Rendah, wasiat diakui tetapi harus menghormati bagian mutlak anak kandung sesuai KUHPerdata.",
       "evidence": [
-        "context_1"
+        "source_id_1"
       ],
-      "confidence": 0.92,
-      "assumptions": [
-        "A4"
-      ]
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C5",
+      "statement": "Kemenakan bukan ahli waris utama Harta Pusako Rendah menurut hukum nasional.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
     }
   ],
   "uncertainties": [
-    "U1: Sejauh mana pengadilan formal (Peradilan Umum/Agama) saat ini mengakui dan memberlakukan hak mutlak kemenakan atas Harta Pencaharian jika berhadapan dengan wasiat yang mengutamakan anak kandung, mengingat adanya pluralisme hukum.",
-    "U2: Tingkat variasi penerapan aturan mengenai wasiat atas Harta Pencaharian di berbagai nagari (wilayah adat) di Minangkabau, karena adat dapat memiliki penafsiran lokal."
+    "U1: Besaran pasti bagian mutlak untuk anak (seperti 1/2 atau 1/3) disebutkan dalam konteks, tetapi perhitungan detail untuk berbagai skenario tidak dijelaskan."
   ],
   "open_questions": [
-    "Q1: Bagaimana mekanisme musyawarah adat yang ideal untuk menyusun wasiat atas Harta Pencaharian agar diterima semua pihak (anak, istri, dan kemenakan)?",
-    "Q2: Apakah terdapat sanksi adat tertentu bagi seseorang yang membuat wasiat atas Harta Pencaharian yang dianggap melanggar hak kemenakan secara sepihak?"
+    "Q1: Bagaimana mekanisme musyawarah adat menyelesaikan konflik antara hak mutlak anak dan keinginan memberikan Harta Pusako Rendah kepada kemenakan?"
   ]
 }

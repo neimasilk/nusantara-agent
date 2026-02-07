@@ -6,26 +6,26 @@
     {
       "id": "K1",
       "target_claim_id": "C2",
-      "issue_type": "evidence_gap",
-      "description": "Klaim bahwa perjanjian yang cacat syarat subjektif hanya 'dapat dibatalkan (voidable)' tidak sepenuhnya akurat. Pasal 1321 KUHPerdata menyatakan bahwa kesepakatan yang cacat (karena paksaan, kekhilafan, atau penipuan) membuat perjanjian 'dapat dimintakan pembatalannya'. Namun, untuk kecakapan, Pasal 1330 KUHPerdata menyebutkan bahwa perjanjian yang dibuat oleh orang yang tidak cakap adalah 'batal demi hukum' (null). Oleh karena itu, dampak dari tidak terpenuhinya syarat kecakapan berbeda dengan cacat kesepakatan.",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa 'perjanjian dapat dibatalkan' jika syarat subjektif tidak terpenuhi merupakan generalisasi yang berlebihan. Pasal 1320 KUHPerdata hanya menyebutkan syarat sah, bukan konsekuensi hukumnya secara langsung. Konsep 'dapat dibatalkan' (vernietigbaar) berasal dari doktrin dan yurisprudensi, bukan teks pasal itu sendiri. Tanpa merujuk pada pasal-pasal lanjutan (seperti Pasal 1446 untuk kesepakatan cacat), klaim ini kurang berdasar secara tekstual.",
       "severity": "MAJOR",
-      "suggested_fix": "Perbaikan klaim C2 dengan membedakan dampak hukum: 1) Cacat kesepakatan (paksaan, kekhilafan, penipuan) membuat perjanjian dapat dimintakan pembatalan (voidable). 2) Tidak adanya kecakapan (misalnya, anak di bawah umur, orang di bawah pengampuan) membuat perjanjian batal demi hukum (void)."
+      "suggested_fix": "Perbaiki klaim dengan merujuk pada pasal yang mengatur pembatalan, misalnya: 'Menurut doktrin yang berkembang dari Pasal 1320, jika syarat subjektif tidak terpenuhi, perjanjian dapat diajukan pembatalannya ke pengadilan (vernietigbaar), sebagaimana diatur lebih lanjut dalam Pasal 1446 KUHPerdata untuk cacat kesepakatan.'"
     },
     {
       "id": "K2",
-      "target_claim_id": "C4",
-      "issue_type": "logic_gap",
-      "description": "Klaim C4 menyatakan bahwa perjanjian yang menghilangkan hak nafkah anak 'dapat dibatalkan karena dianggap memiliki sebab yang tidak halal'. Meski benar bahwa Pasal 1337 KUHPerdata menyebut sebab yang terlarang (melawan hukum, kesusilaan, ketertiban umum), penghubungan langsung antara 'hak nafkah anak' dengan 'sebab yang tidak halal' dalam konteks perjanjian antara suami-istri kurang tepat. Sebab (causa) dalam perjanjian adalah tujuan langsung yang dikehendaki para pihak. Mengabaikan kewajiban nafkah anak lebih tepat dikualifikasikan sebagai perjanjian yang bertentangan dengan undang-undang (Pasal 1337 jo. Pasal 1335 KUHPerdata) atau kewajiban hukum orang tua, bukan semata-mata karena 'sebab' perjanjiannya tidak halal.",
+      "target_claim_id": "C3",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa ketiadaan syarat objektif menyebabkan 'perjanjian batal demi hukum (null and void)' juga merupakan overclaim. Istilah 'batal demi hukum' (nietig) tidak secara eksplisit disebut dalam Pasal 1320. Konsekuensi ini merupakan penafsiran doktrinal. Lebih tepatnya, Pasal 1337 KUHPerdata menyebut objek yang terlarang menyebabkan perjanjian 'tidak mempunyai kekuatan', tetapi tidak secara otomatis menggunakan frasa 'batal demi hukum' untuk semua pelanggaran syarat objektif.",
       "severity": "MAJOR",
-      "suggested_fix": "Perbaikan klaim C4 dengan menjelaskan bahwa perjanjian antara suami-istri yang menghilangkan kewajiban nafkah anak dapat batal karena bertentangan dengan undang-undang (Pasal 1335 KUHPerdata) dan ketertiban umum (kewajiban hukum orang tua), sehingga objek atau sebab perjanjiannya menjadi terlarang menurut Pasal 1337 KUHPerdata."
+      "suggested_fix": "Perbaiki klaim dengan lebih hati-hati dan merujuk pada pasal yang relevan: 'Menurut doktrin, jika syarat objektif (objek tertentu atau kausa halal) tidak terpenuhi, perjanjian dianggap batal (nietig). Khusus untuk kausa yang tidak halal, Pasal 1337 KUHPerdata menyatakan perjanjian tidak mempunyai kekuatan.'"
     },
     {
       "id": "K3",
-      "target_claim_id": "C5",
-      "issue_type": "overclaim",
-      "description": "Klaim C5 menyebut aturan default KUHPerdata adalah 'pemisahan harta bawaan dengan persatuan penghasilan'. Penyebutan ini terlalu umum dan dapat menyesatkan. Pasal 119 KUHPerdata menyatakan bahwa tanpa perjanjian lain, berlaku 'persatuan bulat' (algehele gemeenschap van goederen) atas harta benda suami dan istri. Namun, Pasal 128 KUHPerdata kemudian mengecualikan harta bawaan (goederen yang dibawa masing-masing ke perkawinan) dari persatuan tersebut. Jadi, sistem default KUHPerdata adalah 'persatuan bulat dengan pengecualian harta bawaan', bukan sekadar 'pemisahan harta bawaan dengan persatuan penghasilan'. Istilah 'penghasilan' tidak secara eksplisit digunakan dalam pasal-pasal tersebut.",
+      "target_claim_id": "C6",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa perjanjian yang melibatkan harta bersama tanpa persetujuan suami-istri 'dapat dibatalkan' memiliki bukti (evidence) yang tidak memadai. Pasal 124 KUHPerdata (BW) memang mengatur persetujuan, tetapi tidak secara eksplisit menyebut konsekuensinya adalah 'dapat dibatalkan'. Konsekuensi hukum yang tepat (misalnya, pembatalan oleh pihak yang tidak menyetujui atau ketidakberlakuan) memerlukan rujukan pada yurisprudensi atau penjelasan pasal-pasal lanjutan (seperti Pasal 136-138 KUHPerdata tentang pembatalan perbuatan hukum). Tanpa ini, klaim terkesan sebagai interpretasi tanpa dasar hukum yang kuat.",
       "severity": "MAJOR",
-      "suggested_fix": "Perbaikan klaim C5 dengan merujuk secara tepat pada Pasal 119 dan 128 KUHPerdata: Tanpa perjanjian kawin, berlaku persatuan bulat atas harta benda suami-istri selama perkawinan, kecuali harta bawaan (goederen yang diperoleh masing-masing sebelum perkawinan atau selama perkawinan melalui warisan/wasiat) yang tetap terpisah."
+      "suggested_fix": "Lengkapi evidence dengan merujuk pada pasal yang mengatur konsekuensi hukum: 'Perjanjian tanpa persetujuan dapat dibatalkan berdasarkan Pasal 136 KUHPerdata, yang mengatur mengenai pembatalan perbuatan hukum yang dilakukan tanpa persetujuan yang diperlukan menurut undang-undang.'"
     }
   ]
 }

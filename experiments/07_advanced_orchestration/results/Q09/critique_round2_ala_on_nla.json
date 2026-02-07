@@ -5,27 +5,27 @@
   "critiques": [
     {
       "id": "K1",
-      "target_claim_id": "C1",
-      "issue_type": "evidence_gap",
-      "description": "Klaim bahwa harta bawaan dalam adat Jawa 'tetap menjadi milik pribadi' tidak sepenuhnya akurat karena dalam praktik adat Jawa, harta bawaan dapat berubah status menjadi harta bersama jika digunakan untuk kepentingan keluarga atau usaha bersama. NLA hanya mengutip UU Perkawinan dan KUHPerdata, tetapi tidak merujuk pada sumber adat Jawa yang otentik seperti Serat Wulangreh, Serat Centhini, atau putusan lembaga adat yang menunjukkan kompleksitas status harta bawaan dalam adat.",
+      "target_claim_id": "C3",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa 'Harta Gono-Gini dibagi dua (½ untuk suami, ½ untuk istri) saat perkawinan putus' adalah generalisasi berlebihan. Konteks yang diberikan (context_par_4) hanya menyebutkan 'dibagi dua' tanpa menyebutkan pembagian ½-½ secara eksplisit. Dalam praktik hukum adat dan nasional, pembagian bisa tidak selalu sama rata, tergantung pada kontribusi, kesepakatan, atau putusan pengadilan.",
       "severity": "MAJOR",
-      "suggested_fix": "Tambahkan referensi sumber adat Jawa yang menunjukkan bahwa harta bawaan dapat berubah status menjadi harta bersama dalam kondisi tertentu, seperti ketika digunakan untuk usaha keluarga atau perbaikan rumah tangga."
+      "suggested_fix": "Klaim harus direvisi untuk mencerminkan bahwa pembagian harta gono-gini umumnya dilakukan secara adil atau merata, tetapi tidak selalu secara matematis ½-½, dan dapat dipengaruhi oleh faktor-faktor lain seperti kontribusi masing-masing pihak."
     },
     {
       "id": "K2",
-      "target_claim_id": "C2",
-      "issue_type": "overclaim",
-      "description": "Klaim bahwa pembagian harta gono-gini 'ideal 50:50' merupakan simplifikasi berlebihan. Dalam adat Jawa, pembagian sering kali tidak setara dan dipengaruhi oleh faktor seperti jenis kelamin, kontribusi ekonomi, status sosial, dan peran dalam rumah tangga. Bahkan dalam yurisprudensi, pembagian 50:50 bukanlah aturan mutlak tetapi pedoman umum.",
+      "target_claim_id": "C5",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa 'Konsep Gono-Gini dan Harta Bawaan dalam adat Jawa diakui keberlakuannya berdasarkan Pasal 18B ayat (2) UUD 1945 dan Pasal 2 Aturan Peralihan UUD 1945' tidak didukung oleh bukti dalam konteks. Konteks (context_par_1) hanya menyebutkan bahwa hukum adat diakui berdasarkan pasal-pasal tersebut, tetapi tidak secara spesifik menyebutkan bahwa konsep Gono-Gini dan Harta Bawaan dari adat Jawa diakui berdasarkan pasal-pasal tersebut. Ini adalah inferensi yang tidak didukung langsung oleh bukti.",
       "severity": "MAJOR",
-      "suggested_fix": "Klarifikasi bahwa pembagian 50:50 adalah pedoman umum dalam hukum nasional, tetapi dalam praktik adat Jawa pembagian dapat bervariasi berdasarkan kesepakatan, kontribusi, dan norma setempat."
+      "suggested_fix": "Klaim harus direvisi untuk menyatakan bahwa hukum adat pada umumnya diakui berdasarkan pasal-pasal konstitusi tersebut, dan konsep Gono-Gini serta Harta Bawaan merupakan bagian dari hukum adat yang diakui dalam kerangka tersebut, tanpa mengaitkannya secara langsung dan eksklusif dengan pasal-pasal spesifik tanpa bukti pendukung."
     },
     {
       "id": "K3",
-      "target_claim_id": "C3",
-      "issue_type": "domain_mismatch",
-      "description": "Klaim bahwa konsep adat Jawa 'telah diakomodir dan distandardisasi' dalam hukum nasional mengabaikan ketegangan antara hukum adat dan hukum negara. Pasal 35 UU Perkawinan memang mengakui harta bawaan dan harta bersama, tetapi tidak secara spesifik mengadopsi konsep gono-gini dengan segala kompleksitasnya. Hukum nasional cenderung menyederhanakan dan memformalkan konsep yang dalam adat bersifat fleksibel dan kontekstual.",
+      "target_claim_id": "C6",
+      "issue_type": "logic_gap",
+      "description": "Klaim bahwa 'Dalam penyelesaian sengketa, pengadilan akan menerapkan hukum nasional (UU Perkawinan) sebagai hukum utama' mengandung kesenjangan logika. Konteks (context_par_5) menyatakan bahwa 'UU Perkawinan menjadi hukum utama yang diterapkan', tetapi juga menambahkan kondisi 'kecuali para pihak secara tegas tunduk pada hukum adat tertentu yang tidak bertentangan dengan asas hukum nasional'. Klaim C6 mengabaikan pengecualian penting ini, sehingga menciptakan kesan bahwa hukum nasional selalu menjadi hukum utama tanpa mempertimbangkan pilihan hukum para pihak.",
       "severity": "MAJOR",
-      "suggested_fix": "Akui bahwa meskipun ada keselarasan prinsip, implementasi hukum nasional sering kali tidak sepenuhnya menangkap nuansa dan variasi lokal dalam praktik adat Jawa mengenai gono-gini."
+      "suggested_fix": "Klaim harus direvisi untuk mencerminkan bahwa meskipun UU Perkawinan umumnya menjadi hukum utama, pengadilan dapat menerapkan hukum adat jika para pihak secara tegas memilihnya dan hukum adat tersebut tidak bertentangan dengan asas hukum nasional."
     }
   ]
 }

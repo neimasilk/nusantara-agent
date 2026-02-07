@@ -5,27 +5,27 @@
   "critiques": [
     {
       "id": "K1",
-      "target_claim_id": "C1",
-      "issue_type": "evidence_gap",
-      "description": "Klaim bahwa pluralisme hukum di Indonesia disebabkan oleh pengakuan konstitusional terhadap keberagaman (Pasal 18B ayat (2) dan Pasal 29 ayat (2) UUD 1945) memiliki gap bukti. Pasal-pasal tersebut hanya mengakui eksistensi masyarakat adat dan kebebasan beragama, tetapi tidak secara eksplisit menyatakan bahwa sistem hukum dari masyarakat adat atau agama berlaku sebagai hukum positif yang sah di samping hukum negara. Pluralisme hukum di Indonesia lebih merupakan fakta sosiologis-historis yang diakomodasi oleh negara, bukan semata-mata diciptakan oleh konstitusi. Dasar hukum pluralisme justru lebih banyak terdapat dalam undang-undang organik dan yurisprudensi.",
+      "target_claim_id": "C2",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa pluralisme hukum terjadi 'karena faktor kolonial, keberagaman budaya, dan unifikasi hukum yang tidak tuntas' merupakan generalisasi yang berlebihan. Meskipun faktor-faktor tersebut berkontribusi, konteks paragraf 1 hanya menyebutkan 'faktor sejarah kolonial' dan 'keberagaman budaya' sebagai penyebab, tanpa menyebut 'unifikasi hukum yang tidak tuntas' sebagai penyebab langsung dalam paragraf yang sama.",
       "severity": "MAJOR",
-      "suggested_fix": "Perluas bukti dengan menyertakan dasar hukum yang lebih eksplisit, seperti Pasal 5 ayat (1) UU No. 48 Tahun 2009 tentang Kekuasaan Kehakiman (hakim wajib menggali nilai-nilai hukum dan rasa keadilan dalam masyarakat), atau yurisprudensi Mahkamah Agung yang mengakui hukum adat dan agama. Juga, klarifikasi bahwa pengakuan konstitusional adalah salah satu faktor, bukan satu-satunya penyebab."
+      "suggested_fix": "Revisi klaim menjadi: 'Pluralisme hukum terjadi karena faktor sejarah kolonial dan keberagaman budaya. Unifikasi hukum yang tidak tuntas berkontribusi pada kelangsungan pluralisme tersebut.'"
     },
     {
       "id": "K2",
-      "target_claim_id": "C2",
-      "issue_type": "overclaim",
-      "description": "Klaim bahwa 'asas personalitas keagamaan' menjadi dasar penentuan hukum keluarga dan waris merupakan generalisasi yang berlebihan. Istilah 'asas personalitas keagamaan' bukanlah terminologi baku dalam teori hukum Indonesia. Penerapannya tidak mutlak dan bersifat terbatas. Untuk warga negara Indonesia non-Muslim, hukum keluarga dan waris dalam banyak hal justru tunduk pada KUHPerdata (BW) yang bersifat sekuler, bukan pada hukum agamanya. Bahkan bagi Muslim, penerapan KHI pun memiliki batasan dan tidak semua aspek hukum keluarga diatur secara eksklusif berdasarkan agama (misalnya, pencatatan perkawinan diatur oleh negara).",
+      "target_claim_id": "C4",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa 'yurisprudensi Mahkamah Agung' merupakan dasar hukum pengakuan pluralisme tidak didukung oleh bukti spesifik dalam konteks yang diberikan. Paragraf 2 hanya menyebut 'yurisprudensi' secara umum tanpa merujuk pada putusan Mahkamah Agung tertentu atau menyebutkan bahwa Mahkamah Agung adalah sumber yurisprudensi tersebut.",
       "severity": "MAJOR",
-      "suggested_fix": "Ganti klaim dengan pernyataan yang lebih akurat: 'Dalam praktik, identitas agama seseorang, khususnya Islam, menjadi faktor penentu yurisdiksi pengadilan (Peradilan Agama) dan hukum materiil (KHI) yang diterapkan untuk menyelesaikan sengketa di bidang perkawinan, waris, dan wakaf bagi yang beragama Islam. Bagi non-Muslim, hukum yang berlaku umumnya adalah KUHPerdata, dengan pengakuan terbatas terhadap hukum adat.'"
+      "suggested_fix": "Revisi klaim menjadi: 'Dasar hukum pengakuan pluralisme termasuk UU No. 1 Tahun 1974 tentang Perkawinan dan yurisprudensi (hukum yang terbentuk dari putusan pengadilan).' Atau tambahkan referensi spesifik ke putusan Mahkamah Agung jika tersedia."
     },
     {
       "id": "K3",
-      "target_claim_id": "C3",
+      "target_claim_id": "C6",
       "issue_type": "logic_gap",
-      "description": "Klaim bahwa 'KUHPerdata tidak dimaksudkan sebagai hukum tunggal di Indonesia karena keterbatasannya' mengandung logika yang terbalik dan ahistoris. Sejarahnya, KUHPerdata (BW) justru diperkenalkan oleh pemerintah kolonial Belanda dengan maksud untuk menjadi hukum umum (lex generalis) bagi golongan Eropa dan Timur Asing, dan kemudian diperluas (dengan penyesuaian) untuk menjadi hukum nasional yang unifikasi pasca kemerdekaan (lihat UU No. 1 Tahun 1951). Keterbatasan KUHPerdata dalam mengakomodasi keragaman adalah konsekuensi dari fakta pluralisme yang sudah ada, bukan alasan mengapa ia tidak dijadikan hukum tunggal. Alasan utamanya adalah resistensi masyarakat dan kebijakan politik hukum negara yang memilih untuk mengakui pluralisme, bukan semata-mata karena keterbatasan BW.",
-      "severity": "MAJOR",
-      "suggested_fix": "Koreksi logika dan penjelasan sejarah: 'Meskipun KUHPerdata (BW) diwarisi sebagai kodifikasi hukum perdata, penerapannya di Indonesia tidak pernah berhasil menjadi hukum yang tunggal dan eksklusif. Hal ini disebabkan oleh keberadaan sistem hukum adat dan agama yang telah mengakar kuat sebelum dan selama kolonialisme, serta kebijakan hukum pasca kemerdekaan yang mengakui pluralisme tersebut, sehingga BW berfungsi sebagai hukum subsider (Pasal 131 IS/Indische Staatsregeling) dan kini berlaku secara terbatas.'"
+      "description": "Klaim bahwa 'penyelesaiannya tergantung pada hukum yang dipilih/diamalkan serta lembaga peradilan yang mengadili' mengandung kesenjangan logika. Meskipun benar bahwa penyelesaian tergantung pada hukum yang berlaku, klaim ini tidak secara logis mengikuti dari pernyataan sebelumnya tentang ketidakpastian hukum. Paragraf 4 hanya menyebutkan bahwa 'penyelesaiannya tergantung pada hukum yang dipilih/diamalkan' tanpa secara eksplisit menghubungkannya dengan 'lembaga peradilan yang mengadili' sebagai faktor terpisah.",
+      "severity": "MINOR",
+      "suggested_fix": "Revisi klaim menjadi: 'Pluralisme dapat menimbulkan ketidakpastian hukum karena penyelesaiannya tergantung pada hukum yang dipilih/diamalkan, yang pada gilirannya dapat dipengaruhi oleh lembaga peradilan yang mengadili perkara.'"
     }
   ]
 }

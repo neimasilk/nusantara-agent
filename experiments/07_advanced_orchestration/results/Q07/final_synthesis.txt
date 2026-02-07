@@ -1,24 +1,10 @@
-### **Konflik Norma**
-Konflik ini merupakan benturan antara tiga sistem hukum yang berbeda:
-1.  **Hukum Negara (Positif):** MDP Bali 2010 dan KUHPerdata (Pasal 852) yang menganut prinsip kesetaraan gender dan hak waris individual.
-2.  **Hukum Adat Bali:** Sistem patrilineal yang mengutamakan pelestarian harta keluarga (*druwe*) dalam garis laki-laki dan bersifat komunal.
-3.  **Hukum Agama (Potensial):** Bergantung agama yang dianut keluarga, dapat memberikan aturan waris tersendiri (misalnya, hukum Islam).
+**Konflik Norma:** Terjadi benturan antara penafsiran hukum adat baru yang lebih egaliter (MDP Bali 2010) yang mengakui hak perempuan, dengan hukum adat patrilineal tradisional Bali yang membatasi hak waris pada garis laki-laki.
 
-Inti konflik terletak pada **klasifikasi harta warisan**. Jika tanah dikategorikan sebagai *druwe* (harta asal turun-temurun), hukum adat memiliki kedudukan kuat. Jika merupakan harta pencaharian orang tua (*gono-gini*), maka hukum nasional (KUHPerdata) yang egaliter lebih berlaku.
+**Trade-off:** Di satu sisi, prinsip kesetaraan gender dan keadilan individu (didukung MDP 2010). Di sisi lain, kelestarian sistem kekerabatan adat dan kepastian hukum tradisional yang menjaga tanah sebagai harta turun-temurun (*druwe*).
 
-### **Trade-off dan Pertimbangan**
-*   **Mengikuti Hukum Negara (MDP/KUHPerdata):** Mewujudkan keadilan berbasis kesetaraan gender dan kepastian hukum nasional, tetapi berpotensi mengikis kelestarian tradisi dan struktur sosial adat Bali.
-*   **Mengikuti Hukum Adat:** Menjaga stabilitas komunitas, kelanggengan tradisi, dan keutuhan harta keluarga, namun mengabaikan prinsip non-diskriminasi dan hak individu perempuan.
-*   **Pilihan lain** melibatkan musyawarah (*awig-awig*) untuk mencari kompromi, misalnya dengan memisahkan pembagian berdasarkan jenis harta atau memberikan bentuk ganti rugi lain.
+**Keputusan Pluralistik:**
+1.  **Prioritas** adalah penyelesaian melalui **musyawarah di Desa Pakraman** dengan merujuk pada MDP 2010 dan *awig-awig*.
+2.  **Sifat tanah** menjadi penentu kunci: jika merupakan **harta bersama (*gono-gini*)**, tuntutan perempuan lebih kuat. Jika **harta warisan turun-temurun (*druwe*)**, norma patrilineal tradisional lebih dominan.
+3.  Jika musyawarah gagal, pengadilan akan memeriksa keabsahan MDP 2010, sifat tanah, dan prinsip keadilan, dengan KUHPerdata sebagai pembanding subsidiair.
 
-### **Keputusan Pluralistik**
-Sebagai hakim supervisor, saya menyarankan pendekatan berlapis yang mengakui pluralisme hukum:
-
-1.  **Verifikasi Fakta Kunci:** Pengadilan harus terlebih dahulu menetapkan status tanah melalui pembuktian: apakah benar-benar *druwe* turun-temurun atau hasil pencaharian orang tua. Ini adalah langkah determinatif.
-2.  **Prioritas pada Musyawarah:** Sebelum putusan, wajibkan upaya mediasi yang melibatkan perangkat **Desa Pakraman** dan keluarga besar, untuk mencari penyelesaian adat yang mungkin sudah terlembagakan.
-3.  **Hierarki Penyelarasan:** Jika mediasi gagal, Pengadilan harus memutus dengan hierarki berikut:
-    *   Jika terbukti sebagai **harta pencaharian**, terapkan **KUHPerdata (Pasal 852)** untuk membagi secara setara kepada semua anak, dengan pertimbangan MDP Bali 2010 sebagai penguat. Kepentingan individu dan kesetaraan diutamakan.
-    *   Jika terbukti sebagai ***druwe* (harta asal adat)**, akui **hukum adat patrilineal** sebagai hukum yang hidup (*living law*) yang dilindungi konstitusi (Pasal 18B UUD 1945). Namun, putusan harus mendorong kompensasi yang adil bagi perempuan pemohon melalui bentuk lain (misalnya, bagi hasil atau hak pakai) yang disepakati dalam musyawarah adat.
-4.  **Fungsi Pengadilan:** Dalam kedua skenario, putusan pengadilan harus berfungsi bukan hanya sebagai penetap pemenang, tetapi sebagai **instrument of balance** yang menjelaskan rasio antara kepastian hukum nasional, penghormatan pada keragaman budaya, dan keadilan substantif bagi pihak yang dirugikan.
-
-**Kesimpulan:** Tidak ada solusi mutlak. Penyelesaian yang bijak terletak pada kemampuan untuk mengidentifikasi sumber norma yang paling relevan berdasarkan sifat hartanya, sembari menggunakan proses peradilan untuk mendorong rekonsiliasi antara kepastian hukum modern dan kearifan tradisional yang diakui konstitusi.
+Pendekatan ini mengakui pluralisme hukum dengan mengutamakan mekanisme adat namun tetap membuka ruang bagi penafsiran yang lebih setara.

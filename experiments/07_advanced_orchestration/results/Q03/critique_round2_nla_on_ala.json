@@ -5,27 +5,27 @@
   "critiques": [
     {
       "id": "K1",
-      "target_claim_id": "C1",
-      "issue_type": "overclaim",
-      "description": "Klaim bahwa Harta Pusako Rendah 'dapat diwariskan kepada anak kandung' bersifat terlalu umum dan mengabaikan kompleksitas adat. Sumber yang dirujuk (source_1 dan source_2) menyatakan bahwa pembagiannya dapat mengikuti hukum Islam atau kesepakatan keluarga, bukan otomatis menjadi hak anak kandung. Ada kemungkinan adat setempat atau kesepakatan keluarga justru mengalihkannya kepada kemenakan untuk menjaga kesatuan harta kaum.",
+      "target_claim_id": "C2",
+      "issue_type": "domain_mismatch",
+      "description": "Klaim menyatakan Harta Pusako Rendah dapat diwariskan 'sesuai ketentuan hukum Islam atau kesepakatan keluarga'. Ini mencampurkan domain hukum Islam dengan adat Minangkabau tanpa dasar yang jelas dari sumber yang dirujuk (source_id_1). Dalam konteks adat Minangkabau, pembagian Harta Pusako Rendah seharusnya mengikuti ketentuan adat setempat, bukan otomatis merujuk pada hukum Islam.",
       "severity": "MAJOR",
-      "suggested_fix": "Klaim harus direvisi untuk mencerminkan bahwa status waris Harta Pusako Rendah tidak mutlak, tetapi bergantung pada kesepakatan keluarga, wasiat, atau aturan adat setempat yang lebih spesifik, dan dapat menjadi objek musyawarah."
+      "suggested_fix": "Klaim seharusnya fokus pada ketentuan adat Minangkabau untuk Harta Pusako Rendah, misalnya 'diwariskan kepada anak kandung berdasarkan prinsip adat Minangkabau', tanpa menyertakan rujukan pada hukum Islam kecuali ada bukti integrasi spesifik dalam sumber."
     },
     {
       "id": "K2",
-      "target_claim_id": "C2",
-      "issue_type": "logic_gap",
-      "description": "Argumen yang memisahkan klaim kemenakan hanya untuk Harta Pusako Tinggi mengandung logika yang rapuh. Dalam praktik, sering terjadi sengketa justru karena klaim kemenakan atas Harta Pusako Rendah dengan alasan bahwa harta tersebut telah 'masuk' atau dikelola dalam lingkup kaum, atau untuk mencegah harta keluar dari garis keturunan matrilineal. Jawaban ALA tidak mengantisipasi argumen balik ini.",
+      "target_claim_id": "C5",
+      "issue_type": "overclaim",
+      "description": "Klaim menyatakan 'Kemenakan tidak memiliki hak waris utama atas harta pencaharian (Pusako Rendah) orang tuanya.' Pernyataan ini terlalu absolut dan dapat menyesatkan. Dalam praktik adat, meskipun hak utama ada pada anak kandung, kemenakan mungkin masih memiliki hak tertentu atau dapat memperoleh bagian melalui musyawarah keluarga, terutama jika ada pertimbangan sosial atau kekeluargaan.",
       "severity": "MAJOR",
-      "suggested_fix": "Analisis harus mengakui potensi klaim kemenakan atas Pusako Rendah berdasarkan fungsi sosial adat (misalnya, prinsip 'harta tidak boleh keluar') dan menjelaskan bahwa konflik muncul dari benturan antara prinsip individual (anak kandung) dan kolektif (kaum)."
+      "suggested_fix": "Klaim seharusnya lebih hati-hati, misalnya: 'Secara adat, hak waris utama atas Harta Pusako Rendah ada pada anak kandung, sehingga tuntutan kemenakan untuk hak utama tersebut tidak memiliki dasar yang kuat.'"
     },
     {
       "id": "K3",
-      "target_claim_id": "C3",
+      "target_claim_id": "C4",
       "issue_type": "evidence_gap",
-      "description": "Klaim bahwa penyelesaian utama adalah musyawarah (bermufakat) meskipun benar secara normatif, tidak didukung oleh bukti prosedural yang memadai dari sumber yang diberikan (source_3). Jawaban gagal menjelaskan apa yang terjadi jika musyawarah gagal: apakah ada mekanisme adjudikasi adat yang lebih formal (seperti melalui sidang kerapatan adat atau keputusan penghulu), atau apakah konflik akan berlarut tanpa penyelesaian.",
-      "severity": "MINOR",
-      "suggested_fix": "Lengkapi klaim dengan menjelaskan hierarki atau tahapan penyelesaian sengketa adat jika musyawarah awal gagal, misalnya dengan eskalasi ke ninik mamak, pemangku adat, atau sidang adat nagari, dan sebutkan sumber yang mendukung tahapan tersebut."
+      "description": "Klaim menyatakan 'Tuntutan kemenakan berdasarkan adat Minangkabau lebih tepat untuk Harta Pusako Tinggi, bukan untuk Harta Pusako Rendah.' Meskipun secara umum benar, klaim ini tidak didukung secara eksplisit oleh evidence dari source_id_1 yang disediakan. Tidak ada kutipan atau penjelasan dari sumber yang secara langsung menyatakan bahwa tuntutan kemenakan 'lebih tepat' untuk jenis harta tertentu.",
+      "severity": "MAJOR",
+      "suggested_fix": "Klaim seharusnya merujuk pada prinsip adat yang membedakan hak waris untuk Pusako Tinggi (kemenakan) dan Pusako Rendah (anak kandung), dan menyertakan bukti tekstual dari sumber yang menjelaskan perbedaan ini."
     }
   ]
 }

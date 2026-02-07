@@ -1,57 +1,68 @@
 {
   "round": 2,
   "agent": "NLA",
-  "answer": "Konsep harta bersama (gono-gini) dalam KUHPerdata mengacu pada sistem persatuan harta (gemeenschap van goederen) sebagai rezim default perkawinan. Menurut Pasal 119 KUHPerdata, harta yang diperoleh selama perkawinan menjadi milik bersama suami-istri, sedangkan harta bawaan dan warisan/hibah selama nikah tetap menjadi harta pribadi. Jika perkawinan berakhir, harta bersama dibagi dua sama rata. Anak kandung tidak memiliki hak langsung atas harta bersama selama perkawinan berlangsung; hak waris mereka baru muncul setelah kematian orang tua, yaitu atas bagian harta peninggalan dari orang tua yang meninggal.\n\nSecara sosial di beberapa komunitas adat, konsep gono-gini sering dipahami lebih luas sebagai harta keluarga yang melibatkan hak moral anak, bahkan sebelum orang tua meninggal. Pemahaman ini didasarkan pada nilai kekeluargaan yang menyeluruh, di mana harta dianggap sebagai milik keluarga inti (termasuk anak), dan sistem kewarisan sering menyatu dengan pengaturan harta perkawinan. Terdapat variasi berdasarkan sistem kekerabatan (seperti patrilineal, matrilineal, atau parental), misalnya dalam masyarakat Minangkabau matrilineal, harta pusaka diwariskan di luar sistem harta bersama suami-istri. Meskipun pemahaman adat ini hidup dalam praktik sosial, secara hukum formal KUHPerdata tetap berlaku bagi yang tunduk padanya, kecuali ada perjanjian perkawinan yang mengakomodasi nilai adat.",
+  "answer": "Konsep harta bersama (gono-gini) dalam KUHPerdata adalah persatuan bulat harta suami-istri sejak perkawinan, yang dibagi rata (50:50) saat perkawinan putus. Secara sosial, pemahaman 'gono-gini' di komunitas adat bervariasi, sangat dipengaruhi sistem kekerabatan seperti patrilineal, matrilineal, atau bilateral. Hak anak terhadap harta bersama orang tua dalam hukum nasional hanya muncul dalam konteks warisan dan nafkah, bukan hak langsung. Dalam komunitas adat, hak anak atas harta ditentukan oleh sistem kekerabatan, seringkali berbeda berdasarkan gender dan garis keturunan. Terdapat potensi konflik antara prinsip kesetaraan hukum nasional dan aturan adat yang tidak membagi secara setara. Penyelesaian sengketa harus mempertimbangkan hukum positif, hukum adat setempat, dan keadilan substantif.",
   "claims": [
     {
       "id": "C1",
-      "statement": "Dalam KUHPerdata, harta bersama (gono-gini) adalah sistem persatuan harta default di mana harta yang diperoleh selama perkawinan menjadi milik bersama suami-istri, dan dibagi dua sama rata jika perkawinan berakhir.",
+      "statement": "Dalam KUHPerdata, harta bersama adalah persatuan bulat harta suami-istri sejak perkawinan yang dibagi sama rata (50:50) saat perkawinan putus.",
       "evidence": [
-        "Pasal 119 KUHPerdata"
+        "Pasal 119 KUHPerdata",
+        "Pasal 128 KUHPerdata"
       ],
       "confidence": 1.0,
-      "assumptions": [
-        "Pembahasan merujuk pada rezim default tanpa perjanjian perkawinan."
-      ]
+      "assumptions": []
     },
     {
       "id": "C2",
-      "statement": "Anak kandung tidak memiliki hak langsung atas harta bersama orang tua selama perkawinan berlangsung; hak waris mereka hanya muncul setelah kematian orang tua atas harta peninggalan.",
+      "statement": "Pemahaman sosial 'gono-gini' di komunitas adat bervariasi dan sangat dipengaruhi sistem kekerabatan seperti patrilineal, matrilineal, atau bilateral.",
       "evidence": [
-        "Pasal 852 KUHPerdata"
+        "Variasi Sistem kekerabatan patrilineal, matrilineal, dan bilateral/parental"
       ],
       "confidence": 1.0,
-      "assumptions": [
-        "Tidak ada perjanjian perkawinan yang mengubah ketentuan default."
-      ]
+      "assumptions": []
     },
     {
       "id": "C3",
-      "statement": "Di beberapa komunitas adat, gono-gini dipahami secara sosial sebagai harta keluarga yang melibatkan hak moral anak, mencerminkan nilai kolektivitas dan sistem kewarisan yang menyatu.",
+      "statement": "Anak tidak memiliki hak langsung atas harta bersama orang tuanya selama perkawinan masih utuh menurut hukum nasional.",
       "evidence": [
-        "Deskripsi konteks tentang pemahaman adat"
+        "Hak Anak Muncul dalam Dua Konteks: Warisan dan Nafkah"
       ],
-      "confidence": 0.9,
-      "assumptions": [
-        "Deskripsi konteks mewakili praktik umum di berbagai komunitas adat."
-      ]
+      "confidence": 1.0,
+      "assumptions": []
     },
     {
       "id": "C4",
-      "statement": "KUHPerdata menjadi hukum yang diterapkan dalam sengketa formal, kecuali para pihak membuat perjanjian perkawinan yang mengakomodasi nilai adat.",
+      "statement": "Dalam komunitas adat, hak anak atas harta sangat ditentukan oleh sistem kekerabatan dan seringkali berbeda berdasarkan gender dan garis keturunan.",
       "evidence": [
-        "Pasal 139 KUHPerdata"
+        "Hak Anak dalam Masyarakat Adat sangat ditentukan oleh sistem kekerabatan"
       ],
       "confidence": 1.0,
-      "assumptions": [
-        "Para pihak tunduk pada KUHPerdata dan tidak menggunakan penyelesaian adat secara sukarela."
-      ]
+      "assumptions": []
+    },
+    {
+      "id": "C5",
+      "statement": "Konflik dapat muncul antara prinsip pembagian 50:50 dalam KUHPerdata dan aturan adat yang tidak membagi secara setara atau mengutamakan pihak tertentu.",
+      "evidence": [
+        "Konflik muncul ketika prinsip pembagian 50:50 (KUHPerdata) berbenturan dengan aturan adat"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C6",
+      "statement": "Penyelesaian sengketa harta bersama sering memerlukan pendekatan kontekstual yang mempertimbangkan hukum positif, hukum adat, dan keadilan substantif.",
+      "evidence": [
+        "Penyelesaian sengketa sering memerlukan pendekatan yang sangat kontekstual"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
     }
   ],
   "uncertainties": [
-    "U1: Tingkat variasi dan konsistensi pemahaman sosial tentang hak anak atas harta bersama di setiap komunitas adat secara spesifik."
+    "Tingkat detail dan variasi spesifik aturan pembagian harta di setiap ratusan komunitas adat di Indonesia tidak dijelaskan lengkap dalam konteks."
   ],
   "open_questions": [
-    "Q1: Bagaimana mekanisme formal pengakuan hukum adat terhadap hak anak dalam harta bersama dapat diintegrasikan dengan KUHPerdata tanpa menimbulkan konflik normatif?"
+    "Bagaimana mekanisme penyelesaian sengketa yang ideal ketika terjadi benturan antara putusan pengadilan berdasarkan KUHPerdata dengan penolakan dari keluarga besar berdasarkan hukum adat yang kuat?"
   ]
 }

@@ -60,7 +60,9 @@ def _supervisor_synthesis(llm: ChatOpenAI, query: str, nla: Dict, ala: Dict) -> 
         f"ALA: {json.dumps(ala, ensure_ascii=False)}\n\n"
         f"QUERY: {query}\n\n"
         "Tulis jawaban final yang mengakui konflik norma, jelaskan trade-off, "
-        "dan beri keputusan pluralistik. Ringkas, faktual, dan tidak overclaim."
+        "dan beri keputusan pluralistik.\n"
+        "ATURAN: ringkas (<= 1200 karakter), faktual, tidak overclaim, "
+        "jangan menambah klaim di luar dua agent."
     )
     response = llm.invoke([SystemMessage(content=prompt)])
     return response.content
@@ -72,6 +74,9 @@ def run_experiment(
     output_dir: Path,
     max_rounds: int,
     limit: int,
+    force: bool,
+    start: int,
+    count: int,
 ) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     queries = _load_queries(query_file)
@@ -81,7 +86,11 @@ def run_experiment(
 
     run_index = []
 
-    if limit > 0:
+    if start < 0:
+        start = 0
+    if count > 0:
+        queries = queries[start : start + count]
+    elif limit > 0:
         queries = queries[:limit]
 
     for item in queries:
@@ -93,7 +102,7 @@ def run_experiment(
         case_dir = output_dir / query_id
         case_dir.mkdir(parents=True, exist_ok=True)
         summary_path = case_dir / "summary.json"
-        if summary_path.exists():
+        if summary_path.exists() and not force:
             run_index.append(json.loads(summary_path.read_text(encoding="utf-8")))
             continue
 
@@ -171,6 +180,9 @@ if __name__ == "__main__":
     )
     parser.add_argument("--rounds", type=int, default=2, help="Jumlah round debate")
     parser.add_argument("--limit", type=int, default=0, help="Batasi jumlah query (0 = semua)")
+    parser.add_argument("--force", action="store_true", help="Tulis ulang output meski sudah ada")
+    parser.add_argument("--start", type=int, default=0, help="Index mulai (0-based)")
+    parser.add_argument("--count", type=int, default=0, help="Jumlah query dari index start (0 = semua)")
 
     args = parser.parse_args()
 
@@ -180,4 +192,7 @@ if __name__ == "__main__":
         output_dir=Path(args.output_dir),
         max_rounds=args.rounds,
         limit=args.limit,
+        force=args.force,
+        start=args.start,
+        count=args.count,
     )

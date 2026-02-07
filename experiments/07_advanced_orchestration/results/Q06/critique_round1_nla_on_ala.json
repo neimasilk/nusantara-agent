@@ -7,25 +7,25 @@
       "id": "K1",
       "target_claim_id": "C1",
       "issue_type": "overclaim",
-      "description": "Klaim C1 menyatakan konteks 'hanya membahas adat Minangkabau', namun dalam konteks yang diberikan, pembicara secara eksplisit menyebut 'Saya tidak memiliki pengetahuan tentang adat Bali' dan 'pengetahuan saya terbatas pada sistem Minangkabau'. Pernyataan ini bukan sekadar deskripsi isi konteks, tetapi merupakan pernyataan pembatasan kewenangan (disclaimer) yang menjadi dasar utama untuk menolak menjawab pertanyaan. Klaim C1 kurang menangkap nuansa krusial ini.",
-      "severity": "MAJOR",
-      "suggested_fix": "Revisi klaim C1 untuk lebih akurat mencerminkan bahwa konteks tidak hanya membahas adat Minangkabau, tetapi juga secara eksplisit menyatakan ketidakmampuan pembicara untuk membahas adat lain (Bali) dan membatasi ruang lingkup pengetahuannya. Contoh: 'Konteks yang disediakan membahas adat Minangkabau dan secara eksplisit menyatakan bahwa pengetahuan pembicara terbatas pada sistem tersebut serta tidak mencakup pengetahuan tentang adat Bali.'"
+      "description": "Klaim C1 menyatakan 'Konteks yang diberikan hanya berisi penjelasan tentang sistem pewarisan dalam adat Minangkabau.' Ini adalah overclaim karena konteks juga berisi pernyataan eksplisit yang mengarahkan pertanyaan tentang 'sentana' ke pakar adat Bali. Konteks tidak 'hanya' tentang Minangkabau; ia juga berisi pernyataan tentang batasan pengetahuannya sendiri.",
+      "severity": "MINOR",
+      "suggested_fix": "Revisi klaim menjadi: 'Konteks yang diberikan terutama berisi penjelasan tentang sistem pewarisan dalam adat Minangkabau, dan secara eksplisit mengakui ketidakmampuan untuk menjelaskan adat Bali.'"
     },
     {
       "id": "K2",
-      "target_claim_id": "C2",
-      "issue_type": "evidence_gap",
-      "description": "Klaim C2 menyatakan 'Pembicara dalam konteks menyatakan tidak memiliki pengetahuan tentang adat Bali dan menyarankan konsultasi dengan pakar adat Bali.' Namun, dalam bagian 'uncertainties' dan 'open_questions' jawaban ALA, agen justru mengajukan pertanyaan spesifik tentang definisi dan sistem pewarisan 'sentana' di Bali. Tindakan ini bertentangan dengan pernyataan ketidaktahuan dalam konteks. Jika benar-benar tidak tahu dan batasan kewenangan ditegakkan, seharusnya tidak ada upaya untuk merumuskan pertanyaan tentang domain yang dinyatakan tidak diketahui.",
-      "severity": "CRITICAL",
-      "suggested_fix": "Hapus bagian 'uncertainties' (U1) dan 'open_questions' (Q1, Q2) yang membahas adat Bali dari jawaban. Jawaban harus konsisten dengan pernyataan ketidaktahuan dalam konteks. Alternatifnya, jika ingin mempertahankan elemen tersebut, klaim C2 harus direvisi untuk mengakui inkonsistensi ini, atau bagian 'uncertainties'/'open_questions' harus diformulasi ulang hanya untuk merefleksikan ketidaktahuan (misalnya, 'Tidak dapat diidentifikasi karena di luar ruang lingkup pengetahuan yang diberikan')."
+      "target_claim_id": "C4",
+      "issue_type": "logic_gap",
+      "description": "Klaim C4 ('Konteks menyebutkan bahwa untuk penjelasan tentang sentana dalam adat Bali, perlu berkonsultasi dengan pakar adat Bali.') digunakan sebagai evidence untuk mendukung jawaban utama bahwa ALA tidak dapat menjelaskan. Namun, ada logic gap: pernyataan dalam konteks itu adalah bagian dari instruksi atau batasan untuk agen, bukan bagian dari pengetahuan substantif tentang adat Bali itu sendiri. Mengutipnya sebagai 'evidence' untuk ketidaktahuan agen adalah sirkular; itu adalah pernyataan tentang batasan agen, bukan bukti dari konten pengetahuan.",
+      "severity": "MAJOR",
+      "suggested_fix": "Hapus C4 dari daftar klaim yang mendukung jawaban. Jawaban bahwa ALA tidak dapat menjelaskan seharusnya didasarkan sepenuhnya pada C1 (bahwa konteks hanya tentang Minangkabau). Atau, ubah C4 menjadi pernyataan tentang batasan agen dalam bagian 'uncertainties' atau 'open_questions'."
     },
     {
       "id": "K3",
-      "target_claim_id": "C1",
-      "issue_type": "logic_gap",
-      "description": "Struktur logika dari jawaban ALA memiliki celah. Klaim C1 dan C2 digunakan sebagai premis untuk menyimpulkan bahwa ALA 'tidak dapat memberikan jawaban yang valid'. Namun, kesimpulan ini langsung diikuti dengan penyertaan 'uncertainties' dan 'open_questions' yang justru mengarahkan pembahasan ke topik (adat Bali) yang seharusnya di luar batasan. Ini menciptakan kontradiksi internal dalam jawaban. Premis (tidak tahu tentang Bali) seharusnya menghasilkan kesimpulan yang sepenuhnya menahan diri dari spekulasi atau pertanyaan tentang Bali.",
-      "severity": "CRITICAL",
-      "suggested_fix": "Untuk menjaga konsistensi logis, jawaban harus berhenti pada kesimpulan 'tidak dapat memberikan jawaban' tanpa mencoba merinci ketidaktahuan tersebut menjadi pertanyaan terbuka yang spesifik tentang adat Bali. Bagian 'uncertainties' dan 'open_questions' sebaiknya dihilangkan atau diganti dengan pernyataan umum seperti 'Pertanyaan ini berada di luar ruang lingkup pengetahuan adat yang diberikan dalam konteks.'"
+      "target_claim_id": null,
+      "issue_type": "evidence_gap",
+      "description": "Jawaban ALA menyimpulkan 'Oleh karena itu, saya tidak dapat memberikan penjelasan tentang makna 'sentana'... berdasarkan evidence yang ada.' Namun, struktur klaim (C1-C4) tidak secara langsung menghubungkan 'ketiadaan evidence tentang Bali' dengan 'tidak dapat menjawab'. Tidak ada klaim eksplisit yang menyatakan: 'Tidak ada informasi dalam konteks yang menjelaskan makna atau posisi sentana dalam adat Bali.' Klaim C4 adalah yang paling mendekati, tetapi seperti dikritik di K2, itu adalah pernyataan meta, bukan klaim tentang konten pengetahuan. Ada gap dalam rantai evidence dari klaim ke kesimpulan.",
+      "severity": "MAJOR",
+      "suggested_fix": "Tambahkan klaim eksplisit baru: 'C5: Konteks yang diberikan tidak mengandung penjelasan apa pun tentang makna, fungsi, atau posisi 'sentana' dalam sistem pewarisan atau kekerabatan adat Bali.' Evidence-nya adalah 'source_id_1' (keseluruhan teks). Klaim ini kemudian menjadi dasar langsung untuk kesimpulan 'tidak dapat menjawab'."
     }
   ]
 }

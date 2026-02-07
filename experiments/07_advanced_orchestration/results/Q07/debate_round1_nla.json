@@ -1,62 +1,73 @@
 {
   "round": 1,
   "agent": "NLA",
-  "answer": "Konflik norma terjadi antara hukum adat Bali (patrilineal) yang diatur dalam MDP Bali 2010 dengan hukum nasional (KUHPerdata) yang menganut asas persamaan hak waris. Penyelesaiannya bergantung pada klasifikasi harta warisan: (1) Jika tanah adalah harta asal turun-temurun (*druwe*), hukum adat memiliki kedudukan kuat berdasarkan pengakuan konstitusional. (2) Jika tanah merupakan harta pencaharian (*gono-gini*) orang tua, KUHPerdata berlaku dan memberikan hak waris yang sama kepada anak perempuan melalui mekanisme pembagian harta bersama dan waris.",
+  "answer": "Konflik norma terjadi antara hukum adat patrilineal Bali yang tradisional dengan penafsiran baru hukum adat yang lebih egaliter (seperti dalam Keputusan MDP 2010), sementara KUHPerdata berperan sebagai pembanding untuk keadilan substantif. Faktor penentu adalah sifat tanah (harta bersama/gono-gini vs. harta warisan turun-temurun/druwe). Penyelesaian prioritas adalah musyawarah di Desa Pakraman, namun jika litigasi, pengadilan akan menguji keabsahan MDP 2010, sifat tanah, dan prinsip keadilan.",
   "claims": [
     {
       "id": "C1",
-      "statement": "MDP Bali 2010 sebagai hukum adat mengatur sistem waris patrilineal yang membatasi hak waris perempuan atas harta asal (*druwe*).",
+      "statement": "Konflik norma utama adalah antara hukum adat patrilineal tradisional Bali dengan penafsiran baru hukum adat yang lebih egaliter seperti dalam Keputusan Majelis Desa Pakraman (MDP) Bali Tahun 2010.",
       "evidence": [
-        "Pasal 18B ayat (2) UUD 1945",
-        "MDP Bali 2010"
+        "CONTEXT"
       ],
-      "confidence": 0.9,
+      "confidence": 1.0,
       "assumptions": [
-        "MDP Bali 2010 masih berlaku dan diakui oleh komunitas adat setempat."
+        "Keputusan MDP 2010 dianggap sebagai penafsiran atau penyesuaian hukum adat yang mulai mengakui hak waris perempuan."
       ]
     },
     {
       "id": "C2",
-      "statement": "KUHPerdata (Pasal 852) memberikan hak waris yang sama kepada semua anak, laki-laki dan perempuan.",
+      "statement": "KUHPerdata berlaku secara subsidiir bagi masyarakat Bali karena hukum adat masih sangat kuat dan diakui berdasarkan Pasal 131 IS/Indische Staatsregeling.",
       "evidence": [
-        "KUHPerdata Pasal 852"
+        "CONTEXT"
       ],
       "confidence": 1.0,
-      "assumptions": [
-        "KUHPerdata berlaku sebagai hukum perdata umum di Indonesia."
-      ]
+      "assumptions": []
     },
     {
       "id": "C3",
-      "statement": "Harta bersama dalam perkawinan (gono-gini) diatur dalam KUHPerdata Pasal 119, di mana 50% menjadi hak pasangan yang hidup dan 50% bagian almarhum dibagikan kepada semua ahli waris.",
+      "statement": "Sifat tanah yang diperebutkan (apakah harta bersama/gono-gini atau harta warisan turun-temurun/druwe) merupakan faktor penentu utama dalam penyelesaian sengketa.",
       "evidence": [
-        "KUHPerdata Pasal 119",
-        "UU No. 1 Tahun 1974 Pasal 35"
+        "CONTEXT"
       ],
-      "confidence": 0.95,
-      "assumptions": [
-        "Perkawinan orang tua subjek kasus tunduk pada KUHPerdata atau UU Perkawinan."
-      ]
+      "confidence": 1.0,
+      "assumptions": []
     },
     {
       "id": "C4",
-      "statement": "Kedudukan hukum adat (seperti MDP Bali) kuat untuk harta asal (*druwe*), tetapi dapat dikesampingkan oleh hukum nasional jika bertentangan dengan prinsip keadilan atau hak asasi, terutama untuk harta pencaharian.",
+      "statement": "Jika tanah merupakan harta bersama (gono-gini), bagian orang tua (ibu) akan menjadi harta warisan yang harus dibagikan kepada semua anak, sehingga memperkuat posisi tuntutan anak perempuan.",
       "evidence": [
-        "Pasal 18B ayat (2) UUD 1945",
-        "Yurisprudensi MA RI"
+        "CONTEXT"
       ],
-      "confidence": 0.85,
+      "confidence": 1.0,
       "assumptions": [
-        "Putusan pengadilan nasional konsisten mengakui batasan penerapan hukum adat."
+        "Tanah tersebut diperoleh selama perkawinan orang tua dan memenuhi definisi harta bersama."
       ]
+    },
+    {
+      "id": "C5",
+      "statement": "Penyelesaian non-litigasi melalui musyawarah di lingkungan Desa Pakraman sesuai awig-awig dan keputusan MDP 2010 adalah yang paling ideal dan diutamakan oleh hukum.",
+      "evidence": [
+        "CONTEXT"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C6",
+      "statement": "Dalam litigasi, pengadilan akan menguji keabsahan dan substansi Keputusan MDP 2010, sifat hukum tanah sengketa, serta prinsip-prinsip keadilan dan kesetaraan yang dijamin UUD 1945.",
+      "evidence": [
+        "CONTEXT"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
     }
   ],
   "uncertainties": [
-    "U1: Apakah tanah sengketa secara faktual dan bukti hukum diklasifikasikan sebagai harta asal (*druwe*) turun-temurun atau harta pencaharian (*gono-gini*) orang tua?",
-    "U2: Sejauh mana Pengadilan Negeri di Bali akan mengutamakan hukum adat versus KUHPerdata dalam praktik yurisprudensi terkini untuk kasus serupa."
+    "Isi spesifik dan status hukum mengikat dari Keputusan MDP Bali 2010 tidak dijelaskan dalam konteks.",
+    "Apakah tanah sengketa tersebut merupakan harta warisan turun-temurun (druwe) atau harta pencaharian (gono-gini) tidak disebutkan secara eksplisit."
   ],
   "open_questions": [
-    "Q1: Apakah terdapat putusan pengadilan negeri/tinggi/Mahkamah Agung di Bali yang spesifik mengenai permohonan ahli waris perempuan atas tanah *druwe* setelah berlakunya MDP Bali 2010?",
-    "Q2: Bagaimana proses dan otoritas Majelis Desa Pakraman (MDP) dalam menyelesaikan sengketa waris seperti ini, dan apakah keputusannya bersifat final atau dapat dibawa ke pengadilan negara?"
+    "Bagaimana mekanisme dan otoritas Majelis Desa Pakraman (MDP) dalam menetapkan keputusan yang mengubah atau menafsirkan hukum adat patrilineal?",
+    "Apakah terdapat yurisprudensi Mahkamah Agung terkini yang menjadi acuan untuk menyelesaikan konflik serupa antara hukum adat patrilineal Bali dan hak waris perempuan?"
   ]
 }

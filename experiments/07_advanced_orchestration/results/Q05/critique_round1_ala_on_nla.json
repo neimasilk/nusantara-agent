@@ -5,27 +5,27 @@
   "critiques": [
     {
       "id": "K1",
-      "target_claim_id": "C2",
+      "target_claim_id": "C4",
       "issue_type": "evidence_gap",
-      "description": "Klaim bahwa ketidakpenuhan syarat objektif (objek tertentu atau sebab yang halal) selalu mengakibatkan perjanjian batal demi hukum (void) adalah generalisasi yang berpotensi menyesatkan. Dalam doktrin dan yurisprudensi, terdapat perdebatan dan penafsiran yang lebih bernuansa, khususnya terkait 'objek tertentu' yang tidak ada atau tidak mungkin (Pasal 1332 KUHPerdata) yang memang batal demi hukum, tetapi untuk 'sebab yang halal' yang melanggar ketertiban umum atau kesusilaan (Pasal 1337 KUHPerdata), konsekuensinya adalah batal demi hukum. Namun, interpretasi 'sebab yang halal' dalam konteks tertentu bisa kompleks dan tidak selalu otomatis batal demi hukum tanpa putusan pengadilan.",
+      "description": "Klaim bahwa 'jika syarat subjektif tidak terpenuhi, perjanjian dapat dibatalkan (voidable)' tidak didukung langsung oleh Pasal 1320 KUHPerdata. Pasal 1320 hanya menyebutkan syarat-syarat sahnya perjanjian, tidak menjelaskan konsekuensi hukum dari ketidakterpenuhannya. Dasar hukum untuk pembatalan (voidable) dan batal demi hukum (null and void) berasal dari pasal-pasal lain dalam KUHPerdata (misalnya Pasal 1446-1456 untuk pembatalan).",
       "severity": "MAJOR",
-      "suggested_fix": "Perbaikan klaim dengan menyatakan bahwa ketidakpenuhan syarat objektif umumnya mengakibatkan perjanjian batal demi hukum, tetapi perlu diakui adanya kerumitan penafsiran yudisial, khususnya untuk 'sebab yang halal'. Sebaiknya merujuk pada Pasal 1335 dan 1337 KUHPerdata untuk memperkuat dasar hukum klaim ini."
+      "suggested_fix": "Tambahkan referensi ke pasal-pasal yang mengatur konsekuensi hukum, seperti Pasal 1446 KUHPerdata untuk pembatalan akibat cacat kehendak (syarat subjektif) dan Pasal 1335-1337 KUHPerdata untuk objek atau sebab yang terlarang (syarat objektif)."
     },
     {
       "id": "K2",
-      "target_claim_id": "C3",
-      "issue_type": "logic_gap",
-      "description": "Klaim bahwa perjanjian orang tua yang menghilangkan hak dasar anak (seperti nafkah) 'dapat dibatalkan karena dianggap memiliki sebab yang tidak halal' mengandung loncatan logika. Meskipun benar bahwa hak nafkah anak dilindungi (Pasal 45 UU No. 35 Tahun 2014), klaim tersebut langsung menyimpulkan bahwa perjanjian tersebut memiliki 'sebab yang tidak halal' berdasarkan Pasal 1337 KUHPerdata (melanggar kesusilaan atau ketertiban umum). Namun, perlu analisis lebih lanjut untuk menghubungkan pelanggaran kewajiban nafkah secara spesifik dengan kategori 'sebab yang tidak halal' dalam hukum perjanjian. Selain itu, mekanisme hukumnya mungkin bukan sekadar pembatalan perjanjian biasa, tetapi bisa melalui gugatan pemenuhan nafkah atau pembatalan berdasarkan itikad tidak baik.",
+      "target_claim_id": "C5",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa 'jika syarat objektif tidak terpenuhi, perjanjian batal demi hukum (null and void)' merupakan generalisasi yang terlalu luas dan tidak selalu tepat. Tidak terpenuhinya syarat 'suatu hal tertentu' (objek tertentu) tidak serta-merta membuat perjanjian batal demi hukum, tetapi dapat membuat perjanjian tidak lahir atau tidak dapat dilaksanakan. Konsep 'batal demi hukum' lebih tepat untuk objek yang terlarang atau sebab yang tidak halal (Pasal 1335-1337).",
       "severity": "MAJOR",
-      "suggested_fix": "Perbaikan logika dengan menjelaskan bahwa perjanjian yang menghilangkan hak nafkah anak dapat dibatalkan atau dikesampingkan karena bertentangan dengan kewajiban hukum yang bersifat memaksa (dwingend recht) dan karenanya dianggap melanggar ketertiban umum (Pasal 1337 KUHPerdata). Lebih baik merujuk pada yurisprudensi Mahkamah Agung yang secara spesifik membatalkan perjanjian karena merugikan hak anak."
+      "suggested_fix": "Pisahkan konsekuensi untuk 'objek tertentu' dan 'sebab yang halal'. Nyatakan bahwa ketiadaan objek tertentu membuat perjanjian tidak lahir, sedangkan objek terlarang atau sebab tidak halal membuat perjanjian batal demi hukum berdasarkan pasal-pasal spesifik."
     },
     {
       "id": "K3",
-      "target_claim_id": "C4",
-      "issue_type": "overclaim",
-      "description": "Klaim bahwa aturan default harta perkawinan menurut KUHPerdata adalah 'pemisahan harta bawaan dengan persatuan penghasilan' adalah benar, tetapi klaim bahwa untuk menyimpanginya 'dapat dibuat Perjanjian Kawin (prenuptial agreement) sebelum nikah dengan akta notaris' bersifat terlalu absolut dan mengabaikan kompleksitas hukum. Pertama, Perjanjian Kawin juga dapat dibuat setelah nikah dalam keadaan tertentu (Pasal 139 KUHPerdata). Kedua, syarat formalnya bukan sekadar 'akta notaris', tetapi harus dibuat dengan akta notaris dan didaftarkan di Pengadilan Negeri (Pasal 157 KUHPerdata jo. UU No. 1/1974). Ketiga, isi Perjanjian Kawin juga dibatasi, misalnya tidak boleh bertentangan dengan hukum, agama, dan kesusilaan.",
+      "target_claim_id": "C6",
+      "issue_type": "logic_gap",
+      "description": "Klaim tentang anak di bawah umur (C6) dimasukkan sebagai bagian dari jawaban tentang syarat sah perjanjian, meskipun tidak diminta dalam pertanyaan awal. Ini menciptakan kesan bahwa penjelasan tentang ketidakcakapan adalah bagian sentral dari jawaban, padahal seharusnya hanya sebagai ilustrasi tambahan. Selain itu, klaim ini tidak dihubungkan secara logis dengan klaim-klaim sebelumnya (C1-C5) dalam struktur argumen.",
       "severity": "MINOR",
-      "suggested_fix": "Perbaikan klaim dengan menyatakan bahwa untuk menyimpang dari aturan default, para pihak dapat membuat Perjanjian Kawin (Prenuptial Agreement), yang idealnya dibuat sebelum perkawinan dan harus dibuat dengan akta notaris serta memenuhi prosedur pendaftaran sesuai peraturan perundang-undangan. Juga tambahkan catatan bahwa perjanjian tersebut tidak boleh melanggar batasan hukum yang berlaku."
+      "suggested_fix": "Hapus klaim C6 dari daftar klaim inti, atau tempatkan sebagai contoh ilustratif terpisah dengan penjelasan bahwa ini adalah penerapan dari konsep 'kecakapan' (syarat subjektif) yang disebutkan dalam C2."
     }
   ]
 }

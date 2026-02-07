@@ -1,49 +1,56 @@
 {
   "round": 1,
   "agent": "ALA",
-  "answer": "Perbedaan peran mamak dalam adat Minangkabau dan hak anak dalam hukum nasional terletak pada sumber otoritas, subjek hukum, jenis harta, dan mekanisme pengelolaannya. Mamak berperan sebagai pengelola harta kolektif kaum (pusako tinggi) dan pembimbing kemenakan dalam sistem matrilineal. Sementara itu, hak anak dalam hukum nasional bersifat individual, timbul dari hubungan darah langsung, dan terutama terkait harta pencaharian orang tua (pusako rendah).",
+  "answer": "Perbedaan utama terletak pada lingkup otoritas dan jenis harta yang diatur. Mamak dalam adat Minangkabau berperan mengelola harta pusako tinggi (kolektif, turun-temurun menurut garis ibu) untuk kesejahteraan kemenakan dalam kaumnya. Hak anak dalam hukum nasional lebih menekankan hak individual atas harta pusako rendah (harta pencaharian orang tua) yang diwariskan secara personal. Keduanya beroperasi dalam prinsip dan ruang lingkup yang berbeda.",
   "claims": [
     {
       "id": "C1",
-      "statement": "Mamak dalam adat Minangkabau memiliki otoritas untuk mengelola harta pusako tinggi (harta turun-temurun kaum) secara kolektif dan bertanggung jawab membimbing kemenakan (anak dari saudara perempuannya).",
+      "statement": "Mamak, khususnya Mamak Kepala Waris, bertanggung jawab mengelola harta kaum (pusako tinggi) yang dimiliki secara turun-temurun menurut garis ibu.",
       "evidence": [
-        "context_1",
-        "context_2"
+        "CONTEXT: **Peran Mamak dalam Adat Minangkabau:** poin 1",
+        "CONTEXT: **Perbedaan Pusako Tinggi dan Pusako Rendah:** poin 1"
       ],
-      "confidence": 0.95,
-      "assumptions": [
-        "A1"
-      ]
+      "confidence": 1.0,
+      "assumptions": []
     },
     {
       "id": "C2",
-      "statement": "Hak anak dalam hukum nasional bersifat individual, timbul dari hubungan darah langsung dengan orang tua, dan terutama atas harta pusako rendah (harta pencaharian).",
+      "statement": "Kewajiban utama mamak adalah memelihara, membimbing, dan menjamin kesejahteraan kemenakannya (anak dari saudara perempuannya) dalam lingkup kaum.",
       "evidence": [
-        "context_3",
-        "context_4"
+        "CONTEXT: **Peran Mamak dalam Adat Minangkabau:** poin 2"
       ],
-      "confidence": 0.95,
-      "assumptions": [
-        "A2"
-      ]
+      "confidence": 1.0,
+      "assumptions": []
     },
     {
       "id": "C3",
-      "statement": "Adat Minangkabau membedakan secara tegas antara hak kolektif atas harta pusako tinggi (melalui kemenakan) dan hak individual atas harta pusako rendah (melalui anak).",
+      "statement": "Anak berhak mewarisi harta pencaharian orang tuanya (harta suarang atau pusako rendah) yang diperoleh selama perkawinan menurut hukum nasional.",
       "evidence": [
-        "context_5",
-        "context_6"
+        "CONTEXT: **Hak Anak dalam Hukum Nasional (tanpa menyebut konflik):** poin 1",
+        "CONTEXT: **Perbedaan Pusako Tinggi dan Pusako Rendah:** poin 2"
       ],
-      "confidence": 0.9,
-      "assumptions": [
-        "A3"
-      ]
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C4",
+      "statement": "Hak anak dalam hukum nasional diatur dalam kitab hukum perdata yang bersifat individual, bukan kolektif berdasarkan garis keturunan.",
+      "evidence": [
+        "CONTEXT: **Hak Anak dalam Hukum Nasional (tanpa menyebut konflik):** poin 2"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C5",
+      "statement": "Harta pusako tinggi pada prinsipnya tidak boleh diperjualbelikan, sedangkan pengaturan harta pusako rendah dapat merujuk pada kesepakatan keluarga atau ketentuan di luar adat matrilineal.",
+      "evidence": [
+        "CONTEXT: **Perbedaan Pusako Tinggi dan Pusako Rendah:** poin 1 dan 2"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
     }
   ],
-  "uncertainties": [
-    "U1: Tingkat pengakuan dan penyesuaian prinsip adat Minangkabau dalam praktik hukum nasional kontemporer di luar konteks konflik."
-  ],
-  "open_questions": [
-    "Q1: Bagaimana mekanisme resolusi jika terjadi tumpang tindih klaim antara hak kemenakan atas harta pusako tinggi dan hak anak atas harta pusako rendah dalam satu keluarga?"
-  ]
+  "uncertainties": [],
+  "open_questions": []
 }
