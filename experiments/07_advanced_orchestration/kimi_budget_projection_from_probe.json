@@ -1,11 +1,36 @@
 ﻿{
-    "generated_at":  "2026-02-07 14:44:35",
+    "generated_at":  "2026-02-07 21:30:00",
     "budget_usd":  6,
     "assumptions":  {
                         "note":  "Biaya dihitung dari rata-rata token probe N=3. Ini proyeksi, bukan billing final.",
                         "source":  "experiments/07_advanced_orchestration/score_summary_token_probe.json"
                     },
     "projections":  [
+                        {
+                            "model":  "kimi-k2.5",
+                            "note":  "Most versatile multimodal model. Native multimodal, thinking/non-thinking modes, 262144 context.",
+                            "prices_per_1m_tokens":  {
+                                                         "input_miss":  0.6,
+                                                         "input_hit":  0.1,
+                                                         "output":  3.0
+                                                     },
+                            "advanced":  {
+                                             "usd_per_query_miss":  0.047218,
+                                             "usd_per_query_hit":  0.037371,
+                                             "usd_for_12_queries_miss":  0.5666,
+                                             "usd_for_12_queries_hit":  0.4484,
+                                             "max_queries_with_6usd_miss":  127,
+                                             "max_queries_with_6usd_hit":  160
+                                         },
+                            "baseline":  {
+                                             "usd_per_query_miss":  0.014037,
+                                             "usd_per_query_hit":  0.012359,
+                                             "usd_for_12_queries_miss":  0.1684,
+                                             "usd_for_12_queries_hit":  0.1483,
+                                             "max_queries_with_6usd_miss":  427,
+                                             "max_queries_with_6usd_hit":  485
+                                         }
+                        },
                         {
                             "model":  "kimi-k2-0905-preview",
                             "prices_per_1m_tokens":  {
