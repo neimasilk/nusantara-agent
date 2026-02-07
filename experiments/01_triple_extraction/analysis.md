@@ -13,6 +13,6 @@
 *   **Confidence Score:** Model memberikan skor 1.0 secara konsisten. Ini mungkin "overconfidence". Perlu pengujian dengan teks yang lebih ambigu.
 
 ## Kesimpulan
-Eksperimen 1 **BERHASIL**. DeepSeek terbukti mampu menjadi mesin ekstraksi yang mumpuni untuk membangun Knowledge Graph hukum adat tahap awal. Hipotesis bahwa AI akan gagal menangkap nuansa budaya pada level ekstraksi tripel **gugur** (AI ternyata cukup pintar).
+Eksperimen 1 menunjukkan bahwa DeepSeek mampu mengekstrak tripel terstruktur dari teks hukum adat dengan diferensiasi yang benar antara entitas kunci (Pusako Tinggi vs Rendah, Mamak vs anggota perempuan). Hipotesis bahwa LLM akan gagal menangkap nuansa budaya pada level ekstraksi tripel tidak terbukti pada sampel ini (N=1 teks sumber). Keterbatasan: confidence score selalu 1.0 (lihat F-001), skala terlalu kecil untuk generalisasi (lihat F-004), dan evaluasi bersifat circular (lihat F-002).
 
 **Status: Lanjut ke Eksperimen 2 (Ontology Mapping & Neo4j Integration).**

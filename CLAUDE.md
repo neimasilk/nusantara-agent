@@ -35,7 +35,7 @@ There is no formal test suite. Each experiment directory contains an `analysis.m
 - **`src/kg_engine/extractor.py`** — `TripleExtractor` class. Wraps the DeepSeek API (via OpenAI client) to extract structured knowledge triples.
 - **`src/symbolic/rule_engine.py`** — `ClingoRuleEngine` class. Implementation of symbolic reasoning using Answer Set Programming (ASP) via the `clingo` library. Handles hard constraints and formal legal logic.
 - **`src/utils/text_processor.py`** — PDF text extraction (PyMuPDF/fitz), legal text cleaning (regex-based), and paragraph-based text chunking.
-- **`src/agents/`** — Agent definitions (National Law, Customary Law, Supervisor).
+- **`src/agents/`** — Multi-agent modules: `orchestrator.py` (LangGraph state graph), `debate.py` (debate protocol), `router.py` (conditional routing), `self_correction.py` (self-correction loop).
 
 ### Multi-Agent Design (LangGraph)
 

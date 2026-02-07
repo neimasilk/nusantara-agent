@@ -14,22 +14,23 @@ Fokus utama proyek ini adalah pada **kontribusi ilmiah** dan **novelty** di bida
 *   **Serius:** Mengikuti metodologi ilmiah yang ketat (Rigorous), melakukan *Ablation Study*, dan memastikan *Reproducibility*.
 *   **Santai:** Pendekatan eksperimental (Trial & Error). Kegagalan teknis dalam eksperimen dianggap sebagai temuan riset yang valid dan akan didokumentasikan sebagai limitasi atau *future work*.
 
-## Status Terkini (2026-02-06)
-*   Rule engine scaffold tersedia di `src/symbolic/rule_engine.py` dan draft rules di `data/rules/minangkabau_rules.json` (**DRAFT_NEEDS_HUMAN_REVIEW**).
-*   Advanced agent architecture: parallel execution, debate, self-correction, dan routing sudah tersedia di `src/agents/`.
-*   Eksperimen 07 (advanced orchestration) sudah di-pre-register di `experiments/07_advanced_orchestration/PROTOCOL.md` dan siap dibuat runner.
+## Status Terkini (2026-02-07)
+*   `ClingoRuleEngine` (ASP) sudah fungsional di `src/symbolic/rule_engine.py` dengan 30+ aturan formal di `src/symbolic/rules/minangkabau.lp`.
+*   Experiment 05 (Formal Rule Engine vs LLM) selesai: ditemukan 33.3% divergensi pada N=30 test cases.
+*   Advanced agent architecture: parallel execution, debate, self-correction, dan routing tersedia di `src/agents/`.
+*   Draft rules di `data/rules/minangkabau_rules.json` (**DRAFT_NEEDS_HUMAN_REVIEW**).
 
 ## Milestone Berikutnya
-1.  Verifikasi rules Minangkabau (ART-020).
-2.  Buat 30 test cases (ART-022).
-3.  Jalankan Experiment 05 (ART-023) setelah ART-020/022 selesai.
+1.  Jalankan Experiment 06 (Independent Evaluation Pipeline).
+2.  Jalankan Experiment 07 (Advanced Multi-Agent Orchestration).
+3.  Scaling: 10K+ triples, 200+ test cases, 3 domains.
 
 ## Struktur Direktori
 *   `data/`: Penyimpanan data mentah (PDF Jurnal) dan olahan (Knowledge Graph dumps).
 *   `src/`: Source code untuk agen, pipeline ekstraksi, dan logika orkestrasi.
-    *   `src/agents/`: Definisi agen (Nasional, Adat, Supervisor).
-    *   `src/kg/`: Pipeline konstruksi Knowledge Graph (DeepSeek extraction).
-*   `notebooks/`: Eksperimen, prototyping, dan analisis data.
+    *   `src/agents/`: Orchestrator, debate, router, dan self-correction modules.
+    *   `src/kg_engine/`: Pipeline konstruksi Knowledge Graph (DeepSeek extraction).
+    *   `src/symbolic/`: Rule engine (ASP/Clingo) dan aturan formal hukum adat.
 *   `docs/`: Dokumentasi tambahan.
 *   `PRD_Nusantara_Agent.md`: Dokumen persyaratan produk dan roadmap penelitian.
 
@@ -37,7 +38,7 @@ Fokus utama proyek ini adalah pada **kontribusi ilmiah** dan **novelty** di bida
 1.  **Setup Environment:**
     Pastikan Python 3.11+ terinstall.
     ```bash
-    pip install -r requirements.txt # (Akan datang)
+    pip install -r requirements.txt
     ```
 2.  **Konfigurasi:**
     Salin `.env.example` ke `.env` dan masukkan API Key yang diperlukan (DeepSeek, dll).
@@ -45,5 +46,6 @@ Fokus utama proyek ini adalah pada **kontribusi ilmiah** dan **novelty** di bida
 ## Tech Stack
 *   **LLM & Reasoning:** DeepSeek API
 *   **Orchestration:** LangGraph
-*   **Knowledge Graph:** Neo4j
-*   **Vector DB:** Qdrant
+*   **Symbolic Reasoning:** Clingo (ASP)
+*   **Knowledge Graph:** Neo4j (planned)
+*   **Vector DB:** Qdrant (planned)

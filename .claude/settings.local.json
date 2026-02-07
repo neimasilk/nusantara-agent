@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(tree:*)"
+      "Bash(tree:*)",
+      "Bash(du:*)",
+      "Bash(grep:*)",
+      "Bash(del \"C:\\\\Users\\\\neima\\\\Documents\\\\nusantara-agent\\\\experiments\\\\01_triple_extraction\\\\prompt.py\")"
     ]
   }
 }

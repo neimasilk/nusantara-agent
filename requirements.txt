@@ -50,3 +50,8 @@ urllib3==2.6.3
 uuid_utils==0.14.0
 xxhash==3.6.0
 zstandard==0.25.0
+
+# Optional dependencies (used by specific modules)
+clingo>=5.6.0  # src/symbolic/rule_engine.py — ASP solver
+pyswip>=0.2.10  # src/symbolic/rule_engine.py — Prolog interface (optional fallback)
+anthropic>=0.30.0  # src/review/adversarial_reviewer.py — adversarial review via Claude API

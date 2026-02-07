@@ -12,7 +12,7 @@
 *   Pemisahan kategori (kepemilikan, otoritas, larangan) sangat krusial untuk membangun "Rule-based" layer di atas LLM.
 
 ## Kesimpulan
-Eksperimen 2 **BERHASIL**. Kita telah membuktikan pipeline: 
-`Teks Mentah` -> `DeepSeek (Neural)` -> `Triples (JSON)` -> `Graph (Symbolic)` -> `Logical Answer`.
+Eksperimen 2 menunjukkan bahwa pipeline end-to-end berfungsi pada skala proof-of-concept:
+`Teks Mentah` -> `DeepSeek (Neural)` -> `Triples (JSON)` -> `Graph (Symbolic)` -> `Logical Answer`. Keterbatasan: diuji pada 1 query dan ~30 tripel saja (lihat F-004).
 
 **Status: Siap untuk Eksperimen 3 (Multi-Agent Orchestration Dasar).**

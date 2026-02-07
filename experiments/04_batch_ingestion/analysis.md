@@ -12,6 +12,6 @@
 *   *Mitigasi:* Gunakan format string yang lebih bersih dan pastikan tidak ada baris baru yang tidak sengaja dalam template `write_file`.
 
 ## Kesimpulan
-Pipeline **Ingesti Massa** sudah siap. Infrastruktur ini bisa digunakan untuk mulai memproses ratusan PDF jurnal hukum adat sesuai rencana Fase 2.
+Pipeline ingesti massa berfungsi pada level proof-of-concept. Infrastruktur chunking dan ekstraksi modular tersedia untuk scaling ke ratusan PDF, namun belum diuji pada skala tersebut.
 
 **Status: Infrastruktur Data Ingestion Ready.**

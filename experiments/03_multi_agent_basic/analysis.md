@@ -13,6 +13,6 @@
 *   **Context Window:** Penjelasan supervisor cukup panjang. Perlu kontrol terhadap verbosity agar tetap efisien di API calls skala besar.
 
 ## Kesimpulan
-Eksperimen 3 **SANGAT BERHASIL**. Arsitektur Multi-Agent Nusantara-Agent terbukti mampu menangani kompleksitas hukum Indonesia dengan cara yang elegan dan akademis. 
+Eksperimen 3 membuktikan bahwa arsitektur multi-agent sequential (Nasional -> Adat -> Supervisor) dapat menghasilkan output pluralistik yang mengintegrasikan kedua perspektif hukum. Namun, arsitektur ini masih berupa linear chain tanpa paralelisme atau debate (lihat F-003). Diuji pada 1 query saja — skala belum cukup untuk klaim generalisasi (lihat F-004).
 
 **Status: Baseline Sistem Nusantara-Agent (Alpha) Terbentuk.**
