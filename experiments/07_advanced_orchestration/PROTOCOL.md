@@ -108,24 +108,24 @@ python experiments/07_advanced_orchestration/eval_scores.py --scores experiments
 
 ### 3.2 Analisis Kegagalan (WAJIB)
 
-- **Apa yang hampir gagal?** TBD
-- **Dalam kondisi apa ini bisa gagal?** TBD
-- **Apa yang akan dikatakan reviewer skeptis?** TBD
-- **Bagaimana kegagalan ini mempengaruhi klaim paper?** TBD
+- **Apa yang hampir gagal?** Pipeline berjalan stabil tetapi sangat lambat; banyak run timeout karena biaya token dan jumlah langkah debate. Ini hampir menggagalkan eksekusi batch.
+- **Dalam kondisi apa ini bisa gagal?** Jika API limit/latency meningkat, jika context KG tidak memuat evidence yang relevan, atau jika prompt debate memperketat grounding sehingga menghilangkan detail penting.
+- **Apa yang akan dikatakan reviewer skeptis?** Reviewer akan menyoroti bahwa debate tidak meningkatkan kualitas (bahkan menurunkan) dan bahwa evaluasi hanya oleh LLM.
+- **Bagaimana kegagalan ini mempengaruhi klaim paper?** Klaim peningkatan kualitas dari debate/self-correction harus ditarik atau dibatasi sebagai hasil negatif; kontribusi perlu difokuskan pada temuan bahwa debate tidak otomatis membantu tanpa evidence tambahan.
 
 ### 3.3 Hostile Reviewer Simulation
 
-1. **[Validitas internal]:** TBD
-2. **[Generalisasi]:** TBD
-3. **[Novelty/kontribusi]:** TBD
+1. **[Validitas internal]:** Apakah penurunan skor disebabkan oleh prompt evidence-grounded yang terlalu ketat, bukan karena mekanisme debate itu sendiri?
+2. **[Generalisasi]:** Dengan hanya 12 query, bagaimana Anda bisa menyimpulkan efektivitas atau ketidakefektifan debat?
+3. **[Novelty/kontribusi]:** Jika debate justru menurunkan kualitas, apa kontribusi utama eksperimen ini?
 
-Jawaban: TBD
+Jawaban: Temuan ini bersifat preliminary dan menunjukkan trade-off antara grounding dan completeness. Skala kecil dan evaluator tunggal membatasi generalisasi. Kontribusi utama adalah evidence negatif yang mengarahkan perbaikan protokol dan kebutuhan evidence retrieval tambahan.
 
 ### 3.4 Implikasi
 
-- **Untuk paper:** TBD
-- **Untuk eksperimen selanjutnya:** TBD
-- **Untuk failure_registry:** TBD
+- **Untuk paper:** Nyatakan hasil sebagai negative result; hindari klaim peningkatan kualitas dari debate.
+- **Untuk eksperimen selanjutnya:** Uji prompt debate dengan evidence retrieval eksplisit dan jalankan evaluasi human/LLM ganda.
+- **Untuk failure_registry:** Sudah dicatat sebagai F-009.
 
 ---
 
@@ -133,15 +133,15 @@ Jawaban: TBD
 
 ### 4.1 Checklist Mandatori
 
-- [ ] Pre-registration diisi SEBELUM eksekusi (timestamp membuktikan)
-- [ ] Acceptance criteria tidak diubah setelah melihat hasil
-- [ ] Analisis kegagalan terisi lengkap
-- [ ] Hostile reviewer simulation dijawab substantif
-- [ ] Hasil dicatat di `docs/failure_registry.md`
-- [ ] 10 pertanyaan review protocol dijawab (lihat `docs/review_protocol.md`)
-- [ ] Kode bisa direproduksi dari instruksi step-by-step
-- [ ] Data output disimpan dan di-commit
-- [ ] Skoring manual menggunakan rubric (`experiments/07_advanced_orchestration/rubric.md`)
+- [x] Pre-registration diisi SEBELUM eksekusi (timestamp membuktikan)
+- [x] Acceptance criteria tidak diubah setelah melihat hasil
+- [x] Analisis kegagalan terisi lengkap
+- [x] Hostile reviewer simulation dijawab substantif
+- [x] Hasil dicatat di `docs/failure_registry.md`
+- [x] 10 pertanyaan review protocol dijawab (lihat `docs/review_protocol.md`)
+- [x] Kode bisa direproduksi dari instruksi step-by-step
+- [x] Data output disimpan dan di-commit
+- [ ] Skoring manual menggunakan rubric (`experiments/07_advanced_orchestration/rubric.md`) — diganti auto-score Kimi
 
 ### 4.2 Keputusan Gate
 
