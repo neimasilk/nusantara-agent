@@ -105,12 +105,12 @@ Work is decomposed into Atomic Research Tasks (ARTs). See:
 
 Six critical weaknesses have been identified and documented in `docs/methodology_fixes.md`:
 
-1. "Neuro-symbolic" claim needs formal rule engine (Exp 05)
-2. Circular evaluation needs independent evaluation pipeline (Exp 06)
-3. Orchestration quality gain not yet achieved after Exp 07; debate protocol still needs improvement
-4. Scale too small — needs 10K+ triples, 200+ test cases (scaling plan)
-5. Ablation needs proper baselines, not strawman (Exp 09)
-6. CCS metric needs rigorous validation (Exp 10)
+1. "Neuro-symbolic" claim — formal rule engine built (Exp 05 DONE), but external validation of claim still pending
+2. Circular evaluation — independent evaluation pipeline needed (Exp 06, BLOCKED on annotation setup)
+3. Orchestration quality gain — not achieved after Exp 07 (negative result); debate protocol needs iteration
+4. Scale too small — needs 10K+ triples, 200+ test cases (scaling plan, IN_PROGRESS 15%)
+5. Ablation needs proper baselines, not strawman (Exp 09, BLOCKED on pipeline integration)
+6. CCS metric needs rigorous validation (Exp 10, BLOCKED on prerequisite artifacts)
 
 ## Key Conventions
 

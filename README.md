@@ -19,6 +19,7 @@ Fokus utama proyek ini adalah pada **kontribusi ilmiah** dan **novelty** di bida
 *   Experiment 05 (Formal Rule Engine vs LLM) selesai: ditemukan 33.3% divergensi pada N=30 test cases.
 *   Advanced agent architecture: parallel execution, debate, self-correction, dan routing tersedia di `src/agents/`.
 *   Experiment 07 sudah dijalankan pada 12 query, namun advanced orchestration belum mengungguli baseline sequential (lihat `experiments/07_advanced_orchestration/analysis.md` dan F-009 di `docs/failure_registry.md`).
+*   Token usage tracking terintegrasi di seluruh pipeline. Proyeksi biaya 6 model Kimi tersedia di `experiments/07_advanced_orchestration/kimi_budget_projection_from_probe.json`.
 *   Draft rules di `data/rules/minangkabau_rules.json` (**DRAFT_NEEDS_HUMAN_REVIEW**).
 
 ## Milestone Berikutnya
