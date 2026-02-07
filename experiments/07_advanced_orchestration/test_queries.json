@@ -1,0 +1,62 @@
+[
+  {
+    "id": "Q01",
+    "label": "pure_national",
+    "query": "Bagaimana pembagian waris menurut KUHPerdata jika pewaris meninggalkan istri dan dua anak?"
+  },
+  {
+    "id": "Q02",
+    "label": "pure_adat",
+    "query": "Dalam adat Minangkabau, siapa yang berhak atas pusako tinggi ketika seorang mamak meninggal?"
+  },
+  {
+    "id": "Q03",
+    "label": "conflict",
+    "query": "Kasus waris tanah pusako rendah: anak kandung menuntut menurut KUHPerdata, kemenakan menuntut menurut adat Minangkabau. Bagaimana menyikapinya?"
+  },
+  {
+    "id": "Q04",
+    "label": "consensus",
+    "query": "Apa perbedaan peran mamak dalam adat Minangkabau dan hak anak dalam hukum nasional, tanpa menyebut konflik?"
+  },
+  {
+    "id": "Q05",
+    "label": "pure_national",
+    "query": "Apa saja syarat sah perjanjian menurut KUHPerdata dan dampaknya jika salah satu syarat tidak terpenuhi?"
+  },
+  {
+    "id": "Q06",
+    "label": "pure_adat",
+    "query": "Dalam adat Bali, apa makna sentana dan bagaimana posisinya dalam pewarisan keluarga?"
+  },
+  {
+    "id": "Q07",
+    "label": "conflict",
+    "query": "Seorang perempuan Bali menuntut warisan tanah keluarga berdasarkan keputusan MDP Bali 2010, tetapi keluarga menolak karena adat patrilineal. Bagaimana konflik normanya?"
+  },
+  {
+    "id": "Q08",
+    "label": "consensus",
+    "query": "Jelaskan secara ringkas konsep harta bersama (gono-gini) dan bagaimana ini dipahami secara sosial di beberapa komunitas adat."
+  },
+  {
+    "id": "Q09",
+    "label": "pure_adat",
+    "query": "Dalam adat Jawa, bagaimana konsep gono-gini dan harta bawaan dibedakan?"
+  },
+  {
+    "id": "Q10",
+    "label": "conflict",
+    "query": "Jika hukum nasional mengakui hak anak, tetapi adat setempat menempatkan hak waris pada garis matrilineal, bagaimana mekanisme penyelesaiannya?"
+  },
+  {
+    "id": "Q11",
+    "label": "pure_national",
+    "query": "Bagaimana kedudukan wasiat menurut KUHPerdata dan batasannya terhadap bagian mutlak ahli waris?"
+  },
+  {
+    "id": "Q12",
+    "label": "consensus",
+    "query": "Berikan penjelasan netral tentang pluralisme hukum di Indonesia dan mengapa bisa terjadi lebih dari satu norma berlaku."
+  }
+]

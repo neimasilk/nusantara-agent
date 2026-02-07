@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "agent": "ALA",
+  "target": "NLA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa Pasal 131 IS masih diakui sebagai dasar berlakunya hukum adat tidak didukung dengan bukti aktual. Pasal 131 IS adalah bagian dari Indische Staatsregeling yang sudah tidak berlaku sejak kemerdekaan. Referensi ke putusan MA tahun 1961 juga terlalu tua dan tidak mencerminkan perkembangan hukum terkini.",
+      "severity": "CRITICAL",
+      "suggested_fix": "Gunakan dasar hukum yang masih berlaku seperti UU No. 1/1974 tentang Perkawinan, UU No. 3/2006 tentang Peradilan Agama, atau Putusan Mahkamah Konstitusi yang relevan. Tambahkan referensi yurisprudensi MA yang lebih baru (setelah tahun 2000)."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C2",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa harta pusako rendah 'tunduk pada sistem kewarisan matrilineal' terlalu menyederhanakan. Dalam praktik, ada variasi lokal (luhak) dan perkembangan adaptasi hukum adat Minangkabau yang mengakomodasi hak anak kandung dalam kondisi tertentu, terutama melalui mekanisme hibah atau wasiat.",
+      "severity": "MAJOR",
+      "suggested_fix": "Sebutkan bahwa meskipun prinsip matrilineal dominan, ada pengecualian dan modifikasi dalam praktik adat kontemporer. Berikan contoh putusan pengadilan yang menunjukkan fleksibilitas penerapan hukum adat Minangkabau."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C4",
+      "issue_type": "logic_gap",
+      "description": "Klaim bahwa pengadilan akan memeriksa status keterikatan pewaris pada hukum adat dan jenis harta mengandung logika sirkular. Untuk menentukan hukum mana yang berlaku, pengadilan harus terlebih dahulu menentukan status hukum pewaris, tetapi status itu sendiri ditentukan oleh hukum mana yang berlaku. Tidak ada kriteria operasional yang jelas tentang bagaimana 'keterikatan pada hukum adat' dinilai.",
+      "severity": "MAJOR",
+      "suggested_fix": "Berikan kriteria konkret yang digunakan pengadilan untuk menilai keterikatan pada hukum adat, seperti: tempat tinggal, pengakuan masyarakat adat, partisipasi dalam kegiatan adat, atau pernyataan diri. Rujuk pada putusan MA yang menjelaskan parameter tersebut."
+    }
+  ]
+}

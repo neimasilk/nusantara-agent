@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "agent": "NLA",
+  "target": "ALA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa MDP Bali 2010 menekankan 'kesetaraan gender dan hak individual' tidak didukung oleh bukti spesifik dari isi peraturan tersebut. Jawaban tidak mengutip pasal atau prinsip spesifik dari MDP Bali 2010 yang secara eksplisit mengatur hal ini, sehingga klaim terkesan sebagai asumsi umum.",
+      "severity": "MAJOR",
+      "suggested_fix": "Sebutkan pasal atau konsideran spesifik dari MDP Bali 2010 yang menjadi dasar klaim, misalnya pasal yang mengatur tentang hak waris anak perempuan atau prinsip persamaan hak."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C2",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa konflik 'melibatkan benturan setidaknya tiga sistem norma' (termasuk Hukum Agama) bersifat spekulatif dan tidak didukung oleh fakta kasus yang diberikan dalam prompt. Prompt hanya menyebutkan 'hukum negara' dan 'hukum adat Bali'. Pengenalan Hukum Agama sebagai elemen potensial adalah asumsi yang mungkin tidak relevan untuk semua kasus.",
+      "severity": "MAJOR",
+      "suggested_fix": "Batasi analisis pada dua sistem norma yang secara eksplisit disebutkan (hukum negara dan adat), atau klarifikasi bahwa pengenalan hukum agama hanya bersifat hipotetis dan kondisional ('jika pihak-pihak yang bersengketa menganut agama tertentu')."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C1",
+      "issue_type": "domain_mismatch",
+      "description": "Analisis konflik hanya berfokus pada level prinsip (universal-kesetaraan vs partikular-kekerabatan) tanpa menyentuh mekanisme hukum konkret untuk penyelesaian sengketa. Sebagai analisis hukum, jawaban seharusnya juga membahas hierarki atau mekanisme penengah antara hukum negara dan adat di Indonesia (misalnya, peran pengadilan, asas lex specialis, atau putusan Mahkamah Konstitusi).",
+      "severity": "MAJOR",
+      "suggested_fix": "Lengkapi analisis dengan membahas kerangka hukum formal untuk menyelesaikan benturan semacam ini, misalnya dengan merujuk pada UU No. 1 Tahun 1974 tentang Perkawinan, UU No. 3 Tahun 2006 tentang Peradilan Agama (jika relevan), atau yurisprudensi yang mengakui hukum adat sepanjang tidak bertentangan dengan hukum nasional."
+    }
+  ]
+}

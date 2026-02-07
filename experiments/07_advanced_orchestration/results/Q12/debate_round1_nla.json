@@ -1,0 +1,51 @@
+{
+  "round": 1,
+  "agent": "NLA",
+  "answer": "Pluralisme hukum di Indonesia adalah situasi di mana lebih dari satu sistem atau norma hukum berlaku secara sah dalam wilayah negara yang sama untuk mengatur hubungan hukum tertentu. Fenomena ini terjadi sebagai konsekuensi dari pengakuan konstitusional terhadap keragaman, penerapan asas personalitas keagamaan, keberagaman hukum adat yang tidak seragam, dan keterbatasan hukum perdata nasional (KUHPerdata) dalam mengakomodasi seluruh realitas masyarakat Indonesia.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Pluralisme hukum di Indonesia adalah situasi sah di mana lebih dari satu sistem hukum berlaku, diakui oleh konstitusi dan perundang-undangan.",
+      "evidence": [
+        "Pasal 18B ayat (2) UUD 1945",
+        "Pasal 29 ayat (2) UUD 1945"
+      ],
+      "confidence": 0.95,
+      "assumptions": [
+        "Pengakuan konstitusional adalah dasar utama berlakunya pluralisme hukum."
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Penyebab pluralisme hukum termasuk asas personalitas keagamaan, di mana hukum yang berlaku bergantung pada identitas agama seseorang, khususnya dalam hukum keluarga dan waris.",
+      "evidence": [
+        "Undang-Undang No. 1 Tahun 1974 tentang Perkawinan",
+        "Kompilasi Hukum Islam (KHI)"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "Asas ini secara efektif diimplementasikan dalam peraturan perundang-undangan."
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Keberagaman hukum adat yang tidak seragam antardaerah dan keterbatasan KUHPerdata (hukum Barat) dalam mengakomodasi keragaman budaya turut menyebabkan pluralisme hukum.",
+      "evidence": [
+        "Asas Konkordansi (pemberlakuan KUHPerdata)",
+        "Penjelasan akademis tentang sifat lokal hukum adat"
+      ],
+      "confidence": 0.85,
+      "assumptions": [
+        "KUHPerdata tidak dimaksudkan sebagai hukum tunggal dan eksklusif di Indonesia."
+      ]
+    }
+  ],
+  "uncertainties": [
+    "Batasan pasti 'masih hidup' untuk pengakuan hukum adat menurut Pasal 18B UUD 1945 dapat berbeda antar yurisdiksi dan kasus.",
+    "Interaksi dan hierarki antara KUHPerdata, hukum adat, dan hukum agama dalam kasus konkret yang kompleks mungkin tidak selalu jelas."
+  ],
+  "open_questions": [
+    "Bagaimana mekanisme penyelesaian konflik hukum (choice of law) yang ideal dapat dibangun untuk meningkatkan kepastian hukum dalam sistem pluralistik?",
+    "Sejauh mana prinsip unifikasi hukum dapat diterapkan di masa depan tanpa mengabaikan pengakuan terhadap keragaman yang menjadi dasar negara?"
+  ]
+}

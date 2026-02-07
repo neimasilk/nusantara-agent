@@ -114,17 +114,56 @@ Living document yang mencatat setiap kegagalan, hasil negatif, dan pendekatan ya
 - **Tindakan:** ACKNOWLEDGED
 - **Detail Tindakan:** Label semua rules sebagai DRAFT_NEEDS_HUMAN_REVIEW; verifikasi manual akan dijadwalkan sebelum paper final.
 
----
+### F-007: Rule Engine Accuracy Hanya 70% — Gagal pada Skenario Situasional
+
+- **Tanggal:** 2026-02-07
+- **Eksperimen:** 05_rule_engine
+- **Kategori:** LIMITATION_DISCOVERED
+- **Severity:** MAJOR
+- **Deskripsi:** ClingoRuleEngine hanya mencapai accuracy 70% (21/30), kalah dari LLM (83.3%). Kegagalan terjadi pada skenario yang memerlukan penalaran situasional: mufakat keluarga, kondisi darurat, dan konteks sosial yang tidak bisa diformalisasi dalam ASP murni.
+- **Expected vs Actual:** Expected: Rule Engine 100% akurat pada hard constraints. Actual: 70% — 9 kasus gagal karena skenario memerlukan penalaran di luar domain formal (misal: apakah "pengabdian lama" mengubah hak waris).
+- **Root Cause:** ASP bersifat biner (true/false) dan tidak mampu menangani gradasi kontekstual. Hukum adat dalam praktik mengandung unsur diskresi (musyawarah) yang tidak bisa sepenuhnya diformalisasi.
+- **Implikasi untuk Paper:** Klaim "Rule Engine sebagai ground truth anchor" harus dikualifikasi — anchor hanya valid untuk hard constraints (gender, jenis harta), bukan untuk soft constraints (mufakat, darurat).
+- **Tindakan:** ACKNOWLEDGED
+- **Detail Tindakan:** Perlu eksplorasi fuzzy ASP atau probabilistic logic programming untuk menangani soft constraints. Untuk paper, laporkan sebagai trade-off inherent antara precision dan coverage.
+
+### F-008: Gold Standard Bersifat Self-Referential
+
+- **Tanggal:** 2026-02-07
+- **Eksperimen:** 05_rule_engine
+- **Kategori:** LIMITATION_DISCOVERED
+- **Severity:** CRITICAL
+- **Deskripsi:** Expected answers di test_cases.json disusun oleh tim yang sama yang membangun rule base. Tidak ada validasi independen dari domain expert hukum adat Minangkabau. Accuracy numbers (70% dan 83.3%) bersifat provisional karena gold standard belum tervalidasi.
+- **Expected vs Actual:** Expected: gold standard tervalidasi oleh ahli adat. Actual: self-referential — rules dan expected answers berasal dari pemahaman yang sama.
+- **Root Cause:** Belum ada akses ke validator domain expert pada fase ini.
+- **Implikasi untuk Paper:** Semua angka accuracy bersifat preliminary. Reviewer Q1 akan menolak evaluation tanpa independent gold standard validation.
+- **Tindakan:** ACKNOWLEDGED
+- **Detail Tindakan:** Prioritas tinggi: rekrut minimal 2 ahli hukum adat Minangkabau untuk validasi gold standard sebelum paper submission. Gunakan putusan MA sebagai external validation tambahan.
+
+### F-009: Advanced Orchestration Tidak Mengungguli Baseline pada Auto-Score Kimi
+
+- **Tanggal:** 2026-02-07
+- **Eksperimen:** 07_advanced_orchestration
+- **Kategori:** NEGATIVE_RESULT
+- **Severity:** MAJOR
+- **Deskripsi:** Skor otomatis Kimi menunjukkan advanced orchestration (parallel + debate + self-correction + routing) memiliki skor lebih rendah dibanding baseline sequential (Exp 03 re-run) pada 12 query.
+- **Expected vs Actual:** Expected: peningkatan >= 10% pada minimal 2 metrik kualitas. Actual: semua metrik turun (Accuracy -0.25, Completeness -0.33, Cultural -0.17).
+- **Root Cause:** Debat menambah langkah namun tidak menambah evidence; jawaban menjadi lebih panjang tetapi tidak lebih tepat menurut evaluator.
+- **Implikasi untuk Paper:** Klaim peningkatan kualitas dari debate/self-correction harus dikualifikasi; perlu evaluasi ulang dan/atau perbaikan protokol debat.
+- **Tindakan:** ACKNOWLEDGED
+- **Detail Tindakan:** Analisis failure mode, perbaiki prompt debat, tambah evidence grounding, dan validasi ulang dengan human annotation.
+
+--- 
 
 ## Statistik Ringkasan
 
 | Kategori | Count | Critical | Major | Minor |
 |----------|-------|----------|-------|-------|
-| NEGATIVE_RESULT | 0 | 0 | 0 | 0 |
+| NEGATIVE_RESULT | 1 | 0 | 1 | 0 |
 | ABANDONED_APPROACH | 0 | 0 | 0 | 0 |
 | TECHNICAL_FAILURE | 1 | 0 | 0 | 1 |
 | ASSUMPTION_VIOLATED | 0 | 0 | 0 | 0 |
-| LIMITATION_DISCOVERED | 5 | 2 | 3 | 0 |
-| **TOTAL** | **6** | **2** | **3** | **1** |
+| LIMITATION_DISCOVERED | 7 | 3 | 4 | 0 |
+| **TOTAL** | **9** | **3** | **5** | **1** |
 
-*Last updated: 2026-02-06*
+*Last updated: 2026-02-07*

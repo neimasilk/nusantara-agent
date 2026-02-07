@@ -1,0 +1,177 @@
+{
+  "query": "Dalam adat Bali, apa makna sentana dan bagaimana posisinya dalam pewarisan keluarga?",
+  "max_rounds": 2,
+  "final_nla": {
+    "round": 2,
+    "agent": "NLA",
+    "answer": "Berdasarkan analisis terhadap hukum positif Indonesia yang mengakui hukum adat, makna dan posisi 'sentana' dalam pewarisan keluarga di Bali adalah sebagai berikut:\n\n1. **Makna Sentana**: Dalam hukum adat Bali, 'sentana' berarti penerus garis keturunan (purusa) dan pemujaan leluhur (pitra puja). Terdapat dua jenis utama: (a) *Sentana Rajeg* (utama), yaitu anak laki-laki kandung; dan (b) *Sentana Tidak Rajeg*, yang dapat mencakup anak perempuan (misalnya, melalui perkawinan nyentana) atau orang yang diangkat secara adat.\n\n2. **Posisi dalam Pewarisan**: Sistem pewarisan adat Bali bersifat patrilineal dengan kecenderungan mayorat laki-laki. Posisi sentana sangat sentral:\n   - **Anak laki-laki kandung (Sentana Rajeg)** memiliki hak utama dan pertama untuk mewarisi, khususnya harta pusaka/awig-awig yang tidak terpecah. Ia juga memikul tanggung jawab utama untuk melanjutkan keluarga dan upacara keagamaan.\n   - **Anak perempuan kandung** dalam sistem biasa (purusa) umumnya bukan sentana utama dan hak warisnya lebih terbatas. Ia sering menerima bagian (seperti 'memejang' atau 'pembagian emas') saat perkawinan. Namun, melalui perkawinan nyentana (suami masuk keluarga istri), anak perempuan dapat menjadi sentana bagi orang tuanya.\n\n3. **Kedudukan Hukum**: Hukum adat Bali (termasuk konsep sentana) adalah hukum primer yang mengatur pewarisan bagi masyarakat Bali, sesuai pengakuan Pasal 18B UUD 1945 dan Pasal 131 IS. KUHPerdata berlaku secara subsider jika aturan adat tidak lengkap atau tidak jelas.\n\n4. **Hak Anak Kandung dan Harta Pencaharian**: Hak waris anak kandung dalam adat Bali tidak sama rata seperti dalam KUHPerdata, tetapi dibedakan berdasarkan jenis kelamin, urutan kelahiran, dan jenis perkawinan orang tua. Untuk harta pencaharian (druwe gabro), setelah dipisah untuk ahli waris suami dan istri, pembagian selanjutnya kepada anak-anak tetap tunduk pada aturan hukum adat Bali, di mana sentana (anak laki-laki) mungkin mendapat bagian yang lebih besar atau berbeda.",
+    "claims": [
+      {
+        "id": "C1",
+        "statement": "Dalam hukum adat Bali, 'sentana' adalah penerus garis keturunan dan pemujaan leluhur, dengan anak laki-laki kandung sebagai sentana utama (Sentana Rajeg).",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 0.95,
+        "assumptions": [
+          "A1"
+        ]
+      },
+      {
+        "id": "C2",
+        "statement": "Sistem pewarisan adat Bali bersifat patrilineal dengan kecenderungan mayorat laki-laki, di mana anak laki-laki kandung (sentana) memiliki hak utama atas harta pusaka dan tanggung jawab melanjutkan keluarga.",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 0.9,
+        "assumptions": [
+          "A2"
+        ]
+      },
+      {
+        "id": "C3",
+        "statement": "Hukum adat Bali (termasuk konsep sentana) adalah hukum primer yang mengatur pewarisan bagi masyarakat Bali, diakui oleh sistem hukum nasional Indonesia (Pasal 18B UUD 1945, Pasal 131 IS).",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 0.95,
+        "assumptions": [
+          "A3"
+        ]
+      },
+      {
+        "id": "C4",
+        "statement": "Hak waris anak kandung dalam adat Bali tidak sama rata seperti dalam KUHPerdata, tetapi dibedakan berdasarkan jenis kelamin, urutan kelahiran, dan jenis perkawinan orang tua.",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 0.85,
+        "assumptions": [
+          "A4"
+        ]
+      }
+    ],
+    "uncertainties": [
+      "U1",
+      "U2"
+    ],
+    "open_questions": [
+      "Q1"
+    ]
+  },
+  "final_ala": {
+    "round": 2,
+    "agent": "ALA",
+    "answer": "Saya adalah Adat Law Agent (ALA) yang dirancang untuk memberikan informasi hukum adat secara umum. Pertanyaan Anda spesifik mengenai makna 'sentana' dan posisinya dalam pewarisan keluarga menurut adat Bali. Pengetahuan saya tidak memiliki sumber khusus yang mendetail tentang adat Bali. Berdasarkan pemahaman umum, dalam konteks Bali, istilah 'sentana' sering merujuk pada ahli waris atau keturunan dalam sistem kekerabatan yang umumnya bersifat patrilineal. Namun, untuk penjelasan yang akurat dan otoritatif mengenai definisi, hak, dan mekanisme pewarisannya dalam adat Bali, Anda disarankan untuk berkonsultasi langsung dengan tetua, pakar adat Bali, atau literatur khusus mengenai hukum adat Bali.",
+    "claims": [
+      {
+        "id": "C1",
+        "statement": "Istilah 'sentana' dalam konteks adat Bali umumnya merujuk pada ahli waris atau keturunan.",
+        "evidence": [
+          "general_knowledge"
+        ],
+        "confidence": 0.6,
+        "assumptions": [
+          "A1"
+        ]
+      },
+      {
+        "id": "C2",
+        "statement": "Sistem kekerabatan dan pewarisan adat Bali umumnya bersifat patrilineal, berbeda dengan sistem matrilineal Minangkabau.",
+        "evidence": [
+          "general_knowledge",
+          "context_provided"
+        ],
+        "confidence": 0.7,
+        "assumptions": [
+          "A2"
+        ]
+      }
+    ],
+    "uncertainties": [
+      "U1",
+      "U2"
+    ],
+    "open_questions": [
+      "Q1"
+    ]
+  },
+  "critique_counts": {
+    "CRITICAL": 4,
+    "MAJOR": 8,
+    "MINOR": 0
+  },
+  "needs_human_review": true,
+  "logs_index": [
+    {
+      "type": "answer",
+      "round": 1,
+      "agent": "NLA",
+      "target": null,
+      "file": "debate_round1_nla.json"
+    },
+    {
+      "type": "answer",
+      "round": 1,
+      "agent": "ALA",
+      "target": null,
+      "file": "debate_round1_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 1,
+      "agent": "NLA",
+      "target": "ALA",
+      "file": "critique_round1_nla_on_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 1,
+      "agent": "ALA",
+      "target": "NLA",
+      "file": "critique_round1_ala_on_nla.json"
+    },
+    {
+      "type": "revision",
+      "round": 2,
+      "agent": "NLA",
+      "target": null,
+      "file": "debate_round2_nla.json"
+    },
+    {
+      "type": "revision",
+      "round": 2,
+      "agent": "ALA",
+      "target": null,
+      "file": "debate_round2_ala.json"
+    },
+    {
+      "type": "answer",
+      "round": 2,
+      "agent": "NLA",
+      "target": null,
+      "file": "debate_round2_nla.json"
+    },
+    {
+      "type": "answer",
+      "round": 2,
+      "agent": "ALA",
+      "target": null,
+      "file": "debate_round2_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 2,
+      "agent": "NLA",
+      "target": "ALA",
+      "file": "critique_round2_nla_on_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 2,
+      "agent": "ALA",
+      "target": "NLA",
+      "file": "critique_round2_ala_on_nla.json"
+    }
+  ]
+}

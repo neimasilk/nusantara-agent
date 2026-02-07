@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "agent": "NLA",
+  "target": "ALA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "evidence_gap",
+      "description": "Klaim C1 menyatakan pluralisme hukum terjadi karena pengakuan negara terhadap masyarakat adat yang dijamin Pasal 18B ayat (2) UUD 1945. Namun, klaim ini tidak didukung oleh bukti yang memadai karena tidak menjelaskan mekanisme operasional pengakuan tersebut dalam praktik peradilan atau legislasi. Pasal konstitusi hanya memberikan dasar normatif, tetapi implementasinya sangat bergantung pada undang-undang organik dan putusan pengadilan yang tidak dirujuk.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perluas bukti dengan merujuk pada undang-undang seperti UU No. 6/2014 tentang Desa atau putusan Mahkamah Konstitusi yang mengoperasionalkan pengakuan masyarakat adat, serta menyebutkan batasan-batasan pengakuan tersebut dalam praktik."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C2",
+      "issue_type": "overclaim",
+      "description": "Klaim C2 menyatakan Harta Pusako Rendah 'dapat diatur oleh hukum agama Islam atau kesepakatan keluarga' sebagai contoh pluralisme hukum. Namun, pernyataan ini terlalu menyederhanakan dan berpotensi menyesatkan karena tidak menjelaskan hierarki atau mekanisme pemilihan sistem hukum yang berlaku. Dalam banyak kasus, konflik justru muncul karena tumpang tindih klaim antara hukum adat, agama, dan negara, bukan sekadar pilihan bebas.",
+      "severity": "MAJOR",
+      "suggested_fix": "Klarifikasi bahwa penerapan sistem hukum untuk Harta Pusako Rendah sering menjadi sumber sengketa, dan sebutkan faktor-faktor yang memengaruhi pilihan sistem hukum (misalnya: lokasi geografis, kuatnya lembaga adat, intervensi pengadilan agama)."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C3",
+      "issue_type": "logic_gap",
+      "description": "Klaim C3 menghubungkan mekanisme harmonisasi seperti musyawarah ninik mamak dengan penyelesaian konflik antar sistem hukum. Namun, logika ini memiliki gap karena tidak dijelaskan bagaimana otoritas ninik mamak dapat menyelesaikan konflik yang melibatkan hukum negara (misalnya, jika salah satu pihak mengajukan gugatan ke pengadilan negeri). Mekanisme adat seringkali tidak memiliki yurisdiksi terhadap sengketa yang sudah masuk sistem peradilan negara.",
+      "severity": "MAJOR",
+      "suggested_fix": "Sebutkan bahwa efektivitas musyawarah adat terbatas pada konflik internal komunitas selama tidak ada intervensi dari pihak eksternal atau pengadilan negara. Berikan contoh kasus di mana keputusan ninik mamak diabaikan oleh pengadilan negeri."
+    }
+  ]
+}

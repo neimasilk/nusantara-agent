@@ -1,0 +1,38 @@
+{
+  "round": 1,
+  "agent": "ALA",
+  "answer": "Konflik norma ini merupakan benturan antara hukum negara (MDP Bali 2010) yang mengakui hak waris individual dan kesetaraan gender, dengan hukum adat (patrilineal Bali) yang mengutamakan kelestarian harta keluarga dalam garis laki-laki dan hak komunal. Konflik diperparah jika ada campuran hukum agama (seperti Islam) yang memiliki aturan waris berbeda. Intinya, ini adalah pertentangan antara prinsip universal-kesetaraan (hukum positif) dan partikular-kekerabatan (hukum adat).",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Sumber konflik utama adalah klaim berbasis hukum negara (MDP Bali 2010) yang menekankan kesetaraan gender dan hak individual, berhadapan dengan penolakan berbasis hukum adat patrilineal Bali yang menekankan hak komunal dan kelanggengan harta dalam garis laki-laki.",
+      "evidence": [
+        "MDP Bali 2010",
+        "Sistem Patrilineal Bali"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "A1"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Konflik ini melibatkan benturan setidaknya tiga sistem norma: Hukum Negara, Hukum Adat, dan potensial Hukum Agama (jika berlaku), yang masing-masing memiliki sumber legitimasi dan logika pembagian yang berbeda.",
+      "evidence": [
+        "Teori Pluralisme Hukum"
+      ],
+      "confidence": 0.85,
+      "assumptions": [
+        "A2"
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1",
+    "U2"
+  ],
+  "open_questions": [
+    "Q1",
+    "Q2"
+  ]
+}

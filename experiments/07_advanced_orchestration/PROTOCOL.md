@@ -42,7 +42,7 @@
 
 ### 1.5 Data & Resources
 
-- **Input Data:** Test queries dari Exp 03 + tambahan (jika tersedia) — *tetapkan sebelum eksekusi*
+- **Input Data:** `experiments/07_advanced_orchestration/test_queries.json` (daftar query) dan rubric di `experiments/07_advanced_orchestration/rubric.md`
 - **Expected Output:** Log per query, debate logs, final synthesis, runtime stats
 - **API/Resources:** DeepSeek API, token usage dicatat
 
@@ -64,10 +64,18 @@ python experiments/03_multi_agent_basic/multi_agent.py
 
 # Step 4: Jalankan advanced orchestration (Exp 07)
 # (script runner akan dibuat di eksperimen ini, memanggil orchestrator + debate)
-python experiments/07_advanced_orchestration/run_experiment.py
+python experiments/07_advanced_orchestration/run_experiment.py --query-file experiments/07_advanced_orchestration/test_queries.json
 
 # Step 5: Verifikasi output
 # Output harus ada di: experiments/07_advanced_orchestration/results/
+
+# Step 6: Rekap skor manual
+python experiments/07_advanced_orchestration/eval_scores.py --scores experiments/07_advanced_orchestration/scoring_template.json
+
+# (Opsional) Auto-score dengan LLM independen (bukan DeepSeek)
+# export OPENAI_API_KEY=... atau ANTHROPIC_API_KEY=...
+# python experiments/07_advanced_orchestration/auto_score_llm.py --provider openai --model gpt-4o-mini
+# python experiments/07_advanced_orchestration/auto_score_llm.py --provider kimi --model kimi-k2-turbo-preview
 ```
 
 ### 2.2 Log Eksekusi
@@ -93,10 +101,10 @@ python experiments/07_advanced_orchestration/run_experiment.py
 
 | Metrik | Threshold | Hasil Aktual | PASS/FAIL |
 |--------|-----------|--------------|-----------|
-| Accuracy | >= +10% | TBD | TBD |
-| Completeness | >= +10% | TBD | TBD |
-| Cultural Sensitivity | >= +10% | TBD | TBD |
-| Efficiency | <= 1.2x baseline | TBD | TBD |
+| Accuracy | >= +10% | -0.25 (vs baseline) | FAIL |
+| Completeness | >= +10% | -0.33 (vs baseline) | FAIL |
+| Cultural Sensitivity | >= +10% | -0.17 (vs baseline) | FAIL |
+| Efficiency | <= 1.2x baseline | Belum diukur | TBD |
 
 ### 3.2 Analisis Kegagalan (WAJIB)
 
@@ -133,6 +141,7 @@ Jawaban: TBD
 - [ ] 10 pertanyaan review protocol dijawab (lihat `docs/review_protocol.md`)
 - [ ] Kode bisa direproduksi dari instruksi step-by-step
 - [ ] Data output disimpan dan di-commit
+- [ ] Skoring manual menggunakan rubric (`experiments/07_advanced_orchestration/rubric.md`)
 
 ### 4.2 Keputusan Gate
 
@@ -142,8 +151,10 @@ Jawaban: TBD
 | **CONDITIONAL PASS** | Sebagian terpenuhi, perlu eksperimen tambahan |
 | **FAIL** | Criteria tidak terpenuhi |
 
-**Keputusan:** TBD
+**Keputusan:** FAIL
 
-**Alasan:** TBD
+**Alasan:** Tidak ada peningkatan kualitas vs baseline pada evaluasi auto-score Kimi; semua metrik turun.
 
-**Reviewer:** TBD  **Tanggal:** TBD
+**Reviewer:** AI Agent (Codex)  **Tanggal:** 2026-02-07
+Catatan hasil: perbandingan skor menggunakan auto-score Kimi (`kimi-k2-turbo-preview`) terhadap 12 query.
+Baseline (Exp 03 re-run) memiliki skor lebih tinggi pada semua metrik.

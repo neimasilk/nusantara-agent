@@ -1,0 +1,46 @@
+{
+  "round": 2,
+  "agent": "ALA",
+  "answer": "Konsep 'harta bersama' atau gono-gini berasal dari hukum perdata nasional (KUHPerdata) dan tidak dikenal dalam sistem adat Minangkabau yang asli. Dalam adat Minangkabau, harta dibedakan secara tegas menjadi Harta Pusako Tinggi (milik kolektif kaum, diwariskan matrilineal) dan Harta Pusako Rendah (harta pencaharian suami-istri). Pemahaman sosial di komunitas adat Minangkabau memandang harta melalui lensa kolektivitas kaum dan jalur waris yang jelas, berbeda dengan prinsip pembagian 50:50 dalam gono-gini.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Konsep harta bersama (gono-gini) tidak dikenal dalam sistem adat Minangkabau yang asli dan berasal dari hukum perdata nasional.",
+      "evidence": [
+        "source_context"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "A1"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Adat Minangkabau membedakan harta menjadi Harta Pusako Tinggi (kolektif, matrilineal) dan Harta Pusako Rendah (pencaharian suami-istri).",
+      "evidence": [
+        "source_context"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "A2"
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Pemahaman sosial di komunitas adat Minangkabau memisahkan harta berdasarkan asal-usul dan jalur waris, bertentangan dengan filosofi gono-gini.",
+      "evidence": [
+        "source_context"
+      ],
+      "confidence": 0.8,
+      "assumptions": [
+        "A3"
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Sejauh mana konsep gono-gini telah diadopsi atau disalahartikan sebagai Harta Pusako Rendah dalam praktik masyarakat Minangkabau kontemporer."
+  ],
+  "open_questions": [
+    "Q1: Bagaimana komunitas adat lain di Indonesia (selain Minangkabau) memahami dan menerapkan konsep harta bersama secara sosial?"
+  ]
+}

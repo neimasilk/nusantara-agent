@@ -1,0 +1,58 @@
+{
+  "round": 1,
+  "agent": "NLA",
+  "answer": "Kedudukan wasiat menurut KUHPerdata (BW) adalah sebagai pernyataan kehendak sepihak yang bersifat pribadi, dapat ditarik kembali, dan harus memenuhi bentuk formal tertentu (Pasal 874 BW). Fungsinya untuk menunjuk ahli waris, memberikan hibah wasiat, dan mengatur pembagian harta di luar ketentuan waris tanpa wasiat (ab-intestato).\n\nWasiat memiliki batasan utama terhadap bagian mutlak (legitieme portie) ahli waris dalam garis lurus, yaitu anak (sah atau diakui) dan orang tua. Berdasarkan Pasal 913 BW:\n1. Untuk satu anak, legitieme portie-nya adalah 1/2 dari bagian waris ab-intestato.\n2. Untuk dua anak atau lebih, legitieme portie mereka bersama adalah 2/3 dari seluruh harta peninggalan, dibagi rata.\n3. Untuk orang tua (jika tidak ada anak), legitieme portie mereka bersama adalah 1/2 dari seluruh harta peninggalan, dibagi rata.\n\nWasiat tidak boleh mengurangi atau menghilangkan hak atas bagian mutlak ini. Harta yang dapat diwasiatkan hanya terbatas pada harta milik pribadi testator dan, dalam praktik, separuh dari harta yang dapat dibuktikan sebagai hasil usaha bersama selama perkawinan, setelah dikurangi hutang dan hak legitieme portie ahli waris.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Wasiat menurut KUHPerdata adalah pernyataan kehendak sepihak, pribadi, dapat ditarik kembali, dan harus memenuhi bentuk formal.",
+      "evidence": [
+        "Pasal_874_KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Definisi dan sifat wasiat mengacu pada ketentuan Buku II KUHPerdata."
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Wasiat memiliki batasan terhadap bagian mutlak (legitieme portie) ahli waris dalam garis lurus (anak dan orang tua).",
+      "evidence": [
+        "Pasal_913_KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Ketentuan Pasal 913 BW berlaku dan tidak dikesampingkan."
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Besaran legitieme portie untuk dua anak atau lebih adalah 2/3 dari seluruh harta peninggalan, dibagi rata di antara mereka.",
+      "evidence": [
+        "Pasal_913_KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Tidak ada ahli waris lain yang berhak atas legitieme portie dan harta peninggalan telah dikurangi hutang."
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Harta yang dapat diwasiatkan terbatas pada harta milik pribadi testator dan, dalam praktik, dapat mencakup separuh dari harta hasil usaha bersama yang dapat dibuktikan.",
+      "evidence": [
+        "Pasal_119_KUHPerdata",
+        "Yurisprudensi_harta_campuran"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "Tidak ada perjanjian kawin yang mengatur lain dan harta bersama dapat diidentifikasi serta dipisahkan."
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Penghitungan dan pembuktian bagian 'harta bersama' atau 'harta hasil usaha bersama' dalam perkawinan menurut KUHPerdata sering kali kompleks dan bergantung pada fakta serta pembuktian di pengadilan."
+  ],
+  "open_questions": [
+    "Q1: Bagaimana mekanisme penuntutan hak legitieme portie oleh ahli waris jika wasiat dianggap melanggar batasannya, dan apa konsekuensi hukum bagi wasiat yang melanggar?"
+  ]
+}

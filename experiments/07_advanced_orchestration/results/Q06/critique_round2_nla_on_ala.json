@@ -1,0 +1,31 @@
+{
+  "round": 2,
+  "agent": "NLA",
+  "target": "ALA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa 'sentana' merujuk pada ahli waris atau keturunan hanya didukung oleh 'general_knowledge' dengan kepercayaan rendah (0.6). ALA gagal merujuk pada sumber otoritatif seperti literatur hukum adat Bali (misalnya, 'Awig-awig' desa adat) atau putusan pengadilan yang mengakui hak-hak sentana, sehingga meninggalkan kesenjangan bukti yang signifikan.",
+      "severity": "MAJOR",
+      "suggested_fix": "Sebutkan setidaknya satu sumber spesifik seperti 'Buku Hukum Adat Bali' karya I Gusti Gde Raka atau referensi pada Awig-awig desa adat tertentu yang mendefinisikan 'sentana'."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C2",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa sistem kekerabatan Bali 'umumnya bersifat patrilineal' adalah penyederhanaan berlebihan. Dalam praktiknya, sistem pewarisan adat Bali (terutama bagi warga biasa/Bali Aga) seringkali bersifat parental/bilateral, di mana anak laki-laki dan perempuan dapat mewarisi, berbeda dengan sistem patrilineal ketat seperti di Batak. Pernyataan ini berisiko menyesatkan tanpa penjelasan nuansa.",
+      "severity": "MAJOR",
+      "suggested_fix": "Klarifikasi bahwa 'patrilineal' berlaku terutama untuk kalangan tertentu (misalnya, bangsawan/triwangsa), dan sebutkan variasi sistem parental/bilateral yang juga ada dalam masyarakat Bali."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C1",
+      "issue_type": "domain_mismatch",
+      "description": "ALA sebagai 'Adat Law Agent' seharusnya memiliki pengetahuan mendalam tentang istilah-istilah kunci dalam hukum adat berbagai daerah, termasuk 'sentana' di Bali. Namun, jawaban hanya mengandalkan pengetahuan umum dan mengalihkan ke ahli eksternal, menunjukkan ketidakmampuan domain dalam memberikan analisis hukum adat yang mendalam sebagaimana diharapkan dari peran agen spesialis.",
+      "severity": "CRITICAL",
+      "suggested_fix": "Perluas basis pengetahuan dengan memasukkan prinsip-prinsip hukum adat Bali yang relevan, seperti perbedaan antara 'purusa' (keturunan laki-laki) dan 'sentana' (ahli waris yang sah), serta kaitannya dengan hak waris atas tanah 'tanah ayahan desa'."
+    }
+  ]
+}

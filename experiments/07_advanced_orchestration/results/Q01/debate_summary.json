@@ -1,0 +1,179 @@
+{
+  "query": "Bagaimana pembagian waris menurut KUHPerdata jika pewaris meninggalkan istri dan dua anak?",
+  "max_rounds": 2,
+  "final_nla": {
+    "round": 2,
+    "agent": "NLA",
+    "answer": "Berdasarkan KUHPerdata, pembagian waris jika pewaris (suami) meninggalkan istri dan dua anak kandung, tanpa wasiat, adalah sebagai berikut:\n\n1. **Tahap Pemisahan Harta Bersama (Gono-Gini):** Harta bersama suami-istri dibagi dua. Separuh menjadi hak mutlak istri yang masih hidup. Separuh lainnya, ditambah seluruh harta pribadi suami (jika ada), menjadi harta warisan yang akan dibagi.\n2. **Tahap Pembagian Harta Warisan:** Dari total harta warisan tersebut:\n   - **Istri** mendapat bagian pasti (legitieme portie) sebesar **1/4 (seperempat)**.\n   - **Sisa 3/4 (tiga perempat)** dibagi sama rata kepada **kedua anak**. Dengan demikian, masing-masing anak mendapat **3/8** dari harta warisan.\n\n**Ilustrasi:** Jika total harta bersama Rp1 M, maka istri mendapat Rp500 juta dari pemisahan harta. Harta warisan suami Rp500 juta. Istri mendapat Rp125 juta (1/4) sebagai ahli waris, dan masing-masing anak mendapat Rp187,5 juta (3/8). Total akhir istri Rp625 juta, masing-masing anak Rp187,5 juta.",
+    "claims": [
+      {
+        "id": "C1",
+        "statement": "Harta bersama (gono-gini) suami-istri harus dipisahkan terlebih dahulu, di mana istri berhak atas 1/2 bagian sebagai miliknya sendiri.",
+        "evidence": [
+          "Pasal 119 KUHPerdata"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "A1",
+          "A2"
+        ]
+      },
+      {
+        "id": "C2",
+        "statement": "Setelah pemisahan, harta warisan (bagian suami dari harta bersama plus harta pribadinya) dibagikan kepada ahli waris Golongan I (istri dan anak).",
+        "evidence": [
+          "Pasal 832-833 KUHPerdata"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "A1",
+          "A2"
+        ]
+      },
+      {
+        "id": "C3",
+        "statement": "Dalam Golongan I, istri yang ditinggalkan berhak atas 1/4 bagian dari harta warisan, sementara sisanya dibagi rata kepada semua anak.",
+        "evidence": [
+          "Pasal 852a KUHPerdata (SEMA No. 3/1963)"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "A1",
+          "A2",
+          "A3"
+        ]
+      }
+    ],
+    "uncertainties": [
+      "U1: Apakah ada harta pribadi (bawaan/hibah/warisan) milik suami atau istri yang perlu diperhitungkan secara terpisah? Analisis utama mengasumsikan seluruh harta adalah harta bersama."
+    ],
+    "open_questions": [
+      "Q1: Bagaimana jika salah satu atau kedua anak tersebut adalah anak luar kawin yang telah diakui? Bagaimana kedudukan dan bagian waris mereka?",
+      "Q2: Apa langkah hukum yang harus ditempuh untuk memperoleh kepastian dan eksekusi pembagian ini (misalnya, melalui penetapan ahli waris di Pengadilan Negeri)?"
+    ]
+  },
+  "final_ala": {
+    "round": 2,
+    "agent": "ALA",
+    "answer": "Menurut KUHPerdata, jika pewaris meninggalkan istri dan dua anak, pembagian warisnya adalah sebagai berikut:\n1. Istri mendapat bagian sebesar **1/4 (seperempat)** dari harta warisan.\n2. Dua anak bersama-sama mendapat bagian **3/4 (tiga perempat)** dari harta warisan, yang kemudian dibagi rata di antara mereka.\n3. Dengan demikian, masing-masing anak mendapat bagian sebesar **3/8** dari total harta warisan.\n\nPenting untuk dicatat bahwa analisis ini murni berdasarkan KUHPerdata. Dalam konteks Adat Minangkabau, sistem pewarisan ini tidak berlaku untuk **Harta Pusako Tinggi**, yang diatur oleh hukum adat matrilineal dan diwariskan kepada kemenakan (anak dari saudara perempuan pewaris). Harta pencaharian (Harta Pusako Rendah) dapat menjadi area di mana hak anak dipertimbangkan, tetapi penyelesaiannya sering melalui musyawarah adat.",
+    "claims": [
+      {
+        "id": "C1",
+        "statement": "Dalam KUHPerdata, istri dari pewaris yang meninggalkan dua anak berhak atas 1/4 bagian harta warisan.",
+        "evidence": [
+          "KUHPerdata_Buku_II_Bagian_Kedua"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "A1"
+        ]
+      },
+      {
+        "id": "C2",
+        "statement": "Dalam KUHPerdata, dua anak dari pewaris tersebut bersama-sama berhak atas 3/4 bagian harta warisan, yang dibagi rata.",
+        "evidence": [
+          "KUHPerdata_Buku_II_Bagian_Kedua"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "A1"
+        ]
+      },
+      {
+        "id": "C3",
+        "statement": "Aturan pembagian waris menurut KUHPerdata tidak berlaku untuk Harta Pusako Tinggi dalam Adat Minangkabau.",
+        "evidence": [
+          "Sistem_Adat_Minangkabau_Matrilineal"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "A2"
+        ]
+      }
+    ],
+    "uncertainties": [
+      "U1: Tidak ada ketidakpastian mengenai aturan KUHPerdata untuk kasus ini, karena aturannya jelas dan terdefinisi."
+    ],
+    "open_questions": [
+      "Q1: Bagaimana penyelesaian konflik jika harta pewaris merupakan campuran antara Harta Pusako Rendah dan harta pribadi lainnya, dan keluarga ingin menyelesaikannya di luar pengadilan umum?"
+    ]
+  },
+  "critique_counts": {
+    "CRITICAL": 3,
+    "MAJOR": 7,
+    "MINOR": 2
+  },
+  "needs_human_review": true,
+  "logs_index": [
+    {
+      "type": "answer",
+      "round": 1,
+      "agent": "NLA",
+      "target": null,
+      "file": "debate_round1_nla.json"
+    },
+    {
+      "type": "answer",
+      "round": 1,
+      "agent": "ALA",
+      "target": null,
+      "file": "debate_round1_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 1,
+      "agent": "NLA",
+      "target": "ALA",
+      "file": "critique_round1_nla_on_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 1,
+      "agent": "ALA",
+      "target": "NLA",
+      "file": "critique_round1_ala_on_nla.json"
+    },
+    {
+      "type": "revision",
+      "round": 2,
+      "agent": "NLA",
+      "target": null,
+      "file": "debate_round2_nla.json"
+    },
+    {
+      "type": "revision",
+      "round": 2,
+      "agent": "ALA",
+      "target": null,
+      "file": "debate_round2_ala.json"
+    },
+    {
+      "type": "answer",
+      "round": 2,
+      "agent": "NLA",
+      "target": null,
+      "file": "debate_round2_nla.json"
+    },
+    {
+      "type": "answer",
+      "round": 2,
+      "agent": "ALA",
+      "target": null,
+      "file": "debate_round2_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 2,
+      "agent": "NLA",
+      "target": "ALA",
+      "file": "critique_round2_nla_on_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 2,
+      "agent": "ALA",
+      "target": "NLA",
+      "file": "critique_round2_ala_on_nla.json"
+    }
+  ]
+}

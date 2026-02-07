@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "agent": "ALA",
+  "target": "NLA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "evidence_gap",
+      "description": "Klaim C1 menyatakan harta bawaan 'tetap menjadi milik pribadi' berdasarkan UU Perkawinan dan yurisprudensi. Namun, dalam adat Jawa, status harta bawaan bisa berubah menjadi harta bersama (gono-gini) jika terjadi percampuran (vermenging) atau pengelolaan bersama yang signifikan selama perkawinan. Jawaban NLA tidak menyebutkan pengecualian atau modifikasi adat ini, sehingga menciptakan kesan bahwa pemisahan harta bawaan bersifat mutlak.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perjelas bahwa dalam adat Jawa, harta bawaan dapat berubah status menjadi gono-gini jika tercampur atau dikelola bersama, dan sebutkan sumber adat atau yurisprudensi yang mendukung modifikasi ini (misalnya, Putusan Pengadilan Negeri yang mengakui konsep percampuran harta)."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C2",
+      "issue_type": "overclaim",
+      "description": "Klaim C2 menyatakan pembagian gono-gini 'ideal 50:50'. Pernyataan ini terlalu menyederhanakan. Dalam praktik adat Jawa dan putusan pengadilan, pembagian tidak selalu setara. Faktor seperti kontribusi ekonomi, jerih payah, dan peran domestik dapat dipertimbangkan, sehingga pembagian bisa proporsional (misalnya, 60:40). Klaim 'ideal 50:50' tidak didukung secara eksplisit oleh UU Perkawinan Pasal 35 yang hanya menyebut 'harta bersama' tanpa menentukan proporsi.",
+      "severity": "MAJOR",
+      "suggested_fix": "Revisi klaim untuk mencerminkan bahwa pembagian 50:50 adalah salah satu asas, tetapi dalam praktik adat dan yurisprudensi, pengadilan dapat menetapkan pembagian yang tidak setara berdasarkan kontribusi masing-masing pihak. Sertakan contoh putusan pengadilan yang menunjukkan variasi pembagian."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C3",
+      "issue_type": "logic_gap",
+      "description": "Klaim C3 menyatakan konsep adat Jawa 'telah diakomodir oleh hukum nasional, khususnya dalam Pasal 35 UU Perkawinan'. Namun, ada logika yang terputus: Pasal 35 UU Perkawinan mengatur harta bawaan dan harta bersama secara umum, tetapi tidak secara eksplisit mengadopsi terminologi atau mekanisme spesifik adat Jawa seperti 'gono-gini'. Pengakomodiran lebih tepat terjadi melalui penafsiran pengadilan (yurisprudensi) yang menerapkan asas-asas adat dalam kerangka UU, bukan melalui pengaturan langsung dalam pasal tersebut.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perbaiki logika dengan menyatakan bahwa meskipun UU Perkawinan tidak menyebut 'gono-gini' secara eksplisit, konsepnya selaras dengan pengaturan harta bersama dalam Pasal 35, dan pengakuan hukum adat secara umum didasarkan pada Pasal 18B UUD 1945. Penekanan harus pada penerapan oleh pengadilan, bukan pengakomodiran literal oleh UU."
+    }
+  ]
+}

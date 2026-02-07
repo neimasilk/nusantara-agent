@@ -1,0 +1,31 @@
+{
+  "round": 2,
+  "agent": "ALA",
+  "target": "NLA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa sistem persatuan harta adalah rezim default dalam KUHPerdata tidak lengkap karena tidak menyebutkan bahwa Pasal 119 KUHPerdata hanya berlaku bagi mereka yang tunduk pada KUHPerdata berdasarkan Pasal 2 KUHPerdata. Bagi golongan pribumi (inlanders) yang tunduk pada hukum adat, sistem harta perkawinan mengikuti hukum adat masing-masing, bukan KUHPerdata.",
+      "severity": "MAJOR",
+      "suggested_fix": "Tambahkan penjelasan bahwa Pasal 119 KUHPerdata hanya berlaku bagi mereka yang tunduk pada KUHPerdata, sedangkan bagi golongan pribumi berlaku hukum adat masing-masing sesuai Pasal 2 KUHPerdata."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C2",
+      "issue_type": "domain_mismatch",
+      "description": "Klaim bahwa anak tidak memiliki hak langsung atas harta bersama selama perkawinan berlangsung hanya benar dalam kerangka KUHPerdata murni. Dalam beberapa sistem hukum adat (misalnya hukum adat Bali atau Batak), anak sudah memiliki hak tertentu atas harta keluarga sejak lahir, termasuk hak untuk dilibatkan dalam pengelolaan harta keluarga.",
+      "severity": "MAJOR",
+      "suggested_fix": "Sebutkan bahwa dalam beberapa sistem hukum adat, anak memiliki hak langsung atas harta keluarga sejak lahir, dan berikan contoh konkret seperti hak anak laki-laki dalam sistem patrilineal Batak atas harta pusaka."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C4",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa KUHPerdata menjadi hukum yang diterapkan dalam sengketa formal terlalu menyederhanakan. Dalam praktik peradilan, hakim seringkali mengakomodasi hukum adat melalui yurisprudensi, bahkan tanpa perjanjian perkawinan tertulis. Putusan Mahkamah Agung No. 179 K/Sip/1972 mengakui keberlakuan hukum adat dalam pembagian harta bersama.",
+      "severity": "MAJOR",
+      "suggested_fix": "Sebutkan bahwa dalam praktik peradilan, hakim dapat mengakomodasi hukum adat melalui penafsiran dan yurisprudensi, dan berikan contoh putusan Mahkamah Agung yang relevan."
+    }
+  ]
+}

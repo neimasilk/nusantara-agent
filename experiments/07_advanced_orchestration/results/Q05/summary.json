@@ -1,0 +1,25 @@
+{
+  "query_id": "Q05",
+  "query": "Apa saja syarat sah perjanjian menurut KUHPerdata dan dampaknya jika salah satu syarat tidak terpenuhi?",
+  "routing": {
+    "label": "pure_national",
+    "scores": {
+      "national": 3,
+      "adat": 0,
+      "conflict": 0
+    },
+    "confidence": 0.7,
+    "method": "heuristic"
+  },
+  "graph_data_path": "experiments/01_triple_extraction/result.json",
+  "timing_seconds": {
+    "retrieval_parallel": 89.0955,
+    "debate": 264.2138,
+    "supervisor": 18.4716,
+    "total": 371.7809
+  },
+  "artifacts": {
+    "debate_summary": "experiments\\07_advanced_orchestration\\results\\Q05\\debate_summary.json",
+    "final_synthesis": "experiments\\07_advanced_orchestration\\results\\Q05\\final_synthesis.txt"
+  }
+}

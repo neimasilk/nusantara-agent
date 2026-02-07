@@ -1,0 +1,11 @@
+{
+  "query_id": "Q04",
+  "query": "Apa perbedaan peran mamak dalam adat Minangkabau dan hak anak dalam hukum nasional, tanpa menyebut konflik?",
+  "graph_data_path": "experiments/01_triple_extraction/result.json",
+  "timing_seconds": {
+    "total": 103.4316
+  },
+  "artifacts": {
+    "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results\\Q04\\final_synthesis.txt"
+  }
+}

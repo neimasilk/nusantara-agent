@@ -1,0 +1,134 @@
+[
+  {
+    "query_id": "Q01",
+    "query": "Bagaimana pembagian waris menurut KUHPerdata jika pewaris meninggalkan istri dan dua anak?",
+    "graph_data_path": "experiments/01_triple_extraction/result.json",
+    "timing_seconds": {
+      "total": 118.6805
+    },
+    "artifacts": {
+      "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results\\Q01\\final_synthesis.txt"
+    }
+  },
+  {
+    "query_id": "Q02",
+    "query": "Dalam adat Minangkabau, siapa yang berhak atas pusako tinggi ketika seorang mamak meninggal?",
+    "graph_data_path": "experiments/01_triple_extraction/result.json",
+    "timing_seconds": {
+      "total": 147.8283
+    },
+    "artifacts": {
+      "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results\\Q02\\final_synthesis.txt"
+    }
+  },
+  {
+    "query_id": "Q03",
+    "query": "Kasus waris tanah pusako rendah: anak kandung menuntut menurut KUHPerdata, kemenakan menuntut menurut adat Minangkabau. Bagaimana menyikapinya?",
+    "graph_data_path": "experiments/01_triple_extraction/result.json",
+    "timing_seconds": {
+      "total": 113.2673
+    },
+    "artifacts": {
+      "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results\\Q03\\final_synthesis.txt"
+    }
+  },
+  {
+    "query_id": "Q04",
+    "query": "Apa perbedaan peran mamak dalam adat Minangkabau dan hak anak dalam hukum nasional, tanpa menyebut konflik?",
+    "graph_data_path": "experiments/01_triple_extraction/result.json",
+    "timing_seconds": {
+      "total": 103.4316
+    },
+    "artifacts": {
+      "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results\\Q04\\final_synthesis.txt"
+    }
+  },
+  {
+    "query_id": "Q05",
+    "query": "Apa saja syarat sah perjanjian menurut KUHPerdata dan dampaknya jika salah satu syarat tidak terpenuhi?",
+    "graph_data_path": "experiments/01_triple_extraction/result.json",
+    "timing_seconds": {
+      "total": 111.976
+    },
+    "artifacts": {
+      "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results\\Q05\\final_synthesis.txt"
+    }
+  },
+  {
+    "query_id": "Q06",
+    "query": "Dalam adat Bali, apa makna sentana dan bagaimana posisinya dalam pewarisan keluarga?",
+    "graph_data_path": "experiments/01_triple_extraction/result.json",
+    "timing_seconds": {
+      "total": 101.2856
+    },
+    "artifacts": {
+      "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results\\Q06\\final_synthesis.txt"
+    }
+  },
+  {
+    "query_id": "Q07",
+    "query": "Seorang perempuan Bali menuntut warisan tanah keluarga berdasarkan keputusan MDP Bali 2010, tetapi keluarga menolak karena adat patrilineal. Bagaimana konflik normanya?",
+    "graph_data_path": "experiments/01_triple_extraction/result.json",
+    "timing_seconds": {
+      "total": 104.2641
+    },
+    "artifacts": {
+      "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results\\Q07\\final_synthesis.txt"
+    }
+  },
+  {
+    "query_id": "Q08",
+    "query": "Jelaskan secara ringkas konsep harta bersama (gono-gini) dan bagaimana ini dipahami secara sosial di beberapa komunitas adat.",
+    "graph_data_path": "experiments/01_triple_extraction/result.json",
+    "timing_seconds": {
+      "total": 101.8134
+    },
+    "artifacts": {
+      "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results\\Q08\\final_synthesis.txt"
+    }
+  },
+  {
+    "query_id": "Q09",
+    "query": "Dalam adat Jawa, bagaimana konsep gono-gini dan harta bawaan dibedakan?",
+    "graph_data_path": "experiments/01_triple_extraction/result.json",
+    "timing_seconds": {
+      "total": 110.0783
+    },
+    "artifacts": {
+      "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results\\Q09\\final_synthesis.txt"
+    }
+  },
+  {
+    "query_id": "Q10",
+    "query": "Jika hukum nasional mengakui hak anak, tetapi adat setempat menempatkan hak waris pada garis matrilineal, bagaimana mekanisme penyelesaiannya?",
+    "graph_data_path": "experiments/01_triple_extraction/result.json",
+    "timing_seconds": {
+      "total": 120.6799
+    },
+    "artifacts": {
+      "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results\\Q10\\final_synthesis.txt"
+    }
+  },
+  {
+    "query_id": "Q11",
+    "query": "Bagaimana kedudukan wasiat menurut KUHPerdata dan batasannya terhadap bagian mutlak ahli waris?",
+    "graph_data_path": "experiments/01_triple_extraction/result.json",
+    "timing_seconds": {
+      "total": 137.5068
+    },
+    "artifacts": {
+      "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results\\Q11\\final_synthesis.txt"
+    }
+  },
+  {
+    "query_id": "Q12",
+    "query": "Berikan penjelasan netral tentang pluralisme hukum di Indonesia dan mengapa bisa terjadi lebih dari satu norma berlaku.",
+    "graph_data_path": "experiments/01_triple_extraction/result.json",
+    "timing_seconds": {
+      "total": 109.1167
+    },
+    "artifacts": {
+      "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results\\Q12\\final_synthesis.txt"
+    }
+  }
+]

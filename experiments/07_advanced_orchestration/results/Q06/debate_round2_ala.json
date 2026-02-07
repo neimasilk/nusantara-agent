@@ -1,0 +1,37 @@
+{
+  "round": 2,
+  "agent": "ALA",
+  "answer": "Saya adalah Adat Law Agent (ALA) yang dirancang untuk memberikan informasi hukum adat secara umum. Pertanyaan Anda spesifik mengenai makna 'sentana' dan posisinya dalam pewarisan keluarga menurut adat Bali. Pengetahuan saya tidak memiliki sumber khusus yang mendetail tentang adat Bali. Berdasarkan pemahaman umum, dalam konteks Bali, istilah 'sentana' sering merujuk pada ahli waris atau keturunan dalam sistem kekerabatan yang umumnya bersifat patrilineal. Namun, untuk penjelasan yang akurat dan otoritatif mengenai definisi, hak, dan mekanisme pewarisannya dalam adat Bali, Anda disarankan untuk berkonsultasi langsung dengan tetua, pakar adat Bali, atau literatur khusus mengenai hukum adat Bali.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Istilah 'sentana' dalam konteks adat Bali umumnya merujuk pada ahli waris atau keturunan.",
+      "evidence": [
+        "general_knowledge"
+      ],
+      "confidence": 0.6,
+      "assumptions": [
+        "A1"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Sistem kekerabatan dan pewarisan adat Bali umumnya bersifat patrilineal, berbeda dengan sistem matrilineal Minangkabau.",
+      "evidence": [
+        "general_knowledge",
+        "context_provided"
+      ],
+      "confidence": 0.7,
+      "assumptions": [
+        "A2"
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1",
+    "U2"
+  ],
+  "open_questions": [
+    "Q1"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "query_id": "Q10",
+  "query": "Jika hukum nasional mengakui hak anak, tetapi adat setempat menempatkan hak waris pada garis matrilineal, bagaimana mekanisme penyelesaiannya?",
+  "graph_data_path": "experiments/01_triple_extraction/result.json",
+  "timing_seconds": {
+    "total": 120.6799
+  },
+  "artifacts": {
+    "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results\\Q10\\final_synthesis.txt"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "round": 1,
+  "agent": "ALA",
+  "answer": "Perbedaan peran mamak dalam adat Minangkabau dan hak anak dalam hukum nasional terletak pada sumber otoritas, subjek hukum, jenis harta, dan mekanisme pengelolaannya. Mamak berperan sebagai pengelola harta kolektif kaum (pusako tinggi) dan pembimbing kemenakan dalam sistem matrilineal. Sementara itu, hak anak dalam hukum nasional bersifat individual, timbul dari hubungan darah langsung, dan terutama terkait harta pencaharian orang tua (pusako rendah).",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Mamak dalam adat Minangkabau memiliki otoritas untuk mengelola harta pusako tinggi (harta turun-temurun kaum) secara kolektif dan bertanggung jawab membimbing kemenakan (anak dari saudara perempuannya).",
+      "evidence": [
+        "context_1",
+        "context_2"
+      ],
+      "confidence": 0.95,
+      "assumptions": [
+        "A1"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Hak anak dalam hukum nasional bersifat individual, timbul dari hubungan darah langsung dengan orang tua, dan terutama atas harta pusako rendah (harta pencaharian).",
+      "evidence": [
+        "context_3",
+        "context_4"
+      ],
+      "confidence": 0.95,
+      "assumptions": [
+        "A2"
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Adat Minangkabau membedakan secara tegas antara hak kolektif atas harta pusako tinggi (melalui kemenakan) dan hak individual atas harta pusako rendah (melalui anak).",
+      "evidence": [
+        "context_5",
+        "context_6"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "A3"
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Tingkat pengakuan dan penyesuaian prinsip adat Minangkabau dalam praktik hukum nasional kontemporer di luar konteks konflik."
+  ],
+  "open_questions": [
+    "Q1: Bagaimana mekanisme resolusi jika terjadi tumpang tindih klaim antara hak kemenakan atas harta pusako tinggi dan hak anak atas harta pusako rendah dalam satu keluarga?"
+  ]
+}

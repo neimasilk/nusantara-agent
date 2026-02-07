@@ -1,0 +1,46 @@
+{
+  "round": 2,
+  "agent": "ALA",
+  "answer": "Berdasarkan adat Minangkabau, yang berhak atas Pusako Tinggi ketika seorang mamak meninggal adalah kaum atau klan matrilinealnya, khususnya kemenakan (anak dari saudara perempuannya) dalam garis keturunan ibu. Pusako Tinggi tidak menjadi hak ahli waris pribadi mamak (seperti istri atau anak kandungnya), melainkan tetap dimiliki secara kolektif oleh kaum. Pengelolaan beralih kepada mamak kepala waris berikutnya dalam kaum tersebut.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Pusako Tinggi adalah harta warisan turun-temurun yang dimiliki secara kolektif oleh kaum (klan matrilineal) dalam adat Minangkabau.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A1"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Ketika seorang mamak meninggal, hak atas Pusako Tinggi beralih kepada kemenakan (anak dari saudara perempuannya) dalam kaum yang sama, bukan kepada ahli waris pribadinya (istri atau anak kandung).",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A2"
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Pengelolaan Pusako Tinggi setelah mamak meninggal dilakukan oleh mamak kepala waris berikutnya dalam kaum, sementara hak kepemilikan bersama tetap ada pada anggota perempuan kaum.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A3"
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Tidak ada ketidakpastian signifikan dalam konteks ini karena penjelasan didasarkan pada prinsip adat Minangkabau yang mapan."
+  ],
+  "open_questions": [
+    "Q1: Bagaimana mekanisme penyelesaian sengketa jika terjadi perselisihan antar anggota kaum mengenai pengelolaan Pusako Tinggi setelah mamak meninggal?"
+  ]
+}

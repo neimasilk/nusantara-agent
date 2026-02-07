@@ -1,0 +1,186 @@
+{
+  "query": "Kasus waris tanah pusako rendah: anak kandung menuntut menurut KUHPerdata, kemenakan menuntut menurut adat Minangkabau. Bagaimana menyikapinya?",
+  "max_rounds": 2,
+  "final_nla": {
+    "round": 2,
+    "agent": "NLA",
+    "answer": "Kasus ini menyangkut konflik antara hukum waris KUHPerdata (yang mengutamakan anak kandung) dan hukum adat Minangkabau (yang mengutamakan kemenakan dalam sistem matrilineal) atas harta pusako rendah. Penyikapan harus didasarkan pada hierarki dan asas hukum nasional Indonesia. Berdasarkan Pasal 131 IS dan yurisprudensi Mahkamah Agung (seperti Putusan No. 179 K/Sip/1961), hukum adat adalah hukum utama bagi masyarakat yang masih mempertahankannya. Oleh karena itu, langkah pertama adalah mengidentifikasi status pewaris: apakah ia masih terikat dengan masyarakat hukum adat Minangkabau atau telah meninggalkannya. Selanjutnya, perlu diklasifikasi jenis hartanya: apakah benar-benar harta pusako rendah (tunduk pada hukum adat) atau harta pencaharian/gono-gini (tunduk pada UU No. 1/1974 tentang Perkawinan). Jika pewaris masih terikat adat dan harta tersebut adalah pusako rendah, maka hukum adat berlaku dan kemenakan berhak. Jika pewaris telah meninggalkan adat, KUHPerdata dapat diterapkan. Penyelesaian terbaik diawali dengan mediasi melibatkan ninik mamak, dan jika gagal, dapat diajukan ke pengadilan yang akan memutus berdasarkan pembuktian atas dua aspek tersebut.",
+    "claims": [
+      {
+        "id": "C1",
+        "statement": "Hukum adat adalah hukum utama bagi masyarakat yang masih mempertahankannya, berdasarkan Pasal 131 IS dan yurisprudensi Mahkamah Agung (Putusan No. 179 K/Sip/1961).",
+        "evidence": [
+          "Pasal_131_IS",
+          "MA_179_K_Sip_1961"
+        ],
+        "confidence": 0.95,
+        "assumptions": [
+          "Pasal 131 IS masih diakui dalam sistem hukum Indonesia",
+          "Putusan MA tersebut masih relevan dan berlaku"
+        ]
+      },
+      {
+        "id": "C2",
+        "statement": "Penyelesaian kasus bergantung pada identifikasi status pewaris (terikat atau tidak dengan hukum adat Minangkabau) dan klasifikasi jenis harta (pusako rendah atau pencaharian).",
+        "evidence": [
+          "MA_396_K_Pdt_1983",
+          "UU_1_1974_Pasal_35"
+        ],
+        "confidence": 0.9,
+        "assumptions": [
+          "Pembuktian status dan jenis harta dapat dilakukan secara faktual",
+          "Tidak ada perubahan hukum yang mendasar pasca putusan MA tersebut"
+        ]
+      },
+      {
+        "id": "C3",
+        "statement": "Untuk harta pusako rendah, hukum adat Minangkabau (sistem matrilineal) memberikan hak waris kepada kemenakan, bukan anak kandung.",
+        "evidence": [
+          "Doktrin_Hukum_Adat_Minangkabau",
+          "MA_179_K_Sip_1961"
+        ],
+        "confidence": 0.85,
+        "assumptions": [
+          "Harta yang disengketakan memang memenuhi definisi 'pusako rendah' menurut adat",
+          "Masyarakat setempat masih mengakui dan menjalankan sistem tersebut"
+        ]
+      }
+    ],
+    "uncertainties": [
+      "U1: Batasan 'meninggalkan lingkungan hukum adat' tidak didefinisikan secara tegas dalam peraturan tertulis, sehingga interpretasi dapat bervariasi.",
+      "U2: Dalam praktik, pengadilan mungkin menerapkan pendekatan progresif yang mempertimbangkan keadilan substantif, termasuk kebutuhan anak kandung, meski untuk harta pusako."
+    ],
+    "open_questions": [
+      "Q1: Bagaimana mekanisme pembuktian yang efektif untuk menentukan bahwa seseorang telah 'meninggalkan' hukum adat Minangkabau?",
+      "Q2: Apakah terdapat perkembangan yurisprudensi terbaru Mahkamah Agung yang mengimbangi hak anak kandung dalam kasus waris adat Minangkabau tanpa mengabaikan sistem matrilineal?"
+    ]
+  },
+  "final_ala": {
+    "round": 2,
+    "agent": "ALA",
+    "answer": "Sebagai Adat Law Agent (ALA), saya menyikapi kasus ini dengan berpegang pada prinsip dan pengetahuan adat Minangkabau. Konflik antara anak kandung (berdasarkan KUHPerdata) dan kemenakan (berdasarkan adat) atas tanah pusako rendah dapat diselesaikan dengan merujuk pada aturan adat itu sendiri. Harta Pusako Rendah, sebagai harta pencaharian orang tua selama perkawinan, menurut adat Minangkabau dapat diwariskan kepada anak kandung, mengikuti ketentuan hukum Islam atau kesepakatan keluarga. Ini berbeda dengan Harta Pusako Tinggi (harta turun-temurun kaum) yang diwariskan secara matrilineal kepada kemenakan. Oleh karena itu, klaim anak kandung memiliki dasar yang kuat dalam kerangka adat. Penyelesaian terbaik adalah melalui musyawarah keluarga (bermufakat) untuk memperjelas status harta, mengedepankan prinsip keadilan (adat nan sabana adat), dan mencari kompromi yang menjaga tali silaturahmi, dengan kesepakatan akhir tetap menghormati koridor adat.",
+    "claims": [
+      {
+        "id": "C1",
+        "statement": "Harta Pusako Rendah (harta pencaharian) dalam adat Minangkabau dapat diwariskan kepada anak kandung, bukan kepada kemenakan.",
+        "evidence": [
+          "source_1",
+          "source_2"
+        ],
+        "confidence": 0.9,
+        "assumptions": [
+          "A1"
+        ]
+      },
+      {
+        "id": "C2",
+        "statement": "Klaim kemenakan berdasarkan adat matrilineal lebih tepat untuk Harta Pusako Tinggi (harta turun-temurun kaum), bukan Harta Pusako Rendah.",
+        "evidence": [
+          "source_1",
+          "source_2"
+        ],
+        "confidence": 0.9,
+        "assumptions": [
+          "A2"
+        ]
+      },
+      {
+        "id": "C3",
+        "statement": "Penyelesaian konflik waris adat yang utama adalah melalui musyawarah (bermufakat) untuk mencapai kesepakatan keluarga dengan berpegang pada prinsip adat.",
+        "evidence": [
+          "source_3"
+        ],
+        "confidence": 0.85,
+        "assumptions": [
+          "A3"
+        ]
+      }
+    ],
+    "uncertainties": [
+      "U1: Sejauh mana bukti atau pengakuan keluarga dapat dengan jelas membedakan bahwa tanah tersebut adalah Pusako Rendah murni (hasil usaha) dan bukan memiliki campuran atau asal-usul dari Pusako Tinggi.",
+      "U2: Tingkat penerimaan pihak kemenakan terhadap penjelasan adat mengenai perbedaan Pusako Rendah dan Pusako Tinggi, serta kemungkinan adanya penafsiran adat yang berbeda di nagari atau kaum tertentu."
+    ],
+    "open_questions": [
+      "Q1: Apakah ada wasiat atau kesepakatan keluarga sebelumnya dari almarhum/almarhumah pemilik tanah mengenai pembagian harta tersebut?",
+      "Q2: Bagaimana peran dan sikap para ninik mamak serta pemangku adat lain dalam kaum/ nagari terhadap kasus ini? Apakah ada kesepakatan kolektif (keputusan sidang) yang dapat dijadikan pedoman?"
+    ]
+  },
+  "critique_counts": {
+    "CRITICAL": 1,
+    "MAJOR": 10,
+    "MINOR": 1
+  },
+  "needs_human_review": true,
+  "logs_index": [
+    {
+      "type": "answer",
+      "round": 1,
+      "agent": "NLA",
+      "target": null,
+      "file": "debate_round1_nla.json"
+    },
+    {
+      "type": "answer",
+      "round": 1,
+      "agent": "ALA",
+      "target": null,
+      "file": "debate_round1_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 1,
+      "agent": "NLA",
+      "target": "ALA",
+      "file": "critique_round1_nla_on_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 1,
+      "agent": "ALA",
+      "target": "NLA",
+      "file": "critique_round1_ala_on_nla.json"
+    },
+    {
+      "type": "revision",
+      "round": 2,
+      "agent": "NLA",
+      "target": null,
+      "file": "debate_round2_nla.json"
+    },
+    {
+      "type": "revision",
+      "round": 2,
+      "agent": "ALA",
+      "target": null,
+      "file": "debate_round2_ala.json"
+    },
+    {
+      "type": "answer",
+      "round": 2,
+      "agent": "NLA",
+      "target": null,
+      "file": "debate_round2_nla.json"
+    },
+    {
+      "type": "answer",
+      "round": 2,
+      "agent": "ALA",
+      "target": null,
+      "file": "debate_round2_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 2,
+      "agent": "NLA",
+      "target": "ALA",
+      "file": "critique_round2_nla_on_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 2,
+      "agent": "ALA",
+      "target": "NLA",
+      "file": "critique_round2_ala_on_nla.json"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "round": 2,
+  "agent": "ALA",
+  "target": "NLA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C3",
+      "issue_type": "evidence_gap",
+      "description": "NLA mengutip Pasal 852a KUHPerdata (SEMA No. 3/1963) sebagai dasar pembagian 1/4 untuk istri dan sisanya untuk anak. Namun, SEMA No. 3/1963 hanya mengatur pembagian warisan antara janda/duda dengan anak-anak dari perkawinan yang sama, tanpa menyebutkan pembagian harta bersama terlebih dahulu. NLA tidak menyebutkan dasar hukum untuk tahap pemisahan harta bersama yang menjadi prasyarat sebelum pembagian warisan.",
+      "severity": "MAJOR",
+      "suggested_fix": "Tambahkan rujukan ke Pasal 119 KUHPerdata untuk pemisahan harta bersama dan jelaskan bahwa SEMA No. 3/1963 hanya berlaku untuk pembagian harta warisan setelah pemisahan tersebut."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C2",
+      "issue_type": "logic_gap",
+      "description": "NLA menyatakan bahwa harta warisan terdiri dari 'bagian suami dari harta bersama plus harta pribadinya', tetapi dalam ilustrasi perhitungan hanya menggunakan contoh harta bersama Rp1 M tanpa mempertimbangkan kemungkinan adanya harta pribadi. Hal ini menciptakan kesan bahwa semua harta adalah harta bersama, padahal dalam klaim disebutkan adanya kemungkinan harta pribadi.",
+      "severity": "MINOR",
+      "suggested_fix": "Perjelas dalam ilustrasi bahwa contoh hanya untuk harta bersama, dan jika ada harta pribadi, perhitungan akan berbeda. Atau berikan contoh terpisah untuk harta pribadi."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C1",
+      "issue_type": "domain_mismatch",
+      "description": "NLA mengandalkan Pasal 119 KUHPerdata untuk pemisahan harta bersama, namun tidak menyebutkan bahwa ketentuan ini berlaku berdasarkan sistem hukum yang dianut (persatuan harta sebagai dasar). Dalam praktik, sistem pembagian harta bisa berbeda berdasarkan perkawinan (dengan perjanjian kawin atau tanpa). Asumsi bahwa semua harta adalah harta bersama mungkin tidak selalu benar.",
+      "severity": "MAJOR",
+      "suggested_fix": "Sebutkan bahwa analisis ini berdasarkan asumsi tidak ada perjanjian kawin dan semua harta diperoleh selama perkawinan. Jika ada perjanjian kawin atau harta bawaan, pembagian akan mengikuti ketentuan yang berbeda."
+    }
+  ]
+}

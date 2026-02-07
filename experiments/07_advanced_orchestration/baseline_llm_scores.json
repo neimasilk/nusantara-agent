@@ -1,0 +1,86 @@
+[
+  {
+    "query_id": "Q01",
+    "accuracy": 5,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Semua klaim KUHPerdata akurat, ilustrasi hitungan benar, menyebut konflik dengan Islam & adat, serta solusi mediasi/pilihan hukum. Bahasa menghormati adat tanpa stereotip."
+  },
+  {
+    "accuracy": 5,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Semua klaim utama akurat, tak overclaim; bahkan menyertakan konflik KUHPerdata. Menyebutkan aspek inti adat (kaum, mamak pengganti, kemenakan) dan batasan nasional. Bahasa menghormati, tidak stereotip, serta menekankan fungsi sosial harta adat.",
+    "query_id": "Q02"
+  },
+  {
+    "query_id": "Q03",
+    "accuracy": 5,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Tepat bedah konflik norma, uraian rinci dua sistem, solusi kreatif berlapis, referensi putusan MA, tetap hormati adat."
+  },
+  {
+    "query_id": "Q04",
+    "accuracy": 5,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Semua klaim akurat, tidak overclaim; semua aspek inti dibahas tanpa menyebut konflik; bahasa menghormati adat dan tidak stereotip."
+  },
+  {
+    "query_id": "Q05",
+    "accuracy": 5,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Semua klaim KUHPerdata tepat; dampak void/voidable benar. Menyentuh nasional & adat Minang, tidak overclaim. Bahasa menghormati adat, hindari stereotip."
+  },
+  {
+    "query_id": "Q06",
+    "accuracy": 5,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Tepat: definisi sentana sesuai adat Bali, konflik norma dengan hukum nasional dijelaskan, solusi pluralistik memadukan kedua sistem, tidak mereduksi adat."
+  },
+  {
+    "query_id": "Q07",
+    "accuracy": 3,
+    "completeness": 4,
+    "cultural_sensitivity": 4,
+    "notes": "Inti konflik benar, tapi menyebut 'MDP Bali 2010' sebagai keputusan yang mengakui waris perempuan adalah spekulatif (dokumen tidak dipublikasikan secara luas). MK 2016 soal MDP tidak secara eksplisit membatalkan adat patrilineal, hanya menyatakan MDP tak punya wewenang membatasi hak konstitusional. Sebutan 'hakim supervisor' dan 'hukum progresif' tidak lazim di sistem kita. Masih ada gap soal mekanisme konkret gugatan waris perdata di Bali."
+  },
+  {
+    "query_id": "Q08",
+    "accuracy": 5,
+    "completeness": 5,
+    "cultural_sensitivity": 4,
+    "notes": "Ringkas, semua klaim utama akurat, tiga masyarakat adat disinggung, tidak ada stereotip"
+  },
+  {
+    "query_id": "Q09",
+    "accuracy": 5,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Semua klaim akurat, membedakan gono-gini/harta bawaan sesuai UU 1974 & adat Jawa; menyentuh konteks nasional, adat, serta konflk norma; bahasa dan contoh menghormati nilai lokal tanpa stereotip."
+  },
+  {
+    "query_id": "Q10",
+    "accuracy": 5,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Semua klaim akurat, klasifikasi harta & mekanisme berjenjang sesuai praktik peradilan & adat Minangkabau; tidak overclaim. Menyentuh aspek nasional (UU Perkawinan, BW, UUD) dan adat matrilineal secara proporsional. Bahasa dan framing menghormati sistem adat, tidak mereduksi, menghindari stereotip."
+  },
+  {
+    "accuracy": 5,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Semua klaim KUHPerdata, KHI, dan adat Minangkabau akurat; lengkap menjabarkan legitieme portie, faraidh, dan harta pusako; bahasa menghormati nilai lokal tanpa stereotip.",
+    "query_id": "Q11"
+  },
+  {
+    "query_id": "Q12",
+    "accuracy": 5,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Jawaban sangat akurat, lengkap mencakup sejarah, konstitusi, sosiologi, dan yuridis. Menyebut konflik vertikal/horizontal, mekanisme penyelesaian, serta contoh kasus Minangkabau secara detail. Bahasa netral dan menghormati konteks lokal."
+  }
+]

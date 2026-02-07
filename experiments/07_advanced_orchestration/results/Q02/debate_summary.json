@@ -1,0 +1,187 @@
+{
+  "query": "Dalam adat Minangkabau, siapa yang berhak atas pusako tinggi ketika seorang mamak meninggal?",
+  "max_rounds": 2,
+  "final_nla": {
+    "round": 2,
+    "agent": "NLA",
+    "answer": "Berdasarkan analisis hukum perdata nasional yang mengakui supremasi hukum adat untuk objek khusus seperti pusako tinggi, hak atas pusako tinggi dalam adat Minangkabau tidak beralih melalui sistem kewarisan individual KUHPerdata. Saat seorang mamak (saudara laki-laki ibu) meninggal, yang berhak atas pusako tinggi yang dikelolanya adalah kaum/paruik (kelompok kekerabatan matrilineal) dari almarhum mamak itu sendiri. Pengelolaan (ganggam bauntuak) atas harta tersebut beralih kepada penerus dalam kaum tersebut, biasanya kemenakan laki-lakinya (anak dari saudara perempuannya). Anak kandung almarhum mamak tidak mempunyai hak waris atas pusako tinggi tersebut. Hak waris anak kandung menurut KUHPerdata hanya terbatas pada harta pribadi atau harta pencaharian (pusako rendah) ayahnya, setelah penyelesaian harta bersama dengan istrinya.",
+    "claims": [
+      {
+        "id": "C1",
+        "statement": "Pusako tinggi adalah harta bawaan kaum (suku/paruik) yang dikuasai secara kolektif berdasarkan garis ibu (matrilineal), bukan milik pribadi mamak yang hanya berstatus sebagai pengelola.",
+        "evidence": [
+          "source_context"
+        ],
+        "confidence": 0.95,
+        "assumptions": [
+          "A1"
+        ]
+      },
+      {
+        "id": "C2",
+        "statement": "Saat mamak meninggal, hak pengelolaan (ganggam bauntuak) atas pusako tinggi beralih kepada saudara laki-laki mamak yang lain atau kemenakan laki-laki terdekat (anak dari saudara perempuannya) dalam kaum yang sama, bukan kepada anak kandung mamak.",
+        "evidence": [
+          "source_context"
+        ],
+        "confidence": 0.95,
+        "assumptions": [
+          "A2"
+        ]
+      },
+      {
+        "id": "C3",
+        "statement": "Hukum adat Minangkabau mengenai pusako tinggi diutamakan berlaku berdasarkan pengakuan konstitusional (Pasal 18B UUD 1945) dan asas subsidiaritas KUHPerdata, sehingga KUHPerdata tidak mengatur peralihan hak atas pusako tinggi.",
+        "evidence": [
+          "source_context"
+        ],
+        "confidence": 0.9,
+        "assumptions": [
+          "A3"
+        ]
+      },
+      {
+        "id": "C4",
+        "statement": "Anak kandung almarhum mamak berhak mewarisi harta pribadi atau harta pencaharian (pusako rendah) ayahnya menurut KUHPerdata, setelah pemisahan harta bersama dengan istrinya.",
+        "evidence": [
+          "source_context"
+        ],
+        "confidence": 0.9,
+        "assumptions": [
+          "A4"
+        ]
+      }
+    ],
+    "uncertainties": [
+      "U1: Tingkat kepatuhan dan konsistensi penerapan hukum adat ini di seluruh wilayah Minangkabau dalam praktik kontemporer, mengingat potensi pengaruh sistem hukum nasional dan nilai-nilai individual.",
+      "U2: Mekanisme pasti penunjukan penerus pengelola (apakah otomatis berdasarkan kedudukan atau melalui musyawarah) jika terdapat lebih dari satu calon yang memenuhi syarat dalam kaum."
+    ],
+    "open_questions": [
+      "Q1: Bagaimana penyelesaian hukum jika terjadi sengketa antara kemenakan (ahli waris adat) dengan anak kandung mamak mengenai status suatu harta, apakah termasuk pusako tinggi atau pusako rendah, terutama jika tidak ada bukti kepemilikan yang jelas?",
+      "Q2: Apakah terdapat perkembangan yurisprudensi atau aturan khusus dari pemerintah daerah yang memodifikasi atau memperjelas pengalihan hak pengelolaan pusako tinggi di era modern?"
+    ]
+  },
+  "final_ala": {
+    "round": 2,
+    "agent": "ALA",
+    "answer": "Berdasarkan adat Minangkabau, yang berhak atas Pusako Tinggi ketika seorang mamak meninggal adalah kaum atau klan matrilinealnya, khususnya kemenakan (anak dari saudara perempuannya) dalam garis keturunan ibu. Pusako Tinggi tidak menjadi hak ahli waris pribadi mamak (seperti istri atau anak kandungnya), melainkan tetap dimiliki secara kolektif oleh kaum. Pengelolaan beralih kepada mamak kepala waris berikutnya dalam kaum tersebut.",
+    "claims": [
+      {
+        "id": "C1",
+        "statement": "Pusako Tinggi adalah harta warisan turun-temurun yang dimiliki secara kolektif oleh kaum (klan matrilineal) dalam adat Minangkabau.",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "A1"
+        ]
+      },
+      {
+        "id": "C2",
+        "statement": "Ketika seorang mamak meninggal, hak atas Pusako Tinggi beralih kepada kemenakan (anak dari saudara perempuannya) dalam kaum yang sama, bukan kepada ahli waris pribadinya (istri atau anak kandung).",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "A2"
+        ]
+      },
+      {
+        "id": "C3",
+        "statement": "Pengelolaan Pusako Tinggi setelah mamak meninggal dilakukan oleh mamak kepala waris berikutnya dalam kaum, sementara hak kepemilikan bersama tetap ada pada anggota perempuan kaum.",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "A3"
+        ]
+      }
+    ],
+    "uncertainties": [
+      "U1: Tidak ada ketidakpastian signifikan dalam konteks ini karena penjelasan didasarkan pada prinsip adat Minangkabau yang mapan."
+    ],
+    "open_questions": [
+      "Q1: Bagaimana mekanisme penyelesaian sengketa jika terjadi perselisihan antar anggota kaum mengenai pengelolaan Pusako Tinggi setelah mamak meninggal?"
+    ]
+  },
+  "critique_counts": {
+    "CRITICAL": 0,
+    "MAJOR": 9,
+    "MINOR": 3
+  },
+  "needs_human_review": false,
+  "logs_index": [
+    {
+      "type": "answer",
+      "round": 1,
+      "agent": "NLA",
+      "target": null,
+      "file": "debate_round1_nla.json"
+    },
+    {
+      "type": "answer",
+      "round": 1,
+      "agent": "ALA",
+      "target": null,
+      "file": "debate_round1_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 1,
+      "agent": "NLA",
+      "target": "ALA",
+      "file": "critique_round1_nla_on_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 1,
+      "agent": "ALA",
+      "target": "NLA",
+      "file": "critique_round1_ala_on_nla.json"
+    },
+    {
+      "type": "revision",
+      "round": 2,
+      "agent": "NLA",
+      "target": null,
+      "file": "debate_round2_nla.json"
+    },
+    {
+      "type": "revision",
+      "round": 2,
+      "agent": "ALA",
+      "target": null,
+      "file": "debate_round2_ala.json"
+    },
+    {
+      "type": "answer",
+      "round": 2,
+      "agent": "NLA",
+      "target": null,
+      "file": "debate_round2_nla.json"
+    },
+    {
+      "type": "answer",
+      "round": 2,
+      "agent": "ALA",
+      "target": null,
+      "file": "debate_round2_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 2,
+      "agent": "NLA",
+      "target": "ALA",
+      "file": "critique_round2_nla_on_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 2,
+      "agent": "ALA",
+      "target": "NLA",
+      "file": "critique_round2_ala_on_nla.json"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "agent": "ALA",
+  "target": "NLA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "evidence_gap",
+      "description": "Klaim C1 merujuk pada Pasal 119 KUHPerdata untuk mendukung pemisahan harta bersama. Namun, Pasal 119 KUHPerdata mengatur tentang harta perkawinan berdasarkan persatuan bulat (algehele gemeenschap van goederen), yang bukan merupakan rezim harta bawaan yang berlaku umum di Indonesia. Rezim harta bersama (gono-gini) dalam perkawinan di Indonesia diatur oleh Pasal 35 Undang-Undang Nomor 1 Tahun 1974 tentang Perkawinan (UU Perkawinan) dan Pasal 85-97 Kompilasi Hukum Islam (KHI) untuk yang beragama Islam. Menggunakan Pasal 119 KUHPerdata sebagai dasar tunggal adalah tidak tepat dan menimbulkan kesesatan domain hukum.",
+      "severity": "CRITICAL",
+      "suggested_fix": "Ganti atau tambahkan referensi hukum yang tepat, yaitu Pasal 35 UU Perkawinan (untuk umum) dan/atau Pasal 85-97 KHI (untuk yang beragama Islam), sebagai dasar hukum pemisahan harta bersama. Klaim harus diperjelas bahwa asumsi yang digunakan adalah rezim harta bersama menurut UU Perkawinan."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C3",
+      "issue_type": "domain_mismatch",
+      "description": "Klaim C3 menyatakan bagian istri adalah 1/4 berdasarkan Pasal 852a KUHPerdata (SEMA No. 3/1963). Namun, SEMA No. 3 Tahun 1963 adalah Surat Edaran Mahkamah Agung yang mengatur pembagian waris bagi Warga Negara Indonesia non-Islam yang tunduk pada KUHPerdata. Jawaban tidak menyebutkan asumsi hukum waris mana yang diterapkan (KUHPerdata atau KHI). Jika pewaris beragama Islam, pembagiannya diatur oleh Pasal 176-182 KHI, di mana bagian istri adalah 1/8 jika ada anak, dan bagian anak laki-laki dua kali bagian anak perempuan. Klaim ini berpotensi salah jika konteks hukumnya adalah Hukum Islam.",
+      "severity": "CRITICAL",
+      "suggested_fix": "Jawaban harus secara eksplisit menyatakan asumsi hukum waris yang digunakan (misalnya, 'menurut KUHPerdata' atau 'bagi non-Muslim'). Jika ingin memberikan jawaban umum, harus disebutkan adanya perbedaan rezim hukum (KUHPerdata dan KHI) dan asumsi yang dipilih. Klaim C3 harus dilengkapi dengan catatan tentang domain hukum yang berlaku."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C4",
+      "issue_type": "overclaim",
+      "description": "Klaim C4 menyatakan sisa harta warisan dibagi sama rata di antara semua anak berdasarkan Pasal 852 KUHPerdata. Pernyataan 'sama rata' ini terlalu umum dan dapat menyesatkan. Pasal 852 KUHPerdata memang mengatur pembagian yang sama di antara ahli waris dalam golongan yang sama, tetapi dalam konteks anak-anak, KUHPerdata tidak membedakan berdasarkan jenis kelamin. Namun, jika menggunakan Hukum Islam (KHI), pembagiannya tidak sama rata, melainkan anak laki-laki mendapat dua bagian anak perempuan. Klaim ini melakukan overclaim dengan menyatakan prinsip 'sama rata' sebagai kebenaran universal tanpa menyebutkan batasan domain hukumnya.",
+      "severity": "MAJOR",
+      "suggested_fix": "Kualifikasi klaim C4 dengan menyatakan bahwa pembagian sama rata berlaku 'menurut KUHPerdata' atau 'dalam hukum waris Barat'. Sebutkan bahwa dalam sistem hukum lain (seperti KHI), pembagian dapat berbeda berdasarkan jenis kelamin. Atau, integrasikan ketidakpastian ini ke dalam bagian 'uncertainties' atau 'open_questions'."
+    }
+  ]
+}

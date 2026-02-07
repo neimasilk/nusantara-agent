@@ -1,0 +1,58 @@
+{
+  "round": 2,
+  "agent": "NLA",
+  "answer": "Berdasarkan KUHPerdata, wasiat (testament) adalah pernyataan kehendak sepihak yang bersifat dapat ditarik kembali, dibuat secara formil, untuk mengatur pembagian harta setelah seseorang meninggal (Pasal 874 BW). Namun, wasiat dibatasi oleh hak bagian mutlak (legitieme portie) ahli waris dalam garis lurus. Menurut Pasal 913 BW, anak-anak (atau keturunannya) berhak atas bagian mutlak yang tidak boleh dikurangi oleh wasiat: (a) jika ahli warisnya satu orang anak, bagiannya adalah 1/2 dari bagian menurut hukum; (b) jika dua orang anak atau lebih, mereka bersama-sama berhak atas 2/3 dari seluruh harta peninggalan. Orang tua juga berhak atas legitieme portie (1/2 dari harta) jika tidak ada anak. Wasiat hanya dapat mengatur pembagian terhadap sisa harta setelah dikurangi bagian mutlak ini dan hak ahli waris lainnya (seperti pasangan). Harta yang dapat diwasiatkan terbatas pada harta milik pribadi testator dan, dalam praktik, separuh dari harta yang diperoleh bersama selama perkawinan (setelah pemisahan dan pembuktian).",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Wasiat menurut KUHPerdata adalah pernyataan kehendak sepihak, pribadi, dapat ditarik kembali, dan harus dibuat dalam bentuk yang ditentukan undang-undang (Pasal 874 BW).",
+      "evidence": [
+        "Pasal 874 KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Konteks merujuk pada KUHPerdata (BW) yang berlaku."
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Wasiat dibatasi oleh hak bagian mutlak (legitieme portie) ahli waris dalam garis lurus, diatur dalam Pasal 913 BW.",
+      "evidence": [
+        "Pasal 913 KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Pasal 913 BW masih relevan dan tidak diubah oleh ketentuan khusus."
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Bagian mutlak untuk anak-anak adalah: (a) satu orang anak berhak atas 1/2 dari bagian menurut hukum; (b) dua orang anak atau lebih bersama-sama berhak atas 2/3 dari seluruh harta peninggalan.",
+      "evidence": [
+        "Pasal 913 KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Penafsiran Pasal 913 sesuai dengan penjelasan konteks."
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Wasiat hanya dapat mengatur harta milik pribadi testator dan, dalam praktik, separuh dari harta bersama (jika dapat dibuktikan), setelah dikurangi bagian mutlak ahli waris.",
+      "evidence": [
+        "Pasal 119 KUHPerdata",
+        "Yurisprudensi terkait harta campuran"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "KUHPerdata menganut asas pemisahan harta, dan harta bersama harus dibuktikan secara faktual."
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Penghitungan dan pembuktian 'harta bersama' dalam kerangka KUHPerdata sering kompleks dan dapat menjadi sumber sengketa, karena tidak diatur secara eksplisit dalam BW."
+  ],
+  "open_questions": [
+    "Q1: Bagaimana mekanisme penuntutan bagian mutlak (legitieme portie) oleh ahli waris jika wasiat dianggap melanggar hak mereka, dan apa konsekuensi hukumnya?"
+  ]
+}

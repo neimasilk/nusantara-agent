@@ -1,0 +1,24 @@
+{
+  "round": 1,
+  "agent": "ALA",
+  "answer": "Sebagai Adat Law Agent (ALA), saya perlu mengklarifikasi bahwa pertanyaan Anda spesifik tentang adat Jawa, sedangkan konteks yang diberikan sepenuhnya membahas sistem pewarisan adat Minangkabau yang matrilineal. Kedua sistem adat ini berbeda secara fundamental. Oleh karena itu, saya tidak dapat memberikan jawaban yang akurat mengenai perbedaan konsep gono-gini dan harta bawaan dalam adat Jawa berdasarkan konteks ini. Untuk informasi yang tepat, disarankan berkonsultasi dengan ahli atau sumber hukum adat Jawa.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Konteks yang diberikan sepenuhnya menjelaskan sistem pewarisan harta (Pusako Tinggi dan Pusako Rendah) dalam adat Minangkabau, bukan adat Jawa.",
+      "evidence": [
+        "source_context"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A1"
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1"
+  ],
+  "open_questions": [
+    "Q1"
+  ]
+}

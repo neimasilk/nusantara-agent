@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "agent": "NLA",
+  "target": "ALA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C2",
+      "issue_type": "overclaim",
+      "description": "Klaim menyatakan bahwa Pusako Tinggi 'tidak menjadi hak pribadi ahli waris pribadinya (istri/anak kandung)' tanpa kualifikasi. Namun, dalam praktik adat Minangkabau, meskipun hak milik kolektif tidak berpindah, ahli waris pribadi (istri/anak) mungkin memiliki hak tertentu atas hasil pengelolaan atau bagian tertentu dari harta untuk nafkah, terutama jika ada harta yang telah bercampur (Pusako Rendah). Klaim yang absolut dapat menyesatkan.",
+      "severity": "MAJOR",
+      "suggested_fix": "Kualifikasi klaim: 'Secara prinsip adat, hak milik dan penguasaan penuh atas Pusako Tinggi tidak beralih kepada ahli waris pribadi (istri/anak kandung). Namun, dalam praktiknya, dapat timbul hak nafkah atau pengelolaan terbatas bagi ahli waris pribadi, terutama terkait harta yang telah bercampur atau jika diatur dalam wasiat/waris.'"
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C3",
+      "issue_type": "evidence_gap",
+      "description": "Klaim menyebut 'kemenakan (anak dari saudara perempuannya)' sebagai pihak yang berhak tanpa membedakan jenis kemenakan. Dalam adat Minangkabau, terdapat hierarki dan klasifikasi kemenakan (seperti kemenakan bawah daguak, kemenakan dibawah lutuik, kemenakan jauh). Hak dan tanggung jawab mereka bisa berbeda. Jawaban ALA terlalu menyederhanakan tanpa merujuk pada kompleksitas ini.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perjelas dengan menyebutkan bahwa yang dimaksud adalah 'kemenakan dalam garis matrilineal yang sama, dengan prioritas biasanya pada kemenakan dekat (seperti anak dari saudara perempuan kandung)', dan akui adanya variasi dan hierarki dalam kelompok kemenakan berdasarkan kedekatan genealogis."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C4",
+      "issue_type": "logic_gap",
+      "description": "Klaim menyatakan 'otoritas pengelolaan Pusako Tinggi beralih kepada mamak kepala waris berikutnya dalam kaum' tanpa menjelaskan proses penunjukan atau penentuan siapa 'mamak kepala waris berikutnya'. Mekanisme suksesi ini kritis dan tidak otomatis; bisa melalui musyawarah, senioritas, atau penunjukan sebelumnya. Kelalaian ini menimbulkan ketidakjelasan prosedural.",
+      "severity": "MAJOR",
+      "suggested_fix": "Tambahkan penjelasan tentang mekanisme suksesi: 'Otoritas pengelolaan beralih kepada mamak yang ditunjuk atau diakui sebagai pengganti melalui musyawarah kaum (ninik mamak), biasanya berdasarkan senioritas, kemampuan, atau wasiat almarhum mamak sebelumnya.'"
+    }
+  ]
+}

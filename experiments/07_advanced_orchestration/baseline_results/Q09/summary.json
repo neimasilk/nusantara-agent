@@ -1,0 +1,11 @@
+{
+  "query_id": "Q09",
+  "query": "Dalam adat Jawa, bagaimana konsep gono-gini dan harta bawaan dibedakan?",
+  "graph_data_path": "experiments/01_triple_extraction/result.json",
+  "timing_seconds": {
+    "total": 110.0783
+  },
+  "artifacts": {
+    "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results\\Q09\\final_synthesis.txt"
+  }
+}

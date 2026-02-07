@@ -1,0 +1,57 @@
+{
+  "round": 2,
+  "agent": "NLA",
+  "answer": "Konsep harta bersama (gono-gini) dalam KUHPerdata mengacu pada sistem persatuan harta (gemeenschap van goederen) sebagai rezim default perkawinan. Menurut Pasal 119 KUHPerdata, harta yang diperoleh selama perkawinan menjadi milik bersama suami-istri, sedangkan harta bawaan dan warisan/hibah selama nikah tetap menjadi harta pribadi. Jika perkawinan berakhir, harta bersama dibagi dua sama rata. Anak kandung tidak memiliki hak langsung atas harta bersama selama perkawinan berlangsung; hak waris mereka baru muncul setelah kematian orang tua, yaitu atas bagian harta peninggalan dari orang tua yang meninggal.\n\nSecara sosial di beberapa komunitas adat, konsep gono-gini sering dipahami lebih luas sebagai harta keluarga yang melibatkan hak moral anak, bahkan sebelum orang tua meninggal. Pemahaman ini didasarkan pada nilai kekeluargaan yang menyeluruh, di mana harta dianggap sebagai milik keluarga inti (termasuk anak), dan sistem kewarisan sering menyatu dengan pengaturan harta perkawinan. Terdapat variasi berdasarkan sistem kekerabatan (seperti patrilineal, matrilineal, atau parental), misalnya dalam masyarakat Minangkabau matrilineal, harta pusaka diwariskan di luar sistem harta bersama suami-istri. Meskipun pemahaman adat ini hidup dalam praktik sosial, secara hukum formal KUHPerdata tetap berlaku bagi yang tunduk padanya, kecuali ada perjanjian perkawinan yang mengakomodasi nilai adat.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Dalam KUHPerdata, harta bersama (gono-gini) adalah sistem persatuan harta default di mana harta yang diperoleh selama perkawinan menjadi milik bersama suami-istri, dan dibagi dua sama rata jika perkawinan berakhir.",
+      "evidence": [
+        "Pasal 119 KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Pembahasan merujuk pada rezim default tanpa perjanjian perkawinan."
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Anak kandung tidak memiliki hak langsung atas harta bersama orang tua selama perkawinan berlangsung; hak waris mereka hanya muncul setelah kematian orang tua atas harta peninggalan.",
+      "evidence": [
+        "Pasal 852 KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Tidak ada perjanjian perkawinan yang mengubah ketentuan default."
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Di beberapa komunitas adat, gono-gini dipahami secara sosial sebagai harta keluarga yang melibatkan hak moral anak, mencerminkan nilai kolektivitas dan sistem kewarisan yang menyatu.",
+      "evidence": [
+        "Deskripsi konteks tentang pemahaman adat"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "Deskripsi konteks mewakili praktik umum di berbagai komunitas adat."
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "KUHPerdata menjadi hukum yang diterapkan dalam sengketa formal, kecuali para pihak membuat perjanjian perkawinan yang mengakomodasi nilai adat.",
+      "evidence": [
+        "Pasal 139 KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Para pihak tunduk pada KUHPerdata dan tidak menggunakan penyelesaian adat secara sukarela."
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Tingkat variasi dan konsistensi pemahaman sosial tentang hak anak atas harta bersama di setiap komunitas adat secara spesifik."
+  ],
+  "open_questions": [
+    "Q1: Bagaimana mekanisme formal pengakuan hukum adat terhadap hak anak dalam harta bersama dapat diintegrasikan dengan KUHPerdata tanpa menimbulkan konflik normatif?"
+  ]
+}

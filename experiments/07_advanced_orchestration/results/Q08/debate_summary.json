@@ -1,0 +1,185 @@
+{
+  "query": "Jelaskan secara ringkas konsep harta bersama (gono-gini) dan bagaimana ini dipahami secara sosial di beberapa komunitas adat.",
+  "max_rounds": 2,
+  "final_nla": {
+    "round": 2,
+    "agent": "NLA",
+    "answer": "Konsep harta bersama (gono-gini) dalam KUHPerdata mengacu pada sistem persatuan harta (gemeenschap van goederen) sebagai rezim default perkawinan. Menurut Pasal 119 KUHPerdata, harta yang diperoleh selama perkawinan menjadi milik bersama suami-istri, sedangkan harta bawaan dan warisan/hibah selama nikah tetap menjadi harta pribadi. Jika perkawinan berakhir, harta bersama dibagi dua sama rata. Anak kandung tidak memiliki hak langsung atas harta bersama selama perkawinan berlangsung; hak waris mereka baru muncul setelah kematian orang tua, yaitu atas bagian harta peninggalan dari orang tua yang meninggal.\n\nSecara sosial di beberapa komunitas adat, konsep gono-gini sering dipahami lebih luas sebagai harta keluarga yang melibatkan hak moral anak, bahkan sebelum orang tua meninggal. Pemahaman ini didasarkan pada nilai kekeluargaan yang menyeluruh, di mana harta dianggap sebagai milik keluarga inti (termasuk anak), dan sistem kewarisan sering menyatu dengan pengaturan harta perkawinan. Terdapat variasi berdasarkan sistem kekerabatan (seperti patrilineal, matrilineal, atau parental), misalnya dalam masyarakat Minangkabau matrilineal, harta pusaka diwariskan di luar sistem harta bersama suami-istri. Meskipun pemahaman adat ini hidup dalam praktik sosial, secara hukum formal KUHPerdata tetap berlaku bagi yang tunduk padanya, kecuali ada perjanjian perkawinan yang mengakomodasi nilai adat.",
+    "claims": [
+      {
+        "id": "C1",
+        "statement": "Dalam KUHPerdata, harta bersama (gono-gini) adalah sistem persatuan harta default di mana harta yang diperoleh selama perkawinan menjadi milik bersama suami-istri, dan dibagi dua sama rata jika perkawinan berakhir.",
+        "evidence": [
+          "Pasal 119 KUHPerdata"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "Pembahasan merujuk pada rezim default tanpa perjanjian perkawinan."
+        ]
+      },
+      {
+        "id": "C2",
+        "statement": "Anak kandung tidak memiliki hak langsung atas harta bersama orang tua selama perkawinan berlangsung; hak waris mereka hanya muncul setelah kematian orang tua atas harta peninggalan.",
+        "evidence": [
+          "Pasal 852 KUHPerdata"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "Tidak ada perjanjian perkawinan yang mengubah ketentuan default."
+        ]
+      },
+      {
+        "id": "C3",
+        "statement": "Di beberapa komunitas adat, gono-gini dipahami secara sosial sebagai harta keluarga yang melibatkan hak moral anak, mencerminkan nilai kolektivitas dan sistem kewarisan yang menyatu.",
+        "evidence": [
+          "Deskripsi konteks tentang pemahaman adat"
+        ],
+        "confidence": 0.9,
+        "assumptions": [
+          "Deskripsi konteks mewakili praktik umum di berbagai komunitas adat."
+        ]
+      },
+      {
+        "id": "C4",
+        "statement": "KUHPerdata menjadi hukum yang diterapkan dalam sengketa formal, kecuali para pihak membuat perjanjian perkawinan yang mengakomodasi nilai adat.",
+        "evidence": [
+          "Pasal 139 KUHPerdata"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "Para pihak tunduk pada KUHPerdata dan tidak menggunakan penyelesaian adat secara sukarela."
+        ]
+      }
+    ],
+    "uncertainties": [
+      "U1: Tingkat variasi dan konsistensi pemahaman sosial tentang hak anak atas harta bersama di setiap komunitas adat secara spesifik."
+    ],
+    "open_questions": [
+      "Q1: Bagaimana mekanisme formal pengakuan hukum adat terhadap hak anak dalam harta bersama dapat diintegrasikan dengan KUHPerdata tanpa menimbulkan konflik normatif?"
+    ]
+  },
+  "final_ala": {
+    "round": 2,
+    "agent": "ALA",
+    "answer": "Konsep 'harta bersama' atau gono-gini berasal dari hukum perdata nasional (KUHPerdata) dan tidak dikenal dalam sistem adat Minangkabau yang asli. Dalam adat Minangkabau, harta dibedakan secara tegas menjadi Harta Pusako Tinggi (milik kolektif kaum, diwariskan matrilineal) dan Harta Pusako Rendah (harta pencaharian suami-istri). Pemahaman sosial di komunitas adat Minangkabau memandang harta melalui lensa kolektivitas kaum dan jalur waris yang jelas, berbeda dengan prinsip pembagian 50:50 dalam gono-gini.",
+    "claims": [
+      {
+        "id": "C1",
+        "statement": "Konsep harta bersama (gono-gini) tidak dikenal dalam sistem adat Minangkabau yang asli dan berasal dari hukum perdata nasional.",
+        "evidence": [
+          "source_context"
+        ],
+        "confidence": 0.9,
+        "assumptions": [
+          "A1"
+        ]
+      },
+      {
+        "id": "C2",
+        "statement": "Adat Minangkabau membedakan harta menjadi Harta Pusako Tinggi (kolektif, matrilineal) dan Harta Pusako Rendah (pencaharian suami-istri).",
+        "evidence": [
+          "source_context"
+        ],
+        "confidence": 0.9,
+        "assumptions": [
+          "A2"
+        ]
+      },
+      {
+        "id": "C3",
+        "statement": "Pemahaman sosial di komunitas adat Minangkabau memisahkan harta berdasarkan asal-usul dan jalur waris, bertentangan dengan filosofi gono-gini.",
+        "evidence": [
+          "source_context"
+        ],
+        "confidence": 0.8,
+        "assumptions": [
+          "A3"
+        ]
+      }
+    ],
+    "uncertainties": [
+      "U1: Sejauh mana konsep gono-gini telah diadopsi atau disalahartikan sebagai Harta Pusako Rendah dalam praktik masyarakat Minangkabau kontemporer."
+    ],
+    "open_questions": [
+      "Q1: Bagaimana komunitas adat lain di Indonesia (selain Minangkabau) memahami dan menerapkan konsep harta bersama secara sosial?"
+    ]
+  },
+  "critique_counts": {
+    "CRITICAL": 0,
+    "MAJOR": 8,
+    "MINOR": 4
+  },
+  "needs_human_review": false,
+  "logs_index": [
+    {
+      "type": "answer",
+      "round": 1,
+      "agent": "NLA",
+      "target": null,
+      "file": "debate_round1_nla.json"
+    },
+    {
+      "type": "answer",
+      "round": 1,
+      "agent": "ALA",
+      "target": null,
+      "file": "debate_round1_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 1,
+      "agent": "NLA",
+      "target": "ALA",
+      "file": "critique_round1_nla_on_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 1,
+      "agent": "ALA",
+      "target": "NLA",
+      "file": "critique_round1_ala_on_nla.json"
+    },
+    {
+      "type": "revision",
+      "round": 2,
+      "agent": "NLA",
+      "target": null,
+      "file": "debate_round2_nla.json"
+    },
+    {
+      "type": "revision",
+      "round": 2,
+      "agent": "ALA",
+      "target": null,
+      "file": "debate_round2_ala.json"
+    },
+    {
+      "type": "answer",
+      "round": 2,
+      "agent": "NLA",
+      "target": null,
+      "file": "debate_round2_nla.json"
+    },
+    {
+      "type": "answer",
+      "round": 2,
+      "agent": "ALA",
+      "target": null,
+      "file": "debate_round2_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 2,
+      "agent": "NLA",
+      "target": "ALA",
+      "file": "critique_round2_nla_on_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 2,
+      "agent": "ALA",
+      "target": "NLA",
+      "file": "critique_round2_ala_on_nla.json"
+    }
+  ]
+}

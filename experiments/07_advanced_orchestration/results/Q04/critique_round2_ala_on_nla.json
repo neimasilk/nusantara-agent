@@ -1,0 +1,31 @@
+{
+  "round": 2,
+  "agent": "ALA",
+  "target": "NLA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "evidence_gap",
+      "description": "Klaim C1 menyebut Pasal 299 KUHPerdata sebagai bukti, namun pasal tersebut mengatur tentang 'Kekuasaan Orang Tua' dalam konteks perwalian setelah perceraian atau kematian salah satu orang tua, bukan tentang kewenangan bersama orang tua dalam perkawinan yang utuh. Ini menciptakan kesan yang tidak tepat tentang dasar hukum utama.",
+      "severity": "MAJOR",
+      "suggested_fix": "Ganti atau tambahkan rujukan ke Pasal 47 UU No. 1 Tahun 1974 tentang Perkawinan yang secara eksplisit menyatakan 'Kedua orang tua wajib memelihara dan mendidik anak-anak mereka sebaik-baiknya' dan Pasal 45 yang menyatakan 'Kedua orang tua memikul kewajiban yang sama terhadap anak-anak mereka'. Ini lebih tepat menggambarkan kewenangan bersama."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C3",
+      "issue_type": "domain_mismatch",
+      "description": "Klaim C3 menyatakan 'Hak anak atas harta pencaharian orang tua dalam hukum nasional bersifat langsung dan individual' dengan merujuk pada KUHPerdata. Ini mengabaikan fakta bahwa hukum waris nasional Indonesia bersifat pluralistik. Bagi warga negara Muslim, hukum waris diatur dalam Kompilasi Hukum Islam (KHI) yang memiliki prinsip dan bagian waris yang berbeda dengan KUHPerdata. Pernyataan tersebut terlalu menyederhanakan dan tidak mewakili realitas hukum nasional yang majemuk.",
+      "severity": "MAJOR",
+      "suggested_fix": "Kualifikasi klaim dengan menyebutkan bahwa hukum waris nasional bersifat pluralistik. Sebutkan bahwa untuk golongan tertentu berlaku KUHPerdata (Pasal 852-857), sedangkan bagi umat Islam berlaku KHI (Pasal 171-193) yang juga mengakui hak anak sebagai ahli waris, meski dengan perhitungan bagian yang spesifik. Atau, fokuskan analisis hanya pada sistem hukum perdata Barat (KUHPerdata) dengan menyatakan asumsi tersebut secara eksplisit."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C5",
+      "issue_type": "overclaim",
+      "description": "Klaim C5 menyimpulkan bahwa hukum nasional 'berpusat pada keluarga inti (nuclear family) secara bilateral'. Meskipun benar bahwa UU Perkawinan menekankan hubungan orang tua-anak, hukum keluarga Indonesia juga mengakui dan mengatur hubungan dengan keluarga luas dalam konteks tertentu, seperti kewajiban nafkah antar kerabat (Pasal 34 UU Perkawinan), pengampuan, dan perwalian. Penyebutan 'berpusat' pada keluarga inti bisa dianggap sebagai generalisasi berlebihan yang mengabaikan dimensi keluarga besar dalam hukum nasional.",
+      "severity": "MINOR",
+      "suggested_fix": "Lunakkan klaim menjadi: 'Hukum nasional terutama menekankan hubungan dan tanggung jawab dalam keluarga inti (orang tua-anak) yang bersifat bilateral, meskipun juga mengatur hubungan dengan keluarga luas dalam konteks-konteks tertentu.' Ini lebih akurat dan menghindari kesan bahwa hukum nasional sepenuhnya mengabaikan struktur extended family."
+    }
+  ]
+}

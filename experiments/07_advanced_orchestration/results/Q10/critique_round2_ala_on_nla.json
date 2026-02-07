@@ -1,0 +1,31 @@
+{
+  "round": 2,
+  "agent": "ALA",
+  "target": "NLA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa 'hukum nasional (yang lebih tinggi) mengatasi hukum adat' merupakan generalisasi yang berlebihan dan tidak akurat secara konstitusional. Pasal 18B ayat (2) UUD 1945 justru mengakui dan menghormati kesatuan-kesatuan masyarakat hukum adat beserta hak-hak tradisionalnya. Prinsip 'lex superior' dari UU No. 12/2011 tidak serta-merta membuat semua norma hukum nasional mengatasi hukum adat, terutama dalam ranah privat seperti waris adat. Konflik diselesaikan melalui uji keselarasan, bukan hierarki mutlak.",
+      "severity": "MAJOR",
+      "suggested_fix": "Klaim harus direvisi untuk mencerminkan prinsip konstitusional pengakuan dan penghormatan terhadap hukum adat, serta mekanisme penyelesaian konflik yang lebih kompleks, seperti uji apakah hukum adat tersebut masih hidup dan tidak bertentangan dengan kepentingan umum atau HAM."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C3",
+      "issue_type": "evidence_gap",
+      "description": "Klaim tentang pembedaan 'harta pencaharian' dan 'harta pusaka adat' sebagai mekanisme penyelesaian tidak didukung oleh bukti peraturan perundang-undangan nasional yang tegas. Doktrin dan yurisprudensi yang dirujuk terlalu umum. Dalam konteks matrilineal Minangkabau misalnya, konsep 'harta suarang' dan 'harta pusako' memiliki kompleksitas tinggi, dan pengakuan hukum nasional terhadap pembedaan ini dalam penyelesaian sengketa tidak diatur secara eksplisit dalam UU.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perlu merujuk pada yurisprudensi Mahkamah Agung yang lebih spesifik (misalnya, putusan-putusan mengenai waris Minangkabau) yang menunjukkan bagaimana pengadilan membedakan dan membagi kedua jenis harta tersebut, atau mengakui keterbatasan pengadilan dalam mengintervensi harta pusaka."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C4",
+      "issue_type": "logic_gap",
+      "description": "Terdapat ketidakkonsistenan logis antara klaim C4 yang menyatakan pengadilan 'dapat membatalkan keputusan adat' dengan prinsip dalam jawaban yang menyebutkan 'menghormati harta pusaka adat'. Logika ini mengasumsikan pengadilan selalu menjadi forum akhir yang superior. Padahal, UU No. 6/2014 tentang Desa menguatkan penyelesaian sengketa melalui musyawarah desa/adat. Selain itu, klaim bahwa pengadilan 'akan mendahulukan hukum nasional untuk harta non-pusaka' terlalu deterministik dan mengabaikan kemungkinan pengadilan menerapkan hukum adat secara penuh berdasarkan asas konkordansi atau kehendak para pihak.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perlu menjelaskan bahwa kewenangan pengadilan untuk membatalkan keputusan adat bersifat sangat terbatas, terutama jika menyangkut harta pusaka. Mekanisme lebih tepat digambarkan sebagai: pengadilan memeriksa apakah proses adat sudah final dan adil, baru kemudian, jika ada pelanggaran hak dasar anak yang serius, pengadilan dapat melakukan intervensi terbatas berdasarkan asas kepentingan terbaik anak, bukan serta-merta membatalkan keputusan adat."
+    }
+  ]
+}

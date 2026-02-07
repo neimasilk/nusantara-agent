@@ -1,0 +1,31 @@
+{
+  "round": 2,
+  "agent": "NLA",
+  "target": "ALA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa konflik utama adalah 'benturan antara klaim berbasis hukum negara... dengan penolakan berbasis hukum adat' terlalu menyederhanakan. Bukti dari 'context_1' tidak secara eksplisit menyebutkan bahwa 'penolakan' berasal dari hukum adat patrilineal Bali sebagai satu-satunya sumber. Ada kemungkinan penolakan berasal dari interpretasi keluarga atau faktor sosial lain, bukan semata-mata hukum adat yang formal.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perjelas sumber penolakan dengan merujuk bukti spesifik dalam konteks yang menunjukkan aktor atau norma adat mana yang secara aktif menolak. Atau, reformulasi klaim untuk mengakui bahwa konflik 'melibatkan' klaim hukum negara dan norma adat, tanpa mengasumsikan bahwa penolakan secara langsung dan eksklusif berasal dari hukum adat itu sendiri."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C2",
+      "issue_type": "domain_mismatch",
+      "description": "Analogi dengan adat Minangkabau (Harta Pusako Tinggi/Rendah) berpotensi menyesatkan karena sistem kekerabatan dan prinsip waris Minangkabau (matrilineal) sangat berbeda dengan Bali (patrilineal). Memasukkan perspektif dari sistem adat yang berlawanan tanpa penjelasan kualifikasi yang memadai dapat mengaburkan analisis konflik spesifik di Bali, yang justru berpusat pada hak laki-laki versus perempuan dalam sistem patrilineal.",
+      "severity": "MAJOR",
+      "suggested_fix": "Kualifikasi analogi dengan jelas menyatakan bahwa ini adalah 'perspektif perbandingan' untuk ilustrasi konsep komunal vs. individual, bukan analogi langsung. Tekankan perbedaan mendasar (matrilineal vs. patrilineal) untuk menghindari kesan bahwa solusi dari satu sistem dapat langsung diterapkan di sistem lain."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C3",
+      "issue_type": "overclaim",
+      "description": "Klaim menyebutkan 'potensi hukum agama (misalnya Islam)' sebagai salah satu dari tiga sistem norma yang berbenturan. Namun, tidak ada bukti dalam 'context_3' atau konteks lain yang disediakan yang menunjukkan bahwa hukum agama (terutama Islam) relevan atau menjadi faktor dalam kasus warisan di Bali yang mayoritas Hindu ini. Memasukkan unsur ini tanpa dasar merupakan spekulasi yang melemahkan fokus analisis.",
+      "severity": "CRITICAL",
+      "suggested_fix": "Hapus referensi ke 'hukum agama' dari klaim ini, atau jika ingin dipertahankan, berikan bukti spesifik dari konteks yang menunjukkan keterlibatan atau potensi klaim berdasarkan hukum agama dalam kasus tersebut. Fokuskan klaim hanya pada benturan antara hukum negara dan hukum adat Bali yang memang terbukti relevan."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "query_id": "Q01",
+  "query": "Bagaimana pembagian waris menurut KUHPerdata jika pewaris meninggalkan istri dan dua anak?",
+  "graph_data_path": "experiments/01_triple_extraction/result.json",
+  "timing_seconds": {
+    "total": 118.6805
+  },
+  "artifacts": {
+    "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results\\Q01\\final_synthesis.txt"
+  }
+}

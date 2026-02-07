@@ -1,0 +1,31 @@
+{
+  "round": 2,
+  "agent": "NLA",
+  "target": "ALA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C2",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa pluralisme hukum terjadi karena 'pengakuan konstitusional (UUD 1945 mengakui masyarakat hukum adat)' tidak didukung oleh bukti yang spesifik dalam sumber konteks yang diberikan. Sumber hanya menyebut 'faktor sejarah' dan 'realitas sosio-kultural', tanpa kutipan langsung atau rujukan pada pasal konstitusi tertentu.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perjelas bukti untuk aspek konstitusional. Jika tidak ada dalam sumber, nyatakan sebagai asumsi atau hapus dari klaim. Atau, rujuk pasal spesifik UUD 1945 (seperti Pasal 18B ayat 2) sebagai bukti tambahan yang relevan."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C3",
+      "issue_type": "overclaim",
+      "description": "Klaim menyatakan 'Harta Pusako Rendah dapat diatur oleh hukum agama atau kesepakatan keluarga, yang juga diakui oleh hukum nasional.' Namun, sumber konteks hanya menyebutkan 'Harta Pusako Rendah... lebih fleksibel dan dapat diatur berdasarkan hukum Islam' dan 'dapat menjadi objek sengketa antara kemenakan dan anak kandung'. Tidak ada pernyataan eksplisit bahwa hukum nasional mengakui pengaturan berdasarkan hukum agama atau kesepakatan keluarga untuk harta ini.",
+      "severity": "MAJOR",
+      "suggested_fix": "Reformulasi klaim untuk mencerminkan apa yang benar-benar ada dalam sumber: bahwa Harta Pusako Rendah menjadi arena fleksibilitas dan potensi konflik antar sistem, tanpa menyimpulkan pengakuan formal oleh hukum nasional. Atau, tambahkan bukti dari luar sumber yang mendukung pengakuan tersebut."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C4",
+      "issue_type": "logic_gap",
+      "description": "Klaim menyimpulkan bahwa mekanisme harmonisasi seperti musyawarah telah dikembangkan oleh masyarakat adat untuk menyelesaikan konflik. Namun, sumber konteks yang dirujuk ('titik_tegangan') justru menggambarkan potensi konflik yang 'seringkali memunculkan ketegangan' dan 'menjadi sumber sengketa'. Sumber 'kesimpulan_netral' menyebut 'harmonisasi' sebagai bagian dari fenomena, tetapi tidak secara eksplisit menghubungkannya dengan mekanisme yang telah berhasil dikembangkan oleh masyarakat.",
+      "severity": "MAJOR",
+      "suggested_fix": "Reformulasi klaim untuk lebih akurat mencerminkan konten sumber: bahwa meskipun ada upaya harmonisasi (musyawarah), pluralisme juga menciptakan titik tegangan dan sengketa yang nyata. Atau, cari bukti spesifik dalam sumber tentang keberhasilan mekanisme musyawarah dalam menyelesaikan konflik antar norma."
+    }
+  ]
+}

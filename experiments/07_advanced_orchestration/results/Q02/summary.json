@@ -1,0 +1,25 @@
+{
+  "query_id": "Q02",
+  "query": "Dalam adat Minangkabau, siapa yang berhak atas pusako tinggi ketika seorang mamak meninggal?",
+  "routing": {
+    "label": "pure_adat",
+    "scores": {
+      "national": 0,
+      "adat": 4,
+      "conflict": 0
+    },
+    "confidence": 0.7,
+    "method": "heuristic"
+  },
+  "graph_data_path": "experiments/01_triple_extraction/result.json",
+  "timing_seconds": {
+    "retrieval_parallel": 81.2433,
+    "debate": 220.2362,
+    "supervisor": 18.8356,
+    "total": 320.315
+  },
+  "artifacts": {
+    "debate_summary": "experiments\\07_advanced_orchestration\\results\\Q02\\debate_summary.json",
+    "final_synthesis": "experiments\\07_advanced_orchestration\\results\\Q02\\final_synthesis.txt"
+  }
+}

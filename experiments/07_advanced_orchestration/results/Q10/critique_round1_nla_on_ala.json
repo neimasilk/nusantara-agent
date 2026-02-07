@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "agent": "NLA",
+  "target": "ALA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa 'Harta Pusako Rendah dapat diwariskan kepada anak kandung' tidak didukung oleh bukti yang memadai dari konteks sumber. Konteks sumber hanya menyebutkan bahwa Harta Pusako Rendah 'dapat diwariskan kepada anak kandung' sebagai salah satu kemungkinan, tetapi tidak menjelaskan mekanisme, syarat, atau batasannya. Tidak ada rujukan spesifik pada aturan adat atau hukum yang secara tegas mengizinkan pewarisan kepada anak.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perjelas bahwa pewarisan Harta Pusako Rendah kepada anak kandung bukanlah hak otomatis, tetapi merupakan hasil dari musyawarah (Sapakat) yang mempertimbangkan prinsip keadilan dan hukum Islam. Sertakan penjelasan bahwa tanpa kesepakatan, status pewarisannya dapat berbeda."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C2",
+      "issue_type": "logic_gap",
+      "description": "Klaim bahwa mekanisme penyelesaian konflik untuk Harta Pusako Rendah 'mengacu pada hukum Islam' tidak diikuti dengan penjelasan bagaimana hukum Islam diintegrasikan dengan prinsip matrilineal. Terdapat potensi konflik logis karena hukum Islam (misalnya, Kompilasi Hukum Islam) memberikan hak waris kepada anak kandung, sementara adat matrilineal lebih mengutamakan kemenakan. Jawaban tidak menjelaskan bagaimana kedua sistem ini direkonsiliasi jika terjadi pertentangan.",
+      "severity": "MAJOR",
+      "suggested_fix": "Jelaskan secara spesifik prinsip atau kaidah hukum Islam mana yang digunakan dalam musyawarah (misalnya, bagian untuk anak laki-laki dan perempuan). Kemudian, jelaskan bagaimana Ninik Mamak dan Alim Ulama menyeimbangkannya dengan kewajiban adat terhadap kemenakan, mungkin dengan contoh pembagian proporsional."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C3",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa 'Adat Minangkabau mengakomodasi hukum Islam dalam pewarisan Harta Pusako Rendah' merupakan generalisasi yang berlebihan. Konteks sumber hanya menyebutkan bahwa hukum Islam menjadi 'dasar pertimbangan', bukan bahwa adat secara formal mengakomodasinya. Frasa 'mengakomodasi' mengimplikasikan adaptasi struktural, yang mungkin tidak sepenuhnya akurat karena adat Minangkabau tetap berakar pada sistem matrilineal.",
+      "severity": "MINOR",
+      "suggested_fix": "Ubah klaim menjadi lebih hati-hati, misalnya: 'Dalam musyawarah untuk Harta Pusako Rendah, prinsip hukum Islam sering dijadikan sebagai salah satu bahan pertimbangan untuk mencapai kesepakatan yang adil, sejalan dengan filosofi adat basandi syarak.'"
+    }
+  ]
+}

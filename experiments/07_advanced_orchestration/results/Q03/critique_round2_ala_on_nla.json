@@ -1,0 +1,31 @@
+{
+  "round": 2,
+  "agent": "ALA",
+  "target": "NLA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa 'hukum adat adalah hukum utama' berdasarkan Pasal 131 IS (Indische Staatsregeling) memiliki kelemahan bukti. Pasal 131 IS adalah produk hukum kolonial yang telah banyak diubah dan tidak lagi menjadi dasar hierarki sumber hukum yang utuh dalam sistem hukum nasional Indonesia pasca-kemerdekaan. Rujukan ini tidak memperhitungkan perkembangan konstitusional dan legislatif, seperti UUD 1945 dan UU No. 12 Tahun 2011 tentang Pembentukan Peraturan Perundang-undangan, yang menetapkan tata urutan peraturan perundang-undangan tanpa secara eksplisit menempatkan hukum adat sebagai 'hukum utama'.",
+      "severity": "MAJOR",
+      "suggested_fix": "Ganti rujukan dengan dasar hukum yang lebih aktual dan kontekstual, seperti Pasal 18B ayat (2) UUD 1945 yang mengakui kesatuan masyarakat hukum adat, atau penjelasan dalam yurisprudensi Mahkamah Agung yang lebih baru yang menjelaskan posisi hukum adat dalam sistem hukum nasional, bukan sebagai 'hukum utama' melainkan sebagai hukum yang hidup (living law) yang diakui sepanjang tidak bertentangan dengan peraturan perundang-undangan yang lebih tinggi."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C2",
+      "issue_type": "logic_gap",
+      "description": "Logika penyelesaian kasus yang bergantung pada identifikasi status pewaris (terikat/tidak dengan adat) dan klasifikasi harta (pusako rendah/pencaharian) terlalu disederhanakan dan berpotensi menimbulkan ketidakpastian hukum. Klaim ini mengasumsikan kedua aspek tersebut dapat dibuktikan dan dipisahkan dengan jelas, padahal dalam realitas sosiologis dan yuridis, batas antara 'terikat' dan 'tidak terikat' dengan adat seringkali kabur, dan klasifikasi harta bisa menjadi rumit, terutama untuk harta yang diperoleh selama perkawinan campur atau melalui usaha bersama.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perluas analisis dengan memasukkan faktor-faktor penentu lain yang digunakan pengadilan, seperti tempat tinggal pewaris, pengakuan masyarakat adat setempat terhadap pewaris, serta asas-asas hukum umum seperti asas kepastian hukum dan keadilan. Sertakan kemungkinan penerapan hukum secara kumulatif atau alternatif, bukan dikotomi mutlak, dan akui kompleksitas pembuktian dalam klaim tersebut."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C3",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa 'hukum adat Minangkabau memberikan hak waris kepada kemenakan, bukan anak kandung' untuk harta pusako rendah merupakan generalisasi yang berlebihan. Meskipun prinsip matrilineal adalah dasar, dalam praktik dan perkembangan yurisprudensi, terdapat nuansa dan pengecualian. Misalnya, anak kandung dapat memperoleh bagian melalui mekanisme 'hibah wasiat' (hibah yang diikat dengan wasiat) atau jika dapat dibuktikan bahwa harta tersebut memiliki unsur pencaharian (harta suami-istri) yang tunduk pada hukum nasional (UU Perkawinan). Klaim ini mengabaikan dinamika dan adaptasi hukum adat dalam menyikapi keadilan bagi anak kandung.",
+      "severity": "MAJOR",
+      "suggested_fix": "Kualifikasi klaim dengan menyatakan bahwa sebagai prinsip umum, sistem matrilineal mengutamakan kemenakan untuk harta pusako rendah. Namun, akui bahwa terdapat pengecualian dan modifikasi dalam praktik, termasuk melalui instrumen hukum adat seperti hibah wasiat atau melalui pertimbangan pengadilan yang memerhatikan keadilan dan kebutuhan anak kandung, terutama jika mereka masih bergantung. Sertakan rujukan pada putusan pengadilan yang menunjukkan fleksibilitas ini."
+    }
+  ]
+}

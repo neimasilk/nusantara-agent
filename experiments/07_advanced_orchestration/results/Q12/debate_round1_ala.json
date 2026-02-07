@@ -1,0 +1,46 @@
+{
+  "round": 1,
+  "agent": "ALA",
+  "answer": "Pluralisme hukum di Indonesia mengacu pada situasi di mana beberapa sistem hukum—hukum adat, hukum agama, dan hukum negara—berlaku secara bersamaan dalam satu masyarakat. Fenomena ini terjadi karena: (1) **Faktor historis**, di mana sistem hukum adat telah hidup jauh sebelum terbentuknya negara modern; (2) **Pengakuan konstitusional**, Pasal 18B ayat (2) UUD 1945 mengakui dan menghormati kesatuan-kesatuan masyarakat hukum adat beserta hak-hak tradisionalnya; (3) **Keragaman sosio-kultural** Indonesia yang sangat luas, sehingga hukum nasional yang seragam tidak selalu dapat mengakomodasi seluruh praktik lokal; dan (4) **Proses harmonisasi dan adaptasi** di tingkat masyarakat, di mana norma-norma yang berbeda sering kali disinkronkan dalam praktik sehari-hari. Dalam konteks Minangkabau, pluralisme ini terlihat jelas dalam pengaturan harta waris, di mana norma adat matrilineal (misalnya untuk Harta Pusako Tinggi), norma agama Islam (misalnya untuk Harta Pusako Rendah), dan hukum nasional dapat diterapkan secara bersamaan atau saling melengkapi, tergantung pada jenis harta dan kesepakatan keluarga.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Pluralisme hukum di Indonesia terjadi karena pengakuan negara terhadap keberadaan masyarakat hukum adat, yang dijamin oleh Pasal 18B ayat (2) UUD 1945.",
+      "evidence": [
+        "source_konstitusi"
+      ],
+      "confidence": 0.95,
+      "assumptions": [
+        "A1"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Di Minangkabau, pengaturan harta waris merupakan contoh nyata pluralisme hukum, dengan Harta Pusako Tinggi diatur oleh hukum adat matrilineal dan Harta Pusako Rendah dapat diatur oleh hukum agama Islam atau kesepakatan keluarga.",
+      "evidence": [
+        "source_literatur_adat_minang"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "A2"
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Masyarakat adat seperti Minangkabau telah mengembangkan mekanisme harmonisasi, seperti musyawarah oleh ninik mamak, untuk menyelesaikan potensi konflik antar sistem hukum yang berlaku.",
+      "evidence": [
+        "source_studi_kasus_adat"
+      ],
+      "confidence": 0.85,
+      "assumptions": [
+        "A3"
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Sejauh mana pengadilan negara secara konsisten mengakui dan menegakkan keputusan-keputusan yang dihasilkan melalui mekanisme penyelesaian sengketa adat, khususnya dalam kasus yang kompleks melibatkan pihak luar komunitas adat."
+  ],
+  "open_questions": [
+    "Q1: Bagaimana dinamika dan efektivitas harmonisasi antara hukum adat, agama, dan negara dalam menangani kasus-kasus kontemporer seperti kepemilikan tanah komunal yang berhadapan dengan investasi skala besar?"
+  ]
+}

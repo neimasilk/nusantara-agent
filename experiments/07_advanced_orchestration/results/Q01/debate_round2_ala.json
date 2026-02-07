@@ -1,0 +1,46 @@
+{
+  "round": 2,
+  "agent": "ALA",
+  "answer": "Menurut KUHPerdata, jika pewaris meninggalkan istri dan dua anak, pembagian warisnya adalah sebagai berikut:\n1. Istri mendapat bagian sebesar **1/4 (seperempat)** dari harta warisan.\n2. Dua anak bersama-sama mendapat bagian **3/4 (tiga perempat)** dari harta warisan, yang kemudian dibagi rata di antara mereka.\n3. Dengan demikian, masing-masing anak mendapat bagian sebesar **3/8** dari total harta warisan.\n\nPenting untuk dicatat bahwa analisis ini murni berdasarkan KUHPerdata. Dalam konteks Adat Minangkabau, sistem pewarisan ini tidak berlaku untuk **Harta Pusako Tinggi**, yang diatur oleh hukum adat matrilineal dan diwariskan kepada kemenakan (anak dari saudara perempuan pewaris). Harta pencaharian (Harta Pusako Rendah) dapat menjadi area di mana hak anak dipertimbangkan, tetapi penyelesaiannya sering melalui musyawarah adat.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Dalam KUHPerdata, istri dari pewaris yang meninggalkan dua anak berhak atas 1/4 bagian harta warisan.",
+      "evidence": [
+        "KUHPerdata_Buku_II_Bagian_Kedua"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A1"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Dalam KUHPerdata, dua anak dari pewaris tersebut bersama-sama berhak atas 3/4 bagian harta warisan, yang dibagi rata.",
+      "evidence": [
+        "KUHPerdata_Buku_II_Bagian_Kedua"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A1"
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Aturan pembagian waris menurut KUHPerdata tidak berlaku untuk Harta Pusako Tinggi dalam Adat Minangkabau.",
+      "evidence": [
+        "Sistem_Adat_Minangkabau_Matrilineal"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A2"
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Tidak ada ketidakpastian mengenai aturan KUHPerdata untuk kasus ini, karena aturannya jelas dan terdefinisi."
+  ],
+  "open_questions": [
+    "Q1: Bagaimana penyelesaian konflik jika harta pewaris merupakan campuran antara Harta Pusako Rendah dan harta pribadi lainnya, dan keluarga ingin menyelesaikannya di luar pengadilan umum?"
+  ]
+}

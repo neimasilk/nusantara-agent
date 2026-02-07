@@ -1,0 +1,25 @@
+{
+  "query_id": "Q01",
+  "query": "Bagaimana pembagian waris menurut KUHPerdata jika pewaris meninggalkan istri dan dua anak?",
+  "routing": {
+    "label": "pure_national",
+    "scores": {
+      "national": 2,
+      "adat": 0,
+      "conflict": 0
+    },
+    "confidence": 0.7,
+    "method": "heuristic"
+  },
+  "graph_data_path": "experiments/01_triple_extraction/result.json",
+  "timing_seconds": {
+    "retrieval_parallel": 101.2242,
+    "debate": 186.2043,
+    "supervisor": 29.7315,
+    "total": 317.16
+  },
+  "artifacts": {
+    "debate_summary": "experiments\\07_advanced_orchestration\\results\\Q01\\debate_summary.json",
+    "final_synthesis": "experiments\\07_advanced_orchestration\\results\\Q01\\final_synthesis.txt"
+  }
+}

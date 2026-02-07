@@ -1,0 +1,54 @@
+{
+  "round": 2,
+  "agent": "NLA",
+  "answer": "Kasus ini menyangkut konflik antara hukum waris KUHPerdata (yang mengutamakan anak kandung) dan hukum adat Minangkabau (yang mengutamakan kemenakan dalam sistem matrilineal) atas harta pusako rendah. Penyikapan harus didasarkan pada hierarki dan asas hukum nasional Indonesia. Berdasarkan Pasal 131 IS dan yurisprudensi Mahkamah Agung (seperti Putusan No. 179 K/Sip/1961), hukum adat adalah hukum utama bagi masyarakat yang masih mempertahankannya. Oleh karena itu, langkah pertama adalah mengidentifikasi status pewaris: apakah ia masih terikat dengan masyarakat hukum adat Minangkabau atau telah meninggalkannya. Selanjutnya, perlu diklasifikasi jenis hartanya: apakah benar-benar harta pusako rendah (tunduk pada hukum adat) atau harta pencaharian/gono-gini (tunduk pada UU No. 1/1974 tentang Perkawinan). Jika pewaris masih terikat adat dan harta tersebut adalah pusako rendah, maka hukum adat berlaku dan kemenakan berhak. Jika pewaris telah meninggalkan adat, KUHPerdata dapat diterapkan. Penyelesaian terbaik diawali dengan mediasi melibatkan ninik mamak, dan jika gagal, dapat diajukan ke pengadilan yang akan memutus berdasarkan pembuktian atas dua aspek tersebut.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Hukum adat adalah hukum utama bagi masyarakat yang masih mempertahankannya, berdasarkan Pasal 131 IS dan yurisprudensi Mahkamah Agung (Putusan No. 179 K/Sip/1961).",
+      "evidence": [
+        "Pasal_131_IS",
+        "MA_179_K_Sip_1961"
+      ],
+      "confidence": 0.95,
+      "assumptions": [
+        "Pasal 131 IS masih diakui dalam sistem hukum Indonesia",
+        "Putusan MA tersebut masih relevan dan berlaku"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Penyelesaian kasus bergantung pada identifikasi status pewaris (terikat atau tidak dengan hukum adat Minangkabau) dan klasifikasi jenis harta (pusako rendah atau pencaharian).",
+      "evidence": [
+        "MA_396_K_Pdt_1983",
+        "UU_1_1974_Pasal_35"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "Pembuktian status dan jenis harta dapat dilakukan secara faktual",
+        "Tidak ada perubahan hukum yang mendasar pasca putusan MA tersebut"
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Untuk harta pusako rendah, hukum adat Minangkabau (sistem matrilineal) memberikan hak waris kepada kemenakan, bukan anak kandung.",
+      "evidence": [
+        "Doktrin_Hukum_Adat_Minangkabau",
+        "MA_179_K_Sip_1961"
+      ],
+      "confidence": 0.85,
+      "assumptions": [
+        "Harta yang disengketakan memang memenuhi definisi 'pusako rendah' menurut adat",
+        "Masyarakat setempat masih mengakui dan menjalankan sistem tersebut"
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Batasan 'meninggalkan lingkungan hukum adat' tidak didefinisikan secara tegas dalam peraturan tertulis, sehingga interpretasi dapat bervariasi.",
+    "U2: Dalam praktik, pengadilan mungkin menerapkan pendekatan progresif yang mempertimbangkan keadilan substantif, termasuk kebutuhan anak kandung, meski untuk harta pusako."
+  ],
+  "open_questions": [
+    "Q1: Bagaimana mekanisme pembuktian yang efektif untuk menentukan bahwa seseorang telah 'meninggalkan' hukum adat Minangkabau?",
+    "Q2: Apakah terdapat perkembangan yurisprudensi terbaru Mahkamah Agung yang mengimbangi hak anak kandung dalam kasus waris adat Minangkabau tanpa mengabaikan sistem matrilineal?"
+  ]
+}

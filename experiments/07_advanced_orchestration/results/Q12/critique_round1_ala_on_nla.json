@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "agent": "ALA",
+  "target": "NLA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa pluralisme hukum diakui oleh 'konstitusi dan perundang-undangan' hanya didukung oleh dua pasal UUD 1945. Bukti ini tidak mencukupi karena gagal menyebutkan peraturan perundang-undangan lain yang secara operasional mengakui dan mengatur pluralisme hukum, seperti UU No. 39/1999 tentang HAM, UU No. 12/2011 tentang Pembentukan Peraturan Perundang-undangan (Pasal 5), atau putusan-putusan Mahkamah Konstitusi yang memperkuat pengakuan tersebut.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perluas daftar bukti untuk mencakup peraturan perundang-undangan di bawah UUD yang secara eksplisit mengatur penerapan hukum adat dan agama, serta yurisprudensi penting yang menafsirkan pasal-pasal konstitusi tersebut."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C2",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa asas personalitas keagamaan berlaku 'khususnya dalam hukum keluarga dan waris' merupakan penyederhanaan yang berlebihan. Dalam praktik, penerapan hukum waris Islam sangat kompleks dan sering kali tumpang tindih atau berkonflik dengan hukum adat dan hukum nasional (misalnya, terkait hak anak perempuan atau ahli waris pengganti). Klaim ini mengabaikan batasan penerapan KHI (hanya untuk muslim) dan keberadaan aturan lain seperti UU Perkawinan yang berlaku untuk semua warga negara.",
+      "severity": "MAJOR",
+      "suggested_fix": "Klarifikasi klaim dengan menyebutkan bahwa asas personalitas keagamaan terutama diakui dalam bidang-bidang tertentu (perkawinan, perwalian, waris bagi muslim) namun dengan batasan dan sering berinteraksi dengan sistem hukum lain, serta sebutkan contoh aturan yang membatasi atau mengatur interaksi tersebut."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C3",
+      "issue_type": "logic_gap",
+      "description": "Klaim menghubungkan 'keterbatasan KUHPerdata' sebagai 'penyebab' pluralisme hukum mengandung kesalahan logika. KUHPerdata (BW) berlaku sebagai hukum umum (subsidiair) berdasarkan asas konkordansi. Pluralisme hukum bukanlah 'akibat' dari keterbatasannya, tetapi merupakan pilihan politik-hukum yang diakui sejak awal (sebelum dan sesudah kemerdekaan) karena realitas masyarakat majemuk. Logika yang disajikan terbalik: pluralisme ada oleh karena pengakuan terhadap keragaman, dan KUHPerdata mengisi celah di mana hukum adat/agama tidak mengatur, bukan sebaliknya.",
+      "severity": "CRITICAL",
+      "suggested_fix": "Reformulasi klaim untuk menyatakan bahwa keberlakuan KUHPerdata yang bersifat umum dan subsidiari, bersanding dengan pengakuan terhadap hukum adat dan agama yang bersifat khusus, merupakan manifestasi dari pluralisme hukum itu sendiri, bukan penyebabnya. Penyebab utamanya adalah pengakuan konstitusional terhadap keragaman."
+    }
+  ]
+}

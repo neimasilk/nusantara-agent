@@ -1,0 +1,11 @@
+{
+  "query_id": "Q07",
+  "query": "Seorang perempuan Bali menuntut warisan tanah keluarga berdasarkan keputusan MDP Bali 2010, tetapi keluarga menolak karena adat patrilineal. Bagaimana konflik normanya?",
+  "graph_data_path": "experiments/01_triple_extraction/result.json",
+  "timing_seconds": {
+    "total": 104.2641
+  },
+  "artifacts": {
+    "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results\\Q07\\final_synthesis.txt"
+  }
+}

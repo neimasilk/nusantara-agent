@@ -1,0 +1,59 @@
+{
+  "round": 2,
+  "agent": "ALA",
+  "answer": "Pluralisme hukum di Indonesia mengacu pada situasi di mana beberapa sistem hukum—yaitu hukum adat, hukum agama (terutama Islam), dan hukum nasional—berlaku secara berdampingan dalam satu masyarakat. Fenomena ini terjadi karena faktor sejarah (hukum adat telah ada sebelum negara modern), pengakuan konstitusional (UUD 1945 mengakui masyarakat hukum adat), dan realitas sosio-kultural masyarakat Indonesia yang majemuk. Masyarakat, seperti di Minangkabau, telah mengembangkan mekanisme untuk mengharmonisasikan norma-norma yang berbeda ini dalam kehidupan sehari-hari, terutama melalui musyawarah dan prinsip kearifan lokal.\n\nDalam konteks Minangkabau, contoh nyata pluralisme ini terlihat pada pengaturan harta waris. Harta Pusako Tinggi diatur sepenuhnya oleh hukum adat matrilineal, diwariskan melalui garis ibu kepada kemenakan, dan dikelola oleh mamak. Sementara itu, Harta Pusako Rendah (harta pencaharian) lebih fleksibel, dapat diatur berdasarkan hukum Islam (untuk pembagian kepada anak kandung) atau kesepakatan keluarga, yang juga diakui oleh hukum nasional. Dengan demikian, lebih dari satu norma dapat berlaku secara bersamaan untuk objek dan konteks yang berbeda.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Pluralisme hukum di Indonesia adalah keadaan di mana beberapa sistem hukum (adat, agama, dan nasional) berlaku berdampingan.",
+      "evidence": [
+        "source_context_penjelasan_umum"
+      ],
+      "confidence": 0.95,
+      "assumptions": [
+        "A1"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Pluralisme hukum terjadi karena faktor sejarah, pengakuan konstitusional, dan kemajemukan sosio-kultural masyarakat Indonesia.",
+      "evidence": [
+        "source_context_kesimpulan_netral"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "A2"
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Dalam masyarakat Minangkabau, Harta Pusako Tinggi diatur sepenuhnya oleh hukum adat matrilineal (hak kemenakan), sedangkan Harta Pusako Rendah dapat diatur oleh hukum agama atau kesepakatan keluarga.",
+      "evidence": [
+        "source_context_perbedaan_pusako",
+        "source_context_titik_tegangan"
+      ],
+      "confidence": 0.95,
+      "assumptions": [
+        "A3"
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Masyarakat adat seperti Minangkabau telah mengembangkan mekanisme harmonisasi (seperti musyawarah) untuk menyelesaikan potensi konflik antar norma yang berbeda.",
+      "evidence": [
+        "source_context_titik_tegangan",
+        "source_context_kesimpulan_netral"
+      ],
+      "confidence": 0.85,
+      "assumptions": [
+        "A4"
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Sejauh mana pengadilan nasional secara konsisten mengakui dan menegakkan pembagian waris berdasarkan Harta Pusako Tinggi dalam kasus sengketa yang melibatkan pihak di luar komunitas adat."
+  ],
+  "open_questions": [
+    "Q1: Bagaimana dinamika dan hasil harmonisasi antara ketiga sistem hukum tersebut dalam kasus-kasus waris kontemporer di perkotaan, di mana ikatan kekerabatan matrilineal mungkin melemah?"
+  ]
+}

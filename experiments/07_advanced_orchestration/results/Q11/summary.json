@@ -1,0 +1,25 @@
+{
+  "query_id": "Q11",
+  "query": "Bagaimana kedudukan wasiat menurut KUHPerdata dan batasannya terhadap bagian mutlak ahli waris?",
+  "routing": {
+    "label": "pure_national",
+    "scores": {
+      "national": 2,
+      "adat": 0,
+      "conflict": 0
+    },
+    "confidence": 0.7,
+    "method": "heuristic"
+  },
+  "graph_data_path": "experiments/01_triple_extraction/result.json",
+  "timing_seconds": {
+    "retrieval_parallel": 100.5422,
+    "debate": 295.7111,
+    "supervisor": 21.641,
+    "total": 417.8943
+  },
+  "artifacts": {
+    "debate_summary": "experiments\\07_advanced_orchestration\\results\\Q11\\debate_summary.json",
+    "final_synthesis": "experiments\\07_advanced_orchestration\\results\\Q11\\final_synthesis.txt"
+  }
+}

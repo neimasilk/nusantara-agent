@@ -1,0 +1,11 @@
+{
+  "query_id": "Q05",
+  "query": "Apa saja syarat sah perjanjian menurut KUHPerdata dan dampaknya jika salah satu syarat tidak terpenuhi?",
+  "graph_data_path": "experiments/01_triple_extraction/result.json",
+  "timing_seconds": {
+    "total": 111.976
+  },
+  "artifacts": {
+    "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results\\Q05\\final_synthesis.txt"
+  }
+}

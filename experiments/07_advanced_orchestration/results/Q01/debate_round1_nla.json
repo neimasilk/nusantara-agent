@@ -1,0 +1,58 @@
+{
+  "round": 1,
+  "agent": "NLA",
+  "answer": "Berdasarkan KUHPerdata, pembagian waris bagi pewaris (suami) yang meninggalkan istri dan dua anak kandung, tanpa wasiat, dilakukan dalam dua tahap:\n\n1.  **Tahap Pemisahan Harta Bersama (Gono-Gini):** Harta bersama suami-istri dibagi dua. Separuh menjadi hak mutlak istri yang masih hidup. Separuh lainnya, ditambah seluruh harta pribadi suami (jika ada), membentuk harta warisan.\n2.  **Tahap Pembagian Harta Warisan:** Ahli waris (istri dan dua anak) termasuk dalam Golongan I. Istri mendapat bagian pasti (legitieme portie) sebesar **1/4** dari harta warisan. Sisa **3/4** dibagi sama rata kepada kedua anak (masing-masing mendapat **3/8**).\n\n**Contoh:** Jika total harta bersama Rp1 Miliar dan tidak ada harta pribadi:\n- Istri mendapat Rp500 juta dari pemisahan harta bersama + Rp125 juta (1/4 dari Rp500 juta harta warisan) = **Rp625 juta**.\n- Masing-masing anak mendapat Rp187,5 juta (masing-masing 3/8 dari Rp500 juta harta warisan).",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Harta bersama (gono-gini) harus dibagi dua terlebih dahulu saat salah satu pasangan meninggal, di mana separuh menjadi hak pasangan yang hidup dan separuh lainnya masuk ke dalam harta warisan pewaris.",
+      "evidence": [
+        "Pasal 119 KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A1"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Istri dan anak-anak termasuk dalam Golongan I ahli waris menurut KUHPerdata.",
+      "evidence": [
+        "Pasal 832-833 KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A2"
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Jika pewaris meninggalkan anak, bagian warisan untuk pasangan yang hidup (janda/duda) adalah seperempat (1/4) dari harta warisan.",
+      "evidence": [
+        "Pasal 852a KUHPerdata (SEMA No. 3/1963)"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A1",
+        "A2"
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Sisa harta warisan setelah dikurangi bagian janda, dibagi secara sama rata di antara semua anak.",
+      "evidence": [
+        "Pasal 852 KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A2"
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Apakah ada harta pribadi (bawaan/hibah/warisan) milik pewaris atau istri yang perlu diperhitungkan secara terpisah selain harta bersama? Analisis utama mengasumsikan seluruh harta adalah harta bersama."
+  ],
+  "open_questions": [
+    "Q1: Apakah kedua anak tersebut adalah anak kandung dari perkawinan yang sah dengan istri yang ditinggalkan, atau terdapat anak luar kawin/anak angkat yang status hukumnya mempengaruhi pembagian?"
+  ]
+}

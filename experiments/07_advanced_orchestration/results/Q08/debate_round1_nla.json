@@ -1,0 +1,46 @@
+{
+  "round": 1,
+  "agent": "NLA",
+  "answer": "Konsep harta bersama (gono-gini) dalam KUHPerdata mengacu pada sistem persatuan harta (gemeenschap van goederen) sebagai ketentuan default (Pasal 119). Harta yang diperoleh selama perkawinan menjadi milik bersama suami-istri, sedangkan harta bawaan dan warisan/hibah selama nikah tetap menjadi harta pribadi. Pembagiannya dilakukan secara sama rata (masing-masing ½) saat perkawinan berakhir. Anak kandung tidak memiliki hak langsung atas harta bersama ini selama perkawinan berlangsung; hak mereka baru timbul sebagai ahli waris atas harta peninggalan orang tua setelah terjadi kematian dan pemisahan harta bersama.\n\nSecara sosial di beberapa komunitas adat, konsep ini sering dipahami lebih luas sebagai harta keluarga yang melibatkan hak moral anak, bahkan sebelum orang tua meninggal. Pemahaman ini didasarkan pada nilai kekeluargaan yang menyeluruh, di mana harta dipandang sebagai milik keluarga inti (termasuk anak), dan sistem kewarisan sering kali tidak dipisahkan secara tajam dari harta perkawinan. Namun, dalam penyelesaian sengketa hukum formal, ketentuan KUHPerdata yang memisahkan hak suami-istri dari hak waris anak akan berlaku, kecuali ada perjanjian perkawinan yang mengakomodasi nilai adat.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Dalam KUHPerdata, harta bersama (gono-gini) mengacu pada sistem persatuan harta (gemeenschap van goederen) sebagai ketentuan default, di mana harta yang diperoleh selama perkawinan menjadi milik bersama suami-istri.",
+      "evidence": [
+        "Pasal 119 KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Konteks mengacu pada KUHPerdata Indonesia (Burgerlijk Wetboek)"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Anak kandung tidak memiliki hak langsung atas harta bersama orang tua selama perkawinan berlangsung; hak mereka timbul sebagai ahli waris setelah kematian orang tua dan pemisahan harta bersama.",
+      "evidence": [
+        "Pasal 852 KUHPerdata dan prinsip pemisahan hukum harta perkawinan dengan hukum waris"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Tidak ada perjanjian perkawinan yang mengubah ketentuan default"
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Di banyak komunitas adat, konsep harta bersama dipahami secara lebih luas sebagai harta keluarga yang melibatkan hak moral anak, mencerminkan nilai kolektivitas dan kekerabatan.",
+      "evidence": [
+        "Deskripsi praktik sosial dalam komunitas adat seperti Jawa, Bali, atau Minangkabau"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "Konteks merujuk pada variasi pemahaman sosial yang umum di masyarakat adat Indonesia"
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Tingkat pengakuan formal dan variasi spesifik konsep harta bersama di setiap komunitas adat, karena keragaman hukum adat di Indonesia."
+  ],
+  "open_questions": [
+    "Q1: Bagaimana mekanisme penyelesaian sengketa ketika pemahaman adat tentang hak anak atas harta bersama berbenturan dengan ketentuan KUHPerdata di pengadilan?"
+  ]
+}

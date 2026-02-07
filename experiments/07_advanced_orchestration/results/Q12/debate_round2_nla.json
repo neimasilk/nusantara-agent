@@ -1,0 +1,63 @@
+{
+  "round": 2,
+  "agent": "NLA",
+  "answer": "Pluralisme hukum di Indonesia adalah situasi di mana lebih dari satu sistem atau norma hukum berlaku secara sah dalam wilayah negara yang sama. Fenomena ini terjadi terutama karena: 1) Pengakuan konstitusional terhadap keberagaman (Pasal 18B ayat (2) dan Pasal 29 ayat (2) UUD 1945) yang mengakui kesatuan masyarakat hukum adat dan hak-hak tradisionalnya; 2) Penerapan asas personalitas keagamaan, di mana hukum yang berlaku bagi seseorang sangat dipengaruhi oleh identitas agamanya, khususnya dalam hukum keluarga dan waris (dasar hukumnya antara lain UU No. 1 Tahun 1974 tentang Perkawinan dan Kompilasi Hukum Islam); 3) Keberagaman hukum adat yang bersifat lokal dan tidak seragam di seluruh Indonesia; serta 4) Keterbatasan KUHPerdata (hukum perdata Barat warisan kolonial) dalam mengakomodasi seluruh keragaman budaya dan keyakinan masyarakat Indonesia, sehingga tidak dimaksudkan sebagai hukum yang tunggal. Akibatnya, untuk mengatur hubungan hukum yang sama (misalnya hak anak dan harta bersama dalam perkawinan), dapat berlaku norma dari KUHPerdata, hukum adat setempat, atau hukum agama (terutama Islam melalui KHI), tergantung pada identitas agama, domisili adat, pilihan para pihak, dan yurisdiksi pengadilan yang berwenang.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Pluralisme hukum di Indonesia adalah situasi sah di mana lebih dari satu sistem hukum berlaku, disebabkan oleh pengakuan konstitusional terhadap keberagaman.",
+      "evidence": [
+        "Pasal 18B ayat (2) UUD 1945",
+        "Pasal 29 ayat (2) UUD 1945"
+      ],
+      "confidence": 0.95,
+      "assumptions": [
+        "Pembacaan terhadap pasal-pasal UUD 1945 tersebut mengakui eksistensi masyarakat hukum adat dan kebebasan beragama sebagai dasar pluralisme hukum."
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Asas personalitas keagamaan menyebabkan hukum yang berlaku bagi seseorang dalam bidang keluarga dan waris ditentukan oleh identitas agamanya.",
+      "evidence": [
+        "UU No. 1 Tahun 1974 tentang Perkawinan",
+        "Kompilasi Hukum Islam (KHI)"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "Undang-undang dan kompilasi tersebut masih berlaku efektif dan menjadi rujukan utama bagi kelompok agamanya masing-masing."
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "KUHPerdata (BW) tidak dimaksudkan sebagai hukum tunggal di Indonesia karena keterbatasannya dalam mengakomodasi keragaman budaya dan keyakinan.",
+      "evidence": [
+        "Asas Konkordansi dalam sejarah hukum Indonesia",
+        "KUHPerdata (Burgerlijk Wetboek)"
+      ],
+      "confidence": 0.85,
+      "assumptions": [
+        "KUHPerdata dipahami sebagai produk hukum warisan kolonial yang tidak secara komprehensif menggantikan sistem hukum yang sudah ada sebelumnya."
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Hukum yang berlaku untuk suatu perkara (e.g., hak anak dan harta) bergantung pada faktor seperti agama, adat, pilihan para pihak, dan yurisdiksi pengadilan.",
+      "evidence": [
+        "UU No. 1 Tahun 1974 tentang Perkawinan Pasal 29",
+        "UU No. 7 Tahun 1989 tentang Peradilan Agama"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "Masyarakatakat umumnya tunduk pada hukum berdasarkan identitasnya dan sengketa diselesaikan di lembaga peradilan yang sesuai."
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Batas-batas konkret pengakuan 'sepanjang masih hidup dan sesuai dengan perkembangan masyarakat' dalam Pasal 18B UUD 1945 dapat berbeda penafsirannya di berbagai daerah dan kasus.",
+    "U2: Tingkat harmonisasi dan potensi konflik antar sistem hukum (KUHPerdata, Hukum Adat, Hukum Agama) dalam praktik sehari-hari di masyarakat yang sangat majemuk."
+  ],
+  "open_questions": [
+    "Q1: Bagaimana mekanisme penyelesaian konflik hukum (choice of law) yang ideal dan adil ketika para pihak dalam suatu sengketa tunduk pada sistem hukum yang berbeda?",
+    "Q2: Sejauh mana upaya unifikasi atau harmonisasi hukum nasional (khususnya hukum materiil) dapat dan harus dilakukan tanpa mengabaikan prinsip pengakuan terhadap pluralisme hukum yang menjadi ciri Indonesia?"
+  ]
+}

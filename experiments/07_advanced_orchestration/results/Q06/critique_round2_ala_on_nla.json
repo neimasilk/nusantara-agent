@@ -1,0 +1,31 @@
+{
+  "round": 2,
+  "agent": "ALA",
+  "target": "NLA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa 'sentana' berarti 'penerus garis keturunan (purusa) dan pemujaan leluhur (pitra puja)' tidak didukung oleh bukti yang memadai. Istilah 'pitra puja' tidak dijelaskan atau dikaitkan secara eksplisit dengan definisi sentana dalam sumber yang dirujuk. Definisi ini tampaknya merupakan interpretasi atau elaborasi yang tidak sepenuhnya didasarkan pada bukti tekstual dari hukum adat Bali.",
+      "severity": "MAJOR",
+      "suggested_fix": "Hapus referensi pada 'pitra puja' dari definisi sentana, atau sertakan kutipan langsung dari sumber hukum adat (seperti Awig-Awig Desa Adat) yang secara eksplisit mendefinisikan sentana dengan istilah tersebut. Fokus pada definisi inti sentana sebagai penerus garis keturunan (purusa)."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C2",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa sistem pewarisan adat Bali memiliki 'kecenderungan mayorat laki-laki' terlalu menyederhanakan dan berpotensi menyesatkan. Mayorat biasanya mengacu pada hak waris anak sulung laki-laki. Dalam konteks Bali, meskipun patrilineal, pembagian waris dapat melibatkan anak laki-laki lainnya, dan sistem 'mayorat' tidak selalu diterapkan secara universal di semua wilayah atau jenis harta (misalnya, untuk harta pencaharian).",
+      "severity": "MAJOR",
+      "suggested_fix": "Ganti frasa 'dengan kecenderungan mayorat laki-laki' dengan deskripsi yang lebih akurat, seperti 'dengan hak waris utama pada anak laki-laki (terutama yang tertua dalam konteks tertentu)' atau 'dengan pembagian yang lebih besar kepada anak laki-laki, terutama untuk harta pusaka'. Sertakan penjelasan bahwa penerapan 'mayorat' dapat bervariasi."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C4",
+      "issue_type": "logic_gap",
+      "description": "Klaim bahwa hak waris anak kandung 'dibedakan berdasarkan... jenis perkawinan orang tua' tidak dijelaskan lebih lanjut dan menimbulkan kebingungan. Jawaban tidak menjelaskan bagaimana jenis perkawinan (misalnya, perkawinan biasa vs. nyentana) mempengaruhi status dan hak waris anak. Tanpa penjelasan ini, klaim tersebut terasa tidak lengkap dan meninggalkan kesenjangan logika bagi pembaca.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perluas penjelasan untuk menyertakan contoh konkret. Misalnya, jelaskan bahwa anak dari perkawinan nyentana (di mana suami masuk keluarga istri) dapat mengubah status anak perempuan menjadi sentana bagi orang tuanya, sehingga hak warisnya menjadi setara atau berbeda dengan anak laki-laki dalam konteks keluarga tersebut."
+    }
+  ]
+}

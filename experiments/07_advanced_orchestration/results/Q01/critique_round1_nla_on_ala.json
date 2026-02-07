@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "agent": "NLA",
+  "target": "ALA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "evidence_gap",
+      "description": "Klaim C1 menyebutkan Pasal 852a KUHPerdata sebagai bukti. Namun, Pasal 852a KUHPerdata tidak mengatur pembagian waris untuk ahli waris golongan pertama (anak dan istri). Pasal tersebut mengatur tentang wasiat wajib (legitieme portie) dan bagian mutlak anak. Aturan pembagian waris untuk anak dan istri diatur dalam Pasal 852 KUHPerdata.",
+      "severity": "CRITICAL",
+      "suggested_fix": "Ganti referensi Pasal 852a dengan Pasal 852 KUHPerdata sebagai dasar hukum utama. Pasal 852 menyatakan bahwa jika pewaris meninggalkan suami atau istri beserta anak-anak, maka suami/istri mendapat seperempat bagian, dan anak-anak mendapat sisanya."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C2",
+      "issue_type": "logic_gap",
+      "description": "Klaim C2 menyimpulkan bahwa masing-masing anak mendapat 3/8 bagian berdasarkan prinsip pembagian merata. Namun, klaim ini tidak mempertimbangkan kemungkinan bahwa anak-anak tersebut bisa memiliki jenis kelamin yang berbeda atau status lainnya yang mempengaruhi pembagian dalam sistem hukum waris adat atau agama yang mungkin berlaku bersamaan (misalnya, bagi masyarakat yang tunduk pada hukum adat atau hukum Islam). KUHPerdata sendiri tidak membedakan berdasarkan jenis kelamin, tetapi konteks sosial Indonesia bisa memunculkan ketidakpastian ini.",
+      "severity": "MAJOR",
+      "suggested_fix": "Tambahkan catatan atau asumsi bahwa pembahasan ini murni berdasarkan KUHPerdata (BW) untuk warisan yang tunduk sepenuhnya pada hukum tersebut, dan tidak memperhitungkan sistem hukum lain yang mungkin berlaku bagi pewaris."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C1",
+      "issue_type": "overclaim",
+      "description": "Klaim C1 menyatakan 'Dalam KUHPerdata, jika pewaris meninggalkan istri dan dua anak, istri mendapat 1/4 bagian...' Pernyataan ini terlalu umum dan tidak menyebutkan bahwa aturan ini berlaku khusus untuk ahli waris golongan pertama (anak dan keturunannya) bersama suami/istri yang hidup terlama. Tanpa konteks golongan waris, pernyataan bisa menyesatkan jika ada ahli waris lain dari golongan yang lebih tinggi (seperti orang tua).",
+      "severity": "MAJOR",
+      "suggested_fix": "Perbaiki klaim dengan menambahkan konteks golongan waris: 'Dalam KUHPerdata, untuk ahli waris golongan pertama (anak dan keturunannya), jika pewaris meninggalkan istri dan dua anak, maka istri mendapat 1/4 bagian...'"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "round": 1,
+  "agent": "NLA",
+  "answer": "Dalam hukum adat Bali, 'sentana' adalah konsep kunci yang berarti 'penerus' atau 'orang yang mengisi' garis keturunan (purusa) dan pemujaan leluhur (pitra puja). Posisinya dalam pewarisan keluarga adalah sebagai ahli waris utama, dengan sistem yang bersifat patrilineal dan mayorat laki-laki. Anak laki-laki kandung (sentana rajeg) memegang hak utama, khususnya atas harta pusaka yang tidak terbagi. Anak perempuan dapat menjadi sentana dalam perkawinan nyentana (suami masuk keluarga istri). Hukum nasional (Pasal 131 IS, Pasal 18B UUD 1945) mengakui hukum adat ini sebagai hukum yang hidup, sehingga aturan KUHPerdata tentang pembagian waris yang sama rata tidak berlaku primer bagi masyarakat Bali yang tunduk pada adatnya.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Dalam hukum adat Bali, 'sentana' adalah penerus garis keturunan dan pemujaan leluhur, dengan anak laki-laki kandung sebagai sentana utama (sentana rajeg).",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 0.95,
+      "assumptions": [
+        "A1"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Sistem pewarisan adat Bali bersifat patrilineal dengan mayorat laki-laki, di mana anak laki-laki kandung memiliki hak utama atas harta pusaka (awig-awig) yang tidak terpecah.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "A2"
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Hukum nasional Indonesia (Pasal 131 IS dan Pasal 18B UUD 1945) mengakui hukum adat, termasuk hukum adat Bali, sebagai hukum yang hidup (living law) dalam masyarakat sepanjang tidak bertentangan dengan kepentingan nasional.",
+      "evidence": [
+        "source_id_2",
+        "source_id_3"
+      ],
+      "confidence": 0.98,
+      "assumptions": [
+        "A3"
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Dalam penyelesaian sengketa waris masyarakat Bali di pengadilan, hukum adat Bali digunakan sebagai hukum primer, sedangkan KUHPerdata berlaku secara subsider jika aturan adat tidak lengkap.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 0.85,
+      "assumptions": [
+        "A4"
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Batasan dan variasi praktik 'nyentana' serta pembagian harta pencaharian (druwe gabro) di berbagai wilayah (desa adat) di Bali dapat berbeda-beda."
+  ],
+  "open_questions": [
+    "Q1: Bagaimana pengadilan menilai dan membuktikan keberlakuan hukum adat Bali yang spesifik dalam suatu sengketa waris konkret? Q2: Bagaimana posisi anak angkat atau sentana yang diangkat melalui upacara adat dalam hierarki pewarisan dibandingkan dengan anak kandung perempuan dalam sistem purusa?"
+  ]
+}

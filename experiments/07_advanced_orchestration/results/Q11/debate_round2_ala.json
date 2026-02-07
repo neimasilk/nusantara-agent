@@ -1,0 +1,58 @@
+{
+  "round": 2,
+  "agent": "ALA",
+  "answer": "Sebagai Adat Law Agent (ALA), saya akan menjawab dengan merujuk pada sistem hukum adat Minangkabau, yang memiliki prinsip berbeda dari KUHPerdata. Dalam konteks Minangkabau, kedudukan dan batasan wasiat sangat ditentukan oleh jenis hartanya (Pusako Tinggi vs. Pusako Rendah), bukan oleh bagian mutlak (legitieme portie) sebagaimana dalam KUHPerdata.\n\n1. **Kedudukan Wasiat dalam KUHPerdata (Sebagai Referensi Umum):**\n   - Wasiat adalah pernyataan kehendak seseorang untuk mengatur hartanya setelah meninggal.\n   - Kebebasan berwasiat dibatasi oleh **bagian mutlak** (legitieme portie) bagi ahli waris tertentu (anak, orang tua, suami/istri), yang biasanya setengah dari bagian warisan mereka jika tidak ada wasiat (Pasal 913 KUHPerdata).\n   - Wasiat yang melanggar bagian mutlak dapat dikurangi (reductie) atas tuntutan ahli waris.\n\n2. **Kedudukan dan Batasan Wasiat dalam Hukum Adat Minangkabau:**\n   - **Harta Pusako Tinggi (harta kaum turun-temurun matrilineal):**\n     - **Kedudukan Wasiat:** **Tidak diakui**. Harta ini milik kolektif kaum (garis ibu), bukan milik individu. Seorang mamak hanya pengelola, sehingga **tidak berhak mewasiatkannya**.\n     - **Ahli Waris Mutlak:** **Kemenakan (anggota kaum dari garis ibu)**. Hak mereka bersifat kolektif dan tak tergugat.\n   - **Harta Pusako Rendah (harta pencaharian pribadi):**\n     - **Kedudukan Wasiat:** **Diakui tetapi sangat terbatas**. Wasiat dapat digunakan untuk mengatur pembagian, namun harus mempertimbangkan dua kepentingan yang sering bersaing:\n       1. **Hak kemenakan** (berdasarkan adat matrilineal).\n       2. **Hak anak kandung dan istri** (berdasarkan hukum Islam dan praktik modern).\n     - **Batasan:** Wasiat harus melalui **musyawarah keluarga besar** untuk mencapai keseimbangan. Wasiat yang mengabaikan sama sekali hak kemenakan atau anak kandung dapat menimbulkan sengketa dan dianggap bertentangan dengan prinsip adat (**\"Adat basandi syarak, syarak basandi Kitabullah\"**).\n\n**Kesimpulan:** Dalam adat Minangkabau, batasan wasiat bukan berasal dari KUHPerdata, tetapi dari **prinsip kekerabatan matrilineal, musyawarah, dan tanggung jawab sosial** terhadap kaum (kemenakan) dan keluarga inti (anak-istri). Wasiat hanya relevan untuk Harta Pusako Rendah, dan keabsahannya bergantung pada kesepakatan keluarga, bukan semata-mata kehendak individu.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "KUHPerdata membatasi kebebasan berwasiat dengan bagian mutlak (legitieme portie) bagi ahli waris tertentu seperti anak, orang tua, dan suami/istri.",
+      "evidence": [
+        "Pasal 913 KUHPerdata"
+      ],
+      "confidence": 0.95,
+      "assumptions": [
+        "Referensi ini digunakan sebagai perbandingan umum, bukan sebagai hukum yang berlaku bagi masyarakat Minangkabau."
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Dalam adat Minangkabau, Harta Pusako Tinggi tidak dapat diwasiatkan karena merupakan milik kolektif kaum (garis ibu) dan ahli waris mutlaknya adalah kemenakan.",
+      "evidence": [
+        "Pengetahuan adat Minangkabau tentang sistem matrilineal dan Pewarisan Pusako Tinggi"
+      ],
+      "confidence": 0.98,
+      "assumptions": [
+        "Masyarakat yang dimaksud masih memegang teguh hukum adat Minangkabau."
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Untuk Harta Pusako Rendah, wasiat diakui tetapi terbatas dan harus mempertimbangkan hak kemenakan (berdasarkan adat) serta hak anak kandung dan istri (berdasarkan hukum Islam/praktik).",
+      "evidence": [
+        "Pengetahuan adat Minangkabau tentang Pewarisan Pusako Rendah dan dualisme hukum"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "Harta Pusako Rendah dianggap sebagai harta pencaharian pribadi yang dapat menimbulkan ketegangan antara adat dan hukum Islam."
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Keabsahan wasiat atas Harta Pusako Rendah dalam adat Minangkabau bergantung pada musyawarah keluarga besar untuk mencapai keseimbangan, bukan semata kehendak individu.",
+      "evidence": [
+        "Prinsip musyawarah (mufakat) dan tanggung jawab sosial dalam adat Minangkabau"
+      ],
+      "confidence": 0.92,
+      "assumptions": [
+        "Keluarga besar masih berfungsi sebagai forum pengambilan keputusan."
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Sejauh mana pengadilan nasional saat ini mengakui atau mengesampingkan hak kemenakan atas Harta Pusako Rendah ketika berhadapan dengan wasiat yang mengutamakan anak kandung."
+  ],
+  "open_questions": [
+    "Q1: Bagaimana mekanisme musyawarah keluarga besar secara konkret dilakukan untuk menyelesaikan konflik wasiat atas Harta Pusako Rendah antara kemenakan dan anak kandung?",
+    "Q2: Apakah ada sanksi adat tertentu bagi individu yang membuat wasiat atas Harta Pusako Rendah tanpa melibatkan musyawarah keluarga?"
+  ]
+}

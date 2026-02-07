@@ -1,0 +1,31 @@
+{
+  "round": 2,
+  "agent": "ALA",
+  "target": "NLA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C2",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa perjanjian yang cacat syarat subjektif hanya 'dapat dibatalkan (voidable)' tidak sepenuhnya akurat. Pasal 1321 KUHPerdata menyatakan bahwa kesepakatan yang cacat (karena paksaan, kekhilafan, atau penipuan) membuat perjanjian 'dapat dimintakan pembatalannya'. Namun, untuk kecakapan, Pasal 1330 KUHPerdata menyebutkan bahwa perjanjian yang dibuat oleh orang yang tidak cakap adalah 'batal demi hukum' (null). Oleh karena itu, dampak dari tidak terpenuhinya syarat kecakapan berbeda dengan cacat kesepakatan.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perbaikan klaim C2 dengan membedakan dampak hukum: 1) Cacat kesepakatan (paksaan, kekhilafan, penipuan) membuat perjanjian dapat dimintakan pembatalan (voidable). 2) Tidak adanya kecakapan (misalnya, anak di bawah umur, orang di bawah pengampuan) membuat perjanjian batal demi hukum (void)."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C4",
+      "issue_type": "logic_gap",
+      "description": "Klaim C4 menyatakan bahwa perjanjian yang menghilangkan hak nafkah anak 'dapat dibatalkan karena dianggap memiliki sebab yang tidak halal'. Meski benar bahwa Pasal 1337 KUHPerdata menyebut sebab yang terlarang (melawan hukum, kesusilaan, ketertiban umum), penghubungan langsung antara 'hak nafkah anak' dengan 'sebab yang tidak halal' dalam konteks perjanjian antara suami-istri kurang tepat. Sebab (causa) dalam perjanjian adalah tujuan langsung yang dikehendaki para pihak. Mengabaikan kewajiban nafkah anak lebih tepat dikualifikasikan sebagai perjanjian yang bertentangan dengan undang-undang (Pasal 1337 jo. Pasal 1335 KUHPerdata) atau kewajiban hukum orang tua, bukan semata-mata karena 'sebab' perjanjiannya tidak halal.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perbaikan klaim C4 dengan menjelaskan bahwa perjanjian antara suami-istri yang menghilangkan kewajiban nafkah anak dapat batal karena bertentangan dengan undang-undang (Pasal 1335 KUHPerdata) dan ketertiban umum (kewajiban hukum orang tua), sehingga objek atau sebab perjanjiannya menjadi terlarang menurut Pasal 1337 KUHPerdata."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C5",
+      "issue_type": "overclaim",
+      "description": "Klaim C5 menyebut aturan default KUHPerdata adalah 'pemisahan harta bawaan dengan persatuan penghasilan'. Penyebutan ini terlalu umum dan dapat menyesatkan. Pasal 119 KUHPerdata menyatakan bahwa tanpa perjanjian lain, berlaku 'persatuan bulat' (algehele gemeenschap van goederen) atas harta benda suami dan istri. Namun, Pasal 128 KUHPerdata kemudian mengecualikan harta bawaan (goederen yang dibawa masing-masing ke perkawinan) dari persatuan tersebut. Jadi, sistem default KUHPerdata adalah 'persatuan bulat dengan pengecualian harta bawaan', bukan sekadar 'pemisahan harta bawaan dengan persatuan penghasilan'. Istilah 'penghasilan' tidak secara eksplisit digunakan dalam pasal-pasal tersebut.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perbaikan klaim C5 dengan merujuk secara tepat pada Pasal 119 dan 128 KUHPerdata: Tanpa perjanjian kawin, berlaku persatuan bulat atas harta benda suami-istri selama perkawinan, kecuali harta bawaan (goederen yang diperoleh masing-masing sebelum perkawinan atau selama perkawinan melalui warisan/wasiat) yang tetap terpisah."
+    }
+  ]
+}

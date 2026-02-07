@@ -1,0 +1,62 @@
+{
+  "round": 1,
+  "agent": "NLA",
+  "answer": "Konflik norma terjadi antara hukum adat Bali (patrilineal) yang diatur dalam MDP Bali 2010 dengan hukum nasional (KUHPerdata) yang menganut asas persamaan hak waris. Penyelesaiannya bergantung pada klasifikasi harta warisan: (1) Jika tanah adalah harta asal turun-temurun (*druwe*), hukum adat memiliki kedudukan kuat berdasarkan pengakuan konstitusional. (2) Jika tanah merupakan harta pencaharian (*gono-gini*) orang tua, KUHPerdata berlaku dan memberikan hak waris yang sama kepada anak perempuan melalui mekanisme pembagian harta bersama dan waris.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "MDP Bali 2010 sebagai hukum adat mengatur sistem waris patrilineal yang membatasi hak waris perempuan atas harta asal (*druwe*).",
+      "evidence": [
+        "Pasal 18B ayat (2) UUD 1945",
+        "MDP Bali 2010"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "MDP Bali 2010 masih berlaku dan diakui oleh komunitas adat setempat."
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "KUHPerdata (Pasal 852) memberikan hak waris yang sama kepada semua anak, laki-laki dan perempuan.",
+      "evidence": [
+        "KUHPerdata Pasal 852"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "KUHPerdata berlaku sebagai hukum perdata umum di Indonesia."
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Harta bersama dalam perkawinan (gono-gini) diatur dalam KUHPerdata Pasal 119, di mana 50% menjadi hak pasangan yang hidup dan 50% bagian almarhum dibagikan kepada semua ahli waris.",
+      "evidence": [
+        "KUHPerdata Pasal 119",
+        "UU No. 1 Tahun 1974 Pasal 35"
+      ],
+      "confidence": 0.95,
+      "assumptions": [
+        "Perkawinan orang tua subjek kasus tunduk pada KUHPerdata atau UU Perkawinan."
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Kedudukan hukum adat (seperti MDP Bali) kuat untuk harta asal (*druwe*), tetapi dapat dikesampingkan oleh hukum nasional jika bertentangan dengan prinsip keadilan atau hak asasi, terutama untuk harta pencaharian.",
+      "evidence": [
+        "Pasal 18B ayat (2) UUD 1945",
+        "Yurisprudensi MA RI"
+      ],
+      "confidence": 0.85,
+      "assumptions": [
+        "Putusan pengadilan nasional konsisten mengakui batasan penerapan hukum adat."
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Apakah tanah sengketa secara faktual dan bukti hukum diklasifikasikan sebagai harta asal (*druwe*) turun-temurun atau harta pencaharian (*gono-gini*) orang tua?",
+    "U2: Sejauh mana Pengadilan Negeri di Bali akan mengutamakan hukum adat versus KUHPerdata dalam praktik yurisprudensi terkini untuk kasus serupa."
+  ],
+  "open_questions": [
+    "Q1: Apakah terdapat putusan pengadilan negeri/tinggi/Mahkamah Agung di Bali yang spesifik mengenai permohonan ahli waris perempuan atas tanah *druwe* setelah berlakunya MDP Bali 2010?",
+    "Q2: Bagaimana proses dan otoritas Majelis Desa Pakraman (MDP) dalam menyelesaikan sengketa waris seperti ini, dan apakah keputusannya bersifat final atau dapat dibawa ke pengadilan negara?"
+  ]
+}

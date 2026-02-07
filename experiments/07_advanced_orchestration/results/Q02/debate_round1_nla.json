@@ -1,0 +1,56 @@
+{
+  "round": 1,
+  "agent": "NLA",
+  "answer": "Berdasarkan analisis hukum perdata nasional yang mengakui supremasi hukum adat untuk objek khusus seperti pusako tinggi, hak atas pusako tinggi dalam adat Minangkabau saat seorang mamak meninggal adalah sebagai berikut:\n\n1. **Pemilik dan Penerus Hak Pengelolaan:** Pusako tinggi adalah harta kolektif kaum/paruik (kelompok kekerabatan matrilineal). Mamak berstatus sebagai pengelola (*panghulu/ninik mamak*), bukan pemilik mutlak. Saat ia meninggal, hak pengelolaan (*ganggam bauntuak*) atas pusako tinggi tersebut beralih kepada **anggota laki-laki dari kaum/paruik yang sama**, biasanya saudara laki-laki almarhum mamak yang lain atau kemenakan laki-lakinya (anak dari saudara perempuannya).\n\n2. **Posisi Anak Kandung Mamak:** Anak kandung almarhum mamak (disebut *anak pisang*) **tidak mempunyai hak waris atau hak menguasai pusako tinggi** yang dikelola ayahnya. Dalam sistem matrilineal Minangkabau, anak-anak tersebut termasuk ke dalam kaum/paruik ibunya. Hak waris mereka terhadap harta pusaka ada pada pusako tinggi dari kaum/paruik ibu mereka sendiri (dari mamak mereka/mamak dari ibu mereka).\n\n3. **Harta yang Dapat Diwarisi Anak Kandung:** Harta pribadi mamak yang diperoleh selama perkawinan (*pusako rendah* atau harta pencaharian/gono-gini) tunduk pada hukum waris KUHPerdata (atau hukum agama). Atas harta inilah anak kandung (bersama ibu mereka) berhak sebagai ahli waris, setelah dilakukan pemisahan harta bersama antara almarhum dan istrinya.\n\nKesimpulan: Yang berhak atas pusako tinggi adalah kaum/paruik almarhum mamak, dengan penerus pengelolaan dari garis matrilineal yang sama. Anak kandung mamak hanya berhak atas harta pribadi ayahnya (*pusako rendah*), bukan atas pusako tinggi.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Pusako tinggi adalah harta kolektif kaum/paruik (garis matrilineal) dan mamak hanya berstatus sebagai pengelola, bukan pemilik mutlak.",
+      "evidence": [
+        "source_context"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A1"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Saat mamak meninggal, hak pengelolaan (ganggam bauntuak) atas pusako tinggi beralih kepada anggota laki-laki dari kaum/paruik yang sama, seperti saudara laki-laki atau kemenakan laki-laki (anak dari saudara perempuan).",
+      "evidence": [
+        "source_context"
+      ],
+      "confidence": 0.95,
+      "assumptions": [
+        "A2"
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Anak kandung mamak (anak pisang) tidak mempunyai hak waris atau hak menguasai pusako tinggi yang dikelola ayahnya.",
+      "evidence": [
+        "source_context"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A1",
+        "A3"
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Hukum adat Minangkabau (untuk pusako tinggi) diutamakan atas KUHPerdata berdasarkan pengakuan konstitusional dan asas subsidiaritas.",
+      "evidence": [
+        "source_context"
+      ],
+      "confidence": 0.9,
+      "assumptions": []
+    }
+  ],
+  "uncertainties": [
+    "U1: Variasi lokal (*luhak*) dalam penerapan adat Minangkabau mengenai tata cara dan prioritas penerus pengelolaan pusako tinggi setelah mamak meninggal."
+  ],
+  "open_questions": [
+    "Q1: Bagaimana mekanisme penyelesaian sengketa dan pembuktian ahli waris pengelola pusako tinggi di pengadilan negeri jika musyawarah adat gagal?"
+  ]
+}

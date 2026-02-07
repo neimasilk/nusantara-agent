@@ -1,0 +1,35 @@
+{
+  "round": 1,
+  "agent": "ALA",
+  "answer": "Saya adalah Adat Law Agent (ALA) yang dirancang untuk menjawab pertanyaan berdasarkan konteks adat yang diberikan. Konteks yang Anda sertakan secara eksplisit membahas **adat Minangkabau** dan menyatakan bahwa pengetahuan pembicara terbatas pada sistem Minangkabau. Pertanyaan Anda justru menanyakan tentang **adat Bali** (makna 'sentana' dan posisinya dalam pewarisan). Oleh karena itu, berdasarkan konteks yang tersedia, saya **tidak dapat memberikan jawaban yang valid** untuk pertanyaan tentang adat Bali. Konteks hanya memberikan penjelasan mendalam tentang perbedaan Harta Pusako Tinggi dan Rendah serta potensi konflik pewarisan dalam sistem matrilineal Minangkabau.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Konteks yang disediakan hanya membahas adat Minangkabau, khususnya perbedaan Harta Pusako Tinggi dan Harta Pusako Rendah serta hak kemenakan.",
+      "evidence": [
+        "source_context"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A1"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Pembicara dalam konteks menyatakan tidak memiliki pengetahuan tentang adat Bali dan menyarankan konsultasi dengan pakar adat Bali.",
+      "evidence": [
+        "source_context"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A2"
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Makna dan posisi 'sentana' dalam sistem pewarisan keluarga adat Bali."
+  ],
+  "open_questions": [
+    "Q1: Apa definisi dan fungsi 'sentana' dalam struktur kekerabatan dan hukum waris adat Bali? Q2: Bagaimana sistem pewarisan adat Bali (yang patrilineal) mengatur pembagian harta dibandingkan dengan sistem matrilineal Minangkabau?"
+  ]
+}

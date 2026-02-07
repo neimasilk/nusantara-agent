@@ -1,0 +1,25 @@
+{
+  "query_id": "Q06",
+  "query": "Dalam adat Bali, apa makna sentana dan bagaimana posisinya dalam pewarisan keluarga?",
+  "routing": {
+    "label": "pure_adat",
+    "scores": {
+      "national": 0,
+      "adat": 3,
+      "conflict": 0
+    },
+    "confidence": 0.7,
+    "method": "heuristic"
+  },
+  "graph_data_path": "experiments/01_triple_extraction/result.json",
+  "timing_seconds": {
+    "retrieval_parallel": 86.485,
+    "debate": 190.8954,
+    "supervisor": 23.8859,
+    "total": 301.2663
+  },
+  "artifacts": {
+    "debate_summary": "experiments\\07_advanced_orchestration\\results\\Q06\\debate_summary.json",
+    "final_synthesis": "experiments\\07_advanced_orchestration\\results\\Q06\\final_synthesis.txt"
+  }
+}

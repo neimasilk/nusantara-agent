@@ -1,0 +1,25 @@
+{
+  "query_id": "Q08",
+  "query": "Jelaskan secara ringkas konsep harta bersama (gono-gini) dan bagaimana ini dipahami secara sosial di beberapa komunitas adat.",
+  "routing": {
+    "label": "consensus",
+    "scores": {
+      "national": 2,
+      "adat": 1,
+      "conflict": 0
+    },
+    "confidence": 0.55,
+    "method": "heuristic"
+  },
+  "graph_data_path": "experiments/01_triple_extraction/result.json",
+  "timing_seconds": {
+    "retrieval_parallel": 71.976,
+    "debate": 250.7372,
+    "supervisor": 23.557,
+    "total": 346.2702
+  },
+  "artifacts": {
+    "debate_summary": "experiments\\07_advanced_orchestration\\results\\Q08\\debate_summary.json",
+    "final_synthesis": "experiments\\07_advanced_orchestration\\results\\Q08\\final_synthesis.txt"
+  }
+}

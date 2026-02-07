@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "agent": "ALA",
+  "target": "NLA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa MDP Bali 2010 mengatur sistem waris patrilineal yang membatasi hak waris perempuan atas harta asal (druwe) tidak didukung oleh kutipan pasal spesifik dari MDP Bali 2010. Bukti hanya menyebutkan 'MDP Bali 2010' secara umum tanpa rujukan normatif yang konkret, sehingga tidak dapat diverifikasi substansi aturannya.",
+      "severity": "MAJOR",
+      "suggested_fix": "Sebutkan pasal atau ketentuan spesifik dalam MDP Bali 2010 yang secara eksplisit mengatur pembatasan hak waris perempuan atas tanah druwe untuk mendukung klaim."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C3",
+      "issue_type": "domain_mismatch",
+      "description": "Klaim mengacu pada KUHPerdata Pasal 119 dan UU No. 1 Tahun 1974 Pasal 35 untuk mengatur harta bersama (gono-gini), namun tidak mempertimbangkan konteks hukum adat Bali. Di Bali, konsep 'druwe' (harta asal) dan 'gono-gini' (harta pencaharian) memiliki pengaturan tersendiri dalam hukum adat yang mungkin berbeda dengan ketentuan KUHPerdata, terutama terkait pembagiannya. Asumsi bahwa perkawinan tunduk pada KUHPerdata bisa keliru jika masyarakat adat memilih hukum adat.",
+      "severity": "MAJOR",
+      "suggested_fix": "Analisis terlebih dahulu apakah perkawinan orang tua dalam kasus ini tunduk pada hukum adat Bali atau hukum nasional. Kemudian, jelaskan bagaimana konsep 'gono-gini' diinterpretasikan dan dibagi dalam kerangka hukum adat Bali sebelum menerapkan KUHPerdata."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C4",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa hukum adat dapat dikesampingkan oleh hukum nasional jika bertentangan dengan prinsip keadilan atau HAM merupakan generalisasi yang berlebihan tanpa dukungan yurisprudensi yang spesifik. Bukti hanya menyebut 'Yurisprudensi MA RI' secara umum, tanpa putusan atau prinsip hukum yang konkret. Selain itu, Pasal 18B ayat (2) UUD 194 justru mengakui dan menghormati kesatuan masyarakat hukum adat, sehingga pengesampingan hukum adat bukan hal yang otomatis.",
+      "severity": "MAJOR",
+      "suggested_fix": "Sebutkan putusan Mahkamah Agung atau pengadilan yang spesifik dan relevan (misalnya, dari lingkungan Bali) yang menunjukkan kondisi di mana hukum adat waris dikesampingkan demi prinsip keadilan atau HAM, serta analisis parameter yang digunakan pengadilan."
+    }
+  ]
+}

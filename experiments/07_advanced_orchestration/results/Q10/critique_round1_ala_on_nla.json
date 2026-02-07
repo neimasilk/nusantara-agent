@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "agent": "ALA",
+  "target": "NLA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa 'hukum nasional memiliki kedudukan lebih tinggi daripada hukum adat dalam hierarki hukum Indonesia' merupakan generalisasi yang berlebihan. Pasal 18B ayat (2) UUD 1945 justru mengakui dan menghormati kesatuan-kesatuan masyarakat hukum adat beserta hak-hak tradisionalnya. Dalam konteks tertentu, hukum adat dapat berlaku sebagai hukum yang hidup (living law) dan diakui oleh Mahkamah Agung, bahkan dalam beberapa putusan, asas-asas hukum adat diutamakan atas ketentuan hukum nasional yang bersifat umum.",
+      "severity": "MAJOR",
+      "suggested_fix": "Klaim seharusnya dirumuskan lebih hati-hati dengan menyatakan bahwa dalam konflik antara hukum nasional yang bersifat memaksa (ius cogens) dengan hukum adat, pengadilan cenderung mengutamakan hukum nasional, namun dengan tetap memperhatikan pengakuan konstitusional terhadap keberadaan hukum adat. Sebutkan juga yurisprudensi Mahkamah Agung yang relevan."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C4",
+      "issue_type": "logic_gap",
+      "description": "Mekanisme pembedaan 'harta pencaharian' dan 'harta pusaka adat' sebagai solusi penyelesaian konflik mengandung gap logika yang signifikan. Dalam masyarakat matrilineal seperti Minangkabau, konsep 'harta pencaharian' (harta suarang) yang diperoleh selama perkawinan seringkali juga tunduk pada aturan adat dan dapat berubah status menjadi harta pusaka (harto pusako) melalui proses adat tertentu. Dengan demikian, pemisahan yang rigid seperti diusulkan tidak selalu mencerminkan realitas kompleks sistem kewarisan adat.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perlu penjelasan yang lebih mendalam tentang fluiditas dan transformasi status harta dalam sistem matrilineal. Sebutkan bahwa pembedaan ini bukan solusi teknis yang pasti, melainkan salah satu pendekatan yang digunakan pengadilan, dan seringkali memerlukan pembuktian serta penilaian ahli adat (keterangan ninik mamak)."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C2",
+      "issue_type": "domain_mismatch",
+      "description": "Penerapan Pasal 832 KUHPerdata (ahli waris golongan I) sebagai acuan utama untuk hak waris anak dalam konteks masyarakat adat matrilineal adalah contoh domain mismatch. KUHPerdata (BW) secara historis dan filosofis didasarkan pada sistem bilateral dan individualistik, sementara sistem matrilineal bersifat kolektif dan mengikuti garis keturunan ibu. Dalam banyak komunitas adat, anak memang mendapat hak, tetapi bukan sebagai ahli waris individual dari ayahnya, melainkan melalui garis ibunya sebagai bagian dari kaum (suku).",
+      "severity": "CRITICAL",
+      "suggested_fix": "Klaim harus diklarifikasi dengan menegaskan bahwa Pasal 832 KUHPerdata adalah acuan dalam sistem hukum nasional, namun dalam praktik penyelesaian sengketa di pengadilan, hakim dapat (dan sering) mempertimbangkan konstruksi hak anak yang berbeda menurut hukum adat, misalnya hak untuk mendapat nafkah, pendidikan, atau bagian dari harta pencaharian, meski bukan sebagai ahli waris penuh dari harta pusaka ayahnya."
+    }
+  ]
+}

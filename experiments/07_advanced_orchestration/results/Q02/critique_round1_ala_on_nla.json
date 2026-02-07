@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "agent": "ALA",
+  "target": "NLA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C2",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa hak pengelolaan (ganggam bauntuak) beralih kepada 'anggota laki-laki dari kaum/paruik yang sama' terlalu umum dan mengabaikan hierarki dan mekanisme formal dalam adat Minangkabau. Dalam adat, pengalihan hak pengelolaan tidak otomatis ke 'anggota laki-laki' mana pun, tetapi mengikuti struktur kepemimpinan adat (ninik mamak) dan musyawarah kaum. Siapa yang menjadi penerus (bako, mamak, atau kemenakan tertentu) bergantung pada posisi almarhum dalam struktur kaum dan hasil musyawarah.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perjelas bahwa pengalihan hak pengelolaan pusako tinggi dilakukan melalui musyawarah kaum (paruik/suku) untuk menunjuk ninik mamak atau pengganti yang sah, dengan mempertimbangkan faktor senioritas, kemampuan, dan kesepakatan bersama, bukan sekadar hubungan kekerabatan laki-laki."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C3",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa anak kandung mamak 'tidak mempunyai hak waris atau hak menguasai pusako tinggi' bersifat absolut dan mengabaikan kemungkinan penyimpangan atau adaptasi adat dalam praktik kontemporer. Dalam beberapa kasus, terutama jika tidak ada lagi anggota laki-laki dalam kaum atau melalui kesepakatan adat (musyawarah), anak laki-laki (kemenakan dari pihak ibu) bisa terlibat dalam pengelolaan. Juga, ada konsep 'pusako rendah' yang bisa saja berasal dari pengembangan pusako tinggi (misal, hasil usaha dari pengelolaan pusako tinggi), yang bisa menimbulkan klaim tidak langsung.",
+      "severity": "MAJOR",
+      "suggested_fix": "Kualifikasi klaim dengan menyebutkan bahwa secara prinsip adat murni, anak kandung tidak berhak, tetapi dalam praktik dan perkembangan hukum adat, ada ruang untuk penyesuaian melalui musyawarah adat, terutama dalam kondisi tertentu (seperti punahnya garis laki-laki dalam kaum)."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C4",
+      "issue_type": "domain_mismatch",
+      "description": "Klaim bahwa 'Hukum adat Minangkabau (untuk pusako tinggi) diutamakan atas KUHPerdata berdasarkan pengakuan konstitusional dan asas subsidiaritas' mencampurkan konsep. 'Asas subsidiaritas' bukan istilah umum dalam hierarki hukum Indonesia untuk hubungan hukum adat dan hukum nasional. Pengutamaan hukum adat untuk pusako tinggi lebih didasarkan pada Pasal 18B ayat (2) UUD 1945 dan UU No. 1 Tahun 2023 tentang Kitab Undang-Undang Hukum Perdata (KUHPer) Pasal 1 yang mengakui hukum adat selama tidak bertentangan dengan kepentingan nasional dan peraturan yang lebih tinggi. Penggunaan 'asas subsidiaritas' tidak tepat dan dapat menyesatkan.",
+      "severity": "MINOR",
+      "suggested_fix": "Ganti dengan dasar hukum yang tepat: 'Hukum adat Minangkabau untuk pusako tinggi diakui dan diberlakukan berdasarkan Pasal 18B ayat (2) UUD 1945 jo. Pasal 1 UU No. 1 Tahun 2023 tentang KUHPer, yang menempatkan hukum adat sebagai hukum yang hidup (living law) dan diutamakan untuk objek dan subjek hukum tertentu seperti pusako tinggi, sepanjang tidak bertentangan dengan ketertiban umum.'"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "query_id": "Q01",
+    "accuracy": 4,
+    "completeness": 4,
+    "cultural_sensitivity": 5,
+    "notes": "Tepat pada substansi KUHPerdata, lengkap menyentuh konflik dengan adat Minangkabau, serta framing yang sangat menghormati nilai lokal tanpa stereotip."
+  },
+  {
+    "query_id": "Q02",
+    "accuracy": 5,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Tepat: pusako tinggi milik kaum, pengelolaan turun ke kemenakan laki-laki; kontras dengan hukum nasional dijelaskan; framing menghormati adat."
+  },
+  {
+    "accuracy": 5,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Semua klaim tepat, membedakan pusako tinggi/rendah dan status pewaris; menutup semua aspek mediasi-adat hingga yurisprudensi; bahasa menghormati struktur matrilineal tanpa stereotip.",
+    "query_id": "Q03"
+  },
+  {
+    "query_id": "Q04",
+    "accuracy": 5,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Tidak menyebut konflik seperti diminta; semua klaim akurat, lengkap, dan penuh penghormatan terhadap adat"
+  },
+  {
+    "query_id": "Q05",
+    "accuracy": 5,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Semua klaim Pasal 1320 tepat, dampak void/voidable benar, serta konflik norma nasional-adat dijelaskan lengkap tanpa stereotip."
+  },
+  {
+    "query_id": "Q06",
+    "accuracy": 5,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Semua klaim utama akurat, tidak overclaim; menjelaskan hierarki sentana, perbedaan sentana rajeg/tidak rajeg, serta konflik dengan KUHPerdata. Menyentuh aspek nasional (UU Pluralisme Hukum) dan adat Bali secara lengkap. Bahasa menghormati nilai adat, tidak stereotip."
+  },
+  {
+    "query_id": "Q07",
+    "accuracy": 5,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Tepat menyebut tiga tumpang-tindih hukum, klasifikasi druwe vs gono-gini, serta mekanisme mediasi adat; tidak overclaim, menghormati nilai komunal Bali."
+  },
+  {
+    "query_id": "Q08",
+    "accuracy": 5,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Semua klaim akurat, tak overclaim; menyinggung nasional dan multi-adat; framing menghormati keragaman budaya."
+  },
+  {
+    "query_id": "Q09",
+    "accuracy": 2,
+    "completeness": 1,
+    "cultural_sensitivity": 1,
+    "notes": "Jawaban tidak menjawab pertanyaan langsung tentang perbedaan gono-gini dan harta bawaan dalam adat Jawa. Lebih fokus pada konflik norma dan rekomendasi pluralistik. Informasi spesifik adat Jawa sangat minim."
+  },
+  {
+    "query_id": "Q10",
+    "accuracy": 5,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Tepat bedakan harta pusaka/pencaharian, urutkan forum adat-pengadilan, hormati matrilineal tanpa stereotip."
+  },
+  {
+    "query_id": "Q11",
+    "accuracy": 4,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Jawaban sangat akurat dan bernuansa; hanya minor gap: tidak menyebut secara eksplisit angka 1/3 bagian mutlak BW untuk dua anak, tapi esensi batasan matematis sudah tersirat. Lengkap membanding kedua sistem, sensitif terhadap konteks adat Minang."
+  },
+  {
+    "query_id": "Q12",
+    "accuracy": 5,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Semua klaim akurat, tidak overclaim; mencakup konstitusi, sejarah, asas personalitas, contoh konflik waris Minangkabau, mekanisme penyelesaian, serta trade-off. Bahasa netral, menghormati konteks adat dan agama."
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "round": 2,
+  "agent": "ALA",
+  "answer": "Konflik norma ini merupakan benturan antara hukum negara (MDP Bali 2010) yang mengakui hak waris individual dan kesetaraan gender, dengan hukum adat patrilineal Bali yang mengutamakan kelestarian harta keluarga dalam garis laki-laki dan hak komunal. Dari perspektif adat Minangkabau, konflik ini mirip dengan ketegangan antara pengaturan Harta Pusako Tinggi (komunal, diwariskan ke garis ibu/kemenakan) dan Harta Pusako Rendah (dapat diwariskan ke anak). Penyelesaian memerlukan musyawarah untuk mencari titik temu, misalnya dengan memisahkan jenis harta dan skema pembagian yang adil.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Sumber konflik utama adalah benturan antara klaim berbasis hukum negara (MDP Bali 2010) yang bersifat universal dan individual, dengan penolakan berbasis hukum adat patrilineal Bali yang bersifat komunal dan tradisional.",
+      "evidence": [
+        "context_1"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "A1"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Dalam perspektif adat Minangkabau, konflik serupa dapat dianalogikan dengan ketegangan antara pengaturan Harta Pusako Tinggi (warisan turun-temurun kaum, diwariskan ke garis ibu/kemenakan) dan Harta Pusako Rendah (harta pencaharian, dapat diwariskan ke anak).",
+      "evidence": [
+        "context_2"
+      ],
+      "confidence": 0.85,
+      "assumptions": [
+        "A2"
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Inti konflik melibatkan benturan tiga sistem norma: hukum negara (kesetaraan gender), hukum adat (patrilineal), dan potensi hukum agama (misalnya Islam), yang masing-masing memiliki logika pembagian warisan berbeda.",
+      "evidence": [
+        "context_3"
+      ],
+      "confidence": 0.8,
+      "assumptions": [
+        "A3"
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1",
+    "U2"
+  ],
+  "open_questions": [
+    "Q1",
+    "Q2"
+  ]
+}

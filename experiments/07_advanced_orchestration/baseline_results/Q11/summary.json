@@ -1,0 +1,11 @@
+{
+  "query_id": "Q11",
+  "query": "Bagaimana kedudukan wasiat menurut KUHPerdata dan batasannya terhadap bagian mutlak ahli waris?",
+  "graph_data_path": "experiments/01_triple_extraction/result.json",
+  "timing_seconds": {
+    "total": 130.0238
+  },
+  "artifacts": {
+    "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results\\Q11\\final_synthesis.txt"
+  }
+}

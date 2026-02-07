@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "agent": "ALA",
+  "target": "NLA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "evidence_gap",
+      "description": "Klaim C1 menyatakan Pasal 119 KUHPerdata sebagai dasar sistem persatuan harta sebagai ketentuan default, namun tidak menyebutkan bahwa ketentuan ini hanya berlaku bagi mereka yang tunduk pada KUHPerdata (golongan Eropa dan Timur Asing non-Islam) berdasarkan Pasal 131 IS (Indische Staatsregeling). Bagi mayoritas penduduk Indonesia (golongan Bumi Putera), hukum perkawinan dan harta bersama diatur oleh hukum adat atau hukum Islam, kecuali mereka telah melakukan pencatatan perkawinan di bawah KUHPerdata. Ini adalah gap bukti yang signifikan karena mengabaikan kerangka berlakunya hukum perdata di Indonesia.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perbaikan konkret: Sebutkan bahwa Pasal 119 KUHPerdata berlaku berdasarkan sistem hukum yang dianut (golongan). Tegaskan bahwa bagi pasangan yang menikah secara adat atau Islam, ketentuan default harta bersama diatur oleh hukum adat atau Kompilasi Hukum Islam (KHI), bukan KUHPerdata."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C2",
+      "issue_type": "logic_gap",
+      "description": "Klaim C2 menyatakan anak tidak memiliki hak langsung atas harta bersama selama perkawinan, dan haknya baru timbul sebagai ahli waris. Pernyataan ini terlalu general dan mengabaikan situasi di mana harta bersama dapat dibagi atau diakhiri sebelum kematian (misalnya, melalui perceraian atau perjanjian pemisahan harta). Dalam perceraian, bagian harta bersama yang menjadi milik masing-masing orang tua kemudian menjadi harta pribadi mereka, dan anak dapat mewarisi dari harta tersebut jika orang tua meninggal. Logika bahwa hak anak 'hanya timbul setelah kematian' tidak sepenuhnya akurat karena hak waris anak melekat pada harta peninggalan (yang bisa berasal dari harta pribadi atau bagian dari harta bersama yang telah dipisah), bukan secara langsung pada harta bersama itu sendiri.",
+      "severity": "MINOR",
+      "suggested_fix": "Perbaikan konkret: Perjelas bahwa hak waris anak timbul atas harta peninggalan orang tua, yang dapat mencakup bagian dari harta bersama setelah dipisahkan (baik karena perceraian atau kematian). Tegaskan bahwa selama perkawinan berlangsung, anak memang tidak memiliki hak menguasai atau membagi harta bersama."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C3",
+      "issue_type": "overclaim",
+      "description": "Klaim C3 menyatakan bahwa di banyak komunitas adat, konsep harta bersama dipahami sebagai harta keluarga yang melibatkan hak moral anak. Meskipun ada kebenaran dalam pernyataan ini, klaim tersebut bersifat generalisasi yang berisiko overclaim. Hukum adat sangat beragam; di beberapa komunitas (misalnya, patrilineal), harta mungkin dianggap milik garis keturunan laki-laki dan anak perempuan tidak memiliki hak yang sama. Di komunitas lain, konsep 'hak moral' anak mungkin tidak diakui secara hukum, melainkan hanya sebagai norma sosial. Klaim ini perlu dibatasi dengan menyebutkan contoh spesifik atau mengakui variasi yang luas.",
+      "severity": "MINOR",
+      "suggested_fix": "Perbaikan konkret: Kualifikasi klaim dengan menyebutkan bahwa pemahaman tersebut bervariasi dan tidak universal. Berikan contoh konkret komunitas adat tertentu (misalnya, masyarakat Minangkabau yang matrilineal) di mana hak anak (khususnya perempuan) lebih diakui dalam harta pusaka, atau sebaliknya, komunitas di mana hak anak sangat terbatas."
+    }
+  ]
+}

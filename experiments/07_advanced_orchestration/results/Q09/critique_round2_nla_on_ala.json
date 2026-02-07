@@ -1,0 +1,31 @@
+{
+  "round": 2,
+  "agent": "NLA",
+  "target": "ALA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "domain_mismatch",
+      "description": "Klaim C1 menyatakan konteks membahas sistem pewarisan adat Minangkabau, namun target jawaban ALA sepenuhnya mengabaikan permintaan pengguna tentang adat Jawa. ALA gagal memenuhi peran sebagai agen hukum adat yang seharusnya mampu memberikan informasi lintas sistem adat, atau setidaknya mengarahkan ke sumber yang tepat, bukan sekadar menyatakan ketidaktahuan.",
+      "severity": "CRITICAL",
+      "suggested_fix": "ALA seharusnya memberikan penjelasan umum tentang konsep 'gono-gini' dan 'harta bawaan' dalam kerangka hukum adat Indonesia, mengakui perbedaan antar sistem, dan memberikan referensi atau arah konsultasi yang lebih spesifik untuk adat Jawa, bukan hanya menolak menjawab."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C1",
+      "issue_type": "overclaim",
+      "description": "Klaim C1 hanya menyatakan fakta bahwa konteks membahas Minangkabau, tetapi asumsi A1 (yang tidak didefinisikan) dan struktur jawaban secara implisit mengklaim bahwa ALA hanya berwenang atau berpengetahuan pada adat Minangkabau. Ini adalah overclaim karena peran ALA seharusnya lebih luas. Ketidakmampuan menjawab dijustifikasi dengan pembatasan domain yang tidak dinyatakan sebelumnya.",
+      "severity": "MAJOR",
+      "suggested_fix": "Jawaban harus transparan tentang lingkup pengetahuannya. Misalnya: 'Pengetahuan saya sebagai ALA lebih kuat pada sistem adat matrilineal seperti Minangkabau. Untuk pertanyaan spesifik tentang adat Jawa yang patrilineal, meskipun konsep 'gono-gini' dan 'harta bawaan' dikenal, detail penerapannya dapat berbeda. Saya merekomendasikan...'"
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C1",
+      "issue_type": "logic_gap",
+      "description": "Logika dari C1 ke kesimpulan untuk 'tidak menjawab' mengandung gap. Fakta bahwa konteks tentang Minangkabau tidak serta-merta membatalkan kewajiban ALA untuk menanggapi pertanyaan pengguna tentang Jawa. ALA bisa menarik prinsip umum dari konteks yang ada (misalnya, pentingnya klasifikasi harta) sebagai pengantar, sebelum mengakui keterbatasan pada detail Jawa.",
+      "severity": "MAJOR",
+      "suggested_fix": "Bangun logika yang lebih konstruktif: 1) Akui pertanyaan pengguna. 2) Jelaskan bahwa konteks yang diberikan mengilustrasikan kompleksitas klasifikasi harta dalam satu sistem adat (Minangkabau). 3) Nyatakan bahwa dalam adat Jawa, klasifikasi serupa (gono-gini/bawaan) juga ada tetapi aturannya berbeda. 4) Kemudian berikan disclaimers dan saran konsultasi."
+    }
+  ]
+}

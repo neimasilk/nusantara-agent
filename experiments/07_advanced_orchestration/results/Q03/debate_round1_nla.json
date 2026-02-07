@@ -1,0 +1,61 @@
+{
+  "round": 1,
+  "agent": "NLA",
+  "answer": "Konflik ini diselesaikan dengan mengidentifikasi status hukum pewaris dan klasifikasi jenis hartanya. Prinsip utamanya adalah asas personalitas hukum adat (Pasal 131 IS) dan yurisprudensi Mahkamah Agung. Jika pewaris masih terikat masyarakat adat Minangkabau, untuk harta pusako rendah berlaku hukum adat matrilineal (hak pada kemenakan). Jika pewaris telah meninggalkan lingkungan adatnya, atau untuk harta pencaharian (gono-gini), dapat diterapkan KUHPerdata/UU Perkawinan (hak pada anak kandung). Penyelesaian diawali dengan mediasi melibatkan tokoh adat, dan jika gagal, pengadilan akan memutus berdasarkan pembuktian atas dua faktor kunci tersebut.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Hukum yang berlaku bagi seseorang ditentukan oleh asas personalitas hukum adat (Pasal 131 IS), di mana hukum adat adalah hukum utama bagi masyarakat yang masih mempertahankannya.",
+      "evidence": [
+        "Pasal_131_IS",
+        "Putusan_MA_179_K_Sip_1961"
+      ],
+      "confidence": 0.95,
+      "assumptions": [
+        "Pasal 131 IS masih diakui sebagai dasar berlakunya hukum adat."
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Harta pusako rendah dalam masyarakat Minangkabau tunduk pada sistem kewarisan matrilineal, sehingga hak waris berada pada kemenakan (anak dari saudara perempuan), bukan anak kandung pewaris.",
+      "evidence": [
+        "Doktrin_Hukum_Adat_Minangkabau"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "Harta yang diperebutkan telah teridentifikasi dan terbukti sebagai harta pusako rendah, bukan harta pencaharian."
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Harta pencaharian (gono-gini) yang diperoleh selama perkawinan diatur UU No. 1/1974 dan menjadi harta bersama, yang pewarisannya dapat tunduk pada KUHPerdata, memberikan hak kepada anak kandung.",
+      "evidence": [
+        "UU_No_1_1974_Pasal_35_3",
+        "KUHPerdata_Pasal_852"
+      ],
+      "confidence": 0.95,
+      "assumptions": [
+        "UU No. 1/1974 berlaku bagi para pihak dan harta tersebut memenuhi definisi harta bersama."
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Pengadilan akan memeriksa status keterikatan pewaris pada hukum adat dan jenis harta untuk menentukan hukum yang berlaku, sebagaimana dijabarkan dalam yurisprudensi Mahkamah Agung.",
+      "evidence": [
+        "Putusan_MA_396_K_Pdt_1983"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "Putusan MA tersebut masih menjadi acuan dan fakta di persidangan dapat dibuktikan."
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Sejauh mana kriteria 'meninggalkan lingkungan hukum adat' ditafsirkan oleh pengadilan (misalnya: domisili, pola hidup, pernyataan diri).",
+    "U2: Batas dan bukti hukum untuk membedakan 'harta pusako rendah' dengan 'harta pencaharian' dalam praktik, terutama jika hartanya telah bercampur."
+  ],
+  "open_questions": [
+    "Q1: Apakah terdapat perkembangan yurisprudensi terbaru dari Mahkamah Agung yang mulai mengakui hak anak kandung atas harta pusako berdasarkan asas keadilan atau kebutuhan, meskipun pewaris masih terikat adat?",
+    "Q2: Bagaimana efektivitas mediasi yang melibatkan ninik mamak dalam menyelesaikan sengketa waris lintas generasi seperti ini di era modern?"
+  ]
+}

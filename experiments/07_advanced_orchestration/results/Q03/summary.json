@@ -1,0 +1,25 @@
+{
+  "query_id": "Q03",
+  "query": "Kasus waris tanah pusako rendah: anak kandung menuntut menurut KUHPerdata, kemenakan menuntut menurut adat Minangkabau. Bagaimana menyikapinya?",
+  "routing": {
+    "label": "consensus",
+    "scores": {
+      "national": 2,
+      "adat": 4,
+      "conflict": 0
+    },
+    "confidence": 0.55,
+    "method": "heuristic"
+  },
+  "graph_data_path": "experiments/01_triple_extraction/result.json",
+  "timing_seconds": {
+    "retrieval_parallel": 83.9897,
+    "debate": 268.3813,
+    "supervisor": 32.2016,
+    "total": 384.5726
+  },
+  "artifacts": {
+    "debate_summary": "experiments\\07_advanced_orchestration\\results\\Q03\\debate_summary.json",
+    "final_synthesis": "experiments\\07_advanced_orchestration\\results\\Q03\\final_synthesis.txt"
+  }
+}

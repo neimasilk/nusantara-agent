@@ -1,0 +1,31 @@
+{
+  "round": 2,
+  "agent": "ALA",
+  "target": "NLA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C2",
+      "issue_type": "logic_gap",
+      "description": "Klaim bahwa wasiat dibatasi oleh hak bagian mutlak (legitieme portie) 'ahli waris dalam garis lurus' tidak lengkap dan dapat menyesatkan. Pasal 913 KUHPerdata juga memberikan hak bagian mutlak kepada orang tua (ahli waris dalam garis lurus ke atas) jika tidak ada anak atau keturunannya. Jawaban NLA hanya menyebutkan orang tua di akhir klaim C4, tetapi klaim C2 yang menjadi dasar pembatasan wasiat tidak mencakup mereka, sehingga menciptakan kesan bahwa pembatasan hanya untuk anak.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perbaiki klaim C2 menjadi: 'Wasiat dibatasi oleh hak bagian mutlak (legitieme portie) ahli waris tertentu, terutama anak-anak (dan keturunannya) serta orang tua, sebagaimana diatur dalam Pasal 913 BW.'"
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C3",
+      "issue_type": "overclaim",
+      "description": "Klaim C3 menyatakan bagian mutlak untuk 'dua orang anak atau lebih bersama-sama berhak atas 2/3 dari seluruh harta peninggalan'. Pernyataan ini tidak akurat karena mengabaikan perhitungan 'bagian menurut hukum' (de legitieme portie wordt berekend naar den omvang der nalatenschap). Bagian 2/3 itu adalah dari seluruh harta peninggalan (bruto), tetapi pembagiannya tetap didasarkan pada bagian masing-masing menurut hukum (Pasal 913 ayat (2) BW). Penyederhanaan ini berisiko menimbulkan kesalahan hitung jika ada lebih dari dua anak.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perbaiki klaim C3 menjadi: 'Bagian mutlak untuk anak-anak adalah: (a) satu orang anak berhak atas 1/2 dari bagian menurut hukum; (b) jika ada dua orang anak atau lebih, mereka bersama-sama berhak atas 2/3 dari seluruh harta peninggalan, yang kemudian dibagi di antara mereka sesuai dengan bagian masing-masing menurut hukum (Pasal 913 ayat (2) BW).'"
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C4",
+      "issue_type": "evidence_gap",
+      "description": "Klaim C4 menyatakan 'dalam praktik, separuh dari harta bersama (jika dapat dibuktikan)' sebagai harta yang dapat diwasiatkan. Namun, klaim ini tidak didukung oleh bukti hukum yang kuat dari KUHPerdata. KUHPerdata (BW) menganut asas pemisahan harta. Konsep 'harta bersama' (gemeenschap) dalam konteks perkawinan diatur dalam Pasal 119 BW, tetapi sifatnya adalah persekutuan harta bawaan dan penghasilan. Testator hanya dapat mewasiatkan bagiannya dalam persekutuan tersebut setelah dilakukan pemisahan (scheiding). Klaim 'separuh' adalah penyederhanaan yang mungkin berlaku dalam yurisprudensi atau praktik, tetapi tidak secara eksplisit disebut dalam pasal-pasal BW yang dirujuk, sehingga memerlukan penjelasan sumber yang lebih spesifik.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perbaiki klaim C4 dengan bukti yang lebih tepat: 'Wasiat hanya dapat mengatur harta milik pribadi testator. Untuk harta yang merupakan objek persekutuan perkawinan (Pasal 119 BW), testator hanya dapat mewasiatkan bagiannya setelah dilakukan pemisahan harta (scheiding). Dalam praktik, bagian testator sering dianggap setengah, tetapi hal ini bergantung pada pembuktian dan perjanjian perkawinan (Pasal 149 BW).' Sertakan referensi ke Pasal 149 dan yurisprudensi terkait (jika ada)."
+    }
+  ]
+}

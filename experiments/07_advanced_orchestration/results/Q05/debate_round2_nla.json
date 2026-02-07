@@ -1,0 +1,84 @@
+{
+  "round": 2,
+  "agent": "NLA",
+  "answer": "Berdasarkan Pasal 1320 KUHPerdata, syarat sah perjanjian ada empat, terbagi menjadi dua kelompok:\n\n**1. Syarat Subjektif (menyangkut subjek):**\n   a. **Kesepakatan** (sepakat mereka yang mengikatkan dirinya).\n   b. **Kecakapan** (kecakapan untuk membuat suatu perjanjian).\n\n**2. Syarat Objektif (menyangkut objek):**\n   c. **Objek tertentu** (suatu hal tertentu).\n   d. **Sebab yang halal** (suatu sebab yang halal).\n\n**Dampak jika syarat tidak terpenuhi:**\n- Jika **syarat subjektif** (a atau b) tidak terpenuhi, perjanjian **dapat dibatalkan** (*voidable*). Perjanjian tetap berlaku hingga diajukan pembatalan ke pengadilan oleh pihak yang berhak.\n- Jika **syarat objektif** (c atau d) tidak terpenuhi, perjanjian **batal demi hukum** (*void*). Perjanjian dianggap tidak pernah ada sejak awal dan tidak menimbulkan akibat hukum.\n\n**Kaitannya dengan Hak Anak & Harta Pencaharian:**\n- **Hak Anak Kandung:** Perjanjian yang menghilangkan hak dasar anak (seperti nafkah) dapat dianggap memiliki **sebab yang tidak halal** dan dibatalkan.\n- **Harta Pencaharian:** Aturan default KUHPerdata adalah **pemisahan harta bawaan dengan persatuan penghasilan**. Untuk menyimpanginya, dapat dibuat **Perjanjian Kawin** (Prenuptial Agreement) sebelum nikah dengan akta notaris, yang juga harus memenuhi syarat Pasal 1320 KUHPerdata.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Syarat sah perjanjian menurut Pasal 1320 KUHPerdata ada empat: kesepakatan, kecakapan, objek tertentu, dan sebab yang halal.",
+      "evidence": [
+        "Pasal_1320_KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "KUHPerdata merupakan sumber hukum perjanjian yang berlaku."
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Jika syarat subjektif (kesepakatan atau kecakapan) tidak terpenuhi, perjanjian dapat dibatalkan (voidable).",
+      "evidence": [
+        "Doktrin_hukum_perdata",
+        "Yurisprudensi_tentang_pembatalan"
+      ],
+      "confidence": 0.95,
+      "assumptions": [
+        "Penafsiran Pasal 1320 KUHPerdata sesuai dengan doktrin dan yurisprudensi yang berlaku."
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Jika syarat objektif (objek tertentu atau sebab yang halal) tidak terpenuhi, perjanjian batal demi hukum (void).",
+      "evidence": [
+        "Doktrin_hukum_perdata",
+        "Yurisprudensi_tentang_kebatalan"
+      ],
+      "confidence": 0.95,
+      "assumptions": [
+        "Penafsiran Pasal 1320 KUHPerdata sesuai dengan doktrin dan yurisprudensi yang berlaku."
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Perjanjian yang menghilangkan hak dasar anak (seperti nafkah) dapat dibatalkan karena dianggap memiliki sebab yang tidak halal.",
+      "evidence": [
+        "Pasal_1337_KUHPerdata",
+        "Doktrin_hukum_keluarga"
+      ],
+      "confidence": 0.85,
+      "assumptions": [
+        "Hak nafkah anak merupakan kewajiban hukum orang tua yang dilindungi."
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Aturan harta perkawinan default dalam KUHPerdata adalah pemisahan harta bawaan dengan persatuan penghasilan.",
+      "evidence": [
+        "Pasal_119_dan_128_KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Tidak ada perjanjian kawin yang menyimpang."
+      ]
+    },
+    {
+      "id": "C6",
+      "statement": "Perjanjian Kawin (Prenuptial Agreement) untuk menyimpangi aturan default harus dibuat sebelum nikah dengan akta notaris dan memenuhi syarat Pasal 1320 KUHPerdata.",
+      "evidence": [
+        "Pasal_139_KUHPerdata"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "Perjanjian tersebut tidak melanggar ketertiban umum atau kesusilaan."
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Batasan 'sebab yang halal' dapat berkembang melalui yurisprudensi, terutama terkait perlindungan hak anak dan ketertiban umum.",
+    "U2: Penerapan konsep 'gono-gini' secara spesifik mungkin merujuk pada hukum adat setempat, yang tidak diatur langsung dalam KUHPerdata."
+  ],
+  "open_questions": [
+    "Q1: Bagaimana mekanisme dan tenggat waktu pengajuan pembatalan perjanjian yang dapat dibatalkan secara spesifik?",
+    "Q2: Dalam konteks harta bersama, bagaimana pembuktian dan pengaturan detail harta bawaan vs. penghasilan jika tidak ada perjanjian kawin?"
+  ]
+}

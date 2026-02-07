@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "agent": "NLA",
+  "target": "ALA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "evidence_gap",
+      "description": "Klaim C1 menyatakan mamak 'memiliki otoritas untuk mengelola harta pusako tinggi... secara kolektif' dan 'bertanggung jawab membimbing kemenakan'. Namun, bukti yang dirujuk (context_1, context_2) tidak disajikan dalam prompt, sehingga tidak dapat diverifikasi apakah kedua peran tersebut (pengelolaan harta dan pembimbingan) memang didukung secara eksplisit oleh konteks yang sama. Tanpa bukti yang terlihat, klaim ini memiliki celah bukti.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perbaikan konkret: ALA harus memastikan setiap klaim disertai kutipan atau ringkasan bukti yang spesifik dari konteks yang diberikan, atau jika konteks tidak disediakan, mengakui keterbatasan ini dalam asumsi/ketidakpastian."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C2",
+      "issue_type": "overclaim",
+      "description": "Klaim C2 menyatakan hak anak dalam hukum nasional 'terutama atas harta pusako rendah (harta pencaharian)'. Ini adalah overclaim karena hukum nasional (KUHPerdata/UU Perkawinan) tidak menggunakan terminologi 'pusako rendah'. Hukum nasional mengatur hak waris anak atas harta bawaan dan harta bersama orang tua, yang mungkin saja mencakup aset yang dalam adat dikategorikan sebagai 'pusako tinggi' jika diperoleh secara turun-temurun. Klaim ini mencampuradukkan domain konsep adat dengan terminologi hukum positif.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perbaikan konkret: Reformulasi klaim menjadi: 'Dalam perspektif adat Minangkabau, hak anak dalam hukum nasional seringkali disepadankan dengan klaim atas harta pencaharian orang tua (pusako rendah), meskipun hukum nasional sendiri tidak membedakan berdasarkan kategori pusako.'"
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C3",
+      "issue_type": "logic_gap",
+      "description": "Klaim C3 menyimpulkan bahwa adat Minangkabau membedakan hak kolektif kemenakan atas pusako tinggi dan hak individual anak atas pusako rendah. Namun, kesimpulan ini langsung dijadikan klaim faktual tanpa menjelaskan hubungan logis atau bukti yang menghubungkan premis (C1 dan C2) dengan kesimpulan ini. Terdapat lompatan logika dari deskripsi peran mamak dan hak anak nasional ke pernyataan bahwa adat 'membedakan secara tegas' kedua hak tersebut.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perbaikan konkret: Perkuat klaim C3 dengan menunjukkan bukti langsung dari konteks (context_5, context_6) yang secara eksplisit menyatakan pembedaan tegas tersebut, atau susun ulang argumen sehingga C3 menjadi premis yang didukung bukti, bukan kesimpulan tersirat."
+    }
+  ]
+}

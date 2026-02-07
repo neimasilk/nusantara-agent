@@ -1,0 +1,31 @@
+{
+  "round": 2,
+  "agent": "NLA",
+  "target": "ALA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa konsep gono-gini 'tidak dikenal' dalam sistem adat Minangkabau yang asli adalah generalisasi yang berlebihan. Meskipun bukan konsep asli, interaksi dengan hukum nasional dan praktik sosial telah membuat pemahaman tentang pembagian harta perkawinan menjadi lebih kompleks. Pernyataan ini mengabaikan kemungkinan adanya akulturasi atau reinterpretasi konsep dalam masyarakat Minangkabau kontemporer.",
+      "severity": "MAJOR",
+      "suggested_fix": "Ubah klaim menjadi lebih bernuansa, misalnya: 'Konsep harta bersama (gono-gini) dalam bentuknya yang setara 50:50 bukan merupakan konsep asli dalam sistem adat Minangkabau, yang lebih menekankan pembedaan berdasarkan asal-usul harta.'"
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C3",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa pemahaman sosial di komunitas adat Minangkabau 'bertentangan dengan filosofi gono-gini' tidak didukung oleh bukti yang cukup dalam konteks sumber. Pernyataan ini bersifat spekulatif dan mengasumsikan adanya oposisi biner, padahal dalam praktiknya mungkin terdapat tumpang tindih atau negosiasi antara sistem adat dan konsep hukum nasional.",
+      "severity": "MAJOR",
+      "suggested_fix": "Lunakkan klaim dan hubungkan dengan ketidakpastian yang telah diidentifikasi (U1). Misalnya: 'Pemahaman sosial tradisional memisahkan harta berdasarkan asal-usul, yang pada prinsipnya berbeda dengan filosofi pembagian setara dalam gono-gini, meskipun dalam praktik mungkin terjadi adaptasi.'"
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C2",
+      "issue_type": "domain_mismatch",
+      "description": "Klaim tentang pembedaan Harta Pusako Tinggi dan Rendah, meskipun akurat secara konseptual, disajikan sebagai fakta statis tanpa konteks dinamika sosial. Penjelasan ini tidak mengakui bahwa klasifikasi dan pengelolaan harta ini bisa berubah seiring waktu, dipengaruhi faktor seperti migrasi, ekonomi, dan interaksi dengan hukum negara.",
+      "severity": "MINOR",
+      "suggested_fix": "Tambahkan catatan tentang sifat dinamis dari klasifikasi adat ini. Misalnya, sisipkan: 'Pembedaan ini merupakan kerangka ideal; dalam realitas sosial, garis antara kedua jenis harta ini bisa menjadi kabur, terutama di perkotaan atau dalam keluarga yang telah lama meninggalkan kampung halaman.'"
+    }
+  ]
+}

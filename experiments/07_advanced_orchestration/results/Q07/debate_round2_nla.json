@@ -1,0 +1,51 @@
+{
+  "round": 2,
+  "agent": "NLA",
+  "answer": "Konflik norma dalam kasus ini adalah benturan antara hukum adat Bali (patrilineal) yang diakui konstitusi dan hukum nasional (KUHPerdata) yang egaliter. Penyelesaiannya bergantung pada klasifikasi harta warisan: (1) Jika tanah adalah 'druwe' (harta asal turun-temurun patrilineal), hukum adat Bali memiliki kedudukan kuat. (2) Jika tanah adalah harta pencaharian ('gono-gini') orang tua, maka KUHPerdata berlaku, di mana anak perempuan berhak atas bagian yang sama. Perempuan pemohon memiliki dasar hukum kuat dengan membuktikan tanah sebagai harta pencaharian dan mengajukan gugatan ke Pengadilan Negeri berdasarkan KUHPerdata.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Konflik norma utama adalah antara hukum adat Bali (patrilineal) yang diakui Pasal 18B UUD 1945 dan hukum nasional (KUHPerdata Pasal 852) yang memberikan hak waris sama pada semua anak.",
+      "evidence": [
+        "Pasal 18B UUD 1945",
+        "Pasal 852 KUHPerdata"
+      ],
+      "confidence": 0.95,
+      "assumptions": [
+        "MDP Bali 2010 merefleksikan hukum adat patrilineal Bali yang masih berlaku"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Penyelesaian konflik ditentukan oleh jenis harta warisan: hukum adat mengatur 'druwe' (harta asal turun-temurun), sedangkan KUHPerdata mengatur harta pencaharian ('gono-gini').",
+      "evidence": [
+        "Doktrin hukum adat Bali",
+        "Pasal 119 KUHPerdata tentang harta bersama"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "Tanah warisan dapat diklasifikasikan secara jelas sebagai 'druwe' atau harta pencaharian"
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Perempuan pemohon memiliki argumen hukum kuat untuk menuntut warisan jika dapat membuktikan tanah tersebut adalah harta pencaharian orang tuanya, bukan 'druwe' murni.",
+      "evidence": [
+        "Pasal 852 dan 119 KUHPerdata",
+        "Yurisprudensi MA tentang harta bersama"
+      ],
+      "confidence": 0.85,
+      "assumptions": [
+        "Pemohon dapat menyediakan bukti atas status harta tersebut"
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Sejauh mana Pengadilan Negeri akan mengakui dan menerapkan MDP Bali 2010 sebagai hukum yang hidup ('living law') dalam praktik.",
+    "U2: Apakah terdapat putusan pengadilan sebelumnya di Bali dengan fakta serupa yang dapat dijadikan acuan (yurisprudensi)."
+  ],
+  "open_questions": [
+    "Q1: Apa bukti konkret yang dapat digunakan untuk membedakan 'tanah keluarga' sebagai 'druwe' turun-temurun atau sebagai harta pencaharian orang tua?",
+    "Q2: Apakah telah ada upaya mediasi di tingkat Desa Pakraman sebelum kasus ini diajukan, dan apa hasilnya?"
+  ]
+}

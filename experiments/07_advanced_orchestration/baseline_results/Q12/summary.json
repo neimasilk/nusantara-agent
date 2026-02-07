@@ -1,0 +1,11 @@
+{
+  "query_id": "Q12",
+  "query": "Berikan penjelasan netral tentang pluralisme hukum di Indonesia dan mengapa bisa terjadi lebih dari satu norma berlaku.",
+  "graph_data_path": "experiments/01_triple_extraction/result.json",
+  "timing_seconds": {
+    "total": 109.1167
+  },
+  "artifacts": {
+    "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results\\Q12\\final_synthesis.txt"
+  }
+}

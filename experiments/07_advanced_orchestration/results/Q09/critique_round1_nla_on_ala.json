@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "agent": "NLA",
+  "target": "ALA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "domain_mismatch",
+      "description": "Agent ALA salah mengidentifikasi dirinya sebagai 'Adat Law Agent' yang hanya membahas konteks Minangkabau, padahal peran yang diminta adalah 'Adat Law Agent (ALA)' yang harus mampu menjawab pertanyaan tentang hukum adat Indonesia secara umum, termasuk Jawa. Ini menunjukkan kegagalan dalam memahami ruang lingkup peran yang seharusnya.",
+      "severity": "CRITICAL",
+      "suggested_fix": "ALA seharusnya mengakui perannya sebagai ahli hukum adat dan memberikan jawaban berdasarkan pengetahuan umum tentang hukum adat Indonesia, atau setidaknya mengarahkan pada prinsip-prinsip umum perbedaan harta bersama dan harta bawaan yang dikenal dalam berbagai sistem hukum adat."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C1",
+      "issue_type": "logic_gap",
+      "description": "Kesimpulan bahwa 'tidak dapat memberikan jawaban yang akurat' karena konteks hanya tentang Minangkabau adalah tidak logis. Seorang ahli hukum adat (ALA) diharapkan memiliki pengetahuan dasar lintas budaya adat atau kemampuan untuk menganalogikan konsep. Pertanyaan tentang 'gonogini' dan 'harta bawaan' adalah konsep hukum perdata adat yang cukup umum, terutama di Jawa, dan seharusnya dapat dijelaskan tanpa bergantung sepenuhnya pada konteks yang diberikan.",
+      "severity": "MAJOR",
+      "suggested_fix": "ALA seharusnya menjawab pertanyaan langsung dengan penjelasan umum: 'Gono-gini' (harta bersama) adalah harta yang diperoleh selama perkawinan, sedangkan 'harta bawaan' adalah harta yang dimiliki masing-masing pihak sebelum menikah. Kemudian, tambahkan catatan bahwa penerapannya bisa berbeda detailnya di berbagai komunitas adat."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C1",
+      "issue_type": "overclaim",
+      "description": "Agent ALA membuat klaim implisit bahwa pengetahuannya terbatas hanya pada konteks yang diberikan (Minangkabau), yang merupakan pembatasan yang tidak wajar untuk seorang 'Adat Law Agent'. Seorang agen dengan gelar tersebut diharapkan memiliki pengetahuan yang lebih luas atau setidaknya metodologi untuk menangani pertanyaan di luar konteks spesifik yang disediakan.",
+      "severity": "MAJOR",
+      "suggested_fix": "ALA seharusnya tidak membatasi diri secara ketat pada konteks. Sebagai gantinya, jawaban bisa dimulai dengan: 'Berdasarkan pengetahuan umum hukum adat Indonesia, khususnya di Jawa...' dan kemudian memberikan penjelasan. Jika ada ketidakpastian, hal itu dapat dicantumkan di bagian 'uncertainties' tanpa menyebabkan kegagalan total dalam memberikan jawaban inti."
+    }
+  ]
+}

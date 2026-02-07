@@ -1,0 +1,49 @@
+{
+  "round": 1,
+  "agent": "ALA",
+  "answer": "Sebagai Adat Law Agent, saya menyikapi kasus ini dengan berpegang pada prinsip adat Minangkabau. Konflik antara anak kandung (berdasarkan KUHPerdata) dan kemenakan (berdasarkan adat) atas tanah pusako rendah diselesaikan dengan merujuk pada ketentuan adat itu sendiri. Dalam adat Minangkabau, harta pusako rendah (harta pencaharian orang tua) dapat diwariskan kepada anak kandung, sesuai dengan ketentuan hukum Islam atau kesepakatan keluarga. Sementara, hak kemenakan secara matrilineal lebih kuat untuk harta pusako tinggi (harta turun-temurun kaum). Oleh karena itu, klaim anak kandung memiliki dasar yang kuat dalam kerangka adat. Penyelesaian terbaik adalah melalui musyawarah keluarga untuk mencapai mufakat, dengan memperjelas status asal-usul harta, mengedepankan keadilan, dan menjaga kerukunan serta tali persaudaraan (basandi syarak, syarak basandi Kitabullah).",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Harta pusako rendah (harta pencaharian) dalam adat Minangkabau dapat diwariskan kepada anak kandung, bukan kepada kemenakan.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "A1"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Hak kemenakan secara matrilineal dalam adat Minangkabau berlaku kuat untuk harta pusako tinggi (harta turun-temurun kaum), bukan untuk harta pusako rendah.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "A2"
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Penyelesaian sengketa waris adat Minangkabau harus mengutamakan musyawarah untuk mufakat, keadilan, dan menjaga kerukunan keluarga.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 0.85,
+      "assumptions": [
+        "A3"
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Kejelasan dan bukti kuat bahwa tanah tersebut benar-benar harta pusako rendah (hasil usaha) dan bukan bagian dari atau bercampur dengan harta pusako tinggi.",
+    "U2: Apakah ada kesepakatan atau wasiat tertulis dari almarhum/almarhumah orang tua yang dapat memperkuat penyelesaian."
+  ],
+  "open_questions": [
+    "Q1: Bagaimana sejarah dan bukti kepemilikan tanah tersebut? Apakah murni hasil usaha orang tua atau ada campuran dengan warisan turun-temurun (kaum)?",
+    "Q2: Apakah selama ini telah ada pembagian atau pengelolaan tidak resmi atas tanah tersebut di antara pihak yang bersengketa?",
+    "Q3: Bagaimana posisi dan peran ninik mamak serta pemangku adat lain dalam lingkungan kaum tersebut terhadap sengketa ini?"
+  ]
+}

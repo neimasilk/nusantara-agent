@@ -71,6 +71,7 @@ def run_experiment(
     graph_data_path: str,
     output_dir: Path,
     max_rounds: int,
+    limit: int,
 ) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     queries = _load_queries(query_file)
@@ -80,6 +81,9 @@ def run_experiment(
 
     run_index = []
 
+    if limit > 0:
+        queries = queries[:limit]
+
     for item in queries:
         query_id = item.get("id", "Q")
         query = item.get("query", "").strip()
@@ -88,6 +92,10 @@ def run_experiment(
 
         case_dir = output_dir / query_id
         case_dir.mkdir(parents=True, exist_ok=True)
+        summary_path = case_dir / "summary.json"
+        if summary_path.exists():
+            run_index.append(json.loads(summary_path.read_text(encoding="utf-8")))
+            continue
 
         t0 = time.perf_counter()
         routing = route_query(query, use_llm=False)
@@ -135,7 +143,7 @@ def run_experiment(
             },
         }
 
-        (case_dir / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+        summary_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
         run_index.append(summary)
 
     (output_dir / "run_index.json").write_text(
@@ -162,6 +170,7 @@ if __name__ == "__main__":
         help="Folder output hasil eksperimen",
     )
     parser.add_argument("--rounds", type=int, default=2, help="Jumlah round debate")
+    parser.add_argument("--limit", type=int, default=0, help="Batasi jumlah query (0 = semua)")
 
     args = parser.parse_args()
 
@@ -170,4 +179,5 @@ if __name__ == "__main__":
         graph_data_path=args.graph_data,
         output_dir=Path(args.output_dir),
         max_rounds=args.rounds,
+        limit=args.limit,
     )

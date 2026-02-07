@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "agent": "ALA",
+  "target": "NLA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa kewenangan pengasuhan dan tanggung jawab utama dalam adat Minangkabau berada pada mamak merupakan generalisasi yang berlebihan. Dalam praktik adat, peran ayah kandung (urang sumando) tetap signifikan dalam pengasuhan, pendidikan, dan pemenuhan nafkah lahiriah anak, meskipun dalam konteks kekerabatan matrilineal. Mamak lebih dominan dalam urusan adat, harta pusaka, dan pendidikan karakter sebagai bagian dari kaum. Klaim ini berpotensi menciptakan kesan pemisahan peran yang terlalu ketat dan mengabaikan tanggung jawab bersama dalam pengasuhan anak.",
+      "severity": "MAJOR",
+      "suggested_fix": "Klaim seharusnya diperhalus untuk mencerminkan pembagian peran yang lebih kompleks: 'Dalam adat Minangkabau, kewenangan utama atas urusan adat, pendidikan karakter, dan pengurusan harta pusaka berada pada mamak, sementara tanggung jawab pengasuhan dan nafkah sehari-hari melibatkan kedua orang tua, dengan ayah kandung memiliki peran penting dalam konteks rumah tangga.'"
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C2",
+      "issue_type": "evidence_gap",
+      "description": "Klaim tentang hak waris anak dalam adat Minangkabau tidak secara eksplisit membedakan antara jenis harta, yang merupakan elemen krusial. Harta dalam adat Minangkabau dibedakan menjadi harta pusaka tinggi (tidak dapat dibagi, diwariskan menurut garis matrilineal) dan harta pencaharian (harta suami-istri). Hak anak atas harta pencaharian orang tuanya (terutama dari ayah) dapat diakui, meskipun seringkali melalui mekanisme tertentu (seperti hibah/wasiat) dan mungkin bersaing dengan hak kemanakan dari pihak ayah. Klaim yang disajikan terlalu menyederhanakan kompleksitas ini dan berpotensi menyesatkan.",
+      "severity": "MAJOR",
+      "suggested_fix": "Klaim harus diperjelas dengan membedakan jenis harta: 'Dalam adat Minangkabau, hak anak atas harta pusaka tinggi kaum ibunya bersifat kolektif melalui garis matrilineal. Sementara itu, hak atas harta pencaharian (gono-gini) orang tuanya, khususnya dari ayah, dapat diakui tetapi sering tunduk pada aturan adat yang mungkin mengutamakan kemanakan ayah (anak dari saudara perempuan ayah), menciptakan potensi konflik dengan hak waris individual menurut hukum nasional.'"
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C3",
+      "issue_type": "domain_mismatch",
+      "description": "Perbandingan antara 'hukum nasional' dan 'adat Minangkabau' sebagai dua sistem yang terpisah dan setara menimbulkan masalah domain. Dalam konteks Indonesia, hukum adat (termasuk Minangkabau) secara konstitusional diakui dan hidup berdampingan dengan hukum nasional, tetapi dalam bidang tertentu seperti kewarisan dan perkawinan, hukum nasional (UU No. 1 Tahun 1974, KUHPerdata) seringkali diposisikan sebagai hukum yang berlaku umum. Klaim tidak menyentuh status hierarkis atau mekanisme penyelesaian konflik ketika kedua sistem ini berbenturan dalam kasus konkret, yang justru merupakan inti persoalan.",
+      "severity": "CRITICAL",
+      "suggested_fix": "Analisis harus mengakui kerangka hukum pluralistik Indonesia. Klaim atau kesimpulan perlu ditambahkan: 'Perbedaan mendasar ini sering menimbulkan konflik hukum dalam praktik. Hukum nasional, sebagai hukum yang berlaku umum, dapat mengesampingkan aturan adat jika diajukan ke pengadilan negara, meskipun pengadilan mungkin mempertimbangkan nilai-nilai adat. Pemahaman tentang interaksi dan potensi benturan antara kedua sistem ini penting untuk analisis yang komprehensif.'"
+    }
+  ]
+}

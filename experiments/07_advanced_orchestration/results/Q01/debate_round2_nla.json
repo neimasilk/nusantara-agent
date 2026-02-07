@@ -1,0 +1,51 @@
+{
+  "round": 2,
+  "agent": "NLA",
+  "answer": "Berdasarkan KUHPerdata, pembagian waris jika pewaris (suami) meninggalkan istri dan dua anak kandung, tanpa wasiat, adalah sebagai berikut:\n\n1. **Tahap Pemisahan Harta Bersama (Gono-Gini):** Harta bersama suami-istri dibagi dua. Separuh menjadi hak mutlak istri yang masih hidup. Separuh lainnya, ditambah seluruh harta pribadi suami (jika ada), menjadi harta warisan yang akan dibagi.\n2. **Tahap Pembagian Harta Warisan:** Dari total harta warisan tersebut:\n   - **Istri** mendapat bagian pasti (legitieme portie) sebesar **1/4 (seperempat)**.\n   - **Sisa 3/4 (tiga perempat)** dibagi sama rata kepada **kedua anak**. Dengan demikian, masing-masing anak mendapat **3/8** dari harta warisan.\n\n**Ilustrasi:** Jika total harta bersama Rp1 M, maka istri mendapat Rp500 juta dari pemisahan harta. Harta warisan suami Rp500 juta. Istri mendapat Rp125 juta (1/4) sebagai ahli waris, dan masing-masing anak mendapat Rp187,5 juta (3/8). Total akhir istri Rp625 juta, masing-masing anak Rp187,5 juta.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Harta bersama (gono-gini) suami-istri harus dipisahkan terlebih dahulu, di mana istri berhak atas 1/2 bagian sebagai miliknya sendiri.",
+      "evidence": [
+        "Pasal 119 KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A1",
+        "A2"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Setelah pemisahan, harta warisan (bagian suami dari harta bersama plus harta pribadinya) dibagikan kepada ahli waris Golongan I (istri dan anak).",
+      "evidence": [
+        "Pasal 832-833 KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A1",
+        "A2"
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Dalam Golongan I, istri yang ditinggalkan berhak atas 1/4 bagian dari harta warisan, sementara sisanya dibagi rata kepada semua anak.",
+      "evidence": [
+        "Pasal 852a KUHPerdata (SEMA No. 3/1963)"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A1",
+        "A2",
+        "A3"
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Apakah ada harta pribadi (bawaan/hibah/warisan) milik suami atau istri yang perlu diperhitungkan secara terpisah? Analisis utama mengasumsikan seluruh harta adalah harta bersama."
+  ],
+  "open_questions": [
+    "Q1: Bagaimana jika salah satu atau kedua anak tersebut adalah anak luar kawin yang telah diakui? Bagaimana kedudukan dan bagian waris mereka?",
+    "Q2: Apa langkah hukum yang harus ditempuh untuk memperoleh kepastian dan eksekusi pembagian ini (misalnya, melalui penetapan ahli waris di Pengadilan Negeri)?"
+  ]
+}

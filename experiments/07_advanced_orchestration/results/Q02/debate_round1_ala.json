@@ -1,0 +1,57 @@
+{
+  "round": 1,
+  "agent": "ALA",
+  "answer": "Berdasarkan adat Minangkabau, ketika seorang mamak meninggal, hak atas Pusako Tinggi (harta warisan turun-temurun) tidak berpindah kepada ahli waris pribadinya (seperti istri atau anak kandung). Pusako Tinggi tetap menjadi milik kolektif kaum (klan matrilineal). Yang berhak melanjutkan kepemilikan dan pengelolaannya adalah kemenakan (anak dari saudara perempuan almarhum) dalam kaum yang sama, dengan otoritas pengelolaan beralih kepada mamak kepala waris berikutnya.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Pusako Tinggi adalah harta warisan turun-temurun yang dimiliki secara kolektif oleh kaum (klan matrilineal).",
+      "evidence": [
+        "source_context_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A1"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Ketika seorang mamak meninggal, Pusako Tinggi tidak menjadi hak pribadi ahli waris pribadinya (istri/anak kandung).",
+      "evidence": [
+        "source_context_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A2"
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Yang berhak melanjutkan kepemilikan dan pengelolaan Pusako Tinggi adalah kemenakan (anak dari saudara perempuannya) dalam kaum yang sama.",
+      "evidence": [
+        "source_context_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A3"
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Otoritas pengelolaan Pusako Tinggi beralih kepada mamak kepala waris berikutnya dalam kaum.",
+      "evidence": [
+        "source_context_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A4"
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Tidak ada ketidakpastian signifikan dalam konteks yang diberikan, karena penjelasan bersifat umum dan normatif."
+  ],
+  "open_questions": [
+    "Q1: Bagaimana mekanisme penyelesaian sengketa jika terjadi perselisihan antar kemenakan atau antara kemenakan dengan ahli waris pribadi mamak terkait pengelolaan Pusako Tinggi?"
+  ]
+}

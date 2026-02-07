@@ -1,0 +1,31 @@
+{
+  "round": 2,
+  "agent": "NLA",
+  "target": "ALA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C2",
+      "issue_type": "overclaim",
+      "description": "Klaim menyatakan bahwa hak atas Pusako Tinggi 'beralih kepada kemenakan' secara umum. Ini terlalu menyederhanakan dan dapat menyesatkan. Dalam sistem matrilineal Minangkabau, hak kepemilikan Pusako Tinggi tetap pada kaum secara kolektif, bukan 'beralih' ke individu kemenakan. Yang terjadi adalah peralihan peran pengelolaan (hak pakai, hak mengatur) kepada mamak pengganti atau kemenakan laki-laki yang ditunjuk, sementara hak milik tetap pada kaum.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perbaiki klaim menjadi: 'Ketika seorang mamak meninggal, hak pengelolaan dan tanggung jawab atas Pusako Tinggi beralih kepada mamak kepala waris berikutnya atau kemenakan laki-laki yang ditunjuk dalam kaum yang sama, sementara hak kepemilikan kolektif tetap melekat pada kaum dan tidak menjadi hak ahli waris pribadinya.'"
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C3",
+      "issue_type": "evidence_gap",
+      "description": "Klaim menyebutkan 'hak kepemilikan bersama tetap ada pada anggota perempuan kaum' sebagai bagian dari C3, namun pernyataan ini tidak didukung oleh evidence yang dirujuk (source_id_1). Tanpa bukti yang jelas, klaim tentang peran spesifik 'anggota perempuan' dalam kepemilikan kolektif merupakan asumsi yang perlu diverifikasi.",
+      "severity": "MAJOR",
+      "suggested_fix": "Hapus bagian 'sementara hak kepemilikan bersama tetap ada pada anggota perempuan kaum' dari klaim C3, atau cari dan sertakan sumber yang secara spesifik mendukung peran perempuan dalam kepemilikan Pusako Tinggi. Klaim dapat disederhanakan menjadi: 'Pengelolaan Pusako Tinggi setelah mamak meninggal dilakukan oleh mamak kepala waris berikutnya dalam kaum.'"
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C1",
+      "issue_type": "domain_mismatch",
+      "description": "Klaim mendefinisikan 'kaum' sebagai 'klan matrilineal'. Istilah 'klan' dalam antropologi sering merujuk pada kelompok kekerabatan yang lebih besar dan longgar. Dalam konteks Minangkabau, 'kaum' lebih spesifik merujuk pada kelompok kekerabatan matrilineal terkecil (sub-suku), yang terdiri dari beberapa paruik (rumah gadang). Penggunaan istilah 'klan' dapat menyebabkan kesalahpahaman tentang skala dan struktur kelompok pemilik Pusako Tinggi.",
+      "severity": "MINOR",
+      "suggested_fix": "Perbaiki definisi untuk lebih akurat: 'Pusako Tinggi adalah harta warisan turun-temurun yang dimiliki secara kolektif oleh kaum (kelompok kekerabatan matrilineal terkecil dalam struktur suku) dalam adat Minangkabau.'"
+    }
+  ]
+}
