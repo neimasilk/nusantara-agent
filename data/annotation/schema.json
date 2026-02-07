@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Nusantara-Agent Ground Truth Schema",
+  "description": "Schema untuk data gold standard hasil annotasi manusia",
+  "type": "object",
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "source_document": { "type": "string" },
+        "paragraph_id": { "type": "string" },
+        "domain": { "enum": ["minangkabau", "bali", "jawa", "nasional"] },
+        "annotator_id": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" }
+      },
+      "required": ["source_document", "paragraph_id", "domain", "annotator_id"]
+    },
+    "triples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "head": { "type": "string" },
+          "relation": { "type": "string" },
+          "tail": { "type": "string" },
+          "category": { "enum": ["Warisan", "Tanah", "Otoritas", "Status", "Prosedur", "Lainnya"] },
+          "confidence": { "type": "number", "minimum": 1.0, "maximum": 1.0 },
+          "notes": { "type": "string" }
+        },
+        "required": ["head", "relation", "tail", "category", "confidence"]
+      }
+    }
+  },
+  "required": ["metadata", "triples"]
+}

@@ -153,6 +153,19 @@ Living document yang mencatat setiap kegagalan, hasil negatif, dan pendekatan ya
 - **Tindakan:** ACKNOWLEDGED
 - **Detail Tindakan:** Analisis failure mode, perbaiki prompt debat, tambah evidence grounding, dan validasi ulang dengan human annotation.
 
+### F-010: Auto-Annotation Drift Risk pada Exp 06 Bootstrap
+
+- **Tanggal:** 2026-02-07
+- **Eksperimen:** 06_independent_eval (bootstrap fase otomatis)
+- **Kategori:** LIMITATION_DISCOVERED
+- **Severity:** MAJOR
+- **Deskripsi:** Untuk meminimalkan intervensi manusia, 1000 file anotasi di-generate dan diisi secara otomatis (Kimi/DeepSeek + fallback replikasi domain). Ini mempercepat skala, tetapi menciptakan risiko homogenisasi label dan bias model pada pseudo-gold annotations.
+- **Expected vs Actual:** Expected: anotasi multi-annotator mencerminkan variasi judgment manusia. Actual: sebagian signifikan anotasi berasal dari auto-fill model dan fallback, sehingga variasi annotator tidak sepenuhnya organik.
+- **Root Cause:** Target skala tinggi (200x5) dikejar sebelum ketersediaan annotator manusia penuh.
+- **Implikasi untuk Paper:** Dataset anotasi tahap ini tidak boleh diposisikan sebagai final human-validated gold standard; harus diberi label draft/bootstrapped dan dilanjutkan dengan validasi manusia serta agreement analysis yang ketat.
+- **Tindakan:** ACKNOWLEDGED
+- **Detail Tindakan:** Precheck diperketat (`triples` tidak boleh kosong, field putusan wajib non-kosong), provenance marker disimpan di notes, dan status ART-031 tetap BLOCKED karena ART-030 belum memenuhi syarat.
+
 --- 
 
 ## Statistik Ringkasan
@@ -163,7 +176,7 @@ Living document yang mencatat setiap kegagalan, hasil negatif, dan pendekatan ya
 | ABANDONED_APPROACH | 0 | 0 | 0 | 0 |
 | TECHNICAL_FAILURE | 1 | 0 | 0 | 1 |
 | ASSUMPTION_VIOLATED | 0 | 0 | 0 | 0 |
-| LIMITATION_DISCOVERED | 7 | 3 | 4 | 0 |
-| **TOTAL** | **9** | **3** | **5** | **1** |
+| LIMITATION_DISCOVERED | 8 | 3 | 5 | 0 |
+| **TOTAL** | **10** | **3** | **6** | **1** |
 
 *Last updated: 2026-02-07*

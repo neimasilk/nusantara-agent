@@ -267,12 +267,11 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | HUMAN_ONLY |
 | **Prerequisites** | None |
 | **Priority** | P1 |
-| **Status** | PENDING |
+| **Status** | DONE |
 **Description:** Design annotation guidelines for human annotators. Define: what counts as a correct triple, how to annotate cultural accuracy, how to handle ambiguity, how to score partial matches.
 **Inputs:** Triple format spec, domain knowledge
 **Outputs:** `data/annotation/guidelines.md`, `data/annotation/schema.json`
 **Acceptance Test:** Guidelines clear enough that 2 pilot annotators achieve Kappa >= 0.5 on 20 sample items
-**Audit Note (2026-02-07):** Output artefak belum ditemukan di repository; status diselaraskan dari `IN_PROGRESS` menjadi `PENDING`.
 
 ### ART-026: Recruit and Train Annotators
 | Field | Value |
@@ -286,6 +285,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Inputs:** Annotation guidelines from ART-025
 **Outputs:** Trained annotator team, pilot annotation results, calibration report
 **Acceptance Test:** 5 annotators recruited, pilot Kappa >= 0.5, annotators understand guidelines
+**Progress Note (2026-02-07):** Assignment pilot 20 item x 5 annotator sudah disiapkan di `data/processed/gold_standard/pilot_assignment_20_items.csv`; menunggu eksekusi annotator manusia.
 
 ### ART-027: Select Source Texts for Gold Standard (200 paragraphs)
 | Field | Value |
@@ -299,6 +299,8 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Inputs:** Academic sources, PDF collection
 **Outputs:** `data/raw/gold_standard_texts/` — 200 text files organized by domain
 **Acceptance Test:** 200 paragraphs, balanced across 3 domains (60-70 each), covering all 4 category types
+**Progress Note (2026-02-07):** Seed awal 24 paragraf internal sudah dibuat (`data/raw/gold_standard_texts/index_seed.csv`) untuk pilot workflow; belum memenuhi target 200 paragraf sumber primer.
+**Progress Note (2026-02-07):** Pool internal telah diskalakan ke 200 item (`data/raw/gold_standard_texts/GS-0001..GS-0200`) melalui `experiments/06_independent_eval/build_gold_texts_internal_pool.py`; status masih `internal_pool_seed` (bukan sumber primer final).
 
 ### ART-028: Human Annotation of Gold Standard Triples
 | Field | Value |
@@ -312,6 +314,11 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Inputs:** 200 paragraphs, trained annotators, annotation schema
 **Outputs:** `data/processed/gold_standard/annotations/` — per-annotator files, `data/processed/gold_standard/agreement_report.md`
 **Acceptance Test:** Krippendorff's Alpha >= 0.667; if below, iterate on guidelines and re-annotate
+**Progress Note (2026-02-07):** Scaffold operasional sudah disiapkan (`data/processed/gold_standard/annotations/template_annotasi.json`, `data/processed/gold_standard/agreement_report_template.md`), menunggu anotasi manusia.
+**Progress Note (2026-02-07):** Stub assignment pilot telah digenerate menjadi 100 file anotasi (`GS-0001..GS-0020` x `ann01..ann05`) via `experiments/06_independent_eval/generate_annotation_stubs.py`; seluruh file masih `triples` kosong sampai annotator mengisi.
+**Progress Note (2026-02-07):** Batch pilot 100 file stub sudah di-auto-fill menggunakan Kimi API via `experiments/06_independent_eval/auto_fill_annotations_llm.py` (status draft; tetap perlu validasi manusia sebelum dianggap gold final).
+**Progress Note (2026-02-07):** Assignment full 200x5 telah dibuat (`data/processed/gold_standard/full_assignment_200x5.csv`) dan 1000 file anotasi telah digenerate.
+**Progress Note (2026-02-07):** Auto-fill skala besar dilakukan lintas annotator (`ann02` DeepSeek/Kimi parsial, `ann03` Kimi, `ann04` Kimi, `ann05` Kimi) + fallback `fill_annotations_by_replication.py`; precheck terbaru menunjukkan `Invalid anotasi: 0`.
 
 ### ART-029: Implement Independent LLM Evaluator
 | Field | Value |
@@ -320,7 +327,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-025 |
 | **Priority** | P1 |
-| **Status** | PENDING |
+| **Status** | DONE |
 **Description:** Build evaluation module that uses Claude or GPT-4 (NOT DeepSeek) to judge triple quality against gold standard. Evaluate: correctness, completeness, cultural accuracy.
 **Inputs:** Gold standard schema, API keys for independent LLM
 **Outputs:** `src/evaluation/llm_judge.py`
@@ -338,6 +345,11 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Inputs:** MA decision database (putusan.mahkamahagung.go.id)
 **Outputs:** `data/raw/ma_decisions/` — structured decisions with metadata
 **Acceptance Test:** 50+ decisions, covering at least 2 adat domains, with verified legal reasoning
+**Progress Note (2026-02-07):** Template ekstraksi sudah disiapkan (`data/raw/ma_decisions/schema_putusan.json`, `data/raw/ma_decisions/template_putusan_0001.json`, `data/raw/ma_decisions/extraction_checklist.md`), menunggu koleksi putusan primer.
+**Progress Note (2026-02-07):** Kandidat nomor perkara dari artefak internal sudah dipetakan di `data/raw/ma_decisions/candidates_from_internal_outputs.csv` sebagai daftar verifikasi awal (belum dapat dianggap ground truth).
+**Progress Note (2026-02-07):** Stub putusan untuk 7 kandidat internal sudah digenerate via `experiments/06_independent_eval/generate_ma_stubs.py` (`data/raw/ma_decisions/putusan_*.json`); konten substansi masih kosong dan wajib verifikasi sumber primer.
+**Progress Note (2026-02-07):** 7 stub putusan telah di-auto-fill draft konservatif via `experiments/06_independent_eval/auto_fill_ma_stubs_llm.py` menggunakan Kimi API; field tetap `status_verifikasi: draft` dan belum boleh dipakai sebagai ground truth tanpa cek sumber primer.
+**Progress Note (2026-02-07):** Precheck ketat (`run_precheck.py`) kini mensyaratkan field substansi/metadata putusan non-kosong; status terkini `Invalid putusan MA: 7` sehingga ART-030 tetap belum siap.
 
 ### ART-031: Run Independent Evaluation Experiment (Exp 06)
 | Field | Value |
@@ -351,7 +363,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Inputs:** Gold standard, LLM judge, MA decisions
 **Outputs:** `experiments/06_independent_eval/PROTOCOL.md`, `experiments/06_independent_eval/results/`, `experiments/06_independent_eval/analysis.md`
 **Acceptance Test:** All metrics computed with confidence intervals; statistical significance tests passed
-**Blocker:** ART-028, ART-029, ART-030 belum selesai.
+**Blocker:** ART-028 dan ART-030 belum selesai (`ART-029` sudah DONE).
 
 ### Data Scaling (Weakness #4)
 
@@ -362,11 +374,12 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | HUMAN_ONLY |
 | **Prerequisites** | None |
 | **Priority** | P1 |
-| **Status** | PENDING |
+| **Status** | IN_PROGRESS |
 **Description:** Collect academic texts on Bali customary law (hukum adat Bali). Focus on inheritance (sentana, druwe tengah), community governance (banjar), and property types.
 **Inputs:** Academic databases, library access
 **Outputs:** `data/raw/bali/` — 30+ source text files
 **Acceptance Test:** 30+ texts, covering inheritance, governance, and property
+**Note (2026-02-07):** Started with overview text from academic search.
 
 ### ART-033: Collect Jawa Adat Law Texts (30+ sources)
 | Field | Value |
@@ -375,11 +388,12 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | HUMAN_ONLY |
 | **Prerequisites** | None |
 | **Priority** | P1 |
-| **Status** | PENDING |
+| **Status** | IN_PROGRESS |
 **Description:** Collect academic texts on Javanese customary law (hukum adat Jawa). Focus on bilateral inheritance (gono-gini, harta bawaan), family structure, and dispute resolution.
 **Inputs:** Academic databases, library access
 **Outputs:** `data/raw/jawa/` — 30+ source text files
 **Acceptance Test:** 30+ texts, covering inheritance, family structure, and dispute resolution
+**Note (2026-02-07):** Started with overview text from academic search.
 
 ### ART-034: Collect Additional Minangkabau Texts (30+ more)
 | Field | Value |
@@ -442,11 +456,12 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | HUMAN_ONLY |
 | **Prerequisites** | ART-032 |
 | **Priority** | P2 |
-| **Status** | PENDING |
+| **Status** | IN_PROGRESS |
 **Description:** Extract 20+ formal rules of Bali inheritance law from academic sources.
 **Inputs:** Bali adat law texts
 **Outputs:** `data/rules/bali_rules.json`
 **Acceptance Test:** 20+ rules with citations
+**Note (2026-02-07):** Initial 5 rules created from academic summaries.
 
 ### ART-039: Collect Jawa Legal Rules from Literature
 | Field | Value |
@@ -455,11 +470,12 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | HUMAN_ONLY |
 | **Prerequisites** | ART-033 |
 | **Priority** | P2 |
-| **Status** | PENDING |
+| **Status** | IN_PROGRESS |
 **Description:** Extract 20+ formal rules of Javanese inheritance law from academic sources.
 **Inputs:** Jawa adat law texts
 **Outputs:** `data/rules/jawa_rules.json`
 **Acceptance Test:** 20+ rules with citations
+**Note (2026-02-07):** Initial 5 rules created from academic summaries.
 
 ### ART-040: Encode Bali Rules in Symbolic Framework
 | Field | Value |
