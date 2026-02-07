@@ -1,0 +1,81 @@
+{
+  "round": 2,
+  "agent": "ALA",
+  "answer": "Berdasarkan prinsip adat Minangkabau, untuk harta pusako rendah (harta pencaharian orang tua), hak waris utama ada pada anak kandung. Namun, penyelesaian terbaik adalah melalui musyawarah keluarga (bermufakat) yang melibatkan pihak-pihak terkait untuk mencapai kesepakatan yang adil dan menjaga kerukunan, dengan mempertimbangkan posisi kemenakan dalam hubungan kekerabatan. Jika musyawarah gagal, konflik dapat diselesaikan melalui kerapatan adat yang lebih luas atau, sebagai jalan terakhir, pengadilan.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Harta pusako rendah adalah harta pencaharian orang tua selama perkawinan.",
+      "evidence": [
+        "CONTEXT"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Definisi ini diambil dari penjelasan dalam konteks yang diberikan."
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Anak kandung memiliki hak waris yang kuat atas harta pusako rendah.",
+      "evidence": [
+        "CONTEXT"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Konteks menyatakan 'Memiliki hak waris yang kuat' dan 'hak waris utama ada pada anak kandung'."
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Hak kemenakan secara adat lebih kuat pada harta pusako tinggi daripada harta pusako rendah.",
+      "evidence": [
+        "CONTEXT"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Konteks secara eksplisit menyatakan hal ini."
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Penyelesaian konflik dalam adat Minangkabau mengutamakan musyawarah (bermufakat) untuk mencapai kesepakatan.",
+      "evidence": [
+        "CONTEXT"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Konteks menyebutkan 'Musyawarah (Bermufakat)' sebagai langkah pertama dan 'penyelesaian secara adat lebih diutamakan'."
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Musyawarah untuk menyelesaikan sengketa waris ini melibatkan anak kandung, kemenakan (diwakili Mamak Kepala Waris), dan pihak keluarga dekat.",
+      "evidence": [
+        "CONTEXT"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Konteks secara spesifik menyebutkan pihak-pihak yang perlu dikumpulkan."
+      ]
+    },
+    {
+      "id": "C6",
+      "statement": "Prinsip 'adat basandi syarak, syarak basandi Kitabullah' menyeimbangkan hukum, keadilan, dan kemanusiaan dalam penyelesaian adat.",
+      "evidence": [
+        "CONTEXT"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Pernyataan ini diambil langsung dari kesimpulan dalam konteks."
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Tidak dijelaskan secara rinci mekanisme pembagian atau besaran bagian untuk anak kandung dan kemenakan dalam konteks harta pusako rendah.",
+    "U2: Tidak ada penjelasan detail tentang otoritas atau hierarki dalam kerapatan adat jika musyawarah awal gagal."
+  ],
+  "open_questions": [
+    "Q1: Apakah ada bukti atau kesepakatan tertulis sebelumnya dalam keluarga mengenai status dan pembagian harta tersebut?",
+    "Q2: Apakah harta yang diperebutkan murni hasil pencaharian orang tua, atau ada unsur keterlibatan atau kontribusi dari kaum/keluarga besar?"
+  ]
+}

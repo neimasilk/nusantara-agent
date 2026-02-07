@@ -110,7 +110,7 @@ PENDING → IN_PROGRESS → DONE
 |-------|-------|
 | **Type** | CODE |
 | **Executor** | EITHER |
-| **Skill Required** | Python, PySwip/owlready2, Hukum Adat Minangkabau |
+| **Skill Required** | Python, Clingo/ASP, Hukum Adat Minangkabau |
 | **Prerequisites** | ART-010, ART-011 |
 | **Priority** | P1 |
 | **Phase** | 2 |
@@ -118,15 +118,15 @@ PENDING → IN_PROGRESS → DONE
 | **Assigned To** | Unassigned |
 
 ### Description
-Encode 20 aturan dasar hukum waris Minangkabau sebagai Prolog rules menggunakan PySwip. Rules harus mencakup: hak kemenakan atas pusako tinggi, hak anak atas pusako rendah, peran mamak kepala waris, kondisi darurat yang membolehkan pengecualian.
+Encode 20 aturan dasar hukum waris Minangkabau sebagai aturan ASP (Clingo). Rules harus mencakup: hak kemenakan atas pusako tinggi, hak anak atas pusako rendah, peran mamak kepala waris, kondisi darurat yang membolehkan pengecualian.
 
 ### Inputs
 - `experiments/01_triple_extraction/result.json` — Tripel yang sudah diekstrak
 - Referensi: Buku "Hukum Adat Minangkabau" (lihat bibliography)
 
 ### Expected Outputs
-- `src/symbolic/minangkabau_rules.pl` — Prolog rules file
-- `src/symbolic/rule_engine.py` — Python wrapper menggunakan PySwip
+- `src/symbolic/rules/minangkabau.lp` — ASP rules file
+- `src/symbolic/rule_engine.py` — Python wrapper menggunakan Clingo
 - `experiments/05_rule_engine/test_rules.py` — Test cases
 
 ### Acceptance Test
@@ -136,7 +136,7 @@ Encode 20 aturan dasar hukum waris Minangkabau sebagai Prolog rules menggunakan 
 - [ ] Semua test pass (`python -m pytest experiments/05_rule_engine/`)
 
 ### Failure Modes
-- PySwip installation gagal di Windows → fallback ke owlready2 (OWL ontology)
+- Instalasi Clingo gagal di environment tertentu → fallback ke `PySwip` atau OWL untuk prototyping
 - Rules terlalu simplistic untuk edge cases → konsultasi domain expert (HUMAN_ONLY)
 
 ### Notes

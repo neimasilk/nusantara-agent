@@ -1,0 +1,64 @@
+{
+  "round": 1,
+  "agent": "ALA",
+  "answer": "Berdasarkan adat Minangkabau, yang berhak atas Harta Pusako Tinggi ketika seorang mamak meninggal adalah kaum (kelompok kekerabatan matrilineal) itu sendiri, khususnya kemenakan perempuan (anak dari saudara perempuan almarhum) dan generasi perempuan di bawahnya dalam garis ibu. Kemenakan laki-laki berperan sebagai calon pengelola baru (Mamak Kepala Waris).",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Hak kepemilikan dan pengelolaan Harta Pusako Tinggi beralih kepada kemenakan (anak dari saudara perempuan almarhum) ketika seorang mamak meninggal.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A1"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Kemenakan perempuan (dan generasi perempuan di bawahnya dalam garis ibu) adalah pihak yang berhak atas Harta Pusako Tinggi.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A2"
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Kemenakan laki-laki berperan sebagai calon Mamak Kepala Waris yang baru, bertugas mengelola harta untuk kepentingan kemenakan perempuan dan kaum.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A3"
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Harta Pusako Tinggi adalah milik kolektif kaum dan diwariskan berdasarkan garis ibu (matrilineal).",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C5",
+      "statement": "Harta Pusako Tinggi tidak boleh diperjualbelikan, kecuali dalam kondisi darurat yang sangat ketat.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    }
+  ],
+  "uncertainties": [
+    "U1: Mekanisme detail penunjukan kemenakan laki-laki sebagai Mamak Kepala Waris yang baru tidak dijelaskan."
+  ],
+  "open_questions": [
+    "Q1: Bagaimana jika tidak ada kemenakan laki-laki dalam kaum tersebut?"
+  ]
+}

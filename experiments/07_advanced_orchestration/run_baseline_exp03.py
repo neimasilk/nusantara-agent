@@ -18,6 +18,9 @@ class AgentState(TypedDict):
     national_context: str
     adat_context: str
     final_synthesis: str
+    national_usage: Dict[str, int]
+    adat_usage: Dict[str, int]
+    supervisor_usage: Dict[str, int]
 
 
 def _get_llm() -> ChatOpenAI:
@@ -26,6 +29,31 @@ def _get_llm() -> ChatOpenAI:
         base_url="https://api.deepseek.com",
         model="deepseek-chat",
     )
+
+
+def _extract_token_usage(message) -> Dict[str, int]:
+    usage = getattr(message, "usage_metadata", None) or {}
+    response_metadata = getattr(message, "response_metadata", None) or {}
+    token_usage = response_metadata.get("token_usage", {}) if isinstance(response_metadata, dict) else {}
+
+    prompt_tokens = usage.get("input_tokens", token_usage.get("prompt_tokens", 0))
+    completion_tokens = usage.get("output_tokens", token_usage.get("completion_tokens", 0))
+    total_tokens = usage.get("total_tokens", token_usage.get("total_tokens", 0))
+
+    if not total_tokens:
+        total_tokens = prompt_tokens + completion_tokens
+
+    return {
+        "prompt_tokens": int(prompt_tokens or 0),
+        "completion_tokens": int(completion_tokens or 0),
+        "total_tokens": int(total_tokens or 0),
+    }
+
+
+def _add_usage(acc: Dict[str, int], usage: Dict[str, int]) -> None:
+    acc["prompt_tokens"] += int(usage.get("prompt_tokens", 0))
+    acc["completion_tokens"] += int(usage.get("completion_tokens", 0))
+    acc["total_tokens"] += int(usage.get("total_tokens", 0))
 
 
 def _read_graph_data(graph_data_path: str) -> str:
@@ -43,7 +71,10 @@ def _national_agent(llm: ChatOpenAI, state: AgentState):
         "Fokus pada hak anak kandung dan aturan harta pencaharian (gono-gini)."
     )
     response = llm.invoke([SystemMessage(content=prompt)])
-    return {"national_context": response.content}
+    return {
+        "national_context": response.content,
+        "national_usage": _extract_token_usage(response),
+    }
 
 
 def _adat_agent(llm: ChatOpenAI, graph_data_path: str, state: AgentState):
@@ -56,7 +87,10 @@ def _adat_agent(llm: ChatOpenAI, graph_data_path: str, state: AgentState):
         "Fokus pada hak kemenakan dan perbedaan Pusako Tinggi vs Pusako Rendah."
     )
     response = llm.invoke([SystemMessage(content=prompt)])
-    return {"adat_context": response.content}
+    return {
+        "adat_context": response.content,
+        "adat_usage": _extract_token_usage(response),
+    }
 
 
 def _supervisor_agent(llm: ChatOpenAI, state: AgentState):
@@ -70,7 +104,10 @@ def _supervisor_agent(llm: ChatOpenAI, state: AgentState):
         "Akui adanya konflik norma dan jelaskan solusi pluralistik."
     )
     response = llm.invoke([SystemMessage(content=prompt)])
-    return {"final_synthesis": response.content}
+    return {
+        "final_synthesis": response.content,
+        "supervisor_usage": _extract_token_usage(response),
+    }
 
 
 def build_baseline_orchestrator(graph_data_path: str):
@@ -99,7 +136,7 @@ def _load_queries(path: Path) -> List[Dict[str, str]]:
     raise ValueError("Format file query tidak dikenal. Gunakan list string atau list objek {id, query}.")
 
 
-def run_baseline(query_file: Path, graph_data_path: str, output_dir: Path, limit: int) -> None:
+def run_baseline(query_file: Path, graph_data_path: str, output_dir: Path, limit: int, force: bool) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     queries = _load_queries(query_file)
     if limit > 0:
@@ -117,13 +154,18 @@ def run_baseline(query_file: Path, graph_data_path: str, output_dir: Path, limit
         case_dir = output_dir / query_id
         case_dir.mkdir(parents=True, exist_ok=True)
         summary_path = case_dir / "summary.json"
-        if summary_path.exists():
+        if summary_path.exists() and not force:
             run_index.append(json.loads(summary_path.read_text(encoding="utf-8")))
             continue
 
         t0 = time.perf_counter()
         state = app.invoke({"messages": [HumanMessage(content=query)]})
         t1 = time.perf_counter()
+
+        total_usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
+        _add_usage(total_usage, state.get("national_usage", {}))
+        _add_usage(total_usage, state.get("adat_usage", {}))
+        _add_usage(total_usage, state.get("supervisor_usage", {}))
 
         final_answer = state.get("final_synthesis", "")
         (case_dir / "final_synthesis.txt").write_text(final_answer, encoding="utf-8")
@@ -133,6 +175,12 @@ def run_baseline(query_file: Path, graph_data_path: str, output_dir: Path, limit
             "query": query,
             "graph_data_path": graph_data_path,
             "timing_seconds": {"total": round(t1 - t0, 4)},
+            "token_usage": {
+                "total": total_usage,
+            },
+            "llm_call_count": {
+                "total": 3,
+            },
             "artifacts": {"final_synthesis": str(case_dir / "final_synthesis.txt")},
         }
         summary_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -162,6 +210,7 @@ if __name__ == "__main__":
         help="Folder output baseline",
     )
     parser.add_argument("--limit", type=int, default=0, help="Batasi jumlah query (0 = semua)")
+    parser.add_argument("--force", action="store_true", help="Tulis ulang output meski sudah ada")
 
     args = parser.parse_args()
     run_baseline(
@@ -169,4 +218,5 @@ if __name__ == "__main__":
         graph_data_path=args.graph_data,
         output_dir=Path(args.output_dir),
         limit=args.limit,
+        force=args.force,
     )

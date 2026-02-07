@@ -1,0 +1,53 @@
+{
+  "query_id": "Q02",
+  "query": "Dalam adat Minangkabau, siapa yang berhak atas pusako tinggi ketika seorang mamak meninggal?",
+  "routing": {
+    "label": "pure_adat",
+    "scores": {
+      "national": 0,
+      "adat": 4,
+      "conflict": 0
+    },
+    "confidence": 0.7,
+    "method": "heuristic"
+  },
+  "graph_data_path": "experiments/01_triple_extraction/result.json",
+  "timing_seconds": {
+    "retrieval_parallel": 89.6532,
+    "debate": 224.2571,
+    "supervisor": 9.2669,
+    "total": 323.1771
+  },
+  "token_usage": {
+    "retrieval_parallel": {
+      "prompt_tokens": 3242,
+      "completion_tokens": 3630,
+      "total_tokens": 6872
+    },
+    "debate": {
+      "prompt_tokens": 14681,
+      "completion_tokens": 7728,
+      "total_tokens": 22409
+    },
+    "supervisor": {
+      "prompt_tokens": 1263,
+      "completion_tokens": 285,
+      "total_tokens": 1548
+    },
+    "total": {
+      "prompt_tokens": 19186,
+      "completion_tokens": 11643,
+      "total_tokens": 30829
+    }
+  },
+  "llm_call_count": {
+    "retrieval_parallel": 3,
+    "debate": 10,
+    "supervisor": 1,
+    "total": 14
+  },
+  "artifacts": {
+    "debate_summary": "experiments\\07_advanced_orchestration\\results_token_probe\\Q02\\debate_summary.json",
+    "final_synthesis": "experiments\\07_advanced_orchestration\\results_token_probe\\Q02\\final_synthesis.txt"
+  }
+}

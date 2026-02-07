@@ -1,0 +1,58 @@
+{
+  "round": 2,
+  "agent": "ALA",
+  "answer": "Berdasarkan prinsip adat Minangkabau, Harta Pusako Rendah (harta pencaharian) utamanya diwariskan kepada anak kandung, bukan kemenakan. Penyelesaian terbaik adalah melalui musyawarah keluarga untuk mencapai kesepakatan yang adil, mengakui hak anak kandung sambil menjaga hubungan kekerabatan dengan kemenakan.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Harta Pusako Rendah adalah harta pencaharian orang tua selama perkawinan.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C2",
+      "statement": "Hak waris utama atas Harta Pusako Rendah menurut adat Minangkabau ada pada anak kandung.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C3",
+      "statement": "Hak kemenakan secara adat lebih kuat pada Harta Pusako Tinggi (harta turun-temurun kaum), bukan pada Harta Pusako Rendah.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C4",
+      "statement": "Penyelesaian konflik dalam adat Minangkabau mengutamakan musyawarah (bermufakat) untuk mencapai kesepakatan keluarga.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C5",
+      "statement": "Prinsip 'adat basandi syarak, syarak basandi Kitabullah' menyeimbangkan hukum, keadilan, dan kemanusiaan dalam penyelesaian.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    }
+  ],
+  "uncertainties": [
+    "U1: Tidak ada informasi spesifik dalam konteks mengenai besaran bagian atau formula pembagian waris untuk anak kandung dan kemenakan dalam kasus Harta Pusako Rendah."
+  ],
+  "open_questions": [
+    "Q1: Apakah ada bukti atau wasiat tertulis dari orang tua (pewaris) yang mengatur pembagian harta tersebut?"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "round": 2,
+  "agent": "ALA",
+  "answer": "Menurut KUHPerdata, jika pewaris meninggalkan istri dan dua anak, bagian istri adalah 1/4 dari harta warisan (yang mencakup harta bawaan dan harta bersama), sedangkan bagian masing-masing anak adalah 3/8. Sistem ini berbeda dengan adat Minangkabau yang memisahkan Harta Pusako Tinggi (diwariskan matrilineal ke kemenakan) dan Harta Pusako Rendah (diwariskan ke anak dan istri).",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Menurut KUHPerdata, jika pewaris meninggalkan istri dan dua anak, bagian istri adalah 1/4 dari harta warisan.",
+      "evidence": [
+        "context"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Harta warisan mencakup harta bawaan dan harta bersama pewaris sesuai konteks."
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Menurut KUHPerdata, jika pewaris meninggalkan istri dan dua anak, bagian masing-masing anak adalah 3/8 dari harta warisan.",
+      "evidence": [
+        "context"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Kedua anak memiliki hak waris yang sama, dan perhitungan total bagian adalah 1/4 (istri) + 3/8 + 3/8 = 8/8."
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Dalam adat Minangkabau, Harta Pusako Tinggi pada prinsipnya diwariskan secara matrilineal kepada kemenakan (anak dari saudara perempuan pewaris).",
+      "evidence": [
+        "context"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Definisi Harta Pusako Tinggi dan kemenakan sesuai konteks."
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Dalam adat Minangkabau, istri dan anak kandung pewaris umumnya tidak mendapat bagian dari Harta Pusako Tinggi.",
+      "evidence": [
+        "context"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Pernyataan 'tidak mendapat bagian' dalam konteks mengacu pada prinsip umum, bukan pengecualian mutlak."
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Dalam adat Minangkabau, Harta Pusako Rendah diwariskan kepada anak kandung dan istri.",
+      "evidence": [
+        "context"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Definisi Harta Pusako Rendah sesuai konteks."
+      ]
+    },
+    {
+      "id": "C6",
+      "statement": "KUHPerdata tidak mengenal pembedaan antara Harta Pusako Tinggi dan Harta Pusako Rendah seperti dalam adat Minangkabau.",
+      "evidence": [
+        "context"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Deskripsi sistem KUHPerdata dalam konteks akurat."
+      ]
+    }
+  ],
+  "uncertainties": [
+    "Apakah ada ketentuan khusus dalam KUHPerdata jika anak-anak tersebut masih di bawah umur atau memiliki kondisi lain yang mempengaruhi pembagian.",
+    "Mekanisme detail perhitungan pecahan 1/4 dan 3/8 dalam KUHPerdata (misalnya, apakah melibatkan pembagian harta bersama terlebih dahulu)."
+  ],
+  "open_questions": [
+    "Bagaimana mekanisme penyelesaian jika terjadi konflik antara penerapan KUHPerdata dan hak adat Minangkabau atas suatu harta?"
+  ]
+}

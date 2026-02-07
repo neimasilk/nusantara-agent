@@ -1,0 +1,65 @@
+[
+  {
+    "query_id": "Q01",
+    "query": "Bagaimana pembagian waris menurut KUHPerdata jika pewaris meninggalkan istri dan dua anak?",
+    "graph_data_path": "experiments/01_triple_extraction/result.json",
+    "timing_seconds": {
+      "total": 103.1765
+    },
+    "token_usage": {
+      "total": {
+        "prompt_tokens": 2669,
+        "completion_tokens": 3487,
+        "total_tokens": 6156
+      }
+    },
+    "llm_call_count": {
+      "total": 3
+    },
+    "artifacts": {
+      "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results_token_probe\\Q01\\final_synthesis.txt"
+    }
+  },
+  {
+    "query_id": "Q02",
+    "query": "Dalam adat Minangkabau, siapa yang berhak atas pusako tinggi ketika seorang mamak meninggal?",
+    "graph_data_path": "experiments/01_triple_extraction/result.json",
+    "timing_seconds": {
+      "total": 119.5666
+    },
+    "token_usage": {
+      "total": {
+        "prompt_tokens": 3360,
+        "completion_tokens": 4065,
+        "total_tokens": 7425
+      }
+    },
+    "llm_call_count": {
+      "total": 3
+    },
+    "artifacts": {
+      "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results_token_probe\\Q02\\final_synthesis.txt"
+    }
+  },
+  {
+    "query_id": "Q03",
+    "query": "Kasus waris tanah pusako rendah: anak kandung menuntut menurut KUHPerdata, kemenakan menuntut menurut adat Minangkabau. Bagaimana menyikapinya?",
+    "graph_data_path": "experiments/01_triple_extraction/result.json",
+    "timing_seconds": {
+      "total": 134.4683
+    },
+    "token_usage": {
+      "total": {
+        "prompt_tokens": 4042,
+        "completion_tokens": 4471,
+        "total_tokens": 8513
+      }
+    },
+    "llm_call_count": {
+      "total": 3
+    },
+    "artifacts": {
+      "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results_token_probe\\Q03\\final_synthesis.txt"
+    }
+  }
+]

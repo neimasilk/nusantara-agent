@@ -1,0 +1,23 @@
+[
+  {
+    "query_id": "Q01",
+    "accuracy": 4,
+    "completeness": 4,
+    "cultural_sensitivity": 5,
+    "notes": "Benar dalam inti prosedur dua tahap KUHPerdata, namun masih menyebut 'istri dapat ½' dari harta bersama sebelum sisa dibagi, padahal ½ adalah bagian istri selama perkawinan (bukan tambahan waris). Komplet karena menyebut istri dan anak. Sangat sensitif budaya dengan memosisikan Minangkabau dan menekankan tidak bertentangan dengan pemahaman umum."
+  },
+  {
+    "query_id": "Q02",
+    "accuracy": 4,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Benar bahwa kemenakan berhak atas pusako tinggi menurut adat, meskipun mungkin ada konflik dengan hukum nasional. Menyebut 'anak kandung' sebagai penerima potensial bisa sedikit menyesatkan karena secara adat bukan mereka yang berhak atas pusako tinggi."
+  },
+  {
+    "query_id": "Q03",
+    "accuracy": 4,
+    "completeness": 3,
+    "cultural_sensitivity": 4,
+    "notes": "Tepat soal pluralisme & yurisprudensi, tapi belum menyebut Pasal 3 UU Penyelesaian Konflik Norma dan belum menekankan bahwa dalam adat Minang hanya kemenakan yang sah mewaris pusako rendah. Sudah hormati adat, tapi perlu sedikit lebih detail."
+  }
+]

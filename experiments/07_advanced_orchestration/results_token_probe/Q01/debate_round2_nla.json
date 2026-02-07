@@ -1,0 +1,75 @@
+{
+  "round": 2,
+  "agent": "NLA",
+  "answer": "Pembagian waris menurut KUHPerdata untuk pewaris dengan ahli waris istri dan dua anak kandung dilakukan dalam dua tahap. Pertama, harta bersama dipisah, di mana istri mendapat hak milik penuh atas 1/2 bagiannya. Kedua, sisa harta (1/2 harta bersama + harta pribadi pewaris) dibagi sebagai warisan: istri mendapat 1/3 bagian, dan sisa 2/3 dibagi rata untuk kedua anak.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Sebelum pembagian warisan, harus dilakukan pemisahan harta bersama (gono-gini) antara suami dan istri.",
+      "evidence": [
+        "Pasal 119 KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Tidak ada perjanjian perkawinan lain, sehingga berlaku persatuan bulat."
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Istri berhak atas hak milik penuh atas 1/2 bagian dari harta bersama.",
+      "evidence": [
+        "Pasal 119 KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Harta bersama adalah harta yang diperoleh selama perkawinan."
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Harta warisan terdiri dari 1/2 harta bersama (milik pewaris) ditambah seluruh harta pribadi pewaris.",
+      "evidence": [
+        "Analisis dari pemisahan harta"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Tidak ada harta lain yang dipertentangkan."
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Hak waris istri atas harta warisan adalah sepertiga (1/3) bagian karena pewaris meninggalkan lebih dari satu anak sah.",
+      "evidence": [
+        "Pasal 852 KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Kedua anak adalah anak sah atau diakui."
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Sisa harta warisan setelah dikurangi bagian istri (1/3) dibagi secara merata kepada kedua anak.",
+      "evidence": [
+        "Pasal 852 KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Kedua anak memiliki kedudukan hukum yang sama."
+      ]
+    },
+    {
+      "id": "C6",
+      "statement": "Dari total harta, porsi akhir istri lebih besar daripada porsi masing-masing anak karena mendapatkan dua sumber: separuh harta bersama dan sepertiga harta warisan.",
+      "evidence": [
+        "Perhitungan ilustratif dalam analisis"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Nilai harta bersama dan harta warisan positif."
+      ]
+    }
+  ],
+  "uncertainties": [],
+  "open_questions": []
+}

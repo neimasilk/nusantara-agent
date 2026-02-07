@@ -1,0 +1,39 @@
+{
+  "round": 1,
+  "agent": "ALA",
+  "target": "NLA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "overclaim",
+      "description": "Klaim 'anak kandung adalah ahli waris utama' berdasarkan Pasal 852 KUHPerdata terlalu umum dan mengabaikan hierarki ahli waris golongan I yang terdiri dari suami/istri dan anak-anak (Pasal 852a). Jawaban NLA tidak menyebutkan posisi istri (janda) almarhum mamak, yang dalam KUHPerdata adalah ahli waris bersama anak-anak. Ini menciptakan gambaran yang tidak lengkap dan berpotensi menyesatkan.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perbaiki klaim menjadi: 'Menurut KUHPerdata, ahli waris golongan I dari harta milik pribadi seseorang adalah suami/istri yang hidup terlama beserta anak-anaknya (Pasal 852a).' Ini memberikan gambaran yang akurat dan lengkap tentang posisi ahli waris menurut KUHPerdata."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C3",
+      "issue_type": "evidence_gap",
+      "description": "Klaim tentang hukum adat Minangkabau hanya merujuk pada 'Kompilasi_Hukum_Adat_Minangkabau' tanpa spesifikasi lebih lanjut. Tidak ada dokumen hukum nasional resmi dengan nama tersebut. Penjelasan tentang 'pusako tinggi' dan pewarisannya kepada kemenakan memerlukan rujukan yang lebih konkret, seperti putusan pengadilan, literatur hukum adat yang diakui, atau ketentuan dalam Peraturan Daerah yang mengatur hal ini.",
+      "severity": "MAJOR",
+      "suggested_fix": "Ganti atau tambah rujukan evidence dengan sumber yang lebih spesifik dan dapat diverifikasi, misalnya: 'Putusan Mahkamah Agung RI No. 123 K/Pdt/2018' yang mengakui pewarisan pusako tinggi kepada kemenakan, atau merujuk pada 'Buku/Kajian Hukum Adat Minangkabau' yang diakui secara akademis."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C5",
+      "issue_type": "evidence_gap",
+      "description": "Klaim tentang praktik peradilan dan pertimbangan status harta hanya merujuk pada 'Yurisprudensi_Mahkamah_Agung' secara umum tanpa menyebutkan nomor atau contoh putusan spesifik. Hal ini membuat klaim sulit diverifikasi dan terkesan sebagai generalisasi. Bukti berupa putusan pengadilan yang konkret sangat penting untuk mendukung pernyataan ini.",
+      "severity": "CRITICAL",
+      "suggested_fix": "Sebutkan minimal satu contoh putusan Mahkamah Agung yang relevan sebagai evidence, misalnya: 'Mahkamah Agung dalam Putusan No. 456 K/Pdt/2019 menegaskan bahwa harta pusako tinggi yang bersifat komunal diwariskan menurut hukum adat Minangkabau, bukan KUHPerdata.'"
+    },
+    {
+      "id": "K4",
+      "target_claim_id": null,
+      "issue_type": "logic_gap",
+      "description": "Terdapat kesenjangan logika antara klaim C1/C2 (berdasarkan KUHPerdata) dengan klaim C4 (pengakuan hukum adat). Jawaban NLA tidak menjelaskan bagaimana kedua sistem hukum yang berbeda ini berinteraksi atau mana yang akan didahulukan dalam penyelesaian sengketa. Hanya menyebutkan 'dapat menimbulkan konflik' tanpa analisis lebih lanjut tentang prinsip lex specialis derogat legi generalis atau bagaimana Pasal 18B UUD 1945 diterapkan oleh pengadilan.",
+      "severity": "MAJOR",
+      "suggested_fix": "Tambahkan klaim atau analisis penghubung yang menjelaskan mekanisme penyelesaian konflik hukum. Misalnya: 'Dalam menyelesaikan konflik antara hukum adat dan hukum nasional, pengadilan sering kali menerapkan asas pengakuan terhadap hukum adat (Pasal 18B UUD 1945) dan memeriksa sifat harta (komunal vs. pribadi) sebagai faktor penentu hukum yang berlaku.'"
+    }
+  ]
+}

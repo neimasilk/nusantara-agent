@@ -1,0 +1,53 @@
+{
+  "query_id": "Q03",
+  "query": "Kasus waris tanah pusako rendah: anak kandung menuntut menurut KUHPerdata, kemenakan menuntut menurut adat Minangkabau. Bagaimana menyikapinya?",
+  "routing": {
+    "label": "consensus",
+    "scores": {
+      "national": 2,
+      "adat": 4,
+      "conflict": 0
+    },
+    "confidence": 0.55,
+    "method": "heuristic"
+  },
+  "graph_data_path": "experiments/01_triple_extraction/result.json",
+  "timing_seconds": {
+    "retrieval_parallel": 86.3728,
+    "debate": 235.8399,
+    "supervisor": 5.4166,
+    "total": 327.6293
+  },
+  "token_usage": {
+    "retrieval_parallel": {
+      "prompt_tokens": 3697,
+      "completion_tokens": 3860,
+      "total_tokens": 7557
+    },
+    "debate": {
+      "prompt_tokens": 16130,
+      "completion_tokens": 7929,
+      "total_tokens": 24059
+    },
+    "supervisor": {
+      "prompt_tokens": 1410,
+      "completion_tokens": 152,
+      "total_tokens": 1562
+    },
+    "total": {
+      "prompt_tokens": 21237,
+      "completion_tokens": 11941,
+      "total_tokens": 33178
+    }
+  },
+  "llm_call_count": {
+    "retrieval_parallel": 3,
+    "debate": 10,
+    "supervisor": 1,
+    "total": 14
+  },
+  "artifacts": {
+    "debate_summary": "experiments\\07_advanced_orchestration\\results_token_probe\\Q03\\debate_summary.json",
+    "final_synthesis": "experiments\\07_advanced_orchestration\\results_token_probe\\Q03\\final_synthesis.txt"
+  }
+}

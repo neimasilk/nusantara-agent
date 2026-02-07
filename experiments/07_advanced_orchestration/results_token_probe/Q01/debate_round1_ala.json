@@ -1,0 +1,68 @@
+{
+  "round": 1,
+  "agent": "ALA",
+  "answer": "Menurut KUHPerdata, jika pewaris meninggalkan istri dan dua anak, bagian istri adalah 1/4 dari harta bawaan dan harta bersama, sedangkan bagian dua anak masing-masing adalah 3/8. Total pembagian adalah 8/8. Sistem ini berbeda dengan adat Minangkabau yang memisahkan harta Pusako Tinggi (diwariskan matrilineal ke kemenakan) dan Pusako Rendah (diwariskan ke anak dan istri).",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Menurut KUHPerdata, jika pewaris meninggalkan istri dan dua anak, bagian istri adalah 1/4 dari harta bawaan dan harta bersama.",
+      "evidence": [
+        "context"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Harta yang dibagi adalah harta bawaan dan harta bersama pewaris."
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Menurut KUHPerdata, jika pewaris meninggalkan istri dan dua anak, bagian dua anak masing-masing adalah 3/8 dari harta bawaan dan harta bersama.",
+      "evidence": [
+        "context"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Kedua anak memiliki hak waris yang sama."
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Dalam adat Minangkabau, Harta Pusako Tinggi diwariskan secara matrilineal kepada kemenakan, bukan kepada istri dan anak kandung pewaris.",
+      "evidence": [
+        "context"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Definisi Harta Pusako Tinggi sesuai dengan konteks."
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Dalam adat Minangkabau, Harta Pusako Rendah diwariskan kepada anak kandung dan istri.",
+      "evidence": [
+        "context"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Definisi Harta Pusako Rendah sesuai dengan konteks."
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "KUHPerdata tidak mengenal pembedaan antara Harta Pusako Tinggi dan Harta Pusako Rendah seperti dalam adat Minangkabau.",
+      "evidence": [
+        "context"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Deskripsi sistem KUHPerdata dalam konteks akurat."
+      ]
+    }
+  ],
+  "uncertainties": [
+    "Apakah ada ketentuan khusus dalam KUHPerdata jika anak-anak tersebut masih di bawah umur atau memiliki kondisi lain yang mempengaruhi pembagian."
+  ],
+  "open_questions": [
+    "Bagaimana mekanisme penyelesaian jika terjadi konflik antara penerapan KUHPerdata dan hak adat Minangkabau atas suatu harta?"
+  ]
+}

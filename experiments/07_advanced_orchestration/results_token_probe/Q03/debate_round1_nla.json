@@ -1,0 +1,82 @@
+{
+  "round": 1,
+  "agent": "NLA",
+  "answer": "Dalam konflik waris tanah pusako rendah antara anak kandung (KUHPerdata) dan kemenakan (adat Minangkabau), penyelesaian diawali dengan identifikasi pilihan hukum pewaris dan sifat harta. Hukum adat berlaku bagi pribumi yang tidak menundukkan diri pada KUHPerdata. Namun, untuk harta pencaharian (gono-gini), yurisprudensi cenderung melindungi hak anak kandung berdasarkan prinsip keadilan dan kepentingan terbaik anak. Penyelesaian prioritas melalui musyawarah adat, dan jika gagal, dapat diajukan ke Pengadilan Negeri.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Hukum adat berlaku bagi pribumi (pewaris) yang tidak menundukkan diri secara penuh pada KUHPerdata.",
+      "evidence": [
+        "Pasal 131 IS",
+        "Pasal 163 IS"
+      ],
+      "confidence": 1,
+      "assumptions": [
+        "Pewaris adalah pribumi (Bumi Putera) dan status penundukan dirinya pada KUHPerdata perlu diverifikasi."
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Tanah pusako rendah dalam adat Minangkabau klasik merupakan harta pencaharian (gono-gini) yang turun kepada kemenakan, bukan anak kandung.",
+      "evidence": [
+        "Deskripsi adat Minangkabau dalam konteks"
+      ],
+      "confidence": 1,
+      "assumptions": [
+        "Tanah yang disengketakan adalah benar-benar harta pencaharian, bukan pusako tinggi."
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Dalam banyak yurisprudensi, hakim cenderung mengakui hak anak kandung atas harta pencaharian (gono-gini) orang tuanya dengan pertimbangan keadilan.",
+      "evidence": [
+        "Putusan Mahkamah Agung tentang hukum adat Minangkabau"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "Yurisprudensi yang dimaksud masih berlaku dan relevan dengan fakta kasus."
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Penyelesaian sengketa sebaiknya diawali dengan musyawarah keluarga dan melibatkan penghulu adat.",
+      "evidence": [
+        "Rekomendasi penyelesaian secara berjenjang dalam konteks"
+      ],
+      "confidence": 1,
+      "assumptions": [
+        "Pihak-pihak yang bersengketa bersedia untuk bermusyawarah."
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Jika musyawarah gagal, penyelesaian dapat ditempuh melalui Pengadilan Negeri.",
+      "evidence": [
+        "Rekomendasi penyelesaian secara berjenjang dalam konteks"
+      ],
+      "confidence": 1,
+      "assumptions": [
+        "Tidak ada kesepakatan dalam musyawarah."
+      ]
+    },
+    {
+      "id": "C6",
+      "statement": "Hakim berwenang melakukan rechtsvinding untuk menemukan hukum yang adil dengan mempertimbangkan perkembangan hukum adat.",
+      "evidence": [
+        "Pasal 5 UU No. 48 Tahun 2009 tentang Kekuasaan Kehakiman"
+      ],
+      "confidence": 1,
+      "assumptions": [
+        "Perkara diajukan ke pengadilan."
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Apakah pewaris secara formal telah menundukkan diri pada KUHPerdata berdasarkan Pasal 131 IS jo. Pasal 163 IS?",
+    "U2: Bagaimana perkembangan dan penyesuaian adat Minangkabau setempat terkait hak waris anak atas harta pencaharian?"
+  ],
+  "open_questions": [
+    "Q1: Apa bukti yang dapat menunjukkan bahwa tanah sengketa murni adalah harta pencaharian (gono-gini) dan bukan campuran dengan harta lain?",
+    "Q2: Apakah ada putusan pengadilan setempat (tingkat pertama atau banding) yang sudah pernah memutus kasus serupa dan dapat dijadikan pertimbangan?"
+  ]
+}

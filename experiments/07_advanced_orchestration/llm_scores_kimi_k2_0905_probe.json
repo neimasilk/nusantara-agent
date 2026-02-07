@@ -1,0 +1,23 @@
+[
+  {
+    "query_id": "Q01",
+    "accuracy": 4,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Isi hukum KUHPerdata dijelaskan dengan benar (pemisahan harta bersama lalu bagian waris), meski angka akhir istri 1/3 dari 'sisa' bisa dipahami dua cara. Semua pihak (istri, anak) disebut. Menyentuh konteks Minangkabau tanpa stereotip."
+  },
+  {
+    "query_id": "Q02",
+    "accuracy": 5,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Tepat: membedakan pusako tinggi vs harta pribadi, menonjol konflik nasional-adat, sebut kemenakan sebagai penerima adat. Lengkap: nasional, adat, mekanisme pengaduan. Hormat: tidak mereduksi adat."
+  },
+  {
+    "query_id": "Q03",
+    "accuracy": 4,
+    "completeness": 4,
+    "cultural_sensitivity": 5,
+    "notes": "Tepat sebut pluralisme & yurisprudensi, tapi belum detil soal kriteria 'pencaharian vs pusaka'."
+  }
+]

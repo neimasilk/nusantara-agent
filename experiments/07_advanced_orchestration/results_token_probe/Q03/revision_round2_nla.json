@@ -1,0 +1,85 @@
+{
+  "round": 2,
+  "agent": "NLA",
+  "answer": "Dalam konflik waris tanah pusako rendah, penyelesaian dimulai dengan menentukan hukum yang berlaku berdasarkan status penundukan diri (onderwerp) pewaris. Jika pewaris menundukkan diri pada KUHPerdata, maka hukum waris KUHPerdata berlaku dan anak kandung adalah ahli waris utama. Jika tidak, hukum adat berlaku, dan sifat tanah (harta pencaharian/gono-gini) menjadi kunci. Untuk harta pencaharian, yurisprudensi Mahkamah Agung cenderung melindungi hak anak kandung berdasarkan prinsip keadilan dan kepentingan terbaik anak. Penyelesaian prioritas melalui musyawarah adat, dan jika gagal, dapat diajukan ke Pengadilan Negeri di mana hakim dapat melakukan penemuan hukum (rechtsvinding) yang adil.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Jika pewaris (pribumi) semasa hidupnya menundukkan diri pada KUHPerdata secara penuh (onderwerp), maka KUHPerdata berlaku sepenuhnya dan anak kandung adalah ahli waris utama.",
+      "evidence": [
+        "Pasal 131 IS",
+        "Pasal 163 IS"
+      ],
+      "confidence": 1,
+      "assumptions": [
+        "Pewaris adalah pribumi (Bumi Putera) dan status penundukan dirinya pada KUHPerdata perlu diverifikasi."
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Jika pewaris tidak menundukkan diri pada KUHPerdata, maka hukum adat berlaku. Untuk tanah pusako rendah (harta pencaharian/gono-gini), aturan waris adat klasik dapat berbeda dengan KUHPerdata.",
+      "evidence": [
+        "Pasal 131 IS",
+        "Pasal 163 IS",
+        "Deskripsi adat Minangkabau dalam konteks"
+      ],
+      "confidence": 1,
+      "assumptions": [
+        "Tanah yang disengketakan adalah harta yang diperoleh selama perkawinan (harta pencaharian/gono-gini)."
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Dalam banyak yurisprudensi, Mahkamah Agung cenderung mengedepankan prinsip keadilan dan kepatutan serta melindungi hak anak kandung atas harta pencaharian (gono-gini) orang tuanya.",
+      "evidence": [
+        "Putusan Mahkamah Agung (misalnya, putusan tentang hukum adat Minangkabau)"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "Yurisprudensi yang dimaksud masih berlaku dan relevan dengan fakta kasus. Bukti spesifik (nomor putusan) tidak disebutkan dalam konteks."
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Penyelesaian sengketa sebaiknya diawali dengan musyawarah keluarga dan melibatkan ninik mamak (penghulu adat).",
+      "evidence": [
+        "Rekomendasi penyelesaian secara berjenjang dalam konteks"
+      ],
+      "confidence": 1,
+      "assumptions": [
+        "Pihak-pihak yang bersengketa bersedia untuk bermusyawarah."
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Jika musyawarah gagal, penyelesaian dapat ditempuh melalui Pengadilan Negeri, di mana hakim akan memeriksa pilihan hukum, sifat tanah, dan yurisprudensi.",
+      "evidence": [
+        "Rekomendasi penyelesaian secara berjenjang dalam konteks"
+      ],
+      "confidence": 1,
+      "assumptions": [
+        "Tidak ada kesepakatan dalam musyawarah."
+      ]
+    },
+    {
+      "id": "C6",
+      "statement": "Hakim berwenang melakukan penemuan hukum (rechtsvinding) untuk menemukan hukum yang sesuai dengan keadilan masyarakat modern, dengan mempertimbangkan perkembangan hukum adat.",
+      "evidence": [
+        "Pasal 5 UU No. 48 Tahun 2009 tentang Kekuasaan Kehakiman"
+      ],
+      "confidence": 1,
+      "assumptions": [
+        "Perkara diajukan ke pengadilan."
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Apakah pewaris secara formal telah menundukkan diri pada KUHPerdata berdasarkan Pasal 131 IS jo. Pasal 163 IS?",
+    "U2: Bagaimana perkembangan dan penyesuaian adat Minangkabau setempat terkait hak waris anak atas harta pencaharian?",
+    "U3: Apakah tanah sengketa murni adalah harta pencaharian (gono-gini) hasil usaha bersama suami-istri, atau terdapat komponen harta lain?"
+  ],
+  "open_questions": [
+    "Q1: Apa bukti konkret (akta, kesaksian, dll.) yang dapat menunjukkan bahwa tanah sengketa adalah harta pencaharian (gono-gini)?",
+    "Q2: Apakah ada putusan pengadilan setempat (tingkat pertama atau banding) yang sudah pernah memutus kasus serupa dan dapat dijadikan pertimbangan?"
+  ]
+}

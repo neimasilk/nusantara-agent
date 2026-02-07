@@ -1,5 +1,5 @@
 import os
-from typing import Annotated, TypedDict, List
+from typing import Annotated, TypedDict, List, Dict
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -15,6 +15,9 @@ class AgentState(TypedDict):
     national_context: str
     adat_context: str
     final_synthesis: str
+    national_usage: Dict[str, int]
+    adat_usage: Dict[str, int]
+    supervisor_usage: Dict[str, int]
 
 
 def _get_llm() -> ChatOpenAI:
@@ -32,6 +35,25 @@ def _read_graph_data(graph_data_path: str) -> str:
     return path.read_text(encoding="utf-8")
 
 
+def _extract_token_usage(message: BaseMessage) -> Dict[str, int]:
+    usage = getattr(message, "usage_metadata", None) or {}
+    response_metadata = getattr(message, "response_metadata", None) or {}
+    token_usage = response_metadata.get("token_usage", {}) if isinstance(response_metadata, dict) else {}
+
+    prompt_tokens = usage.get("input_tokens", token_usage.get("prompt_tokens", 0))
+    completion_tokens = usage.get("output_tokens", token_usage.get("completion_tokens", 0))
+    total_tokens = usage.get("total_tokens", token_usage.get("total_tokens", 0))
+
+    if not total_tokens:
+        total_tokens = prompt_tokens + completion_tokens
+
+    return {
+        "prompt_tokens": int(prompt_tokens or 0),
+        "completion_tokens": int(completion_tokens or 0),
+        "total_tokens": int(total_tokens or 0),
+    }
+
+
 def _national_agent(llm: ChatOpenAI, state: AgentState):
     query = state["messages"][0].content
     prompt = (
@@ -40,7 +62,10 @@ def _national_agent(llm: ChatOpenAI, state: AgentState):
         "Fokus pada hak anak kandung dan aturan harta pencaharian (gono-gini)."
     )
     response = llm.invoke([SystemMessage(content=prompt)])
-    return {"national_context": response.content}
+    return {
+        "national_context": response.content,
+        "national_usage": _extract_token_usage(response),
+    }
 
 
 def _adat_agent(llm: ChatOpenAI, graph_data_path: str, state: AgentState):
@@ -53,7 +78,10 @@ def _adat_agent(llm: ChatOpenAI, graph_data_path: str, state: AgentState):
         "Fokus pada hak kemenakan dan perbedaan Pusako Tinggi vs Pusako Rendah."
     )
     response = llm.invoke([SystemMessage(content=prompt)])
-    return {"adat_context": response.content}
+    return {
+        "adat_context": response.content,
+        "adat_usage": _extract_token_usage(response),
+    }
 
 
 def _supervisor_agent(llm: ChatOpenAI, state: AgentState):
@@ -67,7 +95,10 @@ def _supervisor_agent(llm: ChatOpenAI, state: AgentState):
         "Akui adanya konflik norma dan jelaskan solusi pluralistik."
     )
     response = llm.invoke([SystemMessage(content=prompt)])
-    return {"final_synthesis": response.content}
+    return {
+        "final_synthesis": response.content,
+        "supervisor_usage": _extract_token_usage(response),
+    }
 
 
 def build_parallel_orchestrator(graph_data_path: str = "experiments/01_triple_extraction/result.json"):

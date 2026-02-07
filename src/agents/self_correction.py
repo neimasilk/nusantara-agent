@@ -33,6 +33,25 @@ def _json_or_raw(text: str) -> Dict:
         return {"raw_output": text}
 
 
+def _extract_token_usage(message) -> Dict[str, int]:
+    usage = getattr(message, "usage_metadata", None) or {}
+    response_metadata = getattr(message, "response_metadata", None) or {}
+    token_usage = response_metadata.get("token_usage", {}) if isinstance(response_metadata, dict) else {}
+
+    prompt_tokens = usage.get("input_tokens", token_usage.get("prompt_tokens", 0))
+    completion_tokens = usage.get("output_tokens", token_usage.get("completion_tokens", 0))
+    total_tokens = usage.get("total_tokens", token_usage.get("total_tokens", 0))
+
+    if not total_tokens:
+        total_tokens = prompt_tokens + completion_tokens
+
+    return {
+        "prompt_tokens": int(prompt_tokens or 0),
+        "completion_tokens": int(completion_tokens or 0),
+        "total_tokens": int(total_tokens or 0),
+    }
+
+
 def _build_revision_prompt(
     agent_label: str,
     query: str,
@@ -112,7 +131,7 @@ def revise_answer(
     previous_answer: Dict,
     critiques_received: Dict,
     llm: Optional[ChatOpenAI] = None,
-) -> Tuple[Dict, Dict]:
+) -> Tuple[Dict, Dict, Dict[str, int]]:
     llm = llm or _get_llm()
     prompt = _build_revision_prompt(
         agent_label=agent_label,
@@ -125,4 +144,4 @@ def revise_answer(
     response = llm.invoke([SystemMessage(content=prompt)])
     revised = _json_or_raw(response.content)
     revision_summary = _summarize_revision(previous_answer, revised)
-    return revised, revision_summary
+    return revised, revision_summary, _extract_token_usage(response)

@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "agent": "NLA",
+  "target": "ALA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "overclaim",
+      "description": "Klaim C1 menyatakan bahwa hak kepemilikan dan pengelolaan Harta Pusako Tinggi beralih kepada 'kemenakan' secara umum. Ini terlalu luas dan tidak akurat karena dalam sistem matrilineal Minangkabau, hak kepemilikan (hak milik) dan hak pengelolaan (hak pakai/kelola) seringkali terpisah dan dipegang oleh pihak yang berbeda. Hak milik sejati ada pada kemenakan perempuan (dan kaum), sementara pengelolaan (hak mamak) ada pada kemenakan laki-laki. Menggabungkan keduanya dalam satu klaim menciptakan kesan yang menyesatkan.",
+      "severity": "MAJOR",
+      "suggested_fix": "Pisahkan klaim menjadi dua: (1) Hak kepemilikan Harta Pusako Tinggi beralih kepada kemenakan perempuan (dan kaum). (2) Tanggung jawab pengelolaan (hak mamak) beralih kepada kemenakan laki-laki (calon Mamak Kepala Waris)."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C2",
+      "issue_type": "evidence_gap",
+      "description": "Klaim C2 hanya merujuk pada 'source_id_1' sebagai bukti. Meskipun benar secara umum, klaim ini tidak menyebutkan adanya kemungkinan pengecualian atau variasi dalam praktik adat di berbagai nagari (daerah) di Minangkabau. Tanpa referensi yang lebih spesifik atau pengakuan terhadap variasi ini, klaim terkesan terlalu absolut dan mungkin tidak mencerminkan kompleksitas hukum adat yang hidup.",
+      "severity": "MINOR",
+      "suggested_fix": "Tambahkan catatan atau asumsi bahwa klaim ini merujuk pada prinsip umum hukum adat Minangkabau, dengan pengakuan bahwa dapat terdapat variasi lokal dalam penerapannya. Atau, cari dan sertakan bukti dari sumber lain yang membahas variasi tersebut."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C3",
+      "issue_type": "logic_gap",
+      "description": "Terdapat kesenjangan logika antara klaim C3 ('Kemenakan laki-laki berperan sebagai calon Mamak Kepala Waris yang baru') dengan ketidakpastian U1 ('Mekanisme detail penunjukan... tidak dijelaskan') dan pertanyaan terbuka Q1 ('Bagaimana jika tidak ada kemenakan laki-laki?'). Klaim C3 dibuat dengan confidence 1.0, seolah-olah prosesnya pasti dan selalu ada calon, padahal agent sendiri mengakui ada ketidakpastian mendasar tentang mekanisme dan kondisi pengecualian. Ini menciptakan inkonsistensi internal dalam jawaban.",
+      "severity": "MAJOR",
+      "suggested_fix": "Turunkan confidence pada klaim C3 (misalnya menjadi 0.8) untuk mencerminkan ketidakpastian yang diakui dalam bagian 'uncertainties'. Atau, reformulasi klaim C3 untuk memasukkan kondisi, misalnya: 'Secara prinsip, kemenakan laki-laki diharapkan untuk mengambil peran sebagai calon Mamak Kepala Waris, meskipun mekanisme penunjukannya dapat bervariasi.'"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "query_id": "Q01",
+    "accuracy": 4,
+    "completeness": 4,
+    "cultural_sensitivity": 5,
+    "notes": "Benar secara hukum positif KUHPerdata (tahap pemisahan harta bersama lalu warisan), hanya minor gap: tidak sebut Pasal 119/852 eksplisit. Lengkap karena sudah sebut istri+2 anak dan dua tahap. Hormat budaya Minang dengan menekankan sosialisasi angka akhir agar tidak bentrok pemahaman lokal."
+  },
+  {
+    "query_id": "Q02",
+    "accuracy": 5,
+    "completeness": 5,
+    "cultural_sensitivity": 5,
+    "notes": "Tepat: menyebut kemenakan sebagai penerus pusako tinggi, sekaligus konflik dengan KUHPerdata dan mekanisme judicial pluralisme."
+  },
+  {
+    "query_id": "Q03",
+    "accuracy": 5,
+    "completeness": 4,
+    "cultural_sensitivity": 5,
+    "notes": "Klaim utama akurat, mencerminkan konflik normatif dan solusi berjenjang; minor gap soal prosedur konversi harta di pengadilan."
+  }
+]

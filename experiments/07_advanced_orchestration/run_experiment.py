@@ -3,7 +3,7 @@ import json
 import os
 import time
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Tuple
 
 from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage, SystemMessage
@@ -25,6 +25,31 @@ def _get_llm() -> ChatOpenAI:
         base_url="https://api.deepseek.com",
         model="deepseek-chat",
     )
+
+
+def _extract_token_usage(message) -> Dict[str, int]:
+    usage = getattr(message, "usage_metadata", None) or {}
+    response_metadata = getattr(message, "response_metadata", None) or {}
+    token_usage = response_metadata.get("token_usage", {}) if isinstance(response_metadata, dict) else {}
+
+    prompt_tokens = usage.get("input_tokens", token_usage.get("prompt_tokens", 0))
+    completion_tokens = usage.get("output_tokens", token_usage.get("completion_tokens", 0))
+    total_tokens = usage.get("total_tokens", token_usage.get("total_tokens", 0))
+
+    if not total_tokens:
+        total_tokens = prompt_tokens + completion_tokens
+
+    return {
+        "prompt_tokens": int(prompt_tokens or 0),
+        "completion_tokens": int(completion_tokens or 0),
+        "total_tokens": int(total_tokens or 0),
+    }
+
+
+def _add_usage(acc: Dict[str, int], usage: Dict[str, int]) -> None:
+    acc["prompt_tokens"] += int(usage.get("prompt_tokens", 0))
+    acc["completion_tokens"] += int(usage.get("completion_tokens", 0))
+    acc["total_tokens"] += int(usage.get("total_tokens", 0))
 
 
 def _load_queries(path: Path) -> List[Dict[str, str]]:
@@ -52,7 +77,7 @@ def _load_queries(path: Path) -> List[Dict[str, str]]:
     raise ValueError("Format file query tidak dikenal. Gunakan list string atau list objek {id, query}.")
 
 
-def _supervisor_synthesis(llm: ChatOpenAI, query: str, nla: Dict, ala: Dict) -> str:
+def _supervisor_synthesis(llm: ChatOpenAI, query: str, nla: Dict, ala: Dict) -> Tuple[str, Dict[str, int]]:
     prompt = (
         "Kamu adalah Hakim Supervisor yang ahli dalam pluralisme hukum. "
         "Sintesis jawaban berdasarkan dua agent berikut:\n\n"
@@ -65,7 +90,7 @@ def _supervisor_synthesis(llm: ChatOpenAI, query: str, nla: Dict, ala: Dict) -> 
         "jangan menambah klaim di luar dua agent."
     )
     response = llm.invoke([SystemMessage(content=prompt)])
-    return response.content
+    return response.content, _extract_token_usage(response)
 
 
 def run_experiment(
@@ -116,6 +141,11 @@ def run_experiment(
         national_context = state.get("national_context", "")
         adat_context = state.get("adat_context", "")
 
+        retrieval_usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
+        _add_usage(retrieval_usage, state.get("national_usage", {}))
+        _add_usage(retrieval_usage, state.get("adat_usage", {}))
+        _add_usage(retrieval_usage, state.get("supervisor_usage", {}))
+
         debate_result = run_debate(
             query=query,
             national_context=national_context,
@@ -125,13 +155,18 @@ def run_experiment(
         save_debate_logs(str(case_dir), debate_result)
         t2 = time.perf_counter()
 
-        final_answer = _supervisor_synthesis(
+        final_answer, supervisor_usage = _supervisor_synthesis(
             llm,
             query=query,
             nla=debate_result.get("final_nla", {}),
             ala=debate_result.get("final_ala", {}),
         )
         t3 = time.perf_counter()
+
+        total_usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
+        _add_usage(total_usage, retrieval_usage)
+        _add_usage(total_usage, debate_result.get("token_usage", {}))
+        _add_usage(total_usage, supervisor_usage)
 
         (case_dir / "final_synthesis.txt").write_text(final_answer, encoding="utf-8")
 
@@ -145,6 +180,18 @@ def run_experiment(
                 "debate": round(t2 - t1, 4),
                 "supervisor": round(t3 - t2, 4),
                 "total": round(t3 - t0, 4),
+            },
+            "token_usage": {
+                "retrieval_parallel": retrieval_usage,
+                "debate": debate_result.get("token_usage", {}),
+                "supervisor": supervisor_usage,
+                "total": total_usage,
+            },
+            "llm_call_count": {
+                "retrieval_parallel": 3,
+                "debate": debate_result.get("llm_call_count", 0),
+                "supervisor": 1,
+                "total": 4 + int(debate_result.get("llm_call_count", 0)),
             },
             "artifacts": {
                 "debate_summary": str(case_dir / "debate_summary.json"),

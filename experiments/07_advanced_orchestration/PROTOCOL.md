@@ -70,7 +70,15 @@ python experiments/07_advanced_orchestration/run_experiment.py --query-file expe
 # Output harus ada di: experiments/07_advanced_orchestration/results/
 
 # Step 6: Rekap skor manual
-python experiments/07_advanced_orchestration/eval_scores.py --scores experiments/07_advanced_orchestration/scoring_template.json
+python experiments/07_advanced_orchestration/eval_scores.py ^
+  --scores experiments/07_advanced_orchestration/scoring_template.json ^
+  --run-index experiments/07_advanced_orchestration/results/run_index.json ^
+  --baseline-run-index experiments/07_advanced_orchestration/baseline_results/run_index.json ^
+  --align-scores-with-run
+
+# (Opsional) Jika ingin estimasi biaya, tambahkan:
+# --price-input-per-1m <harga_input_per_1M_token>
+# --price-output-per-1m <harga_output_per_1M_token>
 
 # (Opsional) Auto-score dengan LLM independen (bukan DeepSeek)
 # export OPENAI_API_KEY=... atau ANTHROPIC_API_KEY=...
@@ -104,7 +112,20 @@ python experiments/07_advanced_orchestration/eval_scores.py --scores experiments
 | Accuracy | >= +10% | -0.67 (vs baseline) | FAIL |
 | Completeness | >= +10% | -0.67 (vs baseline) | FAIL |
 | Cultural Sensitivity | >= +10% | -0.33 (vs baseline) | FAIL |
-| Efficiency | <= 1.2x baseline | Belum diukur | TBD |
+| Efficiency | <= 1.2x baseline | 2.87x baseline (avg 330.28s vs 114.99s) | FAIL |
+
+**Detail Efisiensi (berdasarkan `run_index.json`, N=12):**
+- Advanced avg total: 330.2823 detik/query
+- Baseline avg total: 114.9940 detik/query
+- Overhead advanced vs baseline: +187.22%
+- Breakdown advanced avg: retrieval 97.0656s, debate 224.0476s, supervisor 9.1691s
+- Logging token ditambahkan pasca-run utama; token diukur pada rerun probe N=3:
+  - Advanced avg total token: 31,496/query
+  - Baseline avg total token: 7,364.67/query
+  - Token overhead advanced vs baseline: +327.66%
+  - Token breakdown advanced avg: retrieval 6,905; debate 22,975; supervisor 1,616
+  - Ringkasan JSON: `experiments/07_advanced_orchestration/score_summary_token_probe.json`
+  - Catatan: angka token di atas berasal dari `results_token_probe/` dan `baseline_results_token_probe/`, bukan run utama N=12.
 
 ### 3.2 Analisis Kegagalan (WAJIB)
 

@@ -1,0 +1,81 @@
+{
+  "round": 2,
+  "agent": "NLA",
+  "answer": "Berdasarkan KUHPerdata, ahli waris utama dari harta milik seorang mamak yang meninggal adalah suami/istri yang hidup terlama beserta anak-anaknya. Namun, status harta sebagai 'pusako tinggi' dapat menimbulkan konflik dengan hukum adat Minangkabau yang mengatur warisan tersebut untuk kemenakan dalam garis ibu. Dalam praktik peradilan, sifat harta (komunal adat vs. pribadi) menjadi faktor kunci dalam menentukan hukum yang berlaku.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Menurut KUHPerdata, ahli waris golongan I dari harta milik pribadi seseorang adalah suami/istri yang hidup terlama beserta anak-anaknya.",
+      "evidence": [
+        "KUHPerdata_Pasal_852"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Pasal 852 KUHPerdata yang dimaksud adalah yang mengatur ahli waris golongan I, termasuk pasangan hidup."
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Kemenakan (anak dari saudara perempuan) bukan ahli waris berdasarkan KUHPerdata tanpa wasiat.",
+      "evidence": [
+        "KUHPerdata_Pasal_852"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Tidak ada wasiat yang dibuat oleh mamak dan kemenakan tidak termasuk dalam golongan ahli waris I, II, atau III menurut KUHPerdata."
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Dalam adat Minangkabau, pusako tinggi adalah harta turun-temurun dari garis ibu yang diwariskan kepada kemenakan dalam satu suku/kaum.",
+      "evidence": [],
+      "confidence": 0.9,
+      "assumptions": [
+        "Penjelasan tentang adat Minangkabau dalam konteks akurat, meskipun tidak ada dokumen hukum nasional spesifik yang dirujuk."
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Pasal 18B ayat (2) UUD 1945 dan Pasal 3 UU No. 1 Tahun 2023 mengakui keberadaan hukum adat sepanjang tidak bertentangan dengan hukum nasional.",
+      "evidence": [
+        "UUD_1945_Pasal_18B",
+        "UU_No_1_Tahun_2023_Pasal_3"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Ketentuan ini berlaku sebagai dasar pengakuan hukum adat, termasuk dalam konteks waris."
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Dalam praktik peradilan, pusako tinggi yang bersifat komunal kaum cenderung diwariskan menurut hukum adat, sedangkan yang sudah diperindividualkan (atas nama pribadi) dianggap harta pribadi dan tunduk pada KUHPerdata.",
+      "evidence": [
+        "Yurisprudensi_Mahkamah_Agung"
+      ],
+      "confidence": 0.8,
+      "assumptions": [
+        "Putusan Mahkamah Agung yang relevan mendukung pernyataan ini, meskipun tidak disebutkan nomornya dalam konteks yang diberikan."
+      ]
+    },
+    {
+      "id": "C6",
+      "statement": "Harta pencaharian (gono-gini) dari perkawinan mamak tunduk pada UU Perkawinan dan KUHPerdata, di mana istri dan anak adalah ahli waris utama.",
+      "evidence": [
+        "UU_No_1_Tahun_1974",
+        "KUHPerdata_Pasal_852"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Harta tersebut diakui sebagai harta bersama dalam perkawinan."
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Sejauh mana pengadilan saat ini secara konsisten mengakui dan menerapkan hukum adat Minangkabau dalam sengketa waris pusako tinggi.",
+    "U2: Ketersediaan dan kekuatan bukti untuk membedakan harta pusako tinggi yang masih komunal dengan yang sudah menjadi harta pribadi mamak."
+  ],
+  "open_questions": [
+    "Q1: Apakah harta yang dimaksud masih murni bersifat komunal sebagai pusako tinggi kaum atau sudah menjadi harta pribadi mamak berdasarkan bukti kepemilikan dan pengelolaan?",
+    "Q2: Apakah mamak atau keluarganya telah membuat kesepakatan atau wasiat yang mengatur peralihan harta pusako tinggi?"
+  ]
+}

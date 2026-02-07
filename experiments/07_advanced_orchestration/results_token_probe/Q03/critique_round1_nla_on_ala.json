@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "agent": "NLA",
+  "target": "ALA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "evidence_gap",
+      "description": "Klaim C1 menyatakan 'Harta pusako rendah adalah harta pencaharian orang tua selama perkawinan.' Namun, sumber yang dirujuk (source_id_1) tidak diberikan, sehingga tidak dapat diverifikasi. Definisi ini mungkin terlalu menyederhanakan dan tidak mencakup kemungkinan variasi atau pengecualian dalam praktik adat.",
+      "severity": "MAJOR",
+      "suggested_fix": "Sebutkan sumber yang spesifik (misalnya, literatur adat, putusan pengadilan, atau keterangan ahli) yang mendukung definisi tersebut. Jika tidak ada, akui ketidakpastian ini dalam bagian 'uncertainties'."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C2",
+      "issue_type": "overclaim",
+      "description": "Klaim C2 menyatakan 'Hak waris atas harta pusako rendah yang kuat dimiliki oleh anak kandung.' Pernyataan ini bersifat absolut ('yang kuat') dan mengabaikan kemungkinan bahwa kemenakan juga dapat memiliki hak atau klaim tertentu dalam konteks tertentu, atau bahwa pembagian dapat dipengaruhi oleh faktor lain seperti wasiat atau kesepakatan keluarga.",
+      "severity": "MAJOR",
+      "suggested_fix": "Lunakkan klaim dengan menyatakan bahwa anak kandung umumnya memiliki hak waris utama, tetapi hak kemenakan atau pihak lain tidak sepenuhnya tertutup, terutama jika ada faktor khusus. Atau, tambahkan bukti yang menunjukkan bahwa hak anak kandung memang bersifat mutlak dan tidak terbantahkan."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C4",
+      "issue_type": "logic_gap",
+      "description": "Klaim C4 menyatakan 'Penyelesaian konflik dalam adat Minangkabau mengutamakan musyawarah (bermufakat) untuk mencapai kesepakatan.' Meskipun ini adalah prinsip umum, tidak ada penjelasan logis tentang bagaimana prinsip ini diterapkan secara konkret dalam kasus sengketa waris antara anak kandung dan kemenakan. Jawaban ALA langsung merekomendasikan musyawarah tanpa menjelaskan mekanisme, otoritas, atau prioritas jika musyawarah gagal.",
+      "severity": "MAJOR",
+      "suggested_fix": "Jelaskan lebih lanjut bagaimana musyawarah dilakukan dalam konteks ini (misalnya, peran ninik mamak, tingkat keluarga yang terlibat). Juga, sebutkan apa yang terjadi jika musyawarah tidak mencapai kesepakatan (misalnya, eskalasi ke kerapatan adat atau pengadilan)."
+    }
+  ]
+}

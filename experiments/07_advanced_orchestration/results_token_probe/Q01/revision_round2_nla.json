@@ -1,0 +1,81 @@
+{
+  "round": 2,
+  "agent": "NLA",
+  "answer": "Berdasarkan KUHPerdata, pembagian waris diawali dengan pemisahan harta bersama. Istri berhak atas 1/2 harta bersama sebagai hak milik penuh. Sisa harta (1/2 harta bersama milik pewaris + harta pribadi pewaris) membentuk harta peninggalan/warisan. Atas harta peninggalan ini, istri berhak atas 1/3 bagian sebagai ahli waris, dan dua anak bersama-sama berhak atas sisa 2/3 bagian yang dibagi rata.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Sebelum membagi warisan, harus dilakukan pemisahan harta terlebih dahulu antara harta bersama dan harta pribadi pewaris.",
+      "evidence": [
+        "Analisis Hukum (paragraf 2)"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Tidak ada perjanjian perkawinan lain, sehingga berlaku persatuan bulat (gemeenschap van goederen) berdasarkan Pasal 119 KUHPerdata."
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Istri berhak atas separuh (1/2) dari harta bersama sebagai hak milik penuh, terpisah dari harta warisan.",
+      "evidence": [
+        "Analisis Hukum (Langkah 1, poin 2)"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Harta bersama adalah harta yang diperoleh suami-istri selama perkawinan."
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Harta warisan (harta peninggalan) terdiri dari 1/2 bagian harta bersama milik pewaris ditambah seluruh harta pribadi pewaris.",
+      "evidence": [
+        "Analisis Hukum (Langkah 1, poin 3)",
+        "Analisis Hukum (Langkah 2, paragraf 1)"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Telah dilakukan pemisahan harta yang benar."
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Berdasarkan Pasal 852 KUHPerdata, jika pewaris meninggalkan istri dan lebih dari satu anak sah, istri berhak atas sepertiga (1/3) bagian dari harta peninggalan.",
+      "evidence": [
+        "Analisis Hukum (Langkah 2, bagian 'Penjelasan untuk kasus ini')"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Anak-anak adalah anak sah dan tidak ada ahli waris lain yang lebih berhak. 'Harta peninggalan' merujuk pada harta warisan setelah pemisahan harta bersama."
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Sisa dua per tiga (2/3) bagian dari harta peninggalan menjadi hak kedua anak bersama-sama.",
+      "evidence": [
+        "Analisis Hukum (Langkah 2, bagian 'Perhitungan')"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Tidak ada ketentuan yang memberikan porsi berbeda antara anak."
+      ]
+    },
+    {
+      "id": "C6",
+      "statement": "Bagian warisan untuk kedua anak (2/3 dari harta peninggalan) dibagi secara merata di antara mereka.",
+      "evidence": [
+        "Analisis Hukum (Langkah 2, bagian 'Perhitungan')"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Kedua anak memiliki kedudukan yang sama sebagai ahli waris."
+      ]
+    }
+  ],
+  "uncertainties": [
+    "Nilai pasti harta bersama dan harta pribadi pewaris tidak diketahui dari konteks."
+  ],
+  "open_questions": [
+    "Apakah ada hutang pewaris yang harus dilunasi terlebih dahulu dari harta warisan?",
+    "Apakah semua anak yang dimaksud adalah anak sah dari perkawinan dengan istri yang ditinggalkan?"
+  ]
+}

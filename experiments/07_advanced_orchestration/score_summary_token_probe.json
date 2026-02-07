@@ -1,0 +1,87 @@
+{
+  "count": 3,
+  "avg_accuracy": 3.6667,
+  "avg_completeness": 4,
+  "avg_cultural_sensitivity": 4.3333,
+  "avg_total": 12,
+  "run_summary": {
+    "count": 3,
+    "timing": {
+      "avg_total_seconds": 331.7362,
+      "min_total_seconds": 323.1771,
+      "max_total_seconds": 344.4023,
+      "avg_stage_seconds": {
+        "retrieval_parallel": 87.8924,
+        "debate": 235.4633,
+        "supervisor": 8.3807
+      }
+    },
+    "tokens": {
+      "available_count": 3,
+      "avg_prompt_tokens": 19695.6667,
+      "avg_completion_tokens": 11800.3333,
+      "avg_total_tokens": 31496.0,
+      "sum_prompt_tokens": 59087.0,
+      "sum_completion_tokens": 35401.0,
+      "sum_total_tokens": 94488.0,
+      "avg_stage_total_tokens": {
+        "retrieval_parallel": 6905.0,
+        "debate": 22975.0,
+        "supervisor": 1616.0
+      }
+    },
+    "llm_calls": {
+      "avg_total_calls": 14.0
+    },
+    "source": "experiments\\07_advanced_orchestration\\results_token_probe\\run_index.json"
+  },
+  "baseline_run_summary": {
+    "count": 3,
+    "timing": {
+      "avg_total_seconds": 119.0705,
+      "min_total_seconds": 103.1765,
+      "max_total_seconds": 134.4683
+    },
+    "tokens": {
+      "available_count": 3,
+      "avg_prompt_tokens": 3357.0,
+      "avg_completion_tokens": 4007.6667,
+      "avg_total_tokens": 7364.6667,
+      "sum_prompt_tokens": 10071.0,
+      "sum_completion_tokens": 12023.0,
+      "sum_total_tokens": 22094.0
+    },
+    "llm_calls": {
+      "avg_total_calls": 3.0
+    },
+    "source": "experiments\\07_advanced_orchestration\\baseline_results_token_probe\\run_index.json"
+  },
+  "efficiency_comparison": {
+    "timing": {
+      "advanced_vs_baseline_ratio": 2.786,
+      "overhead_pct": 178.6,
+      "delta_seconds": 212.6657
+    },
+    "tokens": {
+      "advanced_vs_baseline_ratio": 4.2766,
+      "overhead_pct": 327.66,
+      "delta_tokens": 24131.3333
+    },
+    "llm_calls": {
+      "advanced_vs_baseline_ratio": 4.6667,
+      "delta_calls": 11.0
+    }
+  },
+  "consistency_checks": {
+    "score_vs_run_count_match": {
+      "score_count": 3,
+      "run_count": 3,
+      "match": true
+    },
+    "advanced_vs_baseline_run_count_match": {
+      "advanced_run_count": 3,
+      "baseline_run_count": 3,
+      "match": true
+    }
+  }
+}

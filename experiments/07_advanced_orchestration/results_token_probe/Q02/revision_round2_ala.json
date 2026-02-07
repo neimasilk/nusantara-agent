@@ -1,0 +1,53 @@
+{
+  "round": 2,
+  "agent": "ALA",
+  "answer": "Berdasarkan adat Minangkabau, Harta Pusako Tinggi adalah milik kolektif kaum (kelompok kekerabatan matrilineal). Ketika seorang mamak (pengelola) meninggal, hak kepemilikan tetap pada kaum, yang diwakili oleh kemenakan perempuan dan generasi perempuan di bawahnya dalam garis ibu. Tanggung jawab pengelolaan (hak mamak) beralih kepada kemenakan laki-laki sebagai calon Mamak Kepala Waris yang baru.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Hak kepemilikan Harta Pusako Tinggi adalah milik kolektif kaum dan tidak berubah dengan kematian seorang mamak.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C2",
+      "statement": "Kemenakan perempuan (anak dari saudara perempuan almarhum) dan generasi perempuan di bawahnya dalam garis ibu adalah pihak yang mewakili hak kepemilikan kaum atas Harta Pusako Tinggi.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "A1: Prinsip ini berlaku secara umum dalam hukum adat Minangkabau, meskipun mungkin terdapat variasi lokal dalam penerapannya."
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Kemenakan laki-laki (keponakan) berperan sebagai calon Mamak Kepala Waris yang baru, yang bertugas mengelola Harta Pusako Tinggi untuk kepentingan kemenakan perempuan dan kaum.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 0.8,
+      "assumptions": [
+        "A2: Mekanisme penunjukan atau suksesi untuk peran ini dapat bervariasi dan tidak dijelaskan secara detail dalam konteks yang diberikan."
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Harta Pusako Tinggi diwariskan berdasarkan garis ibu (matrilineal) dan pada dasarnya tidak boleh diperjualbelikan, kecuali dalam kondisi darurat yang sangat ketat.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    }
+  ],
+  "uncertainties": [
+    "U1: Mekanisme detail penunjukan atau suksesi kemenakan laki-laki sebagai Mamak Kepala Waris yang baru."
+  ],
+  "open_questions": [
+    "Q1: Bagaimana pengelolaan Harta Pusako Tinggi ditentukan jika dalam suatu kaum tidak ada kemenakan laki-laki yang memenuhi syarat?"
+  ]
+}

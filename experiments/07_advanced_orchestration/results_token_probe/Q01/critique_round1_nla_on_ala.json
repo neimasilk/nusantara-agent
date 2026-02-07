@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "agent": "NLA",
+  "target": "ALA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "evidence_gap",
+      "description": "Klaim C1 menyatakan bagian istri adalah 1/4 dari 'harta bawaan dan harta bersama'. Konteks hanya menyebut 'harta warisan' dan 'harta bersama' sebagai objek pembagian menurut KUHPerdata. Tidak ada penjelasan eksplisit bahwa 'harta bawaan' (harta pribadi) selalu digabungkan dengan 'harta bersama' untuk dihitung bagian istri. Ini merupakan interpretasi yang memerlukan dukungan pasal yang lebih spesifik.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perjelas dasar pasal KUHPerdata (Pasal 852a jo. Pasal 852b BW) yang mengatur pembagian harta bawaan dan harta bersama. Atau, ubah klaim menjadi: 'Menurut KUHPerdata, jika pewaris meninggalkan istri dan dua anak, bagian istri adalah 1/4 dari harta warisan (yang mencakup harta bawaan dan bagian dari harta bersama).'"
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C2",
+      "issue_type": "logic_gap",
+      "description": "Klaim C2 menyatakan bagian masing-masing anak adalah 3/8. Perhitungan ini (2 anak x 3/8 = 6/8) ditambah bagian istri 1/4 (2/8) menghasilkan total 8/8. Namun, logika ini mengasumsikan pembagian dilakukan atas total pool harta yang sama (harta bawaan dan harta bersama). Konteks tidak secara eksplisit menjelaskan bagaimana perhitungan pecahan ini diterapkan, terutama terkait penggabungan dua kategori harta tersebut. Ada risiko oversimplifikasi.",
+      "severity": "MAJOR",
+      "suggested_fix": "Jelaskan proses perhitungan secara bertahap: (1) Harta bersama dibagi dua, separuh untuk istri sebagai bagian dari harta warisan suami. (2) Total harta warisan (harta bawaan suami + separuh harta bersama) kemudian dibagi menurut Pasal 852a BW: istri 1/4, sisanya (3/4) dibagi rata untuk dua anak (masing-masing 3/8)."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C3",
+      "issue_type": "overclaim",
+      "description": "Klaim C3 menyatakan Harta Pusako Tinggi diwariskan 'kepada kemenakan, bukan kepada istri dan anak kandung'. Pernyataan 'bukan kepada istri dan anak kandung' adalah mutlak dan berpotensi menyesatkan. Dalam praktik adat, meskipun garis utama adalah ke kemenakan (anak dari saudara perempuan), terdapat kemungkinan pengecualian atau pengaturan khusus (misalnya, melalui musyawarah) yang dapat melibatkan anak kandung dalam kondisi tertentu, terutama jika tidak ada kemenakan atau kesepakatan adat.",
+      "severity": "MINOR",
+      "suggested_fix": "Lunakkan klaim untuk mencerminkan prinsip umum tanpa membuat pengecualian mutlak. Ubah menjadi: 'Dalam adat Minangkabau, Harta Pusako Tinggi pada prinsipnya diwariskan secara matrilineal kepada kemenakan (anak dari saudara perempuan pewaris), dan umumnya tidak jatuh kepada istri atau anak kandung pewaris.'"
+    }
+  ]
+}

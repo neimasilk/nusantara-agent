@@ -1,0 +1,23 @@
+[
+  {
+    "query_id": "Q01",
+    "accuracy": 3,
+    "completeness": 3,
+    "cultural_sensitivity": 4,
+    "notes": "Akurasi: Inti prosedur dua tahap (NLA) benar sesuai Pasal 852 KUHPerdata dan rezim harta bersama, namun menyajikan pendekatan ALA (1/4 dan 3/8) sebagai alternatif yang 'setara' secara operasional meskipun angkanya salah secara matematis dan hukum (seharusnya istri 2/3, anak masing-masing 1/6 dari total harta). Kelengkapan: Menjelaskan mekanisme pemisahan harta bersama dan pembagian warisan, tetapi tidak menyebutkan angka final yang jelas dan tidak menyebutkan kondisi prasyarat (seperti tidak adanya perjanjian pisah harta). Sensitivitas Budaya: Baik, mengaitkan dengan konteks Minangkabau dan pluralisme hukum tanpa stereotip negatif, meski konteks tersebut diasumsikan tanpa diminta query."
+  },
+  {
+    "query_id": "Q02",
+    "accuracy": 5,
+    "completeness": 4,
+    "cultural_sensitivity": 5,
+    "notes": "Akurat menggambarkan konflik KUHPerdata vs adat Minangkabau dan mekanisme rekognisi. Lengkap menyebut kemenakan sebagai ahli waris adat dan anak kandung menurut hukum nasional, namun bisa lebih eksplisit menyebut bahwa anak kandung mamak secara tegas tidak berhak atas pusako tinggi dalam adat. sensitivitas budaya baik dengan penggunaan istilah yang tepat dan penghormatan terhadap kedua sistem hukum."
+  },
+  {
+    "accuracy": 4,
+    "completeness": 4,
+    "cultural_sensitivity": 4,
+    "notes": "Jawaban mengidentifikasi konflik norma dengan tepat, menyebutkan mekanisme penyelesaian berjenjang (musyawarah-penghulu-pengadilan), dan mengacu pada yurisprudensi MA mengenai perlindungan anak kandung atas harta pencaharian. Akurasi baik namun kurang spesifik mengenai distingsi pusako tinggi vs rendah dan dasar hukum konkret (misalnya Pasal 833 BW). Kelengkapan mencakup aspek substansi utama meski tidak mendetailkan prosedur pembuktian sifat harta. Sensitivitas budaya cukup baik dengan penggunaan istilah adat yang tepat (penghulu, musyawarah) tanpa stereotip, meski framing 'keadilan substantif vs formalisme adat' sedikit mengimplikasikan hierarki nilai.",
+    "query_id": "Q03"
+  }
+]

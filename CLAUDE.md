@@ -98,6 +98,7 @@ Work is decomposed into Atomic Research Tasks (ARTs). See:
 - **Rule Engine Functional**: `ClingoRuleEngine` implementasi ASP siap pakai.
 - **Minangkabau Rules Expanded**: `src/symbolic/rules/minangkabau.lp` mencakup 30+ aturan formal (inheritance, actions, emergency conditions).
 - **Exp 05 COMPLETED**: Menemukan 33.3% divergensi antara Rule Engine dan LLM (N=30), membuktikan perlunya "Symbolic Anchor" untuk mencegah halusinasi hukum.
+- **Exp 07 COMPLETED (Negative Result)**: Advanced orchestration (parallel + debate + self-correction + routing) belum mengungguli baseline sequential pada auto-score Kimi (N=12), sehingga protokol debat perlu iterasi.
 - **Draft rules**: `data/rules/minangkabau_rules.json` berisi aturan hasil ekstraksi open-access.
 
 ## Methodology Fixes
@@ -106,7 +107,7 @@ Six critical weaknesses have been identified and documented in `docs/methodology
 
 1. "Neuro-symbolic" claim needs formal rule engine (Exp 05)
 2. Circular evaluation needs independent evaluation pipeline (Exp 06)
-3. Linear multi-agent needs genuine orchestration (Exp 07)
+3. Orchestration quality gain not yet achieved after Exp 07; debate protocol still needs improvement
 4. Scale too small — needs 10K+ triples, 200+ test cases (scaling plan)
 5. Ablation needs proper baselines, not strawman (Exp 09)
 6. CCS metric needs rigorous validation (Exp 10)

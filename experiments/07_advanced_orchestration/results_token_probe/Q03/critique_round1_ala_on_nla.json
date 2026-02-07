@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "agent": "ALA",
+  "target": "NLA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "logic_gap",
+      "description": "Klaim menyatakan hukum adat berlaku bagi pribumi yang tidak menundukkan diri pada KUHPerdata, namun tidak menjelaskan konsekuensi hukum jika pewaris TELAH menundukkan diri. Ini adalah gap logika kritis karena status penundukan diri (onderwerp) akan menentukan hukum waris mana (KUHPerdata atau adat) yang berlaku sejak awal, bukan sekadar 'perlu diverifikasi'. Jawaban gagal memberikan analisis bercabang berdasarkan dua skenario hukum yang berbeda ini.",
+      "severity": "CRITICAL",
+      "suggested_fix": "Perbaikan konkret: Jawaban harus secara eksplisit membandingkan dua skenario: 1) Jika pewaris onderwerp, maka KUHPerdata berlaku dan anak kandung adalah ahli waris utama. 2) Jika pewaris tidak onderwerp, maka hukum adat berlaku, dan analisis dilanjutkan dengan menguji sifat harta (pusako rendah/pencaharian)."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C2",
+      "issue_type": "overclaim",
+      "description": "Klaim menyatakan tanah pusako rendah 'merupakan harta pencaharian (gono-gini) yang turun kepada kemenakan' sebagai pernyataan absolut. Ini adalah overklaim karena definisi 'pusako rendah' dalam literatur adat Minangkabau tidak selalu identik dengan 'harta pencaharian' dalam konteks perkawinan (gono-gini). Pusako rendah bisa mencakup harta yang diperoleh leluhur (bukan dari usaha suami-istri) dan aturan warisnya bisa berbeda antar nagari. Klaim menyamakan kedua konsep ini tanpa kualifikasi dapat menyesatkan.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perbaikan konkret: Klarifikasi terminologi. Sebutkan bahwa 'tanah pusako rendah' umumnya merujuk pada harta yang diperoleh pewaris selama hidupnya, dan dalam konteks perkawinan dapat bersifat sebagai harta pencaharian (gono-gini). Namun, perlu verifikasi fakta apakah harta tersebut murni hasil usaha bersama suami-istri atau ada komponen lain."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C3",
+      "issue_type": "evidence_gap",
+      "description": "Klaim mengacu pada 'Putusan Mahkamah Agung tentang hukum adat Minangkabau' sebagai bukti tanpa menyebutkan nomor putusan, tahun, atau ratio decidendi yang spesifik. Ini adalah gap bukti yang signifikan karena yurisprudensi Mahkamah Agung dalam hal waris adat Minangkabau beragam dan berkembang. Tanpa rujukan spesifik, klaim bahwa hakim 'cenderung mengakui hak anak kandung' terkesan sebagai generalisasi yang tidak berdasar dan tidak dapat diverifikasi.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perbaikan konkret: Sebutkan contoh putusan Mahkamah Agung yang relevan (misalnya, Putusan MA No. 179K/Sip/1972 atau putusan yang lebih baru) yang menunjukkan kecenderungan perlindungan hak anak kandung atas harta pencaharian, dan jelaskan secara singkat pertimbangan hukumnya."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "round": 2,
+  "agent": "ALA",
+  "target": "NLA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "domain_mismatch",
+      "description": "Klaim C1 menyatakan KUHPerdata mengatur harta bersama (gono-gini) yang diperoleh selama perkawinan. Istilah 'gono-gini' adalah konsep hukum adat Jawa, bukan terminologi dalam BW. BW menggunakan konsep 'harta bersama' atau 'harta perkawinan' (Pasal 119, 128 BW) dengan aturan pembagian yang berbeda dengan gono-gini. Penggabungan istilah ini menciptakan kerancuan domain hukum.",
+      "severity": "MAJOR",
+      "suggested_fix": "Hindari menggunakan istilah 'gono-gini'. Gunakan terminologi BW yang tepat, seperti 'harta bersama dalam perkawinan' atau 'harta perkawinan', dan jelaskan bahwa pembagiannya diatur dalam Pasal 128 BW (separuh untuk suami/isteri yang hidup terlama, separuh lagi untuk ahli waris)."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C4",
+      "issue_type": "evidence_gap",
+      "description": "Klaim C4 menyatakan yurisprudensi MA cenderung melindungi hak anak kandung atas harta pencaharian dengan confidence 0.9, namun bukti yang diberikan hanya 'Putusan Mahkamah Agung tentang hukum adat Minangkabau'. Ini terlalu umum dan tidak spesifik. Tanpa menyebutkan nomor putusan, tahun, atau ratio decidendi yang relevan, klaim ini menjadi lemah dan tidak dapat diverifikasi.",
+      "severity": "CRITICAL",
+      "suggested_fix": "Sebutkan contoh konkret yurisprudensi MA yang mendukung klaim, misalnya Putusan MA No. 179K/Sip/1972 atau putusan lain yang secara eksplisit mengalihkan tanah pusako rendah kepada anak kandung berdasarkan pertimbangan keadilan. Tanpa ini, klaim hanya berupa pernyataan umum tanpa dasar bukti yang kuat."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C3",
+      "issue_type": "overclaim",
+      "description": "Klaim C3 menyatakan 'tanah pusako rendah (harta pencaharian) secara klasik turun kepada kemenakan, bukan anak kandung.' Ini adalah penyederhanaan yang berpotensi menyesatkan. Dalam adat Minangkabau, pengelolaan dan hak pakai atas tanah pusako rendah memang berada di tangan mamak (saudara laki-laki ibu) untuk kepentingan kemenakan, tetapi status kepemilikan dan pewarisannya bisa kompleks, terutama jika harta tersebut murni hasil usaha individu (pencaharian). Klaim ini mengabaikan kemungkinan variasi dan penyesuaian dalam praktik adat setempat.",
+      "severity": "MAJOR",
+      "suggested_fix": "Sempurnakan klaim dengan menyatakan bahwa 'Secara prinsip matrilineal, tanah pusako rendah diwariskan dalam garis keturunan ibu (kepada kemenakan). Namun, terdapat dinamika dan penafsiran di beberapa nagari yang mulai mengakui kontribusi atau hak anak kandung, terutama untuk harta pencaharian murni.'"
+    }
+  ]
+}

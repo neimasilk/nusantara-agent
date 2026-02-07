@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "agent": "ALA",
+  "target": "NLA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "evidence_gap",
+      "description": "Klaim C1 merujuk ke Pasal 119 KUHPerdata sebagai bukti untuk langkah awal pemisahan harta bersama. Namun, Pasal 119 KUHPerdata berbunyi: 'Persetujuan kawin tidak dapat diubah, selain dengan izin Pengadilan Negeri atau atas persetujuan suami isteri, dan perubahan itu hanya berlaku terhadap pihak ketiga, setelah perubahan itu didaftarkan dalam daftar yang dimaksud dalam pasal yang lalu.' Pasal ini sama sekali tidak mengatur tentang pemisahan harta bersama dalam warisan. Evidence yang dikutip salah atau tidak relevan.",
+      "severity": "CRITICAL",
+      "suggested_fix": "Ganti rujukan evidence untuk klaim pemisahan harta bersama. Dasar yang tepat adalah ketentuan tentang harta bersama dalam perkawinan (misalnya, Pasal 119, 128, 129, 130 KUHPerdata untuk pengaturan asas persatuan bulat), dan ketentuan waris yang mengatur bahwa harta warisan adalah harta bawaan ditambah separuh harta bersama (Pasal 830, 852a KUHPerdata)."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C3",
+      "issue_type": "logic_gap",
+      "description": "Klaim C3 menyatakan 'Harta warisan pewaris terdiri dari separuh harta bersama miliknya ditambah seluruh harta pribadinya.' Pernyataan ini mengandung logika yang tidak lengkap dan berpotensi menyesatkan. Dalam sistem persatuan bulat (Pasal 119 KUHPerdata), harta bersama adalah milik bersama suami-istri. Saat salah satu meninggal, harta bersama harus 'dibagi dua' terlebih dahulu. Separuh bagian suami yang meninggal (bukan 'separuh harta bersama miliknya') BARU masuk ke dalam harta warisan, bersama dengan harta pribadinya. Klaim C3 menggunakan frasa 'separuh harta bersama miliknya' yang mengimplikasikan kepemilikan penuh atas separuh itu sebelum kematian, padahal dalam harta bersama, kepemilikan adalah bersama dan baru terpisah saat pembubaran.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perbaiki logika dan penjelasannya: 'Setelah pemisahan harta bersama, bagian pewaris (yaitu 1/2 dari harta bersama) digabungkan dengan seluruh harta pribadinya (harta bawaan dan harta yang diperoleh dengan cara lain sebagai hadiah atau warisan) untuk membentuk harta warisan yang akan dibagi.'"
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C5",
+      "issue_type": "overclaim",
+      "description": "Klaim C5 menyatakan '...istri berhak atas 1/3 bagian dari harta warisan' dengan merujuk Pasal 852 KUHPerdata. Pernyataan ini adalah overclaim (klaim berlebihan) karena tidak lengkap. Pasal 852 KUHPerdata berbunyi: 'Jika yang meninggal itu meninggalkan suami atau isteri dan seorang anak atau lebih, baik sah maupun luar kawin yang telah diakui, maka suami atau isteri yang hidup terlama berhak atas sepertiga bagian dari harta peninggalan, dan anak-anak atau keturunan mereka berhak atas sisanya.' Klausa 'dari harta peninggalan' di sini SANGAT KRUSIAL. Berdasarkan yurisprudensi dan doktrin yang telah mapan (misalnya Putusan Mahkamah Agung), 'harta peninggalan' dalam Pasal 852 adalah harta warisan SETELAH dikurangi bagian janda/duda dari harta bersama (yakni 1/2 harta bersama). Jadi, istri mendapat (1) 1/2 harta bersama sebagai hak milik, PLUS (2) 1/3 dari sisa harta warisan (1/2 harta bersama pewaris + harta pribadi). Klaim C5 yang hanya menyebut '1/3 bagian dari harta warisan' tanpa konteks ini dapat disalahartikan seolah total bagian istri hanya 1/3 dari seluruh harta, yang salah.",
+      "severity": "CRITICAL",
+      "suggested_fix": "Perjelas klaim dengan memisahkan dua hak istri: 1) Hak atas separuh harta bersama (berdasarkan hukum harta perkawinan). 2) Hak waris sebagai ahli waris sebesar 1/3 dari harta peninggalan (setelah pemisahan harta bersama). Cantumkan penjelasan atau rujukan yurisprudensi bahwa 'harta peninggalan' dalam Pasal 852 adalah harta setelah langkah pertama."
+    }
+  ]
+}

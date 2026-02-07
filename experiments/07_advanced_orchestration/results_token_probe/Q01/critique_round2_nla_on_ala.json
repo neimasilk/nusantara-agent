@@ -1,0 +1,31 @@
+{
+  "round": 2,
+  "agent": "NLA",
+  "target": "ALA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "overclaim",
+      "description": "Klaim bahwa bagian istri adalah 1/4 dari 'harta bawaan dan harta bersama' adalah overclaim. Menurut KUHPerdata (Pasal 852a), istri mendapat 1/4 dari harta bersama (dalam perkawinan) dan 1/4 dari harta bawaan suami. Klaim jawaban menggabungkan kedua jenis harta ini secara tidak tepat, seolah-olah istri mendapat 1/4 dari total gabungan keduanya, yang tidak akurat.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perbaiki klaim menjadi: 'Menurut KUHPerdata, jika pewaris meninggalkan istri dan dua anak, istri berhak atas 1/4 dari harta bersama (dalam perkawinan) dan 1/4 dari harta bawaan suami.'"
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C2",
+      "issue_type": "evidence_gap",
+      "description": "Klaim bahwa bagian dua anak masing-masing adalah 3/8 dari 'harta bawaan dan harta bersama' memiliki evidence gap. Sumber yang dirujuk (source_id_1) tidak dijelaskan isinya. Lebih penting, perhitungan 3/8 untuk masing-masing anak hanya benar jika harta yang dibagi adalah gabungan harta bersama dan harta bawaan suami setelah dikurangi bagian istri. Klaim ini tidak menjelaskan dasar perhitungan dan jenis harta yang dimaksud secara spesifik.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perjelas dasar perhitungan: 'Setelah istri mengambil bagiannya, sisa harta (baik dari harta bersama maupun harta bawaan) dibagi rata di antara dua anak. Dalam contoh perhitungan sederhana, jika harta dianggap sebagai satu kesatuan, bagian masing-masing anak adalah 3/8 dari total.' Sertakan rujukan pasal KUHPerdata yang relevan (Pasal 852a)."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C5",
+      "issue_type": "domain_mismatch",
+      "description": "Klaim tentang Harta Pusako Tinggi diwariskan kepada 'kemenakan' terlalu umum dan berpotensi menimbulkan domain mismatch. Dalam adat Minangkabau, ahli waris Harta Pusako Tinggi adalah 'kemenakan' dalam garis matrilineal, yang secara spesifik adalah saudara perempuan pewaris dan anak-anak dari saudara perempuan tersebut (kemenakan laki-laki dan perempuan). Istilah 'kemenakan' saja tanpa konteks bisa merujuk pada berbagai hubungan kekerabatan.",
+      "severity": "MINOR",
+      "suggested_fix": "Perjelas klaim menjadi: 'Dalam adat Minangkabau, Harta Pusako Tinggi diwariskan secara matrilineal kepada kemenakan dalam garis ibu, utamanya kepada saudara perempuan pewaris dan anak-anak dari saudara perempuan tersebut (anak dari saudara laki-laki ibu).'"
+    }
+  ]
+}

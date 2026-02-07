@@ -17,7 +17,7 @@ Saat ini arsitektur terdiri dari LLM (neural) + Graph Database (storage). Tidak 
 ### Fix: Implement Formal Rule Engine (Experiment 05)
 
 **Pendekatan:**
-1. Encode prinsip-prinsip hukum adat sebagai Prolog-style rules menggunakan **PySwip** (Python-SWI-Prolog bridge) atau **owlready2** (OWL ontology reasoning)
+1. Encode prinsip-prinsip hukum adat sebagai aturan formal menggunakan **Clingo (ASP)**; `PySwip`/OWL opsional sebagai jalur eksplorasi sekunder
 2. Minimal 20 rules per domain hukum adat
 3. Rules harus bisa melakukan inferensi yang TIDAK dilakukan oleh LLM:
    - Transitive reasoning (A waris B, B waris C → A indirect waris C)
@@ -240,10 +240,12 @@ Cultural Consistency Score (CCS) adalah metrik custom yang belum divalidasi. Tan
 | # | Weakness | Status | Progress |
 |---|----------|--------|----------|
 | 1 | Neuro-Symbolic claim | COMPLETED | 100% |
-| 2 | Circular evaluation | PLANNED | 0% |
-| 3 | Linear multi-agent | PLANNED | 0% |
+| 2 | Circular evaluation | IN_PROGRESS | 10% |
+| 3 | Linear multi-agent | IN_PROGRESS | 40% |
 | 4 | Scale too small | IN_PROGRESS | 15% |
 | 5 | Strawman baselines | PLANNED | 0% |
 | 6 | CCS unvalidated | PLANNED | 0% |
+
+Catatan: Exp 07 sudah dieksekusi dan menghasilkan temuan negatif (advanced orchestration belum mengungguli baseline). Weakness #3 tetap berstatus IN_PROGRESS karena perbaikan protokol debat masih diperlukan.
 
 *Last updated: 2026-02-07*

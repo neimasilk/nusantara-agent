@@ -1,0 +1,21 @@
+{
+  "query_id": "Q02",
+  "query": "Dalam adat Minangkabau, siapa yang berhak atas pusako tinggi ketika seorang mamak meninggal?",
+  "graph_data_path": "experiments/01_triple_extraction/result.json",
+  "timing_seconds": {
+    "total": 119.5666
+  },
+  "token_usage": {
+    "total": {
+      "prompt_tokens": 3360,
+      "completion_tokens": 4065,
+      "total_tokens": 7425
+    }
+  },
+  "llm_call_count": {
+    "total": 3
+  },
+  "artifacts": {
+    "final_synthesis": "experiments\\07_advanced_orchestration\\baseline_results_token_probe\\Q02\\final_synthesis.txt"
+  }
+}

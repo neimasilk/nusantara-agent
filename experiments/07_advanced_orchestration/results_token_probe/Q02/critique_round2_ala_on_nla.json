@@ -1,0 +1,31 @@
+{
+  "round": 2,
+  "agent": "ALA",
+  "target": "NLA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "domain_mismatch",
+      "description": "Klaim C1 mengacu pada KUHPerdata Pasal 852 untuk menyimpulkan bahwa anak kandung adalah ahli waris utama dari harta milik orang tuanya. Namun, konteks kasus ini adalah harta seorang mamak dalam masyarakat Minangkabau, yang tunduk pada sistem hukum adat matrilineal. Penerapan KUHPerdata secara langsung tanpa mempertimbangkan asas-asas hukum adat yang diakui konstitusi merupakan kesalahan domain. KUHPerdata adalah hukum umum, sementara hukum adat adalah hukum khusus yang berlaku bagi masyarakat hukum adat.",
+      "severity": "CRITICAL",
+      "suggested_fix": "Klaim seharusnya diawali dengan pengakuan bahwa KUHPerdata adalah hukum umum, namun dalam konteks masyarakat adat Minangkabau, hukum adat (hukum khusus) yang berlaku terlebih dahulu sepanjang tidak bertentangan dengan hukum umum. Baru kemudian, jika harta tersebut terbukti bukan harta adat, KUHPerdata dapat diterapkan."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C4",
+      "issue_type": "evidence_gap",
+      "description": "Klaim C4 menyatakan bahwa 'dalam praktik peradilan, harta yang benar-benar bersifat komunal adat (pusako tinggi sejati) dapat diwariskan ke kemenakan' dengan merujuk pada 'Yurisprudensi Mahkamah Agung'. Namun, referensi ini terlalu umum dan tidak spesifik. Tidak ada identifikasi putusan Mahkamah Agung (nomor, tahun, atau pokok perkara) yang secara eksplisit mengatur pewarisan pusako tinggi Minangkabau kepada kemenakan. Tanpa bukti yurisprudensi yang konkret, klaim ini menjadi lemah dan tidak dapat diverifikasi.",
+      "severity": "MAJOR",
+      "suggested_fix": "Perbaiki klaim dengan menyebutkan contoh spesifik yurisprudensi Mahkamah Agung yang relevan (misalnya, Putusan MA No. 1234 K/Pdt/2022 tentang Sengketa Harta Pusako Tinggi) atau, jika tidak ada referensi spesifik, nyatakan sebagai analisis hukum berdasarkan asas pengakuan hukum adat dalam UU No. 1 Tahun 2023, bukan sebagai fakta yurisprudensi yang mapan."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C5",
+      "issue_type": "overclaim",
+      "description": "Klaim C5 menyimpulkan bahwa 'Harta yang sudah 'diperindividualkan' atas nama mamak cenderung dianggap harta pribadi dan tunduk pada KUHPerdata.' Kesimpulan ini terlalu menyederhanakan dan bersifat deterministik ('cenderung dianggap'). Dalam konteks hukum adat Minangkabau, status harta sebagai pusako tinggi atau harta pribadi (harta pencaharian) tidak semata-mata ditentukan oleh sertifikat atas nama individu. Pengadilan akan melihat asal-usul harta, sumber dana pembelian, dan kesepakatan dalam kaum. Klaim ini mengabaikan kemungkinan bahwa harta yang atas nama individu tetap dapat dianggap sebagai harta kaum jika dibeli dengan dana atau hasil pengelolaan harta kaum.",
+      "severity": "MAJOR",
+      "suggested_fix": "Ubah klaim menjadi lebih hati-hati dan akurat: 'Dalam beberapa yurisprudensi, terdapat kecenderungan bagi pengadilan untuk menganggap harta yang telah dibukukan secara formal atas nama individu (mamak) sebagai harta pribadi, terutama jika tidak dapat dibuktikan berasal dari atau untuk kepentingan komunal kaum. Namun, ini bukan aturan mutlak dan pembuktian asal-usul harta tetap menjadi kunci.'"
+    }
+  ]
+}

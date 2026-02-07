@@ -1,0 +1,69 @@
+{
+  "round": 1,
+  "agent": "NLA",
+  "answer": "Berdasarkan KUHPerdata, ahli waris utama dari harta milik seorang mamak yang meninggal adalah anak kandungnya, bukan kemenakan. Namun, status harta sebagai 'pusako tinggi' dapat menimbulkan konflik dengan hukum adat Minangkabau yang mengatur warisan tersebut untuk kemenakan dalam garis ibu.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Menurut KUHPerdata, anak kandung adalah ahli waris utama dari harta milik orang tuanya.",
+      "evidence": [
+        "KUHPerdata_Pasal_852"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Harta mamak dianggap sebagai harta milik pribadi menurut KUHPerdata."
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Kemenakan (anak dari saudara perempuan) bukan ahli waris berdasarkan KUHPerdata tanpa wasiat.",
+      "evidence": [
+        "KUHPerdata_Pasal_852"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Tidak ada wasiat yang dibuat oleh mamak."
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Hukum adat Minangkabau mengatur pusako tinggi sebagai harta turun-temurun garis ibu yang diwariskan kepada kemenakan dalam satu suku.",
+      "evidence": [
+        "Kompilasi_Hukum_Adat_Minangkabau"
+      ],
+      "confidence": 0.9,
+      "assumptions": [
+        "Penjelasan tentang adat Minangkabau dalam konteks akurat."
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Pasal 18B UUD 1945 dan Pasal 3 UU No. 1 Tahun 2023 mengakui keberadaan hukum adat sepanjang tidak bertentangan dengan hukum nasional.",
+      "evidence": [
+        "UUD_1945_Pasal_18B",
+        "UU_No_1_Tahun_2023_Pasal_3"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Ketentuan ini berlaku untuk konteks hukum waris."
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Dalam praktik peradilan, status harta sebagai pusako tinggi yang bersifat komunal dapat dipertimbangkan, berbeda dengan harta yang sudah diperindividualkan.",
+      "evidence": [
+        "Yurisprudensi_Mahkamah_Agung"
+      ],
+      "confidence": 0.8,
+      "assumptions": [
+        "Ada putusan Mahkamah Agung yang relevan dengan kasus serupa."
+      ]
+    }
+  ],
+  "uncertainties": [
+    "U1: Sejauh mana pengadilan saat ini secara konsisten mengakui dan menerapkan hukum adat Minangkabau dalam sengketa waris pusako tinggi."
+  ],
+  "open_questions": [
+    "Q1: Apakah harta yang dimaksud masih murni bersifat komunal sebagai pusako tinggi kaum atau sudah menjadi harta pribadi mamak berdasarkan bukti kepemilikan dan pengelolaan?"
+  ]
+}

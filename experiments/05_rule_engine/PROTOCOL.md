@@ -7,11 +7,11 @@
 **Date:** 2026-02-07
 
 ## 1. Hypothesis
-Formal Rule Engine berbasis Prolog akan memberikan jawaban yang lebih akurat (100% konsisten dengan norma adat) dibandingkan LLM (DeepSeek) pada kasus-kasus *boundary* atau *edge cases* hukum waris Minangkabau, terutama pada perbedaan perlakuan harta Pusako Tinggi dan Pusako Rendah.
+Formal Rule Engine berbasis ASP (Clingo) akan memberikan jawaban yang lebih akurat (100% konsisten dengan norma adat) dibandingkan LLM (DeepSeek) pada kasus-kasus *boundary* atau *edge cases* hukum waris Minangkabau, terutama pada perbedaan perlakuan harta Pusako Tinggi dan Pusako Rendah.
 
 ## 2. Methodology
-1. **Rule Base**: Menggunakan `src/symbolic/rules/minangkabau.pl` yang diturunkan dari `data/rules/minangkabau_rules.json`.
-2. **Engine**: `src/symbolic/rule_engine.py` (Wrapper PySwip).
+1. **Rule Base**: Menggunakan `src/symbolic/rules/minangkabau.lp` yang diturunkan dari `data/rules/minangkabau_rules.json`.
+2. **Engine**: `src/symbolic/rule_engine.py` (`ClingoRuleEngine` berbasis ASP).
 3. **Test Suite**: 30 skenario kasus waris (TC-05-001 s/d TC-05-030).
 4. **Comparison**:
    - Jalankan skenario pada Rule Engine.
@@ -23,10 +23,10 @@ Formal Rule Engine berbasis Prolog akan memberikan jawaban yang lebih akurat (10
 - Rule Engine mampu mendeteksi konflik formal (misal: penjualan pusako tinggi tanpa konsensus).
 
 ## 4. Procedure
-1. Load Prolog rules.
+1. Load ASP rules.
 2. Iterasi melalui `test_cases.json`.
-3. Assert fakta skenario ke dalam Prolog environment.
-4. Jalankan query `can_inherit` atau `conflict`.
+3. Tambahkan fakta skenario ke dalam solver ASP.
+4. Jalankan solver dan ekstrak atom `can_inherit` atau `conflict`.
 5. Catat hasil dan bandingkan dengan ekspektasi.
 
 ## 5. Results

@@ -1,0 +1,220 @@
+{
+  "query": "Kasus waris tanah pusako rendah: anak kandung menuntut menurut KUHPerdata, kemenakan menuntut menurut adat Minangkabau. Bagaimana menyikapinya?",
+  "max_rounds": 2,
+  "final_nla": {
+    "round": 2,
+    "agent": "NLA",
+    "answer": "Penyelesaian kasus waris tanah pusako rendah harus didahului dengan identifikasi pilihan hukum pewaris dan sifat harta. Secara umum, yurisprudensi Mahkamah Agung cenderung melindungi hak anak kandung atas harta pencaharian orang tuanya dengan pertimbangan keadilan dan kepentingan terbaik anak, meskipun hukum adat secara formal berlaku bagi pribumi yang tidak menundukkan diri pada KUHPerdata.",
+    "claims": [
+      {
+        "id": "C1",
+        "statement": "KUHPerdata mengatur harta bersama (gono-gini) yang diperoleh selama perkawinan, di mana separuhnya menjadi harta warisan ahli waris utama seperti anak kandung.",
+        "evidence": [
+          "Pasal 119 BW",
+          "Pasal 128 BW",
+          "Pasal 832-852 BW"
+        ],
+        "confidence": 1.0,
+        "assumptions": []
+      },
+      {
+        "id": "C2",
+        "statement": "Hukum adat Minangkabau secara formal berlaku bagi pribumi (Bumi Putera) yang tidak menundukkan diri pada KUHPerdata.",
+        "evidence": [
+          "Pasal 131 IS",
+          "Pasal 163 IS"
+        ],
+        "confidence": 1.0,
+        "assumptions": []
+      },
+      {
+        "id": "C3",
+        "statement": "Dalam adat Minangkabau, tanah pusako rendah (harta pencaharian) secara klasik turun kepada kemenakan, bukan anak kandung.",
+        "evidence": [
+          "konteks adat Minangkabau Matrilineal"
+        ],
+        "confidence": 1.0,
+        "assumptions": []
+      },
+      {
+        "id": "C4",
+        "statement": "Yurisprudensi Mahkamah Agung cenderung mengedepankan prinsip keadilan dan melindungi hak anak kandung atas harta pencaharian orang tuanya.",
+        "evidence": [
+          "Putusan Mahkamah Agung tentang hukum adat Minangkabau"
+        ],
+        "confidence": 0.9,
+        "assumptions": [
+          "Putusan MA yang dirujuk relevan dan masih berlaku"
+        ]
+      },
+      {
+        "id": "C5",
+        "statement": "Hakim berwenang melakukan pembentukan dan penemuan hukum (rechtsvorming & rechtsvinding) yang sesuai dengan keadilan masyarakat modern.",
+        "evidence": [
+          "Pasal 5 UU No. 48 Tahun 2009 tentang Kekuasaan Kehakiman"
+        ],
+        "confidence": 1.0,
+        "assumptions": []
+      },
+      {
+        "id": "C6",
+        "statement": "Penyelesaian sengketa diawali dengan musyawarah keluarga dan penghulu adat sebelum ke jalur pengadilan.",
+        "evidence": [
+          "konteks Penyelesaian Secara Berjenjang"
+        ],
+        "confidence": 1.0,
+        "assumptions": []
+      }
+    ],
+    "uncertainties": [
+      "U1: Apakah pewaris secara eksplisit menundukkan diri pada KUHPerdata atau tidak, karena ini menentukan hukum yang berlaku secara formal.",
+      "U2: Sejauh mana penyesuaian adat setempat telah mengakui hak anak kandung atas harta pencaharian."
+    ],
+    "open_questions": [
+      "Q1: Apa bukti konkret bahwa tanah sengketa murni merupakan harta pencaharian (gono-gini) dan bukan campuran dengan harta lain?",
+      "Q2: Bagaimana komposisi ahli waris lainnya (jika ada) menurut KUHPerdata atau adat?"
+    ]
+  },
+  "final_ala": {
+    "round": 2,
+    "agent": "ALA",
+    "answer": "Berdasarkan prinsip adat Minangkabau, Harta Pusako Rendah (harta pencaharian) utamanya diwariskan kepada anak kandung, bukan kemenakan. Penyelesaian terbaik adalah melalui musyawarah keluarga untuk mencapai kesepakatan yang adil, mengakui hak anak kandung sambil menjaga hubungan kekerabatan dengan kemenakan.",
+    "claims": [
+      {
+        "id": "C1",
+        "statement": "Harta Pusako Rendah adalah harta pencaharian orang tua selama perkawinan.",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 1.0,
+        "assumptions": []
+      },
+      {
+        "id": "C2",
+        "statement": "Hak waris utama atas Harta Pusako Rendah menurut adat Minangkabau ada pada anak kandung.",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 1.0,
+        "assumptions": []
+      },
+      {
+        "id": "C3",
+        "statement": "Hak kemenakan secara adat lebih kuat pada Harta Pusako Tinggi (harta turun-temurun kaum), bukan pada Harta Pusako Rendah.",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 1.0,
+        "assumptions": []
+      },
+      {
+        "id": "C4",
+        "statement": "Penyelesaian konflik dalam adat Minangkabau mengutamakan musyawarah (bermufakat) untuk mencapai kesepakatan keluarga.",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 1.0,
+        "assumptions": []
+      },
+      {
+        "id": "C5",
+        "statement": "Prinsip 'adat basandi syarak, syarak basandi Kitabullah' menyeimbangkan hukum, keadilan, dan kemanusiaan dalam penyelesaian.",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 1.0,
+        "assumptions": []
+      }
+    ],
+    "uncertainties": [
+      "U1: Tidak ada informasi spesifik dalam konteks mengenai besaran bagian atau formula pembagian waris untuk anak kandung dan kemenakan dalam kasus Harta Pusako Rendah."
+    ],
+    "open_questions": [
+      "Q1: Apakah ada bukti atau wasiat tertulis dari orang tua (pewaris) yang mengatur pembagian harta tersebut?"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 16130,
+    "completion_tokens": 7929,
+    "total_tokens": 24059
+  },
+  "llm_call_count": 10,
+  "critique_counts": {
+    "CRITICAL": 2,
+    "MAJOR": 9,
+    "MINOR": 1
+  },
+  "needs_human_review": true,
+  "logs_index": [
+    {
+      "type": "answer",
+      "round": 1,
+      "agent": "NLA",
+      "target": null,
+      "file": "debate_round1_nla.json"
+    },
+    {
+      "type": "answer",
+      "round": 1,
+      "agent": "ALA",
+      "target": null,
+      "file": "debate_round1_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 1,
+      "agent": "NLA",
+      "target": "ALA",
+      "file": "critique_round1_nla_on_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 1,
+      "agent": "ALA",
+      "target": "NLA",
+      "file": "critique_round1_ala_on_nla.json"
+    },
+    {
+      "type": "revision",
+      "round": 2,
+      "agent": "NLA",
+      "target": null,
+      "file": "revision_round2_nla.json"
+    },
+    {
+      "type": "revision",
+      "round": 2,
+      "agent": "ALA",
+      "target": null,
+      "file": "revision_round2_ala.json"
+    },
+    {
+      "type": "answer",
+      "round": 2,
+      "agent": "NLA",
+      "target": null,
+      "file": "debate_round2_nla.json"
+    },
+    {
+      "type": "answer",
+      "round": 2,
+      "agent": "ALA",
+      "target": null,
+      "file": "debate_round2_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 2,
+      "agent": "NLA",
+      "target": "ALA",
+      "file": "critique_round2_nla_on_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 2,
+      "agent": "ALA",
+      "target": "NLA",
+      "file": "critique_round2_ala_on_nla.json"
+    }
+  ]
+}

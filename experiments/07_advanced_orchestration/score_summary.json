@@ -3,5 +3,47 @@
   "avg_accuracy": 4.1667,
   "avg_completeness": 4.25,
   "avg_cultural_sensitivity": 4.5,
-  "avg_total": 12.9167
+  "avg_total": 12.9167,
+  "run_summary": {
+    "count": 12,
+    "timing": {
+      "avg_total_seconds": 330.2823,
+      "min_total_seconds": 308.053,
+      "max_total_seconds": 352.0957,
+      "avg_stage_seconds": {
+        "retrieval_parallel": 97.0656,
+        "debate": 224.0476,
+        "supervisor": 9.1691
+      }
+    },
+    "source": "experiments\\07_advanced_orchestration\\results\\run_index.json"
+  },
+  "baseline_run_summary": {
+    "count": 12,
+    "timing": {
+      "avg_total_seconds": 114.994,
+      "min_total_seconds": 101.2856,
+      "max_total_seconds": 147.8283
+    },
+    "source": "experiments\\07_advanced_orchestration\\baseline_results\\run_index.json"
+  },
+  "efficiency_comparison": {
+    "timing": {
+      "advanced_vs_baseline_ratio": 2.8722,
+      "overhead_pct": 187.22,
+      "delta_seconds": 215.2883
+    }
+  },
+  "consistency_checks": {
+    "score_vs_run_count_match": {
+      "score_count": 12,
+      "run_count": 12,
+      "match": true
+    },
+    "advanced_vs_baseline_run_count_match": {
+      "advanced_run_count": 12,
+      "baseline_run_count": 12,
+      "match": true
+    }
+  }
 }

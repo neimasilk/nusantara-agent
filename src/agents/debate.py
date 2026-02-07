@@ -1,6 +1,6 @@
 import json
 import os
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
@@ -33,6 +33,31 @@ def _json_or_raw(text: str) -> Dict:
         return json.loads(text)
     except Exception:
         return {"raw_output": text}
+
+
+def _extract_token_usage(message) -> Dict[str, int]:
+    usage = getattr(message, "usage_metadata", None) or {}
+    response_metadata = getattr(message, "response_metadata", None) or {}
+    token_usage = response_metadata.get("token_usage", {}) if isinstance(response_metadata, dict) else {}
+
+    prompt_tokens = usage.get("input_tokens", token_usage.get("prompt_tokens", 0))
+    completion_tokens = usage.get("output_tokens", token_usage.get("completion_tokens", 0))
+    total_tokens = usage.get("total_tokens", token_usage.get("total_tokens", 0))
+
+    if not total_tokens:
+        total_tokens = prompt_tokens + completion_tokens
+
+    return {
+        "prompt_tokens": int(prompt_tokens or 0),
+        "completion_tokens": int(completion_tokens or 0),
+        "total_tokens": int(total_tokens or 0),
+    }
+
+
+def _merge_usage(acc: Dict[str, int], usage: Dict[str, int]) -> None:
+    acc["prompt_tokens"] += int(usage.get("prompt_tokens", 0))
+    acc["completion_tokens"] += int(usage.get("completion_tokens", 0))
+    acc["total_tokens"] += int(usage.get("total_tokens", 0))
 
 
 def _build_answer_prompt(
@@ -105,9 +130,9 @@ def _build_critique_prompt(
     )
 
 
-def _invoke_json(llm: ChatOpenAI, prompt: str) -> Dict:
+def _invoke_json(llm: ChatOpenAI, prompt: str) -> Tuple[Dict, Dict[str, int]]:
     response = llm.invoke([SystemMessage(content=prompt)])
-    return _json_or_raw(response.content)
+    return _json_or_raw(response.content), _extract_token_usage(response)
 
 
 def run_debate(
@@ -125,6 +150,8 @@ def run_debate(
     logs: List[Dict] = []
     nla_answer: Optional[Dict] = None
     ala_answer: Optional[Dict] = None
+    usage_totals: Dict[str, int] = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
+    llm_call_count = 0
 
     for round_num in range(1, max_rounds + 1):
         # Initial / revised answers
@@ -140,24 +167,36 @@ def run_debate(
             adat_context,
             round_num,
         )
-        nla_answer = _invoke_json(llm, nla_prompt)
-        ala_answer = _invoke_json(llm, ala_prompt)
+        nla_answer, nla_usage = _invoke_json(llm, nla_prompt)
+        _merge_usage(usage_totals, nla_usage)
+        llm_call_count += 1
+
+        ala_answer, ala_usage = _invoke_json(llm, ala_prompt)
+        _merge_usage(usage_totals, ala_usage)
+        llm_call_count += 1
+
         logs.append({"type": "answer", "round": round_num, "agent": "NLA", "data": nla_answer})
         logs.append({"type": "answer", "round": round_num, "agent": "ALA", "data": ala_answer})
 
         # Cross critiques
-        nla_on_ala = _invoke_json(
+        nla_on_ala, nla_crit_usage = _invoke_json(
             llm, _build_critique_prompt("National Law Agent (NLA)", "ALA", ala_answer, round_num)
         )
-        ala_on_nla = _invoke_json(
+        _merge_usage(usage_totals, nla_crit_usage)
+        llm_call_count += 1
+
+        ala_on_nla, ala_crit_usage = _invoke_json(
             llm, _build_critique_prompt("Adat Law Agent (ALA)", "NLA", nla_answer, round_num)
         )
+        _merge_usage(usage_totals, ala_crit_usage)
+        llm_call_count += 1
+
         logs.append({"type": "critique", "round": round_num, "agent": "NLA", "target": "ALA", "data": nla_on_ala})
         logs.append({"type": "critique", "round": round_num, "agent": "ALA", "target": "NLA", "data": ala_on_nla})
 
         # Revision step if not last round
         if round_num < max_rounds:
-            nla_answer, nla_rev = revise_answer(
+            nla_answer, nla_rev, nla_rev_usage = revise_answer(
                 agent_label="National Law Agent (NLA)",
                 query=query,
                 context=national_context,
@@ -166,7 +205,10 @@ def run_debate(
                 critiques_received=ala_on_nla,
                 llm=llm,
             )
-            ala_answer, ala_rev = revise_answer(
+            _merge_usage(usage_totals, nla_rev_usage)
+            llm_call_count += 1
+
+            ala_answer, ala_rev, ala_rev_usage = revise_answer(
                 agent_label="Adat Law Agent (ALA)",
                 query=query,
                 context=adat_context,
@@ -175,6 +217,9 @@ def run_debate(
                 critiques_received=nla_on_ala,
                 llm=llm,
             )
+            _merge_usage(usage_totals, ala_rev_usage)
+            llm_call_count += 1
+
             logs.append(
                 {"type": "revision", "round": round_num + 1, "agent": "NLA", "data": nla_answer, "meta": nla_rev}
             )
@@ -188,6 +233,8 @@ def run_debate(
         "final_nla": nla_answer,
         "final_ala": ala_answer,
         "logs": logs,
+        "token_usage": usage_totals,
+        "llm_call_count": llm_call_count,
     }
 
 
@@ -204,9 +251,12 @@ def save_debate_logs(output_dir: str, debate_result: Dict) -> None:
         target = (entry.get("target") or "").lower()
 
         filename = None
-        if entry_type in ("answer", "revision"):
+        if entry_type == "answer":
             if agent:
                 filename = f"debate_round{round_num}_{agent}.json"
+        elif entry_type == "revision":
+            if agent:
+                filename = f"revision_round{round_num}_{agent}.json"
         elif entry_type == "critique":
             if agent and target:
                 filename = f"critique_round{round_num}_{agent}_on_{target}.json"
@@ -237,6 +287,8 @@ def save_debate_logs(output_dir: str, debate_result: Dict) -> None:
         "max_rounds": debate_result.get("max_rounds"),
         "final_nla": debate_result.get("final_nla"),
         "final_ala": debate_result.get("final_ala"),
+        "token_usage": debate_result.get("token_usage", {}),
+        "llm_call_count": debate_result.get("llm_call_count", 0),
         "critique_counts": severity_counts,
         "needs_human_review": needs_human_review,
         "logs_index": logs_index,

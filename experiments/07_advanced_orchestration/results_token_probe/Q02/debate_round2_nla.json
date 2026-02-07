@@ -1,0 +1,65 @@
+{
+  "round": 2,
+  "agent": "NLA",
+  "answer": "Berdasarkan KUHPerdata, ahli waris utama dari harta milik seorang mamak yang meninggal adalah anak kandungnya, bukan kemenakan. Namun, status harta sebagai 'pusako tinggi' yang sejati dapat dipertimbangkan oleh pengadilan berdasarkan hukum adat Minangkabau.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Menurut KUHPerdata, anak kandung adalah ahli waris utama dari harta milik orang tuanya.",
+      "evidence": [
+        "KUHPerdata_Pasal_852"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Harta yang ditinggalkan dianggap sebagai milik pribadi mamak."
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Kemenakan (anak dari saudara perempuan) bukan ahli waris berdasarkan KUHPerdata jika tidak ada wasiat.",
+      "evidence": [
+        "KUHPerdata_Pasal_852"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Tidak ada wasiat yang menunjuk kemenakan sebagai ahli waris."
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Hukum adat diakui dalam sistem hukum nasional sepanjang tidak bertentangan.",
+      "evidence": [
+        "UUD_1945_Pasal_18B_ayat_2",
+        "UU_No_1_Tahun_2023_Pasal_3"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C4",
+      "statement": "Dalam praktik peradilan, harta yang benar-benar bersifat komunal adat (pusako tinggi sejati) dapat diwariskan ke kemenakan.",
+      "evidence": [
+        "Yurisprudensi_Mahkamah_Agung"
+      ],
+      "confidence": 0.8,
+      "assumptions": [
+        "Harta tersebut dapat dibuktikan sebagai pusako tinggi ulayat kaum yang tidak diperindividualkan."
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Harta yang sudah 'diperindividualkan' atas nama mamak cenderung dianggap harta pribadi dan tunduk pada KUHPerdata.",
+      "evidence": [
+        "Yurisprudensi_Mahkamah_Agung"
+      ],
+      "confidence": 0.8,
+      "assumptions": []
+    }
+  ],
+  "uncertainties": [
+    "U1: Batas pasti antara 'pusako tinggi sejati' dan 'harta pribadi mamak' dalam yurisprudensi terbaru."
+  ],
+  "open_questions": [
+    "Q1: Bagaimana mekanisme pembuktian di pengadilan bahwa suatu harta adalah pusako tinggi ulayat kaum yang tidak terbagi?"
+  ]
+}

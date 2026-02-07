@@ -5,7 +5,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Total Tasks:** 84
 **Status Legend:** PENDING | IN_PROGRESS | DONE | BLOCKED | CANCELLED
 
-*Last updated: 2026-02-06*
+*Last updated: 2026-02-07*
 
 ---
 
@@ -15,11 +15,11 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 |-------|-----------|-------|------|-----------|
 | 0 | Framework & Infrastructure | ART-001 — ART-010 | 10 | 0 |
 | 1 | Pilot Experiments (01-04) | ART-011 — ART-018 | 8 | 0 |
-| 2 | Core Methodology Fixes | ART-019 — ART-042 | 4 | 20 |
-| 3 | Advanced Agent Architecture | ART-043 — ART-055 | 5 | 8 |
+| 2 | Core Methodology Fixes | ART-019 — ART-042 | 5 | 19 |
+| 3 | Advanced Agent Architecture | ART-043 — ART-055 | 6 | 7 |
 | 4 | Evaluation & Ablation | ART-056 — ART-072 | 0 | 17 |
 | 5 | Paper Writing & Submission | ART-073 — ART-084 | 0 | 12 |
-| **TOTAL** | | **84** | **27** | **57** |
+| **TOTAL** | | **84** | **29** | **55** |
 
 ---
 
@@ -204,6 +204,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Inputs:** Academic papers, legal textbooks on hukum adat Minangkabau
 **Outputs:** `data/rules/minangkabau_rules.json` — structured list of rules with citations
 **Acceptance Test:** 20+ rules, each with literature citation, verified by domain expert
+**Progress Note (2026-02-07):** Output draft sudah tersedia dan berisi 20+ rules dengan sitasi, namun seluruh entry masih `DRAFT_NEEDS_HUMAN_REVIEW`; verifikasi domain expert belum terpenuhi.
 
 ### ART-021: Encode Minangkabau Rules in Prolog/OWL
 | Field | Value |
@@ -266,11 +267,12 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | HUMAN_ONLY |
 | **Prerequisites** | None |
 | **Priority** | P1 |
-| **Status** | IN_PROGRESS |
+| **Status** | PENDING |
 **Description:** Design annotation guidelines for human annotators. Define: what counts as a correct triple, how to annotate cultural accuracy, how to handle ambiguity, how to score partial matches.
 **Inputs:** Triple format spec, domain knowledge
 **Outputs:** `data/annotation/guidelines.md`, `data/annotation/schema.json`
 **Acceptance Test:** Guidelines clear enough that 2 pilot annotators achieve Kappa >= 0.5 on 20 sample items
+**Audit Note (2026-02-07):** Output artefak belum ditemukan di repository; status diselaraskan dari `IN_PROGRESS` menjadi `PENDING`.
 
 ### ART-026: Recruit and Train Annotators
 | Field | Value |
@@ -344,11 +346,12 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-028, ART-029, ART-030 |
 | **Priority** | P1 |
-| **Status** | PENDING |
+| **Status** | BLOCKED |
 **Description:** Full Experiment 06: evaluate DeepSeek extraction against gold standard using both human annotators and independent LLM judge. Report precision, recall, F1, Cohen's Kappa.
 **Inputs:** Gold standard, LLM judge, MA decisions
 **Outputs:** `experiments/06_independent_eval/PROTOCOL.md`, `experiments/06_independent_eval/results/`, `experiments/06_independent_eval/analysis.md`
 **Acceptance Test:** All metrics computed with confidence intervals; statistical significance tests passed
+**Blocker:** ART-028, ART-029, ART-030 belum selesai.
 
 ### Data Scaling (Weakness #4)
 
@@ -468,7 +471,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Status** | PENDING |
 **Description:** Implement Bali rules in the same symbolic framework as Minangkabau.
 **Inputs:** `data/rules/bali_rules.json`, rule engine framework
-**Outputs:** `src/symbolic/rules/bali.pl`
+**Outputs:** `src/symbolic/rules/bali.lp`
 **Acceptance Test:** All rules parse and execute; 10 test queries correct
 
 ### ART-041: Encode Jawa Rules in Symbolic Framework
@@ -481,7 +484,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Status** | PENDING |
 **Description:** Implement Javanese rules in the same symbolic framework as Minangkabau.
 **Inputs:** `data/rules/jawa_rules.json`, rule engine framework
-**Outputs:** `src/symbolic/rules/jawa.pl`
+**Outputs:** `src/symbolic/rules/jawa.lp`
 **Acceptance Test:** All rules parse and execute; 10 test queries correct
 
 ### ART-042: Encode National Law Rules
@@ -494,7 +497,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Status** | PENDING |
 **Description:** Encode relevant KUHPerdata inheritance and property rules in symbolic framework. These serve as the "national law" counterpart to adat rules for conflict detection.
 **Inputs:** KUHPerdata relevant articles
-**Outputs:** `src/symbolic/rules/nasional.pl`
+**Outputs:** `src/symbolic/rules/nasional.lp`
 **Acceptance Test:** 15+ national law rules, can detect conflicts with adat rules programmatically
 
 ---
@@ -510,7 +513,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | None |
 | **Priority** | P1 |
-| **Status** | PENDING |
+| **Status** | DONE |
 **Description:** Design the multi-round debate protocol between National and Adat agents. Define: number of rounds, critique format, response format, convergence criteria, escalation to supervisor.
 **Inputs:** Literature on LLM debate protocols, existing agent architecture
 **Outputs:** `experiments/07_advanced_orchestration/debate_protocol_spec.md`
@@ -523,7 +526,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-043 |
 | **Priority** | P1 |
-| **Status** | PENDING |
+| **Status** | DONE |
 **Description:** Refactor LangGraph workflow so National and Adat agents run in parallel (not sequential). Use LangGraph's parallel execution primitives.
 **Inputs:** Existing multi_agent.py, LangGraph documentation
 **Outputs:** Updated `src/agents/orchestrator.py`
@@ -536,7 +539,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-043, ART-044 |
 | **Priority** | P1 |
-| **Status** | PENDING |
+| **Status** | DONE |
 **Description:** Implement multi-round debate where agents critique each other's outputs. Include critique generation, response generation, and convergence detection.
 **Inputs:** Debate spec, parallel agent execution
 **Outputs:** `src/agents/debate.py`
@@ -575,11 +578,12 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-044, ART-045, ART-046, ART-047 |
 | **Priority** | P1 |
-| **Status** | IN_PROGRESS |
+| **Status** | DONE |
 **Description:** Full Experiment 07: test advanced orchestration against Exp 03 baseline. Measure improvement in accuracy, completeness, cultural sensitivity, and efficiency.
 **Inputs:** Advanced orchestration code, test cases, Exp 03 results as baseline
 **Outputs:** `experiments/07_advanced_orchestration/PROTOCOL.md`, `experiments/07_advanced_orchestration/results/`, `experiments/07_advanced_orchestration/analysis.md`
 **Acceptance Test:** Statistical improvement over Exp 03 on at least 2 metrics
+**Outcome:** Completed with negative result (advanced orchestration belum melampaui baseline); tercatat sebagai F-009 di `docs/failure_registry.md`.
 
 ### Experiment 08: Full Pipeline Integration
 
@@ -689,11 +693,12 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-049 |
 | **Priority** | P1 |
-| **Status** | PENDING |
+| **Status** | BLOCKED |
 **Description:** Document exact configuration for each of the 8 baselines: what components are included/excluded, what model is used, what prompts are used.
 **Inputs:** Full pipeline architecture, methodology_fixes.md
 **Outputs:** `experiments/09_ablation_study/baseline_configs.md`
 **Acceptance Test:** Each baseline fully specified, reproducible by another researcher
+**Blocker:** ART-049 (full pipeline integration) belum selesai.
 
 ### ART-057: Implement Baseline 1 — DeepSeek Direct Prompting
 | Field | Value |
@@ -792,11 +797,12 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-057 through ART-064 |
 | **Priority** | P1 |
-| **Status** | PENDING |
+| **Status** | BLOCKED |
 **Description:** Execute all 8 baselines on the 200 test cases, each run 3 times with different random seeds. Record all outputs.
 **Inputs:** All baseline implementations, 200 test cases
 **Outputs:** `experiments/09_ablation_study/results/` — organized by baseline and run
 **Acceptance Test:** 7 automated baselines x 3 runs = 21 complete runs + 1 human baseline
+**Blocker:** Seluruh ART-057 s.d. ART-064 belum selesai.
 
 ### ART-066: Statistical Analysis of Ablation Results
 | Field | Value |
@@ -872,11 +878,12 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-068, ART-069, ART-070 |
 | **Priority** | P2 |
-| **Status** | PENDING |
+| **Status** | BLOCKED |
 **Description:** Full Experiment 10: compile all CCS validation evidence. Follow experiment template.
 **Inputs:** All CCS validation results
 **Outputs:** `experiments/10_metric_validation/PROTOCOL.md`, `experiments/10_metric_validation/analysis.md`
 **Acceptance Test:** CCS validated on all 4 dimensions (reliability, convergent, discriminant, expert calibrated)
+**Blocker:** ART-068, ART-069, ART-070 belum selesai.
 
 ### ART-072: RAGAS Evaluation on Full Pipeline
 | Field | Value |

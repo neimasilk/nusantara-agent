@@ -1,0 +1,58 @@
+{
+  "round": 1,
+  "agent": "ALA",
+  "answer": "Berdasarkan prinsip adat Minangkabau, untuk harta pusako rendah, hak waris utama ada pada anak kandung. Namun, penyelesaian terbaik adalah melalui musyawarah keluarga untuk mencapai kesepakatan yang adil dan menjaga kerukunan, dengan mempertimbangkan posisi kemenakan dalam hubungan kekerabatan.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Harta pusako rendah adalah harta pencaharian orang tua selama perkawinan.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C2",
+      "statement": "Hak waris atas harta pusako rendah yang kuat dimiliki oleh anak kandung.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C3",
+      "statement": "Hak kemenakan secara adat lebih kuat pada harta pusako tinggi, bukan harta pusako rendah.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C4",
+      "statement": "Penyelesaian konflik dalam adat Minangkabau mengutamakan musyawarah (bermufakat) untuk mencapai kesepakatan.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    },
+    {
+      "id": "C5",
+      "statement": "Prinsip 'adat basandi syarak, syarak basandi Kitabullah' menyeimbangkan hukum, keadilan, dan kemanusiaan.",
+      "evidence": [
+        "source_id_1"
+      ],
+      "confidence": 1.0,
+      "assumptions": []
+    }
+  ],
+  "uncertainties": [
+    "U1: Tidak dijelaskan secara rinci mekanisme pembagian atau besaran bagian untuk anak kandung dan kemenakan dalam konteks harta pusako rendah."
+  ],
+  "open_questions": [
+    "Q1: Apakah ada bukti atau kesepakatan tertulis sebelumnya dalam keluarga mengenai status dan pembagian harta tersebut?"
+  ]
+}

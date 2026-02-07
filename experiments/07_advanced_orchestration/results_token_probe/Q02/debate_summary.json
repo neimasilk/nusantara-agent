@@ -1,0 +1,232 @@
+{
+  "query": "Dalam adat Minangkabau, siapa yang berhak atas pusako tinggi ketika seorang mamak meninggal?",
+  "max_rounds": 2,
+  "final_nla": {
+    "round": 2,
+    "agent": "NLA",
+    "answer": "Berdasarkan KUHPerdata, ahli waris utama dari harta milik seorang mamak yang meninggal adalah anak kandungnya, bukan kemenakan. Namun, status harta sebagai 'pusako tinggi' yang sejati dapat dipertimbangkan oleh pengadilan berdasarkan hukum adat Minangkabau.",
+    "claims": [
+      {
+        "id": "C1",
+        "statement": "Menurut KUHPerdata, anak kandung adalah ahli waris utama dari harta milik orang tuanya.",
+        "evidence": [
+          "KUHPerdata_Pasal_852"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "Harta yang ditinggalkan dianggap sebagai milik pribadi mamak."
+        ]
+      },
+      {
+        "id": "C2",
+        "statement": "Kemenakan (anak dari saudara perempuan) bukan ahli waris berdasarkan KUHPerdata jika tidak ada wasiat.",
+        "evidence": [
+          "KUHPerdata_Pasal_852"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "Tidak ada wasiat yang menunjuk kemenakan sebagai ahli waris."
+        ]
+      },
+      {
+        "id": "C3",
+        "statement": "Hukum adat diakui dalam sistem hukum nasional sepanjang tidak bertentangan.",
+        "evidence": [
+          "UUD_1945_Pasal_18B_ayat_2",
+          "UU_No_1_Tahun_2023_Pasal_3"
+        ],
+        "confidence": 1.0,
+        "assumptions": []
+      },
+      {
+        "id": "C4",
+        "statement": "Dalam praktik peradilan, harta yang benar-benar bersifat komunal adat (pusako tinggi sejati) dapat diwariskan ke kemenakan.",
+        "evidence": [
+          "Yurisprudensi_Mahkamah_Agung"
+        ],
+        "confidence": 0.8,
+        "assumptions": [
+          "Harta tersebut dapat dibuktikan sebagai pusako tinggi ulayat kaum yang tidak diperindividualkan."
+        ]
+      },
+      {
+        "id": "C5",
+        "statement": "Harta yang sudah 'diperindividualkan' atas nama mamak cenderung dianggap harta pribadi dan tunduk pada KUHPerdata.",
+        "evidence": [
+          "Yurisprudensi_Mahkamah_Agung"
+        ],
+        "confidence": 0.8,
+        "assumptions": []
+      }
+    ],
+    "uncertainties": [
+      "U1: Batas pasti antara 'pusako tinggi sejati' dan 'harta pribadi mamak' dalam yurisprudensi terbaru."
+    ],
+    "open_questions": [
+      "Q1: Bagaimana mekanisme pembuktian di pengadilan bahwa suatu harta adalah pusako tinggi ulayat kaum yang tidak terbagi?"
+    ]
+  },
+  "final_ala": {
+    "round": 2,
+    "agent": "ALA",
+    "answer": "Ketika seorang mamak meninggal, hak atas Pusako Tinggi tetap pada kaum (kelompok kekerabatan matrilineal) dan beralih kepada kemenakan dalam garis ibu, dengan kemenakan laki-laki sebagai calon pengelola baru.",
+    "claims": [
+      {
+        "id": "C1",
+        "statement": "Ketika seorang mamak meninggal, yang berhak atas Harta Pusako Tinggi adalah kaum (kelompok kekerabatan matrilineal) itu sendiri.",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "A1"
+        ]
+      },
+      {
+        "id": "C2",
+        "statement": "Hak kepemilikan dan pengelolaan Pusako Tinggi beralih kepada kemenakan (anak dari saudara perempuan almarhum).",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "A2"
+        ]
+      },
+      {
+        "id": "C3",
+        "statement": "Kemenakan perempuan dan generasi perempuan di bawahnya dalam garis ibu adalah ahli waris Pusako Tinggi.",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "A3"
+        ]
+      },
+      {
+        "id": "C4",
+        "statement": "Kemenakan laki-laki akan menjadi calon Mamak Kepala Waris yang baru, bertugas mengelola harta untuk kepentingan kemenakan perempuan dan kaum.",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "A4"
+        ]
+      },
+      {
+        "id": "C5",
+        "statement": "Harta Pusako Tinggi adalah milik kolektif kaum dan diwariskan berdasarkan garis ibu (matrilineal).",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "A5"
+        ]
+      },
+      {
+        "id": "C6",
+        "statement": "Seorang mamak yang meninggal hanyalah seorang pengelola (Mamak Kepala Waris), bukan pemilik pribadi Pusako Tinggi.",
+        "evidence": [
+          "source_id_1"
+        ],
+        "confidence": 1.0,
+        "assumptions": [
+          "A6"
+        ]
+      }
+    ],
+    "uncertainties": [
+      "Mekanisme detail penunjukan kemenakan laki-laki sebagai Mamak Kepala Waris yang baru jika tidak disebutkan secara eksplisit."
+    ],
+    "open_questions": [
+      "Apakah ada variasi aturan ini di nagari-nagari tertentu dalam Minangkabau?"
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 14681,
+    "completion_tokens": 7728,
+    "total_tokens": 22409
+  },
+  "llm_call_count": 10,
+  "critique_counts": {
+    "CRITICAL": 2,
+    "MAJOR": 9,
+    "MINOR": 2
+  },
+  "needs_human_review": true,
+  "logs_index": [
+    {
+      "type": "answer",
+      "round": 1,
+      "agent": "NLA",
+      "target": null,
+      "file": "debate_round1_nla.json"
+    },
+    {
+      "type": "answer",
+      "round": 1,
+      "agent": "ALA",
+      "target": null,
+      "file": "debate_round1_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 1,
+      "agent": "NLA",
+      "target": "ALA",
+      "file": "critique_round1_nla_on_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 1,
+      "agent": "ALA",
+      "target": "NLA",
+      "file": "critique_round1_ala_on_nla.json"
+    },
+    {
+      "type": "revision",
+      "round": 2,
+      "agent": "NLA",
+      "target": null,
+      "file": "revision_round2_nla.json"
+    },
+    {
+      "type": "revision",
+      "round": 2,
+      "agent": "ALA",
+      "target": null,
+      "file": "revision_round2_ala.json"
+    },
+    {
+      "type": "answer",
+      "round": 2,
+      "agent": "NLA",
+      "target": null,
+      "file": "debate_round2_nla.json"
+    },
+    {
+      "type": "answer",
+      "round": 2,
+      "agent": "ALA",
+      "target": null,
+      "file": "debate_round2_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 2,
+      "agent": "NLA",
+      "target": "ALA",
+      "file": "critique_round2_nla_on_ala.json"
+    },
+    {
+      "type": "critique",
+      "round": 2,
+      "agent": "ALA",
+      "target": "NLA",
+      "file": "critique_round2_ala_on_nla.json"
+    }
+  ]
+}

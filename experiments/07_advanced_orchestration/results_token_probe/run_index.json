@@ -1,0 +1,161 @@
+[
+  {
+    "query_id": "Q01",
+    "query": "Bagaimana pembagian waris menurut KUHPerdata jika pewaris meninggalkan istri dan dua anak?",
+    "routing": {
+      "label": "pure_national",
+      "scores": {
+        "national": 2,
+        "adat": 0,
+        "conflict": 0
+      },
+      "confidence": 0.7,
+      "method": "heuristic"
+    },
+    "graph_data_path": "experiments/01_triple_extraction/result.json",
+    "timing_seconds": {
+      "retrieval_parallel": 87.6511,
+      "debate": 246.2928,
+      "supervisor": 10.4585,
+      "total": 344.4023
+    },
+    "token_usage": {
+      "retrieval_parallel": {
+        "prompt_tokens": 2919,
+        "completion_tokens": 3367,
+        "total_tokens": 6286
+      },
+      "debate": {
+        "prompt_tokens": 14333,
+        "completion_tokens": 8124,
+        "total_tokens": 22457
+      },
+      "supervisor": {
+        "prompt_tokens": 1412,
+        "completion_tokens": 326,
+        "total_tokens": 1738
+      },
+      "total": {
+        "prompt_tokens": 18664,
+        "completion_tokens": 11817,
+        "total_tokens": 30481
+      }
+    },
+    "llm_call_count": {
+      "retrieval_parallel": 3,
+      "debate": 10,
+      "supervisor": 1,
+      "total": 14
+    },
+    "artifacts": {
+      "debate_summary": "experiments\\07_advanced_orchestration\\results_token_probe\\Q01\\debate_summary.json",
+      "final_synthesis": "experiments\\07_advanced_orchestration\\results_token_probe\\Q01\\final_synthesis.txt"
+    }
+  },
+  {
+    "query_id": "Q02",
+    "query": "Dalam adat Minangkabau, siapa yang berhak atas pusako tinggi ketika seorang mamak meninggal?",
+    "routing": {
+      "label": "pure_adat",
+      "scores": {
+        "national": 0,
+        "adat": 4,
+        "conflict": 0
+      },
+      "confidence": 0.7,
+      "method": "heuristic"
+    },
+    "graph_data_path": "experiments/01_triple_extraction/result.json",
+    "timing_seconds": {
+      "retrieval_parallel": 89.6532,
+      "debate": 224.2571,
+      "supervisor": 9.2669,
+      "total": 323.1771
+    },
+    "token_usage": {
+      "retrieval_parallel": {
+        "prompt_tokens": 3242,
+        "completion_tokens": 3630,
+        "total_tokens": 6872
+      },
+      "debate": {
+        "prompt_tokens": 14681,
+        "completion_tokens": 7728,
+        "total_tokens": 22409
+      },
+      "supervisor": {
+        "prompt_tokens": 1263,
+        "completion_tokens": 285,
+        "total_tokens": 1548
+      },
+      "total": {
+        "prompt_tokens": 19186,
+        "completion_tokens": 11643,
+        "total_tokens": 30829
+      }
+    },
+    "llm_call_count": {
+      "retrieval_parallel": 3,
+      "debate": 10,
+      "supervisor": 1,
+      "total": 14
+    },
+    "artifacts": {
+      "debate_summary": "experiments\\07_advanced_orchestration\\results_token_probe\\Q02\\debate_summary.json",
+      "final_synthesis": "experiments\\07_advanced_orchestration\\results_token_probe\\Q02\\final_synthesis.txt"
+    }
+  },
+  {
+    "query_id": "Q03",
+    "query": "Kasus waris tanah pusako rendah: anak kandung menuntut menurut KUHPerdata, kemenakan menuntut menurut adat Minangkabau. Bagaimana menyikapinya?",
+    "routing": {
+      "label": "consensus",
+      "scores": {
+        "national": 2,
+        "adat": 4,
+        "conflict": 0
+      },
+      "confidence": 0.55,
+      "method": "heuristic"
+    },
+    "graph_data_path": "experiments/01_triple_extraction/result.json",
+    "timing_seconds": {
+      "retrieval_parallel": 86.3728,
+      "debate": 235.8399,
+      "supervisor": 5.4166,
+      "total": 327.6293
+    },
+    "token_usage": {
+      "retrieval_parallel": {
+        "prompt_tokens": 3697,
+        "completion_tokens": 3860,
+        "total_tokens": 7557
+      },
+      "debate": {
+        "prompt_tokens": 16130,
+        "completion_tokens": 7929,
+        "total_tokens": 24059
+      },
+      "supervisor": {
+        "prompt_tokens": 1410,
+        "completion_tokens": 152,
+        "total_tokens": 1562
+      },
+      "total": {
+        "prompt_tokens": 21237,
+        "completion_tokens": 11941,
+        "total_tokens": 33178
+      }
+    },
+    "llm_call_count": {
+      "retrieval_parallel": 3,
+      "debate": 10,
+      "supervisor": 1,
+      "total": 14
+    },
+    "artifacts": {
+      "debate_summary": "experiments\\07_advanced_orchestration\\results_token_probe\\Q03\\debate_summary.json",
+      "final_synthesis": "experiments\\07_advanced_orchestration\\results_token_probe\\Q03\\final_synthesis.txt"
+    }
+  }
+]

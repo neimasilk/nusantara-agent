@@ -1,0 +1,80 @@
+{
+  "round": 1,
+  "agent": "NLA",
+  "answer": "Berdasarkan KUHPerdata, pembagian waris diawali dengan pemisahan harta bersama. Istri berhak atas 1/2 harta bersama sebagai hak milik. Sisa harta (1/2 harta bersama + harta pribadi pewaris) dibagikan sebagai warisan: istri mendapat 1/3 bagian, dan dua anak bersama-sama mendapat 2/3 bagian yang dibagi rata.",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Pembagian waris menurut KUHPerdata dimulai dengan memisahkan harta bersama antara suami dan istri.",
+      "evidence": [
+        "Pasal 119 KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Tidak ada perjanjian perkawinan lain, sehingga berlaku persatuan bulat (gemeenschap van goederen)."
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Istri berhak atas separuh (1/2) dari harta bersama sebagai hak milik penuh, terpisah dari harta warisan.",
+      "evidence": [
+        "Pasal 119 KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Harta bersama adalah harta yang diperoleh selama perkawinan."
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Harta warisan pewaris terdiri dari separuh harta bersama miliknya ditambah seluruh harta pribadinya.",
+      "evidence": [
+        "Analisis dari langkah pemisahan harta"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Telah dilakukan pemisahan harta yang benar."
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "Ahli waris dalam kasus ini (istri dan dua anak) termasuk dalam golongan I menurut Pasal 832 KUHPerdata.",
+      "evidence": [
+        "Pasal 832 KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Anak-anak adalah anak kandung/sah."
+      ]
+    },
+    {
+      "id": "C5",
+      "statement": "Berdasarkan Pasal 852 KUHPerdata, jika pewaris meninggalkan istri dan lebih dari satu anak sah, istri berhak atas 1/3 bagian dari harta warisan.",
+      "evidence": [
+        "Pasal 852 KUHPerdata"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Anak-anak adalah anak sah dan tidak ada ahli waris lain yang lebih berhak."
+      ]
+    },
+    {
+      "id": "C6",
+      "statement": "Sisa 2/3 bagian dari harta warisan menjadi hak kedua anak bersama-sama dan dibagi rata di antara mereka.",
+      "evidence": [
+        "Penjelasan dari Pasal 852 dan prinsip pembagian kepada anak"
+      ],
+      "confidence": 1.0,
+      "assumptions": [
+        "Kedua anak memiliki kedudukan yang sama sebagai ahli waris."
+      ]
+    }
+  ],
+  "uncertainties": [
+    "Nilai pasti harta bersama dan harta pribadi pewaris tidak diketahui dari konteks."
+  ],
+  "open_questions": [
+    "Apakah ada hutang pewaris yang harus dilunasi terlebih dahulu dari harta warisan?",
+    "Apakah semua anak yang dimaksud adalah anak sah dari perkawinan dengan istri yang ditinggalkan?"
+  ]
+}

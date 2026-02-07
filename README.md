@@ -18,11 +18,12 @@ Fokus utama proyek ini adalah pada **kontribusi ilmiah** dan **novelty** di bida
 *   `ClingoRuleEngine` (ASP) sudah fungsional di `src/symbolic/rule_engine.py` dengan 30+ aturan formal di `src/symbolic/rules/minangkabau.lp`.
 *   Experiment 05 (Formal Rule Engine vs LLM) selesai: ditemukan 33.3% divergensi pada N=30 test cases.
 *   Advanced agent architecture: parallel execution, debate, self-correction, dan routing tersedia di `src/agents/`.
+*   Experiment 07 sudah dijalankan pada 12 query, namun advanced orchestration belum mengungguli baseline sequential (lihat `experiments/07_advanced_orchestration/analysis.md` dan F-009 di `docs/failure_registry.md`).
 *   Draft rules di `data/rules/minangkabau_rules.json` (**DRAFT_NEEDS_HUMAN_REVIEW**).
 
 ## Milestone Berikutnya
 1.  Jalankan Experiment 06 (Independent Evaluation Pipeline).
-2.  Jalankan Experiment 07 (Advanced Multi-Agent Orchestration).
+2.  Iterasi Experiment 07: perbaiki protokol debat berbasis evidence retrieval dan validasi dengan human annotation.
 3.  Scaling: 10K+ triples, 200+ test cases, 3 domains.
 
 ## Struktur Direktori

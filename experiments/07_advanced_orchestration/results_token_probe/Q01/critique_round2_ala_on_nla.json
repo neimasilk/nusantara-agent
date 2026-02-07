@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "agent": "ALA",
+  "target": "NLA",
+  "critiques": [
+    {
+      "id": "K1",
+      "target_claim_id": "C1",
+      "issue_type": "evidence_gap",
+      "description": "Klaim C1 merujuk pada Pasal 119 KUHPerdata sebagai bukti untuk pemisahan harta bersama. Namun, Pasal 119 KUHPerdata mengatur tentang persatuan bulat (harta bersama) sebagai harta perkawinan, bukan tentang prosedur pemisahannya. Pasal yang lebih tepat untuk mendukung klaim ini adalah Pasal 128 KUHPerdata, yang mengatur tentang pemisahan harta warisan dari harta perkawinan.",
+      "severity": "MAJOR",
+      "suggested_fix": "Ganti referensi Pasal 119 KUHPerdata dengan Pasal 128 KUHPerdata sebagai evidence untuk klaim C1, karena pasal tersebut secara eksplisit mengatur pemisahan harta warisan dari harta perkawinan."
+    },
+    {
+      "id": "K2",
+      "target_claim_id": "C4",
+      "issue_type": "logic_gap",
+      "description": "Klaim C4 menyatakan hak waris istri adalah 1/3 bagian karena pewaris meninggalkan lebih dari satu anak sah, dengan merujuk Pasal 852 KUHPerdata. Namun, Pasal 852 KUHPerdata hanya mengatur pembagian warisan untuk anak-anak, bukan bagian istri. Bagian istri diatur dalam Pasal 852a KUHPerdata, yang menyebutkan istri mendapat bagian yang sama dengan seorang anak jika ada anak-anak. Dalam kasus dua anak, bagian istri adalah 1/4 (bukan 1/3) dari harta warisan.",
+      "severity": "CRITICAL",
+      "suggested_fix": "Koreksi klaim C4: Ganti bagian istri dari 1/3 menjadi 1/4, dan ganti referensi Pasal 852 dengan Pasal 852a KUHPerdata. Logika pembagian menjadi: istri mendapat 1/4, sisa 3/4 dibagi rata untuk kedua anak (masing-masing 3/8)."
+    },
+    {
+      "id": "K3",
+      "target_claim_id": "C6",
+      "issue_type": "overclaim",
+      "description": "Klaim C6 menyimpulkan bahwa 'porsi akhir istri lebih besar daripada porsi masing-masing anak' tanpa memberikan perhitungan numerik yang jelas atau mempertimbangkan semua variabel. Kesimpulan ini bersifat umum dan mungkin tidak selalu benar tergantung pada komposisi harta bersama versus harta pribadi. Tanpa data kuantitatif, klaim ini adalah overgeneralization.",
+      "severity": "MINOR",
+      "suggested_fix": "Hindari klaim komparatif yang definitif tanpa data. Ubah klaim menjadi deskripsi prosedural: 'Istri mendapatkan dua sumber hak: separuh harta bersama dan bagiannya sebagai ahli waris. Besaran relatif bagian akhirnya bergantung pada proporsi harta bersama terhadap total harta.'"
+    }
+  ]
+}

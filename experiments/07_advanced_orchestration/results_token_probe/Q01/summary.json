@@ -1,0 +1,53 @@
+{
+  "query_id": "Q01",
+  "query": "Bagaimana pembagian waris menurut KUHPerdata jika pewaris meninggalkan istri dan dua anak?",
+  "routing": {
+    "label": "pure_national",
+    "scores": {
+      "national": 2,
+      "adat": 0,
+      "conflict": 0
+    },
+    "confidence": 0.7,
+    "method": "heuristic"
+  },
+  "graph_data_path": "experiments/01_triple_extraction/result.json",
+  "timing_seconds": {
+    "retrieval_parallel": 87.6511,
+    "debate": 246.2928,
+    "supervisor": 10.4585,
+    "total": 344.4023
+  },
+  "token_usage": {
+    "retrieval_parallel": {
+      "prompt_tokens": 2919,
+      "completion_tokens": 3367,
+      "total_tokens": 6286
+    },
+    "debate": {
+      "prompt_tokens": 14333,
+      "completion_tokens": 8124,
+      "total_tokens": 22457
+    },
+    "supervisor": {
+      "prompt_tokens": 1412,
+      "completion_tokens": 326,
+      "total_tokens": 1738
+    },
+    "total": {
+      "prompt_tokens": 18664,
+      "completion_tokens": 11817,
+      "total_tokens": 30481
+    }
+  },
+  "llm_call_count": {
+    "retrieval_parallel": 3,
+    "debate": 10,
+    "supervisor": 1,
+    "total": 14
+  },
+  "artifacts": {
+    "debate_summary": "experiments\\07_advanced_orchestration\\results_token_probe\\Q01\\debate_summary.json",
+    "final_synthesis": "experiments\\07_advanced_orchestration\\results_token_probe\\Q01\\final_synthesis.txt"
+  }
+}
