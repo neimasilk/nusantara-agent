@@ -39,6 +39,37 @@ class KGSearchTests(unittest.TestCase):
         ctx = self.searcher.get_context_for_query("xyz")
         self.assertIn("Tidak ditemukan informasi tambahan", ctx)
 
+    def test_empty_kg_fallback(self):
+        """Edge case: empty KG should return empty results gracefully."""
+        temp_dir = tempfile.TemporaryDirectory()
+        path = Path(temp_dir.name) / "empty_kg.json"
+        path.write_text(json.dumps({"triples": []}, ensure_ascii=False), encoding="utf-8")
+        searcher = SimpleKGSearch(str(path))
+        results = searcher.search("any", limit=5)
+        self.assertEqual(results, [])
+        temp_dir.cleanup()
+
+    def test_missing_triples_key_fallback(self):
+        """Edge case: KG without 'triples' key should fallback gracefully."""
+        temp_dir = tempfile.TemporaryDirectory()
+        path = Path(temp_dir.name) / "bad_kg.json"
+        path.write_text(json.dumps({"entities": []}, ensure_ascii=False), encoding="utf-8")
+        searcher = SimpleKGSearch(str(path))
+        results = searcher.search("any", limit=5)
+        self.assertEqual(results, [])
+        temp_dir.cleanup()
+
+    def test_limit_respected(self):
+        """Edge case: limit parameter should be respected."""
+        results = self.searcher.search("pusako", limit=1)
+        self.assertEqual(len(results), 1)
+
+    def test_unicode_query(self):
+        """Edge case: Indonesian unicode characters in query."""
+        results = self.searcher.search("pusakö tinggi", limit=5)
+        # Should not crash even with special characters
+        self.assertIsInstance(results, list)
+
 
 if __name__ == "__main__":
     unittest.main()
