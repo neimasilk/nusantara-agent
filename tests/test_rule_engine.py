@@ -235,7 +235,10 @@ class PrologEngineMockTests(unittest.TestCase):
         """Test: assert_fact memanggil prolog.assertz."""
         from src.symbolic.rule_engine import PrologEngine
         
-        mock_prolog = MagicMock(spec=['assertz', 'consult', 'query'])
+        mock_prolog = MagicMock(
+            spec=["assertz", "consult", "query"],
+            unsafe=True,
+        )
         mock_init.return_value = mock_prolog
         
         engine = PrologEngine(auto_load=False)
