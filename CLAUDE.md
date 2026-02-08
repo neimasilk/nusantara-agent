@@ -101,6 +101,7 @@ Work is decomposed into Atomic Research Tasks (ARTs). See:
 - **Exp 07 COMPLETED (Negative Result)**: Advanced orchestration (parallel + debate + self-correction + routing) belum mengungguli baseline sequential pada auto-score Kimi (N=12), sehingga protokol debat perlu iterasi.
 - **Draft rules**: `data/rules/minangkabau_rules.json` berisi aturan hasil ekstraksi open-access.
 - **Dependency audit note**: `ART-021` dan `ART-022` sudah `DONE` tetapi prereq `ART-020` masih `IN_PROGRESS`; implementasi berjalan dengan draft rules, sedangkan verifikasi domain expert tetap ditahan di `ART-020` (HUMAN_ONLY).
+- **Integration blocker**: `ART-049` (Full Pipeline Integration) masih `PENDING` dan menjadi blocker untuk `ART-056` (Ablation baseline config) serta seluruh Exp 09 dan Exp 10.
 
 ## Methodology Fixes
 
@@ -110,8 +111,8 @@ Six critical weaknesses have been identified and documented in `docs/methodology
 2. Circular evaluation — independent evaluation pipeline needed (Exp 06, BLOCKED on annotation setup)
 3. Orchestration quality gain — not achieved after Exp 07 (negative result); debate protocol needs iteration
 4. Scale too small — needs 10K+ triples, 200+ test cases (scaling plan, IN_PROGRESS 15%)
-5. Ablation needs proper baselines, not strawman (Exp 09, BLOCKED on pipeline integration)
-6. CCS metric needs rigorous validation (Exp 10, BLOCKED on prerequisite artifacts)
+5. Ablation needs proper baselines, not strawman (Exp 09, BLOCKED on pipeline integration — ART-056 blocked by ART-049)
+6. CCS metric needs rigorous validation (Exp 10, BLOCKED on prerequisite artifacts — ART-071 blocked by ART-068/069/070)
 
 ## Key Conventions
 
