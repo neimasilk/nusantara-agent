@@ -1286,6 +1286,37 @@ Saat ini agen nasional kalah "debat" karena knowledge base terbatas (hanya 4 dok
 
 ---
 
+### ART-096: Tune Supervisor Prompts for Balanced Adjudication
+| Field | Value |
+|-------|-------|
+| **Type** | CODE |
+| **Executor** | EITHER |
+| **Prerequisites** | ART-093 |
+| **Priority** | P1 |
+| **Phase** | 6 |
+| **Status** | DONE |
+| **Assigned To** | Agent #5 |
+
+**Description:**  
+Menyeimbangkan kembali bobot antara Hukum Nasional dan Hukum Adat pada Supervisor Agent.
+Pasca ART-093, agen nasional menjadi terlalu dominan (memiliki knowledge base KUHPerdata lengkap), sehingga sering "memenangkan" kasus yang seharusnya C (Konflik/Sintesis) menjadi A (Nasional).
+Supervisor perlu diberi instruksi eksplisit bahwa **eksistensi aturan nasional tidak otomatis menggugurkan adat** jika terjadi pertentangan nyata (C).
+
+**Inputs:**
+- `src/agents/orchestrator.py`
+- `experiments/09_ablation_study/results_phase1.json` (Analisis error)
+
+**Outputs:**
+- Updated `src/agents/orchestrator.py`
+
+**Acceptance Test:**
+- [x] Akurasi benchmark kembali naik (target >65%)
+- [x] False Positives pada Label A berkurang
+- [x] Kasus kritis seperti CS-JAW-015 (Wekas) dan CS-LIN-016 (Interfaith/Inter-suku) terklasifikasi benar (C)
+**Completion Note (2026-02-09):** Berhasil meningkatkan akurasi dari 54.55% ke 77.27%. Kasus konflik materiil (C) kini terdeteksi dengan baik. Residual errors (over-correction ke C) masih ada pada kasus administratif murni, namun tradeoff ini dapat diterima untuk keamanan putusan.
+
+---
+
 ### ART-094: Resolve 7 Split Cases with Expert-4
 | Field | Value |
 |-------|-------|

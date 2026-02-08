@@ -69,3 +69,35 @@ Baseline (Prompt): 54.55%
 
 ## Kesimpulan Phase 2
 ART-093 berhasil diimplementasikan secara teknis (retrieval works), namun belum meningkatkan akurasi akhir. Diperlukan tuning pada **Supervisor Agent** (ART selanjutnya) untuk menyeimbangkan bobot argumen Nasional yang kini lebih kuat agar tidak "overkill" pada kasus kompromi (C).
+
+---
+
+# Phase 3: ART-096 Validation (Supervisor Tuning)
+
+Tanggal: 9 Februari 2026
+Tujuan: Menyeimbangkan kembali logika Adjudicator pasca ART-093. Mengoreksi dominasi Label A pada kasus konflik.
+Baseline (ART-093): 54.55%
+
+## Hasil Benchmark (Run 3)
+
+| Metric | Value |
+|---|---|
+| Total Kasus Diuji | 22 |
+| Benar (Match) | 17 |
+| Salah (Fail) | 5 |
+| **Akurasi** | **77.27%** |
+
+## Observasi
+1.  **Peningkatan Signifikan:** Akurasi naik dari 54.55% menjadi 77.27%.
+2.  **Koreksi Label C:** Kasus-kasus kritis yang sebelumnya salah diprediksi A kini benar diprediksi C (Konflik/Sintesis).
+    *   `CS-JAW-015` (Wekas): Correctly C.
+    *   `CS-LIN-016` (Adat vs Nasional): Correctly C.
+    *   `CS-BAL-020`: Correctly C.
+3.  **Residual Errors:**
+    *   `CS-NAS-010`: Prediksi C, Gold A (Perkawinan bawah umur). Supervisor mungkin menjadi "terlalu sensitif" terhadap konflik sehingga ragu menetapkan A mutlak.
+    *   `CS-LIN-052`: Prediksi C, Gold D (Insufficient Info).
+    *   `CS-LIN-017`: Prediksi C, Gold A (Imigrasi/Paspor). Kasus administratif murni seharusnya A.
+
+## Kesimpulan Phase 3
+Tuning pada Supervisor Agent (ART-096) berhasil mengembalikan keseimbangan sistem. Agen kini mampu mengenali konflik materiil antara Hukum Nasional (KB baru) dan Hukum Adat, tanpa membiarkan salah satu mendominasi secara membabi buta. Akurasi 77% mendekati target produksi (85%).
+
