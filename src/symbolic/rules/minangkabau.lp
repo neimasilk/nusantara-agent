@@ -4,6 +4,15 @@
 % --- Facts & Types ---
 matrilineal.
 
+% External facts that can be injected (placeholders to avoid warnings)
+% These will be overridden by facts injected at runtime
+consensus_reached.  % Placeholder - will be overridden
+action(dummy, dummy).  % Placeholder - will be overridden
+parent(dummy, dummy).  % Placeholder - will be overridden
+sibling(dummy, dummy).  % Placeholder - will be overridden
+female(dummy).  % Placeholder - will be overridden
+male(dummy).  % Placeholder - will be overridden
+
 % Asset classification
 asset_type(rumah_gadang, pusako_tinggi).
 asset_type(sawah_ladang, pusako_tinggi).

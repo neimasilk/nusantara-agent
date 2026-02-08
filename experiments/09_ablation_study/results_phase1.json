@@ -1,161 +1,161 @@
 {
   "total_evaluated": 22,
-  "correct": 5,
-  "accuracy": 0.22727272727272727,
+  "correct": 12,
+  "accuracy": 0.5454545454545454,
   "results": [
     {
       "id": "CS-MIN-011",
       "gold": "C",
-      "predicted": "B",
-      "match": false,
-      "reasoning": "{\n  \"label\": \"B\",\n  \"alasan_utama\": \"Kasus ini murni menyangkut sengketa internal adat Minangkabau mengenai penguasaan tanah ulayat tanpa melibatkan pelanggaran hukum nasional yang spesifik.\",\n  \"dasar_hukum\": \"Hukum adat Minangkabau yang mengatur tanah ulayat kaum dan kewenangan Kerapatan Adat Nagari (KAN) dalam pengelolaannya.\",\n  \"explicit_conflict\": \"Tidak\"\n}"
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\n  \"label\": \"C\",\n  \"langkah_keputusan\": \"4\",\n  \"alasan_utama\": \"Kasus ini merupakan konflik nyata dan materil antara hukum adat Minangkabau (tanah ulayat kaum yang tidak boleh dipindahtangankan secara individual) dengan hukum nasional (Sertifikat Hak Milik/SHM). Pengonversian tanah ulayat menjadi SHM atas nama pribadi tanpa musyawarah kaum dan persetujuan KAN melanggar prinsip adat (pusako tinggi) sekaligus memanfaatkan instrumen hukum nasional. Konflik ini tidak dapat diselesaikan hanya dengan mengandalkan sistem adat (B) karena SHM adalah fakta hukum nasional, dan juga tidak murni domain hukum nasional (A) karena menyangkut hak kolektif adat. Oleh karena itu, diperlukan pendekatan konflik (C) yang mengakui dan mencari titik temu antara kedua sistem hukum.\",\n  \"konflik_terdeteksi\": \"Ya\"\n}"
     },
     {
       "id": "CS-MIN-004",
       "gold": "B",
-      "predicted": "A",
-      "match": false,
-      "reasoning": "{\n  \"label\": \"A\",\n  \"alasan_utama\": \"Kasus ini melibatkan hak waris anak kandung dan perkawinan, yang diatur secara komprehensif oleh hukum nasional (KUHPerdata BW) meskipun rule engine tidak menghasilkan output spesifik.\",\n  \"dasar_hukum\": \"Pasal 852-853 KUHPerdata (BW) tentang hak waris anak kandung dan pasal 119 KUHPerdata tentang harta bersama dalam perkawinan, serta UU No. 1/1974 tentang Perkawinan Pasal 35.\",\n  \"explicit_conflict\": \"Tidak\"\n}"
+      "predicted": "B",
+      "match": true,
+      "reasoning": "{\n  \"label\": \"B\",\n  \"langkah_keputusan\": \"3\",\n  \"alasan_utama\": \"Kasus ini adalah sengketa internal komunitas adat Minangkabau mengenai status harta pencaharian (harta suami-istri) setelah suami meninggal. Domainnya murni hukum adat (harta pusaka vs harta pencaharian) tanpa implikasi langsung terhadap hukum nasional yang tegas (seperti perkawinan, poligami, atau administrasi negara). Tidak ada indikasi pelanggaran HAM fundamental (misalnya, anak dilarang mengakses harta sama sekali) atau konflik nyata dengan putusan MK/MDP yang mengharuskan penyimpangan dari aturan adat internal. Oleh karena itu, sesuai Default Position dan hierarki, penyelesaian terbaik adalah melalui mekanisme dan prinsip hukum adat Minangkabau.\",\n  \"konflik_terdeteksi\": \"Tidak\"\n}"
     },
     {
       "id": "CS-JAW-006",
       "gold": "A",
       "predicted": "A",
       "match": true,
-      "reasoning": "{\n  \"label\": \"A\",\n  \"alasan_utama\": \"Kasus perceraian dan pembagian harta dalam perkawinan poligami yang sah merupakan ranah hukum keluarga nasional yang diatur dalam UU Perkawinan dan Kompilasi Hukum Islam, di mana rule engine nasional seharusnya menghasilkan output relevan meskipun dalam data simbolik tercatat 'TIDAK ADA OUTPUT'.\",\n  \"dasar_hukum\": \"Pasal 41 huruf c UU No. 1 Tahun 1974 tentang Perkawinan jo. Pasal 97 Kompilasi Hukum Islam (KHI) yang mengatur pembagian harta bersama akibat perceraian, termasuk dalam perkawinan poligami.\",\n  \"explicit_conflict\": \"Tidak\"\n}"
+      "reasoning": "{\n  \"label\": \"A\",\n  \"langkah_keputusan\": \"2\",\n  \"alasan_utama\": \"Kasus ini menyangkut pembagian harta dalam pernikahan poligami yang sah. Meskipun berlatar adat Jawa, substansi sengketa adalah pembagian harta bersama (gono-gini) dalam perkawinan yang tunduk pada hukum nasional (UU No. 1 Tahun 1974 tentang Perkawinan dan Kompilasi Hukum Islam). Hukum nasional telah mengatur secara rinci mengenai syarat, akibat hukum, dan pembagian harta dalam poligami serta perceraiannya. Oleh karena itu, kasus ini dapat dan seharusnya diselesaikan dengan hukum nasional yang jelas (Pure National Law).\",\n  \"konflik_terdeteksi\": \"Tidak\"\n}"
     },
     {
       "id": "CS-LIN-052",
       "gold": "D",
-      "predicted": "A",
+      "predicted": "B",
       "match": false,
-      "reasoning": "{\n  \"label\": \"A\",\n  \"alasan_utama\": \"Kasus ini melibatkan formalitas administratif negara (sertifikasi tanah) dan akses ke lembaga keuangan nasional yang tunduk pada hukum perbankan nasional.\",\n  \"dasar_hukum\": \"Tidak ada output spesifik dari rule engine, namun berdasarkan kriteria klasifikasi, kasus dengan formalitas administratif negara dan interaksi dengan lembaga nasional (bank) cenderung diatur oleh hukum nasional (UU Pokok Agraria, UU Perbankan).\",\n  \"explicit_conflict\": \"Tidak\"\n}"
+      "reasoning": "{\n  \"label\": \"B\",\n  \"langkah_keputusan\": \"3\",\n  \"alasan_utama\": \"Kasus ini merupakan domain internal lembaga adat yang ingin mengakses sistem perbankan nasional dengan menggunakan tanah ulayat sebagai jaminan. Meskipun melibatkan institusi nasional (Bank), inti persoalan terletak pada pengakuan dan mekanisme adat dalam kepemilikan tanah kolektif. Data Simbolik tidak menunjukkan adanya konflik eksplisit dengan hukum nasional atau pelanggaran HAM fundamental. Oleh karena itu, sebagai Hakim Adjudikator, pendekatan yang tepat adalah mengutamakan sistem hukum adat (Default Position) untuk mengeksplorasi solusi yang menghormati kearifan lokal, seperti kemungkinan pengakuan sertifikat kolektif atau skema kredit khusus yang mengakomodasi tanah ulayat, sebelum beralih ke hukum nasional.\",\n  \"konflik_terdeteksi\": \"Tidak\"\n}"
     },
     {
       "id": "CS-NAS-066",
       "gold": "A",
       "predicted": "A",
       "match": true,
-      "reasoning": "{\n  \"label\": \"A\",\n  \"alasan_utama\": \"Kasus ini melibatkan pelanggaran hak dasar warga negara (pendidikan dan kesehatan) yang dijamin oleh hukum nasional, meskipun tidak ada output spesifik dari rule engine nasional.\",\n  \"dasar_hukum\": \"Hak atas pendidikan dan kesehatan dijamin oleh UUD 1945 Pasal 28C dan 28H, serta UU No. 39/1999 tentang HAM. Sanksi adat yang menghalangi akses terhadap layanan dasar ini bertentangan dengan hukum nasional.\",\n  \"explicit_conflict\": \"Tidak\"\n}"
+      "reasoning": "{\n  \"label\": \"A\",\n  \"langkah_keputusan\": \"1\",\n  \"alasan_utama\": \"Sanksi adat berupa pengucilan (kasepekang) yang melarang anak-anak bersekolah dan mendapatkan layanan kesehatan merupakan pelanggaran HAM fundamental, khususnya hak atas pendidikan dan kesehatan. Meskipun kasus ini terjadi dalam konteks desa adat, pelanggaran terhadap hak-hak dasar yang bersifat universal dan dijamin oleh hukum nasional (seperti UUD 1945) menggeser penyelesaian ke ranah hukum nasional. Default Position B (Adat) dikesampingkan karena ada bukti kuat pelanggaran HAM ekstrem.\",\n  \"konflik_terdeteksi\": \"Tidak\"\n}"
     },
     {
       "id": "CS-BAL-002",
       "gold": "C",
-      "predicted": "A",
-      "match": false,
-      "reasoning": "{\n  \"label\": \"A\",\n  \"alasan_utama\": \"Kasus ini melibatkan hak waris anak perempuan yang dijamin oleh hukum nasional, dan rule engine nasional telah menghasilkan output yang relevan dan lengkap.\",\n  \"dasar_hukum\": \"Output rule engine nasional: 'berhak_waris(anak_pewaris)', 'can_inherit(anak_pewaris,harta_waris_pewaris)', dan 'hak_bagi_sisa_waris(anak_pewaris)'.\",\n  \"explicit_conflict\": \"Ya\"\n}"
+      "predicted": "C",
+      "match": true,
+      "reasoning": "```json\n{\n  \"label\": \"C\",\n  \"langkah_keputusan\": \"4\",\n  \"alasan_utama\": \"Terdeteksi konflik nyata antara hukum nasional (yang memberikan hak waris kepada anak perempuan) dengan hukum adat Bali (patrilineal murni yang menolak hak waris anak perempuan atas harta purusa). Data Simbolik menunjukkan 'conflict_norm(nasional_vs_adat,anak_perempuan,harta_waris_pewaris)' dan 'conflict_norm(nasional_vs_adat,dummy,dummy)'. Meskipun ada Keputusan MDP 2010 yang mereformasi adat, keluarga besar tetap menolak dengan berpegang pada adat konservatif, menciptakan konflik materiil yang mempengaruhi hasil akhir. Kasus ini tidak bisa diselesaikan hanya dengan A (karena ada penolakan berdasarkan adat) atau hanya dengan B (karena ada klaim berdasarkan hukum nasional dan putusan MDP).\",\n  \"konflik_terdeteksi\": \"Ya\"\n}\n```"
     },
     {
       "id": "CS-NAS-010",
       "gold": "A",
       "predicted": "A",
       "match": true,
-      "reasoning": "{\n  \"label\": \"A\",\n  \"alasan_utama\": \"Kasus perkawinan di bawah umur (15 tahun) jelas melanggar UU Perkawinan yang mensyaratkan batas minimal 19 tahun, sehingga aturan nasional yang melindungi anak dan HAM harus didahulukan.\",\n  \"dasar_hukum\": \"UU Perkawinan (UU No. 16 Tahun 2019) yang menetapkan batas usia minimal perkawinan 19 tahun bagi laki-laki dan perempuan.\",\n  \"explicit_conflict\": \"Tidak\"\n}"
+      "reasoning": "```json\n{\n  \"label\": \"A\",\n  \"langkah_keputusan\": \"2\",\n  \"alasan_utama\": \"Kasus ini adalah contoh klasik dari domain hukum nasional yang telah diatur secara tegas dalam UU No. 16 Tahun 2019 tentang Perubahan atas UU No. 1 Tahun 1974 tentang Perkawinan. UU tersebut menetapkan batas usia minimal perkawinan 19 tahun untuk kedua calon mempelai. Meskipun perkawinan dilakukan dengan dispensasi adat dan agama, substansi materinya (perkawinan di bawah umur) telah diatur secara eksplisit dan komprehensif oleh hukum nasional. Dalam hierarki, aturan nasional yang spesifik dan tegas seperti ini mengesampingkan praktik adat yang bertentangan, terutama karena menyangkut perlindungan anak dan usia perkawinan yang merupakan kebijakan publik nasional.\",\n  \"konflik_terdeteksi\": \"Ya\"\n}\n```"
     },
     {
       "id": "CS-LIN-017",
       "gold": "A",
-      "predicted": "A",
-      "match": true,
-      "reasoning": "{\n  \"label\": \"A\",\n  \"alasan_utama\": \"Kasus ini melibatkan formalitas administratif negara (pengurusan paspor) yang secara tegas diatur oleh hukum nasional, sehingga hukum nasional yang dominan berlaku.\",\n  \"dasar_hukum\": \"Aturan nasional yang mengatur keabsahan pengangkatan anak untuk kepentingan administratif negara (seperti Paspor) mensyaratkan penetapan pengadilan.\",\n  \"explicit_conflict\": \"Tidak\"\n}"
+      "predicted": "C",
+      "match": false,
+      "reasoning": "{\n  \"label\": \"C\",\n  \"langkah_keputusan\": \"4\",\n  \"alasan_utama\": \"Kasus ini menunjukkan konflik nyata dan materil antara pengakuan adat (pengangkatan anak secara sakral) dengan hukum nasional (persyaratan administrasi kependudukan dan keimigrasian yang membutuhkan penetapan pengadilan). Konflik ini tidak dapat diselesaikan hanya dengan mengacu pada hukum adat (B) karena pihak imigrasi menolak, dan juga tidak murni domain hukum nasional (A) karena ada upacara adat yang sah menurut komunitasnya. Oleh karena itu, diperlukan pendekatan integratif (C) yang mengakui validitas adat sambil mencari solusi formal sesuai hukum nasional.\",\n  \"konflik_terdeteksi\": \"Ya\"\n}"
     },
     {
       "id": "CS-MIN-013",
       "gold": "B",
       "predicted": "B",
       "match": true,
-      "reasoning": "{\n  \"label\": \"B\",\n  \"alasan_utama\": \"Kasus ini murni internal adat Minangkabau mengenai pengalihan dan transformasi harta pusako tinggi tanpa melibatkan aspek hukum nasional yang relevan.\",\n  \"dasar_hukum\": \"Hukum adat Minangkabau mengatur tentang syarat dan akibat hukum penjualan harta pusako tinggi karena darurat adat (seperti menikahkan anak kemenakan) serta status harta penggantinya.\",\n  \"explicit_conflict\": \"Tidak\"\n}"
+      "reasoning": "{\n  \"label\": \"B\",\n  \"langkah_keputusan\": \"3\",\n  \"alasan_utama\": \"Kasus ini murni menyangkut interpretasi dan penerapan hukum adat Minangkabau mengenai status harta (pusako tinggi vs pencaharian) setelah terjadi transaksi dengan alasan darurat adat. Tidak ada indikasi pelanggaran HAM fundamental, tidak ada aturan hukum nasional yang secara spesifik mengatur konversi status harta dalam konteks adat Minang, dan tidak terdeteksi konflik nyata antara aturan adat dengan hukum nasional atau putusan reformatif (MK/MDP) yang akan mempengaruhi hasil akhir. Oleh karena itu, ini adalah domain internal komunitas adat yang harus diselesaikan menurut prinsip dan lembaga adat setempat.\",\n  \"konflik_terdeteksi\": \"Tidak\"\n}"
     },
     {
       "id": "CS-BAL-014",
       "gold": "B",
-      "predicted": "A",
-      "match": false,
-      "reasoning": "{\n  \"label\": \"A\",\n  \"alasan_utama\": \"Kasus ini melibatkan hak waris dan perlindungan hak asasi manusia (hak atas tempat tinggal) yang diatur dalam hukum nasional, meskipun rule engine nasional tidak menghasilkan output spesifik.\",\n  \"dasar_hukum\": \"Undang-Undang No. 1 Tahun 1974 tentang Perkawinan (Pasal 35-36) dan Kompilasi Hukum Islam (bagi yang Muslim) serta prinsip-prinsip HAM dalam UUD 1945 yang melindungi hak-hak janda.\",\n  \"explicit_conflict\": \"Tidak\"\n}"
+      "predicted": "B",
+      "match": true,
+      "reasoning": "```json\n{\n  \"label\": \"B\",\n  \"langkah_keputusan\": \"3\",\n  \"alasan_utama\": \"Kasus ini merupakan domain internal adat Bali tanpa pelanggaran HAM fundamental dan tanpa konflik nyata dengan hukum nasional. Default position adalah B (Adat) karena: (1) Tidak ada pelanggaran HAM ekstrem seperti larangan sekolah/kesehatan, (2) Tidak ada UU nasional yang secara khusus mengatur hak tinggal janda di rumah suami dalam konteks adat Bali, (3) Kasus ini murni sengketa internal komunitas adat Bali mengenai status janda tanpa anak dalam sistem kekerabatan patrilineal, (4) Tidak ada konflik materil yang terdeteksi antara aturan adat Bali dengan hukum nasional atau putusan reformis MDP, (5) Data simbolik menunjukkan domain adat Bali aktif tanpa output nasional.\",\n  \"konflik_terdeteksi\": \"Tidak\"\n}\n```"
     },
     {
       "id": "CS-JAW-015",
       "gold": "C",
       "predicted": "A",
       "match": false,
-      "reasoning": "{\n  \"label\": \"A\",\n  \"alasan_utama\": \"Kasus ini melibatkan wasiat (pesan terakhir/wekas) yang merupakan instrumen hukum nasional, dan rule engine nasional menghasilkan output yang relevan terkait hak waris anak.\",\n  \"dasar_hukum\": \"Output rule engine nasional: 'berhak_waris(anak_pewaris)', 'can_inherit(anak_pewaris,harta_waris_pewaris)', 'hak_bagi_sisa_waris(anak_pewaris)'.\",\n  \"explicit_conflict\": \"Tidak\"\n}"
+      "reasoning": "```json\n{\n  \"label\": \"A\",\n  \"langkah_keputusan\": \"2\",\n  \"alasan_utama\": \"Kasus ini merupakan domain hukum nasional murni karena menyangkut wasiat (pesan terakhir) yang diatur dalam Pasal 957-972 KUHPerdata dan UU No. 3 Tahun 2006 tentang Peradilan Agama. Wasiat merupakan instrumen hukum perdata yang tunduk pada hukum nasional, bukan domain internal adat. Meskipun ada unsur adat Jawa (wekas), substansinya adalah wasiat yang harus memenuhi syarat formal dan material hukum nasional. Data Simbolik menunjukkan konflik normatif antara nasional dan adat, namun domain wasiat secara tegas diatur hukum nasional.\",\n  \"konflik_terdeteksi\": \"Ya\"\n}\n```"
     },
     {
       "id": "CS-LIN-016",
       "gold": "C",
       "predicted": "A",
       "match": false,
-      "reasoning": "{\n  \"label\": \"A\",\n  \"alasan_utama\": \"Rule engine nasional menghasilkan output relevan yang mengatur hak waris pasangan hidup atas harta bersama, sementara output adat (Minangkabau dan Jawa) kosong/tidak relevan.\",\n  \"dasar_hukum\": \"Output nasional: 'berhak_waris(pasangan_hidup)', 'bagian_spouse(pasangan_hidup,seperdua_harta_bersama)', 'hak_spouse_atas_harta_bersama(pasangan_hidup)'\",\n  \"explicit_conflict\": \"Ya - terdapat 'conflict_norm(nasional_vs_adat,dummy,dummy)' dalam output nasional, namun konflik ini bersifat umum dan tidak material karena aturan adat tidak terpicu (output adat kosong).\"\n}"
+      "reasoning": "```json\n{\n  \"label\": \"A\",\n  \"langkah_keputusan\": \"2\",\n  \"alasan_utama\": \"Kasus ini dapat diselesaikan dengan hukum nasional yang jelas. Keluarga urban di Jakarta dengan aset di Jakarta merupakan domain hukum perdata nasional berdasarkan UU No. 1 Tahun 1974 tentang Perkawinan dan Kompilasi Hukum Islam (jika Muslim). Sistem matrilineal Minang tidak berlaku karena: (1) keluarga tinggal di luar wilayah adat Minang (Jakarta), (2) aset berada di Jakarta, dan (3) perkawinan campuran antar suku tunduk pada hukum nasional. Hukum waris nasional memberikan hak waris yang jelas kepada pasangan hidup dan anak-anak.\",\n  \"konflik_terdeteksi\": \"Tidak\"\n}\n```"
     },
     {
       "id": "CS-BAL-012",
       "gold": "C",
-      "predicted": "A",
+      "predicted": "B",
       "match": false,
-      "reasoning": "{\n  \"label\": \"A\",\n  \"alasan_utama\": \"Kasus sanksi adat yang berpotensi melanggar hak asasi manusia mendasar (seperti kebebasan bergerak) secara default tunduk pada kerangka hukum nasional yang menjamin perlindungan HAM.\",\n  \"dasar_hukum\": \"Prinsip supremasi konstitusi dan hukum nasional dalam melindungi Hak Asasi Manusia, sebagaimana dijamin dalam UUD 1945 dan instrumen HAM nasional, meskipun KUHP Baru (UU 1/2023) mulai mengakui sanksi adat.\",\n  \"explicit_conflict\": \"Tidak\"\n}"
+      "reasoning": "{\n  \"label\": \"B\",\n  \"langkah_keputusan\": \"3\",\n  \"alasan_utama\": \"Kasus ini merupakan sengketa internal komunitas adat Bali mengenai penerapan sanksi adat 'kasepekang'. Domain adat Bali terdeteksi, dan sengketa ini bersifat internal tanpa implikasi langsung terhadap hukum administrasi negara (seperti SHM) atau pelanggaran HAM fundamental yang ekstrem. Meskipun KUHP Baru mengakui sanksi adat, hal itu justru memperkuat posisi hukum adat dalam tata hukum Indonesia. Tidak ada konflik nyata dengan hukum nasional atau putusan reformis (seperti dari MDP) yang disebutkan dalam fakta kasus. Oleh karena itu, sesuai dengan hierarki keputusan, ini adalah domain 'Pure Internal Adat'.\",\n  \"konflik_terdeteksi\": \"Tidak\"\n}"
     },
     {
       "id": "CS-LIN-018",
       "gold": "C",
-      "predicted": "A",
-      "match": false,
-      "reasoning": "{\n  \"label\": \"A\",\n  \"alasan_utama\": \"Kasus ini melibatkan konflik kepemilikan tanah dengan sertifikat hak milik (SHM) yang merupakan instrumen hukum nasional, sehingga hukum nasional harus dominan diterapkan.\",\n  \"dasar_hukum\": \"Sertifikat Hak Milik (SHM) sebagai bukti kepemilikan yang kuat berdasarkan Undang-Undang Pokok Agraria (UUPA) dan peraturan pertanahan nasional.\",\n  \"explicit_conflict\": \"Tidak\"\n}"
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\n  \"label\": \"C\",\n  \"langkah_keputusan\": \"4\",\n  \"alasan_utama\": \"Kasus ini merupakan konflik nyata dan materil antara hukum adat (tanah ulayat) dan hukum nasional (Sertifikat Hak Milik/ SHM). Fakta menunjukkan adanya tanah ulayat yang telah diindividualisasi dengan SHM milik pendatang. Masyarakat adat menuntut pengembalian, sementara pemegang SHM memiliki hak berdasarkan hukum nasional. Ini bukan murni domain internal adat (B) karena melibatkan instrumen hukum negara (SHM) dan pihak eksternal (pendatang). Juga bukan murni domain hukum nasional (A) karena tanah dasarnya adalah ulayat yang diakui secara konstitusional. Oleh karena itu, label C (Konflik) paling tepat karena memerlukan penyelesaian yang mempertimbangkan dan mengakomodasi kedua sistem hukum yang bertentangan.\",\n  \"konflik_terdeteksi\": \"Ya\"\n}"
     },
     {
       "id": "CS-JAW-011",
       "gold": "C",
-      "predicted": "A",
-      "match": false,
-      "reasoning": "{\n  \"label\": \"A\",\n  \"alasan_utama\": \"Rule engine nasional menghasilkan output yang relevan dan lengkap terkait hak waris anak angkat melalui wasiat wajibah, sementara rule engine adat Jawa tidak menghasilkan output apapun.\",\n  \"dasar_hukum\": \"Output nasional: 'berhak_waris(anak_pewaris)', 'can_inherit(anak_pewaris,harta_waris_pewaris)', 'bagian_spouse(dummy,seperdua_harta_bersama)', 'hak_spouse_atas_harta_bersama(dummy)', 'hak_bagi_sisa_waris(anak_pewaris)' (mengacu pada KHI Pasal 209 tentang wasiat wajibah).\",\n  \"explicit_conflict\": \"Ya - terdapat 'conflict_norm(nasional_vs_adat,dummy,dummy)' dalam output nasional.\"\n}"
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\n  \"label\": \"C\",\n  \"langkah_keputusan\": \"4\",\n  \"alasan_utama\": \"Terdapat konflik nyata dan materiiil antara hukum nasional (KHI) dan hukum adat Jawa (yurisprudensi MA) dalam penyelesaian sengketa hak waris anak angkat. Hukum nasional (KHI Pasal 209) menggunakan mekanisme wasiat wajibah yang memberikan bagian maksimal 1/3 dari harta waris, sementara hukum adat Jawa (Putusan MA No. 16 K/Sip/1959) menyetarakan posisi anak angkat dengan anak kandung dalam hal harta bersama orang tua angkat. Kedua pendekatan ini menghasilkan pembagian warisan yang berbeda secara signifikan. Konflik ini tidak dapat diselesaikan hanya dengan mengandalkan salah satu sistem (A atau B) karena akan mengabaikan sistem hukum lainnya yang juga berlaku bagi para pihak. Tidak ada pelanggaran HAM ekstrem yang terdeteksi, dan kasus ini bukan murni domain internal adat karena melibatkan hukum nasional yang mengatur waris.\",\n  \"konflik_terdeteksi\": \"Ya\"\n}"
     },
     {
       "id": "CS-BAL-009",
       "gold": "B",
-      "predicted": "A",
-      "match": false,
-      "reasoning": "{\n  \"label\": \"A\",\n  \"alasan_utama\": \"Kasus ini melibatkan formalitas administratif negara (program sertifikasi tanah PTSL) yang berada di bawah domain hukum nasional, meskipun ada konteks adat.\",\n  \"dasar_hukum\": \"Tidak ada output spesifik dari rule engine, namun program PTSL dan klaim hak milik diatur oleh Undang-Undang Pokok Agraria (UUPA) dan peraturan pertanahan nasional.\",\n  \"explicit_conflict\": \"Tidak\"\n}"
+      "predicted": "B",
+      "match": true,
+      "reasoning": "```json\n{\n  \"label\": \"B\",\n  \"langkah_keputusan\": \"3\",\n  \"alasan_utama\": \"Kasus ini merupakan sengketa internal dalam komunitas adat Bali antara krama desa adat dengan Desa Adat mengenai status tanah Ayahan Desa. Domain adat Bali terdeteksi (Bali=True) dan kasus ini tidak melibatkan pelanggaran HAM fundamental atau konflik dengan hukum nasional yang jelas. Tanah Ayahan Desa adalah tanah adat yang pengelolaannya diatur oleh hukum adat Bali, sehingga penyelesaiannya berada dalam ranah internal adat.\",\n  \"konflik_terdeteksi\": \"Tidak\"\n}\n```"
     },
     {
       "id": "CS-NAS-022",
       "gold": "C",
       "predicted": "A",
       "match": false,
-      "reasoning": "{\n  \"label\": \"A\",\n  \"alasan_utama\": \"Kasus ini melibatkan wasiat yang berpotensi melanggar hak ahli waris inti berdasarkan konsep Legitime Portie dalam hukum nasional, sehingga hukum nasional yang dominan diterapkan.\",\n  \"dasar_hukum\": \"Output rule engine nasional yang relevan dengan konsep Legitime Portie (bagian mutlak ahli waris) dan wasiat, meskipun tidak secara eksplisit disebut, implikasi dari 'conflict_norm(nasional_vs_adat,dummy,dummy)' menunjukkan adanya potensi konflik norma yang diselesaikan dengan mengutamakan hukum nasional.\",\n  \"explicit_conflict\": \"Ya - terdapat 'conflict_norm(nasional_vs_adat,dummy,dummy)' dalam output nasional\"\n}"
+      "reasoning": "```json\n{\n  \"label\": \"A\",\n  \"langkah_keputusan\": \"2\",\n  \"alasan_utama\": \"Kasus ini merupakan konflik nyata antara hukum nasional (Legitime Portie dalam KUHPerdata) dan wasiat adat. Data Simbolik menunjukkan 'conflict_norm(nasional_vs_adat,dummy,dummy)' yang mengindikasikan konflik norma. Domain adat tidak terdeteksi dalam output (Minang=False, Bali=False, Jawa=False), sehingga bukan kasus internal komunitas adat murni. Wasiat sebagai institusi hukum perdata telah diatur secara komprehensif dalam hukum nasional (KUHPerdata Buku II), termasuk pembatasan wasiat untuk melindungi ahli waris inti melalui Legitime Portie. Kasus ini dapat diselesaikan dengan UU yang jelas tanpa perlu mengutamakan hukum adat.\",\n  \"konflik_terdeteksi\": \"Ya\"\n}\n```"
     },
     {
       "id": "CS-JAW-019",
       "gold": "C",
-      "predicted": "A",
+      "predicted": "B",
       "match": false,
-      "reasoning": "{\n  \"label\": \"A\",\n  \"alasan_utama\": \"Kasus pembagian warisan melibatkan anak-anak pewaris yang semuanya berhak mewaris berdasarkan hukum nasional, sehingga aturan nasional yang berlaku.\",\n  \"dasar_hukum\": \"Output rule engine nasional: 'berhak_waris(anak_pewaris)', 'can_inherit(anak_pewaris,harta_waris_pewaris)', dan 'hak_bagi_sisa_waris(anak_pewaris)'.\",\n  \"explicit_conflict\": \"Tidak\"\n}"
+      "reasoning": "{\n  \"label\": \"B\",\n  \"langkah_keputusan\": \"3\",\n  \"alasan_utama\": \"Kasus ini merupakan domain internal komunitas adat Jawa, di mana terdapat aturan adat yang mengatur pembagian warisan dengan pertimbangan khusus terhadap anak bungsu (ragil) yang bertanggung jawab merawat orang tua. Konflik yang muncul adalah antara anggota keluarga dalam satu komunitas adat yang sama, tanpa implikasi pelanggaran HAM fundamental atau ketentuan hukum nasional yang bersifat memaksa (ius cogens). Hukum waris nasional (KUHPerdata) bersifat sebagai hukum pelengkap (aanvullend recht) dan dapat dikesampingkan oleh kesepakatan atau hukum adat yang hidup dalam masyarakat. Oleh karena itu, penyelesaian sebaiknya mengutamakan mekanisme dan nilai-nilai adat setempat.\",\n  \"konflik_terdeteksi\": \"Tidak\"\n}"
     },
     {
       "id": "CS-BAL-020",
       "gold": "C",
       "predicted": "A",
       "match": false,
-      "reasoning": "{\n  \"label\": \"A\",\n  \"alasan_utama\": \"Kasus ini melibatkan hak waris pasangan hidup yang masih hidup, yang secara tegas diatur dalam hukum nasional (Kompilasi Hukum Islam atau KUHPerdata) dan menghasilkan output relevan dari rule engine nasional.\",\n  \"dasar_hukum\": \"Output rule engine nasional: 'berhak_waris(pasangan_hidup)', 'can_inherit(pasangan_hidup,harta_waris_pewaris)', 'bagian_spouse(pasangan_hidup,seperdua_harta_bersama)', dan 'hak_spouse_atas_harta_bersama(pasangan_hidup)'.\",\n  \"explicit_conflict\": \"Tidak\"\n}"
+      "reasoning": "```json\n{\n  \"label\": \"A\",\n  \"langkah_keputusan\": \"2\",\n  \"alasan_utama\": \"Kasus ini dapat diselesaikan dengan hukum nasional yang jelas. Data Simbolik menunjukkan aturan nasional tentang hak waris pasangan hidup (berhak_waris(pasangan_hidup), can_inherit(pasangan_hidup,harta_waris_pewaris), bagian_spouse(pasangan_hidup,seperdua_harta_bersama)). Sistem nyentana (suami masuk keluarga istri) tidak mengubah status hukum perkawinan dan hak waris menurut UU Perkawinan dan KUHPerdata. Harta peninggalan yang berasal dari garis istri tetap menjadi harta bersama dalam perkawinan, sehingga pasangan hidup (suami kedua) berhak atas bagian sesuai hukum nasional.\",\n  \"konflik_terdeteksi\": \"Tidak\"\n}\n```"
     },
     {
       "id": "CS-NAS-041",
       "gold": "C",
-      "predicted": "A",
-      "match": false,
-      "reasoning": "{\n  \"label\": \"A\",\n  \"alasan_utama\": \"Kasus ini melibatkan izin resmi dari pemerintah pusat (IUP) yang merupakan instrumen hukum nasional, sehingga aturan nasional harus didahulukan meskipun ada klaim masyarakat adat.\",\n  \"dasar_hukum\": \"Izin Usaha Pertambangan (IUP) berdasarkan UU No. 3 Tahun 2020 tentang Pertambangan Mineral dan Batubara.\",\n  \"explicit_conflict\": \"Tidak\"\n}"
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\n  \"label\": \"C\",\n  \"langkah_keputusan\": \"4\",\n  \"alasan_utama\": \"Kasus ini merupakan konflik nyata antara hukum nasional (IUP dari pemerintah pusat) dan hukum adat (klaim hutan adat yang belum bersertifikat). Konflik ini material karena mempengaruhi hasil akhir (apakah tambang boleh beroperasi atau tidak) dan tidak dapat diselesaikan hanya dengan mengandalkan satu sistem hukum (A atau B). Meskipun Router mengklasifikasikan sebagai 'pure_adat', fakta hukum menunjukkan adanya interaksi dan potensi benturan antara dua sistem hukum yang sah, sehingga memerlukan pendekatan integratif atau kontekstual (C).\",\n  \"konflik_terdeteksi\": \"Ya\"\n}"
     },
     {
       "id": "CS-MIN-025",
       "gold": "C",
-      "predicted": "A",
+      "predicted": "B",
       "match": false,
-      "reasoning": "{\n  \"label\": \"A\",\n  \"alasan_utama\": \"Kasus ini melibatkan kapasitas hukum perorangan dalam transaksi perbankan yang tunduk pada hukum nasional, dan rule engine nasional menghasilkan output relevan meskipun tidak langsung spesifik.\",\n  \"dasar_hukum\": \"Output rule engine nasional menunjukkan adanya aturan terkait harta bersama dalam perkawinan ('bagian_spouse(dummy,seperdua_harta_bersama)', 'hak_spouse_atas_harta_bersama(dummy)'), yang mengindikasikan pengaturan hukum nasional berlaku untuk aspek kapasitas hukum dan perikatan.\",\n  \"explicit_conflict\": \"Tidak\"\n}"
+      "reasoning": "```json\n{\n  \"label\": \"B\",\n  \"langkah_keputusan\": \"3\",\n  \"alasan_utama\": \"Kasus ini merupakan domain internal komunitas adat Minangkabau yang menyangkut kapasitas Mamak Kepala Waris dalam mengelola harta kaum (pusako rendah). Tidak ada pelanggaran HAM fundamental, tidak ada UU nasional yang secara khusus mengatur kapasitas Mamak Kepala Waris dalam konteks adat, dan tidak ada konflik nyata antara aturan adat dengan hukum nasional yang mempengaruhi hasil akhir. Data Simbolik menunjukkan tidak ada explicit conflict (Nasional=True, Adat=False), dan ini murni persoalan internal adat mengenai subjek hukum perdata adat.\",\n  \"konflik_terdeteksi\": \"Tidak\"\n}\n```"
     },
     {
       "id": "CS-JAW-030",
       "gold": "C",
       "predicted": "A",
       "match": false,
-      "reasoning": "{\n  \"label\": \"A\",\n  \"alasan_utama\": \"Kasus ini melibatkan hak waris anak yang diatur dalam hukum nasional (Kompilasi Hukum Islam) dan terdapat output rule engine nasional yang relevan.\",\n  \"dasar_hukum\": \"Output rule engine nasional: 'berhak_waris(anak_pewaris)', 'can_inherit(anak_pewaris,harta_waris_pewaris)', 'hak_bagi_sisa_waris(anak_pewaris)'\",\n  \"explicit_conflict\": \"Ya - terdapat 'conflict_norm(nasional_vs_adat,dummy,dummy)' dalam output nasional\"\n}"
+      "reasoning": "{\n  \"label\": \"A\",\n  \"langkah_keputusan\": \"2\",\n  \"alasan_utama\": \"Kasus ini dapat diselesaikan dengan hukum nasional (Hukum Islam) yang jelas dan tegas. Meskipun ada pesan lisan pewaris untuk membagi sama rata (sigar semangka), gugatan anak laki-laki untuk menggunakan hukum Islam (2:1) mengacu pada Kompilasi Hukum Islam (KHI) yang berlaku secara nasional bagi umat Islam. Domain adat Jawa yang terdeteksi tidak memiliki aturan khusus yang bertentangan dengan pembagian waris Islam dalam kasus ini (Output Adat Jawa kosong). Oleh karena itu, ini adalah kasus 'Pure National Law' yang harus diselesaikan dengan hukum nasional.\",\n  \"konflik_terdeteksi\": \"Tidak\"\n}"
     }
   ]
 }

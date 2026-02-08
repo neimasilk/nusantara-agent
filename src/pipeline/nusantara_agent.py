@@ -30,12 +30,26 @@ class InMemoryVectorRetriever:
     """Adapter vector retrieval sederhana (fallback tanpa Qdrant)."""
 
     def __init__(self, dokumen: Optional[List[str]] = None):
-        self.dokumen = dokumen or [
-            "KUHPerdata mengatur prioritas ahli waris, legitime portie, dan pembagian harta waris.",
-            "Adat Minangkabau membedakan pusako tinggi dan pusako rendah dalam pewarisan.",
-            "Adat Bali mengenal sistem purusa, sentana rajeg, dan pembatasan transfer druwe tengah.",
-            "Adat Jawa modern cenderung sigar semangka dengan musyawarah keluarga.",
-        ]
+        self.dokumen = dokumen
+        if not self.dokumen:
+            # Try loading from JSON corpus
+            corpus_path = Path("data/knowledge_base/nasional_corpus.json")
+            if corpus_path.exists():
+                try:
+                    with open(corpus_path, "r", encoding="utf-8") as f:
+                        self.dokumen = json.load(f)
+                except Exception:
+                    self.dokumen = [] # Fallback to default below if error
+            
+            if not self.dokumen:
+                 # Fallback hardcoded
+                 self.dokumen = [
+                    "KUHPerdata Pasal 830: Pewarisan hanya terjadi karena kematian.",
+                    "KUHPerdata Pasal 832: Yang berhak menjadi ahli waris ialah keluarga sedarah.",
+                    "Adat Minangkabau membedakan pusako tinggi dan pusako rendah.",
+                    "Adat Bali mengenal sistem purusa dan sentana rajeg.",
+                    "Adat Jawa modern cenderung sigar semangka dengan musyawarah."
+                 ]
 
     def retrieve(self, query: str, top_k: int = 3) -> List[str]:
         tokens = {t.lower() for t in query.split() if len(t) > 3}

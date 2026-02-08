@@ -85,14 +85,19 @@ def _heuristic_route(query: str) -> Dict:
     adat = scores["adat"]
     conflict = scores["conflict"]
 
-    if national > 0 and adat > 0:
-        if conflict > 0:
+    # Logika klasifikasi lebih ketat
+    if adat > 0 and national > 0:
+        if conflict > 0 or adat >= 2:
             label = "conflict"
         else:
             label = "consensus"
-    elif national > 0:
+    elif national > 1 and adat == 0:
         label = "pure_national"
-    elif adat > 0:
+    elif adat > 1 and national == 0:
+        label = "pure_adat"
+    elif national > adat:
+        label = "pure_national"
+    elif adat > national:
         label = "pure_adat"
     else:
         label = "consensus"
@@ -100,7 +105,7 @@ def _heuristic_route(query: str) -> Dict:
     return {
         "label": label,
         "scores": scores,
-        "confidence": 0.55 if label == "consensus" else 0.7,
+        "confidence": 0.65,
         "method": "heuristic",
     }
 

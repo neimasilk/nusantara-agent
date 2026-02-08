@@ -104,6 +104,7 @@ Work is decomposed into Atomic Research Tasks (ARTs). See:
   - **Total: 95 aturan hukum adat terverifikasi expert** di `data/rules/*.json`
 - **Exp 05 COMPLETED**: Menemukan 33.3% divergensi antara Rule Engine dan LLM (N=30), membuktikan perlunya "Symbolic Anchor" untuk mencegah halusinasi hukum.
 - **Exp 07 COMPLETED (Negative Result)**: Advanced orchestration (parallel + debate + self-correction + routing) belum mengungguli baseline sequential pada auto-score Kimi (N=12), sehingga protokol debat perlu iterasi.
+- **ART-093 COMPLETED**: Knowledge Base hukum nasional diperluas (KUHPerdata, KHI, UUPA) di `src/pipeline/nusantara_agent.py` untuk menyeimbangkan debat.
 - **Test Coverage**: 60 test deterministik passed (rule_engine, text_processor, token_usage, router, debate, kg_search, llm_judge).
 - **Integration blocker**: `ART-049` (Full Pipeline Integration) masih `PENDING` dan menjadi blocker untuk `ART-056` (Ablation baseline config) serta seluruh Exp 09 dan Exp 10.
 

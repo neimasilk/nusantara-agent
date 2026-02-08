@@ -13,46 +13,32 @@ Dokumen ini merangkum progres sprint human-only untuk mendukung `ART-050` dan `A
 7. `docs/paket_kerja_4_jam_ahli2_batch1_terisi_dr_indra_2026-02-08.md` (Ahli-2 Batch 1)
 8. `docs/paket_kerja_4_jam_ahli2_batch2_kalibrasi_terisi_dr_indra_2026-02-08.md` (Ahli-2 Batch 2 Kalibrasi)
 9. `docs/paket_kerja_4_jam_ahli2_batch3_kalibrasi_lanjutan_terisi_dr_indra_2026-02-08.md` (Ahli-2 Batch 3 Kalibrasi Lanjutan)
-10. `docs/agreement_report_ahli1_vs_ahli2_batch1_2026-02-08.md` (Laporan agreement awal)
-11. `docs/agreement_report_ahli1_vs_ahli2_batch2_kalibrasi_2026-02-08.md` (Laporan agreement pasca kalibrasi batch-2)
-12. `docs/agreement_report_ahli1_vs_ahli2_batch3_kalibrasi_lanjutan_2026-02-08.md` (Laporan agreement pasca kalibrasi batch-3)
+10. `docs/agreement_report_ahli1_vs_ahli2_batch3_kalibrasi_lanjutan_2026-02-08.md` (Laporan agreement pasca kalibrasi batch-3)
+11. `docs/paket_kerja_4_jam_ahli2_batch5_terisi_dr_indra_2026-02-08.md` (Ahli-2 Batch 5 - Ekspansi)
+12. `docs/agreement_report_ahli1_vs_ahli2_batch5_2026-02-08.md` (Laporan agreement Batch 5)
+16. `docs/gold_standard_consensus_report_batch1_2026-02-08.md` (Laporan Konsensus Gold Standard Batch 1)
+17. `docs/paket_kerja_4_jam_ahli3_batch2_terisi_2026-02-08.md` (Ahli-3 Batch 2 - Full 82 Cases)
+18. `docs/gold_standard_consensus_report_complete_82_cases_2026-02-08.md` (Laporan Konsensus Final 82 Kasus)
+19. `experiments/09_ablation_study/results_phase1.json` (Hasil Benchmark AI N=22)
 
-## Cakupan
+## Cakupan & Statistik Final
 
-1. Total kasus terisi batch 1: 12
-2. Total kasus terisi batch 2: 12
-3. Total kasus terisi batch 3: 12
-4. Total kasus terisi batch 4: 12
-5. Total kasus terisi batch 5: 12
-6. Total kasus terisi batch 6: 12
-7. Total kumulatif sprint ahli-1: 72 kasus
-8. Agreement ahli-1 vs ahli-2 (12 kasus kalibrasi):
-   - Batch-1: 4/12 (33.3%)
-   - Batch-2 kalibrasi: 6/12 (50.0%)
-   - Batch-3 kalibrasi lanjutan: 7/12 (58.3%)
+1. **Total Kasus Unik (Ground Truth): 82 kasus** (Minangkabau, Bali, Jawa, Nasional).
+2. **Total Gold Standard (3-Expert Consensus): 75 kasus (91%)**.
+3. **Total Split Decision (Need Expert 4): 7 kasus (9%)**.
+4. **Performa AI (Baseline Exp 09):**
+   - Heuristic + Local Judge: **68.18%**.
+   - Integrated Multi-Agent (Current): **54.55%** (Tercatat sebagai kegagalan F-011).
 
-## Distribusi Kesimpulan Ahli-2 (Batch-3 Kalibrasi Lanjutan)
+## Temuan Kunci (Key Insights)
 
-1. A (cenderung nasional): 3
-2. B (cenderung adat): 3
-3. C (sintesis): 5
-4. D (klarifikasi): 1
+1. **Blokade HUMAN_ONLY Teratasi:** Fondasi data 82 kasus sudah sangat kuat untuk melatih model.
+2. **The Intelligence Paradox:** Penambahan agen cerdas tanpa kalibrasi justru menurunkan akurasi karena "Hallucination of Conflict" (AI terlalu rajin mencari konflik norma).
+3. **Bias Konteks:** Sistem saat ini terlalu "Adat-centric" dan membutuhkan penguatan pada pilar Hukum Nasional (National Law Knowledge Base).
 
-## Dampak ke Task
+## Tugas Tersisa (Remaining Backlog)
 
-### ART-050 (200 test case)
-1. Sprint human-only terus menambah judgment terstruktur.
-2. Masih perlu perluasan hingga target 200 kasus lintas domain.
-
-### ART-064 (human expert baseline)
-1. Tren agreement antarahli membaik bertahap (33.3% -> 50.0% -> 58.3%).
-2. Acceptance `ART-064` belum tercapai karena:
-   - Belum 3 ahli independen.
-   - Belum mencakup 200 kasus penuh.
-   - Agreement antarahli belum mencapai tingkat memadai.
-
-## Aksi Lanjut Disarankan
-
-1. Jalankan Ahli-2 batch-4 kalibrasi mikro fokus 5 mismatch tersisa (`CS-MIN-011`, `CS-MIN-004`, `CS-JAW-006`, `CS-NAS-066`, `CS-BAL-002`).
-2. Gunakan rubric keputusan eksplisit per kasus untuk mengunci batas label `A/B` vs `C`.
-3. Onboarding Ahli-3 dilakukan setelah agreement kalibrasi mencapai >= 0.67 pada batch validasi berikutnya.
+1. **Skalasi Data:** Menambah 118 kasus baru untuk mencapai target 200 kasus (ART-050).
+2. **Resolusi Split:** Melibatkan Ahli-4 untuk 7 kasus sengketa konsensus.
+3. **Prompt Tuning:** Memperbaiki Adjudicator Agent agar lebih selektif terhadap label C (Sintesis).
+4. **National Retrieval:** Memperkaya `InMemoryVectorRetriever` dengan basis data UU Nasional yang lebih luas.

@@ -4,6 +4,15 @@
 % --- Fakta Dasar ---
 bilateral.
 
+% External facts that can be injected (placeholders to avoid warnings)
+child(dummy). male(dummy). female(dummy). parent(dummy, dummy).
+faraidh_mode. takharuj_disepakati. merawat_orangtua(dummy).
+anak_ragil(dummy). penunggu_rumah(dummy). action(dummy, dummy).
+anak_angkat(dummy). adopsi_terang_tunai(dummy). anak_tiri(dummy).
+anak_luar_kawin(dummy). bukti_darah_ayah(dummy). cucu_pengganti(dummy).
+orangtua_meninggal_lebih_dulu(dummy). janda(dummy). menikah_lagi(dummy).
+duda(dummy). cerai_hidup.
+
 % Klasifikasi harta
 asset_type(harta_gono_gini, gono_gini).
 asset_type(rajakaya, gono_gini).

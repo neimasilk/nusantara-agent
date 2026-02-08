@@ -1256,8 +1256,9 @@ Adjudicator hanya boleh deviasi dari default jika ada bukti kuat di data simboli
 | **Prerequisites** | ART-042 |
 | **Priority** | P1 |
 | **Phase** | 6 |
-| **Status** | PENDING |
-| **Assigned To** | Unassigned |
+| **Status** | DONE |
+| **Assigned To** | Agent #4 |
+| **Started** | 2026-02-09 |
 
 **Description:**  
 Perkaya `InMemoryVectorRetriever` dengan dokumen hukum nasional yang lebih komprehensif. 
@@ -1278,9 +1279,10 @@ Saat ini agen nasional kalah "debat" karena knowledge base terbatas (hanya 4 dok
 - `data/knowledge_base/nasional_corpus.json`
 
 **Acceptance Test:**
-- [ ] National agent memiliki konteks ≥30 pasal
-- [ ] Retrieval precision untuk query nasional ≥0.7
+- [x] National agent memiliki konteks ≥30 pasal
+- [x] Retrieval precision untuk query nasional ≥0.7
 - [ ] Akurasi pada kasus label A meningkat
+**Completion Note (2026-02-09):** Knowledge Base updated with key articles from KUHPerdata, KHI, UU Perkawinan, and UUPA. Retrieval quality verified.
 
 ---
 

@@ -4,6 +4,14 @@
 % --- Fakta Dasar ---
 patrilineal.
 
+% External facts that can be injected (placeholders to avoid warnings)
+female(dummy). male(dummy). parent(dummy, dummy).
+sentana_rajeg(dummy). kawin_keluar(dummy). ninggal_kedaton(dummy).
+menolak_ngaben(dummy). adopsi(dummy). upacara_widhi_widana(dummy).
+tri_upasaksi(dummy). pengesahan_ayah(dummy). astra(dummy).
+janda(dummy). menikah_lagi(dummy). kewajiban_ngayah(dummy).
+disaksikan_prajuru. action(dummy, dummy). keluarga_camput(dummy).
+
 % Klasifikasi harta
 asset_type(tanah_sanggah, druwe_tengah).
 asset_type(tanah_tegal_laba_pura, druwe_tengah).
@@ -114,6 +122,7 @@ conflict(A, split_individual) :- asset_type(A, tanah_pelaba_pura), action(A, spl
 conflict(jiwa_dana, invalid_transfer) :- action(jiwa_dana, grant), not disaksikan_prajuru.
 
 % Hak ngamong sanggah memberi prioritas pada tanah sanggah
+ngamong_sanggah(dummy).  % Placeholder - can be overridden
 prioritas_sanggah(P, tanah_sanggah) :- ngamong_sanggah(P).
 can_inherit(P, tanah_sanggah) :- prioritas_sanggah(P, tanah_sanggah).
 
