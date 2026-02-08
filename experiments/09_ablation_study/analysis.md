@@ -40,3 +40,32 @@ Ditemukan puluhan info: `atom does not occur in any rule head`.
 
 ## Kesimpulan Sementara
 Akurasi 68% adalah fondasi yang baik, namun belum mencapai ambang batas produksi (target > 85%). Keunggulan sistem saat ini adalah kemampuan memberikan referensi *contextual* (retrieval) yang relevan, meskipun logika klasifikasinya masih perlu dipertajam.
+
+---
+
+# Phase 2: ART-093 Validation (National KB Expansion)
+
+Tanggal: 9 Februari 2026
+Tujuan: Mengukur dampak penambahan 20+ dokumen hukum nasional (KUHPerdata, KHI, UUPA) ke dalam `InMemoryVectorRetriever`.
+Baseline (Prompt): 54.55%
+
+## Hasil Benchmark (Run 2)
+
+| Metric | Value |
+|---|---|
+| Total Kasus Diuji | 22 |
+| Benar (Match) | 12 |
+| Salah (Fail) | 10 |
+| **Akurasi** | **54.55%** |
+
+## Observasi
+1.  **Tidak Ada Peningkatan Akurasi:** Akurasi stagnan di 54.55%. Ini menunjukkan bahwa penambahan KB saja belum cukup untuk memperbaiki penalaran, atau agen gagal memanfaatkan konteks yang ditarik secara efektif.
+2.  **Retrieval Berhasil:** Log debug menunjukkan dokumen relevan berhasil ditarik (e.g., "Retrieved 3 docs").
+3.  **Pergeseran Error (Pendulum Swing):**
+    *   Terdapat peningkatan prediksi Label A (Nasional).
+    *   Namun, ini menyebabkan **False Positives** pada kasus yang seharusnya C (Sintesis).
+    *   Contoh Fail: `CS-JAW-015`, `CS-LIN-016`, `CS-BAL-020` diprediksi A, padahal Gold C.
+    *   Ini menunjukkan Agen Nasional menjadi lebih dominan/agresif dengan adanya KB baru, mengalahkan argumen Adat/Sintesis pada kasus yang kompleks.
+
+## Kesimpulan Phase 2
+ART-093 berhasil diimplementasikan secara teknis (retrieval works), namun belum meningkatkan akurasi akhir. Diperlukan tuning pada **Supervisor Agent** (ART selanjutnya) untuk menyeimbangkan bobot argumen Nasional yang kini lebih kuat agar tidak "overkill" pada kasus kompromi (C).

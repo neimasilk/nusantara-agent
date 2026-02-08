@@ -1282,7 +1282,7 @@ Saat ini agen nasional kalah "debat" karena knowledge base terbatas (hanya 4 dok
 - [x] National agent memiliki konteks ≥30 pasal
 - [x] Retrieval precision untuk query nasional ≥0.7
 - [ ] Akurasi pada kasus label A meningkat
-**Completion Note (2026-02-09):** Knowledge Base updated with key articles from KUHPerdata, KHI, UU Perkawinan, and UUPA. Retrieval quality verified.
+**Completion Note (2026-02-09):** Knowledge Base updated with key articles. Retrieval confirmed. However, benchmark accuracy stagnant at 54.55% due to increased False Positives on Label A (National Agent becoming too dominant). Requires Supervisor tuning.
 
 ---
 
