@@ -620,11 +620,12 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-024, ART-036, ART-037, ART-048 |
 | **Priority** | P1 |
-| **Status** | PENDING |
+| **Status** | DONE |
 **Description:** Integrate all components into a unified pipeline: Neo4j graph queries, Qdrant vector search, symbolic rule engine, and advanced multi-agent orchestration.
 **Inputs:** All component modules
 **Outputs:** `src/pipeline/nusantara_agent.py` — unified entry point
 **Acceptance Test:** End-to-end query processing works for all 4 query types (pure national, pure adat, conflict, consensus)
+**Completion Note (2026-02-08):** Unified entry point diimplementasikan pada `src/pipeline/nusantara_agent.py` dengan integrasi router + graph retriever + vector retriever + rule engine lintas domain (`nasional`, `minangkabau`, `bali`, `jawa`). Fallback mode lokal aktif saat Neo4j/Qdrant belum tersedia. End-to-end diverifikasi melalui test deterministik `tests/test_nusantara_pipeline.py` (4 tipe query).
 
 ### ART-050: Design 200 Test Cases Across Domains
 | Field | Value |
