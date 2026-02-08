@@ -19,8 +19,8 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | 3 | Advanced Agent Architecture | ART-043 — ART-055 | 6 | 7 |
 | 4 | Evaluation & Ablation | ART-056 — ART-072 | 0 | 17 |
 | 5 | Paper Writing & Submission | ART-073 — ART-084 | 0 | 12 |
-| 6 | Accuracy Tuning & Recovery | ART-090 — ART-095 | 0 | 6 |
-| **TOTAL** | | **90** | **29** | **61** |
+| 6 | Accuracy Tuning & Recovery | ART-090 — ART-095 | 4 | 2 |
+| **TOTAL** | | **90** | **33** | **57** |
 
 ---
 

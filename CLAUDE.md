@@ -98,6 +98,8 @@ Work is decomposed into Atomic Research Tasks (ARTs). See:
 - **Rule Engine Functional**: `ClingoRuleEngine` implementasi ASP siap pakai.
 - **Minangkabau Rules Expanded**: `src/symbolic/rules/minangkabau.lp` mencakup 30+ aturan formal (inheritance, actions, emergency conditions).
 - **ALL 3 Domain Rules VERIFIED by Expert**:
+- **ART-093 Completed (2026-02-09)**: Knowledge Base hukum nasional diperluas (KUHPerdata, KHI, UUPA) dengan 20+ pasal kunci untuk mendukung retrieval agen nasional.
+- **Benchmark Baseline (Pre-ART-093)**: Akurasi 54.55% pada 82 kasus. Baseline ini menjadi acuan untuk mengukur dampak perluasan KB.
   - Minangkabau: `ART-020` DONE — 25 rules (14 BENAR, 6 DIKOREKSI, 5 baru)
   - Bali: `ART-038` DONE — 34 rules (5 BENAR, 29 baru)
   - Jawa: `ART-039` DONE — 36 rules (4 BENAR, 1 DIKOREKSI, 31 baru)
