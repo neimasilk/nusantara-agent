@@ -840,6 +840,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Progress Note (2026-02-08):** Agreement awal ahli-1 vs ahli-2 (12 kasus) menunjukkan 33.3% kecocokan label literal; kalibrasi definisi label sedang dijalankan via `docs/paket_kerja_4_jam_ahli2_batch2_kalibrasi_ready_to_handout.md`. Status ART-064 tetap PENDING.
 **Progress Note (2026-02-08):** Hasil ahli-2 batch-2 kalibrasi telah masuk di `docs/paket_kerja_4_jam_ahli2_batch2_kalibrasi_terisi_dr_indra_2026-02-08.md`; agreement label literal terhadap ahli-1 meningkat dari 33.3% (4/12) menjadi 50.0% (6/12), terdokumentasi pada `docs/agreement_report_ahli1_vs_ahli2_batch2_kalibrasi_2026-02-08.md`. Status ART-064 tetap PENDING karena 3 ahli, 200 kasus, dan agreement memadai belum terpenuhi.
 **Progress Note (2026-02-08):** Paket kalibrasi lanjutan Ahli-2 Batch-3 telah disiapkan di `docs/paket_kerja_4_jam_ahli2_batch3_kalibrasi_lanjutan_ready_to_handout.md` dengan komposisi 6 mismatch tersisa + 6 anchor pembeda A/B vs C. Menunggu pengisian ahli untuk evaluasi agreement lanjutan.
+**Progress Note (2026-02-08):** Hasil Ahli-2 Batch-3 kalibrasi lanjutan telah masuk di `docs/paket_kerja_4_jam_ahli2_batch3_kalibrasi_lanjutan_terisi_dr_indra_2026-02-08.md`; agreement label literal terhadap Ahli-1 meningkat menjadi 58.3% (7/12) dari sebelumnya 50.0% (6/12), terdokumentasi pada `docs/agreement_report_ahli1_vs_ahli2_batch3_kalibrasi_lanjutan_2026-02-08.md`. Status ART-064 tetap PENDING; direkomendasikan kalibrasi mikro lanjutan sebelum onboarding Ahli-3.
 
 ### ART-065: Run All Baselines (3x each with different seeds)
 | Field | Value |
@@ -1117,6 +1118,7 @@ ART-043 → ART-044 → ART-045 → ART-048 ──┘                    ↑
 ```
 
 **Critical path:** ART-019 → 021 → 023 → 024 → 049 → 051 → 065 → 066 → 077 → 081 → 083 → 084
+
 
 
 
