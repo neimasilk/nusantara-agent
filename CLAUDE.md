@@ -97,7 +97,11 @@ Work is decomposed into Atomic Research Tasks (ARTs). See:
 
 - **Rule Engine Functional**: `ClingoRuleEngine` implementasi ASP siap pakai.
 - **Minangkabau Rules Expanded**: `src/symbolic/rules/minangkabau.lp` mencakup 30+ aturan formal (inheritance, actions, emergency conditions).
-- **Minangkabau Rules VERIFIED**: `ART-020` DONE — 25 rules terverifikasi expert (14 BENAR, 6 DIKOREKSI, 5 baru). `data/rules/minangkabau_rules.json` status `VERIFIED`.
+- **ALL 3 Domain Rules VERIFIED by Expert**:
+  - Minangkabau: `ART-020` DONE — 25 rules (14 BENAR, 6 DIKOREKSI, 5 baru)
+  - Bali: `ART-038` DONE — 34 rules (5 BENAR, 29 baru)
+  - Jawa: `ART-039` DONE — 36 rules (4 BENAR, 1 DIKOREKSI, 31 baru)
+  - **Total: 95 aturan hukum adat terverifikasi expert** di `data/rules/*.json`
 - **Exp 05 COMPLETED**: Menemukan 33.3% divergensi antara Rule Engine dan LLM (N=30), membuktikan perlunya "Symbolic Anchor" untuk mencegah halusinasi hukum.
 - **Exp 07 COMPLETED (Negative Result)**: Advanced orchestration (parallel + debate + self-correction + routing) belum mengungguli baseline sequential pada auto-score Kimi (N=12), sehingga protokol debat perlu iterasi.
 - **Test Coverage**: 60 test deterministik passed (rule_engine, text_processor, token_usage, router, debate, kg_search, llm_judge).
