@@ -2,61 +2,477 @@
   {
     "id": "BAL-001",
     "type": "lineage",
-    "rule": "Sistem kekerabatan masyarakat adat Bali bersifat patrilineal (kapurusa), di mana garis keturunan ditarik dari pihak laki-laki.",
+    "rule": "Sistem kekerabatan masyarakat adat Bali bersifat patrilineal (kapurusa/purusa), di mana garis keturunan ditarik dari pihak laki-laki atau wanita yang ditingkatkan statusnya menjadi purusa (Sentana Rajeg).",
     "citations": [
       {
         "source": "unmas.ac.id",
         "evidence": "Sistem patrilineal yang dianut oleh masyarakat adat Bali, anak laki-laki secara tradisional memiliki hak waris utama."
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "reviewer_note": "Prinsip Kapurusaan/Purusa adalah asas fundamental."
   },
   {
     "id": "BAL-002",
     "type": "heir_status",
-    "rule": "Anak laki-laki adalah ahli waris utama yang memiliki hak dan kewajiban atas harta peninggalan serta tanggung jawab keagamaan keluarga.",
+    "rule": "Anak laki-laki adalah ahli waris utama yang memiliki hak dan kewajiban (swadharma) atas harta peninggalan serta tanggung jawab keagamaan keluarga, mencakup pemeliharaan Sanggah/Merajan, pelaksanaan Pitra Yadnya (Ngaben), dan tanggung jawab sosial adat (Ayahan) di Banjar.",
     "citations": [
       {
         "source": "semanticscholar.org",
         "evidence": "Anak laki-laki memiliki tanggung jawab dalam merawat orang tua, melaksanakan upacara pengabenan, dan memelihara sanggah/merajan."
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "reviewer_note": "Jika kewajiban swadharma tidak dijalankan, hak waris bisa gugur (kawong)."
   },
   {
     "id": "BAL-003",
     "type": "heir_status",
-    "rule": "Anak perempuan dapat menjadi ahli waris (sentana rajeg) melalui perkawinan nyentana, di mana status hukumnya disamakan dengan anak laki-laki.",
+    "rule": "Anak perempuan dapat menjadi ahli waris (sentana rajeg) melalui perkawinan nyentana, di mana status hukumnya berubah dari Pradana menjadi Purusa, disamakan dengan anak laki-laki.",
     "citations": [
       {
         "source": "bundamediagrup.co.id",
         "evidence": "Perkawinan nyentana adalah bentuk perkawinan di mana perempuan diangkat menjadi sentana rajeg untuk meneruskan keturunan."
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "reviewer_note": "Syarat: (1) keluarga tidak punya keturunan laki-laki (camput), (2) disepakati keluarga besar, (3) melalui upacara perkawinan Nyentana (suami masuk keluarga istri)."
   },
   {
     "id": "BAL-004",
     "type": "asset_classification",
-    "rule": "Druwe Tengah adalah harta bersama atau milik bersama keluarga/kerabat yang tidak dapat dibagi secara individual.",
+    "rule": "Druwe Tengah adalah harta bersama milik keluarga/kerabat yang tidak dapat dibagi secara individual (inalienable), meliputi Tanah Sanggah/Merajan, Tanah Tegal Laba Pura, dan benda pusaka (keris, pratima).",
     "citations": [
       {
         "source": "semanticscholar.org",
         "evidence": "Druwe tengah mengacu pada harta bersama yang pengelolaannya digunakan untuk kepentingan bersama, seperti upacara yadnya."
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "reviewer_note": "Tanah PKD (Pekarangan Desa) statusnya milik Desa Adat, hak pakainya pada keluarga, bukan hak milik mutlak individu."
   },
   {
     "id": "BAL-005",
     "type": "asset_classification",
-    "rule": "Harta Druwe Gabro adalah harta bersama yang diperoleh suami istri selama masa perkawinan.",
+    "rule": "Harta Druwe Gabro (atau Gunakaya) adalah harta bersama yang diperoleh suami istri selama masa perkawinan.",
     "citations": [
       {
         "source": "unmas.ac.id",
         "evidence": "Hukum adat Bali mengenal harta druwe gabro yang merupakan harta bersama yang diperoleh suami istri dalam perkawinan."
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "reviewer_note": "Jika cerai, Druwe Gabro dibagi sesuai kontribusi atau kesepakatan (umumnya dibagi dua). Harta bawaan (Tetadan) kembali ke masing-masing pihak."
+  },
+  {
+    "id": "BAL-006",
+    "type": "asset_classification",
+    "rule": "Harta Tetadan (Tatakan) adalah harta bawaan yang dibawa oleh suami atau istri ke dalam perkawinan, diperoleh sebelum menikah (hibah orang tua, warisan pribadi). Harta ini tetap menjadi hak individu masing-masing.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Klasifikasi harta waris adat Bali — harta bawaan"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-007",
+    "type": "asset_classification",
+    "rule": "Harta Bekel adalah harta perbekalan yang diberikan orang tua kepada anak perempuan saat menikah keluar (ninggal kedaton). Ini bukan warisan dalam arti ahli waris, melainkan pemberian putus.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Klasifikasi harta waris adat Bali — harta bekel"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-008",
+    "type": "asset_transfer",
+    "rule": "Jiwa Dana adalah pemberian harta dari orang tua kepada anak (bisa perempuan atau orang lain) atas dasar kasih sayang semasa orang tua masih hidup. Harus disaksikan Prajuru Adat agar sah.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Mekanisme pemberian harta semasa hidup"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-009",
+    "type": "asset_classification",
+    "rule": "Harta Pusaka adalah harta yang memiliki nilai magis-religius (seperti keris leluhur, permata suci) yang tidak boleh dijual dan harus dijaga oleh ahli waris utama (Purusa).",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Harta pusaka magis-religius"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-010",
+    "type": "heir_priority",
+    "rule": "Semua anak laki-laki berhak mendapat bagian waris. Anak yang menempati Umah Meten (rumah induk) dan merawat orang tua (biasanya bungsu atau sulung tergantung desa) sering mendapat bagian lebih besar atau rumah utama.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Asas keseimbangan pembagian antar anak laki-laki"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-011",
+    "type": "governance",
+    "rule": "Anak laki-laki yang ditunjuk ngamong (bertanggung jawab atas) Sanggah Kemulan berhak atas tanah tempat sanggah tersebut berdiri dan tanah pelabanya.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Tanggung jawab sanggah dan hak atas tanah pelaba"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-012",
+    "type": "succession_exception",
+    "rule": "Anak laki-laki yang berpindah agama (keluar dari Hindu) dianggap Ninggal Kedaton (keluar dari struktur keluarga adat) sehingga kehilangan hak sebagai ahli waris adat karena tidak bisa memenuhi kewajiban Sanggah.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Pindah agama dan dampak terhadap hak waris"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-013",
+    "type": "heir_rights_female",
+    "rule": "Berdasarkan Keputusan Pesamuhan Agung III MUDP Bali No. 01/KEP/PSM-3/MDP Bali/X/2010, anak perempuan yang kawin keluar diakui sebagai Ahli Waris Terbatas.",
+    "citations": [
+      {
+        "source": "Keputusan MUDP Bali 2010",
+        "evidence": "Pesamuhan Agung III MUDP Bali No. 01/KEP/PSM-3/MDP Bali/X/2010"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-014",
+    "type": "heir_rights_female",
+    "rule": "Anak perempuan berhak mendapat bagian dari harta Gunakaya (harta perolehan orang tua), namun besarnya maksimal setengah (1/2) dari bagian anak laki-laki, atau sesuai kemampuan/kesepakatan keluarga.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Hak anak perempuan atas harta gunakaya"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-015",
+    "type": "heir_rights_female",
+    "rule": "Anak perempuan (Pradana) yang kawin keluar tidak berhak mewarisi Harta Pusaka, Druwe Tengah, maupun Tanah Ayahan Desa, karena kewajiban adatnya sudah berpindah ke keluarga suami.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Batasan hak waris perempuan yang kawin keluar"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-016",
+    "type": "transfer_restriction",
+    "rule": "Harta Pusaka, Tanah Sanggah, dan Tanah Pekarangan Desa (PKD) dilarang keras untuk dijual (adol), karena merupakan milik leluhur dan titipan untuk generasi penerus (Druwe Tengah).",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Larangan penjualan harta pusaka dan tanah adat"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-017",
+    "type": "ownership",
+    "rule": "Ahli waris hanya memiliki hak menikmati hasil (hak pakai dan hak kelola) atas harta pusaka, bukan hak memiliki mutlak untuk memindahtangankan kepada pihak luar desa adat.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Hak pakai vs hak milik atas harta pusaka"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-018",
+    "type": "religious_property",
+    "rule": "Tanah Pelaba Pura (tanah sawah/tegalan yang hasilnya untuk membiayai upacara Pura) tidak boleh dibagi waris menjadi hak milik pribadi, melainkan dikelola bergilir atau oleh penanggung jawab utama.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Status tanah pelaba pura dalam konteks waris"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-019",
+    "type": "community_role",
+    "rule": "Pengangkatan anak (Sentana Peperasan) harus diketahui dan disaksikan oleh Prajuru Banjar/Desa Adat dan diumumkan dalam paruman agar sah secara adat.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Peran banjar sebagai saksi pengangkatan anak"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-020",
+    "type": "community_role",
+    "rule": "Jika sebuah keluarga punah (camput) tanpa ahli waris (tidak ada purusa/sentana rajeg), maka Tanah Ayahan Desa akan ditarik kembali oleh Desa Adat (Desa Pakraman).",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Mekanisme penarikan AYDS saat keluarga camput"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-021",
+    "type": "religious_obligation",
+    "rule": "Hak waris berbanding lurus dengan kewajiban (Asas Ngayah): 'Siapa yang ngayah (bekerja/berbakti) dia yang mewaris.' Jika menolak ngaben orang tua, hak waris bisa dicabut.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Asas ngayah — hubungan kewajiban dan hak waris"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-022",
+    "type": "distribution_process",
+    "rule": "Harta peninggalan pewaris harus pertama-tama digunakan untuk membiayai upacara kematian (Ngaben/Pitra Yadnya) pewaris itu sendiri sebelum sisanya dibagi kepada ahli waris.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Prioritas biaya Pitra Yadnya sebelum pembagian waris"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-023",
+    "type": "adoption",
+    "rule": "Anak angkat baru sah menjadi ahli waris jika telah melalui upacara Widhi Widana (pemerasan) yang disaksikan Tri Upasaksi (Dewa, Manusa/Adat, Butha).",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Upacara pemerasan untuk keabsahan anak angkat"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-024",
+    "type": "adoption",
+    "rule": "Anak angkat sah (Sentana Peperasan) memiliki status hukum yang sama persis dengan anak kandung (Sentana Gama), termasuk hak waris dan kewajiban merawat Sanggah.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Status setara anak angkat sah dengan anak kandung"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-025",
+    "type": "divorce_impact",
+    "rule": "Istri yang bercerai kembali ke rumah asalnya (Mulih Daha) dan kehilangan hak atas harta bawaan suami serta harta leluhur suami.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Dampak perceraian — Mulih Daha"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-026",
+    "type": "divorce_impact",
+    "rule": "Anak-anak dari hasil perkawinan tetap mengikut garis Purusa (ayah). Hak asuh dan hak waris anak tetap berada di keluarga ayah, kecuali anak masih menyusui bisa diasuh ibu sementara namun status hukum tetap di ayah.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Status anak setelah perceraian"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-027",
+    "type": "dispute_resolution",
+    "rule": "Sengketa waris tahap pertama wajib diselesaikan di internal keluarga besar melalui musyawarah (Sangkep) dalam lingkup Dadia/Suka Duka.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Mekanisme penyelesaian sengketa waris — musyawarah keluarga"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-028",
+    "type": "dispute_resolution",
+    "rule": "Jika musyawarah keluarga gagal, sengketa maju ke tingkat Banjar Adat, kemudian Desa Adat (Kerta Desa) yang putusannya bersifat final secara adat. Jika masih tidak puas, baru diajukan ke Pengadilan Negeri (hukum nasional).",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Tingkatan mediasi adat: Banjar -> Desa Adat -> Pengadilan Negeri"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-029",
+    "type": "contemporary_change",
+    "rule": "Perkawinan beda wangsa (kasta) kini tidak lagi menggugurkan hak waris secara otomatis seperti zaman kerajaan, asalkan kewajiban adat terpenuhi.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Penghapusan diskriminasi kasta dalam konteks waris"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-030",
+    "type": "contemporary_change",
+    "rule": "Yurisprudensi MA dan praktik adat modern mulai mengakui hak janda untuk menikmati/menguasai harta warisan suami selama ia tidak kawin lagi (Janda Sentana), demi kelangsungan hidup anak-anaknya.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Hak janda dalam perkembangan hukum adat modern"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-031",
+    "type": "contemporary_change",
+    "rule": "Perkawinan Pada Gelahang: bentuk perkawinan di mana suami dan istri sama-sama berstatus Purusa di rumah masing-masing (karena sama-sama anak tunggal). Hak waris dibagi dua, kewajiban juga dibagi dua, sebagai solusi kontemporer untuk mencegah kepunahan garis keturunan.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Perkawinan Pada Gelahang sebagai inovasi adat"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-032",
+    "type": "succession_exception",
+    "rule": "Anak Astra (anak yang lahir di luar nikah atau dari perkawinan tidak sah secara adat) hanya memiliki hubungan perdata dengan ibunya, kecuali dilakukan pengakuan/pengesahan oleh ayah melalui upacara tertentu.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Status anak astra dalam hukum waris adat"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-033",
+    "type": "succession_exception",
+    "rule": "Anak yang durhaka (Alpaka Guru) atau mencoba membunuh orang tuanya dapat kehilangan hak warisnya melalui keputusan sangkep keluarga.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Pencabutan hak waris karena Alpaka Guru"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "BAL-034",
+    "type": "distribution_process",
+    "rule": "Dalam pembagian waris modern (MUDP 2010), sebelum harta dibagi kepada anak laki-laki dan perempuan, harus disisihkan sepertiga (1/3) atau secukupnya untuk Harta Pusaka dan biaya pelestarian Sanggah Merajan.",
+    "citations": [
+      {
+        "source": "Keputusan MUDP Bali 2010",
+        "evidence": "Potongan harta untuk sanggah sebelum pembagian waris"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
   }
 ]

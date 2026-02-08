@@ -459,12 +459,13 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | HUMAN_ONLY |
 | **Prerequisites** | ART-032 |
 | **Priority** | P2 |
-| **Status** | IN_PROGRESS |
+| **Status** | DONE |
 **Description:** Extract 20+ formal rules of Bali inheritance law from academic sources.
 **Inputs:** Bali adat law texts
 **Outputs:** `data/rules/bali_rules.json`
 **Acceptance Test:** 20+ rules with citations
 **Note (2026-02-07):** Initial 5 rules created from academic summaries.
+**Completion Note (2026-02-08):** Expert review selesai. 5 original BENAR + 29 rules baru dari expert = 34 rules VERIFIED. Mencakup: klasifikasi harta, hak waris perempuan (MUDP 2010), sentana rajeg/peperasan, perceraian, sengketa, perubahan kontemporer. Lihat `data/rules/Hasil Verifikasi.md`.
 
 ### ART-039: Collect Jawa Legal Rules from Literature
 | Field | Value |
