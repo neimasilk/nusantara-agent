@@ -1313,7 +1313,7 @@ Supervisor perlu diberi instruksi eksplisit bahwa **eksistensi aturan nasional t
 - [x] Akurasi benchmark kembali naik (target >65%)
 - [x] False Positives pada Label A berkurang
 - [x] Kasus kritis seperti CS-JAW-015 (Wekas) dan CS-LIN-016 (Interfaith/Inter-suku) terklasifikasi benar (C)
-**Completion Note (2026-02-09):** Berhasil meningkatkan akurasi dari 54.55% ke 77.27%. Kasus konflik materiil (C) kini terdeteksi dengan baik. Residual errors (over-correction ke C) masih ada pada kasus administratif murni, namun tradeoff ini dapat diterima untuk keamanan putusan.
+**Completion Note (2026-02-09):** Berhasil meningkatkan akurasi dari 54.55% ke 72.73%. Kasus konflik materiil (C) kini terdeteksi dengan baik. Residual errors (over-correction ke C) masih ada pada kasus administratif murni, namun tradeoff ini dapat diterima untuk keamanan putusan.
 
 ---
 

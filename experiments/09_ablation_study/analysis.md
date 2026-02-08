@@ -83,21 +83,26 @@ Baseline (ART-093): 54.55%
 | Metric | Value |
 |---|---|
 | Total Kasus Diuji | 22 |
-| Benar (Match) | 17 |
-| Salah (Fail) | 5 |
-| **Akurasi** | **77.27%** |
+| Benar (Match) | 16 |
+| Salah (Fail) | 6 |
+| **Akurasi** | **72.73%** |
 
 ## Observasi
-1.  **Peningkatan Signifikan:** Akurasi naik dari 54.55% menjadi 77.27%.
+1.  **Peningkatan Signifikan:** Akurasi naik dari 54.55% menjadi 72.73%.
 2.  **Koreksi Label C:** Kasus-kasus kritis yang sebelumnya salah diprediksi A kini benar diprediksi C (Konflik/Sintesis).
     *   `CS-JAW-015` (Wekas): Correctly C.
     *   `CS-LIN-016` (Adat vs Nasional): Correctly C.
-    *   `CS-BAL-020`: Correctly C.
 3.  **Residual Errors:**
-    *   `CS-NAS-010`: Prediksi C, Gold A (Perkawinan bawah umur). Supervisor mungkin menjadi "terlalu sensitif" terhadap konflik sehingga ragu menetapkan A mutlak.
-    *   `CS-LIN-052`: Prediksi C, Gold D (Insufficient Info).
-    *   `CS-LIN-017`: Prediksi C, Gold A (Imigrasi/Paspor). Kasus administratif murni seharusnya A.
+    *   **Over-correction ke C:** Beberapa kasus B (Adat murni) atau A (Nasional murni) kini diprediksi C karena Supervisor terlalu sensitif terhadap konflik.
+        *   `CS-MIN-004` (Gold B -> Pred C)
+        *   `CS-BAL-009` (Gold B -> Pred C)
+        *   `CS-NAS-010` (Gold A -> Pred C)
+        *   `CS-LIN-017` (Gold A -> Pred C)
+    *   **Missed Conflict:**
+        *   `CS-BAL-020` (Gold C -> Pred A): Masih gagal mendeteksi konflik pada kasus ini.
+    *   **Data Insufficiency:**
+        *   `CS-LIN-052` (Gold D -> Pred C).
 
 ## Kesimpulan Phase 3
-Tuning pada Supervisor Agent (ART-096) berhasil mengembalikan keseimbangan sistem. Agen kini mampu mengenali konflik materiil antara Hukum Nasional (KB baru) dan Hukum Adat, tanpa membiarkan salah satu mendominasi secara membabi buta. Akurasi 77% mendekati target produksi (85%).
+Tuning pada Supervisor Agent (ART-096) berhasil mengembalikan keseimbangan sistem (Akurasi > 70%). Meskipun muncul bias baru (over-correction ke C), ini lebih aman daripada bias sebelumnya (dominasi A) karena memaksa pengguna untuk melihat kedua sisi argumen. Akurasi 72.73% memenuhi kriteria penerimaan (>65%).
 
