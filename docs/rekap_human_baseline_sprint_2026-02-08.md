@@ -8,6 +8,7 @@ Dokumen ini merangkum progres sprint human-only untuk mendukung `ART-050` dan `A
 2. `docs/paket_kerja_4_jam_batch2_terisi_dr_hendra_2026-02-08.md` (Batch 2)
 3. `docs/paket_kerja_4_jam_batch3_terisi_dr_hendra_2026-02-08.md` (Batch 3)
 4. `docs/paket_kerja_4_jam_batch4_terisi_dr_hendra_2026-02-08.md` (Batch 4)
+5. `docs/paket_kerja_4_jam_batch5_terisi_dr_hendra_2026-02-08.md` (Batch 5)
 
 ## Cakupan
 
@@ -15,14 +16,15 @@ Dokumen ini merangkum progres sprint human-only untuk mendukung `ART-050` dan `A
 2. Total kasus terisi batch 2: 12
 3. Total kasus terisi batch 3: 12
 4. Total kasus terisi batch 4: 12
-5. Total kumulatif sprint: 48 kasus
+5. Total kasus terisi batch 5: 12
+6. Total kumulatif sprint: 60 kasus
 
-## Distribusi Kesimpulan (Batch 4)
+## Distribusi Kesimpulan (Batch 5)
 
-1. A (cenderung nasional): 4
+1. A (cenderung nasional): 2
 2. B (cenderung adat): 4
-3. C (sintesis): 4
-4. D (klarifikasi): 0
+3. C (sintesis): 5
+4. D (klarifikasi): 1
 
 ## Topik Follow-up Utama
 
@@ -47,6 +49,6 @@ Dokumen ini merangkum progres sprint human-only untuk mendukung `ART-050` dan `A
 
 ## Aksi Lanjut Disarankan
 
-1. Distribusikan `docs/paket_kerja_4_jam_batch5_ready_to_handout.md` untuk melanjutkan sprint ahli pertama.
-2. Setelah sprint ahli pertama mencapai >= 72 kasus, mulai onboarding ahli kedua untuk subset kasus yang sama (agreement prep).
+1. Distribusikan `docs/paket_kerja_4_jam_batch6_ready_to_handout.md` untuk melanjutkan sprint ahli pertama.
+2. Setelah sprint ahli pertama mencapai >= 72 kasus (estimasi selesai batch-6), mulai onboarding ahli kedua untuk subset kasus yang sama (agreement prep).
 3. Konsolidasikan jawaban lintas ahli dalam tabel agreement sederhana (A/B/C/D + keyakinan).
