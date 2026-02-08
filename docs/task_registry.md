@@ -641,6 +641,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Acceptance Test:** 200 cases, balanced across domains, each with gold-standard answer
 **Progress Note (2026-02-08):** Submisi ahli domain individu melaporkan status `PROSES` dengan contoh kasus awal (`TC-BALI-001`) pada `docs/lembar_kerja_individu_ahli_domain_human_only_terisi_dr_hendra_kusuma_2026-02-08.md`. Perlu agregasi lintas kontributor hingga 200 kasus sesuai komposisi domain.
 **Progress Note (2026-02-08):** Paket kerja 4 jam batch-1 telah diterima pada `docs/paket_kerja_4_jam_ahli_domain_terisi_dr_hendra_2026-02-08.md` (12 kasus prioritas terisi). Paket batch-2 siap distribusi pada `docs/paket_kerja_4_jam_ahli_domain_batch2_siap_print.md` untuk melanjutkan pengumpulan human baseline secara bertahap.
+**Progress Note (2026-02-08):** Paket kerja batch-2 terisi telah diterima pada `docs/paket_kerja_4_jam_batch2_terisi_dr_hendra_2026-02-08.md` dan direkap pada `docs/rekap_human_baseline_sprint_2026-02-08.md` (kumulatif sprint: 24 kasus). Paket batch-3 siap handout pada `docs/paket_kerja_4_jam_batch3_ready_to_handout.md`.
 
 ### ART-051: Run Full Pipeline on 200 Test Cases
 | Field | Value |
@@ -826,6 +827,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Outputs:** `experiments/09_ablation_study/baselines/b8_human_expert/`
 **Acceptance Test:** 3 experts complete all 200 cases; inter-expert agreement reported
 **Progress Note (2026-02-08):** Sprint human baseline 4 jam batch-1 dari ahli domain telah terdokumentasi pada `docs/paket_kerja_4_jam_ahli_domain_terisi_dr_hendra_2026-02-08.md`. Belum memenuhi acceptance test ART-064 karena masih perlu kontribusi ahli tambahan dan cakupan kasus yang lebih luas.
+**Progress Note (2026-02-08):** Sprint human baseline batch-2 telah terdokumentasi pada `docs/paket_kerja_4_jam_batch2_terisi_dr_hendra_2026-02-08.md`; rekap kumulatif batch-1+2 tersedia pada `docs/rekap_human_baseline_sprint_2026-02-08.md`. Status tetap PENDING sampai terpenuhi 3 ahli dan cakupan 200 kasus.
 
 ### ART-065: Run All Baselines (3x each with different seeds)
 | Field | Value |
