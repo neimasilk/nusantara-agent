@@ -8,12 +8,16 @@ Dokumen ini adalah checklist operasional agar sesi interview ahli berjalan cepat
 ## 1) Dokumen yang Dicetak
 
 ### Untuk Ahli-1, Ahli-2, Ahli-3
-1. `docs/template_pen_paper_ahli_hukum_sederhana.md`
-2. Cetak 1 copy per ahli (total 3 copy).
+1. `docs/paket_interview_online_ahli1_siap_print_2026-02-08.md`
+2. `docs/paket_interview_online_ahli2_siap_print_2026-02-08.md`
+3. `docs/paket_interview_online_ahli3_siap_print_2026-02-08.md`
+4. Cetak 1 copy per ahli.
 
 ### Untuk Ahli-4 (adjudikasi kasus split)
 1. `docs/paket_interview_online_ahli4_split_siap_print_2026-02-08.md`
 2. Cetak 1 copy.
+3. Jika ada batch umum tambahan, pakai:
+   `docs/paket_interview_online_ahli4_siap_print_2026-02-08.md`
 
 ---
 
@@ -40,6 +44,9 @@ python scripts/export_split_cases_for_interview.py --expert-id ahli4
 
 File target:
 `data/processed/gold_standard/interview_online/interview_template_ahli4.csv`
+
+Panduan operator:
+`docs/operator_transkrip_interview_ke_csv.md`
 
 Kolom minimal yang wajib diisi:
 1. `label_ahli4`
