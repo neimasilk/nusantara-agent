@@ -19,6 +19,14 @@ Dokumen ini menetapkan framework testing operasional agar pipeline riset dapat d
   - `src/kg_engine/search.py`
   - utilitas parser di evaluator independen
 
+#### Coverage Aktual (2026-02-08)
+- `tests/test_token_usage.py` -> `src/utils/token_usage.py` (`extract_token_usage`, `merge_usage`)
+- `tests/test_router.py` -> `src/agents/router.py` (`route_query`, `classify_router_accuracy`)
+- `tests/test_debate_json_parser.py` -> `src/agents/debate.py` (`_json_or_raw`)
+- `tests/test_kg_search.py` -> `src/kg_engine/search.py` (`SimpleKGSearch`)
+- `tests/test_llm_judge_utils.py` -> `src/evaluation/llm_judge.py` (`TripleEvaluator`)
+- `tests/test_text_processor.py` -> `src/utils/text_processor.py` (`extract_text_from_pdf`, `clean_legal_text`, `chunk_text`)
+
 ### Layer B — Script Syntax Smoke Check (wajib sebelum merge)
 - Seluruh skrip `src/` + eksperimen aktif harus lolos kompilasi syntax.
 - Tujuan: menangkap error struktur kode lebih awal.

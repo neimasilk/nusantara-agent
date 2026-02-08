@@ -100,12 +100,13 @@ Work is decomposed into Atomic Research Tasks (ARTs). See:
 - **Exp 05 COMPLETED**: Menemukan 33.3% divergensi antara Rule Engine dan LLM (N=30), membuktikan perlunya "Symbolic Anchor" untuk mencegah halusinasi hukum.
 - **Exp 07 COMPLETED (Negative Result)**: Advanced orchestration (parallel + debate + self-correction + routing) belum mengungguli baseline sequential pada auto-score Kimi (N=12), sehingga protokol debat perlu iterasi.
 - **Draft rules**: `data/rules/minangkabau_rules.json` berisi aturan hasil ekstraksi open-access.
+- **Dependency audit note**: `ART-021` dan `ART-022` sudah `DONE` tetapi prereq `ART-020` masih `IN_PROGRESS`; implementasi berjalan dengan draft rules, sedangkan verifikasi domain expert tetap ditahan di `ART-020` (HUMAN_ONLY).
 
 ## Methodology Fixes
 
 Six critical weaknesses have been identified and documented in `docs/methodology_fixes.md`:
 
-1. "Neuro-symbolic" claim — formal rule engine built (Exp 05 DONE), but external validation of claim still pending
+1. "Neuro-symbolic" claim — formal rule engine built dan Exp 05 selesai; gap tersisa adalah verifikasi human/domain-expert pada sumber rules (`ART-020`)
 2. Circular evaluation — independent evaluation pipeline needed (Exp 06, BLOCKED on annotation setup)
 3. Orchestration quality gain — not achieved after Exp 07 (negative result); debate protocol needs iteration
 4. Scale too small — needs 10K+ triples, 200+ test cases (scaling plan, IN_PROGRESS 15%)
