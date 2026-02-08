@@ -240,12 +240,14 @@ Cultural Consistency Score (CCS) adalah metrik custom yang belum divalidasi. Tan
 | # | Weakness | Status | Progress |
 |---|----------|--------|----------|
 | 1 | Neuro-Symbolic claim | COMPLETED | 100% |
-| 2 | Circular evaluation | IN_PROGRESS | 10% |
+| 2 | Circular evaluation | IN_PROGRESS | 15% |
 | 3 | Linear multi-agent | IN_PROGRESS | 40% |
 | 4 | Scale too small | IN_PROGRESS | 15% |
 | 5 | Strawman baselines | PLANNED | 0% |
 | 6 | CCS unvalidated | PLANNED | 0% |
 
-Catatan: Exp 07 sudah dieksekusi dan menghasilkan temuan negatif (advanced orchestration belum mengungguli baseline). Weakness #3 tetap berstatus IN_PROGRESS karena perbaikan protokol debat masih diperlukan.
+Catatan Progress:
+- **Weakness #2**: Scaffolding Exp 06 selesai (ART-025, ART-029 DONE), namun ART-031 BLOCKED menunggu ART-028 (human annotation) dan ART-030 (putusan MA primer).
+- **Weakness #3**: Exp 07 dieksekusi dengan hasil negatif (F-009); perbaikan protokol debat masih diperlukan.
 
 *Last updated: 2026-02-07*
