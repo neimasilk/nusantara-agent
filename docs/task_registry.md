@@ -489,11 +489,12 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-038, ART-021 |
 | **Priority** | P2 |
-| **Status** | PENDING |
+| **Status** | DONE |
 **Description:** Implement Bali rules in the same symbolic framework as Minangkabau.
 **Inputs:** `data/rules/bali_rules.json`, rule engine framework
 **Outputs:** `src/symbolic/rules/bali.lp`
 **Acceptance Test:** All rules parse and execute; 10 test queries correct
+**Completion Note (2026-02-08):** Rules Bali telah di-encode ke `src/symbolic/rules/bali.lp` mengikuti pola `minangkabau.lp` dan diverifikasi dengan test deterministik di `tests/test_rule_engine.py`.
 
 ### ART-041: Encode Jawa Rules in Symbolic Framework
 | Field | Value |
@@ -502,11 +503,12 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-039, ART-021 |
 | **Priority** | P2 |
-| **Status** | PENDING |
+| **Status** | DONE |
 **Description:** Implement Javanese rules in the same symbolic framework as Minangkabau.
 **Inputs:** `data/rules/jawa_rules.json`, rule engine framework
 **Outputs:** `src/symbolic/rules/jawa.lp`
 **Acceptance Test:** All rules parse and execute; 10 test queries correct
+**Completion Note (2026-02-08):** Rules Jawa telah di-encode ke `src/symbolic/rules/jawa.lp` mengikuti pola `minangkabau.lp` dan diverifikasi dengan test deterministik di `tests/test_rule_engine.py`.
 
 ### ART-042: Encode National Law Rules
 | Field | Value |

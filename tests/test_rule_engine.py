@@ -283,5 +283,113 @@ class PrologEngineMockTests(unittest.TestCase):
         self.assertEqual(len(result), 5)
 
 
+class DomainAspRulesTests(unittest.TestCase):
+    """Test deterministik untuk rule ASP Bali dan Jawa."""
+
+    def _solve_model(self, lp_name: str, facts=None):
+        if facts is None:
+            facts = []
+        try:
+            from src.symbolic.rule_engine import ClingoRuleEngine
+        except ImportError:
+            self.skipTest("Clingo tidak terinstall")
+
+        lp_path = Path("src") / "symbolic" / "rules" / lp_name
+        self.assertTrue(lp_path.exists(), f"File rule tidak ditemukan: {lp_path}")
+
+        engine = ClingoRuleEngine(lp_file=str(lp_path))
+        for fact in facts:
+            engine.add_fact(fact)
+
+        models = engine.solve()
+        self.assertGreater(len(models), 0, "Clingo tidak menghasilkan model")
+        return models[0]
+
+    def test_bali_rule_file_parse(self):
+        """Test: bali.lp bisa diparse dan disolve."""
+        model = self._solve_model("bali.lp")
+        self.assertIsInstance(model, list)
+
+    def test_bali_purusa_inherit_druwe_gabro(self):
+        """Test: purusa berhak atas druwe gabro."""
+        model = self._solve_model(
+            "bali.lp",
+            facts=[
+                "male(putra)",
+                "kewajiban_ngayah(putra)",
+            ],
+        )
+        self.assertIn("can_inherit(putra,harta_druwe_gabro)", model)
+
+    def test_bali_perempuan_kawin_keluar_hak_terbatas(self):
+        """Test: perempuan kawin keluar hanya waris terbatas."""
+        model = self._solve_model(
+            "bali.lp",
+            facts=[
+                "female(komang)",
+                "kawin_keluar(komang)",
+            ],
+        )
+        self.assertIn("ahli_waris_terbatas(komang)", model)
+        self.assertIn("can_inherit(komang,harta_druwe_gabro)", model)
+        self.assertNotIn("can_inherit(komang,tanah_sanggah)", model)
+
+    def test_bali_larangan_jual_pusaka(self):
+        """Test: jual pusaka memicu conflict."""
+        model = self._solve_model(
+            "bali.lp",
+            facts=[
+                "action(harta_pusaka,sell)",
+            ],
+        )
+        self.assertIn("conflict(harta_pusaka,sell)", model)
+
+    def test_jawa_rule_file_parse(self):
+        """Test: jawa.lp bisa diparse dan disolve."""
+        model = self._solve_model("jawa.lp")
+        self.assertIsInstance(model, list)
+
+    def test_jawa_sigar_semangka_equal_share(self):
+        """Test: anak laki/perempuan setara untuk gono-gini."""
+        model = self._solve_model(
+            "jawa.lp",
+            facts=[
+                "child(adi)",
+                "male(adi)",
+                "child(sri)",
+                "female(sri)",
+            ],
+        )
+        self.assertIn("can_inherit(adi,harta_gono_gini)", model)
+        self.assertIn("can_inherit(sri,harta_gono_gini)", model)
+        self.assertIn("equal_share(adi,sri,harta_gono_gini)", model)
+
+    def test_jawa_anak_angkat_hanya_gono_gini(self):
+        """Test: anak angkat sah tidak mewarisi pusaka/harta asal."""
+        model = self._solve_model(
+            "jawa.lp",
+            facts=[
+                "anak_angkat(budi)",
+                "adopsi_terang_tunai(budi)",
+            ],
+        )
+        self.assertIn("can_inherit(budi,harta_gono_gini)", model)
+        self.assertNotIn("can_inherit(budi,harta_pusaka)", model)
+
+    def test_jawa_pecah_panci_hilangkan_hak_penguasaan(self):
+        """Test: menikah lagi memicu pecah panci dan conflict."""
+        model = self._solve_model(
+            "jawa.lp",
+            facts=[
+                "janda(ibu)",
+                "menikah_lagi(ibu)",
+                "action(harta_gono_gini,hold_without_distribution)",
+            ],
+        )
+        self.assertIn("pecah_panci(ibu)", model)
+        self.assertIn("conflict(harta_gono_gini,hold_without_distribution)", model)
+        self.assertNotIn("hak_penguasaan(ibu,harta_gono_gini)", model)
+
+
 if __name__ == "__main__":
     unittest.main()
