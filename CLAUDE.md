@@ -63,6 +63,12 @@ All LLM calls go through the **DeepSeek API** using the OpenAI Python client wit
 - Direct `OpenAI` client (in `TripleExtractor` and experiment scripts)
 - `ChatOpenAI` from `langchain_openai` (in multi-agent orchestration)
 
+### API Cost-Control Mode (Effective 2026-02-08)
+
+- Default workflow: offline-first (tanpa API berbayar).
+- Jangan jalankan call DeepSeek/Kimi kecuali ada blocker kritis dan persetujuan eksplisit owner.
+- Saat meminta persetujuan, sebutkan tujuan call, estimasi usage/token, dan alasan kenapa alternatif offline tidak cukup.
+
 ## Experiment SOP (Mandatory)
 
 Every experiment **MUST** follow the template in `docs/experiment_template.md`. Key requirements:
@@ -99,7 +105,7 @@ Work is decomposed into Atomic Research Tasks (ARTs). See:
 - **Minangkabau Rules Expanded**: `src/symbolic/rules/minangkabau.lp` mencakup 30+ aturan formal (inheritance, actions, emergency conditions).
 - **ALL 3 Domain Rules VERIFIED by Expert**:
 - **ART-093 Completed (2026-02-09)**: Knowledge Base hukum nasional diperluas (KUHPerdata, KHI, UUPA) dengan 20+ pasal kunci untuk mendukung retrieval agen nasional.
-- **Benchmark Baseline (Pre-ART-093)**: Akurasi 54.55% pada 82 kasus. Baseline ini menjadi acuan untuk mengukur dampak perluasan KB.
+- **Benchmark Baseline (Pre-ART-093)**: Akurasi 54.55% pada subset evaluasi 22 kasus (dataset aktif berisi 24 entri, 2 berlabel `SPLIT`). Baseline ini menjadi acuan sementara untuk mengukur dampak perluasan KB.
   - Minangkabau: `ART-020` DONE — 25 rules (14 BENAR, 6 DIKOREKSI, 5 baru)
   - Bali: `ART-038` DONE — 34 rules (5 BENAR, 29 baru)
   - Jawa: `ART-039` DONE — 36 rules (4 BENAR, 1 DIKOREKSI, 31 baru)
@@ -108,7 +114,7 @@ Work is decomposed into Atomic Research Tasks (ARTs). See:
 - **Exp 07 COMPLETED (Negative Result)**: Advanced orchestration (parallel + debate + self-correction + routing) belum mengungguli baseline sequential pada auto-score Kimi (N=12), sehingga protokol debat perlu iterasi.
 - **ART-093 COMPLETED**: Knowledge Base hukum nasional diperluas (KUHPerdata, KHI, UUPA) di `src/pipeline/nusantara_agent.py` untuk menyeimbangkan debat.
 - **ART-096 COMPLETED**: Supervisor Agent tuned di `src/agents/orchestrator.py` untuk menyeimbangkan bobot Nasional vs Adat (Akurasi naik ke 72.73%).
-- **Test Coverage**: 78/79 test pass (1 LLM-dependent route classification flaky). Modules: rule_engine, text_processor, token_usage, router, debate, kg_search, llm_judge, nusantara_pipeline.
+- **Test Coverage**: 79/79 test pass (offline deterministic suite). Modules: rule_engine, text_processor, token_usage, router, debate, kg_search, llm_judge, nusantara_pipeline.
 - **ART-049 DONE**: Full Pipeline Integration selesai (`src/pipeline/nusantara_agent.py`). **ART-056 DONE**: Baseline configs documented.
 - **ART-057..064 ALL DONE**: 8 individual baseline implementations selesai. **ART-065 UNBLOCKED** — ready untuk execution (run all baselines 3x with seeds).
 - **Remaining blockers**: Exp 10 (CCS metric) BLOCKED pada ART-068/069/070.

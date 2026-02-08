@@ -1,0 +1,37 @@
+{
+  "manifest_version": "1.0",
+  "dataset_id": "gs_active_2026-02-08",
+  "as_of_date": "2026-02-08",
+  "owner": "nusantara-agent",
+  "benchmark_file": {
+    "path": "data/processed/gold_standard/gs_active_cases.json",
+    "sha256": "79F5BFA23702BF343B04080E3C99878F1697CB3B0DFA7F35030C436586D1A4CA",
+    "last_write_time_utc": "2026-02-08T05:28:55Z",
+    "total_cases_actual": 24,
+    "label_distribution": {
+      "C": 13,
+      "B": 4,
+      "A": 4,
+      "D": 1,
+      "SPLIT": 2
+    },
+    "evaluable_cases_excluding_split": 22
+  },
+  "reference_claim": {
+    "path": "docs/gold_standard_consensus_report_complete_82_cases_2026-02-08.md",
+    "sha256": "459A1117DEC57BC81732285E6238249B44D127713FE385EEADE2067F6BB1AD57",
+    "declared_total_cases": 82
+  },
+  "integrity_checks": {
+    "count_matches_reference_claim": false,
+    "notes": [
+      "Manifest direbuild otomatis dari dataset aktif.",
+      "Gunakan validate_benchmark_manifest.py untuk verifikasi sebelum benchmark formal."
+    ]
+  },
+  "provenance": {
+    "source_summary": "Rebuilt from local repository artifacts without external API calls.",
+    "generated_by": "scripts/rebuild_benchmark_manifest.py",
+    "generated_at_utc": "2026-02-08T15:06:18Z"
+  }
+}

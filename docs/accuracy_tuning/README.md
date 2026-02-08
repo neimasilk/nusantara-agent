@@ -37,7 +37,23 @@ Direktori ini berisi semua artefak terkait fase **Accuracy Tuning & Recovery** (
 - **Task Registry:** [`../task_registry.md`](../task_registry.md) (Phase 6)
 - **Failure Registry:** [`../failure_registry.md`](../failure_registry.md) (F-011)
 - **Handoff Sebelumnya:** [`../archive/handoffs/2026-02-08_benchmarking_ready/`](../archive/handoffs/2026-02-08_benchmarking_ready/)
-- **Benchmark Script:** `../../experiments/09_ablation_study/run_bench_gs82.py`
+- **Benchmark Script (preferred):** `../../experiments/09_ablation_study/run_bench_active.py`
+- **Benchmark Script (legacy alias):** `../../experiments/09_ablation_study/run_bench_gs82.py`
+- **Benchmark Manifest:** `../../data/benchmark_manifest.json`
+- **Paket Print Interview (master):** `../paket_print_interview_master_2026-02-08.md`
+- **Paket Print Ahli-4 (split):** `../paket_interview_online_ahli4_split_siap_print_2026-02-08.md`
+
+### Mode Eksekusi Benchmark
+
+- Mode default: warning-only jika ada mismatch count dataset vs manifest.
+- Mode ketat (direkomendasikan untuk audit):  
+  `python experiments/09_ablation_study/run_bench_active.py --strict-manifest`
+- Validasi manifest saja (tanpa menjalankan benchmark):  
+  `python scripts/validate_benchmark_manifest.py`
+- Validasi manifest + wajib match klaim referensi:  
+  `python scripts/validate_benchmark_manifest.py --require-reference-match`
+- Rebuild manifest dari dataset aktif (setelah ingest interview):  
+  `python scripts/rebuild_benchmark_manifest.py`
 
 ---
 
