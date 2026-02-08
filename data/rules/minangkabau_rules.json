@@ -10,12 +10,13 @@
         "evidence": "p.7 (matrilineal descent, garis turunan ibu)"
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08"
   },
   {
     "id": "MIN-002",
     "type": "asset_classification",
-    "rule": "Harta pusako tinggi adalah harta turun-temurun yang diperuntukkan bagi perempuan; bersifat hak yang tidak ditujukan untuk laki-laki.",
+    "rule": "Harta pusako tinggi adalah harta turun-temurun milik kaum (komunal). Perempuan memegang hak pakai (ganggam bauntuak), sedangkan laki-laki (Mamak) memegang hak penguasaan/pengaturan. Laki-laki turut menikmati hasil, tetapi tidak mewariskan ke anaknya.",
     "citations": [
       {
         "source": "Jurnal Hukum Islam 2021 - Application of Inheritance Law in Minangkabau",
@@ -23,7 +24,9 @@
         "evidence": "p.0 (pusako tinggi untuk perempuan, bukan laki-laki)"
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED_WITH_CORRECTION",
+    "verified_date": "2026-02-08",
+    "correction_note": "Rumusan awal salah menyebut 'diperuntukkan bagi perempuan'. Koreksi: milik kaum (komunal), perempuan pegang hak pakai, mamak pegang hak penguasaan."
   },
   {
     "id": "MIN-003",
@@ -36,12 +39,13 @@
         "evidence": "p.0-1 (pusako rendah hasil kerja orang tua; hak anak laki-laki dan perempuan)"
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08"
   },
   {
     "id": "MIN-004",
     "type": "heir_priority",
-    "rule": "Pewarisan pusako tinggi umumnya jatuh kepada anak perempuan (bukan anak laki-laki).",
+    "rule": "Penerusan pusako tinggi diteruskan penguasaannya kepada kemenakan (kaum) dan pemanfaatannya (ganggam bauntuak) kepada perempuan garis ibu. Istilah yang tepat adalah 'penerusan' atau 'turun ranjang', bukan 'pewarisan'.",
     "citations": [
       {
         "source": "Jurnal Hukum Islam 2021 - Application of Inheritance Law in Minangkabau",
@@ -49,7 +53,9 @@
         "evidence": "p.0 (heirloom diberikan kepada anak perempuan)"
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED_WITH_CORRECTION",
+    "verified_date": "2026-02-08",
+    "correction_note": "Rumusan awal 'jatuh kepada anak perempuan' kurang tepat. Koreksi: penguasaan ke kemenakan kaum, pemanfaatan ke perempuan garis ibu. Istilah 'pewarisan' diganti 'penerusan'."
   },
   {
     "id": "MIN-005",
@@ -62,12 +68,13 @@
         "evidence": "p.2 (inheritance collective; tidak dibagi kecuali untuk pemakaian)"
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08"
   },
   {
     "id": "MIN-006",
     "type": "governance",
-    "rule": "Pengelolaan pusako tinggi berada pada perempuan/ibu dan berada dalam pengawasan mamak; tidak boleh dimiliki secara pribadi.",
+    "rule": "Penguasaan dan pengaturan (policy) pusako tinggi ada pada Mamak/Ninik Mamak, sedangkan penyimpanan dan pemanfaatan ada pada Bundo Kanduang (perempuan); tidak boleh dimiliki secara pribadi. Pepatah: 'Harta dipagang Bundo Kanduang, Hak dipagang Ninik Mamak.'",
     "citations": [
       {
         "source": "Jaksa: Jurnal Kajian Ilmu Hukum dan Politik 2024",
@@ -75,7 +82,9 @@
         "evidence": "abstract (pengelolaan oleh perempuan/ibu, diawasi mamak; tidak dimiliki privat)"
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED_WITH_CORRECTION",
+    "verified_date": "2026-02-08",
+    "correction_note": "Rumusan awal terbalik terminologi adat. Koreksi: penguasaan/pengaturan pada Mamak, penyimpanan/pemanfaatan pada Bundo Kanduang."
   },
   {
     "id": "MIN-007",
@@ -88,7 +97,9 @@
         "evidence": "p.16 (pusako tinggi tidak boleh diintervensi)"
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "reviewer_note": "Pihak luar termasuk Orang Sumando (Suami). Suami di rumah istri berstatus sebagai tamu yang dihormati ('Abu di ateh tunggua'), tidak punya hak campur tangan atas Pusako Tinggi istrinya."
   },
   {
     "id": "MIN-008",
@@ -101,7 +112,8 @@
         "evidence": "p.16 (consultation keluarga untuk pusako rendah)"
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08"
   },
   {
     "id": "MIN-009",
@@ -119,12 +131,14 @@
         "evidence": "p.5 (pusako rendah diwarisi anak/istri menurut syariat)"
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "reviewer_note": "Sejak Seminar Hukum Adat 1952 dan 1968, disepakati Pusako Rendah (Pencaharian) dibagi hukum Islam (Faraidh). Dalam praktik sering dilakukan 'Perdamaian' (Takharuj) atau Hibah saat orang tua masih hidup."
   },
   {
     "id": "MIN-010",
     "type": "succession_role",
-    "rule": "Pusako tinggi diwariskan kepada kemenakan melalui mamak kepala waris (laki-laki tertua garis ibu).",
+    "rule": "Pusako tinggi diteruskan kepada kemenakan melalui Mamak Kepala Waris, yaitu laki-laki yang dituakan dan ditunjuk berdasarkan kesepakatan kaum karena kecakapan dan kepatutannya.",
     "citations": [
       {
         "source": "Culture & Society 2019 - Pergeseran Hukum Waris Adat di Minangkabau",
@@ -132,12 +146,14 @@
         "evidence": "p.1 (mamak kepala waris; pewaris kemenakan)"
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED_WITH_CORRECTION",
+    "verified_date": "2026-02-08",
+    "correction_note": "Rumusan awal 'laki-laki tertua' tidak selalu tepat. Koreksi: MKW ditunjuk berdasarkan kesepakatan kaum karena kecakapan, meskipun prioritas pada yang tua."
   },
   {
     "id": "MIN-011",
     "type": "ownership",
-    "rule": "Harta pusako tinggi dan pusako rendah dipandang sebagai milik bersama suatu kaum (komunal).",
+    "rule": "Hanya pusako tinggi yang bersifat milik bersama kaum (komunal). Pusako rendah (harta pencarian) pada awalnya milik pribadi/keluarga inti (suami-istri dan anak). Pusako rendah baru berubah status menjadi pusako tinggi setelah diturunkan beberapa generasi.",
     "citations": [
       {
         "source": "Culture & Society 2019 - Pergeseran Hukum Waris Adat di Minangkabau",
@@ -145,7 +161,9 @@
         "evidence": "p.1 (pusako tinggi/randah milik bersama kaum)"
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED_WITH_CORRECTION",
+    "verified_date": "2026-02-08",
+    "correction_note": "Rumusan awal salah menyebut pusako rendah juga komunal. Koreksi: hanya pusako tinggi yang komunal, pusako rendah bersifat individual/keluarga batih."
   },
   {
     "id": "MIN-012",
@@ -158,7 +176,9 @@
         "evidence": "p.5 (daftar contoh pusako tinggi)"
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "reviewer_note": "Gelar kebesaran adat (Sako) juga merupakan warisan turun-temurun yang bersifat immaterial, sering disandingkan dengan Pusako (material). Lihat MIN-023."
   },
   {
     "id": "MIN-013",
@@ -171,12 +191,13 @@
         "evidence": "p.5 (pusako randah tembilang emas, hadiah/hibah)"
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08"
   },
   {
     "id": "MIN-014",
     "type": "succession_exception",
-    "rule": "Jika tidak ada anak perempuan dalam keluarga, pusako tinggi dianggap punah; anak laki-laki tidak mewarisi pusako tinggi.",
+    "rule": "Jika tidak ada keturunan perempuan dalam kaum (Punah Mato Aia), harta pusako tinggi turun kepada ahli waris garis ibu terdekat yang masih ada hubungan darah (Waris Sipanjang). Anak laki-laki tidak mewarisi hak milik, tetapi bisa diberi hak pakai seumur hidup.",
     "citations": [
       {
         "source": "JIMFH 2021 - penyelesaian sengketa waris",
@@ -184,7 +205,9 @@
         "evidence": "p.8 (tanpa anak perempuan, pusako tinggi punah; anak laki-laki tidak mewarisi)"
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED_WITH_CORRECTION",
+    "verified_date": "2026-02-08",
+    "correction_note": "Rumusan awal 'dianggap punah' salah. Koreksi: istilahnya Punah Mato Aia, harta tidak hilang tapi turun ke Waris Sipanjang (garis ibu terdekat)."
   },
   {
     "id": "MIN-015",
@@ -197,7 +220,8 @@
         "evidence": "p.7 (fungsi pusako tinggi melindungi anak/anggota rentan)"
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08"
   },
   {
     "id": "MIN-016",
@@ -210,7 +234,8 @@
         "evidence": "p.7 (fungsi hubungan keluarga, pendapatan, pelestarian aset)"
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08"
   },
   {
     "id": "MIN-017",
@@ -223,7 +248,9 @@
         "evidence": "p.7 (pusaka sebagai simbol tradisi/warisan spiritual)"
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "reviewer_note": "Menjual harta pusaka tanpa alasan adat ('jual putus') dianggap aib besar ('Mamanggak dalam nagari')."
   },
   {
     "id": "MIN-018",
@@ -236,7 +263,9 @@
         "evidence": "p.4 (musyawarah keluarga sebagai tahapan awal)"
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "reviewer_note": "Prinsip: 'Kusuik di ujuang, salasaikan di pangka' (Kusut di ujung, selesaikan di pangkal). Dimulai dari tingkat kaum (paruik) sebelum naik ke tingkat suku/nagari."
   },
   {
     "id": "MIN-019",
@@ -249,7 +278,9 @@
         "evidence": "p.5 (pengadilan adat nagari sebagai mediasi untuk perdamaian)"
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "reviewer_note": "Urutan penyelesaian sengketa: Mamak dalam kaum -> Pangulu Suku -> Kerapatan Adat Nagari (KAN). Prinsip 'Bajanjang naiak, batanggo turun'."
   },
   {
     "id": "MIN-020",
@@ -262,6 +293,78 @@
         "evidence": "abstract (jual pusako tinggi tanpa persetujuan keluarga = melawan adat)"
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "reviewer_note": "Pengecualian: Pusako Tinggi boleh digadai (bukan dijual putus) untuk 4 sebab darurat. Lihat MIN-021."
+  },
+  {
+    "id": "MIN-021",
+    "type": "transfer_exception",
+    "rule": "Harta pusako tinggi hanya boleh digadai (bukan dijual putus) untuk 4 sebab darurat: (1) Mayat tabujua di tangah rumah (biaya pemakaman), (2) Gadih gadang indak balaki (biaya pernikahan anak perempuan), (3) Rumah gadang katirisan (perbaikan rumah gadang), (4) Mambangkik batang tarandam (biaya pengangkatan penghulu).",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "4 syarat gadai pusako tinggi yang diakui secara adat"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "MIN-022",
+    "type": "land_rights",
+    "rule": "Ganggam bauntuak adalah hak pakai eksklusif yang diberikan kepada jurai (garis keturunan perempuan) atas tanah ulayat kaum. Ini adalah hak pemanfaatan, bukan hak milik.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Konsep ganggam bauntuak sebagai hak pakai atas tanah ulayat kaum"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "MIN-023",
+    "type": "inheritance_duality",
+    "rule": "Sako adalah warisan gelar kebesaran (Datuak/Penghulu) yang bersifat immaterial, sedangkan Pusako adalah warisan harta benda yang bersifat material. Keduanya memiliki aturan pewarisan yang beriringan.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Perbedaan Sako (gelar) dan Pusako (harta) sebagai dua jalur warisan"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "MIN-024",
+    "type": "lineage_restriction",
+    "rule": "Harta pusako tinggi tidak bisa jatuh ke orang yang tidak memiliki hubungan darah matrilineal (Waris Bertali Darah). Misalnya, tidak bisa jatuh ke istri dari kemenakan laki-laki.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Prinsip waris bertali darah matrilineal"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "MIN-025",
+    "type": "succession_principle",
+    "rule": "Jika seseorang (laki-laki) meninggal, maka fungsi/jabatannya kembali ke kaumnya, bukan ke anak-istrinya. Prinsip: 'Kabau tagak kubangan tingga' (Kerbau berdiri, kubangan tinggal).",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Prinsip kabau tagak kubangan tingga"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
   }
 ]

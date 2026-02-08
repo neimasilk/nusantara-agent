@@ -247,7 +247,8 @@ Cultural Consistency Score (CCS) adalah metrik custom yang belum divalidasi. Tan
 | 6 | CCS unvalidated | PLANNED | 0% |
 
 Catatan Progress:
+- **Weakness #1**: ART-020 DONE (2026-02-08) — 25 rules Minangkabau terverifikasi expert (14 BENAR, 6 DIKOREKSI, 5 baru). Gap tersisa: rules Bali/Jawa masih draft (ART-038/039 IN_PROGRESS).
 - **Weakness #2**: Scaffolding Exp 06 selesai (ART-025, ART-029 DONE), namun ART-031 BLOCKED menunggu ART-028 (human annotation) dan ART-030 (putusan MA primer).
 - **Weakness #3**: Exp 07 dieksekusi dengan hasil negatif (F-009); perbaikan protokol debat masih diperlukan.
 
-*Last updated: 2026-02-07*
+*Last updated: 2026-02-08*

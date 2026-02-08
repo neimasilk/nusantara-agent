@@ -199,12 +199,13 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | HUMAN_ONLY |
 | **Prerequisites** | None |
 | **Priority** | P1 |
-| **Status** | IN_PROGRESS |
+| **Status** | DONE |
 **Description:** Extract 20+ formal rules of Minangkabau inheritance law from academic sources. Each rule must be verifiable against published literature. Focus on: property types (pusako tinggi/rendah), inheritance lines (matrilineal), authority roles (mamak), exception conditions (darurat).
 **Inputs:** Academic papers, legal textbooks on hukum adat Minangkabau
 **Outputs:** `data/rules/minangkabau_rules.json` — structured list of rules with citations
 **Acceptance Test:** 20+ rules, each with literature citation, verified by domain expert
 **Progress Note (2026-02-07):** Output draft sudah tersedia dan berisi 20+ rules dengan sitasi, namun seluruh entry masih `DRAFT_NEEDS_HUMAN_REVIEW`; verifikasi domain expert belum terpenuhi.
+**Completion Note (2026-02-08):** Expert review selesai. Hasil: 14 BENAR, 6 PERLU KOREKSI (sudah dikoreksi), 5 rules baru ditambahkan dari expert review. Total: 25 rules VERIFIED. Lihat `data/rules/LEMBAR VERIFIKASI - HASIL REVIEW.md`.
 
 ### ART-021: Encode Minangkabau Rules in Prolog/OWL
 | Field | Value |

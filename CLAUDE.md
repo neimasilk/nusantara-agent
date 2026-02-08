@@ -93,14 +93,14 @@ Work is decomposed into Atomic Research Tasks (ARTs). See:
 - Each task specifies: type, executor (HUMAN_ONLY/AI_ONLY/EITHER), prerequisites, inputs/outputs, acceptance tests, and failure modes
 - Tasks should be picked up from the registry and marked IN_PROGRESS → DONE as completed
 
-## Current State (2026-02-07)
+## Current State (2026-02-08)
 
 - **Rule Engine Functional**: `ClingoRuleEngine` implementasi ASP siap pakai.
 - **Minangkabau Rules Expanded**: `src/symbolic/rules/minangkabau.lp` mencakup 30+ aturan formal (inheritance, actions, emergency conditions).
+- **Minangkabau Rules VERIFIED**: `ART-020` DONE — 25 rules terverifikasi expert (14 BENAR, 6 DIKOREKSI, 5 baru). `data/rules/minangkabau_rules.json` status `VERIFIED`.
 - **Exp 05 COMPLETED**: Menemukan 33.3% divergensi antara Rule Engine dan LLM (N=30), membuktikan perlunya "Symbolic Anchor" untuk mencegah halusinasi hukum.
 - **Exp 07 COMPLETED (Negative Result)**: Advanced orchestration (parallel + debate + self-correction + routing) belum mengungguli baseline sequential pada auto-score Kimi (N=12), sehingga protokol debat perlu iterasi.
-- **Draft rules**: `data/rules/minangkabau_rules.json` berisi aturan hasil ekstraksi open-access.
-- **Dependency audit note**: `ART-021` dan `ART-022` sudah `DONE` tetapi prereq `ART-020` masih `IN_PROGRESS`; implementasi berjalan dengan draft rules, sedangkan verifikasi domain expert tetap ditahan di `ART-020` (HUMAN_ONLY).
+- **Test Coverage**: 60 test deterministik passed (rule_engine, text_processor, token_usage, router, debate, kg_search, llm_judge).
 - **Integration blocker**: `ART-049` (Full Pipeline Integration) masih `PENDING` dan menjadi blocker untuk `ART-056` (Ablation baseline config) serta seluruh Exp 09 dan Exp 10.
 
 ## Methodology Fixes
