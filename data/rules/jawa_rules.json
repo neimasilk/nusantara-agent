@@ -2,26 +2,30 @@
   {
     "id": "JAW-001",
     "type": "lineage",
-    "rule": "Sistem kekerabatan masyarakat Jawa bersifat bilateral atau parental, di mana garis keturunan ditarik dari ayah dan ibu secara seimbang.",
+    "rule": "Sistem kekerabatan masyarakat Jawa bersifat bilateral atau parental, di mana garis keturunan ditarik dari ayah dan ibu secara seimbang. Anak memiliki hubungan hukum yang sama kuatnya dengan kerabat bapak maupun ibu.",
     "citations": [
       {
         "source": "researchgate.net",
         "evidence": "Masyarakat Jawa menganut sistem kekerabatan bilateral atau parental, di mana kedudukan anak laki-laki dan perempuan adalah sama."
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "reviewer_note": "Berlaku seragam di seluruh kebudayaan Jawa (termasuk Sunda dan Madura). Perbedaan hanya pada istilah lokal."
   },
   {
     "id": "JAW-002",
     "type": "asset_classification",
-    "rule": "Harta Gono-gini adalah harta yang diperoleh bersama oleh suami dan istri selama masa perkawinan.",
+    "rule": "Harta Gono-gini (Rajakaya) adalah harta yang diperoleh bersama oleh suami dan istri selama masa perkawinan.",
     "citations": [
       {
         "source": "uin-suka.ac.id",
         "evidence": "Harta gono-gini adalah harta yang diperoleh suami dan istri setelah terikat perkawinan."
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "reviewer_note": "Cerai hidup: dibagi 1/2 - 1/2. Cerai mati: tetap dikuasai pasangan yang hidup terlama untuk menjamin kehidupannya, kecuali menikah lagi."
   },
   {
     "id": "JAW-003",
@@ -33,19 +37,27 @@
         "evidence": "Harta bawaan adalah harta yang dibawa oleh masing-masing pihak sebelum perkawinan berlangsung."
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "reviewer_note": "Berlaku asas 'Barang asal mulih menyang asale' (harta asal kembali ke asalnya). Jika meninggal tanpa keturunan (tancep kayon), harta bawaan kembali ke keluarga asal masing-masing."
   },
   {
     "id": "JAW-004",
     "type": "distribution_basis",
-    "rule": "Prinsip 'Sepikul Segendongan' sering diterapkan di beberapa daerah Jawa, di mana anak laki-laki mendapat dua bagian dan anak perempuan satu bagian.",
+    "rule": "Prinsip 'Sepikul Segendongan' (2:1 laki-laki:perempuan) adalah praktik tradisional lama (pengaruh akulturasi Islam). Yurisprudensi MA (sejak Putusan No. 179 K/Sip/1961) menegaskan hukum adat Jawa modern menganut asas Kesamaan Hak (1:1). Saat ini banyak keluarga membagi secara Sigar Semangka (sama rata) atau Dum-duman (berdasarkan kebutuhan).",
     "citations": [
       {
         "source": "mandalanursa.org",
         "evidence": "Terdapat penerapan sistem sepikul segendongan, di mana anak laki-laki mendapatkan dua bagian dan anak perempuan satu bagian."
+      },
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Yurisprudensi MA No. 179 K/Sip/1961 menegaskan kesamaan hak"
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED_WITH_CORRECTION",
+    "verified_date": "2026-02-08",
+    "correction_note": "Rumusan awal hanya menyebut 2:1 tanpa konteks historis. Koreksi: prinsip ini sudah bergeser ke 1:1. Sepikul segendongan masih ada di kalangan santri pedesaan tetapi secara hukum adat nasional dianggap sudah bergeser."
   },
   {
     "id": "JAW-005",
@@ -57,6 +69,442 @@
         "evidence": "Musyawarah adalah proses pembagian warisan yang dilakukan secara konsensus antar ahli waris."
       }
     ],
-    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "reviewer_note": "Dipimpin anggota keluarga tertua yang dihormati atau orang tua yang masih hidup. Jika buntu, melibatkan Pakde/Budhe atau tokoh desa sebagai penengah."
+  },
+  {
+    "id": "JAW-006",
+    "type": "asset_classification",
+    "rule": "Harta Pusaka adalah harta warisan leluhur turun-temurun (keris, gamelan, tanah leluhur) yang tidak boleh dibagi/dijual, melainkan dipelihara oleh salah satu anak (biasanya yang tinggal di rumah induk).",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Klasifikasi harta waris adat Jawa — harta pusaka"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-007",
+    "type": "asset_transfer",
+    "rule": "Harta Pemberian (Weweh/Hibah) adalah harta yang diberikan orang tua kepada anak saat masih hidup (misalnya saat anak menikah). Harta ini seringkali diperhitungkan (dikurangkan) saat pembagian waris akhir.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Mekanisme pemberian harta semasa hidup — Weweh"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-008",
+    "type": "asset_classification",
+    "rule": "Dalam konteks poligami, harta yang didapat suami dengan istri kedua terpisah dari harta dengan istri pertama (Harta Pencaharian Sendiri per perkawinan).",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Pemisahan harta dalam poligami"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-009",
+    "type": "heir_equality",
+    "rule": "Prinsip Sigar Semangka: yurisprudensi hukum adat modern mengakui pembagian sama rata antara anak laki-laki dan perempuan.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Asas kesamaan hak laki-laki dan perempuan dalam waris Jawa modern"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-010",
+    "type": "heir_priority",
+    "rule": "Anak perempuan yang merawat orang tua sampai meninggal seringkali mendapatkan bagian lebih atau prioritas memilih bagian, sebagai balas jasa (lintiran).",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Kewajiban merawat dan imbal balik dalam pembagian waris"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-011",
+    "type": "distribution_basis",
+    "rule": "Pembagian waris Jawa tidak selalu matematis, melainkan berdasarkan kebutuhan. Anak yang belum mapan bisa diberi lebih banyak daripada anak yang sudah kaya ('subsidi silang' adat).",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Fleksibilitas kebutuhan dalam pembagian waris"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-012",
+    "type": "heir_priority",
+    "rule": "Dalam banyak tradisi Jawa (terutama Jawa Tengah), rumah induk (Omah) biasanya jatuh ke tangan anak bungsu (Ragil) dengan kewajiban merawat orang tua sampai wafat di rumah tersebut.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Hak istimewa anak bungsu atas rumah induk"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-013",
+    "type": "succession_substitute",
+    "rule": "Gantungan Siwur: jika anak sulung meninggal lebih dulu dari orang tua, cucu dari anak sulung tersebut bisa menggantikan posisi orang tuanya sebagai ahli waris pengganti.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Ahli waris pengganti — Gantungan Siwur"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-014",
+    "type": "adoption",
+    "rule": "Anak angkat (Anak Pupon) tidak menjadi ahli waris mutlak seperti anak kandung. Ia hanya berhak atas harta gono-gini orang tua angkatnya, tidak berhak atas harta asal/pusaka keluarga angkat.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Hak waris terbatas anak angkat"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-015",
+    "type": "adoption",
+    "rule": "Besarnya bagian anak angkat biasanya maksimal 1/3 dari harta, atau melalui mekanisme hibah wasiat (Weling).",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Batasan bagian anak angkat"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-016",
+    "type": "adoption",
+    "rule": "Pengangkatan anak harus 'terang dan tunai' (diketahui masyarakat/kerabat) agar status hukumnya sebagai 'Wajib Anak' sah.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Syarat sah pengangkatan anak"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-017",
+    "type": "succession_exception",
+    "rule": "Anak tiri hanya mewarisi dari orang tua kandungnya sendiri. Ia tidak mewarisi dari orang tua tirinya, kecuali ada pemberian hibah/wasiat khusus.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Kedudukan anak tiri dalam waris"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-018",
+    "type": "succession_exception",
+    "rule": "Anak luar kawin secara adat tradisional hanya punya hubungan perdata dengan ibunya dan keluarga ibunya. Putusan MK terkini mulai mempengaruhi pandangan ini jika bisa dibuktikan hubungan darah dengan ayah.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Kedudukan anak luar kawin"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-019",
+    "type": "widow_rights",
+    "rule": "Janda/duda bukan pemilik harta warisan pasangan yang meninggal (jika ada anak), tetapi memiliki hak untuk menguasai dan menikmati harta tersebut sampai ia meninggal atau menikah lagi. Anak tidak boleh menuntut pembagian selama orang tua yang hidup masih membutuhkannya.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Hak menikmati/menguasai oleh janda/duda"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-020",
+    "type": "widow_rights",
+    "rule": "Pecah Panci: jika janda/duda menikah lagi, hak penguasaannya hilang dan harta gono-gini dari perkawinan terdahulu harus segera dibagikan kepada anak-anak.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Mekanisme Pecah Panci saat janda/duda menikah lagi"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-021",
+    "type": "asset_transfer",
+    "rule": "Dum-duman: tradisi membagikan sebagian harta warisan saat orang tua masih sehat, untuk melihat anak menikmati harta dan mencegah sengketa ('Mumpung isih waras').",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Tradisi pembagian harta semasa hidup — Dum-duman"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-022",
+    "type": "asset_transfer",
+    "rule": "Sangu/Bekel: pemberian modal kepada anak yang menikah atau pergi merantau. Harta ini dianggap sebagai uang muka warisan (rekening) yang diperhitungkan saat pembagian akhir.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Pemberian modal saat menikah/merantau — Sangu/Bekel"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-023",
+    "type": "asset_transfer",
+    "rule": "Lintiran: pemberian khusus (perhiasan, barang kecil) dari orang tua ke anak kesayangan atau yang merawatnya, seringkali di luar hitungan waris besar.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Pemberian khusus kasih sayang — Lintiran"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-024",
+    "type": "divorce_impact",
+    "rule": "Jika cerai: gono-gini dibagi dua (Maro), harta bawaan (barang gawan) kembali ke pemilik masing-masing. Perceraian orang tua tidak menghapus hak waris anak dari kedua orang tua kandungnya.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Dampak perceraian terhadap harta dan hak anak"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-025",
+    "type": "property_rule",
+    "rule": "Sering ada pesan (Weling) orang tua agar rumah induk tidak dijual, melainkan dijadikan tempat berkumpul (Kumpul) saat lebaran atau acara keluarga.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Larangan penjualan rumah induk — Weling"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-026",
+    "type": "property_rule",
+    "rule": "Anak yang bersedia menempati dan merawat rumah orang tua (Penunggu Rumah, biasanya yang tidak merantau) diprioritaskan memilikinya, seringkali tanpa kompensasi penuh ke saudara lain, asalkan merawat orang tua.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Prioritas anak penunggu rumah"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-027",
+    "type": "dispute_resolution",
+    "rule": "Rembug Desa: jika musyawarah keluarga gagal, sengketa dibawa ke Kepala Desa/Lurah sebagai hakim perdamaian desa. Putusan lurah yang mendamaikan punya kekuatan hukum adat yang kuat.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Mekanisme penyelesaian sengketa — Rembug Desa"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-028",
+    "type": "dispute_resolution",
+    "rule": "Sengketa waris sampai ke pengadilan dianggap 'Saru' (tabu/memalukan) karena membuka aib ketidakrukunan keluarga, sehingga sangat dihindari.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Pantangan sengketa waris di pengadilan — Saru"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-029",
+    "type": "islamic_interaction",
+    "rule": "Akulturasi Islam-Adat: banyak masyarakat Jawa menggunakan hukum Islam (Faraidh) sebagai acuan hitungan, lalu dimusyawarahkan (Adat) untuk penyesuaian. Bagian anak perempuan sering ditambah melalui hibah agar mendekati setara.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Interaksi hukum waris adat Jawa dan hukum Islam"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-030",
+    "type": "islamic_interaction",
+    "rule": "Islaah: hukum Islam membolehkan perdamaian (Takharuj), sejalan dengan prinsip Rukun Jawa. Seringkali hitungannya Islam tetapi eksekusinya Adat (sama rata) atas persetujuan semua ahli waris.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Takharuj/Islaah sebagai titik temu adat dan Islam"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-031",
+    "type": "contemporary_change",
+    "rule": "Tanah warisan kini cenderung segera dibalik nama/disertifikatkan atas nama individu untuk kepastian hukum, mengurangi tanah milik bersama yang tidak jelas statusnya.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Sertifikasi tanah dan perubahan kepemilikan komunal"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-032",
+    "type": "contemporary_change",
+    "rule": "Di perkotaan, harta waris cenderung segera dijual dan uangnya dibagi tunai, meninggalkan tradisi mempertahankan aset leluhur.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Individualisme dan monetisasi waris di perkotaan"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-033",
+    "type": "contemporary_change",
+    "rule": "Semakin hilangnya pembedaan hak waris antara anak laki-laki dan perempuan di hampir seluruh lapisan masyarakat Jawa modern (Persamaan Hak Mutlak).",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Tren persamaan hak mutlak dalam waris modern"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-034",
+    "type": "succession_principle",
+    "rule": "Weling/Wekas (Wasiat Lisan): pesan terakhir orang tua sebelum meninggal sangat dihormati dan dianggap mengikat secara moral bagi ahli waris, meskipun hanya lisan.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Kekuatan wasiat lisan — Weling/Wekas"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-035",
+    "type": "succession_substitute",
+    "rule": "Cucu Pancar Laki/Perempuan: dalam adat Jawa, cucu dari anak laki-laki maupun perempuan memiliki kedudukan sama sebagai ahli waris pengganti jika orang tuanya meninggal lebih dulu. Tidak ada perbedaan jalur laki/perempuan.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Kesamaan kedudukan cucu pancar laki dan perempuan"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
+  },
+  {
+    "id": "JAW-036",
+    "type": "funeral_custom",
+    "rule": "Bao Parmate: harta benda milik pribadi yang melekat pada tubuh (pakaian, gigi emas, cincin yang dipakai) kadang ikut dikubur atau diberikan kepada orang yang memandikan jenazah, bukan diwariskan.",
+    "citations": [
+      {
+        "source": "Expert review 2026-02-08",
+        "evidence": "Tradisi Bao Parmate — harta yang melekat pada jenazah"
+      }
+    ],
+    "verification_status": "VERIFIED",
+    "verified_date": "2026-02-08",
+    "added_by": "expert_review"
   }
 ]
