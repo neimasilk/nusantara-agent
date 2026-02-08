@@ -721,12 +721,12 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-049 |
 | **Priority** | P1 |
-| **Status** | BLOCKED |
+| **Status** | DONE |
 **Description:** Document exact configuration for each of the 8 baselines: what components are included/excluded, what model is used, what prompts are used.
 **Inputs:** Full pipeline architecture, methodology_fixes.md
 **Outputs:** `experiments/09_ablation_study/baseline_configs.md`
 **Acceptance Test:** Each baseline fully specified, reproducible by another researcher
-**Blocker:** ART-049 (full pipeline integration) belum selesai.
+**Completion Note (2026-02-08):** Konfigurasi 8 baseline telah didokumentasikan pada `experiments/09_ablation_study/baseline_configs.md` secara reproduksibel (komponen aktif/non-aktif, mode model, dan fallback).
 
 ### ART-057: Implement Baseline 1 — DeepSeek Direct Prompting
 | Field | Value |
@@ -735,9 +735,10 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-056 |
 | **Priority** | P1 |
-| **Status** | PENDING |
+| **Status** | DONE |
 **Description:** Implement baseline: DeepSeek answers legal questions with zero RAG context.
 **Outputs:** `experiments/09_ablation_study/baselines/b1_direct_prompting.py`
+**Completion Note (2026-02-08):** Implementasi baseline direct prompting tersedia di `experiments/09_ablation_study/baselines/b1_direct_prompting.py` dengan output JSON terstandar.
 
 ### ART-058: Implement Baseline 2 — DeepSeek + Vector RAG (no graph)
 | Field | Value |
@@ -746,9 +747,10 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-056, ART-037 |
 | **Priority** | P1 |
-| **Status** | PENDING |
+| **Status** | DONE |
 **Description:** Implement baseline: DeepSeek with Qdrant vector retrieval but no graph component.
 **Outputs:** `experiments/09_ablation_study/baselines/b2_vector_rag.py`
+**Completion Note (2026-02-08):** Implementasi baseline vector-only tersedia di `experiments/09_ablation_study/baselines/b2_vector_rag.py` (fallback in-memory sebelum Qdrant aktif penuh).
 
 ### ART-059: Implement Baseline 3 — DeepSeek + Graph (no vector)
 | Field | Value |
@@ -757,9 +759,10 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-056, ART-036 |
 | **Priority** | P1 |
-| **Status** | PENDING |
+| **Status** | DONE |
 **Description:** Implement baseline: DeepSeek with Neo4j graph retrieval but no vector search.
 **Outputs:** `experiments/09_ablation_study/baselines/b3_graph_only.py`
+**Completion Note (2026-02-08):** Implementasi baseline graph-only tersedia di `experiments/09_ablation_study/baselines/b3_graph_only.py` (fallback JSON KG sebelum Neo4j aktif penuh).
 
 ### ART-060: Implement Baseline 4 — Full Pipeline sans Rule Engine
 | Field | Value |
@@ -768,9 +771,10 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-056, ART-049 |
 | **Priority** | P1 |
-| **Status** | PENDING |
+| **Status** | DONE |
 **Description:** Full pipeline with rule engine component disabled.
 **Outputs:** `experiments/09_ablation_study/baselines/b4_no_rules.py`
+**Completion Note (2026-02-08):** Implementasi baseline tanpa rule engine tersedia di `experiments/09_ablation_study/baselines/b4_no_rules.py`.
 
 ### ART-061: Implement Baseline 5 — Full Pipeline sans Debate
 | Field | Value |
@@ -779,9 +783,10 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-056, ART-049 |
 | **Priority** | P1 |
-| **Status** | PENDING |
+| **Status** | DONE |
 **Description:** Full pipeline with debate protocol disabled (revert to sequential chain).
 **Outputs:** `experiments/09_ablation_study/baselines/b5_no_debate.py`
+**Completion Note (2026-02-08):** Implementasi baseline tanpa debat tersedia di `experiments/09_ablation_study/baselines/b5_no_debate.py`.
 
 ### ART-062: Implement Baseline 6 — GPT-4 + Same Pipeline
 | Field | Value |
@@ -790,9 +795,10 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-056, ART-049 |
 | **Priority** | P1 |
-| **Status** | PENDING |
+| **Status** | DONE |
 **Description:** Same full pipeline but swap DeepSeek for GPT-4 to test model-agnosticism.
 **Outputs:** `experiments/09_ablation_study/baselines/b6_gpt4_pipeline.py`
+**Completion Note (2026-02-08):** Implementasi baseline GPT-4 tersedia di `experiments/09_ablation_study/baselines/b6_gpt4_pipeline.py` dengan fallback deterministik saat API key tidak tersedia.
 
 ### ART-063: Implement Baseline 7 — Claude + Same Pipeline
 | Field | Value |
@@ -801,9 +807,10 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-056, ART-049 |
 | **Priority** | P1 |
-| **Status** | PENDING |
+| **Status** | DONE |
 **Description:** Same full pipeline but swap DeepSeek for Claude to test cross-model validation.
 **Outputs:** `experiments/09_ablation_study/baselines/b7_claude_pipeline.py`
+**Completion Note (2026-02-08):** Implementasi baseline Claude tersedia di `experiments/09_ablation_study/baselines/b7_claude_pipeline.py` dengan fallback deterministik saat API key tidak tersedia.
 
 ### ART-064: Collect Human Expert Baseline (Baseline 8)
 | Field | Value |
