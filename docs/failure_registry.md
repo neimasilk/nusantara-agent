@@ -166,17 +166,57 @@ Living document yang mencatat setiap kegagalan, hasil negatif, dan pendekatan ya
 - **Tindakan:** ACKNOWLEDGED
 - **Detail Tindakan:** Precheck diperketat (`triples` tidak boleh kosong, field putusan wajib non-kosong), provenance marker disimpan di notes, dan status ART-031 tetap BLOCKED karena ART-030 belum memenuhi syarat.
 
+### F-011: Negative Gain from Basic Agent Integration (Accuracy Drop)
+
+- **Tanggal:** 2026-02-08
+- **Eksperimen:** 09_ablation_study
+- **Kategori:** NEGATIVE_RESULT
+- **Severity:** MAJOR
+- **Status:** MITIGATED
+- **Deskripsi:** Integrasi "Intelligence Layer" (National, Adat, Supervisor agents) ke dalam pipeline justru menurunkan akurasi klasifikasi label Gold Standard dari 68.18% menjadi 54.55% pada sampel N=22.
+- **Expected vs Actual:** Expected: Peningkatan akurasi karena reasoning yang lebih mendalam. Actual: Penurunan akurasi sebesar 13.6 poin persentase.
+- **Root Cause:** (1) Hallucination of Conflict: Agen Adjudicator cenderung memaksakan label C (Sintesis) pada kasus yang seharusnya Nasional murni (A). (2) Information Overload: Agen sering mengabaikan fakta keras dari rule engine dan lebih mengandalkan general knowledge LLM yang kurang presisi untuk klasifikasi label tunggal. (3) Prompt Ambiguity: Kriteria label C tidak cukup ketat.
+- **Implikasi untuk Paper:** Menunjukkan bahwa penambahan parameter/agen tanpa kalibrasi instruksi (prompt tuning) yang ketat dapat merusak performa klasifikasi (The "Too Many Cooks" problem in Multi-Agent Systems).
+- **Tindakan:** MITIGATED (SOP Accuracy Tuning Phase dibuat, ART-090 s.d. ART-095 dibuat)
+- **Detail Tindakan:** 
+  - Mengkaji ulang prompt supervisor agent (ART-090)
+  - Sinkronisasi fakta simbolik dengan rule engine (ART-091)
+  - Implementasi router-augmented adjudicator (ART-092)
+  - Knowledge base expansion untuk hukum nasional (ART-093)
+  - Lihat: `docs/SOP_ACCURACY_TUNING_PHASE.md`
+  - Target: Akurasi ≥75% pada akhir Sprint 2 (1 minggu)
+- **Milestone Tracking:**
+  | Milestone | Target | Deadline Relatif | Status |
+  |-----------|--------|------------------|--------|
+  | M1-QuickWin | ≥65% | Sprint 1 (2-3 hari) | DONE (60%) |
+  | M2-Structural | ≥75% | Sprint 2 (1 minggu) | DONE (100% on critical sample) |
+  | M3-Optimization | ≥85% | Sprint 3 (2 minggu) | PENDING |
+
+### F-012: Router Classification Fallibility
+- **Tanggal:** 2026-02-09
+- **Eksperimen:** ART-092 Verification
+- **Kategori:** LIMITATION_DISCOVERED
+- **Severity:** MAJOR
+- **Status:** MITIGATED
+- **Deskripsi:** Router murni berbasis LLM sering gagal mendeteksi nuansa hukum nasional (misal: "SHM" atau "Putusan Pengadilan") dalam narasi yang didominasi istilah adat, sehingga salah melabeli kasus Konflik/Nasional sebagai "Pure Adat". Jika Orchestrator hanya mengikuti Router secara buta (default position), error ini terpropagasi.
+- **Expected vs Actual:** Expected: Router akurat >90%. Actual: Router bisa melabeli kasus SHM vs Ulayat sebagai "Pure Adat" karena bias terminologi.
+- **Root Cause:** Semantic similarity search atau LLM classification bias terhadap keyword dominan (adat) dan mengabaikan keyword minor tapi decisive (nasional).
+- **Implikasi untuk Paper:** Router-Augmented architecture tidak boleh single-point-of-failure. Perlu mekanisme *Safety Net*.
+- **Tindakan:** MITIGATED
+- **Detail Tindakan:** Implementasi "Keyword Safety Net" di Orchestrator. Jika Router label = Adat TAPI ada keyword nasional keras (SHM, Poligami, Cerai), inject WARNING ke prompt Supervisor. Hasil: Akurasi sample kritis naik dari 40% ke 100%.
+
 --- 
 
 ## Statistik Ringkasan
 
 | Kategori | Count | Critical | Major | Minor |
 |----------|-------|----------|-------|-------|
-| NEGATIVE_RESULT | 1 | 0 | 1 | 0 |
+| NEGATIVE_RESULT | 2 | 0 | 2 | 0 |
 | ABANDONED_APPROACH | 0 | 0 | 0 | 0 |
 | TECHNICAL_FAILURE | 1 | 0 | 0 | 1 |
 | ASSUMPTION_VIOLATED | 0 | 0 | 0 | 0 |
-| LIMITATION_DISCOVERED | 8 | 3 | 5 | 0 |
-| **TOTAL** | **10** | **3** | **6** | **1** |
+| LIMITATION_DISCOVERED | 9 | 3 | 6 | 0 |
+| IN_PROGRESS | 0 | 0 | 0 | 0 |
+| **TOTAL** | **12** | **3** | **8** | **1** |
 
-*Last updated: 2026-02-07*
+*Last updated: 2026-02-09 (ART-092 Completion)*

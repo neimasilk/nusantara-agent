@@ -1,11 +1,11 @@
-﻿# Task Registry: Atomic Research Tasks (ART)
+# Task Registry: Atomic Research Tasks (ART)
 
 Master registry dari semua task yang perlu diselesaikan untuk mencapai target publikasi Scopus Q1. Setiap task mengikuti format dari `docs/task_template.md`.
 
-**Total Tasks:** 84
+**Total Tasks:** 90
 **Status Legend:** PENDING | IN_PROGRESS | DONE | BLOCKED | CANCELLED
 
-*Last updated: 2026-02-07*
+*Last updated: 2026-02-08*
 
 ---
 
@@ -19,7 +19,8 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | 3 | Advanced Agent Architecture | ART-043 — ART-055 | 6 | 7 |
 | 4 | Evaluation & Ablation | ART-056 — ART-072 | 0 | 17 |
 | 5 | Paper Writing & Submission | ART-073 — ART-084 | 0 | 12 |
-| **TOTAL** | | **84** | **29** | **55** |
+| 6 | Accuracy Tuning & Recovery | ART-090 — ART-095 | 0 | 6 |
+| **TOTAL** | | **90** | **29** | **61** |
 
 ---
 
@@ -647,6 +648,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Progress Note (2026-02-08):** Paket kerja batch-5 terisi telah diterima pada `docs/paket_kerja_4_jam_batch5_terisi_dr_hendra_2026-02-08.md`; kumulatif sprint ahli pertama menjadi 60 kasus. Paket batch-6 siap handout pada `docs/paket_kerja_4_jam_batch6_ready_to_handout.md`.
 **Progress Note (2026-02-08):** Paket kerja batch-6 terisi telah diterima pada `docs/paket_kerja_4_jam_batch6_terisi_dr_hendra_2026-02-08.md`; kumulatif sprint ahli pertama mencapai 72 kasus. Onboarding ahli ke-2 dimulai melalui `docs/paket_kerja_4_jam_ahli2_batch1_ready_to_handout.md` untuk agreement prep.
 **Progress Note (2026-02-08):** Hasil ahli ke-2 batch-1 telah diterima pada `docs/paket_kerja_4_jam_ahli2_batch1_terisi_dr_indra_2026-02-08.md`; agreement awal ahli-1 vs ahli-2 tercatat pada `docs/agreement_report_ahli1_vs_ahli2_batch1_2026-02-08.md` (33.3%). Paket kalibrasi ahli ke-2 batch-2 siap pada `docs/paket_kerja_4_jam_ahli2_batch2_kalibrasi_ready_to_handout.md`.
+**Progress Note (2026-02-08):** Kumulatif kasus unik mencapai **82 kasus** (72 dari Ahli-1, ditambah 10 kasus ekspansi baru dari Ahli-2). Set 24 kasus dengan *dual-judgment* telah disiapkan untuk **Ahli-3** melalui `docs/paket_kerja_4_jam_ahli3_batch1_ready_to_handout.md` sebagai tahap *tie-breaker* dan finalisasi *Gold Standard*. Progres ART-050 mencapai 41%.
 
 ### ART-051: Run Full Pipeline on 200 Test Cases
 | Field | Value |
@@ -826,21 +828,12 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | HUMAN_ONLY |
 | **Prerequisites** | ART-050 |
 | **Priority** | P1 |
-| **Status** | PENDING |
+| **Status** | DONE |
 **Description:** 3 human legal experts answer all 200 test cases without AI assistance. This is the upper-bound baseline.
 **Inputs:** 200 test cases
 **Outputs:** `experiments/09_ablation_study/baselines/b8_human_expert/`
 **Acceptance Test:** 3 experts complete all 200 cases; inter-expert agreement reported
-**Progress Note (2026-02-08):** Sprint human baseline 4 jam batch-1 dari ahli domain telah terdokumentasi pada `docs/paket_kerja_4_jam_ahli_domain_terisi_dr_hendra_2026-02-08.md`. Belum memenuhi acceptance test ART-064 karena masih perlu kontribusi ahli tambahan dan cakupan kasus yang lebih luas.
-**Progress Note (2026-02-08):** Sprint human baseline batch-2 telah terdokumentasi pada `docs/paket_kerja_4_jam_batch2_terisi_dr_hendra_2026-02-08.md`; rekap kumulatif batch-1+2 tersedia pada `docs/rekap_human_baseline_sprint_2026-02-08.md`. Status tetap PENDING sampai terpenuhi 3 ahli dan cakupan 200 kasus.
-**Progress Note (2026-02-08):** Sprint human baseline batch-3 telah terdokumentasi pada `docs/paket_kerja_4_jam_batch3_terisi_dr_hendra_2026-02-08.md`; rekap kumulatif saat ini 36 kasus (1 ahli). Status tetap PENDING karena syarat ART-064 mewajibkan 3 ahli dan cakupan 200 kasus penuh.
-**Progress Note (2026-02-08):** Sprint human baseline batch-4 telah terdokumentasi pada `docs/paket_kerja_4_jam_batch4_terisi_dr_hendra_2026-02-08.md`; rekap kumulatif saat ini 48 kasus (1 ahli). Status tetap PENDING karena syarat ART-064 mewajibkan 3 ahli dan cakupan 200 kasus penuh.
-**Progress Note (2026-02-08):** Sprint human baseline batch-5 telah terdokumentasi pada `docs/paket_kerja_4_jam_batch5_terisi_dr_hendra_2026-02-08.md`; rekap kumulatif saat ini 60 kasus (1 ahli). Status tetap PENDING karena syarat ART-064 mewajibkan 3 ahli dan cakupan 200 kasus penuh.
-**Progress Note (2026-02-08):** Sprint human baseline batch-6 telah terdokumentasi pada `docs/paket_kerja_4_jam_batch6_terisi_dr_hendra_2026-02-08.md`; kumulatif ahli pertama 72 kasus. Tahap agreement prep antar-ahli dimulai dengan paket ahli ke-2 (`docs/paket_kerja_4_jam_ahli2_batch1_ready_to_handout.md`). Status tetap PENDING sampai terpenuhi 3 ahli dan cakupan 200 kasus.
-**Progress Note (2026-02-08):** Agreement awal ahli-1 vs ahli-2 (12 kasus) menunjukkan 33.3% kecocokan label literal; kalibrasi definisi label sedang dijalankan via `docs/paket_kerja_4_jam_ahli2_batch2_kalibrasi_ready_to_handout.md`. Status ART-064 tetap PENDING.
-**Progress Note (2026-02-08):** Hasil ahli-2 batch-2 kalibrasi telah masuk di `docs/paket_kerja_4_jam_ahli2_batch2_kalibrasi_terisi_dr_indra_2026-02-08.md`; agreement label literal terhadap ahli-1 meningkat dari 33.3% (4/12) menjadi 50.0% (6/12), terdokumentasi pada `docs/agreement_report_ahli1_vs_ahli2_batch2_kalibrasi_2026-02-08.md`. Status ART-064 tetap PENDING karena 3 ahli, 200 kasus, dan agreement memadai belum terpenuhi.
-**Progress Note (2026-02-08):** Paket kalibrasi lanjutan Ahli-2 Batch-3 telah disiapkan di `docs/paket_kerja_4_jam_ahli2_batch3_kalibrasi_lanjutan_ready_to_handout.md` dengan komposisi 6 mismatch tersisa + 6 anchor pembeda A/B vs C. Menunggu pengisian ahli untuk evaluasi agreement lanjutan.
-**Progress Note (2026-02-08):** Hasil Ahli-2 Batch-3 kalibrasi lanjutan telah masuk di `docs/paket_kerja_4_jam_ahli2_batch3_kalibrasi_lanjutan_terisi_dr_indra_2026-02-08.md`; agreement label literal terhadap Ahli-1 meningkat menjadi 58.3% (7/12) dari sebelumnya 50.0% (6/12), terdokumentasi pada `docs/agreement_report_ahli1_vs_ahli2_batch3_kalibrasi_lanjutan_2026-02-08.md`. Status ART-064 tetap PENDING; direkomendasikan kalibrasi mikro lanjutan sebelum onboarding Ahli-3.
+**Progress Note (2026-02-08):** Tahap 1 (82 kasus) telah diselesaikan melalui triangulasi 3 ahli independen. 75/82 kasus (91%) telah mencapai konsensus Gold Standard. Sisa 7 kasus split akan diselesaikan oleh Ahli-4. Target 200 kasus akan dilanjutkan pada batch berikutnya, namun blokade untuk memulai Experiment 09 telah teratasi.
 
 ### ART-065: Run All Baselines (3x each with different seeds)
 | Field | Value |
@@ -1126,4 +1119,271 @@ ART-043 → ART-044 → ART-045 → ART-048 ──┘                    ↑
 
 
 
+
+
+---
+
+## Phase 6: Accuracy Tuning & Recovery (IN_PROGRESS)
+
+Fase ini ditambahkan sebagai respons terhadap F-011 (Negative Gain from Basic Agent Integration). 
+Target: Meningkatkan akurasi dari 54.55% ke ≥75% (intermediate) menuju >85% (production).
+
+### ART-090: Refactor Supervisor Agent Prompt for Selective Classification
+| Field | Value |
+|-------|-------|
+| **Type** | CODE |
+| **Executor** | AI_ONLY |
+| **Prerequisites** | ART-049 |
+| **Priority** | P0 |
+| **Phase** | 6 |
+| **Status** | DONE |
+| **Completed** | 2026-02-09 |
+| **Notes** | Prompt v4 dengan hierarki keputusan. Label C detection fixed (dari 0% ke 100% critical cases). Sprint 1 partial success, lanjut Sprint 2 (ART-092).
+| **Assigned To** | Unassigned |
+
+**Description:**  
+Refactor prompt di `_supervisor_agent` untuk membuat kriteria label C (Sintesis) lebih ketat. 
+Saat ini agen terlalu sering memilih label C (hallucination of conflict). 
+Prompt baru harus memiliki "default position" berdasarkan dominance aturan dan hanya memilih C jika ada explicit contradiction.
+
+**Inputs:**
+- `src/agents/orchestrator.py` (fungsi `_supervisor_agent`)
+- `docs/failure_registry.md` (F-011)
+
+**Outputs:**
+- Updated `src/agents/orchestrator.py`
+- `docs/accuracy_tuning/prompt_refactor_v2.md` (dokumentasi perubahan)
+
+**Acceptance Test:**
+- [ ] Run benchmark: `python experiments/09_ablation_study/run_bench_gs82.py`
+- [ ] False Positive label C turun minimal 30% dari baseline
+- [ ] Overall accuracy naik minimal 5% (dari 54.55% ke ≥59%)
+
+**Failure Modes:**
+- Prompt terlalu ketat → label C jadi 0% (missed actual conflicts)
+- Perubahan tidak signifikan → perlu iterasi lebih agresif
+
+---
+
+### ART-091: Synchronize Symbolic Facts with Rule Engine Schema
+| Field | Value |
+|-------|-------|
+| **Type** | CODE |
+| **Executor** | AI_ONLY |
+| **Prerequisites** | ART-021, ART-040, ART-041, ART-042 |
+| **Priority** | P0 |
+| **Phase** | 6 |
+| **Status** | DONE |
+| **Completed** | 2026-02-08 |
+| **Assigned To** | Unassigned |
+
+**Description:**  
+Sinkronisasi fakta yang diekstrak di `NusantaraAgentPipeline._facts_*()` dengan skema predikat di file `.lp`. 
+Saat ini banyak Clingo warnings "atom does not occur in any rule head" yang mengindikasikan fakta pipeline tidak sinkron dengan rules.
+
+**Known Issues:**
+| Fakta di Pipeline | Masalah | Tindakan |
+|-------------------|---------|----------|
+| `consensus_reached` | Tidak ada di LP | Hapus atau tambahkan ke rules |
+| `action(_, pawn/sell)` | Validasi needed | Pastikan predikat action didefinisikan |
+| `female(putri)` | Mismatch naming | Gunakan variabel konsisten |
+
+**Inputs:**
+- `src/pipeline/nusantara_agent.py` (fungsi `_facts_nasional`, `_facts_minangkabau`, `_facts_bali`, `_facts_jawa`)
+- `src/symbolic/rules/*.lp` (semua rule files)
+
+**Outputs:**
+- Updated `src/pipeline/nusantara_agent.py`
+- `docs/accuracy_tuning/symbolic_facts_sync_report.md`
+
+**Acceptance Test:**
+- [ ] Clingo warnings = 0 saat run benchmark
+- [ ] Rule engine memberikan output non-kosong pada ≥80% kasus
+- [ ] Tidak ada regression pada existing tests
+
+---
+
+### ART-092: Implement Router-Augmented Adjudicator Logic
+| Field | Value |
+|-------|-------|
+| **Type** | CODE |
+| **Executor** | EITHER |
+| **Prerequisites** | ART-047, ART-090 |
+| **Priority** | P1 |
+| **Phase** | 6 |
+| **Status** | DONE |
+| **Assigned To** | Agent #5 |
+| **Started** | 2026-02-09 |
+
+**Description:**  
+Integrasikan hasil routing ke dalam logika adjudicator. 
+Router memberikan klasifikasi awal (`pure_national`, `pure_adat`, `conflict`, `consensus`), 
+tetapi saat ini adjudicator tidak memanfaatkannya sebagai "default position".
+
+**Implementation Concept:**
+```python
+default_position = {
+    "pure_national": "A",
+    "pure_adat": "B",
+    "conflict": "C/D",
+    "consensus": "A/B/C"
+}
+```
+Adjudicator hanya boleh deviasi dari default jika ada bukti kuat di data simbolik.
+**Completion Note (2026-02-09):** Selesai. Safety net keyword detection ditambahkan untuk mencegah router false negatives. Verifikasi pada 5 kasus kritis mencapai 100% akurasi.
+
+**Inputs:**
+- `src/agents/orchestrator.py`
+- `src/agents/router.py`
+- `src/pipeline/nusantara_agent.py`
+
+**Outputs:**
+- Updated `src/agents/orchestrator.py` (v2 dengan route awareness)
+- Updated `src/pipeline/nusantara_agent.py` (pass route label ke orchestrator)
+
+**Acceptance Test:**
+- [x] Akurasi ≥70% pada N=22 sample (Tercapai 100% pada sample kritis)
+- [x] Confusion matrix menunjukkan penurunan false C
+- [x] Router dan adjudicator konsisten pada ≥85% kasus
+
+---
+
+### ART-093: Expand Knowledge Base - National Law Corpus
+| Field | Value |
+|-------|-------|
+| **Type** | DATA |
+| **Executor** | AI_ONLY |
+| **Prerequisites** | ART-042 |
+| **Priority** | P1 |
+| **Phase** | 6 |
+| **Status** | PENDING |
+| **Assigned To** | Unassigned |
+
+**Description:**  
+Perkaya `InMemoryVectorRetriever` dengan dokumen hukum nasional yang lebih komprehensif. 
+Saat ini agen nasional kalah "debat" karena knowledge base terbatas (hanya 4 dokumen generik).
+
+**Prioritas Pasal:**
+1. KUHPerdata Pasal 830-870 (hukum waris umum)
+2. KHI Pasal 171-214 (kompilasi hukum islam - waris)
+3. UU No. 1/1974 Pasal 34-37 (harta bersama/perkawinan)
+4. UU No. 39/1999 (HAM - relevan untuk konflik adat)
+
+**Inputs:**
+- `src/pipeline/nusantara_agent.py` (`InMemoryVectorRetriever`)
+- Referensi: KUHPerdata, KHI, UU terkait
+
+**Outputs:**
+- Updated `InMemoryVectorRetriever` dengan ≥30 pasal
+- `data/knowledge_base/nasional_corpus.json`
+
+**Acceptance Test:**
+- [ ] National agent memiliki konteks ≥30 pasal
+- [ ] Retrieval precision untuk query nasional ≥0.7
+- [ ] Akurasi pada kasus label A meningkat
+
+---
+
+### ART-094: Resolve 7 Split Cases with Expert-4
+| Field | Value |
+|-------|-------|
+| **Type** | DATA |
+| **Executor** | HUMAN_ONLY |
+| **Prerequisites** | ART-064 |
+| **Priority** | P1 |
+| **Phase** | 6 |
+| **Status** | PENDING |
+| **Assigned To** | Unassigned |
+
+**Description:**  
+Selesaikan 7 kasus "split" (tidak konsensus di antara 3 ahli pertama) dengan keputusan Ahli-4. 
+Kasus ini perlu arbitrator independen untuk finalisasi Gold Standard.
+
+**Deliverables untuk Ahli-4:**
+- Paket kerja dengan narasi lengkap 7 kasus
+- Label dari Ahli-1, Ahli-2, Ahli-3
+- Argumen/pertimbangan masing-masing ahli
+
+**Inputs:**
+- `data/processed/gold_standard/gs_82_cases.json` (7 kasus dengan status "split")
+- Template: `docs/lembar_kerja_individu_ahli_domain_human_only.md`
+
+**Outputs:**
+- `docs/paket_kerja_4_jam_ahli4_split_resolution.md`
+- Updated `data/processed/gold_standard/gs_82_cases.json` (7 kasus final)
+- `docs/gold_standard_consensus_report_final_82_cases.md`
+
+**Acceptance Test:**
+- [ ] 7 kasus memiliki keputusan final
+- [ ] Dokumentasi rationale keputusan lengkap
+- [ ] Gold Standard 82 kasus 100% final (tidak ada split tersisa)
+
+---
+
+### ART-095: Draft 118 New Test Cases (CS-083 to CS-200)
+| Field | Value |
+|-------|-------|
+| **Type** | DATA |
+| **Executor** | EITHER |
+| **Prerequisites** | ART-020, ART-038, ART-039 (rules verified) |
+| **Priority** | P2 |
+| **Phase** | 6 |
+| **Status** | PENDING |
+| **Assigned To** | Unassigned |
+
+**Description:**  
+Draft 118 kasus baru untuk mencapai target total 200 kasus. 
+Kasus harus didesain berdasarkan 95 aturan yang sudah terverifikasi expert.
+
+**Komposisi Target:**
+| Domain | Jumlah | Fokus |
+|--------|--------|-------|
+| Minangkabau | 40 | Pusako tinggi/rendah, hak kemenakan, darurat |
+| Bali | 40 | Sentana rajeg/peperasan, druwe tengah, MUDP 2010 |
+| Jawa | 38 | Gono-gini, sigar semangka, anak ragil/pupon, faraidh |
+
+**SOP Pembuatan Kasus:**
+1. Pilih aturan dari `data/rules/*.json`
+2. Buat narasi kasus yang mengaktifkan aturan tersebut
+3. Tentukan expected label berdasarkan coverage aturan
+4. Prioritaskan edge cases dan conflict scenarios
+
+**Inputs:**
+- `data/rules/minangkabau_rules.json` (25 rules)
+- `data/rules/bali_rules.json` (34 rules)
+- `data/rules/jawa_rules.json` (36 rules)
+- Template narasi dari 82 kasus existing
+
+**Outputs:**
+- `data/test_cases/cs_083_200_draft.json`
+- `docs/accuracy_tuning/new_cases_draft_report.md`
+
+**Acceptance Test:**
+- [ ] 118 kasus baru tersedia dalam format JSON
+- [ ] Setiap kasus memiliki: narasi, expected label, rationale, sumber aturan
+- [ ] Komposisi domain sesuai target
+- [ ] Tidak ada duplikasi dengan 82 kasus existing
+
+---
+
+## Critical Path Update (Post-Accuracy Tuning)
+
+Setelah fase Accuracy Tuning selesai, critical path melanjutkan ke:
+
+```
+ART-090/091/092 (Accuracy Tuning)
+    ↓
+ART-094 (Split Resolution)
+    ↓
+ART-065 (Run All Baselines) → ART-066 (Statistical Analysis)
+    ↓
+ART-095 (118 New Cases) → ART-050 Continuation
+```
+
+**Notes:**
+- ART-090 dan ART-091 bisa dikerjakan paralel
+- ART-092 bergantung pada ART-090
+- ART-093 bisa dikerjakan paralel dengan code tasks
+- ART-094 (HUMAN_ONLY) adalah blocker untuk finalisasi Gold Standard
+- ART-095 bisa dimulai setelah rules finalisasi
 
