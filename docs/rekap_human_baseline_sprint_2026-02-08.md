@@ -1,4 +1,4 @@
-# Rekap Human Baseline Sprint - 2026-02-08
+﻿# Rekap Human Baseline Sprint - 2026-02-08
 
 Dokumen ini merangkum progres sprint human-only untuk mendukung `ART-050` dan `ART-064`.
 
@@ -11,7 +11,10 @@ Dokumen ini merangkum progres sprint human-only untuk mendukung `ART-050` dan `A
 5. `docs/paket_kerja_4_jam_batch5_terisi_dr_hendra_2026-02-08.md` (Batch 5)
 6. `docs/paket_kerja_4_jam_batch6_terisi_dr_hendra_2026-02-08.md` (Batch 6)
 7. `docs/paket_kerja_4_jam_ahli2_batch1_terisi_dr_indra_2026-02-08.md` (Ahli-2 Batch 1)
-8. `docs/agreement_report_ahli1_vs_ahli2_batch1_2026-02-08.md` (Laporan agreement awal)
+8. `docs/paket_kerja_4_jam_ahli2_batch2_kalibrasi_terisi_dr_indra_2026-02-08.md` (Ahli-2 Batch 2 Kalibrasi)
+9. `docs/agreement_report_ahli1_vs_ahli2_batch1_2026-02-08.md` (Laporan agreement awal)
+10. docs/agreement_report_ahli1_vs_ahli2_batch2_kalibrasi_2026-02-08.md (Laporan agreement pasca kalibrasi)
+11. docs/paket_kerja_4_jam_ahli2_batch3_kalibrasi_lanjutan_ready_to_handout.md (Ahli-2 Batch 3 ready to handout)
 
 ## Cakupan
 
@@ -21,39 +24,34 @@ Dokumen ini merangkum progres sprint human-only untuk mendukung `ART-050` dan `A
 4. Total kasus terisi batch 4: 12
 5. Total kasus terisi batch 5: 12
 6. Total kasus terisi batch 6: 12
-7. Total kumulatif sprint: 72 kasus
-8. Agreement prep ahli-1 vs ahli-2: 12 kasus dibandingkan
+7. Total kumulatif sprint ahli-1: 72 kasus
+8. Agreement ahli-1 vs ahli-2:
+   - Batch-1: 4/12 (33.3%)
+   - Batch-2 kalibrasi: 6/12 (50.0%)
 
-## Distribusi Kesimpulan (Batch 6)
+## Distribusi Kesimpulan Ahli-2 (Batch-2 Kalibrasi)
 
-1. A (cenderung nasional): 4
-2. B (cenderung adat): 2
-3. C (sintesis): 6
+1. A (cenderung nasional): 1
+2. B (cenderung adat): 1
+3. C (sintesis): 10
 4. D (klarifikasi): 0
-
-## Topik Follow-up Utama
-
-1. Tanah ulayat vs SHM individual (`CS-MIN-011`)
-2. Kasepekang vs HAM (`CS-BAL-012`)
-3. Aset campuran pusako/pencaharian (`CS-MIN-013`)
-4. Wekas lisan vs kesetaraan waris modern (`CS-JAW-015`)
-5. Konflik lintas domain urban (`CS-LIN-016`)
-6. Hak ulayat vs sertifikat individual (`CS-LIN-018`)
 
 ## Dampak ke Task
 
 ### ART-050 (200 test case)
-1. Sprint ini menambah 24 judgment manusia terstruktur.
+1. Sprint human-only terus menambah judgment terstruktur.
 2. Masih perlu perluasan hingga target 200 kasus lintas domain.
 
 ### ART-064 (human expert baseline)
-1. Sprint ini menjadi bukti proses baseline manusia sudah berjalan.
+1. Terdapat perbaikan agreement awal antarahli dari 33.3% ke 50.0% setelah kalibrasi batch-2.
 2. Acceptance `ART-064` belum tercapai karena:
-   1. Belum 3 ahli independen.
-   2. Belum mencakup 200 kasus penuh.
+   - Belum 3 ahli independen.
+   - Belum mencakup 200 kasus penuh.
+   - Agreement antarahli masih perlu ditingkatkan.
 
 ## Aksi Lanjut Disarankan
 
-1. Sprint ahli pertama ditutup di 72 kasus.
-2. Lanjutkan kalibrasi ahli kedua menggunakan `docs/paket_kerja_4_jam_ahli2_batch2_kalibrasi_ready_to_handout.md`.
-3. Setelah batch kalibrasi, hitung ulang agreement dan tentukan kesiapan onboarding ahli ke-3.
+1. Handout Ahli-2 batch-3 kalibrasi terarah sudah siap pada `docs/paket_kerja_4_jam_ahli2_batch3_kalibrasi_lanjutan_ready_to_handout.md` (6 mismatch tersisa + 6 anchor baru).
+2. Tetapkan ambang kesiapan onboarding Ahli-3: agreement kalibrasi >= 0.67.
+3. Setelah ambang tercapai, mulai onboarding Ahli-3 dengan definisi label terkunci yang sama.
+

@@ -1,4 +1,4 @@
-# Task Registry: Atomic Research Tasks (ART)
+﻿# Task Registry: Atomic Research Tasks (ART)
 
 Master registry dari semua task yang perlu diselesaikan untuk mencapai target publikasi Scopus Q1. Setiap task mengikuti format dari `docs/task_template.md`.
 
@@ -838,6 +838,8 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Progress Note (2026-02-08):** Sprint human baseline batch-5 telah terdokumentasi pada `docs/paket_kerja_4_jam_batch5_terisi_dr_hendra_2026-02-08.md`; rekap kumulatif saat ini 60 kasus (1 ahli). Status tetap PENDING karena syarat ART-064 mewajibkan 3 ahli dan cakupan 200 kasus penuh.
 **Progress Note (2026-02-08):** Sprint human baseline batch-6 telah terdokumentasi pada `docs/paket_kerja_4_jam_batch6_terisi_dr_hendra_2026-02-08.md`; kumulatif ahli pertama 72 kasus. Tahap agreement prep antar-ahli dimulai dengan paket ahli ke-2 (`docs/paket_kerja_4_jam_ahli2_batch1_ready_to_handout.md`). Status tetap PENDING sampai terpenuhi 3 ahli dan cakupan 200 kasus.
 **Progress Note (2026-02-08):** Agreement awal ahli-1 vs ahli-2 (12 kasus) menunjukkan 33.3% kecocokan label literal; kalibrasi definisi label sedang dijalankan via `docs/paket_kerja_4_jam_ahli2_batch2_kalibrasi_ready_to_handout.md`. Status ART-064 tetap PENDING.
+**Progress Note (2026-02-08):** Hasil ahli-2 batch-2 kalibrasi telah masuk di `docs/paket_kerja_4_jam_ahli2_batch2_kalibrasi_terisi_dr_indra_2026-02-08.md`; agreement label literal terhadap ahli-1 meningkat dari 33.3% (4/12) menjadi 50.0% (6/12), terdokumentasi pada `docs/agreement_report_ahli1_vs_ahli2_batch2_kalibrasi_2026-02-08.md`. Status ART-064 tetap PENDING karena 3 ahli, 200 kasus, dan agreement memadai belum terpenuhi.
+**Progress Note (2026-02-08):** Paket kalibrasi lanjutan Ahli-2 Batch-3 telah disiapkan di `docs/paket_kerja_4_jam_ahli2_batch3_kalibrasi_lanjutan_ready_to_handout.md` dengan komposisi 6 mismatch tersisa + 6 anchor pembeda A/B vs C. Menunggu pengisian ahli untuk evaluasi agreement lanjutan.
 
 ### ART-065: Run All Baselines (3x each with different seeds)
 | Field | Value |
@@ -1115,6 +1117,8 @@ ART-043 → ART-044 → ART-045 → ART-048 ──┘                    ↑
 ```
 
 **Critical path:** ART-019 → 021 → 023 → 024 → 049 → 051 → 065 → 066 → 077 → 081 → 083 → 084
+
+
 
 
 
