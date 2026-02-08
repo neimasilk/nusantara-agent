@@ -390,6 +390,69 @@ class DomainAspRulesTests(unittest.TestCase):
         self.assertIn("conflict(harta_gono_gini,hold_without_distribution)", model)
         self.assertNotIn("hak_penguasaan(ibu,harta_gono_gini)", model)
 
+    def test_nasional_rule_file_parse(self):
+        """Test: nasional.lp bisa diparse dan disolve."""
+        model = self._solve_model("nasional.lp")
+        self.assertIsInstance(model, list)
+
+    def test_nasional_kelas_1_prioritas(self):
+        """Test: kelas 1 (anak/pasangan) memblokir kelas 2."""
+        model = self._solve_model(
+            "nasional.lp",
+            facts=[
+                "child(andi)",
+                "spouse(sari)",
+                "menikah_sah",
+                "parent(ayah)",
+            ],
+        )
+        self.assertIn("berhak_waris(andi)", model)
+        self.assertIn("berhak_waris(sari)", model)
+        self.assertNotIn("berhak_waris(ayah)", model)
+
+    def test_nasional_hak_spouse_harta_bersama(self):
+        """Test: pasangan sah mendapat hak atas setengah harta bersama."""
+        model = self._solve_model(
+            "nasional.lp",
+            facts=[
+                "spouse(sari)",
+                "menikah_sah",
+            ],
+        )
+        self.assertIn("bagian_spouse(sari,seperdua_harta_bersama)", model)
+        self.assertIn("hak_spouse_atas_harta_bersama(sari)", model)
+
+    def test_nasional_conflict_wasiat_melebihi_batas(self):
+        """Test: wasiat > 33% tanpa persetujuan memicu conflict."""
+        model = self._solve_model(
+            "nasional.lp",
+            facts=[
+                "nilai_wasiat(40)",
+            ],
+        )
+        self.assertIn("conflict(wasiat,melebihi_batas_wajar)", model)
+
+    def test_nasional_conflict_bagi_sebelum_lunas_utang(self):
+        """Test: pembagian waris sebelum utang lunas memicu conflict."""
+        model = self._solve_model(
+            "nasional.lp",
+            facts=[
+                "action(harta_waris_pewaris,dibagi)",
+            ],
+        )
+        self.assertIn("conflict(harta_waris_pewaris,pembagian_sebelum_lunas_utang)", model)
+
+    def test_nasional_conflict_norm_nasional_vs_adat(self):
+        """Test: deteksi konflik normatif nasional versus adat."""
+        model = self._solve_model(
+            "nasional.lp",
+            facts=[
+                "hak_waris_nasional(putri,harta_waris_pewaris)",
+                "larangan_waris_adat(putri,harta_waris_pewaris)",
+            ],
+        )
+        self.assertIn("conflict_norm(nasional_vs_adat,putri,harta_waris_pewaris)", model)
+
 
 if __name__ == "__main__":
     unittest.main()

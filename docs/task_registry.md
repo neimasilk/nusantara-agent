@@ -304,6 +304,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Acceptance Test:** 200 paragraphs, balanced across 3 domains (60-70 each), covering all 4 category types
 **Progress Note (2026-02-07):** Seed awal 24 paragraf internal sudah dibuat (`data/raw/gold_standard_texts/index_seed.csv`) untuk pilot workflow; belum memenuhi target 200 paragraf sumber primer.
 **Progress Note (2026-02-07):** Pool internal telah diskalakan ke 200 item (`data/raw/gold_standard_texts/GS-0001..GS-0200`) melalui `experiments/06_independent_eval/build_gold_texts_internal_pool.py`; status masih `internal_pool_seed` (bukan sumber primer final).
+**Progress Note (2026-02-08):** Submisi ahli domain individu diterima di `docs/lembar_kerja_individu_ahli_domain_human_only_terisi_dr_hendra_kusuma_2026-02-08.md` dengan status seleksi paragraf `SELESAI` pada target individu (60-80 paragraf). Untuk status ART global tetap perlu agregasi hingga 200 paragraf primer lintas domain.
 
 ### ART-028: Human Annotation of Gold Standard Triples
 | Field | Value |
@@ -353,6 +354,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Progress Note (2026-02-07):** Stub putusan untuk 7 kandidat internal sudah digenerate via `experiments/06_independent_eval/generate_ma_stubs.py` (`data/raw/ma_decisions/putusan_*.json`); konten substansi masih kosong dan wajib verifikasi sumber primer.
 **Progress Note (2026-02-07):** 7 stub putusan telah di-auto-fill draft konservatif via `experiments/06_independent_eval/auto_fill_ma_stubs_llm.py` menggunakan Kimi API; field tetap `status_verifikasi: draft` dan belum boleh dipakai sebagai ground truth tanpa cek sumber primer.
 **Progress Note (2026-02-07):** Precheck ketat (`run_precheck.py`) kini mensyaratkan field substansi/metadata putusan non-kosong; status terkini `Invalid putusan MA: 7` sehingga ART-030 tetap belum siap.
+**Progress Note (2026-02-08):** Submisi ahli domain individu diterima di `docs/lembar_kerja_individu_ahli_domain_human_only_terisi_dr_hendra_kusuma_2026-02-08.md` dengan 15-20 putusan tervalidasi (target individu tercapai). Status ART global tetap membutuhkan 50+ putusan terverifikasi lintas domain adat.
 
 ### ART-031: Run Independent Evaluation Experiment (Exp 06)
 | Field | Value |
@@ -517,11 +519,12 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-021 |
 | **Priority** | P2 |
-| **Status** | PENDING |
+| **Status** | DONE |
 **Description:** Encode relevant KUHPerdata inheritance and property rules in symbolic framework. These serve as the "national law" counterpart to adat rules for conflict detection.
 **Inputs:** KUHPerdata relevant articles
 **Outputs:** `src/symbolic/rules/nasional.lp`
 **Acceptance Test:** 15+ national law rules, can detect conflicts with adat rules programmatically
+**Completion Note (2026-02-08):** Rule nasional telah di-encode di `src/symbolic/rules/nasional.lp` (prioritas kelas ahli waris, hak pasangan, pelunasan utang, batas wasiat, legitime portie, dan deteksi konflik normatif nasional-vs-adat) dan diverifikasi dengan test deterministik pada `tests/test_rule_engine.py`.
 
 ---
 
@@ -635,6 +638,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Inputs:** Domain knowledge, collected legal texts, MA decisions
 **Outputs:** `data/test_cases/test_suite_200.json`
 **Acceptance Test:** 200 cases, balanced across domains, each with gold-standard answer
+**Progress Note (2026-02-08):** Submisi ahli domain individu melaporkan status `PROSES` dengan contoh kasus awal (`TC-BALI-001`) pada `docs/lembar_kerja_individu_ahli_domain_human_only_terisi_dr_hendra_kusuma_2026-02-08.md`. Perlu agregasi lintas kontributor hingga 200 kasus sesuai komposisi domain.
 
 ### ART-051: Run Full Pipeline on 200 Test Cases
 | Field | Value |
