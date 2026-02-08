@@ -10,6 +10,8 @@ Dokumen ini merangkum progres sprint human-only untuk mendukung `ART-050` dan `A
 4. `docs/paket_kerja_4_jam_batch4_terisi_dr_hendra_2026-02-08.md` (Batch 4)
 5. `docs/paket_kerja_4_jam_batch5_terisi_dr_hendra_2026-02-08.md` (Batch 5)
 6. `docs/paket_kerja_4_jam_batch6_terisi_dr_hendra_2026-02-08.md` (Batch 6)
+7. `docs/paket_kerja_4_jam_ahli2_batch1_terisi_dr_indra_2026-02-08.md` (Ahli-2 Batch 1)
+8. `docs/agreement_report_ahli1_vs_ahli2_batch1_2026-02-08.md` (Laporan agreement awal)
 
 ## Cakupan
 
@@ -20,6 +22,7 @@ Dokumen ini merangkum progres sprint human-only untuk mendukung `ART-050` dan `A
 5. Total kasus terisi batch 5: 12
 6. Total kasus terisi batch 6: 12
 7. Total kumulatif sprint: 72 kasus
+8. Agreement prep ahli-1 vs ahli-2: 12 kasus dibandingkan
 
 ## Distribusi Kesimpulan (Batch 6)
 
@@ -52,5 +55,5 @@ Dokumen ini merangkum progres sprint human-only untuk mendukung `ART-050` dan `A
 ## Aksi Lanjut Disarankan
 
 1. Sprint ahli pertama ditutup di 72 kasus.
-2. Mulai onboarding ahli kedua menggunakan paket `docs/paket_kerja_4_jam_ahli2_batch1_ready_to_handout.md` untuk subset kasus yang sama (agreement prep).
-3. Konsolidasikan jawaban lintas ahli dalam tabel agreement sederhana (A/B/C/D + keyakinan).
+2. Lanjutkan kalibrasi ahli kedua menggunakan `docs/paket_kerja_4_jam_ahli2_batch2_kalibrasi_ready_to_handout.md`.
+3. Setelah batch kalibrasi, hitung ulang agreement dan tentukan kesiapan onboarding ahli ke-3.

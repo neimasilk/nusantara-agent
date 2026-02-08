@@ -646,6 +646,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Progress Note (2026-02-08):** Paket kerja batch-4 terisi telah diterima pada `docs/paket_kerja_4_jam_batch4_terisi_dr_hendra_2026-02-08.md`; kumulatif sprint ahli pertama menjadi 48 kasus. Paket batch-5 siap handout pada `docs/paket_kerja_4_jam_batch5_ready_to_handout.md`.
 **Progress Note (2026-02-08):** Paket kerja batch-5 terisi telah diterima pada `docs/paket_kerja_4_jam_batch5_terisi_dr_hendra_2026-02-08.md`; kumulatif sprint ahli pertama menjadi 60 kasus. Paket batch-6 siap handout pada `docs/paket_kerja_4_jam_batch6_ready_to_handout.md`.
 **Progress Note (2026-02-08):** Paket kerja batch-6 terisi telah diterima pada `docs/paket_kerja_4_jam_batch6_terisi_dr_hendra_2026-02-08.md`; kumulatif sprint ahli pertama mencapai 72 kasus. Onboarding ahli ke-2 dimulai melalui `docs/paket_kerja_4_jam_ahli2_batch1_ready_to_handout.md` untuk agreement prep.
+**Progress Note (2026-02-08):** Hasil ahli ke-2 batch-1 telah diterima pada `docs/paket_kerja_4_jam_ahli2_batch1_terisi_dr_indra_2026-02-08.md`; agreement awal ahli-1 vs ahli-2 tercatat pada `docs/agreement_report_ahli1_vs_ahli2_batch1_2026-02-08.md` (33.3%). Paket kalibrasi ahli ke-2 batch-2 siap pada `docs/paket_kerja_4_jam_ahli2_batch2_kalibrasi_ready_to_handout.md`.
 
 ### ART-051: Run Full Pipeline on 200 Test Cases
 | Field | Value |
@@ -836,6 +837,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Progress Note (2026-02-08):** Sprint human baseline batch-4 telah terdokumentasi pada `docs/paket_kerja_4_jam_batch4_terisi_dr_hendra_2026-02-08.md`; rekap kumulatif saat ini 48 kasus (1 ahli). Status tetap PENDING karena syarat ART-064 mewajibkan 3 ahli dan cakupan 200 kasus penuh.
 **Progress Note (2026-02-08):** Sprint human baseline batch-5 telah terdokumentasi pada `docs/paket_kerja_4_jam_batch5_terisi_dr_hendra_2026-02-08.md`; rekap kumulatif saat ini 60 kasus (1 ahli). Status tetap PENDING karena syarat ART-064 mewajibkan 3 ahli dan cakupan 200 kasus penuh.
 **Progress Note (2026-02-08):** Sprint human baseline batch-6 telah terdokumentasi pada `docs/paket_kerja_4_jam_batch6_terisi_dr_hendra_2026-02-08.md`; kumulatif ahli pertama 72 kasus. Tahap agreement prep antar-ahli dimulai dengan paket ahli ke-2 (`docs/paket_kerja_4_jam_ahli2_batch1_ready_to_handout.md`). Status tetap PENDING sampai terpenuhi 3 ahli dan cakupan 200 kasus.
+**Progress Note (2026-02-08):** Agreement awal ahli-1 vs ahli-2 (12 kasus) menunjukkan 33.3% kecocokan label literal; kalibrasi definisi label sedang dijalankan via `docs/paket_kerja_4_jam_ahli2_batch2_kalibrasi_ready_to_handout.md`. Status ART-064 tetap PENDING.
 
 ### ART-065: Run All Baselines (3x each with different seeds)
 | Field | Value |
