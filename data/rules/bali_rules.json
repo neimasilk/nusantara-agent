@@ -1,0 +1,62 @@
+[
+  {
+    "id": "BAL-001",
+    "type": "lineage",
+    "rule": "Sistem kekerabatan masyarakat adat Bali bersifat patrilineal (kapurusa), di mana garis keturunan ditarik dari pihak laki-laki.",
+    "citations": [
+      {
+        "source": "unmas.ac.id",
+        "evidence": "Sistem patrilineal yang dianut oleh masyarakat adat Bali, anak laki-laki secara tradisional memiliki hak waris utama."
+      }
+    ],
+    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+  },
+  {
+    "id": "BAL-002",
+    "type": "heir_status",
+    "rule": "Anak laki-laki adalah ahli waris utama yang memiliki hak dan kewajiban atas harta peninggalan serta tanggung jawab keagamaan keluarga.",
+    "citations": [
+      {
+        "source": "semanticscholar.org",
+        "evidence": "Anak laki-laki memiliki tanggung jawab dalam merawat orang tua, melaksanakan upacara pengabenan, dan memelihara sanggah/merajan."
+      }
+    ],
+    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+  },
+  {
+    "id": "BAL-003",
+    "type": "heir_status",
+    "rule": "Anak perempuan dapat menjadi ahli waris (sentana rajeg) melalui perkawinan nyentana, di mana status hukumnya disamakan dengan anak laki-laki.",
+    "citations": [
+      {
+        "source": "bundamediagrup.co.id",
+        "evidence": "Perkawinan nyentana adalah bentuk perkawinan di mana perempuan diangkat menjadi sentana rajeg untuk meneruskan keturunan."
+      }
+    ],
+    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+  },
+  {
+    "id": "BAL-004",
+    "type": "asset_classification",
+    "rule": "Druwe Tengah adalah harta bersama atau milik bersama keluarga/kerabat yang tidak dapat dibagi secara individual.",
+    "citations": [
+      {
+        "source": "semanticscholar.org",
+        "evidence": "Druwe tengah mengacu pada harta bersama yang pengelolaannya digunakan untuk kepentingan bersama, seperti upacara yadnya."
+      }
+    ],
+    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+  },
+  {
+    "id": "BAL-005",
+    "type": "asset_classification",
+    "rule": "Harta Druwe Gabro adalah harta bersama yang diperoleh suami istri selama masa perkawinan.",
+    "citations": [
+      {
+        "source": "unmas.ac.id",
+        "evidence": "Hukum adat Bali mengenal harta druwe gabro yang merupakan harta bersama yang diperoleh suami istri dalam perkawinan."
+      }
+    ],
+    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+  }
+]

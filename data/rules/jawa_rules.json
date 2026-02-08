@@ -1,0 +1,62 @@
+[
+  {
+    "id": "JAW-001",
+    "type": "lineage",
+    "rule": "Sistem kekerabatan masyarakat Jawa bersifat bilateral atau parental, di mana garis keturunan ditarik dari ayah dan ibu secara seimbang.",
+    "citations": [
+      {
+        "source": "researchgate.net",
+        "evidence": "Masyarakat Jawa menganut sistem kekerabatan bilateral atau parental, di mana kedudukan anak laki-laki dan perempuan adalah sama."
+      }
+    ],
+    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+  },
+  {
+    "id": "JAW-002",
+    "type": "asset_classification",
+    "rule": "Harta Gono-gini adalah harta yang diperoleh bersama oleh suami dan istri selama masa perkawinan.",
+    "citations": [
+      {
+        "source": "uin-suka.ac.id",
+        "evidence": "Harta gono-gini adalah harta yang diperoleh suami dan istri setelah terikat perkawinan."
+      }
+    ],
+    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+  },
+  {
+    "id": "JAW-003",
+    "type": "asset_classification",
+    "rule": "Harta Bawaan (Harta Asal) adalah harta yang dimiliki masing-masing pihak sebelum perkawinan atau diperoleh melalui warisan/hibah pribadi.",
+    "citations": [
+      {
+        "source": "undip.ac.id",
+        "evidence": "Harta bawaan adalah harta yang dibawa oleh masing-masing pihak sebelum perkawinan berlangsung."
+      }
+    ],
+    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+  },
+  {
+    "id": "JAW-004",
+    "type": "distribution_basis",
+    "rule": "Prinsip 'Sepikul Segendongan' sering diterapkan di beberapa daerah Jawa, di mana anak laki-laki mendapat dua bagian dan anak perempuan satu bagian.",
+    "citations": [
+      {
+        "source": "mandalanursa.org",
+        "evidence": "Terdapat penerapan sistem sepikul segendongan, di mana anak laki-laki mendapatkan dua bagian dan anak perempuan satu bagian."
+      }
+    ],
+    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+  },
+  {
+    "id": "JAW-005",
+    "type": "distribution_process",
+    "rule": "Pembagian warisan dalam masyarakat Jawa sangat mengutamakan prinsip musyawarah untuk mufakat (rukun).",
+    "citations": [
+      {
+        "source": "researchgate.net",
+        "evidence": "Musyawarah adalah proses pembagian warisan yang dilakukan secara konsensus antar ahli waris."
+      }
+    ],
+    "verification_status": "DRAFT_NEEDS_HUMAN_REVIEW"
+  }
+]
