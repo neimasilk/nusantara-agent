@@ -6,14 +6,27 @@ asset_type(harta_bersama, harta_perkawinan).
 asset_type(harta_bawaan, harta_pribadi).
 asset_type(harta_waris_pewaris, harta_waris).
 
-% --- Fakta Relasi yang bisa di-inject saat query ---
-% Placeholder facts (will be overridden by runtime facts)
-child(dummy). spouse(dummy). parent(dummy). sibling(dummy).
-distant_relative(dummy). ascendant(dummy). pewaris_meninggal. ada_anak.
-ada_orangtua. ada_saudara. menikah_sah. tidak_patut(dummy).
-menerima_wasiat(dummy). persetujuan_ahli_waris.
-action(dummy, dummy). nilai_wasiat(0). debt_settled.
-hak_waris_nasional(dummy, dummy). larangan_waris_adat(dummy, dummy).
+% --- Fakta Relasi yang di-inject saat query ---
+% Deklarasi predicate eksternal (tidak ada fakta default; semua di-inject runtime)
+#defined child/1.
+#defined spouse/1.
+#defined parent/1.
+#defined sibling/1.
+#defined distant_relative/1.
+#defined ascendant/1.
+#defined pewaris_meninggal/0.
+#defined ada_anak/0.
+#defined ada_orangtua/0.
+#defined ada_saudara/0.
+#defined menikah_sah/0.
+#defined tidak_patut/1.
+#defined menerima_wasiat/1.
+#defined persetujuan_ahli_waris/0.
+#defined action/2.
+#defined nilai_wasiat/1.
+#defined debt_settled/0.
+#defined hak_waris_nasional/2.
+#defined larangan_waris_adat/2.
 
 % --- Kelas ahli waris menurut prioritas umum KUHPerdata ---
 kelas_1(P) :- child(P).

@@ -17,10 +17,10 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | 1 | Pilot Experiments (01-04) | ART-011 — ART-018 | 8 | 0 |
 | 2 | Core Methodology Fixes | ART-019 — ART-042 | 5 | 19 |
 | 3 | Advanced Agent Architecture | ART-043 — ART-055 | 6 | 7 |
-| 4 | Evaluation & Ablation | ART-056 — ART-072 | 0 | 17 |
+| 4 | Evaluation & Ablation | ART-056 — ART-072 | 9 | 8 |
 | 5 | Paper Writing & Submission | ART-073 — ART-084 | 0 | 12 |
 | 6 | Accuracy Tuning & Recovery | ART-090 — ART-095 | 4 | 2 |
-| **TOTAL** | | **90** | **33** | **57** |
+| **TOTAL** | | **90** | **42** | **48** |
 
 ---
 
@@ -842,12 +842,12 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-057 through ART-064 |
 | **Priority** | P1 |
-| **Status** | BLOCKED |
+| **Status** | PENDING |
 **Description:** Execute all 8 baselines on the 200 test cases, each run 3 times with different random seeds. Record all outputs.
 **Inputs:** All baseline implementations, 200 test cases
 **Outputs:** `experiments/09_ablation_study/results/` — organized by baseline and run
 **Acceptance Test:** 7 automated baselines x 3 runs = 21 complete runs + 1 human baseline
-**Blocker:** Seluruh ART-057 s.d. ART-064 belum selesai.
+**Note:** All prerequisites (ART-057..064) completed 2026-02-08. Unblocked by Mata Elang review 2026-02-08.
 
 ### ART-066: Statistical Analysis of Ablation Results
 | Field | Value |

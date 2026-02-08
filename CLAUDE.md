@@ -108,8 +108,10 @@ Work is decomposed into Atomic Research Tasks (ARTs). See:
 - **Exp 07 COMPLETED (Negative Result)**: Advanced orchestration (parallel + debate + self-correction + routing) belum mengungguli baseline sequential pada auto-score Kimi (N=12), sehingga protokol debat perlu iterasi.
 - **ART-093 COMPLETED**: Knowledge Base hukum nasional diperluas (KUHPerdata, KHI, UUPA) di `src/pipeline/nusantara_agent.py` untuk menyeimbangkan debat.
 - **ART-096 COMPLETED**: Supervisor Agent tuned di `src/agents/orchestrator.py` untuk menyeimbangkan bobot Nasional vs Adat (Akurasi naik ke 72.73%).
-- **Test Coverage**: 60 test deterministik passed (rule_engine, text_processor, token_usage, router, debate, kg_search, llm_judge).
-- **Integration blocker**: `ART-049` (Full Pipeline Integration) masih `PENDING` dan menjadi blocker untuk `ART-056` (Ablation baseline config) serta seluruh Exp 09 dan Exp 10.
+- **Test Coverage**: 78/79 test pass (1 LLM-dependent route classification flaky). Modules: rule_engine, text_processor, token_usage, router, debate, kg_search, llm_judge, nusantara_pipeline.
+- **ART-049 DONE**: Full Pipeline Integration selesai (`src/pipeline/nusantara_agent.py`). **ART-056 DONE**: Baseline configs documented.
+- **ART-057..064 ALL DONE**: 8 individual baseline implementations selesai. **ART-065 UNBLOCKED** — ready untuk execution (run all baselines 3x with seeds).
+- **Remaining blockers**: Exp 10 (CCS metric) BLOCKED pada ART-068/069/070.
 
 ## Methodology Fixes
 
@@ -119,7 +121,7 @@ Six critical weaknesses have been identified and documented in `docs/methodology
 2. Circular evaluation — independent evaluation pipeline needed (Exp 06, BLOCKED on annotation setup)
 3. Orchestration quality gain — not achieved after Exp 07 (negative result); debate protocol needs iteration
 4. Scale too small — needs 10K+ triples, 200+ test cases (scaling plan, IN_PROGRESS 15%)
-5. Ablation needs proper baselines, not strawman (Exp 09, BLOCKED on pipeline integration — ART-056 blocked by ART-049)
+5. Ablation needs proper baselines, not strawman (Exp 09, ART-056..064 ALL DONE; next: ART-065 execute full ablation runs)
 6. CCS metric needs rigorous validation (Exp 10, BLOCKED on prerequisite artifacts — ART-071 blocked by ART-068/069/070)
 
 ## Key Conventions

@@ -4,13 +4,25 @@
 % --- Fakta Dasar ---
 patrilineal.
 
-% External facts that can be injected (placeholders to avoid warnings)
-female(dummy). male(dummy). parent(dummy, dummy).
-sentana_rajeg(dummy). kawin_keluar(dummy). ninggal_kedaton(dummy).
-menolak_ngaben(dummy). adopsi(dummy). upacara_widhi_widana(dummy).
-tri_upasaksi(dummy). pengesahan_ayah(dummy). astra(dummy).
-janda(dummy). menikah_lagi(dummy). kewajiban_ngayah(dummy).
-disaksikan_prajuru. action(dummy, dummy). keluarga_camput(dummy).
+% Deklarasi predicate eksternal (tidak ada fakta default; semua di-inject runtime)
+#defined female/1.
+#defined male/1.
+#defined parent/2.
+#defined sentana_rajeg/1.
+#defined kawin_keluar/1.
+#defined ninggal_kedaton/1.
+#defined menolak_ngaben/1.
+#defined adopsi/1.
+#defined upacara_widhi_widana/1.
+#defined tri_upasaksi/1.
+#defined pengesahan_ayah/1.
+#defined astra/1.
+#defined janda/1.
+#defined menikah_lagi/1.
+#defined kewajiban_ngayah/1.
+#defined disaksikan_prajuru/0.
+#defined action/2.
+#defined keluarga_camput/1.
 
 % Klasifikasi harta
 asset_type(tanah_sanggah, druwe_tengah).
@@ -122,7 +134,7 @@ conflict(A, split_individual) :- asset_type(A, tanah_pelaba_pura), action(A, spl
 conflict(jiwa_dana, invalid_transfer) :- action(jiwa_dana, grant), not disaksikan_prajuru.
 
 % Hak ngamong sanggah memberi prioritas pada tanah sanggah
-ngamong_sanggah(dummy).  % Placeholder - can be overridden
+#defined ngamong_sanggah/1.
 prioritas_sanggah(P, tanah_sanggah) :- ngamong_sanggah(P).
 can_inherit(P, tanah_sanggah) :- prioritas_sanggah(P, tanah_sanggah).
 

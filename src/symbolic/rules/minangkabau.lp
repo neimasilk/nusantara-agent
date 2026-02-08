@@ -4,14 +4,13 @@
 % --- Facts & Types ---
 matrilineal.
 
-% External facts that can be injected (placeholders to avoid warnings)
-% These will be overridden by facts injected at runtime
-consensus_reached.  % Placeholder - will be overridden
-action(dummy, dummy).  % Placeholder - will be overridden
-parent(dummy, dummy).  % Placeholder - will be overridden
-sibling(dummy, dummy).  % Placeholder - will be overridden
-female(dummy).  % Placeholder - will be overridden
-male(dummy).  % Placeholder - will be overridden
+% Deklarasi predicate eksternal (tidak ada fakta default; semua di-inject runtime)
+#defined consensus_reached/0.
+#defined action/2.
+#defined parent/2.
+#defined sibling/2.
+#defined female/1.
+#defined male/1.
 
 % Asset classification
 asset_type(rumah_gadang, pusako_tinggi).

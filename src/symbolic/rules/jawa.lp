@@ -4,14 +4,28 @@
 % --- Fakta Dasar ---
 bilateral.
 
-% External facts that can be injected (placeholders to avoid warnings)
-child(dummy). male(dummy). female(dummy). parent(dummy, dummy).
-faraidh_mode. takharuj_disepakati. merawat_orangtua(dummy).
-anak_ragil(dummy). penunggu_rumah(dummy). action(dummy, dummy).
-anak_angkat(dummy). adopsi_terang_tunai(dummy). anak_tiri(dummy).
-anak_luar_kawin(dummy). bukti_darah_ayah(dummy). cucu_pengganti(dummy).
-orangtua_meninggal_lebih_dulu(dummy). janda(dummy). menikah_lagi(dummy).
-duda(dummy). cerai_hidup.
+% Deklarasi predicate eksternal (tidak ada fakta default; semua di-inject runtime)
+#defined child/1.
+#defined male/1.
+#defined female/1.
+#defined parent/2.
+#defined faraidh_mode/0.
+#defined takharuj_disepakati/0.
+#defined merawat_orangtua/1.
+#defined anak_ragil/1.
+#defined penunggu_rumah/1.
+#defined action/2.
+#defined anak_angkat/1.
+#defined adopsi_terang_tunai/1.
+#defined anak_tiri/1.
+#defined anak_luar_kawin/1.
+#defined bukti_darah_ayah/1.
+#defined cucu_pengganti/1.
+#defined orangtua_meninggal_lebih_dulu/1.
+#defined janda/1.
+#defined menikah_lagi/1.
+#defined duda/1.
+#defined cerai_hidup/0.
 
 % Klasifikasi harta
 asset_type(harta_gono_gini, gono_gini).

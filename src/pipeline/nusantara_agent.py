@@ -367,7 +367,8 @@ class NusantaraAgentPipeline:
                 adat_atoms[d] = self._run_rules(d, facts)
 
         graph_ctx = self.graph_retriever.retrieve_context(query)
-        vec_ctx = " ".join(self.vector_retriever.retrieve(query, top_k=3))
+        vec_results = self.vector_retriever.retrieve(query, top_k=3)
+        vec_ctx = " ".join(vec_results)
 
         inputs = {
             "messages": [HumanMessage(content=query)],
@@ -384,6 +385,8 @@ class NusantaraAgentPipeline:
             "route": route,
             "rule_results": inputs["rule_results"],
             "agent_analysis": agent_result.get("final_synthesis", ""),
+            "graph_context": graph_ctx,
+            "vector_context": vec_results,
             "intermediate_context": {
                 "national": agent_result.get("national_context", ""),
                 "adat": agent_result.get("adat_context", "")

@@ -4,7 +4,17 @@
       "Bash(tree:*)",
       "Bash(du:*)",
       "Bash(grep:*)",
-      "Bash(del \"C:\\\\Users\\\\neima\\\\Documents\\\\nusantara-agent\\\\experiments\\\\01_triple_extraction\\\\prompt.py\")"
+      "Bash(del \"C:\\\\Users\\\\neima\\\\Documents\\\\nusantara-agent\\\\experiments\\\\01_triple_extraction\\\\prompt.py\")",
+      "Bash(python scripts/run_test_suite.py:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfix\\(test\\): perbaiki mock PrologEngine untuk Python 3.13 dan update coverage docs\n\n- Fix MagicMock spec dengan unsafe=True agar assertz valid di Python 3.13\n- Update docs/testing_framework.md: detail jumlah test per modul \\(total 60\\)\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git rm:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(python -m unittest discover:*)",
+      "Bash(findstr:*)",
+      "Bash(python -m unittest:*)",
+      "Bash(git status:*)"
     ]
   }
 }
