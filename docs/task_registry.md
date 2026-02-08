@@ -218,6 +218,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Inputs:** `data/rules/minangkabau_rules.json`, library choice from ART-019
 **Outputs:** `src/symbolic/rule_engine.py`, `src/symbolic/rules/minangkabau.lp`
 **Acceptance Test:** All 20+ rules parse and execute without error; 10 test queries return correct answers
+**Audit Note (2026-02-08):** Dependency check menunjukkan prereq `ART-020` masih `IN_PROGRESS`. Status `DONE` di ART-021 diinterpretasikan sebagai implementasi berbasis draft rules; validasi domain expert tetap mengikuti ART-020.
 
 ### ART-022: Design Rule Engine vs LLM Comparison Test Cases
 | Field | Value |
@@ -231,6 +232,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Inputs:** Rules from ART-020, knowledge of LLM limitations
 **Outputs:** `experiments/05_rule_engine/test_cases.json`
 **Acceptance Test:** 30 cases with gold-standard answers, 10+ expected to differentiate rule engine from LLM
+**Audit Note (2026-02-08):** Dependency check menunjukkan prereq `ART-020` masih `IN_PROGRESS`. Status `DONE` di ART-022 dipertahankan sebagai artefak eksperimen tersedia, namun tidak menutup kebutuhan verifikasi human pada ART-020.
 
 ### ART-023: Run Rule Engine Experiment (Exp 05)
 | Field | Value |

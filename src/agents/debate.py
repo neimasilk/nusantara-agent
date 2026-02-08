@@ -24,12 +24,20 @@ def _json_or_raw(text: str) -> Dict:
     text = text.strip()
     if "```json" in text:
         start = text.index("```json") + len("```json")
-        end = text.index("```", start)
-        text = text[start:end].strip()
+        # Cek apakah ada closing fence
+        if "```" in text[start:]:
+            end = text.index("```", start)
+            text = text[start:end].strip()
+        else:
+            # Unclosed fence, gunakan sisa text setelah opening
+            text = text[start:].strip()
     elif "```" in text:
         start = text.index("```") + len("```")
-        end = text.index("```", start)
-        text = text[start:end].strip()
+        if "```" in text[start:]:
+            end = text.index("```", start)
+            text = text[start:end].strip()
+        else:
+            text = text[start:].strip()
     try:
         return json.loads(text)
     except Exception:
