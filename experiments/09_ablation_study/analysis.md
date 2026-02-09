@@ -106,3 +106,34 @@ Baseline (ART-093): 54.55%
 ## Kesimpulan Phase 3
 Tuning pada Supervisor Agent (ART-096) berhasil mengembalikan keseimbangan sistem (Akurasi > 70%). Meskipun muncul bias baru (over-correction ke C), ini lebih aman daripada bias sebelumnya (dominasi A) karena memaksa pengguna untuk melihat kedua sisi argumen. Akurasi 72.73% memenuhi kriteria penerimaan (>65%).
 
+---
+
+# Phase 4: Post-Arbiter Final Snapshot (Offline Reproducible)
+
+Tanggal: 9 Februari 2026  
+Kondisi data: Active set final N=24, `SPLIT=0`, mismatch gold-vs-majority = 0.  
+Mode run: Offline forced (`NUSANTARA_FORCE_OFFLINE=1`) untuk reproducibility tanpa API berbayar.
+
+## Hasil Benchmark (Run 4)
+
+| Metric | Value |
+|---|---|
+| Total Kasus Diuji | 24 |
+| Benar (Match) | 10 |
+| Salah (Fail) | 14 |
+| **Akurasi** | **41.67%** |
+| 95% CI (Wilson) | 24.47% - 61.17% |
+
+Artifact:
+- `experiments/09_ablation_study/results_post_patch_n24_offline_2026-02-09.json`
+
+## Observasi
+1. **Regresi Offline Pasca-Patch:** Dibanding snapshot offline sebelumnya (59.09% pada N=22), performa offline final turun ke 41.67% pada N=24.
+2. **Bias Prediksi ke B/C Masih Kuat:** Banyak kasus gold A diprediksi B/C (`CS-MIN-005`, `CS-MIN-015`, `CS-LIN-016`, `CS-LIN-017`, `CS-NAS-010`).
+3. **Validitas Operasional vs Ilmiah:** Angka ini valid sebagai metrik operasional reproducible, tetapi bukan bukti final performa ilmiah lintas mode karena belum ada run LLM-mode post-patch pada data yang sama.
+
+## Kesimpulan Phase 4
+Setelah integritas label aktif set diperbaiki (arbiter + patch), pipeline offline menunjukkan performa konservatif 41.67%.
+Prioritas berikutnya bukan over-claim angka ini, melainkan:
+1. Menjalankan benchmark LLM-mode pada dataset freeze yang sama (N=24),
+2. Menjaga pemisahan jelas antara metrik operasional offline dan metrik evaluasi ilmiah.

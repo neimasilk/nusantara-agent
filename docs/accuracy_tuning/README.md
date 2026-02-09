@@ -20,12 +20,13 @@ Direktori ini berisi artefak operasional untuk fase **Accuracy Tuning & Recovery
 | Sprint | Target | Status | Tasks |
 |--------|--------|--------|-------|
 | Sprint 1: Quick Wins | >=65% accuracy | DONE | ART-090, ART-091 |
-| Sprint 2: Structural | >=75% accuracy | IN_PROGRESS | ART-092, ART-093, ART-094 |
+| Sprint 2: Structural | >=75% accuracy | STABILIZATION | ART-092, ART-093, ART-096 |
 | Sprint 3: Optimization | >=85% accuracy | PENDING | ART-095 |
 
 Catatan:
-- ART-092 dan ART-096 telah menyentuh akurasi 72.73% pada subset 22 kasus (mode LLM).
-- Run offline fallback terbaru menghasilkan 59.09% dan tidak boleh disetarakan langsung dengan run mode LLM.
+- ART-092 dan ART-096 telah menyentuh akurasi **72.73%** pada subset 22 kasus (mode LLM).
+- Snapshot offline pasca-patch final (N=24, mode reproducible, no API) menghasilkan **41.67%** (`experiments/09_ablation_study/results_post_patch_n24_offline_2026-02-09.json`).
+- ART-094 (Split Resolution) **selesai** pada active set: tidak ada `SPLIT` tersisa dan mismatch label-vs-majority = 0.
 
 ---
 

@@ -1,0 +1,285 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{array}
+
+\title{Nusantara-Agent: A Pilot Neuro-Symbolic Multi-Agent Framework for Pluralistic Legal Reasoning in Indonesia}
+\author{
+Anonymous Authors\\
+Project: Nusantara-Agent
+}
+\date{Draft v0.1 -- 2026-02-09}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We present \textit{Nusantara-Agent}, a pilot neuro-symbolic multi-agent system for legal reasoning under plural legal regimes (national and customary law) in Indonesia.
+The system combines LLM-based role agents, symbolic constraints, and structured expert adjudication.
+Current evidence should be interpreted as \textbf{pilot-scale}: the active evaluation set has 24 cases, and the tie-cases have been closed via independent final arbitration.
+We release this draft to stabilize methodology and reporting structure, not to claim final generalization performance.
+\textbf{This draft includes architecture diagrams, protocol flow diagrams, formal metric equations, and up-to-date operational tables for transparent reporting.}
+\end{abstract}
+
+\section{Introduction}
+Plural legal reasoning in Indonesia often requires reconciling national law and multiple customary law systems.
+This setting is relevant for NLP and AI because legal outcomes depend on cross-source conflict handling, not only textual retrieval.
+Our goal is to build an auditable framework that can:
+\begin{enumerate}[nosep]
+  \item separate national and customary perspectives,
+  \item synthesize competing norms under explicit rules, and
+  \item document disagreement and uncertainty instead of forcing brittle single-label predictions.
+\end{enumerate}
+
+\paragraph{Current scope.}
+This manuscript is a \textbf{draft preprint candidate} focused on architecture, protocol, and pilot evidence.
+Final publication-grade claims are deferred until arbitration and dataset promotion are complete.
+
+\section{Related Work}
+This work is related to retrieval-augmented generation, multi-agent reasoning, and neuro-symbolic AI.
+Foundational LLM and prompting work includes Transformers, few-shot scaling, chain-of-thought, and tool-using reasoning \cite{vaswani2017attention,brown2020language,wei2022cot,wang2022selfconsistency,yao2023react,yao2023tree,shinn2023reflexion}.
+Recent retrieval-centered directions include classical RAG, self-reflective RAG, and hierarchical retrieval designs \cite{lewis2020rag,asai2023selfrag,gao2023ragsurvey,sarthi2024raptor,he2024gretriever}.
+For legal-domain NLP, we ground discussion on recent benchmark and workshop studies in legal judgment prediction, contract IE, legal summarization, and legal-domain deployment settings \cite{guha2023legalbench,colombo2024saullm,sie-etal-2024-summarizing,liu-etal-2024-enhancing-legal,nigam-etal-2024-rethinking,xie-etal-2024-clc,mali-etal-2024-information,narendra-etal-2024-enhancing,hou-etal-2024-gaps,kwak-etal-2024-classify,taranukhin-etal-2024-empowering,tran-etal-2024-deberta,tyss-etal-2024-lexsumm,tyss-etal-2024-supporting}.
+
+\section{Task Definition}
+Given a legal scenario $x$, the system predicts one of four policy labels:
+\begin{itemize}[nosep]
+  \item \textbf{A}: mainly national-law resolution,
+  \item \textbf{B}: mainly customary-law resolution,
+  \item \textbf{C}: synthesis of national + customary law,
+  \item \textbf{D}: clarification required.
+\end{itemize}
+
+\noindent
+Predictions are judged against expert-voted labels with explicit consensus status (unanimous, majority, tie).
+
+\section{System Overview}
+Nusantara-Agent uses a sequential multi-agent graph:
+\begin{enumerate}[nosep]
+  \item National-Law Agent,
+  \item Customary-Law Agent,
+  \item Supervisor/Adjudicator Agent.
+\end{enumerate}
+The pipeline is augmented with symbolic constraints and offline fallbacks for deterministic operation.
+
+\subsection{Neuro-Symbolic Components}
+\begin{itemize}[nosep]
+  \item LLM agents for perspective-specific analysis.
+  \item Symbolic rules for hard legal constraints and contradiction checks.
+  \item Router and safety-net heuristics for offline control.
+\end{itemize}
+
+\begin{figure}[h]
+\centering
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{m{2.6cm}c m{2.6cm}c m{2.6cm}c m{2.6cm}}
+\fbox{\parbox[c][1.5cm][c]{2.4cm}{\centering Input\\Case Query}} &
+$\rightarrow$ &
+\fbox{\parbox[c][1.5cm][c]{2.4cm}{\centering National-Law\\Agent}} &
+$\rightarrow$ &
+\fbox{\parbox[c][1.5cm][c]{2.4cm}{\centering Customary-Law\\Agent}} &
+$\rightarrow$ &
+\fbox{\parbox[c][1.5cm][c]{2.4cm}{\centering Supervisor\\Adjudicator}}
+\end{tabular}
+
+\vspace{0.4em}
+\begin{tabular}{m{3.6cm}c m{3.6cm}c m{3.6cm}}
+\fbox{\parbox[c][1.4cm][c]{3.3cm}{\centering Symbolic Rule\\Engine}} &
+$\rightarrow$ &
+\fbox{\parbox[c][1.4cm][c]{3.3cm}{\centering Safety Net\\(Offline Router)}} &
+$\rightarrow$ &
+\fbox{\parbox[c][1.4cm][c]{3.3cm}{\centering Final Label\\A/B/C/D}}
+\end{tabular}
+\caption{High-level architecture of Nusantara-Agent.}
+\label{fig:architecture}
+\end{figure}
+
+\section{Dataset and Expert Protocol}
+\subsection{Current Snapshot (2026-02-09)}
+\begin{table}[h]
+\centering
+\begin{tabular}{ll}
+\toprule
+Item & Value \\
+\midrule
+Active cases in benchmark file & 24 \\
+Cases with expert-4 vote & 16/24 \\
+Gold labels with SPLIT value & 0 \\
+Remaining tie cases for final arbitration & 0 \\
+Reference claim count (document) & 82 \\
+Actual cases in active benchmark file & 24 \\
+\bottomrule
+\end{tabular}
+\caption{Operational dataset status used in this draft.}
+\label{tab:status}
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lrr}
+\toprule
+Gold Label & Count & Percentage \\
+\midrule
+A & 7 & 29.2\% \\
+B & 4 & 16.7\% \\
+C & 13 & 54.2\% \\
+D & 0 & 0.0\% \\
+\bottomrule
+\end{tabular}
+\caption{Gold-label distribution in the current active dataset (N=24).}
+\label{tab:labeldist}
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lrr}
+\toprule
+Consensus Status & Count & Percentage \\
+\midrule
+Unanimous & 4 & 16.7\% \\
+Majority & 20 & 83.3\% \\
+Tie (2-2) & 0 & 0.0\% \\
+\bottomrule
+\end{tabular}
+\caption{Consensus profile after follow-up ingestion, arbiter vote, and final label patching.}
+\label{tab:consensus}
+\end{table}
+
+\subsection{Adjudication policy}
+For this draft cycle:
+\begin{itemize}[nosep]
+  \item clear majority mismatches were patched,
+  \item tie cases are being arbitrated by an independent final expert,
+  \item all changes are logged with versioned manifests.
+\end{itemize}
+
+\section{Metrics and Equations}
+To avoid ambiguous reporting, we explicitly define pilot metrics.
+
+\subsection{Consensus Strength}
+Let $N$ be the total number of cases, $N_u$ unanimous cases, and $N_m$ majority cases.
+\begin{equation}
+\mathrm{ConsensusStrength} = \frac{N_u + N_m}{N}
+\label{eq:consensus_strength}
+\end{equation}
+For the current snapshot, $(N_u, N_m, N)=(4,20,24)$, so:
+\begin{equation}
+\mathrm{ConsensusStrength} = \frac{4+20}{24}=1.000
+\end{equation}
+
+\subsection{Tie Rate}
+Let $N_t$ be the number of tie cases:
+\begin{equation}
+\mathrm{TieRate} = \frac{N_t}{N}
+\label{eq:tierate}
+\end{equation}
+With $N_t=0$ and $N=24$, $\mathrm{TieRate}=0.000$.
+
+\subsection{Binomial Confidence Interval (Wilson)}
+For observed accuracy $\hat{p}$ with sample size $n$ and $z=1.96$ (95\% CI), Wilson interval is:
+\begin{equation}
+\frac{\hat{p} + \frac{z^2}{2n} \pm
+z\sqrt{\frac{\hat{p}(1-\hat{p})}{n}+\frac{z^2}{4n^2}}}
+{1+\frac{z^2}{n}}
+\label{eq:wilson}
+\end{equation}
+This is used to report uncertainty on small pilot datasets and avoid over-claiming.
+
+\begin{figure}[h]
+\centering
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{m{2.4cm}c m{2.4cm}c m{2.4cm}c m{2.4cm}}
+\fbox{\parbox[c][1.4cm][c]{2.2cm}{\centering Freeze\\Dataset}} &
+$\rightarrow$ &
+\fbox{\parbox[c][1.4cm][c]{2.2cm}{\centering Run\\Benchmark}} &
+$\rightarrow$ &
+\fbox{\parbox[c][1.4cm][c]{2.2cm}{\centering Compute\\95\% CI}} &
+$\rightarrow$ &
+\fbox{\parbox[c][1.4cm][c]{2.2cm}{\centering Claim\\Gate}}
+\end{tabular}
+\caption{Evaluation protocol and claim gate used for pilot reporting.}
+\label{fig:gate}
+\end{figure}
+
+\section{Case-Level Arbitration Resolution}
+The four previously tied cases have been resolved by a final independent arbiter.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{llll}
+\toprule
+Case ID & Vote Pattern (A1,A2,A3,A4) & Arbiter Vote & Final Gold \\
+\midrule
+CS-LIN-052 & D, C, D, C & C & C \\
+CS-LIN-017 & A, C, C, A & A & A \\
+CS-BAL-014 & B, C, B, C & B & B \\
+CS-LIN-016 & C, A, C, A & A & A \\
+\bottomrule
+\end{tabular}
+\caption{Resolved tie cases after final arbiter input.}
+\label{tab:tiecases}
+\end{table}
+
+\section{Experiments and Preliminary Results}
+\subsection{What is currently established}
+\begin{itemize}[nosep]
+  \item Core deterministic suite passes in current environment (26/26 tests); full symbolic/PDF suite is blocked by missing optional dependencies (\texttt{clingo}, \texttt{fitz}).
+  \item Historical pilot numbers on earlier dev subset (N=22): 72.73\% (LLM mode), 59.09\% (offline fallback).
+  \item Post-patch reproducible offline benchmark on final active set (N=24): 41.67\% (10/24), Wilson 95\% CI $\approx$ [0.245, 0.612].
+  \item These numbers are \textbf{not} treated as final or publication-grade generalization metrics.
+\end{itemize}
+
+\subsection{What is intentionally deferred}
+\begin{itemize}[nosep]
+  \item controlled LLM-mode post-arbitration benchmark on the same frozen labels,
+  \item robust held-out evaluation with adequate sample size,
+  \item statistical claims beyond pilot confidence intervals.
+\end{itemize}
+
+\section{Threats to Validity and Limitations}
+\begin{enumerate}[nosep]
+  \item \textbf{Sample size}: current N is too small for strong generalization claims.
+  \item \textbf{Label dynamics}: recent expert updates changed gold labels on critical cases.
+  \item \textbf{Dataset promotion gap}: reference claim and active benchmark count are not yet aligned.
+  \item \textbf{Infrastructure variance}: offline and LLM modes yield different behavior profiles.
+\end{enumerate}
+
+\section{Preprint Readiness Statement}
+At the moment, this work is \textbf{ready for an internal/working preprint draft}, but \textbf{not yet ready for a strong public NLP preprint claim} centered on performance superiority.
+It can be shared as a pilot systems paper if the title, abstract, and conclusions explicitly state:
+\begin{itemize}[nosep]
+  \item pilot-scale evidence,
+  \item completed arbitration on the active set with explicit limitations,
+  \item no final generalization claim.
+\end{itemize}
+
+\section{Data and Code Availability}
+The dataset and source code are publicly available at:
+\begin{center}
+\url{https://github.com/neimasilk/nusantara-agent.git}
+\end{center}
+
+\section{Conclusion and Next Steps}
+Nusantara-Agent shows a feasible direction for auditable plural-law reasoning with neuro-symbolic controls.
+Immediate next steps are:
+\begin{enumerate}[nosep]
+  \item freeze the post-arbitration dataset version as reproducible release candidate,
+  \item run controlled LLM-mode and ablation benchmarks on the same frozen set,
+  \item report confidence intervals and claim boundaries consistently.
+\end{enumerate}
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{paper/references}
+
+\end{document}

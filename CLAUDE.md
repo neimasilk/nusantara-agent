@@ -99,25 +99,30 @@ Work is decomposed into Atomic Research Tasks (ARTs). See:
 - Each task specifies: type, executor (HUMAN_ONLY/AI_ONLY/EITHER), prerequisites, inputs/outputs, acceptance tests, and failure modes
 - Tasks should be picked up from the registry and marked IN_PROGRESS → DONE as completed
 
-## Current State (2026-02-08)
+## Current State (2026-02-09)
 
 - **Rule Engine Functional**: `ClingoRuleEngine` implementasi ASP siap pakai.
 - **Minangkabau Rules Expanded**: `src/symbolic/rules/minangkabau.lp` mencakup 30+ aturan formal (inheritance, actions, emergency conditions).
 - **ALL 3 Domain Rules VERIFIED by Expert**:
 - **ART-093 Completed (2026-02-09)**: Knowledge Base hukum nasional diperluas (KUHPerdata, KHI, UUPA) dengan 20+ pasal kunci untuk mendukung retrieval agen nasional.
-- **Benchmark Baseline (Pre-ART-093)**: Akurasi 54.55% pada subset evaluasi 22 kasus (dataset aktif berisi 24 entri, 2 berlabel `SPLIT`). Baseline ini menjadi acuan sementara untuk mengukur dampak perluasan KB.
-  - Minangkabau: `ART-020` DONE — 25 rules (14 BENAR, 6 DIKOREKSI, 5 baru)
-  - Bali: `ART-038` DONE — 34 rules (5 BENAR, 29 baru)
-  - Jawa: `ART-039` DONE — 36 rules (4 BENAR, 1 DIKOREKSI, 31 baru)
+- **Benchmark Baseline (Pre-ART-093)**: Akurasi 54.55% pada subset evaluasi 22 kasus. Baseline ini menjadi acuan sementara.
+- **Accuracy Tuning Progress (Sprint 2)**:
+  - **ART-092 DONE**: Router-Augmented Adjudicator diimplementasikan dengan Keyword Safety Net.
+  - **ART-096 DONE**: Supervisor Agent tuned untuk keseimbangan Nasional vs Adat.
+  - **Historical Result**: Akurasi sempat naik ke **72.73%** pada subset Phase 1 (N=22) dalam mode LLM.
+  - **Operational Snapshot (post-patch final, offline reproducible)**: **41.67%** (10/24) pada `experiments/09_ablation_study/results_post_patch_n24_offline_2026-02-09.json`.
+- **All 3 Domain Rules Verified**:
+  - Minangkabau: `ART-020` DONE — 25 rules
+  - Bali: `ART-038` DONE — 34 rules
+  - Jawa: `ART-039` DONE — 36 rules
   - **Total: 95 aturan hukum adat terverifikasi expert** di `data/rules/*.json`
-- **Exp 05 COMPLETED**: Menemukan 33.3% divergensi antara Rule Engine dan LLM (N=30), membuktikan perlunya "Symbolic Anchor" untuk mencegah halusinasi hukum.
-- **Exp 07 COMPLETED (Negative Result)**: Advanced orchestration (parallel + debate + self-correction + routing) belum mengungguli baseline sequential pada auto-score Kimi (N=12), sehingga protokol debat perlu iterasi.
-- **ART-093 COMPLETED**: Knowledge Base hukum nasional diperluas (KUHPerdata, KHI, UUPA) di `src/pipeline/nusantara_agent.py` untuk menyeimbangkan debat.
-- **ART-096 COMPLETED**: Supervisor Agent tuned di `src/agents/orchestrator.py` untuk menyeimbangkan bobot Nasional vs Adat (Akurasi naik ke 72.73%).
-- **Test Coverage**: 79/79 test pass (offline deterministic suite). Modules: rule_engine, text_processor, token_usage, router, debate, kg_search, llm_judge, nusantara_pipeline.
-- **ART-049 DONE**: Full Pipeline Integration selesai (`src/pipeline/nusantara_agent.py`). **ART-056 DONE**: Baseline configs documented.
-- **ART-057..064 ALL DONE**: 8 individual baseline implementations selesai. **ART-065 UNBLOCKED** — ready untuk execution (run all baselines 3x with seeds).
-- **Remaining blockers**: Exp 10 (CCS metric) BLOCKED pada ART-068/069/070.
+- **Exp 05 COMPLETED**: Menemukan 33.3% divergensi antara Rule Engine dan LLM (N=30).
+- **Exp 07 COMPLETED (Negative Result)**: Advanced orchestration belum mengungguli baseline sequential pada auto-score Kimi (N=12).
+- **Test Coverage**: 79/79 test pass pada baseline environment sebelumnya; di environment saat ini, full suite membutuhkan dependensi opsional (`clingo`, `fitz`) agar dapat direplikasi lengkap.
+- **ART-049 DONE**: Full Pipeline Integration selesai.
+- **ART-057..064 ALL DONE**: 8 individual baseline implementations selesai.
+- **Gold Label Integrity (Active Set)**: `SPLIT=0` dan `mismatch gold-vs-majority=0` setelah ingest arbiter final.
+- **Remaining blockers**: Exp 10 (CCS metric) BLOCKED pada ART-068/069/070. Gap metodologis 82-claim vs active-set 24 masih perlu rekonsiliasi pipeline/data promotion.
 
 ## Methodology Fixes
 

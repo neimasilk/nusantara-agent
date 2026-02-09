@@ -1,0 +1,7 @@
+id,ahli1,ahli2,ahli3,ahli4,gold_current,derived_4expert,match_status,rekomendasi,alasan
+CS-MIN-011,B,C,A,B,C,B,MISMATCH,UPDATE_TO_B,"4-expert majority B (2-1-1); gold C hanya 1 vote"
+CS-MIN-004,A,C,C,C,B,C,MISMATCH,UPDATE_TO_C,"4-expert majority C (3-1); gold B tidak memiliki dukungan"
+CS-LIN-052,D,C,D,C,D,SPLIT_2-2,AMBIGUOUS,KEEP_D,"Tie D-C; D lebih konservatif (perlu klarifikasi)"
+CS-MIN-013,B,C,B,D,B,B,MATCH,KEEP_B,"4-expert plurality B (2-1-1); D adalah klarifikasi ahli4"
+CS-BAL-014,B,C,B,C,B,SPLIT_2-2,AMBIGUOUS,KEEP_B,"Tie B-C; B mendapat dukungan kuat dari ahli adat Bali"
+CS-LIN-016,C,A,C,A,C,SPLIT_2-2,AMBIGUOUS,KEEP_C,"Tie C-A; C memperhitungkan kompleksitas antar-adat"

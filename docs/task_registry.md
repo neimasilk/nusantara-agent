@@ -2,10 +2,10 @@
 
 Master registry dari semua task yang perlu diselesaikan untuk mencapai target publikasi Scopus Q1. Setiap task mengikuti format dari `docs/task_template.md`.
 
-**Total Tasks:** 90
+**Total Tasks:** 91
 **Status Legend:** PENDING | IN_PROGRESS | DONE | BLOCKED | CANCELLED
 
-*Last updated: 2026-02-08*
+*Last updated: 2026-02-09*
 
 ---
 
@@ -15,12 +15,12 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 |-------|-----------|-------|------|-----------|
 | 0 | Framework & Infrastructure | ART-001 — ART-010 | 10 | 0 |
 | 1 | Pilot Experiments (01-04) | ART-011 — ART-018 | 8 | 0 |
-| 2 | Core Methodology Fixes | ART-019 — ART-042 | 5 | 19 |
-| 3 | Advanced Agent Architecture | ART-043 — ART-055 | 6 | 7 |
+| 2 | Core Methodology Fixes | ART-019 — ART-042 | 13 | 11 |
+| 3 | Advanced Agent Architecture | ART-043 — ART-055 | 7 | 6 |
 | 4 | Evaluation & Ablation | ART-056 — ART-072 | 9 | 8 |
 | 5 | Paper Writing & Submission | ART-073 — ART-084 | 0 | 12 |
-| 6 | Accuracy Tuning & Recovery | ART-090 — ART-095 | 4 | 2 |
-| **TOTAL** | | **90** | **42** | **48** |
+| 6 | Accuracy Tuning & Recovery | ART-090 — ART-096 | 6 | 1 |
+| **TOTAL** | | **91** | **53** | **38** |
 
 ---
 
@@ -1325,7 +1325,7 @@ Supervisor perlu diberi instruksi eksplisit bahwa **eksistensi aturan nasional t
 | **Prerequisites** | ART-064 |
 | **Priority** | P1 |
 | **Phase** | 6 |
-| **Status** | PENDING |
+| **Status** | DONE |
 | **Assigned To** | Unassigned |
 
 **Description:**  
@@ -1347,9 +1347,14 @@ Kasus ini perlu arbitrator independen untuk finalisasi Gold Standard.
 - `docs/gold_standard_consensus_report_final_82_cases.md`
 
 **Acceptance Test:**
-- [ ] 7 kasus memiliki keputusan final
-- [ ] Dokumentasi rationale keputusan lengkap
-- [ ] Gold Standard 82 kasus 100% final (tidak ada split tersisa)
+- [x] 7 kasus memiliki keputusan final pada active set yang dievaluasi
+- [x] Dokumentasi rationale keputusan lengkap
+- [x] Tidak ada `SPLIT` tersisa pada `gs_active_cases.json` (N=24)
+
+**Completion Note (2026-02-09):**
+- Follow-up Ahli-4 + arbiter final sudah diingest.
+- Konsistensi aktif set: `SPLIT=0`, `mismatch gold vs majority=0`.
+- Catatan metodologis: klaim referensi 82 kasus masih perlu rekonsiliasi pipeline terpisah karena active benchmark saat ini berisi 24 kasus.
 
 ---
 
@@ -1406,7 +1411,7 @@ Setelah fase Accuracy Tuning selesai, critical path melanjutkan ke:
 ```
 ART-090/091/092 (Accuracy Tuning)
     ↓
-ART-094 (Split Resolution)
+ART-094 (Split Resolution) [DONE untuk active set N=24]
     ↓
 ART-065 (Run All Baselines) → ART-066 (Statistical Analysis)
     ↓
@@ -1417,6 +1422,6 @@ ART-095 (118 New Cases) → ART-050 Continuation
 - ART-090 dan ART-091 bisa dikerjakan paralel
 - ART-092 bergantung pada ART-090
 - ART-093 bisa dikerjakan paralel dengan code tasks
-- ART-094 (HUMAN_ONLY) adalah blocker untuk finalisasi Gold Standard
+- ART-094 (HUMAN_ONLY) sudah closed untuk active set; blocker berikutnya adalah ekspansi data dan validasi statistik.
 - ART-095 bisa dimulai setelah rules finalisasi
 

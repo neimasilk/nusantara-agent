@@ -1,0 +1,178 @@
+{
+  "source_dataset": "data/processed/gold_standard/gs_active_cases.json",
+  "total_raw_cases": 24,
+  "split_skipped": 0,
+  "total_evaluated": 24,
+  "correct": 10,
+  "accuracy": 0.4166666666666667,
+  "results": [
+    {
+      "id": "CS-MIN-011",
+      "gold": "B",
+      "predicted": "C",
+      "match": false,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Ada kata kunci nasional kuat dalam konteks adat, diperlakukan sebagai konflik.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "CS-MIN-004",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "CS-JAW-006",
+      "gold": "A",
+      "predicted": "C",
+      "match": false,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Ada kata kunci nasional kuat dalam konteks adat, diperlakukan sebagai konflik.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "CS-LIN-052",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "CS-NAS-066",
+      "gold": "A",
+      "predicted": "A",
+      "match": true,
+      "reasoning": "{\"label\": \"A\", \"langkah_keputusan\": \"1\", \"alasan_utama\": \"Pelanggaran HAM fundamental diprioritaskan ke hukum nasional.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "CS-BAL-002",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Rule engine mendeteksi konflik eksplisit antar norma.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "CS-NAS-010",
+      "gold": "A",
+      "predicted": "C",
+      "match": false,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Ada kata kunci nasional kuat dalam konteks adat, diperlakukan sebagai konflik.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "CS-LIN-017",
+      "gold": "A",
+      "predicted": "B",
+      "match": false,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "CS-MIN-013",
+      "gold": "B",
+      "predicted": "C",
+      "match": false,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Rule engine mendeteksi konflik eksplisit antar norma.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "CS-BAL-014",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "CS-JAW-015",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Indikator adat dominan pada query konsensus.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "CS-LIN-016",
+      "gold": "A",
+      "predicted": "C",
+      "match": false,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Router menandai konflik nasional-adat.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "CS-BAL-012",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Ada kata kunci nasional kuat dalam konteks adat, diperlakukan sebagai konflik.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "CS-LIN-018",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Ada kata kunci nasional kuat dalam konteks adat, diperlakukan sebagai konflik.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "CS-MIN-005",
+      "gold": "A",
+      "predicted": "B",
+      "match": false,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "CS-JAW-011",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Rule engine mendeteksi konflik eksplisit antar norma.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "CS-BAL-009",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "CS-NAS-022",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Rule engine mendeteksi konflik eksplisit antar norma.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "CS-MIN-015",
+      "gold": "A",
+      "predicted": "B",
+      "match": false,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "CS-JAW-019",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Indikator adat dominan pada query konsensus.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "CS-BAL-020",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Rule engine mendeteksi konflik eksplisit antar norma.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "CS-NAS-041",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "CS-MIN-025",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Indikator adat dominan pada query konsensus.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "CS-JAW-030",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Output simbolik dua sistem muncul bersamaan.\", \"konflik_terdeteksi\": \"Ya\"}"
+    }
+  ]
+}
