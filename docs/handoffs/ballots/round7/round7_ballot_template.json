@@ -1,0 +1,57 @@
+{
+  "round_id": "20260209_round7",
+  "agent": "replace_me",
+  "baseline_version": "B0_2026-02-09",
+  "confidence_global": 0.8,
+  "recommendation": "P3",
+  "blockers": [
+    {
+      "id": "BK-001",
+      "severity": "HIGH",
+      "resolved": false,
+      "description": "Example blocker"
+    }
+  ],
+  "votes": [
+    {
+      "proposal_id": "P1",
+      "vote": "approve",
+      "score": 4,
+      "confidence": 0.8,
+      "rationale": "Replace with evidence-based rationale.",
+      "evidence": [
+        "data/benchmark_manifest.json",
+        "experiments/09_ablation_study/results_post_patch_n24_offline_2026-02-09.json"
+      ]
+    },
+    {
+      "proposal_id": "P2",
+      "vote": "reject",
+      "score": 3,
+      "confidence": 0.7,
+      "rationale": "Replace with rationale.",
+      "evidence": [
+        "docs/task_registry.md"
+      ]
+    },
+    {
+      "proposal_id": "P3",
+      "vote": "approve",
+      "score": 5,
+      "confidence": 0.9,
+      "rationale": "Replace with rationale.",
+      "evidence": [
+        "docs/handoffs/20260209_codex_arxiv_go_snapshot.md"
+      ]
+    },
+    {
+      "proposal_id": "P4",
+      "vote": "abstain",
+      "score": 1,
+      "confidence": 0.5,
+      "rationale": "Replace with rationale.",
+      "evidence": []
+    }
+  ],
+  "notes": "Optional note."
+}
