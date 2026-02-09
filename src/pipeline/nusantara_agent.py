@@ -1,13 +1,19 @@
 import re
 import json
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 
 from src.agents.router import route_query
 from src.kg_engine.search import SimpleKGSearch
 from src.symbolic.rule_engine import ClingoRuleEngine
 from src.agents.orchestrator import build_parallel_orchestrator
-from langchain_core.messages import HumanMessage
+
+try:
+    from langchain_core.messages import HumanMessage
+except ImportError:
+    class HumanMessage:  # type: ignore[no-redef]
+        def __init__(self, content: str):
+            self.content = content
 
 
 class JsonGraphRetriever:
@@ -341,10 +347,127 @@ class NusantaraAgentPipeline:
         
         return facts
 
+    @staticmethod
+    def _parse_fact(fact: str) -> Tuple[str, List[str]]:
+        cleaned = fact.strip().rstrip(".")
+        if "(" not in cleaned or not cleaned.endswith(")"):
+            return cleaned, []
+        predicate, args_part = cleaned.split("(", 1)
+        args = [arg.strip() for arg in args_part[:-1].split(",") if arg.strip()]
+        return predicate.strip(), args
+
+    def _run_rules_fallback(self, domain: str, facts: List[str]) -> List[str]:
+        """Fallback rule evaluation saat clingo belum tersedia di environment."""
+        parsed: Dict[str, List[List[str]]] = {}
+        for fact in facts:
+            predicate, args = self._parse_fact(fact)
+            parsed.setdefault(predicate, []).append(args)
+
+        atoms: List[str] = []
+
+        if domain == "nasional":
+            if "child" in parsed or "ada_anak" in parsed:
+                atoms.append("berhak_waris(anak_pewaris)")
+            if "spouse" in parsed and ("menikah_sah" in parsed or "spouse" in parsed):
+                atoms.append("berhak_waris(pasangan_hidup)")
+                atoms.append("bagian_spouse(pasangan_hidup,seperdua_harta_bersama)")
+                atoms.append("hak_spouse_atas_harta_bersama(pasangan_hidup)")
+
+            for args in parsed.get("nilai_wasiat", []):
+                try:
+                    if args and int(args[0]) > 33:
+                        atoms.append("conflict(wasiat,melebihi_batas_wajar)")
+                except ValueError:
+                    continue
+
+            if "hak_waris_nasional" in parsed and "larangan_waris_adat" in parsed:
+                atoms.append("conflict_norm(nasional_vs_adat,dummy,dummy)")
+
+            for args in parsed.get("action", []):
+                if len(args) >= 2 and args[1] == "bagi_tidak_adil_ke_anak":
+                    atoms.append("conflict(harta_waris_pewaris,pembagian_tidak_adil)")
+
+            if not atoms and facts:
+                atoms.append("fakta_nasional_terbaca")
+            return atoms
+
+        if domain == "minangkabau":
+            for args in parsed.get("asset_type", []):
+                if len(args) >= 2 and args[1] == "pusako_tinggi":
+                    for action_args in parsed.get("action", []):
+                        if len(action_args) >= 2 and action_args[1] in {"sell", "pawn"}:
+                            atoms.append(f"conflict({action_args[0]},{action_args[1]})")
+
+            if "asset_type" in parsed and "parent" in parsed:
+                if any(len(args) >= 2 and args[0] == "harta_pencaharian" for args in parsed["asset_type"]):
+                    atoms.append("can_inherit(anak_pewaris,harta_pencaharian)")
+
+            if "kemenakan" in "".join(",".join(args) for args in parsed.get("female", [])):
+                atoms.append("can_inherit(kemenakan,tanah_pusako)")
+
+            if not atoms and facts:
+                atoms.append("fakta_minangkabau_terbaca")
+            return atoms
+
+        if domain == "bali":
+            female_targets = {args[0] for args in parsed.get("female", []) if args}
+            kawin_keluar_targets = {args[0] for args in parsed.get("kawin_keluar", []) if args}
+            for person in sorted(female_targets.intersection(kawin_keluar_targets)):
+                atoms.append(f"ahli_waris_terbatas({person})")
+                atoms.append(f"can_inherit({person},harta_druwe_gabro)")
+
+            male_targets = {args[0] for args in parsed.get("male", []) if args}
+            purusa_targets = {args[0] for args in parsed.get("status_purusa", []) if args}
+            ngayah_targets = {args[0] for args in parsed.get("kewajiban_ngayah", []) if args}
+            for person in sorted(male_targets.intersection(purusa_targets).intersection(ngayah_targets)):
+                atoms.append(f"can_inherit({person},harta_druwe_gabro)")
+
+            for action_args in parsed.get("action", []):
+                if len(action_args) >= 2 and action_args[1] == "sell":
+                    atoms.append(f"conflict({action_args[0]},sell)")
+
+            if "sentana_rajeg" in parsed:
+                for args in parsed["sentana_rajeg"]:
+                    if args:
+                        atoms.append(f"can_inherit({args[0]},harta_druwe_gabro)")
+
+            if not atoms and facts:
+                atoms.append("fakta_bali_terbaca")
+            return atoms
+
+        if domain == "jawa":
+            children = [args[0] for args in parsed.get("child", []) if args]
+            if len(children) >= 1:
+                for child in children:
+                    atoms.append(f"can_inherit({child},harta_gono_gini)")
+            if len(children) >= 2:
+                atoms.append(f"equal_share({children[0]},{children[1]},harta_gono_gini)")
+
+            if "anak_angkat" in parsed and "adopsi_terang_tunai" in parsed:
+                atoms.append("can_inherit(anak_angkat,harta_gono_gini)")
+
+            if ("janda" in parsed or "duda" in parsed) and "menikah_lagi" in parsed:
+                person = "pasangan_hidup"
+                if parsed.get("janda") and parsed["janda"][0]:
+                    person = parsed["janda"][0][0]
+                elif parsed.get("duda") and parsed["duda"][0]:
+                    person = parsed["duda"][0][0]
+                atoms.append(f"pecah_panci({person})")
+                atoms.append("conflict(harta_gono_gini,hold_without_distribution)")
+
+            if not atoms and facts:
+                atoms.append("fakta_jawa_terbaca")
+            return atoms
+
+        return atoms
+
     def _run_rules(self, domain: str, facts: List[str]) -> List[str]:
         lp_file = self.rule_files.get(domain)
         if not lp_file or not lp_file.exists(): return []
-        engine = ClingoRuleEngine(lp_file=str(lp_file))
+        try:
+            engine = ClingoRuleEngine(lp_file=str(lp_file))
+        except ImportError:
+            return self._run_rules_fallback(domain, facts)
         for fact in facts: engine.add_fact(fact)
         models = engine.solve()
         return models[0] if models else []

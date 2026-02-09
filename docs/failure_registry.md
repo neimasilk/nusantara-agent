@@ -205,6 +205,20 @@ Living document yang mencatat setiap kegagalan, hasil negatif, dan pendekatan ya
 - **Tindakan:** MITIGATED
 - **Detail Tindakan:** Implementasi "Keyword Safety Net" di Orchestrator. Jika Router label = Adat TAPI ada keyword nasional keras (SHM, Poligami, Cerai), inject WARNING ke prompt Supervisor. Hasil: Akurasi sample kritis naik dari 40% ke 100%.
 
+### F-013: Environment Dependency Gap Blokir Validasi LLM Penuh
+
+- **Tanggal:** 2026-02-09
+- **Eksperimen:** 09_ablation_study (operational benchmark run)
+- **Kategori:** TECHNICAL_FAILURE
+- **Severity:** MAJOR
+- **Status:** MITIGATED (operational), UNRESOLVED (scientific parity)
+- **Deskripsi:** Runner benchmark gagal pada tahap import karena dependency opsional (`langchain_openai`, `langgraph`, `clingo`, `fitz`) tidak tersedia di environment aktif.
+- **Expected vs Actual:** Expected: benchmark mode LLM penuh berjalan dan menghasilkan metrik yang comparable dengan run sebelumnya. Actual: benchmark awal crash; setelah fallback hardening, benchmark berjalan dalam mode offline tetapi metrik tidak setara dengan mode LLM penuh.
+- **Root Cause:** Coupling dependency eksternal pada import-time dan ketidakkonsistenan setup environment lintas mesin/agen.
+- **Implikasi untuk Paper:** Risiko salah interpretasi jika metrik fallback diperlakukan sebagai bukti performa model utama. Klaim milestone wajib berdasarkan run dengan stack evaluasi yang setara.
+- **Tindakan:** MITIGATED / ACKNOWLEDGED
+- **Detail Tindakan:** Menambahkan fallback dependency-optional pada modul `orchestrator`, `router`, `debate`, `self_correction`, dan `pipeline` agar workflow harian tidak crash. Tetap diwajibkan re-run mode penuh setelah dependency dilengkapi sebelum klaim milestone.
+
 --- 
 
 ## Statistik Ringkasan
@@ -213,10 +227,10 @@ Living document yang mencatat setiap kegagalan, hasil negatif, dan pendekatan ya
 |----------|-------|----------|-------|-------|
 | NEGATIVE_RESULT | 2 | 0 | 2 | 0 |
 | ABANDONED_APPROACH | 0 | 0 | 0 | 0 |
-| TECHNICAL_FAILURE | 1 | 0 | 0 | 1 |
+| TECHNICAL_FAILURE | 2 | 0 | 1 | 1 |
 | ASSUMPTION_VIOLATED | 0 | 0 | 0 | 0 |
 | LIMITATION_DISCOVERED | 9 | 3 | 6 | 0 |
 | IN_PROGRESS | 0 | 0 | 0 | 0 |
-| **TOTAL** | **12** | **3** | **8** | **1** |
+| **TOTAL** | **13** | **3** | **9** | **1** |
 
-*Last updated: 2026-02-09 (ART-092 Completion)*
+*Last updated: 2026-02-09 (offline fallback hardening + benchmark run)*

@@ -1,11 +1,23 @@
 import json
 import os
 import re
-from typing import Dict, Optional
+from typing import Any, Dict, Optional
 
 from dotenv import load_dotenv
-from langchain_openai import ChatOpenAI
-from langchain_core.messages import SystemMessage
+
+try:
+    from langchain_openai import ChatOpenAI
+    _HAS_LANGCHAIN_OPENAI = True
+except ImportError:
+    ChatOpenAI = Any  # type: ignore[assignment]
+    _HAS_LANGCHAIN_OPENAI = False
+
+try:
+    from langchain_core.messages import SystemMessage
+except ImportError:
+    class SystemMessage:  # type: ignore[no-redef]
+        def __init__(self, content: str):
+            self.content = content
 
 load_dotenv()
 
@@ -14,6 +26,11 @@ ROUTER_LABELS = ("pure_national", "pure_adat", "conflict", "consensus")
 
 
 def _get_llm() -> ChatOpenAI:
+    if not _HAS_LANGCHAIN_OPENAI:
+        raise ImportError(
+            "Dependency 'langchain_openai' tidak tersedia. "
+            "Gunakan mode heuristic (use_llm=False) atau install requirements."
+        )
     return ChatOpenAI(
         api_key=os.getenv("DEEPSEEK_API_KEY"),
         base_url="https://api.deepseek.com",
@@ -140,6 +157,10 @@ def _llm_route(query: str, llm: ChatOpenAI) -> Dict:
 
 def route_query(query: str, use_llm: bool = False, llm: Optional[ChatOpenAI] = None) -> Dict:
     if use_llm:
+        if not _HAS_LANGCHAIN_OPENAI:
+            fallback = _heuristic_route(query)
+            fallback["method"] = "heuristic_fallback"
+            return fallback
         return _llm_route(query, llm or _get_llm())
     return _heuristic_route(query)
 

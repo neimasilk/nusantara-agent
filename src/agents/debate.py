@@ -1,10 +1,22 @@
 import json
 import os
-from typing import Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 from dotenv import load_dotenv
-from langchain_openai import ChatOpenAI
-from langchain_core.messages import SystemMessage
+
+try:
+    from langchain_openai import ChatOpenAI
+    _HAS_LANGCHAIN_OPENAI = True
+except ImportError:
+    ChatOpenAI = Any  # type: ignore[assignment]
+    _HAS_LANGCHAIN_OPENAI = False
+
+try:
+    from langchain_core.messages import SystemMessage
+except ImportError:
+    class SystemMessage:  # type: ignore[no-redef]
+        def __init__(self, content: str):
+            self.content = content
 
 from .self_correction import revise_answer
 from ..utils.token_usage import extract_token_usage as _extract_token_usage, merge_usage as _merge_usage
@@ -13,6 +25,11 @@ load_dotenv()
 
 
 def _get_llm() -> ChatOpenAI:
+    if not _HAS_LANGCHAIN_OPENAI:
+        raise ImportError(
+            "Dependency 'langchain_openai' tidak tersedia. "
+            "Mode debate membutuhkan dependency ini."
+        )
     return ChatOpenAI(
         api_key=os.getenv("DEEPSEEK_API_KEY"),
         base_url="https://api.deepseek.com",
