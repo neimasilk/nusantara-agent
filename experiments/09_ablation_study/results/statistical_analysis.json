@@ -1,0 +1,323 @@
+{
+  "results_dir": "experiments/09_ablation_study/results",
+  "n_total_runs": 21,
+  "reference_baseline": "B5",
+  "baseline_stats": {
+    "B1": {
+      "baseline_id": "B1",
+      "n_runs": 3,
+      "seeds": [
+        11,
+        22,
+        33
+      ],
+      "accuracies": [
+        0.5909090909090909,
+        0.5909090909090909,
+        0.5909090909090909
+      ],
+      "mean_accuracy": 0.5909090909090909,
+      "std_accuracy": 0.0,
+      "ci95_accuracy": [
+        0.5909090909090909,
+        0.5909090909090909
+      ]
+    },
+    "B2": {
+      "baseline_id": "B2",
+      "n_runs": 3,
+      "seeds": [
+        11,
+        22,
+        33
+      ],
+      "accuracies": [
+        0.5909090909090909,
+        0.5909090909090909,
+        0.5909090909090909
+      ],
+      "mean_accuracy": 0.5909090909090909,
+      "std_accuracy": 0.0,
+      "ci95_accuracy": [
+        0.5909090909090909,
+        0.5909090909090909
+      ]
+    },
+    "B3": {
+      "baseline_id": "B3",
+      "n_runs": 3,
+      "seeds": [
+        11,
+        22,
+        33
+      ],
+      "accuracies": [
+        0.5909090909090909,
+        0.5909090909090909,
+        0.5909090909090909
+      ],
+      "mean_accuracy": 0.5909090909090909,
+      "std_accuracy": 0.0,
+      "ci95_accuracy": [
+        0.5909090909090909,
+        0.5909090909090909
+      ]
+    },
+    "B4": {
+      "baseline_id": "B4",
+      "n_runs": 3,
+      "seeds": [
+        11,
+        22,
+        33
+      ],
+      "accuracies": [
+        0.5909090909090909,
+        0.5909090909090909,
+        0.5909090909090909
+      ],
+      "mean_accuracy": 0.5909090909090909,
+      "std_accuracy": 0.0,
+      "ci95_accuracy": [
+        0.5909090909090909,
+        0.5909090909090909
+      ]
+    },
+    "B5": {
+      "baseline_id": "B5",
+      "n_runs": 3,
+      "seeds": [
+        11,
+        22,
+        33
+      ],
+      "accuracies": [
+        0.5454545454545454,
+        0.5454545454545454,
+        0.5454545454545454
+      ],
+      "mean_accuracy": 0.5454545454545454,
+      "std_accuracy": 0.0,
+      "ci95_accuracy": [
+        0.5454545454545454,
+        0.5454545454545454
+      ]
+    },
+    "B6": {
+      "baseline_id": "B6",
+      "n_runs": 3,
+      "seeds": [
+        11,
+        22,
+        33
+      ],
+      "accuracies": [
+        0.5454545454545454,
+        0.5454545454545454,
+        0.5454545454545454
+      ],
+      "mean_accuracy": 0.5454545454545454,
+      "std_accuracy": 0.0,
+      "ci95_accuracy": [
+        0.5454545454545454,
+        0.5454545454545454
+      ]
+    },
+    "B7": {
+      "baseline_id": "B7",
+      "n_runs": 3,
+      "seeds": [
+        11,
+        22,
+        33
+      ],
+      "accuracies": [
+        0.5454545454545454,
+        0.5454545454545454,
+        0.5454545454545454
+      ],
+      "mean_accuracy": 0.5454545454545454,
+      "std_accuracy": 0.0,
+      "ci95_accuracy": [
+        0.5454545454545454,
+        0.5454545454545454
+      ]
+    }
+  },
+  "pairwise_vs_reference": [
+    {
+      "baseline_id": "B1",
+      "reference_baseline": "B5",
+      "paired_seeds": [
+        11,
+        22,
+        33
+      ],
+      "baseline_accuracies": [
+        0.5909090909090909,
+        0.5909090909090909,
+        0.5909090909090909
+      ],
+      "reference_accuracies": [
+        0.5454545454545454,
+        0.5454545454545454,
+        0.5454545454545454
+      ],
+      "delta_mean_accuracy": 0.045454545454545525,
+      "n_pairs": 3,
+      "t_test_pvalue": 0.0,
+      "wilcoxon_pvalue": 0.25,
+      "cohens_d": 0.0
+    },
+    {
+      "baseline_id": "B2",
+      "reference_baseline": "B5",
+      "paired_seeds": [
+        11,
+        22,
+        33
+      ],
+      "baseline_accuracies": [
+        0.5909090909090909,
+        0.5909090909090909,
+        0.5909090909090909
+      ],
+      "reference_accuracies": [
+        0.5454545454545454,
+        0.5454545454545454,
+        0.5454545454545454
+      ],
+      "delta_mean_accuracy": 0.045454545454545525,
+      "n_pairs": 3,
+      "t_test_pvalue": 0.0,
+      "wilcoxon_pvalue": 0.25,
+      "cohens_d": 0.0
+    },
+    {
+      "baseline_id": "B3",
+      "reference_baseline": "B5",
+      "paired_seeds": [
+        11,
+        22,
+        33
+      ],
+      "baseline_accuracies": [
+        0.5909090909090909,
+        0.5909090909090909,
+        0.5909090909090909
+      ],
+      "reference_accuracies": [
+        0.5454545454545454,
+        0.5454545454545454,
+        0.5454545454545454
+      ],
+      "delta_mean_accuracy": 0.045454545454545525,
+      "n_pairs": 3,
+      "t_test_pvalue": 0.0,
+      "wilcoxon_pvalue": 0.25,
+      "cohens_d": 0.0
+    },
+    {
+      "baseline_id": "B4",
+      "reference_baseline": "B5",
+      "paired_seeds": [
+        11,
+        22,
+        33
+      ],
+      "baseline_accuracies": [
+        0.5909090909090909,
+        0.5909090909090909,
+        0.5909090909090909
+      ],
+      "reference_accuracies": [
+        0.5454545454545454,
+        0.5454545454545454,
+        0.5454545454545454
+      ],
+      "delta_mean_accuracy": 0.045454545454545525,
+      "n_pairs": 3,
+      "t_test_pvalue": 0.0,
+      "wilcoxon_pvalue": 0.25,
+      "cohens_d": 0.0
+    },
+    {
+      "baseline_id": "B6",
+      "reference_baseline": "B5",
+      "paired_seeds": [
+        11,
+        22,
+        33
+      ],
+      "baseline_accuracies": [
+        0.5454545454545454,
+        0.5454545454545454,
+        0.5454545454545454
+      ],
+      "reference_accuracies": [
+        0.5454545454545454,
+        0.5454545454545454,
+        0.5454545454545454
+      ],
+      "delta_mean_accuracy": 0.0,
+      "n_pairs": 3,
+      "t_test_pvalue": 1.0,
+      "wilcoxon_pvalue": 1.0,
+      "cohens_d": 0.0
+    },
+    {
+      "baseline_id": "B7",
+      "reference_baseline": "B5",
+      "paired_seeds": [
+        11,
+        22,
+        33
+      ],
+      "baseline_accuracies": [
+        0.5454545454545454,
+        0.5454545454545454,
+        0.5454545454545454
+      ],
+      "reference_accuracies": [
+        0.5454545454545454,
+        0.5454545454545454,
+        0.5454545454545454
+      ],
+      "delta_mean_accuracy": 0.0,
+      "n_pairs": 3,
+      "t_test_pvalue": 1.0,
+      "wilcoxon_pvalue": 1.0,
+      "cohens_d": 0.0
+    }
+  ],
+  "ranking_by_mean_accuracy": [
+    {
+      "baseline_id": "B1",
+      "mean_accuracy": 0.5909090909090909
+    },
+    {
+      "baseline_id": "B2",
+      "mean_accuracy": 0.5909090909090909
+    },
+    {
+      "baseline_id": "B3",
+      "mean_accuracy": 0.5909090909090909
+    },
+    {
+      "baseline_id": "B4",
+      "mean_accuracy": 0.5909090909090909
+    },
+    {
+      "baseline_id": "B5",
+      "mean_accuracy": 0.5454545454545454
+    },
+    {
+      "baseline_id": "B6",
+      "mean_accuracy": 0.5454545454545454
+    },
+    {
+      "baseline_id": "B7",
+      "mean_accuracy": 0.5454545454545454
+    }
+  ]
+}

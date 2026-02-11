@@ -38,6 +38,9 @@ Dokumen ini menetapkan framework testing operasional agar pipeline riset dapat d
 ### Layer C — Pipeline Smoke (opsional tanpa API, wajib jika API tersedia)
 - Jalankan subset query kecil (`N<=3`) untuk memastikan alur run tidak crash.
 - Output harus menghasilkan `summary.json` dan `run_index.json` yang valid JSON.
+- Untuk benchmark Exp 09:
+  - Mode `scientific_claimable` wajib fail-hard jika benchmark manifest tidak koheren (`count_matches_reference_claim=false`).
+  - Mode `operational_offline` boleh dipakai untuk tracking harian, tetapi tidak boleh langsung jadi klaim paper.
 
 ### Layer D — Scientific Review Gate (wajib untuk klaim paper)
 - Layer engineering lulus tidak otomatis berarti valid secara ilmiah.

@@ -137,3 +137,60 @@ Setelah integritas label aktif set diperbaiki (arbiter + patch), pipeline offlin
 Prioritas berikutnya bukan over-claim angka ini, melainkan:
 1. Menjalankan benchmark LLM-mode pada dataset freeze yang sama (N=24),
 2. Menjaga pemisahan jelas antara metrik operasional offline dan metrik evaluasi ilmiah.
+
+---
+
+# Phase 5: ART-065/066 Operational Baseline Runs (Post-Mata Elang Priority Fix)
+
+Tanggal: 11 Februari 2026  
+Mode: `operational_offline` (`NUSANTARA_FORCE_OFFLINE=1`, external LLM disabled)  
+Dataset: `data/processed/gold_standard/gs_active_cases.json` (evaluable 22)
+
+## Eksekusi ART-065 (Automated Baselines)
+
+- Runner baru: `experiments/09_ablation_study/run_all_baselines.py`
+- Konfigurasi run: 7 baseline otomatis (`B1..B7`) x 3 seed (`11,22,33`) = **21 run**
+- Artefak utama:
+  - `experiments/09_ablation_study/results/run_all_baselines_summary.json`
+  - `experiments/09_ablation_study/results/baseline_runs/B*/run_seed_*.json`
+
+Ringkasan akurasi mean:
+
+| Baseline | Mean Accuracy |
+|---|---|
+| B1 | 59.09% |
+| B2 | 59.09% |
+| B3 | 59.09% |
+| B4 | 59.09% |
+| B5 | 54.55% |
+| B6 | 54.55% |
+| B7 | 54.55% |
+
+## Eksekusi ART-066 (Statistical Analysis)
+
+- Script baru: `experiments/09_ablation_study/statistical_analysis.py`
+- Reference baseline: `B5`
+- Artefak statistik:
+  - `experiments/09_ablation_study/results/statistical_analysis.json`
+  - `experiments/09_ablation_study/results/statistical_analysis.md`
+
+Output mencakup:
+- mean, std, dan CI per baseline
+- paired t-test, Wilcoxon, dan Cohen's d vs baseline acuan
+- ranking baseline by mean accuracy
+
+## Verifikasi Gate Benchmark (Mode Operational vs Scientific)
+
+- Verifikasi operasional (offline):  
+  `python experiments/09_ablation_study/run_bench_active.py --mode operational_offline`  
+  menghasilkan akurasi **59.09%** pada 22 kasus evaluable  
+  (artefak: `experiments/09_ablation_study/results/benchmark_operational_check_2026-02-11.json`).
+- Verifikasi scientific gate: mode `scientific_claimable` kini ditolak otomatis jika `count_matches_reference_claim=false`.
+
+## Catatan Metodologis (Wajib)
+
+1. Run ini valid sebagai **operational progress** untuk ART-065/066, bukan penutupan klaim ilmiah final.
+2. Cakupan masih active set (22 evaluable), belum target 200 kasus.
+3. Snapshot ini menggunakan manifest terbaru (2026-02-11) yang mencatat `SPLIT=2`; ini berbeda dari snapshot historis sebelumnya yang sempat melaporkan `SPLIT=0`.
+4. Human baseline B8 belum ikut dalam run ini.
+5. Untuk mode `scientific_claimable`, runner benchmark kini fail-hard jika manifest reference mismatch (gate integrity aktif).

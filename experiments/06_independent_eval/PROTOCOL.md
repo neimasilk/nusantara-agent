@@ -40,8 +40,8 @@
 
 1. Jalankan precheck artefak:
    - `python experiments/06_independent_eval/run_precheck.py`
+   - `python experiments/06_independent_eval/assess_readiness.py`
 2. Konsolidasi anotasi manusia.
 3. Jalankan penilaian LLM independen.
 4. Hitung metrik dan confidence interval.
 5. Tulis analisis dan review.
-

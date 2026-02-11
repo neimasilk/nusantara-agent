@@ -7,7 +7,11 @@ Dokumen ini mendefinisikan 8 baseline secara reproduksibel.
 1. Jalankan dari project root.
 2. Input query: string hukum Indonesia.
 3. Output: JSON berisi `baseline_id`, `query`, `jawaban`, dan metadata komponen aktif.
-4. Rule files default:
+4. Eksekusi batch ART-065 gunakan:
+   - `python experiments/09_ablation_study/run_all_baselines.py --mode operational_offline`
+5. Analisis statistik ART-066 gunakan:
+   - `python experiments/09_ablation_study/statistical_analysis.py --results-dir experiments/09_ablation_study/results --reference-baseline B5`
+6. Rule files default:
    1. `src/symbolic/rules/nasional.lp`
    2. `src/symbolic/rules/minangkabau.lp`
    3. `src/symbolic/rules/bali.lp`
@@ -93,4 +97,3 @@ Dokumen ini mendefinisikan 8 baseline secara reproduksibel.
    1. Analisis manusia tanpa bantuan AI.
 3. Komponen non-aktif:
    1. Seluruh modul AI.
-

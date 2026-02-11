@@ -18,5 +18,13 @@ Checklist review awal:
 - Coverage domain tidak seimbang.
 - Putusan MA belum cukup representatif lintas domain.
 
-Keputusan sementara: **FAIL (sementara, karena blocked dependency)**.
+5. Apakah status readiness sudah terdokumentasi machine-readable?
+- Ya. Sejak 2026-02-11 ditambahkan gate readiness terstruktur:
+  - Script: `experiments/06_independent_eval/assess_readiness.py`
+  - Artefak: `experiments/06_independent_eval/readiness_status.json`
+- Snapshot terkini:
+  - `ART-031_operational_ready = false`
+  - `ART-031_scientific_ready = false`
+  - Blocker utama: putusan MA valid non-draft masih jauh dari target 50, dan agreement report final anotator belum tersedia.
 
+Keputusan sementara: **FAIL (sementara, karena blocked dependency)**.

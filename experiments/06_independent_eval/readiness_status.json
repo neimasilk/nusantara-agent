@@ -1,0 +1,48 @@
+{
+  "as_of": "2026-02-11",
+  "targets": {
+    "paragraf": 200,
+    "annotator": 5,
+    "putusan_ma": 50
+  },
+  "counts": {
+    "gold_text_files": 200,
+    "annotations": {
+      "count": 1000,
+      "invalid_count": 0,
+      "invalid_examples": [],
+      "target_count": 1000
+    },
+    "ma_decisions": {
+      "count": 7,
+      "invalid_count": 7,
+      "draft_count": 7,
+      "invalid_examples": [
+        "putusan_123K_SIP_1974.json: substansi.fakta_inti kosong, substansi.isu_hukum kosong, substansi.ratio_decidendi kosong, substansi.amar_putusan kosong, metadata.tanggal_putusan kosong, metadata.tingkat_peradilan kosong",
+        "putusan_16K_AG_2010.json: substansi.isu_hukum kosong, substansi.ratio_decidendi kosong, substansi.amar_putusan kosong, metadata.tanggal_putusan kosong, metadata.tingkat_peradilan kosong",
+        "putusan_179K_SIP_1972.json: substansi.fakta_inti kosong, substansi.isu_hukum kosong, substansi.ratio_decidendi kosong, substansi.amar_putusan kosong, metadata.tanggal_putusan kosong, metadata.tingkat_peradilan kosong",
+        "putusan_179K_SIP_1973.json: substansi.fakta_inti kosong, substansi.isu_hukum kosong, substansi.ratio_decidendi kosong, substansi.amar_putusan kosong, metadata.tanggal_putusan kosong, metadata.tingkat_peradilan kosong",
+        "putusan_179K_SIP_1974.json: substansi.fakta_inti kosong, substansi.isu_hukum kosong, substansi.ratio_decidendi kosong, substansi.amar_putusan kosong, metadata.tanggal_putusan kosong, metadata.tingkat_peradilan kosong",
+        "putusan_350K_SIP_1983.json: substansi.fakta_inti kosong, substansi.isu_hukum kosong, substansi.ratio_decidendi kosong, substansi.amar_putusan kosong, metadata.tanggal_putusan kosong, metadata.tingkat_peradilan kosong",
+        "putusan_550K_PDT_1983.json: substansi.fakta_inti kosong, substansi.isu_hukum kosong, substansi.ratio_decidendi kosong, substansi.amar_putusan kosong, metadata.tanggal_putusan kosong, metadata.tingkat_peradilan kosong"
+      ],
+      "target_count": 50
+    }
+  },
+  "art_status": {
+    "ART-028_operational_ready": true,
+    "ART-030_operational_ready": false,
+    "ART-031_operational_ready": false,
+    "ART-028_scientific_ready": false,
+    "ART-030_scientific_ready": false,
+    "ART-031_scientific_ready": false
+  },
+  "blockers_scientific": [
+    "ART-028 belum scientific-ready: agreement report final belum tersedia atau coverage belum memenuhi syarat.",
+    "ART-030 belum scientific-ready: putusan MA tervalidasi (50+ non-draft) belum terpenuhi."
+  ],
+  "notes": [
+    "Operational-ready berarti artefak ada dan lolos validasi minimal.",
+    "Scientific-ready berarti memenuhi syarat klaim paper (agreement report final + putusan MA non-draft tervalidasi)."
+  ]
+}

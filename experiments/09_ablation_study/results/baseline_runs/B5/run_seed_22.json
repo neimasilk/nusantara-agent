@@ -1,0 +1,1291 @@
+{
+  "baseline_id": "B5",
+  "module_name": "b5_no_debate",
+  "seed": 22,
+  "evaluation_mode": "operational_offline",
+  "source_dataset": "data/processed/gold_standard/gs_active_cases.json",
+  "total_raw_cases": 24,
+  "split_skipped": 2,
+  "total_evaluated": 22,
+  "correct": 12,
+  "accuracy": 0.5454545454545454,
+  "predictions": [
+    {
+      "id": "CS-BAL-020",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "detail.rule_results.mixed",
+      "baseline_payload": {
+        "baseline_id": "B5",
+        "query": "Seorang janda dalam sistem nyentana (suami masuk keluarga istri) menikah lagi dengan pria dari keluarga lain. Keluarga asal istri menuntut harta peninggalan (yang berasal dari garis istri) tetap di keluarga asal.",
+        "jawaban": "[B5_NO_DEBATE] Query: Seorang janda dalam sistem nyentana (suami masuk keluarga istri) menikah lagi dengan pria dari keluarga lain. Keluarga asal istri menuntut harta peninggalan (yang berasal dari garis istri) tetap di keluarga asal.. Ringkasan evidence: Hasil pencarian Knowledge Graph tambahan:\n- anggota perempuan dalam kaum --(memiliki kepemilikan atas)--> Harta Pusako Tinggi [Kategori: kepemilikan]\n- Harta Pusako Tinggi --(tidak boleh diperjualbelikan)--> kecuali dalam kondisi darurat yang diatur adat [Kategori: larangan]\n- Harta Pusako Rendah --(diwariskan sesuai dengan)--> ketentuan hukum Islam atau kesepakatan keluarga [Kategori: pewarisan]\n- Harta Pusako Tinggi --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Rendah --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Tinggi --(dimiliki secara kolektif oleh)--> kaum [Kategori: kepemilikan]\n- Harta Pusako Tinggi --(diwariskan berdasarkan)--> garis ibu (matrilineal) [Kategori: pewarisan]\n- Mamak Kepala Waris --(memiliki otoritas pengelolaan atas)--> Harta Pusako Tinggi [Kategori: otoritas]\n- Harta Pusako Rendah --(adalah harta hasil pencaharian sendiri oleh)--> orang tua selama masa perkawinan [Kategori: kepemilikan]\n- Harta Pusako Rendah --(dapat diwariskan kepada)--> anak kandung [Kategori: pewarisan]\n KUHPerdata Pasal 913: Legitime portie adalah bagian mutlak harta peninggalan yang tidak boleh dikurangi dengan pemberian wasiat.",
+        "komponen_aktif": [
+          "router",
+          "graph_retrieval",
+          "vector_retrieval",
+          "rule_engine"
+        ],
+        "komponen_nonaktif": [
+          "debate"
+        ],
+        "detail": {
+          "route": {
+            "label": "consensus",
+            "scores": {
+              "national": 0,
+              "adat": 0,
+              "conflict": 0
+            },
+            "confidence": 0.65,
+            "method": "heuristic"
+          },
+          "graph_context": "Hasil pencarian Knowledge Graph tambahan:\n- anggota perempuan dalam kaum --(memiliki kepemilikan atas)--> Harta Pusako Tinggi [Kategori: kepemilikan]\n- Harta Pusako Tinggi --(tidak boleh diperjualbelikan)--> kecuali dalam kondisi darurat yang diatur adat [Kategori: larangan]\n- Harta Pusako Rendah --(diwariskan sesuai dengan)--> ketentuan hukum Islam atau kesepakatan keluarga [Kategori: pewarisan]\n- Harta Pusako Tinggi --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Rendah --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Tinggi --(dimiliki secara kolektif oleh)--> kaum [Kategori: kepemilikan]\n- Harta Pusako Tinggi --(diwariskan berdasarkan)--> garis ibu (matrilineal) [Kategori: pewarisan]\n- Mamak Kepala Waris --(memiliki otoritas pengelolaan atas)--> Harta Pusako Tinggi [Kategori: otoritas]\n- Harta Pusako Rendah --(adalah harta hasil pencaharian sendiri oleh)--> orang tua selama masa perkawinan [Kategori: kepemilikan]\n- Harta Pusako Rendah --(dapat diwariskan kepada)--> anak kandung [Kategori: pewarisan]\n",
+          "vector_context": [
+            "KUHPerdata Pasal 913: Legitime portie adalah bagian mutlak harta peninggalan yang tidak boleh dikurangi dengan pemberian wasiat.",
+            "KHI Pasal 183: Para ahli waris dapat bersepakat melakukan perdamaian (takharuj) dalam pembagian harta warisan setelah masing-masing menyadari bagiannya.",
+            "KHI Pasal 209: Harta peninggalan anak angkat dibagi berdasarkan wasiat wajibah sebanyak-banyaknya 1/3 dari harta warisan orang tua angkatnya."
+          ],
+          "rule_results": {
+            "nasional": [
+              "berhak_waris(pasangan_hidup)",
+              "can_inherit(pasangan_hidup,harta_waris_pewaris)",
+              "bagian_spouse(pasangan_hidup,seperdua_harta_bersama)",
+              "hak_spouse_atas_harta_bersama(pasangan_hidup)",
+              "hak_bagi_sisa_waris(pasangan_hidup)"
+            ],
+            "adat": {
+              "minangkabau": [
+                "punah(rumah_gadang)",
+                "punah(sawah_ladang)",
+                "punah(hutan_tanah)",
+                "punah(pandam_pakuburan)",
+                "punah(sawah_adat)",
+                "punah(tanah_kaum)",
+                "punah(tanah_ulayat)",
+                "punah(tanah_pusako)",
+                "punah(tanah_waris)",
+                "punah(rumah_istri)",
+                "punah(sawah_bersama)",
+                "punah(tanah_adat)",
+                "punah(pusako_tinggi_hibah)"
+              ],
+              "bali": [],
+              "jawa": [
+                "pecah_panci(istri_pewaris)"
+              ]
+            }
+          },
+          "debate_enabled": false
+        }
+      }
+    },
+    {
+      "id": "CS-MIN-004",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "label_source": "detail.rule_results.adat_only",
+      "baseline_payload": {
+        "baseline_id": "B5",
+        "query": "Sepasang suami istri di Minangkabau memiliki harta dari hasil usaha bersama (pencaharian). Suami meninggal tanpa meninggalkan wasiat/hibah tertulis. Kemenakan suami mengklaim harta tersebut harus kembali ke kaum sebagai harta pusaka, sementara anak kandung mengklaim harta tersebut milik mereka.",
+        "jawaban": "[B5_NO_DEBATE] Query: Sepasang suami istri di Minangkabau memiliki harta dari hasil usaha bersama (pencaharian). Suami meninggal tanpa meninggalkan wasiat/hibah tertulis. Kemenakan suami mengklaim harta tersebut harus kembali ke kaum sebagai harta pusaka, sementara anak kandung mengklaim harta tersebut milik mereka.. Ringkasan evidence: Tidak ditemukan informasi tambahan di Knowledge Graph. Adat Minangkabau: Harta pencaharian (pusako rendah) adalah hasil usaha suami istri yang dapat diwariskan kepada anak-anak (hukum Islam/Nasional).",
+        "komponen_aktif": [
+          "router",
+          "graph_retrieval",
+          "vector_retrieval",
+          "rule_engine"
+        ],
+        "komponen_nonaktif": [
+          "debate"
+        ],
+        "detail": {
+          "route": {
+            "label": "pure_adat",
+            "scores": {
+              "national": 0,
+              "adat": 3,
+              "conflict": 0
+            },
+            "confidence": 0.65,
+            "method": "heuristic"
+          },
+          "graph_context": "Tidak ditemukan informasi tambahan di Knowledge Graph.",
+          "vector_context": [
+            "Adat Minangkabau: Harta pencaharian (pusako rendah) adalah hasil usaha suami istri yang dapat diwariskan kepada anak-anak (hukum Islam/Nasional).",
+            "KUHPerdata Pasal 852: Anak-anak atau sekalian keturunan mereka mewarisi harta peninggalan orangtua, tanpa membedakan jenis kelamin atau kelahiran.",
+            "KHI Pasal 185: Ahli waris yang meninggal lebih dahulu dari pada si pewaris maka kedudukannya dapat digantikan oleh anaknya (ahli waris pengganti)."
+          ],
+          "rule_results": {
+            "nasional": [],
+            "adat": {
+              "minangkabau": [
+                "can_inherit(kemenakan,rumah_gadang)",
+                "can_inherit(kemenakan,sawah_ladang)",
+                "can_inherit(kemenakan,hutan_tanah)",
+                "can_inherit(kemenakan,pandam_pakuburan)",
+                "can_inherit(kemenakan,sawah_adat)",
+                "can_inherit(kemenakan,tanah_kaum)",
+                "can_inherit(kemenakan,tanah_ulayat)",
+                "can_inherit(kemenakan,tanah_pusako)",
+                "can_inherit(kemenakan,tanah_waris)",
+                "can_inherit(kemenakan,rumah_istri)",
+                "can_inherit(kemenakan,sawah_bersama)",
+                "can_inherit(kemenakan,tanah_adat)",
+                "can_inherit(kemenakan,pusako_tinggi_hibah)",
+                "can_inherit(anak_pewaris,harta_pencaharian)",
+                "can_inherit(anak_pewaris,hibah)",
+                "can_inherit(anak_pewaris,tanah_hibah)",
+                "can_inherit(anak_pewaris,harta_tembilang_emas)",
+                "can_inherit(anak_pewaris,hadiah_nikah)",
+                "can_inherit(anak_pewaris,rumah_rantau)",
+                "can_inherit(anak_pewaris,rumah_bersama)",
+                "can_inherit(anak_pewaris,emas_pencaharian)",
+                "can_inherit(anak_pewaris,emas_ibu)",
+                "can_inherit(anak_pewaris,harta_ayah)",
+                "can_inherit(kemenakan,harta_pencaharian)",
+                "can_inherit(kemenakan,hibah)",
+                "can_inherit(kemenakan,tanah_hibah)",
+                "can_inherit(kemenakan,harta_tembilang_emas)",
+                "can_inherit(kemenakan,hadiah_nikah)",
+                "can_inherit(kemenakan,rumah_rantau)",
+                "can_inherit(kemenakan,rumah_bersama)",
+                "can_inherit(kemenakan,emas_pencaharian)",
+                "can_inherit(kemenakan,emas_ibu)",
+                "can_inherit(kemenakan,harta_ayah)",
+                "can_inherit(ibu_kemenakan,harta_pencaharian)",
+                "can_inherit(ibu_kemenakan,hibah)",
+                "can_inherit(ibu_kemenakan,tanah_hibah)",
+                "can_inherit(ibu_kemenakan,harta_tembilang_emas)",
+                "can_inherit(ibu_kemenakan,hadiah_nikah)",
+                "can_inherit(ibu_kemenakan,rumah_rantau)",
+                "can_inherit(ibu_kemenakan,rumah_bersama)",
+                "can_inherit(ibu_kemenakan,emas_pencaharian)",
+                "can_inherit(ibu_kemenakan,emas_ibu)",
+                "can_inherit(ibu_kemenakan,harta_ayah)"
+              ],
+              "bali": []
+            }
+          },
+          "debate_enabled": false
+        }
+      }
+    },
+    {
+      "id": "CS-JAW-015",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "detail.rule_results.mixed",
+      "baseline_payload": {
+        "baseline_id": "B5",
+        "query": "Seorang ayah di Jawa memberikan pesan terakhir (wekas) di depan saksi keluarga agar rumah utama diberikan kepada anak bungsunya karena telah merawatnya. Anak-anak lain menuntut pembagian rata sesuai hukum nasional.",
+        "jawaban": "[B5_NO_DEBATE] Query: Seorang ayah di Jawa memberikan pesan terakhir (wekas) di depan saksi keluarga agar rumah utama diberikan kepada anak bungsunya karena telah merawatnya. Anak-anak lain menuntut pembagian rata sesuai hukum nasional.. Ringkasan evidence: Hasil pencarian Knowledge Graph tambahan:\n- Harta Pusako Rendah --(diwariskan sesuai dengan)--> ketentuan hukum Islam atau kesepakatan keluarga [Kategori: pewarisan]\n- Harta Pusako Rendah --(dapat diwariskan kepada)--> anak kandung [Kategori: pewarisan]\n Adat Minangkabau: Harta pencaharian (pusako rendah) adalah hasil usaha suami istri yang dapat diwariskan kepada anak-anak (hukum Islam/Nasional).",
+        "komponen_aktif": [
+          "router",
+          "graph_retrieval",
+          "vector_retrieval",
+          "rule_engine"
+        ],
+        "komponen_nonaktif": [
+          "debate"
+        ],
+        "detail": {
+          "route": {
+            "label": "consensus",
+            "scores": {
+              "national": 1,
+              "adat": 1,
+              "conflict": 0
+            },
+            "confidence": 0.65,
+            "method": "heuristic"
+          },
+          "graph_context": "Hasil pencarian Knowledge Graph tambahan:\n- Harta Pusako Rendah --(diwariskan sesuai dengan)--> ketentuan hukum Islam atau kesepakatan keluarga [Kategori: pewarisan]\n- Harta Pusako Rendah --(dapat diwariskan kepada)--> anak kandung [Kategori: pewarisan]\n",
+          "vector_context": [
+            "Adat Minangkabau: Harta pencaharian (pusako rendah) adalah hasil usaha suami istri yang dapat diwariskan kepada anak-anak (hukum Islam/Nasional).",
+            "UUPA Pasal 3: Hak ulayat dan hak-hak serupa itu dari masyarakat-masyarakat hukum adat, sepanjang kenyataannya masih ada, harus sedemikian rupa sehingga sesuai dengan kepentingan nasional.",
+            "Adat Bali: Sistem kekeluargaan patrilineal (purusa), anak laki-laki meneruskan tanggung jawab adat dan warisan."
+          ],
+          "rule_results": {
+            "nasional": [
+              "berhak_waris(anak_pewaris)",
+              "can_inherit(anak_pewaris,harta_waris_pewaris)",
+              "hak_bagi_sisa_waris(anak_pewaris)"
+            ],
+            "adat": {
+              "jawa": [
+                "can_inherit(anak_bungsu,rumah_induk)"
+              ]
+            }
+          },
+          "debate_enabled": false
+        }
+      }
+    },
+    {
+      "id": "CS-MIN-025",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "label_source": "detail.rule_results.adat_only",
+      "baseline_payload": {
+        "baseline_id": "B5",
+        "query": "Seorang Mamak Kepala Waris ingin meminjam uang ke bank untuk usaha kaum dengan menjaminkan aset kaum. Bank ragu terhadap kapasitas hukum mamak tersebut sebagai subjek hukum perdata perorangan.",
+        "jawaban": "[B5_NO_DEBATE] Query: Seorang Mamak Kepala Waris ingin meminjam uang ke bank untuk usaha kaum dengan menjaminkan aset kaum. Bank ragu terhadap kapasitas hukum mamak tersebut sebagai subjek hukum perdata perorangan.. Ringkasan evidence: Hasil pencarian Knowledge Graph tambahan:\n- Mamak Kepala Waris --(memiliki otoritas pengelolaan atas)--> Harta Pusako Tinggi [Kategori: otoritas]\n- Harta Pusako Tinggi --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Rendah --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Tinggi --(diwariskan berdasarkan)--> garis ibu (matrilineal) [Kategori: pewarisan]\n- Harta Pusako Rendah --(dapat diwariskan kepada)--> anak kandung [Kategori: pewarisan]\n- Harta Pusako Rendah --(diwariskan sesuai dengan)--> ketentuan hukum Islam atau kesepakatan keluarga [Kategori: pewarisan]\n- Harta Pusako Tinggi --(dimiliki secara kolektif oleh)--> kaum [Kategori: kepemilikan]\n- anggota perempuan dalam kaum --(memiliki kepemilikan atas)--> Harta Pusako Tinggi [Kategori: kepemilikan]\n KUHPerdata Pasal 570: Hak milik adalah hak untuk menikmati kegunaan kebendaan dengan leluasa dan berbuat bebas terhadapnya, asal tidak bertentangan dengan undang-undang.",
+        "komponen_aktif": [
+          "router",
+          "graph_retrieval",
+          "vector_retrieval",
+          "rule_engine"
+        ],
+        "komponen_nonaktif": [
+          "debate"
+        ],
+        "detail": {
+          "route": {
+            "label": "consensus",
+            "scores": {
+              "national": 1,
+              "adat": 1,
+              "conflict": 0
+            },
+            "confidence": 0.65,
+            "method": "heuristic"
+          },
+          "graph_context": "Hasil pencarian Knowledge Graph tambahan:\n- Mamak Kepala Waris --(memiliki otoritas pengelolaan atas)--> Harta Pusako Tinggi [Kategori: otoritas]\n- Harta Pusako Tinggi --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Rendah --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Tinggi --(diwariskan berdasarkan)--> garis ibu (matrilineal) [Kategori: pewarisan]\n- Harta Pusako Rendah --(dapat diwariskan kepada)--> anak kandung [Kategori: pewarisan]\n- Harta Pusako Rendah --(diwariskan sesuai dengan)--> ketentuan hukum Islam atau kesepakatan keluarga [Kategori: pewarisan]\n- Harta Pusako Tinggi --(dimiliki secara kolektif oleh)--> kaum [Kategori: kepemilikan]\n- anggota perempuan dalam kaum --(memiliki kepemilikan atas)--> Harta Pusako Tinggi [Kategori: kepemilikan]\n",
+          "vector_context": [
+            "KUHPerdata Pasal 570: Hak milik adalah hak untuk menikmati kegunaan kebendaan dengan leluasa dan berbuat bebas terhadapnya, asal tidak bertentangan dengan undang-undang.",
+            "UUPA Pasal 5: Hukum agraria yang berlaku atas bumi, air dan ruang angkasa ialah hukum adat, sepanjang tidak bertentangan dengan kepentingan nasional dan negara.",
+            "Adat Minangkabau: Harta pencaharian (pusako rendah) adalah hasil usaha suami istri yang dapat diwariskan kepada anak-anak (hukum Islam/Nasional)."
+          ],
+          "rule_results": {
+            "nasional": [],
+            "adat": {
+              "minangkabau": [
+                "punah(rumah_gadang)",
+                "punah(sawah_ladang)",
+                "punah(hutan_tanah)",
+                "punah(pandam_pakuburan)",
+                "punah(sawah_adat)",
+                "punah(tanah_kaum)",
+                "punah(tanah_ulayat)",
+                "punah(tanah_pusako)",
+                "punah(tanah_waris)",
+                "punah(rumah_istri)",
+                "punah(sawah_bersama)",
+                "punah(tanah_adat)",
+                "punah(pusako_tinggi_hibah)"
+              ]
+            }
+          },
+          "debate_enabled": false
+        }
+      }
+    },
+    {
+      "id": "CS-LIN-018",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "label_source": "detail.route.label",
+      "baseline_payload": {
+        "baseline_id": "B5",
+        "query": "Di dalam wilayah hutan adat yang luas, terdapat beberapa bidang tanah yang sudah memiliki Sertifikat Hak Milik (SHM) individual milik pendatang. Masyarakat adat menuntut tanah tersebut dikembalikan ke ulayat.",
+        "jawaban": "[B5_NO_DEBATE] Query: Di dalam wilayah hutan adat yang luas, terdapat beberapa bidang tanah yang sudah memiliki Sertifikat Hak Milik (SHM) individual milik pendatang. Masyarakat adat menuntut tanah tersebut dikembalikan ke ulayat.. Ringkasan evidence: Tidak ditemukan informasi tambahan di Knowledge Graph. UUPA Pasal 3: Hak ulayat dan hak-hak serupa itu dari masyarakat-masyarakat hukum adat, sepanjang kenyataannya masih ada, harus sedemikian rupa sehingga sesuai dengan kepentingan nasional.",
+        "komponen_aktif": [
+          "router",
+          "graph_retrieval",
+          "vector_retrieval",
+          "rule_engine"
+        ],
+        "komponen_nonaktif": [
+          "debate"
+        ],
+        "detail": {
+          "route": {
+            "label": "pure_adat",
+            "scores": {
+              "national": 0,
+              "adat": 3,
+              "conflict": 0
+            },
+            "confidence": 0.65,
+            "method": "heuristic"
+          },
+          "graph_context": "Tidak ditemukan informasi tambahan di Knowledge Graph.",
+          "vector_context": [
+            "UUPA Pasal 3: Hak ulayat dan hak-hak serupa itu dari masyarakat-masyarakat hukum adat, sepanjang kenyataannya masih ada, harus sedemikian rupa sehingga sesuai dengan kepentingan nasional.",
+            "UUPA Pasal 5: Hukum agraria yang berlaku atas bumi, air dan ruang angkasa ialah hukum adat, sepanjang tidak bertentangan dengan kepentingan nasional dan negara.",
+            "Adat Minangkabau: Harta pusako tinggi adalah harta turun temurun menurut garis ibu (matrilineal) dan tidak boleh diperjualbelikan kecuali dalam keadaan darurat."
+          ],
+          "rule_results": {
+            "nasional": [],
+            "adat": {
+              "bali": []
+            }
+          },
+          "debate_enabled": false
+        }
+      }
+    },
+    {
+      "id": "CS-BAL-012",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "label_source": "detail.route.label",
+      "baseline_payload": {
+        "baseline_id": "B5",
+        "query": "Sengketa mengenai batas sanksi adat kasepekang di Bali. KUHP Baru (UU 1/2023) mulai mengakui sanksi adat, namun terdapat risiko pelanggaran hak asasi manusia mendasar.",
+        "jawaban": "[B5_NO_DEBATE] Query: Sengketa mengenai batas sanksi adat kasepekang di Bali. KUHP Baru (UU 1/2023) mulai mengakui sanksi adat, namun terdapat risiko pelanggaran hak asasi manusia mendasar.. Ringkasan evidence: Tidak ditemukan informasi tambahan di Knowledge Graph. UUPA Pasal 3: Hak ulayat dan hak-hak serupa itu dari masyarakat-masyarakat hukum adat, sepanjang kenyataannya masih ada, harus sedemikian rupa sehingga sesuai dengan kepentingan nasional.",
+        "komponen_aktif": [
+          "router",
+          "graph_retrieval",
+          "vector_retrieval",
+          "rule_engine"
+        ],
+        "komponen_nonaktif": [
+          "debate"
+        ],
+        "detail": {
+          "route": {
+            "label": "pure_adat",
+            "scores": {
+              "national": 0,
+              "adat": 2,
+              "conflict": 0
+            },
+            "confidence": 0.65,
+            "method": "heuristic"
+          },
+          "graph_context": "Tidak ditemukan informasi tambahan di Knowledge Graph.",
+          "vector_context": [
+            "UUPA Pasal 3: Hak ulayat dan hak-hak serupa itu dari masyarakat-masyarakat hukum adat, sepanjang kenyataannya masih ada, harus sedemikian rupa sehingga sesuai dengan kepentingan nasional.",
+            "UUPA Pasal 5: Hukum agraria yang berlaku atas bumi, air dan ruang angkasa ialah hukum adat, sepanjang tidak bertentangan dengan kepentingan nasional dan negara.",
+            "KUHPerdata Pasal 830: Pewarisan hanya terjadi karena kematian."
+          ],
+          "rule_results": {
+            "nasional": [],
+            "adat": {
+              "bali": []
+            }
+          },
+          "debate_enabled": false
+        }
+      }
+    },
+    {
+      "id": "CS-BAL-009",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "label_source": "detail.route.label",
+      "baseline_payload": {
+        "baseline_id": "B5",
+        "query": "Seorang krama desa adat di Bali mencoba mengklaim tanah Ayahan Desa yang ia tempati sebagai hak milik pribadi melalui program sertifikasi pemerintah (PTSL), namun ditentang oleh Desa Adat.",
+        "jawaban": "[B5_NO_DEBATE] Query: Seorang krama desa adat di Bali mencoba mengklaim tanah Ayahan Desa yang ia tempati sebagai hak milik pribadi melalui program sertifikasi pemerintah (PTSL), namun ditentang oleh Desa Adat.. Ringkasan evidence: Tidak ditemukan informasi tambahan di Knowledge Graph. Adat Bali: Anak perempuan yang kawin keluar (meninggalkan rumah) kehilangan hak waris penuh, kecuali ada pemberian bekal.",
+        "komponen_aktif": [
+          "router",
+          "graph_retrieval",
+          "vector_retrieval",
+          "rule_engine"
+        ],
+        "komponen_nonaktif": [
+          "debate"
+        ],
+        "detail": {
+          "route": {
+            "label": "pure_adat",
+            "scores": {
+              "national": 0,
+              "adat": 2,
+              "conflict": 0
+            },
+            "confidence": 0.65,
+            "method": "heuristic"
+          },
+          "graph_context": "Tidak ditemukan informasi tambahan di Knowledge Graph.",
+          "vector_context": [
+            "Adat Bali: Anak perempuan yang kawin keluar (meninggalkan rumah) kehilangan hak waris penuh, kecuali ada pemberian bekal.",
+            "KUHPerdata Pasal 913: Legitime portie adalah bagian mutlak harta peninggalan yang tidak boleh dikurangi dengan pemberian wasiat.",
+            "KHI Pasal 185: Ahli waris yang meninggal lebih dahulu dari pada si pewaris maka kedudukannya dapat digantikan oleh anaknya (ahli waris pengganti)."
+          ],
+          "rule_results": {
+            "nasional": [],
+            "adat": {
+              "bali": []
+            }
+          },
+          "debate_enabled": false
+        }
+      }
+    },
+    {
+      "id": "CS-NAS-010",
+      "gold": "A",
+      "predicted": "B",
+      "match": false,
+      "label_source": "detail.rule_results.adat_only",
+      "baseline_payload": {
+        "baseline_id": "B5",
+        "query": "Terjadi perkawinan di bawah umur (15 tahun) yang dilakukan secara adat dan agama karena dispensasi adat setempat. Hal ini bertentangan dengan UU Perkawinan terbaru yang mensyaratkan batas minimal 19 tahun.",
+        "jawaban": "[B5_NO_DEBATE] Query: Terjadi perkawinan di bawah umur (15 tahun) yang dilakukan secara adat dan agama karena dispensasi adat setempat. Hal ini bertentangan dengan UU Perkawinan terbaru yang mensyaratkan batas minimal 19 tahun.. Ringkasan evidence: Hasil pencarian Knowledge Graph tambahan:\n- Harta Pusako Rendah --(adalah harta hasil pencaharian sendiri oleh)--> orang tua selama masa perkawinan [Kategori: kepemilikan]\n- Harta Pusako Tinggi --(tidak boleh diperjualbelikan)--> kecuali dalam kondisi darurat yang diatur adat [Kategori: larangan]\n- Harta Pusako Tinggi --(dimiliki secara kolektif oleh)--> kaum [Kategori: kepemilikan]\n- Harta Pusako Rendah --(diwariskan sesuai dengan)--> ketentuan hukum Islam atau kesepakatan keluarga [Kategori: pewarisan]\n UUPA Pasal 5: Hukum agraria yang berlaku atas bumi, air dan ruang angkasa ialah hukum adat, sepanjang tidak bertentangan dengan kepentingan nasional dan negara.",
+        "komponen_aktif": [
+          "router",
+          "graph_retrieval",
+          "vector_retrieval",
+          "rule_engine"
+        ],
+        "komponen_nonaktif": [
+          "debate"
+        ],
+        "detail": {
+          "route": {
+            "label": "pure_adat",
+            "scores": {
+              "national": 0,
+              "adat": 1,
+              "conflict": 1
+            },
+            "confidence": 0.65,
+            "method": "heuristic"
+          },
+          "graph_context": "Hasil pencarian Knowledge Graph tambahan:\n- Harta Pusako Rendah --(adalah harta hasil pencaharian sendiri oleh)--> orang tua selama masa perkawinan [Kategori: kepemilikan]\n- Harta Pusako Tinggi --(tidak boleh diperjualbelikan)--> kecuali dalam kondisi darurat yang diatur adat [Kategori: larangan]\n- Harta Pusako Tinggi --(dimiliki secara kolektif oleh)--> kaum [Kategori: kepemilikan]\n- Harta Pusako Rendah --(diwariskan sesuai dengan)--> ketentuan hukum Islam atau kesepakatan keluarga [Kategori: pewarisan]\n",
+          "vector_context": [
+            "UUPA Pasal 5: Hukum agraria yang berlaku atas bumi, air dan ruang angkasa ialah hukum adat, sepanjang tidak bertentangan dengan kepentingan nasional dan negara.",
+            "KUHPerdata Pasal 830: Pewarisan hanya terjadi karena kematian.",
+            "KUHPerdata Pasal 913: Legitime portie adalah bagian mutlak harta peninggalan yang tidak boleh dikurangi dengan pemberian wasiat."
+          ],
+          "rule_results": {
+            "nasional": [],
+            "adat": {
+              "minangkabau": [
+                "punah(rumah_gadang)",
+                "punah(sawah_ladang)",
+                "punah(hutan_tanah)",
+                "punah(pandam_pakuburan)",
+                "punah(sawah_adat)",
+                "punah(tanah_kaum)",
+                "punah(tanah_ulayat)",
+                "punah(tanah_pusako)",
+                "punah(tanah_waris)",
+                "punah(rumah_istri)",
+                "punah(sawah_bersama)",
+                "punah(tanah_adat)",
+                "punah(pusako_tinggi_hibah)"
+              ],
+              "bali": [],
+              "jawa": []
+            }
+          },
+          "debate_enabled": false
+        }
+      }
+    },
+    {
+      "id": "CS-MIN-013",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "label_source": "detail.route.label",
+      "baseline_payload": {
+        "baseline_id": "B5",
+        "query": "Seorang mamak menjual tanah pusako tinggi dengan alasan darurat adat (menikahkan anak kemenakan perempuan). Hasil penjualannya dibelikan ruko di kota. Apakah ruko tersebut berstatus harta pencaharian atau tetap harta pusako?",
+        "jawaban": "[B5_NO_DEBATE] Query: Seorang mamak menjual tanah pusako tinggi dengan alasan darurat adat (menikahkan anak kemenakan perempuan). Hasil penjualannya dibelikan ruko di kota. Apakah ruko tersebut berstatus harta pencaharian atau tetap harta pusako?. Ringkasan evidence: Hasil pencarian Knowledge Graph tambahan:\n- Mamak Kepala Waris --(memiliki otoritas pengelolaan atas)--> Harta Pusako Tinggi [Kategori: otoritas]\n- Harta Pusako Tinggi --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Rendah --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Tinggi --(dimiliki secara kolektif oleh)--> kaum [Kategori: kepemilikan]\n- Harta Pusako Tinggi --(diwariskan berdasarkan)--> garis ibu (matrilineal) [Kategori: pewarisan]\n- anggota perempuan dalam kaum --(memiliki kepemilikan atas)--> Harta Pusako Tinggi [Kategori: kepemilikan]\n- Harta Pusako Tinggi --(tidak boleh diperjualbelikan)--> kecuali dalam kondisi darurat yang diatur adat [Kategori: larangan]\n- Harta Pusako Rendah --(adalah harta hasil pencaharian sendiri oleh)--> orang tua selama masa perkawinan [Kategori: kepemilikan]\n- Harta Pusako Rendah --(dapat diwariskan kepada)--> anak kandung [Kategori: pewarisan]\n- Harta Pusako Rendah --(diwariskan sesuai dengan)--> ketentuan hukum Islam atau kesepakatan keluarga [Kategori: pewarisan]\n Adat Minangkabau: Harta pencaharian (pusako rendah) adalah hasil usaha suami istri yang dapat diwariskan kepada anak-anak (hukum Islam/Nasional).",
+        "komponen_aktif": [
+          "router",
+          "graph_retrieval",
+          "vector_retrieval",
+          "rule_engine"
+        ],
+        "komponen_nonaktif": [
+          "debate"
+        ],
+        "detail": {
+          "route": {
+            "label": "pure_adat",
+            "scores": {
+              "national": 0,
+              "adat": 4,
+              "conflict": 0
+            },
+            "confidence": 0.65,
+            "method": "heuristic"
+          },
+          "graph_context": "Hasil pencarian Knowledge Graph tambahan:\n- Mamak Kepala Waris --(memiliki otoritas pengelolaan atas)--> Harta Pusako Tinggi [Kategori: otoritas]\n- Harta Pusako Tinggi --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Rendah --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Tinggi --(dimiliki secara kolektif oleh)--> kaum [Kategori: kepemilikan]\n- Harta Pusako Tinggi --(diwariskan berdasarkan)--> garis ibu (matrilineal) [Kategori: pewarisan]\n- anggota perempuan dalam kaum --(memiliki kepemilikan atas)--> Harta Pusako Tinggi [Kategori: kepemilikan]\n- Harta Pusako Tinggi --(tidak boleh diperjualbelikan)--> kecuali dalam kondisi darurat yang diatur adat [Kategori: larangan]\n- Harta Pusako Rendah --(adalah harta hasil pencaharian sendiri oleh)--> orang tua selama masa perkawinan [Kategori: kepemilikan]\n- Harta Pusako Rendah --(dapat diwariskan kepada)--> anak kandung [Kategori: pewarisan]\n- Harta Pusako Rendah --(diwariskan sesuai dengan)--> ketentuan hukum Islam atau kesepakatan keluarga [Kategori: pewarisan]\n",
+          "vector_context": [
+            "Adat Minangkabau: Harta pencaharian (pusako rendah) adalah hasil usaha suami istri yang dapat diwariskan kepada anak-anak (hukum Islam/Nasional).",
+            "Adat Minangkabau: Harta pusako tinggi adalah harta turun temurun menurut garis ibu (matrilineal) dan tidak boleh diperjualbelikan kecuali dalam keadaan darurat.",
+            "KUHPerdata Pasal 852: Anak-anak atau sekalian keturunan mereka mewarisi harta peninggalan orangtua, tanpa membedakan jenis kelamin atau kelahiran."
+          ],
+          "rule_results": {
+            "nasional": [],
+            "adat": {
+              "minangkabau": []
+            }
+          },
+          "debate_enabled": false
+        }
+      }
+    },
+    {
+      "id": "CS-JAW-011",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "detail.rule_results.conflict",
+      "baseline_payload": {
+        "baseline_id": "B5",
+        "query": "Sengketa hak waris anak angkat di Jawa. Hukum Islam (KHI) menggunakan wasiat wajibah, sementara hukum adat Jawa (yurisprudensi MA) menyetarakan posisi anak angkat dengan anak kandung dalam hal harta bersama.",
+        "jawaban": "[B5_NO_DEBATE] Query: Sengketa hak waris anak angkat di Jawa. Hukum Islam (KHI) menggunakan wasiat wajibah, sementara hukum adat Jawa (yurisprudensi MA) menyetarakan posisi anak angkat dengan anak kandung dalam hal harta bersama.. Ringkasan evidence: Tidak ditemukan informasi tambahan di Knowledge Graph. Adat Minangkabau: Harta pencaharian (pusako rendah) adalah hasil usaha suami istri yang dapat diwariskan kepada anak-anak (hukum Islam/Nasional).",
+        "komponen_aktif": [
+          "router",
+          "graph_retrieval",
+          "vector_retrieval",
+          "rule_engine"
+        ],
+        "komponen_nonaktif": [
+          "debate"
+        ],
+        "detail": {
+          "route": {
+            "label": "conflict",
+            "scores": {
+              "national": 2,
+              "adat": 2,
+              "conflict": 0
+            },
+            "confidence": 0.65,
+            "method": "heuristic"
+          },
+          "graph_context": "Tidak ditemukan informasi tambahan di Knowledge Graph.",
+          "vector_context": [
+            "Adat Minangkabau: Harta pencaharian (pusako rendah) adalah hasil usaha suami istri yang dapat diwariskan kepada anak-anak (hukum Islam/Nasional).",
+            "Adat Jawa: Anak angkat berhak mendapat bagian harta gono-gini orang tua angkatnya (demenan/wasiat).",
+            "KHI Pasal 209: Harta peninggalan anak angkat dibagi berdasarkan wasiat wajibah sebanyak-banyaknya 1/3 dari harta warisan orang tua angkatnya."
+          ],
+          "rule_results": {
+            "nasional": [
+              "berhak_waris(anak_pewaris)",
+              "can_inherit(anak_pewaris,harta_waris_pewaris)",
+              "hak_bagi_sisa_waris(anak_pewaris)",
+              "conflict(wasiat,melebihi_batas_wajar)"
+            ],
+            "adat": {
+              "jawa": [
+                "can_inherit(anak_pewaris,harta_gono_gini)",
+                "can_inherit(anak_pewaris,rajakaya)",
+                "can_inherit(anak_pewaris,harta_bawaan)",
+                "can_inherit(anak_pewaris,harta_asal_suami)",
+                "can_inherit(anak_pewaris,harta_asal_istri)"
+              ]
+            }
+          },
+          "debate_enabled": false
+        }
+      }
+    },
+    {
+      "id": "CS-BAL-014",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "label_source": "detail.rule_results.adat_only",
+      "baseline_payload": {
+        "baseline_id": "B5",
+        "query": "Seorang janda di Bali yang tidak memiliki anak ingin tetap tinggal di rumah mendiang suaminya. Keluarga suami mengusirnya karena janda tersebut dianggap tidak lagi memiliki ikatan hukum setelah suami wafat.",
+        "jawaban": "[B5_NO_DEBATE] Query: Seorang janda di Bali yang tidak memiliki anak ingin tetap tinggal di rumah mendiang suaminya. Keluarga suami mengusirnya karena janda tersebut dianggap tidak lagi memiliki ikatan hukum setelah suami wafat.. Ringkasan evidence: Hasil pencarian Knowledge Graph tambahan:\n- Harta Pusako Tinggi --(tidak boleh diperjualbelikan)--> kecuali dalam kondisi darurat yang diatur adat [Kategori: larangan]\n- Mamak Kepala Waris --(memiliki otoritas pengelolaan atas)--> Harta Pusako Tinggi [Kategori: otoritas]\n- anggota perempuan dalam kaum --(memiliki kepemilikan atas)--> Harta Pusako Tinggi [Kategori: kepemilikan]\n- Harta Pusako Rendah --(dapat diwariskan kepada)--> anak kandung [Kategori: pewarisan]\n- Harta Pusako Rendah --(diwariskan sesuai dengan)--> ketentuan hukum Islam atau kesepakatan keluarga [Kategori: pewarisan]\n Adat Minangkabau: Harta pencaharian (pusako rendah) adalah hasil usaha suami istri yang dapat diwariskan kepada anak-anak (hukum Islam/Nasional).",
+        "komponen_aktif": [
+          "router",
+          "graph_retrieval",
+          "vector_retrieval",
+          "rule_engine"
+        ],
+        "komponen_nonaktif": [
+          "debate"
+        ],
+        "detail": {
+          "route": {
+            "label": "pure_adat",
+            "scores": {
+              "national": 0,
+              "adat": 1,
+              "conflict": 0
+            },
+            "confidence": 0.65,
+            "method": "heuristic"
+          },
+          "graph_context": "Hasil pencarian Knowledge Graph tambahan:\n- Harta Pusako Tinggi --(tidak boleh diperjualbelikan)--> kecuali dalam kondisi darurat yang diatur adat [Kategori: larangan]\n- Mamak Kepala Waris --(memiliki otoritas pengelolaan atas)--> Harta Pusako Tinggi [Kategori: otoritas]\n- anggota perempuan dalam kaum --(memiliki kepemilikan atas)--> Harta Pusako Tinggi [Kategori: kepemilikan]\n- Harta Pusako Rendah --(dapat diwariskan kepada)--> anak kandung [Kategori: pewarisan]\n- Harta Pusako Rendah --(diwariskan sesuai dengan)--> ketentuan hukum Islam atau kesepakatan keluarga [Kategori: pewarisan]\n",
+          "vector_context": [
+            "Adat Minangkabau: Harta pencaharian (pusako rendah) adalah hasil usaha suami istri yang dapat diwariskan kepada anak-anak (hukum Islam/Nasional).",
+            "Adat Bali: Anak perempuan yang kawin keluar (meninggalkan rumah) kehilangan hak waris penuh, kecuali ada pemberian bekal.",
+            "KUHPerdata Pasal 832: Yang berhak menjadi ahli waris ialah keluarga sedarah, baik yang sah maupun luar kawin dan suami atau isteri yang hidup terlama."
+          ],
+          "rule_results": {
+            "nasional": [],
+            "adat": {
+              "bali": [
+                "hak_penguasaan(istri_pewaris,tanah_sanggah)",
+                "hak_penguasaan(istri_pewaris,tanah_tegal_laba_pura)",
+                "hak_penguasaan(istri_pewaris,benda_pusaka)",
+                "hak_penguasaan(istri_pewaris,tanah_pkd)",
+                "hak_penguasaan(istri_pewaris,tanah_ayahan_desa)",
+                "hak_penguasaan(istri_pewaris,tanah_pelaba_pura)",
+                "hak_penguasaan(istri_pewaris,harta_druwe_gabro)",
+                "hak_penguasaan(istri_pewaris,gunakaya)"
+              ]
+            }
+          },
+          "debate_enabled": false
+        }
+      }
+    },
+    {
+      "id": "CS-NAS-041",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "label_source": "detail.rule_results.adat_only",
+      "baseline_payload": {
+        "baseline_id": "B5",
+        "query": "Perusahaan tambang memiliki izin resmi dari pemerintah pusat (IUP), namun masyarakat adat setempat menolak aktivitas tambang karena wilayahnya masuk dalam hutan adat mereka yang belum bersertifikat.",
+        "jawaban": "[B5_NO_DEBATE] Query: Perusahaan tambang memiliki izin resmi dari pemerintah pusat (IUP), namun masyarakat adat setempat menolak aktivitas tambang karena wilayahnya masuk dalam hutan adat mereka yang belum bersertifikat.. Ringkasan evidence: Tidak ditemukan informasi tambahan di Knowledge Graph. UUPA Pasal 3: Hak ulayat dan hak-hak serupa itu dari masyarakat-masyarakat hukum adat, sepanjang kenyataannya masih ada, harus sedemikian rupa sehingga sesuai dengan kepentingan nasional.",
+        "komponen_aktif": [
+          "router",
+          "graph_retrieval",
+          "vector_retrieval",
+          "rule_engine"
+        ],
+        "komponen_nonaktif": [
+          "debate"
+        ],
+        "detail": {
+          "route": {
+            "label": "pure_adat",
+            "scores": {
+              "national": 0,
+              "adat": 1,
+              "conflict": 0
+            },
+            "confidence": 0.65,
+            "method": "heuristic"
+          },
+          "graph_context": "Tidak ditemukan informasi tambahan di Knowledge Graph.",
+          "vector_context": [
+            "UUPA Pasal 3: Hak ulayat dan hak-hak serupa itu dari masyarakat-masyarakat hukum adat, sepanjang kenyataannya masih ada, harus sedemikian rupa sehingga sesuai dengan kepentingan nasional.",
+            "KHI Pasal 183: Para ahli waris dapat bersepakat melakukan perdamaian (takharuj) dalam pembagian harta warisan setelah masing-masing menyadari bagiannya.",
+            "KHI Pasal 185: Ahli waris yang meninggal lebih dahulu dari pada si pewaris maka kedudukannya dapat digantikan oleh anaknya (ahli waris pengganti)."
+          ],
+          "rule_results": {
+            "nasional": [],
+            "adat": {
+              "minangkabau": [
+                "punah(rumah_gadang)",
+                "punah(sawah_ladang)",
+                "punah(hutan_tanah)",
+                "punah(pandam_pakuburan)",
+                "punah(sawah_adat)",
+                "punah(tanah_kaum)",
+                "punah(tanah_ulayat)",
+                "punah(tanah_pusako)",
+                "punah(tanah_waris)",
+                "punah(rumah_istri)",
+                "punah(sawah_bersama)",
+                "punah(tanah_adat)",
+                "punah(pusako_tinggi_hibah)"
+              ],
+              "bali": [],
+              "jawa": []
+            }
+          },
+          "debate_enabled": false
+        }
+      }
+    },
+    {
+      "id": "CS-JAW-030",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "detail.rule_results.mixed",
+      "baseline_payload": {
+        "baseline_id": "B5",
+        "query": "Pewaris membagi harta kepada anak laki-laki dan perempuan secara sama rata (sigar semangka) sesuai pesan lisan. Anak laki-laki menggugat ingin menggunakan hukum Islam (2:1).",
+        "jawaban": "[B5_NO_DEBATE] Query: Pewaris membagi harta kepada anak laki-laki dan perempuan secara sama rata (sigar semangka) sesuai pesan lisan. Anak laki-laki menggugat ingin menggunakan hukum Islam (2:1).. Ringkasan evidence: Hasil pencarian Knowledge Graph tambahan:\n- Harta Pusako Tinggi --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Rendah --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Tinggi --(dimiliki secara kolektif oleh)--> kaum [Kategori: kepemilikan]\n- Harta Pusako Tinggi --(diwariskan berdasarkan)--> garis ibu (matrilineal) [Kategori: pewarisan]\n- Mamak Kepala Waris --(memiliki otoritas pengelolaan atas)--> Harta Pusako Tinggi [Kategori: otoritas]\n- anggota perempuan dalam kaum --(memiliki kepemilikan atas)--> Harta Pusako Tinggi [Kategori: kepemilikan]\n- Harta Pusako Tinggi --(tidak boleh diperjualbelikan)--> kecuali dalam kondisi darurat yang diatur adat [Kategori: larangan]\n- Harta Pusako Rendah --(adalah harta hasil pencaharian sendiri oleh)--> orang tua selama masa perkawinan [Kategori: kepemilikan]\n- Harta Pusako Rendah --(dapat diwariskan kepada)--> anak kandung [Kategori: pewarisan]\n- Harta Pusako Rendah --(diwariskan sesuai dengan)--> ketentuan hukum Islam atau kesepakatan keluarga [Kategori: pewarisan]\n Adat Minangkabau: Harta pencaharian (pusako rendah) adalah hasil usaha suami istri yang dapat diwariskan kepada anak-anak (hukum Islam/Nasional).",
+        "komponen_aktif": [
+          "router",
+          "graph_retrieval",
+          "vector_retrieval",
+          "rule_engine"
+        ],
+        "komponen_nonaktif": [
+          "debate"
+        ],
+        "detail": {
+          "route": {
+            "label": "consensus",
+            "scores": {
+              "national": 0,
+              "adat": 0,
+              "conflict": 0
+            },
+            "confidence": 0.65,
+            "method": "heuristic"
+          },
+          "graph_context": "Hasil pencarian Knowledge Graph tambahan:\n- Harta Pusako Tinggi --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Rendah --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Tinggi --(dimiliki secara kolektif oleh)--> kaum [Kategori: kepemilikan]\n- Harta Pusako Tinggi --(diwariskan berdasarkan)--> garis ibu (matrilineal) [Kategori: pewarisan]\n- Mamak Kepala Waris --(memiliki otoritas pengelolaan atas)--> Harta Pusako Tinggi [Kategori: otoritas]\n- anggota perempuan dalam kaum --(memiliki kepemilikan atas)--> Harta Pusako Tinggi [Kategori: kepemilikan]\n- Harta Pusako Tinggi --(tidak boleh diperjualbelikan)--> kecuali dalam kondisi darurat yang diatur adat [Kategori: larangan]\n- Harta Pusako Rendah --(adalah harta hasil pencaharian sendiri oleh)--> orang tua selama masa perkawinan [Kategori: kepemilikan]\n- Harta Pusako Rendah --(dapat diwariskan kepada)--> anak kandung [Kategori: pewarisan]\n- Harta Pusako Rendah --(diwariskan sesuai dengan)--> ketentuan hukum Islam atau kesepakatan keluarga [Kategori: pewarisan]\n",
+          "vector_context": [
+            "Adat Minangkabau: Harta pencaharian (pusako rendah) adalah hasil usaha suami istri yang dapat diwariskan kepada anak-anak (hukum Islam/Nasional).",
+            "KHI Pasal 171: Hukum kewarisan Islam berlaku bagi pewaris yang beragama Islam pada saat meninggal dunia.",
+            "KHI Pasal 176: Anak perempuan bila hanya seorang ia mendapat separoh bagian, bila dua orang atau lebih mereka bersama-sama mendapat dua pertiga bagian."
+          ],
+          "rule_results": {
+            "nasional": [
+              "berhak_waris(anak_pewaris)",
+              "can_inherit(anak_pewaris,harta_waris_pewaris)",
+              "hak_bagi_sisa_waris(anak_pewaris)"
+            ],
+            "adat": {
+              "jawa": [
+                "can_inherit(anak_laki,harta_gono_gini)",
+                "can_inherit(anak_laki,rajakaya)",
+                "can_inherit(anak_laki,harta_bawaan)",
+                "can_inherit(anak_laki,harta_asal_suami)",
+                "can_inherit(anak_laki,harta_asal_istri)",
+                "share_ratio(anak_laki,2,harta_gono_gini)",
+                "share_ratio(anak_laki,2,rajakaya)"
+              ]
+            }
+          },
+          "debate_enabled": false
+        }
+      }
+    },
+    {
+      "id": "CS-NAS-022",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "detail.rule_results.conflict",
+      "baseline_payload": {
+        "baseline_id": "B5",
+        "query": "Pewaris memberikan seluruh hartanya kepada lembaga sosial melalui wasiat adat. Ahli waris inti menggugat berdasarkan konsep Legitime Portie (bagian mutlak) dalam hukum nasional.",
+        "jawaban": "[B5_NO_DEBATE] Query: Pewaris memberikan seluruh hartanya kepada lembaga sosial melalui wasiat adat. Ahli waris inti menggugat berdasarkan konsep Legitime Portie (bagian mutlak) dalam hukum nasional.. Ringkasan evidence: Hasil pencarian Knowledge Graph tambahan:\n- Harta Pusako Rendah --(dapat diwariskan kepada)--> anak kandung [Kategori: pewarisan]\n- Harta Pusako Tinggi --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Rendah --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Tinggi --(diwariskan berdasarkan)--> garis ibu (matrilineal) [Kategori: pewarisan]\n- Mamak Kepala Waris --(memiliki otoritas pengelolaan atas)--> Harta Pusako Tinggi [Kategori: otoritas]\n- Harta Pusako Rendah --(diwariskan sesuai dengan)--> ketentuan hukum Islam atau kesepakatan keluarga [Kategori: pewarisan]\n- anggota perempuan dalam kaum --(memiliki kepemilikan atas)--> Harta Pusako Tinggi [Kategori: kepemilikan]\n- Harta Pusako Tinggi --(tidak boleh diperjualbelikan)--> kecuali dalam kondisi darurat yang diatur adat [Kategori: larangan]\n KUHPerdata Pasal 913: Legitime portie adalah bagian mutlak harta peninggalan yang tidak boleh dikurangi dengan pemberian wasiat.",
+        "komponen_aktif": [
+          "router",
+          "graph_retrieval",
+          "vector_retrieval",
+          "rule_engine"
+        ],
+        "komponen_nonaktif": [
+          "debate"
+        ],
+        "detail": {
+          "route": {
+            "label": "consensus",
+            "scores": {
+              "national": 1,
+              "adat": 1,
+              "conflict": 0
+            },
+            "confidence": 0.65,
+            "method": "heuristic"
+          },
+          "graph_context": "Hasil pencarian Knowledge Graph tambahan:\n- Harta Pusako Rendah --(dapat diwariskan kepada)--> anak kandung [Kategori: pewarisan]\n- Harta Pusako Tinggi --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Rendah --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Tinggi --(diwariskan berdasarkan)--> garis ibu (matrilineal) [Kategori: pewarisan]\n- Mamak Kepala Waris --(memiliki otoritas pengelolaan atas)--> Harta Pusako Tinggi [Kategori: otoritas]\n- Harta Pusako Rendah --(diwariskan sesuai dengan)--> ketentuan hukum Islam atau kesepakatan keluarga [Kategori: pewarisan]\n- anggota perempuan dalam kaum --(memiliki kepemilikan atas)--> Harta Pusako Tinggi [Kategori: kepemilikan]\n- Harta Pusako Tinggi --(tidak boleh diperjualbelikan)--> kecuali dalam kondisi darurat yang diatur adat [Kategori: larangan]\n",
+          "vector_context": [
+            "KUHPerdata Pasal 913: Legitime portie adalah bagian mutlak harta peninggalan yang tidak boleh dikurangi dengan pemberian wasiat.",
+            "KHI Pasal 171: Hukum kewarisan Islam berlaku bagi pewaris yang beragama Islam pada saat meninggal dunia.",
+            "KHI Pasal 183: Para ahli waris dapat bersepakat melakukan perdamaian (takharuj) dalam pembagian harta warisan setelah masing-masing menyadari bagiannya."
+          ],
+          "rule_results": {
+            "nasional": [
+              "conflict(wasiat,melebihi_batas_wajar)"
+            ],
+            "adat": {
+              "minangkabau": [
+                "punah(rumah_gadang)",
+                "punah(sawah_ladang)",
+                "punah(hutan_tanah)",
+                "punah(pandam_pakuburan)",
+                "punah(sawah_adat)",
+                "punah(tanah_kaum)",
+                "punah(tanah_ulayat)",
+                "punah(tanah_pusako)",
+                "punah(tanah_waris)",
+                "punah(rumah_istri)",
+                "punah(sawah_bersama)",
+                "punah(tanah_adat)",
+                "punah(pusako_tinggi_hibah)"
+              ],
+              "bali": [],
+              "jawa": []
+            }
+          },
+          "debate_enabled": false
+        }
+      }
+    },
+    {
+      "id": "CS-JAW-006",
+      "gold": "A",
+      "predicted": "B",
+      "match": false,
+      "label_source": "detail.route.label",
+      "baseline_payload": {
+        "baseline_id": "B5",
+        "query": "Dalam sebuah pernikahan poligami yang sah di Jawa, terjadi perceraian dengan istri kedua. Terjadi sengketa pembagian harta yang diperoleh selama masa pernikahan kedua tersebut.",
+        "jawaban": "[B5_NO_DEBATE] Query: Dalam sebuah pernikahan poligami yang sah di Jawa, terjadi perceraian dengan istri kedua. Terjadi sengketa pembagian harta yang diperoleh selama masa pernikahan kedua tersebut.. Ringkasan evidence: Tidak ditemukan informasi tambahan di Knowledge Graph. UU Perkawinan Pasal 35: Harta benda yang diperoleh selama perkawinan menjadi harta bersama.",
+        "komponen_aktif": [
+          "router",
+          "graph_retrieval",
+          "vector_retrieval",
+          "rule_engine"
+        ],
+        "komponen_nonaktif": [
+          "debate"
+        ],
+        "detail": {
+          "route": {
+            "label": "pure_adat",
+            "scores": {
+              "national": 0,
+              "adat": 1,
+              "conflict": 0
+            },
+            "confidence": 0.65,
+            "method": "heuristic"
+          },
+          "graph_context": "Tidak ditemukan informasi tambahan di Knowledge Graph.",
+          "vector_context": [
+            "UU Perkawinan Pasal 35: Harta benda yang diperoleh selama perkawinan menjadi harta bersama.",
+            "KUHPerdata Pasal 913: Legitime portie adalah bagian mutlak harta peninggalan yang tidak boleh dikurangi dengan pemberian wasiat.",
+            "KHI Pasal 183: Para ahli waris dapat bersepakat melakukan perdamaian (takharuj) dalam pembagian harta warisan setelah masing-masing menyadari bagiannya."
+          ],
+          "rule_results": {
+            "nasional": [],
+            "adat": {
+              "jawa": []
+            }
+          },
+          "debate_enabled": false
+        }
+      }
+    },
+    {
+      "id": "CS-LIN-016",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "detail.rule_results.mixed",
+      "baseline_payload": {
+        "baseline_id": "B5",
+        "query": "Keluarga urban di Jakarta terdiri dari suami (Suku Minang) dan istri (Suku Jawa). Mereka memiliki aset di Jakarta. Saat suami wafat, terjadi perdebatan apakah menggunakan sistem matrilineal (adat suami) atau hukum perdata nasional.",
+        "jawaban": "[B5_NO_DEBATE] Query: Keluarga urban di Jakarta terdiri dari suami (Suku Minang) dan istri (Suku Jawa). Mereka memiliki aset di Jakarta. Saat suami wafat, terjadi perdebatan apakah menggunakan sistem matrilineal (adat suami) atau hukum perdata nasional.. Ringkasan evidence: Tidak ditemukan informasi tambahan di Knowledge Graph. KUHPerdata Pasal 832: Yang berhak menjadi ahli waris ialah keluarga sedarah, baik yang sah maupun luar kawin dan suami atau isteri yang hidup terlama.",
+        "komponen_aktif": [
+          "router",
+          "graph_retrieval",
+          "vector_retrieval",
+          "rule_engine"
+        ],
+        "komponen_nonaktif": [
+          "debate"
+        ],
+        "detail": {
+          "route": {
+            "label": "conflict",
+            "scores": {
+              "national": 1,
+              "adat": 2,
+              "conflict": 0
+            },
+            "confidence": 0.65,
+            "method": "heuristic"
+          },
+          "graph_context": "Tidak ditemukan informasi tambahan di Knowledge Graph.",
+          "vector_context": [
+            "KUHPerdata Pasal 832: Yang berhak menjadi ahli waris ialah keluarga sedarah, baik yang sah maupun luar kawin dan suami atau isteri yang hidup terlama.",
+            "KUHPerdata Pasal 852: Anak-anak atau sekalian keturunan mereka mewarisi harta peninggalan orangtua, tanpa membedakan jenis kelamin atau kelahiran.",
+            "UUPA Pasal 3: Hak ulayat dan hak-hak serupa itu dari masyarakat-masyarakat hukum adat, sepanjang kenyataannya masih ada, harus sedemikian rupa sehingga sesuai dengan kepentingan nasional."
+          ],
+          "rule_results": {
+            "nasional": [
+              "berhak_waris(pasangan_hidup)",
+              "can_inherit(pasangan_hidup,harta_waris_pewaris)",
+              "bagian_spouse(pasangan_hidup,seperdua_harta_bersama)",
+              "hak_spouse_atas_harta_bersama(pasangan_hidup)",
+              "hak_bagi_sisa_waris(pasangan_hidup)"
+            ],
+            "adat": {
+              "minangkabau": [
+                "punah(rumah_gadang)",
+                "punah(sawah_ladang)",
+                "punah(hutan_tanah)",
+                "punah(pandam_pakuburan)",
+                "punah(sawah_adat)",
+                "punah(tanah_kaum)",
+                "punah(tanah_ulayat)",
+                "punah(tanah_pusako)",
+                "punah(tanah_waris)",
+                "punah(rumah_istri)",
+                "punah(sawah_bersama)",
+                "punah(tanah_adat)",
+                "punah(pusako_tinggi_hibah)"
+              ],
+              "jawa": []
+            }
+          },
+          "debate_enabled": false
+        }
+      }
+    },
+    {
+      "id": "CS-LIN-052",
+      "gold": "D",
+      "predicted": "B",
+      "match": false,
+      "label_source": "detail.rule_results.adat_only",
+      "baseline_payload": {
+        "baseline_id": "B5",
+        "query": "Sebuah lembaga adat ingin mengajukan kredit ke Bank Nasional dengan menjaminkan tanah ulayat mereka. Bank meminta bukti kepemilikan formal, sementara tanah tersebut tidak memiliki sertifikat individual melainkan pengakuan adat kolektif.",
+        "jawaban": "[B5_NO_DEBATE] Query: Sebuah lembaga adat ingin mengajukan kredit ke Bank Nasional dengan menjaminkan tanah ulayat mereka. Bank meminta bukti kepemilikan formal, sementara tanah tersebut tidak memiliki sertifikat individual melainkan pengakuan adat kolektif.. Ringkasan evidence: Tidak ditemukan informasi tambahan di Knowledge Graph. UUPA Pasal 3: Hak ulayat dan hak-hak serupa itu dari masyarakat-masyarakat hukum adat, sepanjang kenyataannya masih ada, harus sedemikian rupa sehingga sesuai dengan kepentingan nasional.",
+        "komponen_aktif": [
+          "router",
+          "graph_retrieval",
+          "vector_retrieval",
+          "rule_engine"
+        ],
+        "komponen_nonaktif": [
+          "debate"
+        ],
+        "detail": {
+          "route": {
+            "label": "pure_adat",
+            "scores": {
+              "national": 0,
+              "adat": 2,
+              "conflict": 0
+            },
+            "confidence": 0.65,
+            "method": "heuristic"
+          },
+          "graph_context": "Tidak ditemukan informasi tambahan di Knowledge Graph.",
+          "vector_context": [
+            "UUPA Pasal 3: Hak ulayat dan hak-hak serupa itu dari masyarakat-masyarakat hukum adat, sepanjang kenyataannya masih ada, harus sedemikian rupa sehingga sesuai dengan kepentingan nasional.",
+            "UUPA Pasal 5: Hukum agraria yang berlaku atas bumi, air dan ruang angkasa ialah hukum adat, sepanjang tidak bertentangan dengan kepentingan nasional dan negara.",
+            "KUHPerdata Pasal 913: Legitime portie adalah bagian mutlak harta peninggalan yang tidak boleh dikurangi dengan pemberian wasiat."
+          ],
+          "rule_results": {
+            "nasional": [],
+            "adat": {
+              "minangkabau": [
+                "punah(rumah_gadang)",
+                "punah(sawah_ladang)",
+                "punah(hutan_tanah)",
+                "punah(pandam_pakuburan)",
+                "punah(sawah_adat)",
+                "punah(tanah_kaum)",
+                "punah(tanah_ulayat)",
+                "punah(tanah_pusako)",
+                "punah(tanah_waris)",
+                "punah(rumah_istri)",
+                "punah(sawah_bersama)",
+                "punah(tanah_adat)",
+                "punah(pusako_tinggi_hibah)"
+              ],
+              "bali": [],
+              "jawa": []
+            }
+          },
+          "debate_enabled": false
+        }
+      }
+    },
+    {
+      "id": "CS-BAL-002",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "detail.rule_results.conflict",
+      "baseline_payload": {
+        "baseline_id": "B5",
+        "query": "Seorang anak perempuan tunggal di Bali mengklaim hak waris atas harta peninggalan ayahnya (harta purusa). Keluarga besar menolak dengan alasan hukum adat Bali menganut sistem patrilineal murni, padahal sudah ada Keputusan MDP 2010.",
+        "jawaban": "[B5_NO_DEBATE] Query: Seorang anak perempuan tunggal di Bali mengklaim hak waris atas harta peninggalan ayahnya (harta purusa). Keluarga besar menolak dengan alasan hukum adat Bali menganut sistem patrilineal murni, padahal sudah ada Keputusan MDP 2010.. Ringkasan evidence: Tidak ditemukan informasi tambahan di Knowledge Graph. Adat Bali: Sistem kekeluargaan patrilineal (purusa), anak laki-laki meneruskan tanggung jawab adat dan warisan.",
+        "komponen_aktif": [
+          "router",
+          "graph_retrieval",
+          "vector_retrieval",
+          "rule_engine"
+        ],
+        "komponen_nonaktif": [
+          "debate"
+        ],
+        "detail": {
+          "route": {
+            "label": "conflict",
+            "scores": {
+              "national": 1,
+              "adat": 2,
+              "conflict": 0
+            },
+            "confidence": 0.65,
+            "method": "heuristic"
+          },
+          "graph_context": "Tidak ditemukan informasi tambahan di Knowledge Graph.",
+          "vector_context": [
+            "Adat Bali: Sistem kekeluargaan patrilineal (purusa), anak laki-laki meneruskan tanggung jawab adat dan warisan.",
+            "Adat Minangkabau: Harta pencaharian (pusako rendah) adalah hasil usaha suami istri yang dapat diwariskan kepada anak-anak (hukum Islam/Nasional).",
+            "Adat Bali: Anak perempuan yang kawin keluar (meninggalkan rumah) kehilangan hak waris penuh, kecuali ada pemberian bekal."
+          ],
+          "rule_results": {
+            "nasional": [
+              "berhak_waris(anak_pewaris)",
+              "can_inherit(anak_pewaris,harta_waris_pewaris)",
+              "hak_bagi_sisa_waris(anak_pewaris)",
+              "conflict_norm(nasional_vs_adat,anak_perempuan,harta_waris_pewaris)"
+            ],
+            "adat": {
+              "bali": []
+            }
+          },
+          "debate_enabled": false
+        }
+      }
+    },
+    {
+      "id": "CS-JAW-019",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "detail.rule_results.mixed",
+      "baseline_payload": {
+        "baseline_id": "B5",
+        "query": "Pembagian warisan di Jawa di mana anak bungsu (ragil) diberikan rumah utama karena tanggung jawabnya merawat orang tua. Kakak-kakaknya menuntut pembagian rumah tersebut dibagi rata secara hukum perdata.",
+        "jawaban": "[B5_NO_DEBATE] Query: Pembagian warisan di Jawa di mana anak bungsu (ragil) diberikan rumah utama karena tanggung jawabnya merawat orang tua. Kakak-kakaknya menuntut pembagian rumah tersebut dibagi rata secara hukum perdata.. Ringkasan evidence: Hasil pencarian Knowledge Graph tambahan:\n- Harta Pusako Tinggi --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Rendah --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Rendah --(dapat diwariskan kepada)--> anak kandung [Kategori: pewarisan]\n- Harta Pusako Rendah --(adalah harta hasil pencaharian sendiri oleh)--> orang tua selama masa perkawinan [Kategori: kepemilikan]\n- Harta Pusako Tinggi --(dimiliki secara kolektif oleh)--> kaum [Kategori: kepemilikan]\n- Harta Pusako Rendah --(diwariskan sesuai dengan)--> ketentuan hukum Islam atau kesepakatan keluarga [Kategori: pewarisan]\n KHI Pasal 209: Harta peninggalan anak angkat dibagi berdasarkan wasiat wajibah sebanyak-banyaknya 1/3 dari harta warisan orang tua angkatnya.",
+        "komponen_aktif": [
+          "router",
+          "graph_retrieval",
+          "vector_retrieval",
+          "rule_engine"
+        ],
+        "komponen_nonaktif": [
+          "debate"
+        ],
+        "detail": {
+          "route": {
+            "label": "consensus",
+            "scores": {
+              "national": 1,
+              "adat": 1,
+              "conflict": 0
+            },
+            "confidence": 0.65,
+            "method": "heuristic"
+          },
+          "graph_context": "Hasil pencarian Knowledge Graph tambahan:\n- Harta Pusako Tinggi --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Rendah --(adalah kategori dari)--> harta warisan [Kategori: pewarisan]\n- Harta Pusako Rendah --(dapat diwariskan kepada)--> anak kandung [Kategori: pewarisan]\n- Harta Pusako Rendah --(adalah harta hasil pencaharian sendiri oleh)--> orang tua selama masa perkawinan [Kategori: kepemilikan]\n- Harta Pusako Tinggi --(dimiliki secara kolektif oleh)--> kaum [Kategori: kepemilikan]\n- Harta Pusako Rendah --(diwariskan sesuai dengan)--> ketentuan hukum Islam atau kesepakatan keluarga [Kategori: pewarisan]\n",
+          "vector_context": [
+            "KHI Pasal 209: Harta peninggalan anak angkat dibagi berdasarkan wasiat wajibah sebanyak-banyaknya 1/3 dari harta warisan orang tua angkatnya.",
+            "Adat Bali: Sistem kekeluargaan patrilineal (purusa), anak laki-laki meneruskan tanggung jawab adat dan warisan.",
+            "Adat Jawa: Pembagian warisan cenderung menggunakan asas kerukunan/musyawarah, seringkali dengan prinsip sigar semangka (1:1) antara suami istri."
+          ],
+          "rule_results": {
+            "nasional": [
+              "berhak_waris(anak_pewaris)",
+              "can_inherit(anak_pewaris,harta_waris_pewaris)",
+              "hak_bagi_sisa_waris(anak_pewaris)"
+            ],
+            "adat": {
+              "jawa": [
+                "can_inherit(anak_bungsu,rumah_induk)"
+              ]
+            }
+          },
+          "debate_enabled": false
+        }
+      }
+    },
+    {
+      "id": "CS-MIN-011",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "label_source": "detail.rule_results.adat_only",
+      "baseline_payload": {
+        "baseline_id": "B5",
+        "query": "Seorang anggota kaum di Minangkabau mengonversi tanah ulayat kaum menjadi Sertifikat Hak Milik (SHM) atas nama pribadi tanpa melalui musyawarah mufakat kaum dan tanpa persetujuan Kerapatan Adat Nagari (KAN).",
+        "jawaban": "[B5_NO_DEBATE] Query: Seorang anggota kaum di Minangkabau mengonversi tanah ulayat kaum menjadi Sertifikat Hak Milik (SHM) atas nama pribadi tanpa melalui musyawarah mufakat kaum dan tanpa persetujuan Kerapatan Adat Nagari (KAN).. Ringkasan evidence: Hasil pencarian Knowledge Graph tambahan:\n- anggota perempuan dalam kaum --(memiliki kepemilikan atas)--> Harta Pusako Tinggi [Kategori: kepemilikan]\n- Harta Pusako Tinggi --(dimiliki secara kolektif oleh)--> kaum [Kategori: kepemilikan]\n- Mamak Kepala Waris --(memiliki otoritas pengelolaan atas)--> Harta Pusako Tinggi [Kategori: otoritas]\n- Harta Pusako Tinggi --(tidak boleh diperjualbelikan)--> kecuali dalam kondisi darurat yang diatur adat [Kategori: larangan]\n UU Perkawinan Pasal 36: Mengenai harta bersama, suami atau isteri dapat bertindak atas persetujuan kedua belah pihak.",
+        "komponen_aktif": [
+          "router",
+          "graph_retrieval",
+          "vector_retrieval",
+          "rule_engine"
+        ],
+        "komponen_nonaktif": [
+          "debate"
+        ],
+        "detail": {
+          "route": {
+            "label": "pure_adat",
+            "scores": {
+              "national": 0,
+              "adat": 3,
+              "conflict": 0
+            },
+            "confidence": 0.65,
+            "method": "heuristic"
+          },
+          "graph_context": "Hasil pencarian Knowledge Graph tambahan:\n- anggota perempuan dalam kaum --(memiliki kepemilikan atas)--> Harta Pusako Tinggi [Kategori: kepemilikan]\n- Harta Pusako Tinggi --(dimiliki secara kolektif oleh)--> kaum [Kategori: kepemilikan]\n- Mamak Kepala Waris --(memiliki otoritas pengelolaan atas)--> Harta Pusako Tinggi [Kategori: otoritas]\n- Harta Pusako Tinggi --(tidak boleh diperjualbelikan)--> kecuali dalam kondisi darurat yang diatur adat [Kategori: larangan]\n",
+          "vector_context": [
+            "UU Perkawinan Pasal 36: Mengenai harta bersama, suami atau isteri dapat bertindak atas persetujuan kedua belah pihak.",
+            "UUPA Pasal 3: Hak ulayat dan hak-hak serupa itu dari masyarakat-masyarakat hukum adat, sepanjang kenyataannya masih ada, harus sedemikian rupa sehingga sesuai dengan kepentingan nasional.",
+            "UUPA Pasal 5: Hukum agraria yang berlaku atas bumi, air dan ruang angkasa ialah hukum adat, sepanjang tidak bertentangan dengan kepentingan nasional dan negara."
+          ],
+          "rule_results": {
+            "nasional": [],
+            "adat": {
+              "minangkabau": [
+                "punah(rumah_gadang)",
+                "punah(sawah_ladang)",
+                "punah(hutan_tanah)",
+                "punah(pandam_pakuburan)",
+                "punah(sawah_adat)",
+                "punah(tanah_kaum)",
+                "punah(tanah_ulayat)",
+                "punah(tanah_pusako)",
+                "punah(tanah_waris)",
+                "punah(rumah_istri)",
+                "punah(sawah_bersama)",
+                "punah(tanah_adat)",
+                "punah(pusako_tinggi_hibah)"
+              ]
+            }
+          },
+          "debate_enabled": false
+        }
+      }
+    },
+    {
+      "id": "CS-LIN-017",
+      "gold": "A",
+      "predicted": "B",
+      "match": false,
+      "label_source": "detail.rule_results.adat_only",
+      "baseline_payload": {
+        "baseline_id": "B5",
+        "query": "Sebuah keluarga melakukan pengangkatan anak secara adat dengan upacara sakral yang disaksikan tetua. Namun, saat anak tersebut dewasa dan ingin mengurus paspor, pihak imigrasi menolak karena tidak ada penetapan pengadilan negeri.",
+        "jawaban": "[B5_NO_DEBATE] Query: Sebuah keluarga melakukan pengangkatan anak secara adat dengan upacara sakral yang disaksikan tetua. Namun, saat anak tersebut dewasa dan ingin mengurus paspor, pihak imigrasi menolak karena tidak ada penetapan pengadilan negeri.. Ringkasan evidence: Tidak ditemukan informasi tambahan di Knowledge Graph. UUPA Pasal 5: Hukum agraria yang berlaku atas bumi, air dan ruang angkasa ialah hukum adat, sepanjang tidak bertentangan dengan kepentingan nasional dan negara.",
+        "komponen_aktif": [
+          "router",
+          "graph_retrieval",
+          "vector_retrieval",
+          "rule_engine"
+        ],
+        "komponen_nonaktif": [
+          "debate"
+        ],
+        "detail": {
+          "route": {
+            "label": "pure_adat",
+            "scores": {
+              "national": 0,
+              "adat": 1,
+              "conflict": 0
+            },
+            "confidence": 0.65,
+            "method": "heuristic"
+          },
+          "graph_context": "Tidak ditemukan informasi tambahan di Knowledge Graph.",
+          "vector_context": [
+            "UUPA Pasal 5: Hukum agraria yang berlaku atas bumi, air dan ruang angkasa ialah hukum adat, sepanjang tidak bertentangan dengan kepentingan nasional dan negara.",
+            "KUHPerdata Pasal 913: Legitime portie adalah bagian mutlak harta peninggalan yang tidak boleh dikurangi dengan pemberian wasiat.",
+            "Adat Minangkabau: Harta pencaharian (pusako rendah) adalah hasil usaha suami istri yang dapat diwariskan kepada anak-anak (hukum Islam/Nasional)."
+          ],
+          "rule_results": {
+            "nasional": [],
+            "adat": {
+              "minangkabau": [
+                "punah(rumah_gadang)",
+                "punah(sawah_ladang)",
+                "punah(hutan_tanah)",
+                "punah(pandam_pakuburan)",
+                "punah(sawah_adat)",
+                "punah(tanah_kaum)",
+                "punah(tanah_ulayat)",
+                "punah(tanah_pusako)",
+                "punah(tanah_waris)",
+                "punah(rumah_istri)",
+                "punah(sawah_bersama)",
+                "punah(tanah_adat)",
+                "punah(pusako_tinggi_hibah)"
+              ],
+              "bali": [],
+              "jawa": []
+            }
+          },
+          "debate_enabled": false
+        }
+      }
+    },
+    {
+      "id": "CS-NAS-066",
+      "gold": "A",
+      "predicted": "B",
+      "match": false,
+      "label_source": "detail.rule_results.adat_only",
+      "baseline_payload": {
+        "baseline_id": "B5",
+        "query": "Sebuah desa adat memberikan sanksi pengucilan (kasepekang) kepada satu keluarga karena pelanggaran norma adat. Dampaknya, anak-anak dari keluarga tersebut dilarang bersekolah di sekolah desa setempat dan dilarang mendapatkan layanan kesehatan di puskesmas pembantu desa.",
+        "jawaban": "[B5_NO_DEBATE] Query: Sebuah desa adat memberikan sanksi pengucilan (kasepekang) kepada satu keluarga karena pelanggaran norma adat. Dampaknya, anak-anak dari keluarga tersebut dilarang bersekolah di sekolah desa setempat dan dilarang mendapatkan layanan kesehatan di puskesmas pembantu desa.. Ringkasan evidence: Tidak ditemukan informasi tambahan di Knowledge Graph. Adat Minangkabau: Harta pencaharian (pusako rendah) adalah hasil usaha suami istri yang dapat diwariskan kepada anak-anak (hukum Islam/Nasional).",
+        "komponen_aktif": [
+          "router",
+          "graph_retrieval",
+          "vector_retrieval",
+          "rule_engine"
+        ],
+        "komponen_nonaktif": [
+          "debate"
+        ],
+        "detail": {
+          "route": {
+            "label": "pure_adat",
+            "scores": {
+              "national": 0,
+              "adat": 1,
+              "conflict": 0
+            },
+            "confidence": 0.65,
+            "method": "heuristic"
+          },
+          "graph_context": "Tidak ditemukan informasi tambahan di Knowledge Graph.",
+          "vector_context": [
+            "Adat Minangkabau: Harta pencaharian (pusako rendah) adalah hasil usaha suami istri yang dapat diwariskan kepada anak-anak (hukum Islam/Nasional).",
+            "UUPA Pasal 3: Hak ulayat dan hak-hak serupa itu dari masyarakat-masyarakat hukum adat, sepanjang kenyataannya masih ada, harus sedemikian rupa sehingga sesuai dengan kepentingan nasional.",
+            "Adat Bali: Sistem kekeluargaan patrilineal (purusa), anak laki-laki meneruskan tanggung jawab adat dan warisan."
+          ],
+          "rule_results": {
+            "nasional": [],
+            "adat": {
+              "minangkabau": [
+                "punah(rumah_gadang)",
+                "punah(sawah_ladang)",
+                "punah(hutan_tanah)",
+                "punah(pandam_pakuburan)",
+                "punah(sawah_adat)",
+                "punah(tanah_kaum)",
+                "punah(tanah_ulayat)",
+                "punah(tanah_pusako)",
+                "punah(tanah_waris)",
+                "punah(rumah_istri)",
+                "punah(sawah_bersama)",
+                "punah(tanah_adat)",
+                "punah(pusako_tinggi_hibah)"
+              ],
+              "bali": [],
+              "jawa": []
+            }
+          },
+          "debate_enabled": false
+        }
+      }
+    }
+  ]
+}

@@ -5,7 +5,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Total Tasks:** 91
 **Status Legend:** PENDING | IN_PROGRESS | DONE | BLOCKED | CANCELLED
 
-*Last updated: 2026-02-09*
+*Last updated: 2026-02-11*
 
 ---
 
@@ -370,6 +370,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Outputs:** `experiments/06_independent_eval/PROTOCOL.md`, `experiments/06_independent_eval/results/`, `experiments/06_independent_eval/analysis.md`
 **Acceptance Test:** All metrics computed with confidence intervals; statistical significance tests passed
 **Blocker:** ART-028 dan ART-030 belum selesai (`ART-029` sudah DONE).
+**Progress Note (2026-02-11):** Readiness gate terstruktur ditambahkan melalui `experiments/06_independent_eval/assess_readiness.py` dan artefak `experiments/06_independent_eval/readiness_status.json`. Status terkini: `ART-031_operational_ready=false`, `ART-031_scientific_ready=false`; blocker utama tetap pada ART-030 (putusan MA valid < 50 dan masih draft) serta belum adanya agreement report final.
 
 ### Data Scaling (Weakness #4)
 
@@ -842,12 +843,14 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-057 through ART-064 |
 | **Priority** | P1 |
-| **Status** | PENDING |
+| **Status** | IN_PROGRESS |
 **Description:** Execute all 8 baselines on the 200 test cases, each run 3 times with different random seeds. Record all outputs.
 **Inputs:** All baseline implementations, 200 test cases
 **Outputs:** `experiments/09_ablation_study/results/` — organized by baseline and run
 **Acceptance Test:** 7 automated baselines x 3 runs = 21 complete runs + 1 human baseline
 **Note:** All prerequisites (ART-057..064) completed 2026-02-08. Unblocked by Mata Elang review 2026-02-08.
+**Progress Note (2026-02-11):** Runner ART-065 ditambahkan (`experiments/09_ablation_study/run_all_baselines.py`) dan dieksekusi 21 run otomatis (B1..B7 x seed 11/22/33) pada active set manifest (`data/processed/gold_standard/gs_active_cases.json`, evaluable 22). Artefak: `experiments/09_ablation_study/results/baseline_runs/*` + `run_all_baselines_summary.json`. Human baseline B8 dan cakupan target 200 kasus masih belum terpenuhi.
+**Progress Note (2026-02-11):** Manifest benchmark direbuild (`scripts/rebuild_benchmark_manifest.py --as-of-date 2026-02-11`) agar `total_cases_actual`, `label_distribution`, dan `evaluable_cases_excluding_split` sinkron dengan dataset aktif.
 
 ### ART-066: Statistical Analysis of Ablation Results
 | Field | Value |
@@ -856,11 +859,12 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 | **Executor** | EITHER |
 | **Prerequisites** | ART-065 |
 | **Priority** | P1 |
-| **Status** | PENDING |
+| **Status** | IN_PROGRESS |
 **Description:** Compute: mean and std for each baseline, paired t-tests or Wilcoxon for all pairwise comparisons, Cohen's d effect sizes, confidence intervals. Visualize results.
 **Inputs:** All ablation results
 **Outputs:** `experiments/09_ablation_study/analysis.md`, `experiments/09_ablation_study/figures/`
 **Acceptance Test:** All comparisons with p-values, effect sizes, CIs reported; full pipeline beats >= 6/7 automated baselines
+**Progress Note (2026-02-11):** Script analisis ditambahkan (`experiments/09_ablation_study/statistical_analysis.py`) dan dijalankan pada hasil ART-065. Artefak: `experiments/09_ablation_study/results/statistical_analysis.json` dan `experiments/09_ablation_study/results/statistical_analysis.md` (mean/std/CI, paired t-test, Wilcoxon, Cohen's d terhadap baseline acuan B5). Status masih IN_PROGRESS karena data belum mencapai target 200 kasus + B8.
 
 ### Experiment 10: CCS Metric Validation (Weakness #6)
 
@@ -1349,12 +1353,13 @@ Kasus ini perlu arbitrator independen untuk finalisasi Gold Standard.
 **Acceptance Test:**
 - [x] 7 kasus memiliki keputusan final pada active set yang dievaluasi
 - [x] Dokumentasi rationale keputusan lengkap
-- [x] Tidak ada `SPLIT` tersisa pada `gs_active_cases.json` (N=24)
+- [x] Snapshot historis sempat mencapai `SPLIT=0` pada active set (N=24); status terkini wajib diverifikasi via manifest aktif.
 
 **Completion Note (2026-02-09):**
 - Follow-up Ahli-4 + arbiter final sudah diingest.
-- Konsistensi aktif set: `SPLIT=0`, `mismatch gold vs majority=0`.
+- Konsistensi aktif set pada snapshot saat itu: `SPLIT=0`, `mismatch gold vs majority=0`.
 - Catatan metodologis: klaim referensi 82 kasus masih perlu rekonsiliasi pipeline terpisah karena active benchmark saat ini berisi 24 kasus.
+**Progress Note (2026-02-11):** Manifest aktif terbaru (`data/benchmark_manifest.json`) mencatat active set `total=24`, `evaluable=22` (`SPLIT=2`). Semua klaim metrik harus menyebut `as_of_date` dan sumber manifest yang dipakai.
 
 ---
 

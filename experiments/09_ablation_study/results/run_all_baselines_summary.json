@@ -1,0 +1,294 @@
+{
+  "evaluation_mode": "operational_offline",
+  "strict_manifest": true,
+  "force_offline": true,
+  "disable_external_llm": true,
+  "source_dataset": "data/processed/gold_standard/gs_active_cases.json",
+  "n_baselines": 7,
+  "n_seeds": 3,
+  "total_runs": 21,
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "runs": [
+    {
+      "baseline_id": "B1",
+      "seed": 11,
+      "accuracy": 0.5909090909090909,
+      "total_evaluated": 22
+    },
+    {
+      "baseline_id": "B1",
+      "seed": 22,
+      "accuracy": 0.5909090909090909,
+      "total_evaluated": 22
+    },
+    {
+      "baseline_id": "B1",
+      "seed": 33,
+      "accuracy": 0.5909090909090909,
+      "total_evaluated": 22
+    },
+    {
+      "baseline_id": "B2",
+      "seed": 11,
+      "accuracy": 0.5909090909090909,
+      "total_evaluated": 22
+    },
+    {
+      "baseline_id": "B2",
+      "seed": 22,
+      "accuracy": 0.5909090909090909,
+      "total_evaluated": 22
+    },
+    {
+      "baseline_id": "B2",
+      "seed": 33,
+      "accuracy": 0.5909090909090909,
+      "total_evaluated": 22
+    },
+    {
+      "baseline_id": "B3",
+      "seed": 11,
+      "accuracy": 0.5909090909090909,
+      "total_evaluated": 22
+    },
+    {
+      "baseline_id": "B3",
+      "seed": 22,
+      "accuracy": 0.5909090909090909,
+      "total_evaluated": 22
+    },
+    {
+      "baseline_id": "B3",
+      "seed": 33,
+      "accuracy": 0.5909090909090909,
+      "total_evaluated": 22
+    },
+    {
+      "baseline_id": "B4",
+      "seed": 11,
+      "accuracy": 0.5909090909090909,
+      "total_evaluated": 22
+    },
+    {
+      "baseline_id": "B4",
+      "seed": 22,
+      "accuracy": 0.5909090909090909,
+      "total_evaluated": 22
+    },
+    {
+      "baseline_id": "B4",
+      "seed": 33,
+      "accuracy": 0.5909090909090909,
+      "total_evaluated": 22
+    },
+    {
+      "baseline_id": "B5",
+      "seed": 11,
+      "accuracy": 0.5454545454545454,
+      "total_evaluated": 22
+    },
+    {
+      "baseline_id": "B5",
+      "seed": 22,
+      "accuracy": 0.5454545454545454,
+      "total_evaluated": 22
+    },
+    {
+      "baseline_id": "B5",
+      "seed": 33,
+      "accuracy": 0.5454545454545454,
+      "total_evaluated": 22
+    },
+    {
+      "baseline_id": "B6",
+      "seed": 11,
+      "accuracy": 0.5454545454545454,
+      "total_evaluated": 22
+    },
+    {
+      "baseline_id": "B6",
+      "seed": 22,
+      "accuracy": 0.5454545454545454,
+      "total_evaluated": 22
+    },
+    {
+      "baseline_id": "B6",
+      "seed": 33,
+      "accuracy": 0.5454545454545454,
+      "total_evaluated": 22
+    },
+    {
+      "baseline_id": "B7",
+      "seed": 11,
+      "accuracy": 0.5454545454545454,
+      "total_evaluated": 22
+    },
+    {
+      "baseline_id": "B7",
+      "seed": 22,
+      "accuracy": 0.5454545454545454,
+      "total_evaluated": 22
+    },
+    {
+      "baseline_id": "B7",
+      "seed": 33,
+      "accuracy": 0.5454545454545454,
+      "total_evaluated": 22
+    }
+  ],
+  "aggregate": {
+    "per_baseline": {
+      "B1": {
+        "baseline_id": "B1",
+        "n_runs": 3,
+        "seeds": [
+          11,
+          22,
+          33
+        ],
+        "accuracies": [
+          0.5909090909090909,
+          0.5909090909090909,
+          0.5909090909090909
+        ],
+        "total_evaluated_per_run": [
+          22,
+          22,
+          22
+        ],
+        "mean_accuracy": 0.5909090909090909,
+        "std_accuracy": 0.0
+      },
+      "B2": {
+        "baseline_id": "B2",
+        "n_runs": 3,
+        "seeds": [
+          11,
+          22,
+          33
+        ],
+        "accuracies": [
+          0.5909090909090909,
+          0.5909090909090909,
+          0.5909090909090909
+        ],
+        "total_evaluated_per_run": [
+          22,
+          22,
+          22
+        ],
+        "mean_accuracy": 0.5909090909090909,
+        "std_accuracy": 0.0
+      },
+      "B3": {
+        "baseline_id": "B3",
+        "n_runs": 3,
+        "seeds": [
+          11,
+          22,
+          33
+        ],
+        "accuracies": [
+          0.5909090909090909,
+          0.5909090909090909,
+          0.5909090909090909
+        ],
+        "total_evaluated_per_run": [
+          22,
+          22,
+          22
+        ],
+        "mean_accuracy": 0.5909090909090909,
+        "std_accuracy": 0.0
+      },
+      "B4": {
+        "baseline_id": "B4",
+        "n_runs": 3,
+        "seeds": [
+          11,
+          22,
+          33
+        ],
+        "accuracies": [
+          0.5909090909090909,
+          0.5909090909090909,
+          0.5909090909090909
+        ],
+        "total_evaluated_per_run": [
+          22,
+          22,
+          22
+        ],
+        "mean_accuracy": 0.5909090909090909,
+        "std_accuracy": 0.0
+      },
+      "B5": {
+        "baseline_id": "B5",
+        "n_runs": 3,
+        "seeds": [
+          11,
+          22,
+          33
+        ],
+        "accuracies": [
+          0.5454545454545454,
+          0.5454545454545454,
+          0.5454545454545454
+        ],
+        "total_evaluated_per_run": [
+          22,
+          22,
+          22
+        ],
+        "mean_accuracy": 0.5454545454545454,
+        "std_accuracy": 0.0
+      },
+      "B6": {
+        "baseline_id": "B6",
+        "n_runs": 3,
+        "seeds": [
+          11,
+          22,
+          33
+        ],
+        "accuracies": [
+          0.5454545454545454,
+          0.5454545454545454,
+          0.5454545454545454
+        ],
+        "total_evaluated_per_run": [
+          22,
+          22,
+          22
+        ],
+        "mean_accuracy": 0.5454545454545454,
+        "std_accuracy": 0.0
+      },
+      "B7": {
+        "baseline_id": "B7",
+        "n_runs": 3,
+        "seeds": [
+          11,
+          22,
+          33
+        ],
+        "accuracies": [
+          0.5454545454545454,
+          0.5454545454545454,
+          0.5454545454545454
+        ],
+        "total_evaluated_per_run": [
+          22,
+          22,
+          22
+        ],
+        "mean_accuracy": 0.5454545454545454,
+        "std_accuracy": 0.0
+      }
+    }
+  }
+}

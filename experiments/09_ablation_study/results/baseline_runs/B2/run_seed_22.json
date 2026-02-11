@@ -1,0 +1,604 @@
+{
+  "baseline_id": "B2",
+  "module_name": "b2_vector_rag",
+  "seed": 22,
+  "evaluation_mode": "operational_offline",
+  "source_dataset": "data/processed/gold_standard/gs_active_cases.json",
+  "total_raw_cases": 24,
+  "split_skipped": 2,
+  "total_evaluated": 22,
+  "correct": 13,
+  "accuracy": 0.5909090909090909,
+  "predictions": [
+    {
+      "id": "CS-BAL-020",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "query.route_fallback",
+      "baseline_payload": {
+        "baseline_id": "B2",
+        "query": "Seorang janda dalam sistem nyentana (suami masuk keluarga istri) menikah lagi dengan pria dari keluarga lain. Keluarga asal istri menuntut harta peninggalan (yang berasal dari garis istri) tetap di keluarga asal.",
+        "jawaban": "[B2_VECTOR] Query: Seorang janda dalam sistem nyentana (suami masuk keluarga istri) menikah lagi dengan pria dari keluarga lain. Keluarga asal istri menuntut harta peninggalan (yang berasal dari garis istri) tetap di keluarga asal.. Ringkasan evidence: Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah. Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010.",
+        "komponen_aktif": [
+          "vector_retrieval",
+          "llm_or_template_synthesis"
+        ],
+        "komponen_nonaktif": [
+          "graph_retrieval",
+          "rule_engine",
+          "debate"
+        ],
+        "detail": {
+          "vector_context": [
+            "Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah.",
+            "Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010."
+          ]
+        }
+      }
+    },
+    {
+      "id": "CS-MIN-004",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "label_source": "query.route_fallback",
+      "baseline_payload": {
+        "baseline_id": "B2",
+        "query": "Sepasang suami istri di Minangkabau memiliki harta dari hasil usaha bersama (pencaharian). Suami meninggal tanpa meninggalkan wasiat/hibah tertulis. Kemenakan suami mengklaim harta tersebut harus kembali ke kaum sebagai harta pusaka, sementara anak kandung mengklaim harta tersebut milik mereka.",
+        "jawaban": "[B2_VECTOR] Jawaban ringkas untuk query: Sepasang suami istri di Minangkabau memiliki harta dari hasil usaha bersama (pencaharian). Suami meninggal tanpa meninggalkan wasiat/hibah tertulis. Kemenakan suami mengklaim harta tersebut harus kembali ke kaum sebagai harta pusaka, sementara anak kandung mengklaim harta tersebut milik mereka.. Evidence eksplisit tidak tersedia.",
+        "komponen_aktif": [
+          "vector_retrieval",
+          "llm_or_template_synthesis"
+        ],
+        "komponen_nonaktif": [
+          "graph_retrieval",
+          "rule_engine",
+          "debate"
+        ],
+        "detail": {
+          "vector_context": []
+        }
+      }
+    },
+    {
+      "id": "CS-JAW-015",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "query.route_fallback",
+      "baseline_payload": {
+        "baseline_id": "B2",
+        "query": "Seorang ayah di Jawa memberikan pesan terakhir (wekas) di depan saksi keluarga agar rumah utama diberikan kepada anak bungsunya karena telah merawatnya. Anak-anak lain menuntut pembagian rata sesuai hukum nasional.",
+        "jawaban": "[B2_VECTOR] Query: Seorang ayah di Jawa memberikan pesan terakhir (wekas) di depan saksi keluarga agar rumah utama diberikan kepada anak bungsunya karena telah merawatnya. Anak-anak lain menuntut pembagian rata sesuai hukum nasional.. Ringkasan evidence: Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah.",
+        "komponen_aktif": [
+          "vector_retrieval",
+          "llm_or_template_synthesis"
+        ],
+        "komponen_nonaktif": [
+          "graph_retrieval",
+          "rule_engine",
+          "debate"
+        ],
+        "detail": {
+          "vector_context": [
+            "Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah."
+          ]
+        }
+      }
+    },
+    {
+      "id": "CS-MIN-025",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "query.route_fallback",
+      "baseline_payload": {
+        "baseline_id": "B2",
+        "query": "Seorang Mamak Kepala Waris ingin meminjam uang ke bank untuk usaha kaum dengan menjaminkan aset kaum. Bank ragu terhadap kapasitas hukum mamak tersebut sebagai subjek hukum perdata perorangan.",
+        "jawaban": "[B2_VECTOR] Query: Seorang Mamak Kepala Waris ingin meminjam uang ke bank untuk usaha kaum dengan menjaminkan aset kaum. Bank ragu terhadap kapasitas hukum mamak tersebut sebagai subjek hukum perdata perorangan.. Ringkasan evidence: KUHPerdata menekankan prioritas ahli waris dan perlindungan legitime portie. Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010.",
+        "komponen_aktif": [
+          "vector_retrieval",
+          "llm_or_template_synthesis"
+        ],
+        "komponen_nonaktif": [
+          "graph_retrieval",
+          "rule_engine",
+          "debate"
+        ],
+        "detail": {
+          "vector_context": [
+            "KUHPerdata menekankan prioritas ahli waris dan perlindungan legitime portie.",
+            "Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010."
+          ]
+        }
+      }
+    },
+    {
+      "id": "CS-LIN-018",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "label_source": "query.route_fallback",
+      "baseline_payload": {
+        "baseline_id": "B2",
+        "query": "Di dalam wilayah hutan adat yang luas, terdapat beberapa bidang tanah yang sudah memiliki Sertifikat Hak Milik (SHM) individual milik pendatang. Masyarakat adat menuntut tanah tersebut dikembalikan ke ulayat.",
+        "jawaban": "[B2_VECTOR] Query: Di dalam wilayah hutan adat yang luas, terdapat beberapa bidang tanah yang sudah memiliki Sertifikat Hak Milik (SHM) individual milik pendatang. Masyarakat adat menuntut tanah tersebut dikembalikan ke ulayat.. Ringkasan evidence: Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah. Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010.",
+        "komponen_aktif": [
+          "vector_retrieval",
+          "llm_or_template_synthesis"
+        ],
+        "komponen_nonaktif": [
+          "graph_retrieval",
+          "rule_engine",
+          "debate"
+        ],
+        "detail": {
+          "vector_context": [
+            "Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah.",
+            "Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010."
+          ]
+        }
+      }
+    },
+    {
+      "id": "CS-BAL-012",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "label_source": "query.route_fallback",
+      "baseline_payload": {
+        "baseline_id": "B2",
+        "query": "Sengketa mengenai batas sanksi adat kasepekang di Bali. KUHP Baru (UU 1/2023) mulai mengakui sanksi adat, namun terdapat risiko pelanggaran hak asasi manusia mendasar.",
+        "jawaban": "[B2_VECTOR] Query: Sengketa mengenai batas sanksi adat kasepekang di Bali. KUHP Baru (UU 1/2023) mulai mengakui sanksi adat, namun terdapat risiko pelanggaran hak asasi manusia mendasar.. Ringkasan evidence: KUHPerdata menekankan prioritas ahli waris dan perlindungan legitime portie. Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah.",
+        "komponen_aktif": [
+          "vector_retrieval",
+          "llm_or_template_synthesis"
+        ],
+        "komponen_nonaktif": [
+          "graph_retrieval",
+          "rule_engine",
+          "debate"
+        ],
+        "detail": {
+          "vector_context": [
+            "KUHPerdata menekankan prioritas ahli waris dan perlindungan legitime portie.",
+            "Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah.",
+            "Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010."
+          ]
+        }
+      }
+    },
+    {
+      "id": "CS-BAL-009",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "label_source": "query.route_fallback",
+      "baseline_payload": {
+        "baseline_id": "B2",
+        "query": "Seorang krama desa adat di Bali mencoba mengklaim tanah Ayahan Desa yang ia tempati sebagai hak milik pribadi melalui program sertifikasi pemerintah (PTSL), namun ditentang oleh Desa Adat.",
+        "jawaban": "[B2_VECTOR] Query: Seorang krama desa adat di Bali mencoba mengklaim tanah Ayahan Desa yang ia tempati sebagai hak milik pribadi melalui program sertifikasi pemerintah (PTSL), namun ditentang oleh Desa Adat.. Ringkasan evidence: Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah. Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010.",
+        "komponen_aktif": [
+          "vector_retrieval",
+          "llm_or_template_synthesis"
+        ],
+        "komponen_nonaktif": [
+          "graph_retrieval",
+          "rule_engine",
+          "debate"
+        ],
+        "detail": {
+          "vector_context": [
+            "Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah.",
+            "Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010."
+          ]
+        }
+      }
+    },
+    {
+      "id": "CS-NAS-010",
+      "gold": "A",
+      "predicted": "B",
+      "match": false,
+      "label_source": "query.route_fallback",
+      "baseline_payload": {
+        "baseline_id": "B2",
+        "query": "Terjadi perkawinan di bawah umur (15 tahun) yang dilakukan secara adat dan agama karena dispensasi adat setempat. Hal ini bertentangan dengan UU Perkawinan terbaru yang mensyaratkan batas minimal 19 tahun.",
+        "jawaban": "[B2_VECTOR] Query: Terjadi perkawinan di bawah umur (15 tahun) yang dilakukan secara adat dan agama karena dispensasi adat setempat. Hal ini bertentangan dengan UU Perkawinan terbaru yang mensyaratkan batas minimal 19 tahun.. Ringkasan evidence: Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah. Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010.",
+        "komponen_aktif": [
+          "vector_retrieval",
+          "llm_or_template_synthesis"
+        ],
+        "komponen_nonaktif": [
+          "graph_retrieval",
+          "rule_engine",
+          "debate"
+        ],
+        "detail": {
+          "vector_context": [
+            "Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah.",
+            "Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010."
+          ]
+        }
+      }
+    },
+    {
+      "id": "CS-MIN-013",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "label_source": "query.route_fallback",
+      "baseline_payload": {
+        "baseline_id": "B2",
+        "query": "Seorang mamak menjual tanah pusako tinggi dengan alasan darurat adat (menikahkan anak kemenakan perempuan). Hasil penjualannya dibelikan ruko di kota. Apakah ruko tersebut berstatus harta pencaharian atau tetap harta pusako?",
+        "jawaban": "[B2_VECTOR] Query: Seorang mamak menjual tanah pusako tinggi dengan alasan darurat adat (menikahkan anak kemenakan perempuan). Hasil penjualannya dibelikan ruko di kota. Apakah ruko tersebut berstatus harta pencaharian atau tetap harta pusako?. Ringkasan evidence: Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah. Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010.",
+        "komponen_aktif": [
+          "vector_retrieval",
+          "llm_or_template_synthesis"
+        ],
+        "komponen_nonaktif": [
+          "graph_retrieval",
+          "rule_engine",
+          "debate"
+        ],
+        "detail": {
+          "vector_context": [
+            "Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah.",
+            "Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010."
+          ]
+        }
+      }
+    },
+    {
+      "id": "CS-JAW-011",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "query.route_fallback",
+      "baseline_payload": {
+        "baseline_id": "B2",
+        "query": "Sengketa hak waris anak angkat di Jawa. Hukum Islam (KHI) menggunakan wasiat wajibah, sementara hukum adat Jawa (yurisprudensi MA) menyetarakan posisi anak angkat dengan anak kandung dalam hal harta bersama.",
+        "jawaban": "[B2_VECTOR] Query: Sengketa hak waris anak angkat di Jawa. Hukum Islam (KHI) menggunakan wasiat wajibah, sementara hukum adat Jawa (yurisprudensi MA) menyetarakan posisi anak angkat dengan anak kandung dalam hal harta bersama.. Ringkasan evidence: Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah. Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010.",
+        "komponen_aktif": [
+          "vector_retrieval",
+          "llm_or_template_synthesis"
+        ],
+        "komponen_nonaktif": [
+          "graph_retrieval",
+          "rule_engine",
+          "debate"
+        ],
+        "detail": {
+          "vector_context": [
+            "Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah.",
+            "Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010.",
+            "KUHPerdata menekankan prioritas ahli waris dan perlindungan legitime portie."
+          ]
+        }
+      }
+    },
+    {
+      "id": "CS-BAL-014",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "label_source": "query.route_fallback",
+      "baseline_payload": {
+        "baseline_id": "B2",
+        "query": "Seorang janda di Bali yang tidak memiliki anak ingin tetap tinggal di rumah mendiang suaminya. Keluarga suami mengusirnya karena janda tersebut dianggap tidak lagi memiliki ikatan hukum setelah suami wafat.",
+        "jawaban": "[B2_VECTOR] Query: Seorang janda di Bali yang tidak memiliki anak ingin tetap tinggal di rumah mendiang suaminya. Keluarga suami mengusirnya karena janda tersebut dianggap tidak lagi memiliki ikatan hukum setelah suami wafat.. Ringkasan evidence: Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010.",
+        "komponen_aktif": [
+          "vector_retrieval",
+          "llm_or_template_synthesis"
+        ],
+        "komponen_nonaktif": [
+          "graph_retrieval",
+          "rule_engine",
+          "debate"
+        ],
+        "detail": {
+          "vector_context": [
+            "Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010."
+          ]
+        }
+      }
+    },
+    {
+      "id": "CS-NAS-041",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "label_source": "query.route_fallback",
+      "baseline_payload": {
+        "baseline_id": "B2",
+        "query": "Perusahaan tambang memiliki izin resmi dari pemerintah pusat (IUP), namun masyarakat adat setempat menolak aktivitas tambang karena wilayahnya masuk dalam hutan adat mereka yang belum bersertifikat.",
+        "jawaban": "[B2_VECTOR] Query: Perusahaan tambang memiliki izin resmi dari pemerintah pusat (IUP), namun masyarakat adat setempat menolak aktivitas tambang karena wilayahnya masuk dalam hutan adat mereka yang belum bersertifikat.. Ringkasan evidence: Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah. Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010.",
+        "komponen_aktif": [
+          "vector_retrieval",
+          "llm_or_template_synthesis"
+        ],
+        "komponen_nonaktif": [
+          "graph_retrieval",
+          "rule_engine",
+          "debate"
+        ],
+        "detail": {
+          "vector_context": [
+            "Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah.",
+            "Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010."
+          ]
+        }
+      }
+    },
+    {
+      "id": "CS-JAW-030",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "query.route_fallback",
+      "baseline_payload": {
+        "baseline_id": "B2",
+        "query": "Pewaris membagi harta kepada anak laki-laki dan perempuan secara sama rata (sigar semangka) sesuai pesan lisan. Anak laki-laki menggugat ingin menggunakan hukum Islam (2:1).",
+        "jawaban": "[B2_VECTOR] Query: Pewaris membagi harta kepada anak laki-laki dan perempuan secara sama rata (sigar semangka) sesuai pesan lisan. Anak laki-laki menggugat ingin menggunakan hukum Islam (2:1).. Ringkasan evidence: Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010.",
+        "komponen_aktif": [
+          "vector_retrieval",
+          "llm_or_template_synthesis"
+        ],
+        "komponen_nonaktif": [
+          "graph_retrieval",
+          "rule_engine",
+          "debate"
+        ],
+        "detail": {
+          "vector_context": [
+            "Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010."
+          ]
+        }
+      }
+    },
+    {
+      "id": "CS-NAS-022",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "query.route_fallback",
+      "baseline_payload": {
+        "baseline_id": "B2",
+        "query": "Pewaris memberikan seluruh hartanya kepada lembaga sosial melalui wasiat adat. Ahli waris inti menggugat berdasarkan konsep Legitime Portie (bagian mutlak) dalam hukum nasional.",
+        "jawaban": "[B2_VECTOR] Query: Pewaris memberikan seluruh hartanya kepada lembaga sosial melalui wasiat adat. Ahli waris inti menggugat berdasarkan konsep Legitime Portie (bagian mutlak) dalam hukum nasional.. Ringkasan evidence: KUHPerdata menekankan prioritas ahli waris dan perlindungan legitime portie. Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah.",
+        "komponen_aktif": [
+          "vector_retrieval",
+          "llm_or_template_synthesis"
+        ],
+        "komponen_nonaktif": [
+          "graph_retrieval",
+          "rule_engine",
+          "debate"
+        ],
+        "detail": {
+          "vector_context": [
+            "KUHPerdata menekankan prioritas ahli waris dan perlindungan legitime portie.",
+            "Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah.",
+            "Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010."
+          ]
+        }
+      }
+    },
+    {
+      "id": "CS-JAW-006",
+      "gold": "A",
+      "predicted": "B",
+      "match": false,
+      "label_source": "query.route_fallback",
+      "baseline_payload": {
+        "baseline_id": "B2",
+        "query": "Dalam sebuah pernikahan poligami yang sah di Jawa, terjadi perceraian dengan istri kedua. Terjadi sengketa pembagian harta yang diperoleh selama masa pernikahan kedua tersebut.",
+        "jawaban": "[B2_VECTOR] Query: Dalam sebuah pernikahan poligami yang sah di Jawa, terjadi perceraian dengan istri kedua. Terjadi sengketa pembagian harta yang diperoleh selama masa pernikahan kedua tersebut.. Ringkasan evidence: Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah. Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010.",
+        "komponen_aktif": [
+          "vector_retrieval",
+          "llm_or_template_synthesis"
+        ],
+        "komponen_nonaktif": [
+          "graph_retrieval",
+          "rule_engine",
+          "debate"
+        ],
+        "detail": {
+          "vector_context": [
+            "Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah.",
+            "Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010."
+          ]
+        }
+      }
+    },
+    {
+      "id": "CS-LIN-016",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "query.route_fallback",
+      "baseline_payload": {
+        "baseline_id": "B2",
+        "query": "Keluarga urban di Jakarta terdiri dari suami (Suku Minang) dan istri (Suku Jawa). Mereka memiliki aset di Jakarta. Saat suami wafat, terjadi perdebatan apakah menggunakan sistem matrilineal (adat suami) atau hukum perdata nasional.",
+        "jawaban": "[B2_VECTOR] Query: Keluarga urban di Jakarta terdiri dari suami (Suku Minang) dan istri (Suku Jawa). Mereka memiliki aset di Jakarta. Saat suami wafat, terjadi perdebatan apakah menggunakan sistem matrilineal (adat suami) atau hukum perdata nasional.. Ringkasan evidence: KUHPerdata menekankan prioritas ahli waris dan perlindungan legitime portie.",
+        "komponen_aktif": [
+          "vector_retrieval",
+          "llm_or_template_synthesis"
+        ],
+        "komponen_nonaktif": [
+          "graph_retrieval",
+          "rule_engine",
+          "debate"
+        ],
+        "detail": {
+          "vector_context": [
+            "KUHPerdata menekankan prioritas ahli waris dan perlindungan legitime portie."
+          ]
+        }
+      }
+    },
+    {
+      "id": "CS-LIN-052",
+      "gold": "D",
+      "predicted": "B",
+      "match": false,
+      "label_source": "query.route_fallback",
+      "baseline_payload": {
+        "baseline_id": "B2",
+        "query": "Sebuah lembaga adat ingin mengajukan kredit ke Bank Nasional dengan menjaminkan tanah ulayat mereka. Bank meminta bukti kepemilikan formal, sementara tanah tersebut tidak memiliki sertifikat individual melainkan pengakuan adat kolektif.",
+        "jawaban": "[B2_VECTOR] Query: Sebuah lembaga adat ingin mengajukan kredit ke Bank Nasional dengan menjaminkan tanah ulayat mereka. Bank meminta bukti kepemilikan formal, sementara tanah tersebut tidak memiliki sertifikat individual melainkan pengakuan adat kolektif.. Ringkasan evidence: Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah. Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010.",
+        "komponen_aktif": [
+          "vector_retrieval",
+          "llm_or_template_synthesis"
+        ],
+        "komponen_nonaktif": [
+          "graph_retrieval",
+          "rule_engine",
+          "debate"
+        ],
+        "detail": {
+          "vector_context": [
+            "Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah.",
+            "Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010."
+          ]
+        }
+      }
+    },
+    {
+      "id": "CS-BAL-002",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "query.route_fallback",
+      "baseline_payload": {
+        "baseline_id": "B2",
+        "query": "Seorang anak perempuan tunggal di Bali mengklaim hak waris atas harta peninggalan ayahnya (harta purusa). Keluarga besar menolak dengan alasan hukum adat Bali menganut sistem patrilineal murni, padahal sudah ada Keputusan MDP 2010.",
+        "jawaban": "[B2_VECTOR] Query: Seorang anak perempuan tunggal di Bali mengklaim hak waris atas harta peninggalan ayahnya (harta purusa). Keluarga besar menolak dengan alasan hukum adat Bali menganut sistem patrilineal murni, padahal sudah ada Keputusan MDP 2010.. Ringkasan evidence: Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010. KUHPerdata menekankan prioritas ahli waris dan perlindungan legitime portie.",
+        "komponen_aktif": [
+          "vector_retrieval",
+          "llm_or_template_synthesis"
+        ],
+        "komponen_nonaktif": [
+          "graph_retrieval",
+          "rule_engine",
+          "debate"
+        ],
+        "detail": {
+          "vector_context": [
+            "Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010.",
+            "KUHPerdata menekankan prioritas ahli waris dan perlindungan legitime portie.",
+            "Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah."
+          ]
+        }
+      }
+    },
+    {
+      "id": "CS-JAW-019",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "query.route_fallback",
+      "baseline_payload": {
+        "baseline_id": "B2",
+        "query": "Pembagian warisan di Jawa di mana anak bungsu (ragil) diberikan rumah utama karena tanggung jawabnya merawat orang tua. Kakak-kakaknya menuntut pembagian rumah tersebut dibagi rata secara hukum perdata.",
+        "jawaban": "[B2_VECTOR] Query: Pembagian warisan di Jawa di mana anak bungsu (ragil) diberikan rumah utama karena tanggung jawabnya merawat orang tua. Kakak-kakaknya menuntut pembagian rumah tersebut dibagi rata secara hukum perdata.. Ringkasan evidence: Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah.",
+        "komponen_aktif": [
+          "vector_retrieval",
+          "llm_or_template_synthesis"
+        ],
+        "komponen_nonaktif": [
+          "graph_retrieval",
+          "rule_engine",
+          "debate"
+        ],
+        "detail": {
+          "vector_context": [
+            "Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah."
+          ]
+        }
+      }
+    },
+    {
+      "id": "CS-MIN-011",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "label_source": "query.route_fallback",
+      "baseline_payload": {
+        "baseline_id": "B2",
+        "query": "Seorang anggota kaum di Minangkabau mengonversi tanah ulayat kaum menjadi Sertifikat Hak Milik (SHM) atas nama pribadi tanpa melalui musyawarah mufakat kaum dan tanpa persetujuan Kerapatan Adat Nagari (KAN).",
+        "jawaban": "[B2_VECTOR] Query: Seorang anggota kaum di Minangkabau mengonversi tanah ulayat kaum menjadi Sertifikat Hak Milik (SHM) atas nama pribadi tanpa melalui musyawarah mufakat kaum dan tanpa persetujuan Kerapatan Adat Nagari (KAN).. Ringkasan evidence: Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah. Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010.",
+        "komponen_aktif": [
+          "vector_retrieval",
+          "llm_or_template_synthesis"
+        ],
+        "komponen_nonaktif": [
+          "graph_retrieval",
+          "rule_engine",
+          "debate"
+        ],
+        "detail": {
+          "vector_context": [
+            "Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah.",
+            "Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010."
+          ]
+        }
+      }
+    },
+    {
+      "id": "CS-LIN-017",
+      "gold": "A",
+      "predicted": "B",
+      "match": false,
+      "label_source": "query.route_fallback",
+      "baseline_payload": {
+        "baseline_id": "B2",
+        "query": "Sebuah keluarga melakukan pengangkatan anak secara adat dengan upacara sakral yang disaksikan tetua. Namun, saat anak tersebut dewasa dan ingin mengurus paspor, pihak imigrasi menolak karena tidak ada penetapan pengadilan negeri.",
+        "jawaban": "[B2_VECTOR] Query: Sebuah keluarga melakukan pengangkatan anak secara adat dengan upacara sakral yang disaksikan tetua. Namun, saat anak tersebut dewasa dan ingin mengurus paspor, pihak imigrasi menolak karena tidak ada penetapan pengadilan negeri.. Ringkasan evidence: Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah. Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010.",
+        "komponen_aktif": [
+          "vector_retrieval",
+          "llm_or_template_synthesis"
+        ],
+        "komponen_nonaktif": [
+          "graph_retrieval",
+          "rule_engine",
+          "debate"
+        ],
+        "detail": {
+          "vector_context": [
+            "Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah.",
+            "Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010."
+          ]
+        }
+      }
+    },
+    {
+      "id": "CS-NAS-066",
+      "gold": "A",
+      "predicted": "B",
+      "match": false,
+      "label_source": "query.route_fallback",
+      "baseline_payload": {
+        "baseline_id": "B2",
+        "query": "Sebuah desa adat memberikan sanksi pengucilan (kasepekang) kepada satu keluarga karena pelanggaran norma adat. Dampaknya, anak-anak dari keluarga tersebut dilarang bersekolah di sekolah desa setempat dan dilarang mendapatkan layanan kesehatan di puskesmas pembantu desa.",
+        "jawaban": "[B2_VECTOR] Query: Sebuah desa adat memberikan sanksi pengucilan (kasepekang) kepada satu keluarga karena pelanggaran norma adat. Dampaknya, anak-anak dari keluarga tersebut dilarang bersekolah di sekolah desa setempat dan dilarang mendapatkan layanan kesehatan di puskesmas pembantu desa.. Ringkasan evidence: Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah. Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010.",
+        "komponen_aktif": [
+          "vector_retrieval",
+          "llm_or_template_synthesis"
+        ],
+        "komponen_nonaktif": [
+          "graph_retrieval",
+          "rule_engine",
+          "debate"
+        ],
+        "detail": {
+          "vector_context": [
+            "Dalam adat Jawa modern, gono-gini sering diselesaikan melalui musyawarah.",
+            "Dalam adat Bali, hak waris perempuan berkembang pasca MDP 2010."
+          ]
+        }
+      }
+    }
+  ]
+}
