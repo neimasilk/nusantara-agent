@@ -1,10 +1,10 @@
-﻿# Agreement Report Ahli-1 vs Ahli-2 (Batch-2 Kalibrasi, 12 Kasus)
+# Agreement Report Ahli-1 vs Ahli-2 (Batch-2 Kalibrasi, 12 Kasus)
 
 Tanggal: 8 Februari 2026  
 Sumber:
-1. Ahli-1: `docs/paket_kerja_4_jam_batch2_terisi_dr_hendra_2026-02-08.md`, `docs/paket_kerja_4_jam_batch3_terisi_dr_hendra_2026-02-08.md`, `docs/paket_kerja_4_jam_batch4_terisi_dr_hendra_2026-02-08.md`, `docs/paket_kerja_4_jam_batch5_terisi_dr_hendra_2026-02-08.md`, `docs/paket_kerja_4_jam_batch6_terisi_dr_hendra_2026-02-08.md`
-2. Ahli-2 Batch-1: `docs/paket_kerja_4_jam_ahli2_batch1_terisi_dr_indra_2026-02-08.md`
-3. Ahli-2 Batch-2 Kalibrasi: `docs/paket_kerja_4_jam_ahli2_batch2_kalibrasi_terisi_dr_indra_2026-02-08.md`
+1. Ahli-1: `docs/human_only/artifacts/paket_kerja_4_jam_batch2_terisi_dr_hendra_2026-02-08.md`, `docs/human_only/artifacts/paket_kerja_4_jam_batch3_terisi_dr_hendra_2026-02-08.md`, `docs/human_only/artifacts/paket_kerja_4_jam_batch4_terisi_dr_hendra_2026-02-08.md`, `docs/human_only/artifacts/paket_kerja_4_jam_batch5_terisi_dr_hendra_2026-02-08.md`, `docs/human_only/artifacts/paket_kerja_4_jam_batch6_terisi_dr_hendra_2026-02-08.md`
+2. Ahli-2 Batch-1: `docs/human_only/artifacts/paket_kerja_4_jam_ahli2_batch1_terisi_dr_indra_2026-02-08.md`
+3. Ahli-2 Batch-2 Kalibrasi: `docs/human_only/artifacts/paket_kerja_4_jam_ahli2_batch2_kalibrasi_terisi_dr_indra_2026-02-08.md`
 
 ## Ringkasan Hasil
 

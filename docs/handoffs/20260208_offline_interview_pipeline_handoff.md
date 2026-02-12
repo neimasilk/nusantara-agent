@@ -49,7 +49,7 @@ Fokus sesi ini adalah menguatkan workflow **offline-first** untuk:
 
 ```text
 Lanjutkan dari workflow offline interview yang sudah disiapkan.
-1) Baca docs/handoffs/20260208_offline_interview_pipeline_handoff.md dan docs/interview_online_workflow.md.
+1) Baca docs/handoffs/20260208_offline_interview_pipeline_handoff.md dan docs/human_only/workflow/interview_online_workflow.md.
 2) Prioritas: ingest hasil Ahli-4 dari template CSV ke gs_active_cases.json, lalu rebuild+validate manifest.
 3) Setelah itu sinkronkan klaim dokumentasi yang masih menyebut 82 kasus pada konteks benchmark aktif.
 4) Jangan gunakan API berbayar kecuali blocker kritis dan ada persetujuan eksplisit user.

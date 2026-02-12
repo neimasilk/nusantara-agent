@@ -26,30 +26,30 @@ Repo: `nusantara-agent`
 ### Ahli-1 (Dr. Hendra) — sprint sudah jalan 6 batch
 
 Dokumen terisi:
-1. `docs/paket_kerja_4_jam_ahli_domain_terisi_dr_hendra_2026-02-08.md`
-2. `docs/paket_kerja_4_jam_batch2_terisi_dr_hendra_2026-02-08.md`
-3. `docs/paket_kerja_4_jam_batch3_terisi_dr_hendra_2026-02-08.md`
-4. `docs/paket_kerja_4_jam_batch4_terisi_dr_hendra_2026-02-08.md`
-5. `docs/paket_kerja_4_jam_batch5_terisi_dr_hendra_2026-02-08.md`
-6. `docs/paket_kerja_4_jam_batch6_terisi_dr_hendra_2026-02-08.md`
+1. `docs/human_only/artifacts/paket_kerja_4_jam_ahli_domain_terisi_dr_hendra_2026-02-08.md`
+2. `docs/human_only/artifacts/paket_kerja_4_jam_batch2_terisi_dr_hendra_2026-02-08.md`
+3. `docs/human_only/artifacts/paket_kerja_4_jam_batch3_terisi_dr_hendra_2026-02-08.md`
+4. `docs/human_only/artifacts/paket_kerja_4_jam_batch4_terisi_dr_hendra_2026-02-08.md`
+5. `docs/human_only/artifacts/paket_kerja_4_jam_batch5_terisi_dr_hendra_2026-02-08.md`
+6. `docs/human_only/artifacts/paket_kerja_4_jam_batch6_terisi_dr_hendra_2026-02-08.md`
 
 Rekap:
-1. `docs/rekap_human_baseline_sprint_2026-02-08.md`
+1. `docs/human_only/artifacts/rekap_human_baseline_sprint_2026-02-08.md`
 2. Kumulatif ahli-1: **72 kasus**.
 
 ### Ahli-2 (Dr. Indra) — onboarding sudah dimulai
 
 Dokumen:
-1. Handout: `docs/paket_kerja_4_jam_ahli2_batch1_ready_to_handout.md`
-2. Hasil masuk: `docs/paket_kerja_4_jam_ahli2_batch1_terisi_dr_indra_2026-02-08.md`
-3. Agreement awal: `docs/agreement_report_ahli1_vs_ahli2_batch1_2026-02-08.md`
+1. Handout: `docs/human_only/artifacts/paket_kerja_4_jam_ahli2_batch1_ready_to_handout.md`
+2. Hasil masuk: `docs/human_only/artifacts/paket_kerja_4_jam_ahli2_batch1_terisi_dr_indra_2026-02-08.md`
+3. Agreement awal: `docs/human_only/artifacts/agreement_report_ahli1_vs_ahli2_batch1_2026-02-08.md`
 
 Temuan agreement awal:
 1. Match literal label: **4/12 (33.3%)**.
 2. Perlu kalibrasi definisi label.
 
 Kalibrasi yang sudah disiapkan:
-1. `docs/paket_kerja_4_jam_ahli2_batch2_kalibrasi_ready_to_handout.md`
+1. `docs/human_only/artifacts/paket_kerja_4_jam_ahli2_batch2_kalibrasi_ready_to_handout.md`
 
 ## Status Task Registry (kunci)
 
@@ -79,7 +79,7 @@ File: `docs/task_registry.md`
    3. putuskan apakah langsung onboarding ahli-3 atau perlu kalibrasi batch tambahan.
 3. Jaga ritme 4 jam per handout (self-contained, siap print).
 4. Terus update:
-   1. `docs/rekap_human_baseline_sprint_2026-02-08.md`
+   1. `docs/human_only/artifacts/rekap_human_baseline_sprint_2026-02-08.md`
    2. `docs/task_registry.md`
 
 ## Catatan Operasional

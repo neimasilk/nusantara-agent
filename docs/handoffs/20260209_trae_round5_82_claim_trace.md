@@ -6,7 +6,7 @@
 
 ## 1. Problem Statement
 
-Dokumen `docs/gold_standard_consensus_report_complete_82_cases_2026-02-08.md` mengklaim bahwa **82 kasus** telah selesai ("Status: COMPLETE"). Namun, file dataset aktif `data/processed/gold_standard/gs_active_cases.json` dan manifest hanya memuat **24 kasus**.
+Dokumen `docs/human_only/artifacts/gold_standard_consensus_report_complete_82_cases_2026-02-08.md` mengklaim bahwa **82 kasus** telah selesai ("Status: COMPLETE"). Namun, file dataset aktif `data/processed/gold_standard/gs_active_cases.json` dan manifest hanya memuat **24 kasus**.
 
 ## 2. Forensic Findings
 

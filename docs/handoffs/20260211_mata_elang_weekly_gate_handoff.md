@@ -1,4 +1,4 @@
-﻿# Handoff Singkat — Mata Elang Weekly Gate (2026-02-11)
+# Handoff Singkat — Mata Elang Weekly Gate (2026-02-11)
 
 ## 1. Konteks Terakhir
 - Sesi ini adalah review strategis tingkat atas (bukan eksekusi harian) berbasis `CLAUDE.md` + audit artefak inti (`task_registry`, `failure_registry`, `testing_framework`, hasil Exp 07/09, manifest benchmark).

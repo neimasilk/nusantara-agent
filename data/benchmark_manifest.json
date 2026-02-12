@@ -18,7 +18,7 @@
     "evaluable_cases_excluding_split": 22
   },
   "reference_claim": {
-    "path": "docs/gold_standard_consensus_report_complete_82_cases_2026-02-08.md",
+    "path": "docs/human_only/artifacts/gold_standard_consensus_report_complete_82_cases_2026-02-08.md",
     "sha256": "459A1117DEC57BC81732285E6238249B44D127713FE385EEADE2067F6BB1AD57",
     "declared_total_cases": 82
   },

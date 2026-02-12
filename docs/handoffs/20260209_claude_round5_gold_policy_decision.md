@@ -19,7 +19,7 @@
 ### Sumber Data (Traceable)
 - Dataset: `data/processed/gold_standard/gs_active_cases.json`
 - Manifest: `data/benchmark_manifest.json`
-- Expert-4 Source: `docs/paket_interview_online_ahli4_terisi.md`
+- Expert-4 Source: `docs/human_only/artifacts/paket_interview_online_ahli4_terisi.md`
 
 ---
 
@@ -186,7 +186,7 @@ python scripts/run_benchmark.py --gold-version v2 --output results_v2.json
 |------|-----|
 | `data/processed/gold_standard/gs_active_cases.json` | Dataset utama 24 kasus |
 | `data/benchmark_manifest.json` | Manifest dengan SHA256 dan distribusi label |
-| `docs/paket_interview_online_ahli4_terisi.md` | Sumber vote Ahli-4 |
+| `docs/human_only/artifacts/paket_interview_online_ahli4_terisi.md` | Sumber vote Ahli-4 |
 | `docs/handoffs/20260209_claude_sonnet45_round4_decision_gate.md` | Keputusan ingest sebelumnya |
 
 ---

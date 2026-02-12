@@ -18,12 +18,12 @@ Dokumen ini untuk menjalankan interview online para ahli hukum agar hasilnya lan
 
 ### Opsi Non-Teknis (disarankan untuk ahli hukum)
 
-1. Paket print master: `docs/paket_print_interview_master_2026-02-08.md`
+1. Paket print master: `docs/human_only/artifacts/paket_print_interview_master_2026-02-08.md`
 2. Untuk adjudikasi split Ahli-4, pakai paket siap print:
-   `docs/paket_interview_online_ahli4_split_siap_print_2026-02-08.md`
+   `docs/human_only/artifacts/paket_interview_online_ahli4_split_siap_print_2026-02-08.md`
 3. Ahli isi manual (pen and paper / PDF annotation), lalu pewawancara memindahkan hasil ke CSV.
 4. Operator transkrip mengacu ke:
-   `docs/operator_transkrip_interview_ke_csv.md`
+   `docs/human_only/workflow/operator_transkrip_interview_ke_csv.md`
 
 ### 1) Generate template interview
 

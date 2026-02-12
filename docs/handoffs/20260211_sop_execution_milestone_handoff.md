@@ -1,4 +1,4 @@
-﻿# Handoff SOP Execution — 2026-02-11
+# Handoff SOP Execution — 2026-02-11
 
 ## Konteks Ringkas
 Sesi ini mengeksekusi prioritas pasca-review strategis dengan mode kerja SOP (bukan mode Mata Elang):

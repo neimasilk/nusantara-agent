@@ -1,4 +1,4 @@
-﻿# Prompt untuk Agent Berikutnya (Copy-Paste)
+# Prompt untuk Agent Berikutnya (Copy-Paste)
 
 Kamu melanjutkan pekerjaan human-only baseline pada `ART-064`.
 
@@ -6,7 +6,7 @@ Kamu melanjutkan pekerjaan human-only baseline pada `ART-064`.
 1. `docs/archive/handoffs/2026-02-08/handoff_human_baseline_progress_batch4_ready_2026-02-08.md`
 2. `CLAUDE.md`
 3. `docs/task_registry.md`
-4. `docs/rekap_human_baseline_sprint_2026-02-08.md`
+4. `docs/human_only/artifacts/rekap_human_baseline_sprint_2026-02-08.md`
 
 ## State saat ini
 1. Ahli-1 tetap 72 kasus.
@@ -16,7 +16,7 @@ Kamu melanjutkan pekerjaan human-only baseline pada `ART-064`.
    - Batch-2: 50.0%
    - Batch-3: 58.3%
 4. Handout berikutnya sudah siap:
-   - `docs/paket_kerja_4_jam_ahli2_batch4_kalibrasi_mikro_ready_to_handout.md`
+   - `docs/human_only/artifacts/paket_kerja_4_jam_ahli2_batch4_kalibrasi_mikro_ready_to_handout.md`
 
 ## Tugas prioritasmu
 1. Begitu hasil Ahli-2 Batch-4 masuk:
@@ -25,7 +25,7 @@ Kamu melanjutkan pekerjaan human-only baseline pada `ART-064`.
    - hitung ulang agreement label literal.
    - berikan rekomendasi gerbang: onboarding Ahli-3 atau kalibrasi mikro tambahan.
 2. Update dokumen tracking:
-   - `docs/rekap_human_baseline_sprint_2026-02-08.md`
+   - `docs/human_only/artifacts/rekap_human_baseline_sprint_2026-02-08.md`
    - `docs/task_registry.md` (progress note ART-064)
 3. Commit dan push setiap batch selesai.
 

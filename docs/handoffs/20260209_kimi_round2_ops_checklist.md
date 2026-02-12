@@ -47,7 +47,7 @@
 ### A.4 Deliverable Status
 | Deliverable | Lokasi | Status |
 |-------------|--------|--------|
-| Paket Interview Terisi | `docs/paket_interview_online_ahli1_terisi_2026-02-09.md` | ✅ Done |
+| Paket Interview Terisi | `docs/human_only/artifacts/paket_interview_online_ahli1_terisi_2026-02-09.md` | ✅ Done |
 | CSV Template | `data/processed/gold_standard/interview_online/interview_template_ahli1.csv` | ⏳ Pending Transkrip |
 | Ingest ke Dataset | `data/processed/gold_standard/gs_active_cases.post_ahli1.json` | ⏳ Pending |
 | Manifest Update | `data/benchmark_manifest.json` | ⏳ Pending |
@@ -74,7 +74,7 @@
 
 □ Konversi ke paket print (opsional untuk offline)
   cp data/processed/gold_standard/interview_online/interview_template_ahli{N}.csv \
-     docs/paket_interview_online_ahli{N}_siap_print.md
+     docs/human_only/artifacts/paket_interview_online_ahli{N}_siap_print.md
 
 □ Siapkan kertas kerja atau dokumen PDF annotable
 
@@ -88,7 +88,7 @@
 
 □ Verifikasi identitas ahli dan tanggal sesi
 
-□ Transkrip hasil kertas/PDF ke CSV (acuan: docs/operator_transkrip_interview_ke_csv.md)
+□ Transkrip hasil kertas/PDF ke CSV (acuan: docs/human_only/workflow/operator_transkrip_interview_ke_csv.md)
   - Kolom wajib: id, label_ahli{N}, confidence_ahli{N}, rationale_ahli{N}
   - Kolom opsional: reference_1, reference_2, session_date, interviewer_name
 
@@ -275,7 +275,7 @@ for s, n in sorted(statuses.items()):
 
 | File | Lokasi | Status |
 |------|--------|--------|
-| Paket Interview Terisi | `docs/paket_interview_online_ahli{N}_terisi_YYYY-MM-DD.md` | ✅ |
+| Paket Interview Terisi | `docs/human_only/artifacts/paket_interview_online_ahli{N}_terisi_YYYY-MM-DD.md` | ✅ |
 | CSV Transkrip | `data/processed/gold_standard/interview_online/interview_template_ahli{N}.csv` | ✅ |
 | Dataset Post-Ingest | `data/processed/gold_standard/gs_active_cases.post_ahli{N}.json` | ✅ |
 | Dataset Final | `data/processed/gold_standard/gs_active_cases.json` | ✅ |
@@ -303,10 +303,10 @@ for s, n in sorted(statuses.items()):
 
 | Dokumen | Lokasi | Kegunaan |
 |---------|--------|----------|
-| Workflow Interview | `docs/interview_online_workflow.md` | Panduan end-to-end |
-| Operator Transkrip | `docs/operator_transkrip_interview_ke_csv.md` | Mapping kertas ke CSV |
-| Paket Master Print | `docs/paket_print_interview_master_2026-02-08.md` | Template generik |
-| Paket Ahli-4 Split | `docs/paket_interview_online_ahli4_split_siap_print_2026-02-08.md` | Arbitrase kasus split |
+| Workflow Interview | `docs/human_only/workflow/interview_online_workflow.md` | Panduan end-to-end |
+| Operator Transkrip | `docs/human_only/workflow/operator_transkrip_interview_ke_csv.md` | Mapping kertas ke CSV |
+| Paket Master Print | `docs/human_only/artifacts/paket_print_interview_master_2026-02-08.md` | Template generik |
+| Paket Ahli-4 Split | `docs/human_only/artifacts/paket_interview_online_ahli4_split_siap_print_2026-02-08.md` | Arbitrase kasus split |
 | Task Registry | `docs/task_registry.md` | Status ART terkait |
 
 ---

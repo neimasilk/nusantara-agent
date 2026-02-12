@@ -19,7 +19,7 @@ Posisi tegas:
 
 ## 2) Evidence Snapshot (verifikasi sesi ini)
 
-1. Klaim gold standard 82 kasus terdokumentasi di `docs/gold_standard_consensus_report_complete_82_cases_2026-02-08.md` (baris statistik total 82).  
+1. Klaim gold standard 82 kasus terdokumentasi di `docs/human_only/artifacts/gold_standard_consensus_report_complete_82_cases_2026-02-08.md` (baris statistik total 82).
 2. File benchmark aktif yang dipakai runner `experiments/09_ablation_study/run_bench_active.py` (alias legacy: `run_bench_gs82.py`) menunjuk `data/processed/gold_standard/gs_active_cases.json` (via manifest).  
 3. Isi aktual `data/processed/gold_standard/gs_active_cases.json` saat ini adalah list **24 kasus** (dengan 2 split, efektif 22 terukur).  
 4. Ini konsisten dengan `experiments/09_ablation_study/analysis.md` yang menyebut **Sampel: 22**.  

@@ -2,8 +2,8 @@
 
 Tanggal: 8 Februari 2026  
 Sumber:
-1. Ahli-1: `docs/rekap_human_baseline_sprint_2026-02-08.md` (Data kumulatif 72 kasus)
-2. Ahli-2 Batch-4: `docs/paket_kerja_4_jam_ahli2_batch4_kalibrasi_mikro_terisi_dr_indra_2026-02-08.md`
+1. Ahli-1: `docs/human_only/artifacts/rekap_human_baseline_sprint_2026-02-08.md` (Data kumulatif 72 kasus)
+2. Ahli-2 Batch-4: `docs/human_only/artifacts/paket_kerja_4_jam_ahli2_batch4_kalibrasi_mikro_terisi_dr_indra_2026-02-08.md`
 
 ## Ringkasan Hasil
 

@@ -36,8 +36,8 @@
 
 | File | Action | Status |
 |------|--------|--------|
-| `docs/paket_interview_online_ahli4_terisi.md` | Source for Batch 1 | ✅ Complete |
-| `docs/paket_interview_ahli4_followup_terisi.md` | Source for Batch 2 | ✅ Complete |
+| `docs/human_only/artifacts/paket_interview_online_ahli4_terisi.md` | Source for Batch 1 | ✅ Complete |
+| `docs/human_only/artifacts/paket_interview_ahli4_followup_terisi.md` | Source for Batch 2 | ✅ Complete |
 | `data/.../interview_template_ahli4_terisi.csv` | Ingest CSV Batch 1 | ✅ Created |
 | `data/.../interview_template_ahli4_followup.csv` | Ingest CSV Batch 2 | ⏳ Pending |
 | `data/.../gs_active_cases.json` | Main dataset | ✅ Updated (Batch 1) |

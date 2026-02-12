@@ -1,4 +1,4 @@
-﻿# PAKET KERJA 4 JAM AHLI KE-2 - BATCH 3 (KALIBRASI LANJUTAN)
+# PAKET KERJA 4 JAM AHLI KE-2 - BATCH 3 (KALIBRASI LANJUTAN)
 ## Tujuan: Menstabilkan Batas Label A/B versus C sebelum Scale-up
 
 Paket ini melanjutkan kalibrasi batch-2 dengan fokus pada mismatch tersisa dan anchor pembeda batas label.

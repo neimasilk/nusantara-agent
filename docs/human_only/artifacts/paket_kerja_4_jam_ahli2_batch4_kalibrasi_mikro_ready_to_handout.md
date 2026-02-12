@@ -1,4 +1,4 @@
-﻿# PAKET KERJA 4 JAM AHLI KE-2 - BATCH 4 (KALIBRASI MIKRO)
+# PAKET KERJA 4 JAM AHLI KE-2 - BATCH 4 (KALIBRASI MIKRO)
 ## Tujuan: Menutup 5 mismatch tersisa agar agreement mencapai ambang onboarding Ahli-3
 
 Paket ini fokus eksklusif pada mismatch residual setelah Batch-3, ditambah 3 anchor kontrol.

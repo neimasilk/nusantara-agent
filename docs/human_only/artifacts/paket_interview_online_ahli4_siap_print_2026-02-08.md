@@ -1,4 +1,4 @@
-﻿# PAKET INTERVIEW ONLINE — AHLI-4 (SELF-CONTAINED)
+# PAKET INTERVIEW ONLINE — AHLI-4 (SELF-CONTAINED)
 ## Versi siap print/PDF untuk diisi langsung
 
 Dokumen ini sudah memuat 12 kasus lengkap. Ahli cukup baca lalu isi.

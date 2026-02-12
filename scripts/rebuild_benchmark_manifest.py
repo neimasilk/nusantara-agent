@@ -124,7 +124,7 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--reference-claim",
         type=str,
-        default="docs/gold_standard_consensus_report_complete_82_cases_2026-02-08.md",
+        default="docs/human_only/artifacts/gold_standard_consensus_report_complete_82_cases_2026-02-08.md",
         help="Path dokumen klaim referensi total kasus.",
     )
     parser.add_argument(

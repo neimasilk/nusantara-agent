@@ -161,7 +161,7 @@ python scripts/validate_benchmark_manifest.py
 
 | Item | Value |
 |------|-------|
-| Canonical Source | `docs/paket_interview_online_ahli4_terisi.md` |
+| Canonical Source | `docs/human_only/artifacts/paket_interview_online_ahli4_terisi.md` |
 | Cases to Ingest | 12 |
 | SPLIT Cases Resolved | **0** (belum terarbitrase) |
 | Data Policy | PARTIAL INGEST |

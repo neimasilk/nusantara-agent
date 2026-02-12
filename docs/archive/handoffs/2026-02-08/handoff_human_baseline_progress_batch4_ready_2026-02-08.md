@@ -1,4 +1,4 @@
-﻿# HANDOFF: Human Baseline Progress (s.d. Batch-3 Masuk, Batch-4 Ready)
+# HANDOFF: Human Baseline Progress (s.d. Batch-3 Masuk, Batch-4 Ready)
 
 Tanggal: 2026-02-08  
 Branch: `main`  
@@ -18,17 +18,17 @@ Repo: `nusantara-agent`
 
 ## Artefak Kunci yang Sudah Ada
 
-1. Rekap sprint: `docs/rekap_human_baseline_sprint_2026-02-08.md`
+1. Rekap sprint: `docs/human_only/artifacts/rekap_human_baseline_sprint_2026-02-08.md`
 2. Agreement report:
-   - `docs/agreement_report_ahli1_vs_ahli2_batch1_2026-02-08.md`
-   - `docs/agreement_report_ahli1_vs_ahli2_batch2_kalibrasi_2026-02-08.md`
-   - `docs/agreement_report_ahli1_vs_ahli2_batch3_kalibrasi_lanjutan_2026-02-08.md`
+   - `docs/human_only/artifacts/agreement_report_ahli1_vs_ahli2_batch1_2026-02-08.md`
+   - `docs/human_only/artifacts/agreement_report_ahli1_vs_ahli2_batch2_kalibrasi_2026-02-08.md`
+   - `docs/human_only/artifacts/agreement_report_ahli1_vs_ahli2_batch3_kalibrasi_lanjutan_2026-02-08.md`
 3. Dokumen Ahli-2:
-   - `docs/paket_kerja_4_jam_ahli2_batch1_terisi_dr_indra_2026-02-08.md`
-   - `docs/paket_kerja_4_jam_ahli2_batch2_kalibrasi_terisi_dr_indra_2026-02-08.md`
-   - `docs/paket_kerja_4_jam_ahli2_batch3_kalibrasi_lanjutan_terisi_dr_indra_2026-02-08.md`
+   - `docs/human_only/artifacts/paket_kerja_4_jam_ahli2_batch1_terisi_dr_indra_2026-02-08.md`
+   - `docs/human_only/artifacts/paket_kerja_4_jam_ahli2_batch2_kalibrasi_terisi_dr_indra_2026-02-08.md`
+   - `docs/human_only/artifacts/paket_kerja_4_jam_ahli2_batch3_kalibrasi_lanjutan_terisi_dr_indra_2026-02-08.md`
 4. Handout berikutnya (siap kirim):
-   - `docs/paket_kerja_4_jam_ahli2_batch4_kalibrasi_mikro_ready_to_handout.md`
+   - `docs/human_only/artifacts/paket_kerja_4_jam_ahli2_batch4_kalibrasi_mikro_ready_to_handout.md`
 
 ## Status ART-064
 
@@ -44,7 +44,7 @@ Repo: `nusantara-agent`
 2. Setelah hasil masuk:
    - dokumentasikan file terisi di `docs/`.
    - hitung ulang agreement literal terhadap Ahli-1.
-   - update `docs/rekap_human_baseline_sprint_2026-02-08.md`.
+   - update `docs/human_only/artifacts/rekap_human_baseline_sprint_2026-02-08.md`.
    - update progress note `ART-064` di `docs/task_registry.md`.
 3. Keputusan gerbang:
    - Jika agreement >= 0.67, mulai onboarding Ahli-3.

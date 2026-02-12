@@ -2,7 +2,7 @@
 
 **Tanggal Transkripsi:** 2026-02-09  
 **Operator:** Kimi (Structured Ops Executor)  
-**Sumber:** `docs/paket_interview_online_ahli4_terisi.md`  
+**Sumber:** `docs/human_only/artifacts/paket_interview_online_ahli4_terisi.md`
 **Output:** `data/processed/gold_standard/interview_online/interview_template_ahli4_from_terisi_12cases.csv`  
 **Status:** ✅ Siap Ingest (Belum Di-ingest)
 

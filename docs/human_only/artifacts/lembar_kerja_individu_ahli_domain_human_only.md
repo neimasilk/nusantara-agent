@@ -1,7 +1,7 @@
 # Lembar Kerja Individu Ahli Domain (HUMAN-ONLY)
 
 Dokumen ini khusus untuk **dikerjakan 1 orang ahli domain**.  
-Acuan panduan: `docs/panduan_human_only_untuk_ahli_domain.md`
+Acuan panduan: `docs/human_only/workflow/panduan_human_only_untuk_ahli_domain.md`
 
 ---
 

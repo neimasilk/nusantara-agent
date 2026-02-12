@@ -33,7 +33,7 @@ Tujuan: deteksi dini kegagalan struktural, bukan eksekusi harian.
 
 ### D. Data Governance
 - [ ] Benchmark dataset count terverifikasi: ___ kasus
-- [ ] Gold standard file utuh dan consistent: `docs/gold_standard_consensus_report_complete_82_cases_2026-02-08.md`
+- [ ] Gold standard file utuh dan consistent: `docs/human_only/artifacts/gold_standard_consensus_report_complete_82_cases_2026-02-08.md`
 - [ ] Tidak ada test case baru ditambahkan tanpa provenance (siapa, kapan, sumber)
 
 ### E. Methodology Defensibility

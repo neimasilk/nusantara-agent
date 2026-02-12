@@ -305,7 +305,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Acceptance Test:** 200 paragraphs, balanced across 3 domains (60-70 each), covering all 4 category types
 **Progress Note (2026-02-07):** Seed awal 24 paragraf internal sudah dibuat (`data/raw/gold_standard_texts/index_seed.csv`) untuk pilot workflow; belum memenuhi target 200 paragraf sumber primer.
 **Progress Note (2026-02-07):** Pool internal telah diskalakan ke 200 item (`data/raw/gold_standard_texts/GS-0001..GS-0200`) melalui `experiments/06_independent_eval/build_gold_texts_internal_pool.py`; status masih `internal_pool_seed` (bukan sumber primer final).
-**Progress Note (2026-02-08):** Submisi ahli domain individu diterima di `docs/lembar_kerja_individu_ahli_domain_human_only_terisi_dr_hendra_kusuma_2026-02-08.md` dengan status seleksi paragraf `SELESAI` pada target individu (60-80 paragraf). Untuk status ART global tetap perlu agregasi hingga 200 paragraf primer lintas domain.
+**Progress Note (2026-02-08):** Submisi ahli domain individu diterima di `docs/human_only/artifacts/lembar_kerja_individu_ahli_domain_human_only_terisi_dr_hendra_kusuma_2026-02-08.md` dengan status seleksi paragraf `SELESAI` pada target individu (60-80 paragraf). Untuk status ART global tetap perlu agregasi hingga 200 paragraf primer lintas domain.
 
 ### ART-028: Human Annotation of Gold Standard Triples
 | Field | Value |
@@ -355,7 +355,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Progress Note (2026-02-07):** Stub putusan untuk 7 kandidat internal sudah digenerate via `experiments/06_independent_eval/generate_ma_stubs.py` (`data/raw/ma_decisions/putusan_*.json`); konten substansi masih kosong dan wajib verifikasi sumber primer.
 **Progress Note (2026-02-07):** 7 stub putusan telah di-auto-fill draft konservatif via `experiments/06_independent_eval/auto_fill_ma_stubs_llm.py` menggunakan Kimi API; field tetap `status_verifikasi: draft` dan belum boleh dipakai sebagai ground truth tanpa cek sumber primer.
 **Progress Note (2026-02-07):** Precheck ketat (`run_precheck.py`) kini mensyaratkan field substansi/metadata putusan non-kosong; status terkini `Invalid putusan MA: 7` sehingga ART-030 tetap belum siap.
-**Progress Note (2026-02-08):** Submisi ahli domain individu diterima di `docs/lembar_kerja_individu_ahli_domain_human_only_terisi_dr_hendra_kusuma_2026-02-08.md` dengan 15-20 putusan tervalidasi (target individu tercapai). Status ART global tetap membutuhkan 50+ putusan terverifikasi lintas domain adat.
+**Progress Note (2026-02-08):** Submisi ahli domain individu diterima di `docs/human_only/artifacts/lembar_kerja_individu_ahli_domain_human_only_terisi_dr_hendra_kusuma_2026-02-08.md` dengan 15-20 putusan tervalidasi (target individu tercapai). Status ART global tetap membutuhkan 50+ putusan terverifikasi lintas domain adat.
 
 ### ART-031: Run Independent Evaluation Experiment (Exp 06)
 | Field | Value |
@@ -641,16 +641,16 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Inputs:** Domain knowledge, collected legal texts, MA decisions
 **Outputs:** `data/test_cases/test_suite_200.json`
 **Acceptance Test:** 200 cases, balanced across domains, each with gold-standard answer
-**Progress Note (2026-02-08):** Submisi ahli domain individu melaporkan status `PROSES` dengan contoh kasus awal (`TC-BALI-001`) pada `docs/lembar_kerja_individu_ahli_domain_human_only_terisi_dr_hendra_kusuma_2026-02-08.md`. Perlu agregasi lintas kontributor hingga 200 kasus sesuai komposisi domain.
-**Progress Note (2026-02-08):** Paket kerja 4 jam batch-1 telah diterima pada `docs/paket_kerja_4_jam_ahli_domain_terisi_dr_hendra_2026-02-08.md` (12 kasus prioritas terisi). Paket batch-2 siap distribusi pada `docs/paket_kerja_4_jam_ahli_domain_batch2_siap_print.md` untuk melanjutkan pengumpulan human baseline secara bertahap.
-**Progress Note (2026-02-08):** Paket kerja batch-2 terisi telah diterima pada `docs/paket_kerja_4_jam_batch2_terisi_dr_hendra_2026-02-08.md` dan direkap pada `docs/rekap_human_baseline_sprint_2026-02-08.md` (kumulatif sprint: 24 kasus). Paket batch-3 siap handout pada `docs/paket_kerja_4_jam_batch3_ready_to_handout.md`.
-**Progress Note (2026-02-08):** Paket kerja batch-3 terisi telah diterima pada `docs/paket_kerja_4_jam_batch3_terisi_dr_hendra_2026-02-08.md`; kumulatif sprint ahli pertama menjadi 36 kasus. Paket batch-4 siap handout pada `docs/paket_kerja_4_jam_batch4_ready_to_handout.md`.
-**Progress Note (2026-02-08):** Paket kerja batch-4 terisi telah diterima pada `docs/paket_kerja_4_jam_batch4_terisi_dr_hendra_2026-02-08.md`; kumulatif sprint ahli pertama menjadi 48 kasus. Paket batch-5 siap handout pada `docs/paket_kerja_4_jam_batch5_ready_to_handout.md`.
-**Progress Note (2026-02-08):** Paket kerja batch-5 terisi telah diterima pada `docs/paket_kerja_4_jam_batch5_terisi_dr_hendra_2026-02-08.md`; kumulatif sprint ahli pertama menjadi 60 kasus. Paket batch-6 siap handout pada `docs/paket_kerja_4_jam_batch6_ready_to_handout.md`.
-**Progress Note (2026-02-08):** Paket kerja batch-6 terisi telah diterima pada `docs/paket_kerja_4_jam_batch6_terisi_dr_hendra_2026-02-08.md`; kumulatif sprint ahli pertama mencapai 72 kasus. Onboarding ahli ke-2 dimulai melalui `docs/paket_kerja_4_jam_ahli2_batch1_ready_to_handout.md` untuk agreement prep.
-**Progress Note (2026-02-08):** Hasil ahli ke-2 batch-1 telah diterima pada `docs/paket_kerja_4_jam_ahli2_batch1_terisi_dr_indra_2026-02-08.md`; agreement awal ahli-1 vs ahli-2 tercatat pada `docs/agreement_report_ahli1_vs_ahli2_batch1_2026-02-08.md` (33.3%). Paket kalibrasi ahli ke-2 batch-2 siap pada `docs/paket_kerja_4_jam_ahli2_batch2_kalibrasi_ready_to_handout.md`.
-**Progress Note (2026-02-08):** Kumulatif kasus unik mencapai **82 kasus** (72 dari Ahli-1, ditambah 10 kasus ekspansi baru dari Ahli-2). Set 24 kasus dengan *dual-judgment* telah disiapkan untuk **Ahli-3** melalui `docs/paket_kerja_4_jam_ahli3_batch1_ready_to_handout.md` sebagai tahap *tie-breaker* dan finalisasi *Gold Standard*. Progres ART-050 mencapai 41%.
-**Progress Note (2026-02-12):** Klarifikasi konteks kerja owner: 82 kasus diperlakukan sebagai **human evidence pool** yang sah untuk jalur HUMAN_ONLY, sedangkan active set 24 adalah jalur operasional benchmark AI. Rujukan sinkronisasi: `docs/handoffs/20260212_human_only_context_reset.md`. Register awal 82 kasus dibuat di `docs/human_only_register_82_master_v0_2026-02-12.csv` untuk pemadanan status konsensus/arbiter.
+**Progress Note (2026-02-08):** Submisi ahli domain individu melaporkan status `PROSES` dengan contoh kasus awal (`TC-BALI-001`) pada `docs/human_only/artifacts/lembar_kerja_individu_ahli_domain_human_only_terisi_dr_hendra_kusuma_2026-02-08.md`. Perlu agregasi lintas kontributor hingga 200 kasus sesuai komposisi domain.
+**Progress Note (2026-02-08):** Paket kerja 4 jam batch-1 telah diterima pada `docs/human_only/artifacts/paket_kerja_4_jam_ahli_domain_terisi_dr_hendra_2026-02-08.md` (12 kasus prioritas terisi). Paket batch-2 siap distribusi pada `docs/human_only/artifacts/paket_kerja_4_jam_ahli_domain_batch2_siap_print.md` untuk melanjutkan pengumpulan human baseline secara bertahap.
+**Progress Note (2026-02-08):** Paket kerja batch-2 terisi telah diterima pada `docs/human_only/artifacts/paket_kerja_4_jam_batch2_terisi_dr_hendra_2026-02-08.md` dan direkap pada `docs/human_only/artifacts/rekap_human_baseline_sprint_2026-02-08.md` (kumulatif sprint: 24 kasus). Paket batch-3 siap handout pada `docs/human_only/artifacts/paket_kerja_4_jam_batch3_ready_to_handout.md`.
+**Progress Note (2026-02-08):** Paket kerja batch-3 terisi telah diterima pada `docs/human_only/artifacts/paket_kerja_4_jam_batch3_terisi_dr_hendra_2026-02-08.md`; kumulatif sprint ahli pertama menjadi 36 kasus. Paket batch-4 siap handout pada `docs/human_only/artifacts/paket_kerja_4_jam_batch4_ready_to_handout.md`.
+**Progress Note (2026-02-08):** Paket kerja batch-4 terisi telah diterima pada `docs/human_only/artifacts/paket_kerja_4_jam_batch4_terisi_dr_hendra_2026-02-08.md`; kumulatif sprint ahli pertama menjadi 48 kasus. Paket batch-5 siap handout pada `docs/human_only/artifacts/paket_kerja_4_jam_batch5_ready_to_handout.md`.
+**Progress Note (2026-02-08):** Paket kerja batch-5 terisi telah diterima pada `docs/human_only/artifacts/paket_kerja_4_jam_batch5_terisi_dr_hendra_2026-02-08.md`; kumulatif sprint ahli pertama menjadi 60 kasus. Paket batch-6 siap handout pada `docs/human_only/artifacts/paket_kerja_4_jam_batch6_ready_to_handout.md`.
+**Progress Note (2026-02-08):** Paket kerja batch-6 terisi telah diterima pada `docs/human_only/artifacts/paket_kerja_4_jam_batch6_terisi_dr_hendra_2026-02-08.md`; kumulatif sprint ahli pertama mencapai 72 kasus. Onboarding ahli ke-2 dimulai melalui `docs/human_only/artifacts/paket_kerja_4_jam_ahli2_batch1_ready_to_handout.md` untuk agreement prep.
+**Progress Note (2026-02-08):** Hasil ahli ke-2 batch-1 telah diterima pada `docs/human_only/artifacts/paket_kerja_4_jam_ahli2_batch1_terisi_dr_indra_2026-02-08.md`; agreement awal ahli-1 vs ahli-2 tercatat pada `docs/human_only/artifacts/agreement_report_ahli1_vs_ahli2_batch1_2026-02-08.md` (33.3%). Paket kalibrasi ahli ke-2 batch-2 siap pada `docs/human_only/artifacts/paket_kerja_4_jam_ahli2_batch2_kalibrasi_ready_to_handout.md`.
+**Progress Note (2026-02-08):** Kumulatif kasus unik mencapai **82 kasus** (72 dari Ahli-1, ditambah 10 kasus ekspansi baru dari Ahli-2). Set 24 kasus dengan *dual-judgment* telah disiapkan untuk **Ahli-3** melalui `docs/human_only/artifacts/paket_kerja_4_jam_ahli3_batch1_ready_to_handout.md` sebagai tahap *tie-breaker* dan finalisasi *Gold Standard*. Progres ART-050 mencapai 41%.
+**Progress Note (2026-02-12):** Klarifikasi konteks kerja owner: 82 kasus diperlakukan sebagai **human evidence pool** yang sah untuk jalur HUMAN_ONLY, sedangkan active set 24 adalah jalur operasional benchmark AI. Rujukan sinkronisasi: `docs/handoffs/20260212_human_only_context_reset.md`. Register awal 82 kasus dibuat di `docs/human_only/artifacts/human_only_register_82_master_v0_2026-02-12.csv` untuk pemadanan status konsensus/arbiter.
 
 ### ART-051: Run Full Pipeline on 200 Test Cases
 | Field | Value |
@@ -1348,12 +1348,12 @@ Kasus ini perlu arbitrator independen untuk finalisasi Gold Standard.
 
 **Inputs:**
 - `data/processed/gold_standard/gs_82_cases.json` (7 kasus dengan status "split")
-- Template: `docs/lembar_kerja_individu_ahli_domain_human_only.md`
+- Template: `docs/human_only/artifacts/lembar_kerja_individu_ahli_domain_human_only.md`
 
 **Outputs:**
-- `docs/paket_kerja_4_jam_ahli4_split_resolution.md`
+- `docs/human_only/artifacts/paket_kerja_4_jam_ahli4_split_resolution.md`
 - Updated `data/processed/gold_standard/gs_82_cases.json` (7 kasus final)
-- `docs/gold_standard_consensus_report_final_82_cases.md`
+- `docs/human_only/artifacts/gold_standard_consensus_report_final_82_cases.md`
 
 **Acceptance Test:**
 - [x] 7 kasus memiliki keputusan final pada active set yang dievaluasi

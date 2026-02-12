@@ -9,7 +9,7 @@
 ## 1. Prasyarat
 
 Sebelum menjalankan ingest, pastikan:
-- [ ] Paket interview Ahli-4 sudah terisi (`docs/paket_interview_online_ahli4_split_round3_siap_print_2026-02-09.md`)
+- [ ] Paket interview Ahli-4 sudah terisi (`docs/human_only/artifacts/paket_interview_online_ahli4_split_round3_siap_print_2026-02-09.md`)
 - [ ] Data sudah ditranskrip ke CSV (`data/processed/gold_standard/interview_online/interview_template_ahli4_round3.csv`)
 - [ ] Semua kolom wajib terisi (id, label_ahli4, confidence_ahli4)
 
@@ -146,10 +146,10 @@ file data/processed/gold_standard/interview_online/interview_template_ahli4_roun
 
 | Dokumen | Lokasi | Fungsi |
 |---------|--------|--------|
-| Paket Ahli-4 (ini) | `docs/paket_interview_online_ahli4_split_round3_siap_print_2026-02-09.md` | Template interview |
+| Paket Ahli-4 (ini) | `docs/human_only/artifacts/paket_interview_online_ahli4_split_round3_siap_print_2026-02-09.md` | Template interview |
 | CSV Template | `data/processed/gold_standard/interview_online/interview_template_ahli4_round3.csv` | Data untuk ingest |
-| Workflow Interview | `docs/interview_online_workflow.md` | Panduan lengkap |
-| Operator Sheet | `docs/operator_transkrip_interview_ke_csv.md` | Mapping kertas ke CSV |
+| Workflow Interview | `docs/human_only/workflow/interview_online_workflow.md` | Panduan lengkap |
+| Operator Sheet | `docs/human_only/workflow/operator_transkrip_interview_ke_csv.md` | Mapping kertas ke CSV |
 | Dataset Post-Ahli3 | `data/processed/gold_standard/gs_active_cases.post_ahli3.json` | Baseline sebelum Ahli-4 |
 
 ---

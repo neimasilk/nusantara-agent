@@ -1,7 +1,7 @@
 # Lembar Kerja Tim Ahli Domain (HUMAN-ONLY)
 
 Dokumen ini adalah **dokumen kerja** (bukan panduan).  
-Gunakan bersama: `docs/panduan_human_only_untuk_ahli_domain.md`
+Gunakan bersama: `docs/human_only/workflow/panduan_human_only_untuk_ahli_domain.md`
 
 ---
 

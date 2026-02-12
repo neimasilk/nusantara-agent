@@ -14,9 +14,9 @@ Tujuan: mengunci konteks agar owner dapat fokus ke jalur HUMAN_ONLY tanpa terser
 ## Bukti Utama
 
 1. Klaim 82 kasus:
-   - `docs/gold_standard_consensus_report_complete_82_cases_2026-02-08.md`
-   - `docs/agreement_report_ahli1_vs_ahli2_batch7_2026-02-08.md` (82 unik, 24 dual-judgment)
-   - `docs/paket_kerja_4_jam_ahli3_batch2_terisi_2026-02-08.md` (skalasi kasus 25..82)
+   - `docs/human_only/artifacts/gold_standard_consensus_report_complete_82_cases_2026-02-08.md`
+   - `docs/human_only/artifacts/agreement_report_ahli1_vs_ahli2_batch7_2026-02-08.md` (82 unik, 24 dual-judgment)
+   - `docs/human_only/artifacts/paket_kerja_4_jam_ahli3_batch2_terisi_2026-02-08.md` (skalasi kasus 25..82)
 2. Jalur benchmark aktif 24:
    - `data/benchmark_manifest.json` (`total_cases_actual=24`, `evaluable_cases_excluding_split=22`)
    - runner menunjuk `data/processed/gold_standard/gs_active_cases.json`
@@ -33,10 +33,10 @@ Tujuan: mengunci konteks agar owner dapat fokus ke jalur HUMAN_ONLY tanpa terser
 
 ## Artefak Human-Only yang Dibuat pada Sesi Ini
 
-1. `docs/human_only_register_82_master_v0_2026-02-12.csv`
+1. `docs/human_only/artifacts/human_only_register_82_master_v0_2026-02-12.csv`
 2. Sumber pembentukan register:
-   - `docs/paket_kerja_4_jam_ahli3_batch1_terisi_2026-02-08.md` (kasus 1-24)
-   - `docs/paket_kerja_4_jam_ahli3_batch2_terisi_2026-02-08.md` (kasus 25-82)
+   - `docs/human_only/artifacts/paket_kerja_4_jam_ahli3_batch1_terisi_2026-02-08.md` (kasus 1-24)
+   - `docs/human_only/artifacts/paket_kerja_4_jam_ahli3_batch2_terisi_2026-02-08.md` (kasus 25-82)
 3. Isi awal register:
    - `status_konsensus` dan `butuh_arbiter` masih `TBD` untuk diisi pada review manusia berikutnya.
 

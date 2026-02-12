@@ -1,4 +1,4 @@
-﻿# PAKET KERJA 4 JAM AHLI KE-2 - BATCH 2 (KALIBRASI)
+# PAKET KERJA 4 JAM AHLI KE-2 - BATCH 2 (KALIBRASI)
 ## Tujuan: Menstabilkan Agreement terhadap Ahli-1
 
 Paket ini fokus pada kasus mismatch batch-1 + kasus kontrol.
