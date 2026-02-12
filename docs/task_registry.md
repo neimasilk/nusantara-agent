@@ -650,6 +650,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Progress Note (2026-02-08):** Paket kerja batch-6 terisi telah diterima pada `docs/paket_kerja_4_jam_batch6_terisi_dr_hendra_2026-02-08.md`; kumulatif sprint ahli pertama mencapai 72 kasus. Onboarding ahli ke-2 dimulai melalui `docs/paket_kerja_4_jam_ahli2_batch1_ready_to_handout.md` untuk agreement prep.
 **Progress Note (2026-02-08):** Hasil ahli ke-2 batch-1 telah diterima pada `docs/paket_kerja_4_jam_ahli2_batch1_terisi_dr_indra_2026-02-08.md`; agreement awal ahli-1 vs ahli-2 tercatat pada `docs/agreement_report_ahli1_vs_ahli2_batch1_2026-02-08.md` (33.3%). Paket kalibrasi ahli ke-2 batch-2 siap pada `docs/paket_kerja_4_jam_ahli2_batch2_kalibrasi_ready_to_handout.md`.
 **Progress Note (2026-02-08):** Kumulatif kasus unik mencapai **82 kasus** (72 dari Ahli-1, ditambah 10 kasus ekspansi baru dari Ahli-2). Set 24 kasus dengan *dual-judgment* telah disiapkan untuk **Ahli-3** melalui `docs/paket_kerja_4_jam_ahli3_batch1_ready_to_handout.md` sebagai tahap *tie-breaker* dan finalisasi *Gold Standard*. Progres ART-050 mencapai 41%.
+**Progress Note (2026-02-12):** Klarifikasi konteks kerja owner: 82 kasus diperlakukan sebagai **human evidence pool** yang sah untuk jalur HUMAN_ONLY, sedangkan active set 24 adalah jalur operasional benchmark AI. Rujukan sinkronisasi: `docs/handoffs/20260212_human_only_context_reset.md`. Register awal 82 kasus dibuat di `docs/human_only_register_82_master_v0_2026-02-12.csv` untuk pemadanan status konsensus/arbiter.
 
 ### ART-051: Run Full Pipeline on 200 Test Cases
 | Field | Value |
@@ -835,6 +836,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Outputs:** `experiments/09_ablation_study/baselines/b8_human_expert/`
 **Acceptance Test:** 3 experts complete all 200 cases; inter-expert agreement reported
 **Progress Note (2026-02-08):** Tahap 1 (82 kasus) telah diselesaikan melalui triangulasi 3 ahli independen. 75/82 kasus (91%) telah mencapai konsensus Gold Standard. Sisa 7 kasus split akan diselesaikan oleh Ahli-4. Target 200 kasus akan dilanjutkan pada batch berikutnya, namun blokade untuk memulai Experiment 09 telah teratasi.
+**Progress Note (2026-02-12):** Owner memutuskan fokus sementara di jalur HUMAN_ONLY; prioritas ART-064 diarahkan pada penguatan register kasus 82 + resolusi split + ekspansi menuju 200 sebelum klaim AI paper-grade dinaikkan.
 **Progress Note (2026-02-12):** Artefak B8 operasional active-set kini tersedia dari `expert_votes` (`experiments/09_ablation_study/baselines/b8_human_expert/active_set_human_baseline_summary.json`; evaluable 22, `SPLIT=2`). Ini menutup gap runnable artifact untuk ART-065 operasional, namun tidak menggantikan acceptance test ART-064 full 200 kasus.
 
 ### ART-065: Run All Baselines (3x each with different seeds)
