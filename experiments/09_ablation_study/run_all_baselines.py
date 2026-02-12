@@ -5,8 +5,9 @@ import os
 import random
 import re
 import sys
+from collections import Counter
 from pathlib import Path
-from typing import Dict, List, Literal, Tuple
+from typing import Dict, List, Literal, Tuple, Union
 
 # Jalankan dari project root
 sys.path.append(os.getcwd())
@@ -36,6 +37,8 @@ ROUTE_TO_LABEL = {
     "conflict": "C",
     "consensus": "C",
 }
+
+VALID_LABELS = {"A", "B", "C", "D"}
 
 
 def _load_manifest() -> Dict:
@@ -188,6 +191,24 @@ def _infer_predicted_label(payload: Dict, query: str) -> Tuple[str, str]:
     return "D", "default.D"
 
 
+def _derive_majority_vote(votes: Dict[str, str]) -> Tuple[str, str]:
+    valid_votes = [
+        str(v).upper().strip()
+        for v in votes.values()
+        if str(v).upper().strip() in VALID_LABELS
+    ]
+    if not valid_votes:
+        return "D", "NO_VOTES"
+
+    counts = Counter(valid_votes).most_common()
+    if len(counts) > 1 and counts[0][1] == counts[1][1]:
+        return "D", "TIE"
+
+    label = counts[0][0]
+    consensus = "UNANIMOUS" if counts[0][1] == len(valid_votes) else "MAJORITY"
+    return label, consensus
+
+
 def _run_single_baseline(
     baseline_id: str,
     module_name: str,
@@ -261,6 +282,112 @@ def _run_single_baseline(
     return run_result
 
 
+def _run_human_baseline(
+    cases: List[Dict],
+    output_dir: Path,
+    mode: EvaluationMode,
+    source_dataset: str,
+) -> Dict:
+    predictions: List[Dict] = []
+    total = 0
+    correct = 0
+    split_skipped = 0
+    per_expert_stats: Dict[str, Dict[str, Union[int, float]]] = {}
+
+    for case in cases:
+        gold = str(case.get("gold_label", "")).upper()
+        votes = case.get("expert_votes", {}) if isinstance(case, dict) else {}
+        if not isinstance(votes, dict):
+            votes = {}
+
+        expert_labels = {
+            str(k): str(v).upper().strip()
+            for k, v in votes.items()
+            if str(v).upper().strip() in VALID_LABELS
+        }
+        for expert_id, expert_label in expert_labels.items():
+            stat = per_expert_stats.setdefault(
+                expert_id,
+                {"n": 0, "correct": 0, "accuracy": 0.0},
+            )
+            if gold != "SPLIT":
+                stat["n"] = int(stat["n"]) + 1
+                if expert_label == gold:
+                    stat["correct"] = int(stat["correct"]) + 1
+
+        if gold == "SPLIT":
+            split_skipped += 1
+            continue
+
+        total += 1
+        predicted, consensus_type = _derive_majority_vote(expert_labels)
+        match = predicted == gold
+        if match:
+            correct += 1
+
+        predictions.append(
+            {
+                "id": case.get("id", ""),
+                "gold": gold,
+                "predicted": predicted,
+                "match": match,
+                "label_source": "expert_votes.majority",
+                "consensus_type": consensus_type,
+                "expert_votes": expert_labels,
+            }
+        )
+
+    for stat in per_expert_stats.values():
+        n = int(stat["n"])
+        c = int(stat["correct"])
+        stat["accuracy"] = (c / n) if n else 0.0
+
+    accuracy = correct / total if total else 0.0
+    run_result = {
+        "baseline_id": "B8",
+        "module_name": "human_expert_panel",
+        "seed": "human_panel",
+        "evaluation_mode": mode,
+        "source_dataset": source_dataset,
+        "total_raw_cases": len(cases),
+        "split_skipped": split_skipped,
+        "total_evaluated": total,
+        "correct": correct,
+        "accuracy": accuracy,
+        "per_expert_stats": per_expert_stats,
+        "predictions": predictions,
+    }
+
+    baseline_dir = output_dir / "baseline_runs" / "B8"
+    baseline_dir.mkdir(parents=True, exist_ok=True)
+    run_path = baseline_dir / "run_seed_human_panel.json"
+    run_path.write_text(json.dumps(run_result, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    human_artifact_dir = BASELINES_DIR / "b8_human_expert"
+    human_artifact_dir.mkdir(parents=True, exist_ok=True)
+    human_summary_path = human_artifact_dir / "active_set_human_baseline_summary.json"
+    human_summary = {
+        "source_dataset": source_dataset,
+        "evaluation_mode": mode,
+        "total_evaluated": total,
+        "accuracy_majority_vote": accuracy,
+        "split_skipped": split_skipped,
+        "per_expert_stats": per_expert_stats,
+        "generated_from": run_path.as_posix(),
+        "notes": [
+            "Artifact ini berasal dari expert_votes yang tersedia di dataset aktif.",
+            "Bukan pengganti target ART-064 full 200-case human baseline.",
+        ],
+    }
+    human_summary_path.write_text(json.dumps(human_summary, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    print(
+        f"[OK] B8 human_panel accuracy={accuracy:.2%} "
+        f"saved={run_path.as_posix()}"
+    )
+    return run_result
+
+
 def _summarize_runs(runs: List[Dict]) -> Dict:
     per_baseline: Dict[str, Dict] = {}
     for run in runs:
@@ -300,6 +427,7 @@ def run_all_baselines(
     mode: EvaluationMode,
     force_offline: bool,
     disable_external_llm: bool,
+    include_human_b8: bool,
 ) -> Dict:
     strict_manifest = _resolve_strict_manifest(mode, strict_manifest)
     manifest = _load_manifest()
@@ -335,6 +463,16 @@ def run_all_baselines(
                     )
                 )
 
+        if include_human_b8:
+            runs.append(
+                _run_human_baseline(
+                    cases=cases,
+                    output_dir=output_dir,
+                    mode=mode,
+                    source_dataset=dataset_path.as_posix(),
+                )
+            )
+
         summary = {
             "evaluation_mode": mode,
             "strict_manifest": strict_manifest,
@@ -342,6 +480,7 @@ def run_all_baselines(
             "disable_external_llm": disable_external_llm,
             "source_dataset": dataset_path.as_posix(),
             "n_baselines": len(BASELINE_MODULES),
+            "human_baseline_included": include_human_b8,
             "n_seeds": len(seeds),
             "total_runs": len(runs),
             "seeds": seeds,
@@ -442,6 +581,18 @@ def _build_parser() -> argparse.ArgumentParser:
         dest="disable_external_llm",
         help="Izinkan B6/B7 memakai API key bila tersedia.",
     )
+    parser.add_argument(
+        "--include-human-b8",
+        action="store_true",
+        default=True,
+        help="Sertakan baseline B8 (human panel) dari expert_votes dataset aktif.",
+    )
+    parser.add_argument(
+        "--skip-human-b8",
+        action="store_false",
+        dest="include_human_b8",
+        help="Jalankan hanya baseline otomatis B1..B7.",
+    )
     return parser
 
 
@@ -455,4 +606,5 @@ if __name__ == "__main__":
         mode=args.mode,
         force_offline=args.force_offline,
         disable_external_llm=args.disable_external_llm,
+        include_human_b8=args.include_human_b8,
     )

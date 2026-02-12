@@ -1,0 +1,317 @@
+{
+  "baseline_id": "B8",
+  "module_name": "human_expert_panel",
+  "seed": "human_panel",
+  "evaluation_mode": "operational_offline",
+  "source_dataset": "data/processed/gold_standard/gs_active_cases.json",
+  "total_raw_cases": 24,
+  "split_skipped": 2,
+  "total_evaluated": 22,
+  "correct": 21,
+  "accuracy": 0.9545454545454546,
+  "per_expert_stats": {
+    "ahli1": {
+      "n": 22,
+      "correct": 16,
+      "accuracy": 0.7272727272727273
+    },
+    "ahli2": {
+      "n": 22,
+      "correct": 19,
+      "accuracy": 0.8636363636363636
+    },
+    "ahli3": {
+      "n": 22,
+      "correct": 13,
+      "accuracy": 0.5909090909090909
+    }
+  },
+  "predictions": [
+    {
+      "id": "CS-MIN-011",
+      "gold": "C",
+      "predicted": "D",
+      "match": false,
+      "label_source": "expert_votes.majority",
+      "consensus_type": "TIE",
+      "expert_votes": {
+        "ahli1": "D",
+        "ahli2": "A",
+        "ahli3": "C"
+      }
+    },
+    {
+      "id": "CS-MIN-004",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "label_source": "expert_votes.majority",
+      "consensus_type": "MAJORITY",
+      "expert_votes": {
+        "ahli1": "B",
+        "ahli2": "B",
+        "ahli3": "C"
+      }
+    },
+    {
+      "id": "CS-JAW-006",
+      "gold": "A",
+      "predicted": "A",
+      "match": true,
+      "label_source": "expert_votes.majority",
+      "consensus_type": "MAJORITY",
+      "expert_votes": {
+        "ahli1": "A",
+        "ahli2": "C",
+        "ahli3": "A"
+      }
+    },
+    {
+      "id": "CS-LIN-052",
+      "gold": "D",
+      "predicted": "D",
+      "match": true,
+      "label_source": "expert_votes.majority",
+      "consensus_type": "MAJORITY",
+      "expert_votes": {
+        "ahli1": "D",
+        "ahli2": "D",
+        "ahli3": "C"
+      }
+    },
+    {
+      "id": "CS-NAS-066",
+      "gold": "A",
+      "predicted": "A",
+      "match": true,
+      "label_source": "expert_votes.majority",
+      "consensus_type": "MAJORITY",
+      "expert_votes": {
+        "ahli1": "A",
+        "ahli2": "C",
+        "ahli3": "A"
+      }
+    },
+    {
+      "id": "CS-BAL-002",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "expert_votes.majority",
+      "consensus_type": "MAJORITY",
+      "expert_votes": {
+        "ahli1": "C",
+        "ahli2": "C",
+        "ahli3": "A"
+      }
+    },
+    {
+      "id": "CS-NAS-010",
+      "gold": "A",
+      "predicted": "A",
+      "match": true,
+      "label_source": "expert_votes.majority",
+      "consensus_type": "UNANIMOUS",
+      "expert_votes": {
+        "ahli1": "A",
+        "ahli2": "A",
+        "ahli3": "A"
+      }
+    },
+    {
+      "id": "CS-LIN-017",
+      "gold": "A",
+      "predicted": "A",
+      "match": true,
+      "label_source": "expert_votes.majority",
+      "consensus_type": "MAJORITY",
+      "expert_votes": {
+        "ahli1": "A",
+        "ahli2": "A",
+        "ahli3": "C"
+      }
+    },
+    {
+      "id": "CS-MIN-013",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "label_source": "expert_votes.majority",
+      "consensus_type": "UNANIMOUS",
+      "expert_votes": {
+        "ahli1": "B",
+        "ahli2": "B",
+        "ahli3": "B"
+      }
+    },
+    {
+      "id": "CS-BAL-014",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "label_source": "expert_votes.majority",
+      "consensus_type": "MAJORITY",
+      "expert_votes": {
+        "ahli1": "B",
+        "ahli2": "B",
+        "ahli3": "C"
+      }
+    },
+    {
+      "id": "CS-JAW-015",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "expert_votes.majority",
+      "consensus_type": "UNANIMOUS",
+      "expert_votes": {
+        "ahli1": "C",
+        "ahli2": "C",
+        "ahli3": "C"
+      }
+    },
+    {
+      "id": "CS-LIN-016",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "expert_votes.majority",
+      "consensus_type": "MAJORITY",
+      "expert_votes": {
+        "ahli1": "C",
+        "ahli2": "C",
+        "ahli3": "A"
+      }
+    },
+    {
+      "id": "CS-BAL-012",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "expert_votes.majority",
+      "consensus_type": "UNANIMOUS",
+      "expert_votes": {
+        "ahli1": "C",
+        "ahli2": "C",
+        "ahli3": "C"
+      }
+    },
+    {
+      "id": "CS-LIN-018",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "expert_votes.majority",
+      "consensus_type": "MAJORITY",
+      "expert_votes": {
+        "ahli1": "C",
+        "ahli2": "C",
+        "ahli3": "A"
+      }
+    },
+    {
+      "id": "CS-JAW-011",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "expert_votes.majority",
+      "consensus_type": "MAJORITY",
+      "expert_votes": {
+        "ahli1": "A",
+        "ahli2": "C",
+        "ahli3": "C"
+      }
+    },
+    {
+      "id": "CS-BAL-009",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "label_source": "expert_votes.majority",
+      "consensus_type": "MAJORITY",
+      "expert_votes": {
+        "ahli1": "B",
+        "ahli2": "B",
+        "ahli3": "C"
+      }
+    },
+    {
+      "id": "CS-NAS-022",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "expert_votes.majority",
+      "consensus_type": "MAJORITY",
+      "expert_votes": {
+        "ahli1": "C",
+        "ahli2": "C",
+        "ahli3": "A"
+      }
+    },
+    {
+      "id": "CS-JAW-019",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "expert_votes.majority",
+      "consensus_type": "MAJORITY",
+      "expert_votes": {
+        "ahli1": "B",
+        "ahli2": "C",
+        "ahli3": "C"
+      }
+    },
+    {
+      "id": "CS-BAL-020",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "expert_votes.majority",
+      "consensus_type": "MAJORITY",
+      "expert_votes": {
+        "ahli1": "B",
+        "ahli2": "C",
+        "ahli3": "C"
+      }
+    },
+    {
+      "id": "CS-NAS-041",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "expert_votes.majority",
+      "consensus_type": "MAJORITY",
+      "expert_votes": {
+        "ahli1": "A",
+        "ahli2": "C",
+        "ahli3": "C"
+      }
+    },
+    {
+      "id": "CS-MIN-025",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "expert_votes.majority",
+      "consensus_type": "UNANIMOUS",
+      "expert_votes": {
+        "ahli1": "C",
+        "ahli2": "C",
+        "ahli3": "C"
+      }
+    },
+    {
+      "id": "CS-JAW-030",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "label_source": "expert_votes.majority",
+      "consensus_type": "MAJORITY",
+      "expert_votes": {
+        "ahli1": "B",
+        "ahli2": "C",
+        "ahli3": "C"
+      }
+    }
+  ]
+}

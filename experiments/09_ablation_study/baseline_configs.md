@@ -9,6 +9,8 @@ Dokumen ini mendefinisikan 8 baseline secara reproduksibel.
 3. Output: JSON berisi `baseline_id`, `query`, `jawaban`, dan metadata komponen aktif.
 4. Eksekusi batch ART-065 gunakan:
    - `python experiments/09_ablation_study/run_all_baselines.py --mode operational_offline`
+   - Default runner akan menyertakan B8 (`--include-human-b8`).
+   - Untuk skenario tanpa human artifact, gunakan `--skip-human-b8`.
 5. Analisis statistik ART-066 gunakan:
    - `python experiments/09_ablation_study/statistical_analysis.py --results-dir experiments/09_ablation_study/results --reference-baseline B5`
 6. Rule files default:
@@ -97,3 +99,8 @@ Dokumen ini mendefinisikan 8 baseline secara reproduksibel.
    1. Analisis manusia tanpa bantuan AI.
 3. Komponen non-aktif:
    1. Seluruh modul AI.
+4. Artefak operasional active-set (2026-02-12):
+   1. `experiments/09_ablation_study/results/baseline_runs/B8/run_seed_human_panel.json`
+   2. `experiments/09_ablation_study/baselines/b8_human_expert/active_set_human_baseline_summary.json`
+5. Catatan:
+   1. Artefak ini dibentuk dari `expert_votes` pada active set (evaluable 22), bukan pengganti target ART-064 full 200 kasus.

@@ -1,6 +1,6 @@
 {
   "results_dir": "experiments/09_ablation_study/results",
-  "n_total_runs": 21,
+  "n_total_runs": 22,
   "reference_baseline": "B5",
   "baseline_stats": {
     "B1": {
@@ -141,6 +141,22 @@
       "ci95_accuracy": [
         0.5454545454545454,
         0.5454545454545454
+      ]
+    },
+    "B8": {
+      "baseline_id": "B8",
+      "n_runs": 1,
+      "seeds": [
+        "human_panel"
+      ],
+      "accuracies": [
+        0.9545454545454546
+      ],
+      "mean_accuracy": 0.9545454545454546,
+      "std_accuracy": 0.0,
+      "ci95_accuracy": [
+        0.9545454545454546,
+        0.9545454545454546
       ]
     }
   },
@@ -288,9 +304,25 @@
       "t_test_pvalue": 1.0,
       "wilcoxon_pvalue": 1.0,
       "cohens_d": 0.0
+    },
+    {
+      "baseline_id": "B8",
+      "reference_baseline": "B5",
+      "paired_seeds": [],
+      "baseline_accuracies": [],
+      "reference_accuracies": [],
+      "delta_mean_accuracy": 0.0,
+      "n_pairs": 0,
+      "t_test_pvalue": null,
+      "wilcoxon_pvalue": null,
+      "cohens_d": 0.0
     }
   ],
   "ranking_by_mean_accuracy": [
+    {
+      "baseline_id": "B8",
+      "mean_accuracy": 0.9545454545454546
+    },
     {
       "baseline_id": "B1",
       "mean_accuracy": 0.5909090909090909

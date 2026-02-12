@@ -5,8 +5,9 @@
   "disable_external_llm": true,
   "source_dataset": "data/processed/gold_standard/gs_active_cases.json",
   "n_baselines": 7,
+  "human_baseline_included": true,
   "n_seeds": 3,
-  "total_runs": 21,
+  "total_runs": 22,
   "seeds": [
     11,
     22,
@@ -137,6 +138,12 @@
       "baseline_id": "B7",
       "seed": 33,
       "accuracy": 0.5454545454545454,
+      "total_evaluated": 22
+    },
+    {
+      "baseline_id": "B8",
+      "seed": "human_panel",
+      "accuracy": 0.9545454545454546,
       "total_evaluated": 22
     }
   ],
@@ -287,6 +294,21 @@
           22
         ],
         "mean_accuracy": 0.5454545454545454,
+        "std_accuracy": 0.0
+      },
+      "B8": {
+        "baseline_id": "B8",
+        "n_runs": 1,
+        "seeds": [
+          "human_panel"
+        ],
+        "accuracies": [
+          0.9545454545454546
+        ],
+        "total_evaluated_per_run": [
+          22
+        ],
+        "mean_accuracy": 0.9545454545454546,
         "std_accuracy": 0.0
       }
     }

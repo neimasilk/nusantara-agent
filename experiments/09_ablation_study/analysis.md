@@ -194,3 +194,52 @@ Output mencakup:
 3. Snapshot ini menggunakan manifest terbaru (2026-02-11) yang mencatat `SPLIT=2`; ini berbeda dari snapshot historis sebelumnya yang sempat melaporkan `SPLIT=0`.
 4. Human baseline B8 belum ikut dalam run ini.
 5. Untuk mode `scientific_claimable`, runner benchmark kini fail-hard jika manifest reference mismatch (gate integrity aktif).
+
+---
+
+# Phase 6: ART-065/066 Follow-up (B8 Integration + Seed Robustness)
+
+Tanggal: 12 Februari 2026  
+Mode: `operational_offline` (external LLM disabled)  
+Dataset: `data/processed/gold_standard/gs_active_cases.json` (evaluable 22, `SPLIT=2`)
+
+## Eksekusi ART-065 (B8 Human Baseline Integrated)
+
+- `run_all_baselines.py` diperluas untuk mengeksekusi baseline B8 dari `expert_votes` pada active set.
+- Konfigurasi run:
+  - B1..B7: 3 seed (`11,22,33`) => 21 run
+  - B8: 1 run (`seed="human_panel"`) => 1 run
+  - Total: **22 run**
+- Artefak baru:
+  - `experiments/09_ablation_study/results/baseline_runs/B8/run_seed_human_panel.json`
+  - `experiments/09_ablation_study/baselines/b8_human_expert/active_set_human_baseline_summary.json`
+  - `experiments/09_ablation_study/results/run_all_baselines_summary.json` (updated)
+
+Ringkasan mean accuracy:
+
+| Baseline | Mean Accuracy |
+|---|---|
+| B8 | 95.45% |
+| B1 | 59.09% |
+| B2 | 59.09% |
+| B3 | 59.09% |
+| B4 | 59.09% |
+| B5 | 54.55% |
+| B6 | 54.55% |
+| B7 | 54.55% |
+
+## Eksekusi ART-066 (Statistical Script Hardening)
+
+- `statistical_analysis.py` diperbaiki agar toleran terhadap seed non-numerik (contoh: `human_panel` pada B8).
+- Output statistik berhasil diregenerasi:
+  - `experiments/09_ablation_study/results/statistical_analysis.json`
+  - `experiments/09_ablation_study/results/statistical_analysis.md`
+
+Catatan hasil:
+- B8 muncul di ranking mean accuracy.
+- Pairwise test B8 vs B5 tidak dipaksakan ketika seed tidak terpasang (`n_pairs=0`), sehingga tidak menghasilkan p-value palsu.
+
+## Catatan Metodologis
+
+1. Integrasi B8 saat ini adalah **operational artifact dari active set**, bukan bukti final baseline human untuk 200 kasus.
+2. Acceptance ART-065/066 level paper-grade masih belum tertutup karena target dataset penuh belum tercapai.

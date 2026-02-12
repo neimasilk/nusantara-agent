@@ -835,6 +835,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Outputs:** `experiments/09_ablation_study/baselines/b8_human_expert/`
 **Acceptance Test:** 3 experts complete all 200 cases; inter-expert agreement reported
 **Progress Note (2026-02-08):** Tahap 1 (82 kasus) telah diselesaikan melalui triangulasi 3 ahli independen. 75/82 kasus (91%) telah mencapai konsensus Gold Standard. Sisa 7 kasus split akan diselesaikan oleh Ahli-4. Target 200 kasus akan dilanjutkan pada batch berikutnya, namun blokade untuk memulai Experiment 09 telah teratasi.
+**Progress Note (2026-02-12):** Artefak B8 operasional active-set kini tersedia dari `expert_votes` (`experiments/09_ablation_study/baselines/b8_human_expert/active_set_human_baseline_summary.json`; evaluable 22, `SPLIT=2`). Ini menutup gap runnable artifact untuk ART-065 operasional, namun tidak menggantikan acceptance test ART-064 full 200 kasus.
 
 ### ART-065: Run All Baselines (3x each with different seeds)
 | Field | Value |
@@ -851,6 +852,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Note:** All prerequisites (ART-057..064) completed 2026-02-08. Unblocked by Mata Elang review 2026-02-08.
 **Progress Note (2026-02-11):** Runner ART-065 ditambahkan (`experiments/09_ablation_study/run_all_baselines.py`) dan dieksekusi 21 run otomatis (B1..B7 x seed 11/22/33) pada active set manifest (`data/processed/gold_standard/gs_active_cases.json`, evaluable 22). Artefak: `experiments/09_ablation_study/results/baseline_runs/*` + `run_all_baselines_summary.json`. Human baseline B8 dan cakupan target 200 kasus masih belum terpenuhi.
 **Progress Note (2026-02-11):** Manifest benchmark direbuild (`scripts/rebuild_benchmark_manifest.py --as-of-date 2026-02-11`) agar `total_cases_actual`, `label_distribution`, dan `evaluable_cases_excluding_split` sinkron dengan dataset aktif.
+**Progress Note (2026-02-12):** Runner ART-065 diperluas untuk menyertakan B8 (`seed=human_panel`) dari `expert_votes`. Eksekusi ulang menghasilkan total 22 run (21 otomatis + 1 human artifact) pada active set, dengan artefak baru `experiments/09_ablation_study/results/baseline_runs/B8/run_seed_human_panel.json` dan ringkasan B8 di `experiments/09_ablation_study/baselines/b8_human_expert/active_set_human_baseline_summary.json`.
 
 ### ART-066: Statistical Analysis of Ablation Results
 | Field | Value |
@@ -865,6 +867,7 @@ Master registry dari semua task yang perlu diselesaikan untuk mencapai target pu
 **Outputs:** `experiments/09_ablation_study/analysis.md`, `experiments/09_ablation_study/figures/`
 **Acceptance Test:** All comparisons with p-values, effect sizes, CIs reported; full pipeline beats >= 6/7 automated baselines
 **Progress Note (2026-02-11):** Script analisis ditambahkan (`experiments/09_ablation_study/statistical_analysis.py`) dan dijalankan pada hasil ART-065. Artefak: `experiments/09_ablation_study/results/statistical_analysis.json` dan `experiments/09_ablation_study/results/statistical_analysis.md` (mean/std/CI, paired t-test, Wilcoxon, Cohen's d terhadap baseline acuan B5). Status masih IN_PROGRESS karena data belum mencapai target 200 kasus + B8.
+**Progress Note (2026-02-12):** `statistical_analysis.py` dihardening untuk seed non-numerik agar kompatibel dengan B8 (`human_panel`) tanpa crash. Laporan statistik berhasil diregenerasi; B8 tercantum di ranking mean accuracy, sementara pairwise vs baseline acuan untuk B8 tercatat `n_pairs=0` (tidak ada seed numerik berpasangan), sehingga tidak menghasilkan p-value yang menyesatkan.
 
 ### Experiment 10: CCS Metric Validation (Weakness #6)
 

@@ -1,12 +1,27 @@
 import argparse
 import json
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict, List, Optional, Tuple, Union
 
 import numpy as np
 from scipy import stats
 
 DEFAULT_RESULTS_DIR = Path("experiments/09_ablation_study/results")
+
+
+def _seed_as_int(seed: object) -> Optional[int]:
+    try:
+        return int(seed)
+    except (TypeError, ValueError):
+        return None
+
+
+def _seed_sort_key(run: Dict) -> Tuple[int, Union[int, str]]:
+    seed_raw = run.get("seed", "")
+    seed_int = _seed_as_int(seed_raw)
+    if seed_int is not None:
+        return (0, seed_int)
+    return (1, str(seed_raw))
 
 
 def _load_run_files(results_dir: Path) -> List[Dict]:
@@ -29,7 +44,7 @@ def _group_by_baseline(runs: List[Dict]) -> Dict[str, List[Dict]]:
         baseline_id = run.get("baseline_id", "UNKNOWN")
         grouped.setdefault(baseline_id, []).append(run)
     for baseline_runs in grouped.values():
-        baseline_runs.sort(key=lambda x: x.get("seed", 0))
+        baseline_runs.sort(key=_seed_sort_key)
     return grouped
 
 
@@ -111,8 +126,20 @@ def _paired_tests(x: List[float], y: List[float]) -> Dict:
 
 
 def _align_by_seed(lhs_runs: List[Dict], rhs_runs: List[Dict]) -> Tuple[List[int], List[float], List[float]]:
-    lhs_map = {int(r.get("seed", -1)): float(r.get("accuracy", 0.0)) for r in lhs_runs}
-    rhs_map = {int(r.get("seed", -1)): float(r.get("accuracy", 0.0)) for r in rhs_runs}
+    lhs_map = {}
+    for run in lhs_runs:
+        seed = _seed_as_int(run.get("seed", -1))
+        if seed is None:
+            continue
+        lhs_map[seed] = float(run.get("accuracy", 0.0))
+
+    rhs_map = {}
+    for run in rhs_runs:
+        seed = _seed_as_int(run.get("seed", -1))
+        if seed is None:
+            continue
+        rhs_map[seed] = float(run.get("accuracy", 0.0))
+
     seeds = sorted(set(lhs_map.keys()) & set(rhs_map.keys()))
     lhs = [lhs_map[s] for s in seeds]
     rhs = [rhs_map[s] for s in seeds]
@@ -132,7 +159,7 @@ def run_statistical_analysis(results_dir: Path, reference_baseline: str) -> Dict
         baseline_stats[baseline_id] = {
             "baseline_id": baseline_id,
             "n_runs": len(accuracies),
-            "seeds": [int(r.get("seed", -1)) for r in baseline_runs],
+            "seeds": [r.get("seed", None) for r in baseline_runs],
             "accuracies": accuracies,
             "mean_accuracy": mean,
             "std_accuracy": std,
