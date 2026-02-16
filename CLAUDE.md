@@ -27,7 +27,7 @@ python experiments/01_triple_extraction/run_experiment.py
 python experiments/05_rule_engine/run_experiment.py
 ```
 
-There is no formal test suite. Each experiment directory contains an `analysis.md` with results and findings.
+Formal test suite tersedia (`python scripts/run_test_suite.py`) dengan deterministic unit tests untuk modul inti.
 
 ## Architecture
 
@@ -80,7 +80,7 @@ All LLM calls go through the **DeepSeek API** using the OpenAI Python client wit
 
 Legacy registry: `docs/task_registry.md` (91 tasks, many cancelled/archived after pivot).
 
-## Current State (2026-02-12, evening) — HONEST ASSESSMENT
+## Current State (as of 2026-02-16) — HONEST ASSESSMENT
 
 ### What Works
 - **Rule Engine**: `ClingoRuleEngine` with ASP is functional (when `clingo` is installed)
@@ -89,7 +89,7 @@ Legacy registry: `docs/task_registry.md` (91 tasks, many cancelled/archived afte
 - **24 Active Benchmark Cases**: 14 agreed (Ahli-1 = Ahli-2), 10 disputed (pending Delphi Round 2 adjudication)
 - **LLM Accuracy: 85.71%** (12/14 on agreed cases) — A=2/2, B=4/4, C=6/7, D=0/1
 - **Inter-Rater Agreement**: Cohen's Kappa = 0.394 (fair) for Ahli-1 vs Ahli-2 on 24 cases
-- **Test Suite**: 101 tests passing (32 orchestrator, 22 rule engine, 47 others)
+- **Test Suite**: 106 tests passing (termasuk benchmark contract tests untuk label `DISPUTED/SPLIT`)
 - **Shared utils**: LLM init extracted to `src/utils/llm.py`, used by all agent modules
 
 ### What Doesn't Work

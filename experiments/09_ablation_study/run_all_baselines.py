@@ -13,6 +13,12 @@ from typing import Dict, List, Literal, Tuple, Union
 sys.path.append(os.getcwd())
 
 from src.agents.router import route_query
+from src.utils.benchmark_contract import (
+    UNRESOLVED_GOLD_LABELS,
+    count_evaluable_cases,
+    is_evaluable_gold_label,
+    resolve_manifest_evaluable_count,
+)
 
 EvaluationMode = Literal["scientific_claimable", "operational_offline"]
 
@@ -91,15 +97,15 @@ def _validate_manifest_count(gs_data: List[Dict], manifest: Dict, strict_manifes
             raise RuntimeError(msg)
         print(f"[WARN] {msg}")
 
-    expected_evaluable = manifest.get("benchmark_file", {}).get("evaluable_cases_excluding_split")
+    expected_evaluable = resolve_manifest_evaluable_count(manifest.get("benchmark_file", {}))
     if expected_evaluable is None:
         return
-    runtime_evaluable = sum(1 for item in gs_data if str(item.get("gold_label", "")).upper() != "SPLIT")
-    if runtime_evaluable != int(expected_evaluable):
+    runtime_evaluable = count_evaluable_cases(gs_data)
+    if runtime_evaluable != expected_evaluable:
         msg = (
             "Manifest mismatch: "
             f"runtime_evaluable={runtime_evaluable} "
-            f"vs manifest.evaluable_cases_excluding_split={expected_evaluable}"
+            f"vs manifest_evaluable={expected_evaluable}"
         )
         if strict_manifest:
             raise RuntimeError(msg)
@@ -228,12 +234,12 @@ def _run_single_baseline(
     predictions: List[Dict] = []
     total = 0
     correct = 0
-    split_skipped = 0
+    unresolved_skipped = 0
 
     for case in working_cases:
         gold = str(case.get("gold_label", "")).upper()
-        if gold == "SPLIT":
-            split_skipped += 1
+        if not is_evaluable_gold_label(gold):
+            unresolved_skipped += 1
             continue
 
         total += 1
@@ -264,7 +270,9 @@ def _run_single_baseline(
         "evaluation_mode": mode,
         "source_dataset": source_dataset,
         "total_raw_cases": len(cases),
-        "split_skipped": split_skipped,
+        "split_skipped": unresolved_skipped,  # Backward compatibility
+        "unresolved_skipped": unresolved_skipped,
+        "unresolved_labels": sorted(UNRESOLVED_GOLD_LABELS),
         "total_evaluated": total,
         "correct": correct,
         "accuracy": accuracy,
@@ -291,7 +299,7 @@ def _run_human_baseline(
     predictions: List[Dict] = []
     total = 0
     correct = 0
-    split_skipped = 0
+    unresolved_skipped = 0
     per_expert_stats: Dict[str, Dict[str, Union[int, float]]] = {}
 
     for case in cases:
@@ -310,13 +318,13 @@ def _run_human_baseline(
                 expert_id,
                 {"n": 0, "correct": 0, "accuracy": 0.0},
             )
-            if gold != "SPLIT":
+            if is_evaluable_gold_label(gold):
                 stat["n"] = int(stat["n"]) + 1
                 if expert_label == gold:
                     stat["correct"] = int(stat["correct"]) + 1
 
-        if gold == "SPLIT":
-            split_skipped += 1
+        if not is_evaluable_gold_label(gold):
+            unresolved_skipped += 1
             continue
 
         total += 1
@@ -350,7 +358,9 @@ def _run_human_baseline(
         "evaluation_mode": mode,
         "source_dataset": source_dataset,
         "total_raw_cases": len(cases),
-        "split_skipped": split_skipped,
+        "split_skipped": unresolved_skipped,  # Backward compatibility
+        "unresolved_skipped": unresolved_skipped,
+        "unresolved_labels": sorted(UNRESOLVED_GOLD_LABELS),
         "total_evaluated": total,
         "correct": correct,
         "accuracy": accuracy,
@@ -371,7 +381,9 @@ def _run_human_baseline(
         "evaluation_mode": mode,
         "total_evaluated": total,
         "accuracy_majority_vote": accuracy,
-        "split_skipped": split_skipped,
+        "split_skipped": unresolved_skipped,
+        "unresolved_skipped": unresolved_skipped,
+        "unresolved_labels": sorted(UNRESOLVED_GOLD_LABELS),
         "per_expert_stats": per_expert_stats,
         "generated_from": run_path.as_posix(),
         "notes": [

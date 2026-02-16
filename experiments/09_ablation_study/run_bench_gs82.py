@@ -9,6 +9,12 @@ sys.path.append(os.getcwd())
 
 from src.pipeline.nusantara_agent import NusantaraAgentPipeline
 from src.agents.router import _json_or_raw
+from src.utils.benchmark_contract import (
+    UNRESOLVED_GOLD_LABELS,
+    count_evaluable_cases,
+    is_evaluable_gold_label,
+    resolve_manifest_evaluable_count,
+)
 
 MANIFEST_PATH = "data/benchmark_manifest.json"
 LEGACY_GS_PATH = "data/processed/gold_standard/gs_active_cases.json"
@@ -83,19 +89,24 @@ def _validate_manifest_integrity(gs_data: list, manifest: Dict, strict_manifest:
             raise RuntimeError(msg)
         print(f"[WARN] {msg}")
 
-    manifest_evaluable = benchmark.get("evaluable_cases_excluding_split")
+    manifest_evaluable = resolve_manifest_evaluable_count(benchmark)
     if manifest_evaluable is not None:
-        runtime_evaluable = sum(
-            1 for item in gs_data if str(item.get("gold_label", "")).upper() != "SPLIT"
-        )
-        if runtime_evaluable != int(manifest_evaluable):
+        runtime_evaluable = count_evaluable_cases(gs_data)
+        if runtime_evaluable != manifest_evaluable:
             msg = (
                 f"Manifest mismatch: runtime_evaluable={runtime_evaluable} "
-                f"vs manifest.evaluable_cases_excluding_split={manifest_evaluable}"
+                f"vs manifest_evaluable={manifest_evaluable}"
             )
             if strict_manifest:
                 raise RuntimeError(msg)
             print(f"[WARN] {msg}")
+
+
+def _detect_runtime_backend(pipeline: NusantaraAgentPipeline) -> str:
+    orchestrator_name = pipeline.orchestrator.__class__.__name__
+    if orchestrator_name == "_OfflineOrchestrator":
+        return "offline_fallback"
+    return "llm_langgraph"
 
 
 def _resolve_strict_manifest(mode: EvaluationMode, strict_manifest: bool) -> bool:
@@ -136,6 +147,7 @@ def run_benchmark(
     output_path: str,
     strict_manifest: bool,
     mode: EvaluationMode,
+    require_llm: bool,
 ) -> None:
     strict_manifest = _resolve_strict_manifest(mode, strict_manifest)
     manifest = _load_manifest()
@@ -158,21 +170,29 @@ def run_benchmark(
     _validate_manifest_integrity(gs_data, manifest, strict_manifest)
 
     pipeline = NusantaraAgentPipeline()
+    runtime_backend = _detect_runtime_backend(pipeline)
+    print(f"[INFO] Runtime backend: {runtime_backend}")
+    if require_llm and runtime_backend != "llm_langgraph":
+        raise RuntimeError(
+            "Mode LLM diwajibkan (--require-llm), tetapi pipeline berjalan di offline_fallback. "
+            "Pastikan DEEPSEEK_API_KEY tersedia dan dependency online siap."
+        )
     results = []
     correct = 0
     total = 0
-    split_count = 0
+    unresolved_count = 0
 
     print(f"Starting Benchmark on {len(gs_data)} cases (AGENT INTEGRATED)...")
 
     for entry in gs_data:
-        if entry.get("gold_label") == "SPLIT":
-            split_count += 1
+        gold = str(entry.get("gold_label", "")).upper()
+        if not is_evaluable_gold_label(gold):
+            unresolved_count += 1
             continue
-        
+
         total += 1
         query = entry.get("query", "")
-        gold = entry.get("gold_label", "D")
+        gold = gold or "D"
         
         print(f"[{total}] Processing {entry.get('id', f'IDX-{total:04d}')}...", end=" ", flush=True)
         
@@ -200,9 +220,13 @@ def run_benchmark(
     summary = {
         "evaluation_mode": mode,
         "strict_manifest": strict_manifest,
+        "runtime_backend": runtime_backend,
+        "require_llm": require_llm,
         "source_dataset": gs_path,
         "total_raw_cases": len(gs_data),
-        "split_skipped": split_count,
+        "split_skipped": unresolved_count,  # Backward compatibility
+        "unresolved_skipped": unresolved_count,
+        "unresolved_labels": sorted(UNRESOLVED_GOLD_LABELS),
         "total_evaluated": total,
         "correct": correct,
         "accuracy": accuracy,
@@ -258,6 +282,18 @@ def _build_parser() -> argparse.ArgumentParser:
         help="Izinkan mismatch runtime_count vs manifest (hanya disarankan untuk mode operational_offline).",
     )
     parser.set_defaults(strict_manifest=True)
+    parser.add_argument(
+        "--require-llm",
+        action="store_true",
+        help="Fail jika runtime backend bukan llm_langgraph (offline fallback tidak diizinkan).",
+    )
+    parser.add_argument(
+        "--allow-offline-fallback",
+        action="store_false",
+        dest="require_llm",
+        help="Izinkan benchmark berjalan di offline_fallback bila stack LLM belum siap.",
+    )
+    parser.set_defaults(require_llm=False)
     return parser
 
 
@@ -268,4 +304,5 @@ if __name__ == "__main__":
         output_path=args.output,
         strict_manifest=args.strict_manifest,
         mode=args.mode,
+        require_llm=args.require_llm,
     )

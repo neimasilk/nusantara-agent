@@ -8,4 +8,5 @@ if __name__ == "__main__":
         output_path=args.output,
         strict_manifest=args.strict_manifest,
         mode=args.mode,
+        require_llm=args.require_llm,
     )

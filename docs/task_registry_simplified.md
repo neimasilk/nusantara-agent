@@ -21,10 +21,10 @@
 
 | # | Task | Executor | Status | Notes |
 |---|---|---|---|---|
-| P-001 | Hitung Inter-Rater Agreement (Fleiss Kappa / Krippendorff Alpha) dari 24 overlapping cases | AI | NEXT | Data tersedia di gs_active_cases.json |
+| P-001 | Hitung Inter-Rater Agreement (Fleiss Kappa / Krippendorff Alpha) dari 24 overlapping cases | AI | DONE | Lihat `docs/ira_analysis_2026-02-12.md` |
 | P-002 | Resolve 2 SPLIT cases (CS-MIN-005, CS-MIN-015) — dapatkan 4th rater atau mark sebagai "ambiguous" | HUMAN | NEXT | |
-| P-003 | Fix environment: install clingo + langchain_openai + langgraph | HUMAN/AI | NEXT | Unblock LLM mode |
-| P-004 | Re-run benchmark di LLM mode, dapatkan angka reproducible | AI | BLOCKED (P-003) | |
+| P-003 | Fix environment: install clingo + langchain_openai + langgraph | HUMAN/AI | DONE | Verified 2026-02-16 (`clingo`, `langchain_openai`, `langgraph` import OK) |
+| P-004 | Re-run benchmark di LLM mode, dapatkan angka reproducible | AI | DONE | `runtime_backend=llm_langgraph`, hasil di `experiments/09_ablation_study/results_week1_refresh_2026-02-16.json` |
 
 ### Phase B: Expand Dataset (Week 2-4)
 
@@ -103,3 +103,7 @@ P-009 ──→ P-010, P-011, P-012 ──→ P-015 ──→ P-016 ──→ P-
 | 4-5 | LLM+Rules vs LLM-only results, stats, error analysis | p < 0.05 on primary comparison |
 | 6-7 | Paper draft complete | Passes internal adversarial review |
 | 8 | Submit | Formatted for target journal |
+
+Catatan Week-1 (as of 2026-02-16):
+- Deliverable teknis Week-1 selesai (P-001, P-003, P-004 = DONE).
+- Gate kualitas belum tercapai (`Cohen's Kappa = 0.394` < target 0.5); lanjut ke adjudikasi P-002 dan ekspansi data.

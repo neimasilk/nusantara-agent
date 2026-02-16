@@ -1,9 +1,19 @@
 import argparse
 import hashlib
 import json
+import os
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List
+
+# Pastikan import `src.*` bisa dari project root.
+sys.path.append(os.getcwd())
+
+from src.utils.benchmark_contract import (
+    UNRESOLVED_GOLD_LABELS,
+    count_evaluable_cases,
+)
 
 
 def _sha256(path: Path) -> str:
@@ -48,7 +58,7 @@ def rebuild_manifest(
 
     total_cases_actual = len(data)
     label_distribution = _label_distribution(data)
-    evaluable = sum(1 for item in data if str(item.get("gold_label", "")).upper() != "SPLIT")
+    evaluable = count_evaluable_cases(data)
 
     # declared_total_cases dipertahankan dari manifest lama jika ada; fallback 82
     declared_total_cases = 82
@@ -74,6 +84,8 @@ def rebuild_manifest(
             ).strftime("%Y-%m-%dT%H:%M:%SZ"),
             "total_cases_actual": total_cases_actual,
             "label_distribution": label_distribution,
+            "evaluable_cases_excluding_disputed": evaluable,
+            # Backward compatibility untuk script lama
             "evaluable_cases_excluding_split": evaluable,
         },
         "reference_claim": {
@@ -86,6 +98,7 @@ def rebuild_manifest(
             "notes": [
                 "Manifest direbuild otomatis dari dataset aktif.",
                 "Gunakan validate_benchmark_manifest.py untuk verifikasi sebelum benchmark formal.",
+                f"Label unresolved yang dikecualikan dari evaluasi: {sorted(UNRESOLVED_GOLD_LABELS)}",
             ],
         },
         "provenance": {

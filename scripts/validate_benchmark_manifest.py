@@ -1,8 +1,19 @@
 import argparse
 import hashlib
 import json
+import os
+import sys
 from pathlib import Path
 from typing import Dict
+
+# Pastikan import `src.*` bisa dari project root.
+sys.path.append(os.getcwd())
+
+from src.utils.benchmark_contract import (
+    UNRESOLVED_GOLD_LABELS,
+    count_evaluable_cases,
+    resolve_manifest_evaluable_count,
+)
 
 
 def _sha256(path: Path) -> str:
@@ -77,16 +88,17 @@ def validate_manifest(manifest_path: Path, require_reference_match: bool) -> int
         else:
             print(f"[OK] label_distribution match")
 
-    runtime_evaluable = sum(1 for item in data if str(item.get("gold_label", "")).upper() != "SPLIT")
-    expected_evaluable = bench.get("evaluable_cases_excluding_split")
-    if expected_evaluable is not None and runtime_evaluable != int(expected_evaluable):
+    runtime_evaluable = count_evaluable_cases(data)
+    expected_evaluable = resolve_manifest_evaluable_count(bench)
+    if expected_evaluable is not None and runtime_evaluable != expected_evaluable:
         print(
-            "[ERROR] evaluable_cases_excluding_split mismatch: "
+            "[ERROR] evaluable_cases mismatch: "
             f"manifest={expected_evaluable} runtime={runtime_evaluable}"
         )
         errors += 1
     else:
-        print(f"[OK] evaluable_cases_excluding_split: {runtime_evaluable}")
+        print(f"[OK] evaluable_cases: {runtime_evaluable}")
+        print(f"[INFO] unresolved_labels_excluded={sorted(UNRESOLVED_GOLD_LABELS)}")
 
     integrity = manifest.get("integrity_checks", {})
     ref_match = integrity.get("count_matches_reference_claim")

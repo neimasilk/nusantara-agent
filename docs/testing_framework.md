@@ -29,8 +29,9 @@ Dokumen ini menetapkan framework testing operasional agar pipeline riset dapat d
 - `tests/test_rule_engine.py` -> `src/symbolic/rule_engine.py` (22 tests: `ClingoRuleEngine` + domain ASP rules)
 - `tests/test_orchestrator.py` -> `src/agents/orchestrator.py` (32 tests: offline supervisor decision logic)
 - `tests/test_nusantara_pipeline.py` -> `src/pipeline/nusantara_agent.py` (5 tests, offline with mocked orchestrator builder)
+- `tests/test_benchmark_contract.py` -> `src/utils/benchmark_contract.py` (5 tests: unresolved label policy + manifest compatibility)
 
-**Total: 101 Deterministic Tests passed (`python -m unittest discover -s tests -p "test_*.py" -v`).**
+**Total: 106 Deterministic Tests passed (`python -m unittest discover -s tests -p "test_*.py" -v`).**
 
 ### Layer B — Script Syntax Smoke Check (wajib sebelum merge)
 - Seluruh skrip `src/` + eksperimen aktif harus lolos kompilasi syntax.

@@ -1,0 +1,118 @@
+{
+  "evaluation_mode": "operational_offline",
+  "strict_manifest": true,
+  "runtime_backend": "llm_langgraph",
+  "require_llm": false,
+  "source_dataset": "data/processed/gold_standard/gs_active_cases.json",
+  "total_raw_cases": 24,
+  "split_skipped": 10,
+  "unresolved_skipped": 10,
+  "unresolved_labels": [
+    "AMBIGUOUS",
+    "DISPUTED",
+    "SPLIT"
+  ],
+  "total_evaluated": 14,
+  "correct": 12,
+  "accuracy": 0.8571428571428571,
+  "results": [
+    {
+      "id": "CS-MIN-004",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "reasoning": "{\n  \"label\": \"B\",\n  \"langkah_keputusan\": \"3\",\n  \"alasan_utama\": \"Kasus ini murni sengketa internal dalam komunitas adat Minangkabau mengenai klasifikasi harta (pencaharian vs pusaka) dan hak waris antara kemenakan dengan anak kandung. Data simbolik menunjukkan aturan adat Minangkabau yang mengatur hak waris untuk kedua pihak atas jenis harta tertentu. Tidak ada indikasi pelanggaran HAM fundamental (Langkah 1) atau ketentuan hukum nasional yang tegas dan final yang mengatur dan harus langsung diterapkan dalam konteks internal adat ini (Langkah 2). Sengketa ini terjadi sepenuhnya dalam ranah norma dan lembaga adat, tanpa adanya tuntutan berdasarkan hukum nasional yang bertentangan secara aktif dengan tuntutan adat, sehingga tidak memenuhi syarat untuk dikategorikan sebagai konflik (C).\",\n  \"konflik_terdeteksi\": \"Tidak\"\n}"
+    },
+    {
+      "id": "CS-LIN-052",
+      "gold": "D",
+      "predicted": "C",
+      "match": false,
+      "reasoning": "{\n  \"label\": \"C\",\n  \"langkah_keputusan\": \"4\",\n  \"alasan_utama\": \"Kasus ini menampilkan konflik langsung antara sistem hukum adat (kepemilikan kolektif tanah ulayat) dan sistem hukum nasional (persyaratan formal sertifikat individual untuk perbankan). Lembaga adat ingin mengakses lembaga keuangan nasional (Bank), yang beroperasi berdasarkan hukum nasional dan membutuhkan bukti kepemilikan formal (SHM). Tanah ulayat, sebagai objek jaminan, diatur oleh hukum adat yang mengakui kepemilikan komunal tanpa sertifikat individual. Ini adalah pertentangan norma (conflict of laws) di mana tuntutan satu pihak (lembaga adat berdasarkan adat) berhadapan dengan persyaratan sistem lain (bank berdasarkan nasional). Meskipun tidak ada output simbolik yang eksplisit dari rule engine, fakta kasus sendiri sudah menggambarkan konflik ini. Oleh karena itu, kasus ini memerlukan adjudikasi yang mempertimbangkan interaksi dan kemungkinan harmonisasi antara kedua sistem hukum.\",\n  \"konflik_terdeteksi\": \"Ya\"\n}"
+    },
+    {
+      "id": "CS-BAL-002",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\n  \"label\": \"C\",\n  \"langkah_keputusan\": \"4\",\n  \"alasan_utama\": \"Kasus ini merupakan konflik norma (nasional vs adat) yang jelas. Di satu sisi, hukum nasional (Keputusan MDP 2010 yang mengakomodasi putusan MK) memberikan hak waris kepada anak perempuan. Di sisi lain, keluarga besar menolak dengan berpegang pada hukum adat Bali patrilineal murni yang tidak mengakui hak waris anak perempuan atas harta purusa. Terdapat pertentangan aktif antara tuntutan anak perempuan berdasarkan norma nasional/reformasi adat dengan penolakan keluarga berdasarkan adat tradisional. Tidak ada pelanggaran HAM ekstrem (Langkah 1) dan tidak murni domain internal adat karena sudah ada intervensi keputusan MDP (Langkah 3). Oleh karena itu, sesuai default position dan Langkah 4, label yang tepat adalah C (Konflik).\",\n  \"konflik_terdeteksi\": \"Ya\"\n}"
+    },
+    {
+      "id": "CS-NAS-010",
+      "gold": "A",
+      "predicted": "A",
+      "match": true,
+      "reasoning": "{\n  \"label\": \"A\",\n  \"langkah_keputusan\": \"2\",\n  \"alasan_utama\": \"Kasus ini merupakan penerapan murni Hukum Nasional. UU Perkawinan (UU No. 16 Tahun 2019) menetapkan batas usia minimal perkawinan 19 tahun sebagai aturan yang tegas dan final. Dispensasi adat atau agama untuk perkawinan di bawah umur (15 tahun) tidak dapat mengesampingkan ketentuan UU ini. Oleh karena itu, domain yang berlaku adalah Hukum Nasional.\",\n  \"konflik_terdeteksi\": \"Tidak\"\n}"
+    },
+    {
+      "id": "CS-LIN-017",
+      "gold": "A",
+      "predicted": "A",
+      "match": true,
+      "reasoning": "{\n  \"label\": \"A\",\n  \"langkah_keputusan\": \"2\",\n  \"alasan_utama\": \"Kasus ini merupakan domain hukum nasional yang memberikan aturan tegas dan final. Pengangkatan anak untuk keperluan administrasi negara (seperti pembuatan paspor) memerlukan penetapan pengadilan negeri berdasarkan Pasal 39 ayat (1) UU No. 23 Tahun 2002 tentang Perlindungan Anak jo. UU No. 35 Tahun 2014. Upacara adat tidak menggantikan syarat formal hukum positif ini. Pihak imigrasi menolak karena ketentuan hukum nasional yang mengikat. Tidak ada sengketa hukum antara pihak-pihak berdasarkan adat, melainkan penolakan administrasi negara terhadap dokumen yang tidak memenuhi syarat UU.\",\n  \"konflik_terdeteksi\": \"Tidak\"\n}"
+    },
+    {
+      "id": "CS-MIN-013",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "reasoning": "{\n  \"label\": \"B\",\n  \"langkah_keputusan\": \"3\",\n  \"alasan_utama\": \"Kasus ini murni merupakan persoalan internal hukum adat Minangkabau mengenai status harta pusako tinggi dan transformasinya. Tidak ada indikasi pelanggaran HAM fundamental, tidak ada aturan hukum nasional yang secara tegas mengatur konversi status harta pusako tinggi yang dijual dalam keadaan darurat adat, dan tidak ada konflik antara pihak yang menuntut berdasarkan hukum nasional versus hukum adat. Pertanyaan berpusat pada interpretasi norma adat Minangkabau (apakah ruko hasil penjualan tetap berstatus pusako atau berubah menjadi harta pencaharian), sehingga termasuk dalam domain 'Pure Internal Adat'.\",\n  \"konflik_terdeteksi\": \"Tidak\"\n}"
+    },
+    {
+      "id": "CS-BAL-014",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "reasoning": "```json\n{\n  \"label\": \"B\",\n  \"langkah_keputusan\": \"3\",\n  \"alasan_utama\": \"Kasus ini merupakan murni sengketa internal dalam komunitas adat Bali tanpa implikasi hukum nasional yang jelas. Data simbolik menunjukkan bahwa menurut adat Bali, istri pewaris memiliki hak penguasaan atas berbagai jenis harta termasuk tanah sanggah (tanah leluhur). Tidak ada indikasi pelanggaran HAM fundamental atau konflik dengan hukum nasional yang spesifik. Kasus ini berada dalam domain adat Bali untuk diselesaikan menurut norma dan mekanisme adat setempat.\",\n  \"konflik_terdeteksi\": \"Tidak\"\n}\n```"
+    },
+    {
+      "id": "CS-JAW-015",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "```json\n{\n  \"label\": \"C\",\n  \"langkah_keputusan\": \"4\",\n  \"alasan_utama\": \"Kasus ini menunjukkan konflik antara hukum nasional (KUHPerdata) dan hukum adat Jawa. Hukum nasional memberikan hak waris yang sama kepada semua anak (legitime portie), sementara wasiat lisan (wekas) dalam adat Jawa memberikan hak khusus kepada anak bungsu yang telah merawat orang tua. Terjadi pertentangan norma karena anak-anak lain menuntut pembagian rata berdasarkan hukum nasional, sedangkan anak bungsu mengklaim berdasarkan wasiat adat. Ini adalah konflik klasik antara sistem hukum yang berbeda.\",\n  \"konflik_terdeteksi\": \"Ya\"\n}\n```"
+    },
+    {
+      "id": "CS-LIN-016",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\n  \"label\": \"C\",\n  \"langkah_keputusan\": \"4\",\n  \"alasan_utama\": \"Kasus ini merupakan konflik antara sistem hukum nasional dan hukum adat. Hukum nasional (KUHPerdata/UU Perkawinan) memberikan hak waris kepada pasangan hidup (istri) atas harta bersama dan sisa warisan. Sementara itu, hukum adat Minangkabau (matrilineal) mengatur bahwa harta pusako tinggi (seperti tanah ulayat, sawah adat, rumah gadang) 'punah' (kembali ke kaum/keluarga matrilineal suami) dan tidak diwariskan kepada istri yang berasal dari suku berbeda. Terdapat pertentangan norma: pihak istri dapat menuntut berdasarkan hukum nasional, sedangkan keluarga suami (kaum) dapat menuntut berdasarkan hukum adat Minangkabau untuk harta yang dianggap sebagai harta pusako. Fakta bahwa aset berada di Jakarta (luas wilayah adat) dan pasangan berasal dari suku berbeda memperkuat potensi konflik ini.\",\n  \"konflik_terdeteksi\": \"Ya\"\n}"
+    },
+    {
+      "id": "CS-BAL-012",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "reasoning": "{\n  \"label\": \"B\",\n  \"langkah_keputusan\": \"3\",\n  \"alasan_utama\": \"Kasus ini murni menyangkut penentuan batas sanksi adat 'kasepekang' (pengucilan) dalam komunitas adat Bali. Meskipun KUHP Baru mengakui sanksi adat, tidak ada aturan nasional yang memberikan batasan tegas dan final yang harus diterapkan dalam kasus ini. Sengketa ini bersifat internal dalam sistem hukum adat Bali, tanpa adanya tuntutan hak berdasarkan hukum nasional dari pihak yang bersengketa atau pelanggaran HAM fundamental yang ekstrem. Oleh karena itu, domain ini merupakan ranah otoritas adat untuk mengatur dan menyesuaikan sanksi-sanksinya.\",\n  \"konflik_terdeteksi\": \"Tidak\"\n}"
+    },
+    {
+      "id": "CS-LIN-018",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\n  \"label\": \"C\",\n  \"langkah_keputusan\": \"4\",\n  \"alasan_utama\": \"Kasus ini merupakan konflik klasik antara hukum adat (ulayat) dan hukum nasional (Sertifikat Hak Milik/ SHM). Masyarakat adat menuntut pengembalian tanah berdasarkan hak ulayat, sementara pihak pendatang memiliki bukti kepemilikan formal berdasarkan sistem hukum nasional (SHM). Ini memenuhi kriteria konflik (C) karena terdapat pertentangan klaim normatif: aturan adat (tanah ulayat tidak boleh dikuasai individu secara mutlak) versus aturan nasional (SHM sebagai bukti hak milik yang kuat). Meskipun Default Position adalah B (Adat), keberadaan SHM yang sah secara nasional menciptakan sengketa hukum yang nyata antara dua sistem hukum.\",\n  \"konflik_terdeteksi\": \"Ya\"\n}"
+    },
+    {
+      "id": "CS-BAL-009",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "reasoning": "{\n  \"label\": \"B\",\n  \"langkah_keputusan\": \"3\",\n  \"alasan_utama\": \"Kasus ini merupakan sengketa internal dalam komunitas adat Bali (Desa Adat vs krama desa) mengenai status tanah Ayahan Desa. Data Simbolik menunjukkan domain adat Bali aktif, tanpa indikasi pelanggaran HAM fundamental atau konflik langsung dengan hukum nasional yang tegas dan final. Tanah Ayahan Desa adalah tanah adat (ulayat) yang pengelolaannya diatur oleh hukum adat setempat. Meskipun ada program sertifikasi nasional (PTSL), klaim individu terhadap tanah ulayat pada dasarnya adalah persoalan penataan dan penegakan hukum internal Desa Adat. Tidak ada pihak yang secara aktif mengajukan tuntutan berdasarkan hukum nasional yang bertentangan dengan adat, sehingga ini termasuk domain 'Pure Internal Adat'.\",\n  \"konflik_terdeteksi\": \"Tidak\"\n}"
+    },
+    {
+      "id": "CS-NAS-022",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\n  \"label\": \"C\",\n  \"langkah_keputusan\": \"4\",\n  \"alasan_utama\": \"Kasus ini merupakan konflik nyata antara hukum nasional (Legitime Portie/KUHPerdata) dan hukum adat (wasiat adat Minangkabau). Ahli waris inti menggugat berdasarkan konsep bagian mutlak dari hukum nasional, sementara pewaris bertindak berdasarkan kewenangan wasiat dalam sistem adat Minangkabau yang membolehkan hibah seluruh harta, termasuk harta pusako tinggi, kepada lembaga sosial. Data Simbolik menunjukkan konflik eksplisit ('conflict(wasiat,melebihi_batas_wajar)') dari sisi nasional. Ini memenuhi kriteria Langkah 4: terjadi pertentangan norma (a), dan ada pihak yang menuntut berdasarkan hukum nasional melawan pihak yang bertindak berdasarkan adat (b). Prinsip bahwa keberadaan pasal KUHPerdata tidak otomatis mengalahkan adat berlaku di sini, sehingga konflik perlu diselesaikan melalui harmonisasi atau pilihan hukum.\",\n  \"konflik_terdeteksi\": \"Ya\"\n}"
+    },
+    {
+      "id": "CS-MIN-025",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "```json\n{\n  \"label\": \"C\",\n  \"langkah_keputusan\": \"4\",\n  \"alasan_utama\": \"Kasus ini menunjukkan konflik antara sistem hukum nasional (KUHPerdata/Banking Law) yang mempersyaratkan kapasitas hukum perorangan sebagai subjek hukum perdata, dengan sistem hukum adat Minangkabau yang mengakui Mamak Kepala Waris sebagai representasi kolektif kaum dalam pengelolaan harta pusako tinggi. Bank sebagai lembaga nasional ragu terhadap kapasitas hukum mamak, sementara mamak bertindak berdasarkan otoritas adat. Ini merupakan pertentangan norma antara sistem hukum nasional dan sistem hukum adat.\",\n  \"konflik_terdeteksi\": \"Ya\"\n}\n```"
+    }
+  ]
+}
