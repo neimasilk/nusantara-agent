@@ -1,53 +1,52 @@
 # Nusantara-Agent (Research Repository)
 
-**Neuro-Symbolic Agentic GraphRAG untuk Penalaran Hukum Pluralistik Indonesia**
+**Neuro-Symbolic Legal Reasoning with Expert-Verified Customary Law Rules**
 
-> **🚨 PENTING:** Ini bukan proyek pengembangan software komersial. Repositori ini adalah **repositori riset ilmiah** dengan target publikasi pada jurnal internasional bereputasi (**Scopus Q1**: *Information Fusion*, *Knowledge-Based Systems*, atau *Expert Systems with Applications*).
+> **PENTING:** Ini repositori riset ilmiah (bukan produk komersial) dengan target publikasi jurnal Scopus Q1, terutama *Knowledge-Based Systems* atau *Expert Systems with Applications*.
 
-## Fokus Penelitian
-Fokus utama proyek ini adalah pada **kontribusi ilmiah** dan **novelty** di bidang AI & Hukum, mencakup:
-1.  **Arsitektur Novel**: Integrasi Neuro-Simbolik dengan Multi-Agent GraphRAG untuk menangani konflik norma.
-2.  **Konstruksi Pengetahuan**: Metodologi otomatisasi ekstraksi tripel dari teks hukum adat yang tidak terstruktur.
-3.  **Metrik Baru**: Pengembangan *Cultural Consistency Score (CCS)* untuk mengukur keselarasan AI dengan budaya *high-context*.
+## Fokus Penelitian (Post-Pivot 2026-02-12)
+1. **Knowledge Base:** 95 aturan hukum adat (Minangkabau, Bali, Jawa) yang diverifikasi expert.
+2. **Formal Reasoning:** Encoding aturan ke ASP (Clingo) untuk mendeteksi konflik norma nasional vs adat.
+3. **Empirical Evaluation:** Pembandingan LLM+Rules vs LLM-only pada kasus berlabel expert dengan pelaporan statistik yang defensible.
 
-## Filosofi Riset: "Serius tapi Santai"
-*   **Serius:** Mengikuti metodologi ilmiah yang ketat (Rigorous), melakukan *Ablation Study*, dan memastikan *Reproducibility*.
-*   **Santai:** Pendekatan eksperimental (Trial & Error). Kegagalan teknis dalam eksperimen dianggap sebagai temuan riset yang valid dan akan didokumentasikan sebagai limitasi atau *future work*.
+## Filosofi Riset
+- **Simple is better:** Hanya komponen yang langsung berkontribusi ke klaim paper dipertahankan.
+- **Fail fast, pivot early:** Hasil negatif didokumentasikan sebagai kontribusi ilmiah.
+- **Serius dalam standar:** Semua klaim harus evidence-based dan reproducible.
 
-## Status Terkini (2026-02-07)
-*   `ClingoRuleEngine` (ASP) sudah fungsional di `src/symbolic/rule_engine.py` dengan 30+ aturan formal di `src/symbolic/rules/minangkabau.lp`.
-*   Experiment 05 (Formal Rule Engine vs LLM) selesai: ditemukan 33.3% divergensi pada N=30 test cases.
-*   Advanced agent architecture: parallel execution, debate, self-correction, dan routing tersedia di `src/agents/`.
-*   Experiment 07 sudah dijalankan pada 12 query, namun advanced orchestration belum mengungguli baseline sequential (lihat `experiments/07_advanced_orchestration/analysis.md` dan F-009 di `docs/failure_registry.md`).
-*   Token usage tracking terintegrasi di seluruh pipeline. Proyeksi biaya 6 model Kimi tersedia di `experiments/07_advanced_orchestration/kimi_budget_projection_from_probe.json`.
-*   Draft rules di `data/rules/minangkabau_rules.json` (**DRAFT_NEEDS_HUMAN_REVIEW**).
+## Status Terkini (as of 2026-02-16)
+- `ClingoRuleEngine` aktif di `src/symbolic/rule_engine.py` dengan 95 aturan lintas 4 domain (`minangkabau`, `bali`, `jawa`, `nasional`).
+- Gold-standard pool: 82 kasus; benchmark aktif: 24 kasus (14 agreed, 10 disputed menunggu adjudikasi lanjutan).
+- Multi-agent debate/self-correction dicatat sebagai hasil negatif (F-009) dan **bukan** jalur utama paper.
+- Test suite deterministic lulus `101/101` (`python scripts/run_test_suite.py`).
+- Workflow default adalah offline-first; pemanggilan API berbayar hanya jika diperlukan dan disetujui owner.
 
-## Milestone Berikutnya
-1.  Jalankan Experiment 06 (Independent Evaluation Pipeline).
-2.  Iterasi Experiment 07: perbaiki protokol debat berbasis evidence retrieval dan validasi dengan human annotation.
-3.  Scaling: 10K+ triples, 200+ test cases, 3 domains.
+## Milestone Prioritas
+1. Adjudikasi 10 kasus `DISPUTED` oleh rater yang qualified.
+2. Ekspansi benchmark ke 100+ kasus terlabel.
+3. Re-run pembandingan LLM+Rules vs LLM-only dengan environment setara.
+4. Uji statistik (McNemar + 95% CI) dan minimal satu model pembanding non-DeepSeek.
 
 ## Struktur Direktori
-*   `data/`: Penyimpanan data mentah (PDF Jurnal) dan olahan (Knowledge Graph dumps).
-*   `src/`: Source code untuk agen, pipeline ekstraksi, dan logika orkestrasi.
-    *   `src/agents/`: Orchestrator, debate, router, dan self-correction modules.
-    *   `src/kg_engine/`: Pipeline konstruksi Knowledge Graph (DeepSeek extraction).
-    *   `src/symbolic/`: Rule engine (ASP/Clingo) dan aturan formal hukum adat.
-*   `docs/`: Dokumentasi tambahan.
-*   `PRD_Nusantara_Agent.md`: Dokumen persyaratan produk dan roadmap penelitian.
+- `data/`: Artefak data mentah dan olahan (gold standard, benchmark, manifest).
+- `src/`: Kode utama pipeline, rule engine, router, orchestrator.
+- `experiments/`: Eksperimen terisolasi beserta artefak hasilnya.
+- `docs/`: Dokumen metodologi, gate review, registry tugas/failure, handoff.
+- `tests/`: Unit tests deterministic.
 
 ## Memulai
-1.  **Setup Environment:**
-    Pastikan Python 3.11+ terinstall.
-    ```bash
-    pip install -r requirements.txt
-    ```
-2.  **Konfigurasi:**
-    Salin `.env.example` ke `.env` dan masukkan API Key yang diperlukan (DeepSeek, dll).
+1. **Setup environment**
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. **Konfigurasi**
+   - Salin `.env.example` ke `.env`.
+   - Isi kredensial yang diperlukan (mis. `DEEPSEEK_API_KEY`) jika menjalankan mode online.
 
-## Tech Stack
-*   **LLM & Reasoning:** DeepSeek API
-*   **Orchestration:** LangGraph
-*   **Symbolic Reasoning:** Clingo (ASP)
-*   **Knowledge Graph:** Neo4j (planned)
-*   **Vector DB:** Qdrant (planned)
+## Tech Stack Aktif
+- **Symbolic Reasoning:** Clingo (ASP)
+- **LLM Integration:** DeepSeek API (opsional, controlled usage)
+- **Orchestration:** LangGraph + offline fallback
+- **Retrieval:** Local JSON/keyword fallback
+
+> Catatan scope: Neo4j/Qdrant/GraphRAG dan CCS metric tidak termasuk scope aktif paper pasca-pivot.

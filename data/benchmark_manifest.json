@@ -1,37 +1,54 @@
 {
-  "manifest_version": "1.0",
-  "dataset_id": "gs_active_2026-02-11",
-  "as_of_date": "2026-02-11",
+  "manifest_version": "1.1",
+  "dataset_id": "gs_active_2026-02-12_post_ahli3_removal",
+  "as_of_date": "2026-02-12",
   "owner": "nusantara-agent",
   "benchmark_file": {
     "path": "data/processed/gold_standard/gs_active_cases.json",
-    "sha256": "79F5BFA23702BF343B04080E3C99878F1697CB3B0DFA7F35030C436586D1A4CA",
-    "last_write_time_utc": "2026-02-08T05:28:55Z",
+    "sha256": "67954A18261B512809C5D1C3A2210BC7B89AD3BAE7206FBB2F35F498AF322161",
+    "last_write_time_utc": "2026-02-12T00:00:00Z",
     "total_cases_actual": 24,
     "label_distribution": {
-      "C": 13,
+      "C": 7,
       "B": 4,
-      "A": 4,
+      "A": 2,
       "D": 1,
-      "SPLIT": 2
+      "DISPUTED": 10
     },
-    "evaluable_cases_excluding_split": 22
+    "evaluable_cases_excluding_disputed": 14,
+    "raters": ["ahli1", "ahli2"],
+    "removed_raters": ["ahli3"],
+    "removal_reason": "Under-qualified (S1 level); Cohen's Kappa negative vs both other raters (F-014)"
   },
   "reference_claim": {
     "path": "docs/human_only/artifacts/gold_standard_consensus_report_complete_82_cases_2026-02-08.md",
     "sha256": "459A1117DEC57BC81732285E6238249B44D127713FE385EEADE2067F6BB1AD57",
-    "declared_total_cases": 82
+    "declared_total_cases": 82,
+    "dual_judgment_cases": 24,
+    "ahli1_only_cases": 48,
+    "note": "Only 24 of 82 have both Ahli-1 and Ahli-2 labels. Remaining 48 need Ahli-2 rating."
+  },
+  "latest_benchmark": {
+    "date": "2026-02-12",
+    "mode": "operational_offline",
+    "accuracy_on_agreed": "85.71%",
+    "correct": 12,
+    "total_agreed": 14,
+    "per_label": {"A": "2/2", "B": "4/4", "C": "6/7", "D": "0/1"},
+    "results_file": "experiments/09_ablation_study/results_post_avc_fix_2026-02-12.json"
   },
   "integrity_checks": {
     "count_matches_reference_claim": false,
     "notes": [
-      "Manifest direbuild otomatis dari dataset aktif.",
+      "24 active cases (dual-judgment) out of 82 total human evidence pool.",
+      "Ahli-3 votes removed 2026-02-12 per owner decision.",
+      "10 disputed cases pending Delphi Round 2 adjudication.",
       "Gunakan validate_benchmark_manifest.py untuk verifikasi sebelum benchmark formal."
     ]
   },
   "provenance": {
-    "source_summary": "Rebuilt from local repository artifacts without external API calls.",
-    "generated_by": "scripts/rebuild_benchmark_manifest.py",
-    "generated_at_utc": "2026-02-11T15:36:20Z"
+    "source_summary": "Updated after Ahli-3 removal and A-vs-C fix. Gold labels recomputed as 2-rater consensus.",
+    "generated_by": "manual_update",
+    "generated_at_utc": "2026-02-12T00:00:00Z"
   }
 }

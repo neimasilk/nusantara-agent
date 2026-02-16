@@ -14,7 +14,13 @@
       "Bash(python -m unittest discover:*)",
       "Bash(findstr:*)",
       "Bash(python -m unittest:*)",
-      "Bash(git status:*)"
+      "Bash(git status:*)",
+      "Bash(dir:*)",
+      "Bash(wc:*)",
+      "Bash(python:*)",
+      "Bash(cd:*)",
+      "Bash(done)",
+      "Bash(comm:*)"
     ]
   }
 }

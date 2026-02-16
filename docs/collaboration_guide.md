@@ -39,12 +39,12 @@ Proyek ini mengandalkan **Human-in-the-Loop** untuk memastikan kualitas data huk
 
 ## 4. Berbagi Resources (Shared Infrastructure)
 
-1.  **Shared Database (Neo4j):**
-    Kita menggunakan Neo4j Aura (Cloud) atau shared instance agar semua komputer mengakses graf yang sama.
-2.  **Shared Vector DB (Qdrant):**
-    Gunakan shared Qdrant collection untuk memastikan pencarian semantik konsisten lintas perangkat.
+1.  **Data Source of Truth (Aktif):**
+    Gunakan artefak lokal terkelola (`data/processed/`, `data/benchmark_manifest.json`) sebagai sumber kebenaran lintas perangkat.
+2.  **Graph/Vector Infra (Non-aktif untuk scope paper saat ini):**
+    Neo4j/Qdrant tidak menjadi dependency operasional inti pasca-pivot. Jangan menjadikan keduanya sebagai blocker untuk task paper aktif.
 3.  **Communication:**
-    Gunakan GitHub Issues untuk melacak bug dan ide-ide eksperimen baru.
+    Gunakan GitHub Issues/PR untuk melacak bug, keputusan metodologi, dan perubahan task prioritas.
 
 ## 5. Review Gate Process
 
@@ -78,7 +78,7 @@ Setiap eksperimen dan deliverable WAJIB melalui review sebelum dianggap selesai:
 
 ## 6. Task Assignment Protocol
 
-Pekerjaan diorganisir sebagai Atomic Research Tasks (ART). Lihat `docs/task_registry.md` untuk daftar lengkap.
+Pekerjaan diorganisir sebagai Atomic Research Tasks (ART). Untuk scope aktif paper, gunakan `docs/task_registry_simplified.md`. `docs/task_registry.md` dipertahankan sebagai arsip lengkap historis.
 
 ### Cara Mengambil Task
 1. Buka `docs/task_registry.md`

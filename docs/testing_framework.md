@@ -19,17 +19,18 @@ Dokumen ini menetapkan framework testing operasional agar pipeline riset dapat d
   - `src/kg_engine/search.py`
   - utilitas parser di evaluator independen
 
-#### Coverage Aktual (2026-02-08)
+#### Coverage Aktual (2026-02-16)
 - `tests/test_token_usage.py` -> `src/utils/token_usage.py` (4 tests: `extract_token_usage`, `merge_usage`, fallback totals)
 - `tests/test_router.py` -> `src/agents/router.py` (9 tests: `route_query`, `classify_router_accuracy`, edge cases)
 - `tests/test_debate_json_parser.py` -> `src/agents/debate.py` (8 tests: `_json_or_raw`, fenced JSON, fallback paths)
 - `tests/test_kg_search.py` -> `src/kg_engine/search.py` (8 tests: `SimpleKGSearch`, dedup, not-found fallbacks)
 - `tests/test_llm_judge_utils.py` -> `src/evaluation/llm_judge.py` (3 tests: JSON extraction utilities)
 - `tests/test_text_processor.py` -> `src/utils/text_processor.py` (10 tests: `extract_text_from_pdf`, `clean_legal_text`, `chunk_text`)
-- `tests/test_rule_engine.py` -> `src/symbolic/rule_engine.py` (32 tests: `ClingoRuleEngine`, domain ASP rules, `PrologEngine` mock, `export_rules_as_facts`)
+- `tests/test_rule_engine.py` -> `src/symbolic/rule_engine.py` (22 tests: `ClingoRuleEngine` + domain ASP rules)
+- `tests/test_orchestrator.py` -> `src/agents/orchestrator.py` (32 tests: offline supervisor decision logic)
 - `tests/test_nusantara_pipeline.py` -> `src/pipeline/nusantara_agent.py` (5 tests, offline with mocked orchestrator builder)
 
-**Total: 79 Deterministic Tests passed (`python -m unittest discover -s tests -p "test_*.py" -v`).**
+**Total: 101 Deterministic Tests passed (`python -m unittest discover -s tests -p "test_*.py" -v`).**
 
 ### Layer B — Script Syntax Smoke Check (wajib sebelum merge)
 - Seluruh skrip `src/` + eksperimen aktif harus lolos kompilasi syntax.

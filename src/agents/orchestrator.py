@@ -79,6 +79,20 @@ def _offline_supervisor_decision(query: str, rules: Dict[str, Any], route_label:
             "larangan sekolah",
             "kesehatan",
             "puskesmas",
+            "di bawah umur",
+            "batas minimal",
+        ],
+    )
+    # National law clearly dominant: administrative or clear statutory cases
+    has_national_dominant = _contains_any(
+        q,
+        [
+            "paspor",
+            "imigrasi",
+            "catatan sipil",
+            "penetapan pengadilan",
+            "poligami",
+            "perceraian",
         ],
     )
     has_national_keywords = _contains_any(
@@ -148,7 +162,11 @@ def _offline_supervisor_decision(query: str, rules: Dict[str, Any], route_label:
     if has_ham_extreme:
         label = "A"
         langkah = "1"
-        alasan = "Pelanggaran HAM fundamental diprioritaskan ke hukum nasional."
+        alasan = "Pelanggaran HAM fundamental atau batas usia hukum diprioritaskan ke hukum nasional."
+    elif has_national_dominant and not has_symbolic_conflict:
+        label = "A"
+        langkah = "2"
+        alasan = "Kasus administratif/formalitas nasional yang jelas tanpa konflik simbolik."
     elif has_symbolic_conflict:
         label = "C"
         langkah = "4"
@@ -223,16 +241,8 @@ class _OfflineOrchestrator:
 
 
 def _get_llm() -> ChatOpenAI:
-    if not _HAS_LANGCHAIN_OPENAI:
-        raise ImportError(
-            "Dependency 'langchain_openai' tidak tersedia. "
-            "Install requirements atau gunakan mode offline fallback."
-        )
-    return ChatOpenAI(
-        api_key=os.getenv("DEEPSEEK_API_KEY"),
-        base_url="https://api.deepseek.com",
-        model="deepseek-chat",
-    )
+    from src.utils.llm import get_llm
+    return get_llm()
 
 
 def _should_use_offline_fallback() -> bool:
@@ -349,9 +359,15 @@ def _supervisor_agent(llm: ChatOpenAI, state: AgentState, route_label: str = Non
         "  - Jika ada: LANGSUNG PILIH A (Nasional)\n"
         "  - Contoh: Larangan sekolah, larangan kesehatan, diskriminasi gender sistemik\n\n"
         "LANGKAH 2: Cek Pure National Law\n"
-        "  - Jika kasus bisa diselesaikan dengan UU yang jelas DAN tidak ada sanggahan Adat yang kuat → A\n"
-        "  - Contoh: Poligami, wasiat, perkawinan di bawah umur, formalitas admin\n"
-        "  - PERINGATAN: Jika UU bertentangan dengan praktik adat yang masih hidup (Living Law), JANGAN langsung pilih A. Pertimbangkan C.\n\n"
+        "  - Jika hukum nasional memberikan aturan JELAS DAN FINAL → A\n"
+        "  - Pilih A jika: UU menetapkan batas/syarat tegas yang TIDAK bisa ditawar oleh adat\n"
+        "  - Contoh WAJIB A:\n"
+        "    * Batas usia perkawinan (UU Perkawinan) → A\n"
+        "    * Syarat penetapan pengadilan untuk pengangkatan anak → A\n"
+        "    * Formalitas paspor/imigrasi/catatan sipil → A\n"
+        "    * Poligami yang diatur UU → A\n"
+        "  - HANYA eskalasi ke C jika ada TUNTUTAN AKTIF dari pihak berdasarkan adat yang MELAWAN tuntutan pihak lain berdasarkan nasional.\n"
+        "  - Konteks adat sebagai latar belakang cerita BUKAN alasan untuk memilih C.\n\n"
         "LANGKAH 3: Cek Pure Internal Adat\n"
         f"  - Domain adat terdeteksi: Minang={has_minang_keywords}, Bali={has_bali_keywords}, Jawa={has_jawa_keywords}\n"
         "  - Jika kasus internal komunitas adat TANPA implikasi UU/HAM → B\n"

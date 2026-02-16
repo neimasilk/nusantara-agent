@@ -1,3 +1,6 @@
+"""ARCHIVED: Self-correction loop showed no measurable improvement.
+Not used in active pipeline. Kept for historical reference."""
+
 import json
 import os
 from typing import Any, Dict, Optional, Tuple
@@ -24,16 +27,8 @@ load_dotenv()
 
 
 def _get_llm() -> ChatOpenAI:
-    if not _HAS_LANGCHAIN_OPENAI:
-        raise ImportError(
-            "Dependency 'langchain_openai' tidak tersedia. "
-            "Mode self-correction membutuhkan dependency ini."
-        )
-    return ChatOpenAI(
-        api_key=os.getenv("DEEPSEEK_API_KEY"),
-        base_url="https://api.deepseek.com",
-        model="deepseek-chat",
-    )
+    from src.utils.llm import get_llm
+    return get_llm()
 
 
 def _json_or_raw(text: str) -> Dict:

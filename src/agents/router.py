@@ -26,16 +26,8 @@ ROUTER_LABELS = ("pure_national", "pure_adat", "conflict", "consensus")
 
 
 def _get_llm() -> ChatOpenAI:
-    if not _HAS_LANGCHAIN_OPENAI:
-        raise ImportError(
-            "Dependency 'langchain_openai' tidak tersedia. "
-            "Gunakan mode heuristic (use_llm=False) atau install requirements."
-        )
-    return ChatOpenAI(
-        api_key=os.getenv("DEEPSEEK_API_KEY"),
-        base_url="https://api.deepseek.com",
-        model="deepseek-chat",
-    )
+    from src.utils.llm import get_llm
+    return get_llm()
 
 
 def _json_or_raw(text: str) -> Dict:

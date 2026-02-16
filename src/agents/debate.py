@@ -1,3 +1,6 @@
+"""ARCHIVED: Debate protocol produced negative results (Exp 07, F-009).
+Not used in active pipeline. Kept for historical reference and experiment reproducibility."""
+
 import json
 import os
 from typing import Any, Dict, List, Optional, Tuple
@@ -25,16 +28,8 @@ load_dotenv()
 
 
 def _get_llm() -> ChatOpenAI:
-    if not _HAS_LANGCHAIN_OPENAI:
-        raise ImportError(
-            "Dependency 'langchain_openai' tidak tersedia. "
-            "Mode debate membutuhkan dependency ini."
-        )
-    return ChatOpenAI(
-        api_key=os.getenv("DEEPSEEK_API_KEY"),
-        base_url="https://api.deepseek.com",
-        model="deepseek-chat",
-    )
+    from src.utils.llm import get_llm
+    return get_llm()
 
 
 def _json_or_raw(text: str) -> Dict:
