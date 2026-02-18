@@ -28,6 +28,12 @@
   - `PARTIAL`: 4/34 (`BAL-014`, `BAL-017`, `BAL-019`, `BAL-024`)
   - `GAP`: 9/34 (`BAL-022`, `BAL-025`, `BAL-026`, `BAL-027`, `BAL-028`, `BAL-029`, `BAL-031`, `BAL-033`, `BAL-034`)
 
+## Referensi Commit
+
+- `4e0fb8d` — `chore: resolve pull conflict in .claude settings`
+- `bf93262` — `feat(p008): add Bali ASP-JSON consistency audit and closure handoff`
+- Status push: keduanya sudah ter-push ke `origin/main` pada 2026-02-18.
+
 ## Verifikasi SOP (Closure Check)
 
 1. `python scripts/run_test_suite.py` -> **PASS** (106/106).
