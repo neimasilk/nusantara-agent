@@ -30,10 +30,12 @@
 
 ## Referensi Commit
 
+- Komit kunci pekerjaan ini:
 - `4e0fb8d` — `chore: resolve pull conflict in .claude settings`
 - `bf93262` — `feat(p008): add Bali ASP-JSON consistency audit and closure handoff`
 - `471604e` — `docs: record pushed commit refs in p008 closeout handoff`
-- Status push: ketiganya sudah ter-push ke `origin/main` pada 2026-02-18.
+- Status push: sudah ter-push ke `origin/main` pada 2026-02-18.
+- Untuk commit sinkronisasi terbaru, lihat `git log --oneline -5`.
 
 ## Verifikasi SOP (Closure Check)
 
