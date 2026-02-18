@@ -32,7 +32,8 @@
 
 - `4e0fb8d` — `chore: resolve pull conflict in .claude settings`
 - `bf93262` — `feat(p008): add Bali ASP-JSON consistency audit and closure handoff`
-- Status push: keduanya sudah ter-push ke `origin/main` pada 2026-02-18.
+- `471604e` — `docs: record pushed commit refs in p008 closeout handoff`
+- Status push: ketiganya sudah ter-push ke `origin/main` pada 2026-02-18.
 
 ## Verifikasi SOP (Closure Check)
 
