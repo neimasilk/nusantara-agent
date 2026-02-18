@@ -20,7 +20,12 @@
       "Bash(python:*)",
       "Bash(cd:*)",
       "Bash(done)",
-      "Bash(comm:*)"
+      "Bash(comm:*)",
+      "Bash(if not exist \"D:\\\\documents\\\\nusantara-agent\\\\docs\\\\handoffs\\\\ballots\\\\round7\" mkdir \"D:\\\\documents\\\\nusantara-agent\\\\docs\\\\handoffs\\\\ballots\\\\round7\")",
+      "Bash(python3:*)",
+      "Bash(/c/Users/neima/anaconda3/python:*)",
+      "Bash(python -c:*)",
+      "Bash(python -m pytest:*)"
     ]
   }
 }
