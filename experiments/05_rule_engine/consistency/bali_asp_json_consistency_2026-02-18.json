@@ -1,0 +1,743 @@
+{
+  "as_of": "2026-02-18",
+  "domain": "bali",
+  "inputs": {
+    "json_rules_path": "data\\rules\\bali_rules.json",
+    "asp_rules_path": "src\\symbolic\\rules\\bali.lp"
+  },
+  "summary": {
+    "total_rules": 34,
+    "covered": 21,
+    "partial": 4,
+    "gap": 9
+  },
+  "by_type": {
+    "lineage": {
+      "COVERED": 1,
+      "PARTIAL": 0,
+      "GAP": 0
+    },
+    "heir_status": {
+      "COVERED": 2,
+      "PARTIAL": 0,
+      "GAP": 0
+    },
+    "asset_classification": {
+      "COVERED": 5,
+      "PARTIAL": 0,
+      "GAP": 0
+    },
+    "asset_transfer": {
+      "COVERED": 1,
+      "PARTIAL": 0,
+      "GAP": 0
+    },
+    "heir_priority": {
+      "COVERED": 1,
+      "PARTIAL": 0,
+      "GAP": 0
+    },
+    "governance": {
+      "COVERED": 1,
+      "PARTIAL": 0,
+      "GAP": 0
+    },
+    "succession_exception": {
+      "COVERED": 2,
+      "PARTIAL": 0,
+      "GAP": 1
+    },
+    "heir_rights_female": {
+      "COVERED": 2,
+      "PARTIAL": 1,
+      "GAP": 0
+    },
+    "transfer_restriction": {
+      "COVERED": 1,
+      "PARTIAL": 0,
+      "GAP": 0
+    },
+    "ownership": {
+      "COVERED": 0,
+      "PARTIAL": 1,
+      "GAP": 0
+    },
+    "religious_property": {
+      "COVERED": 1,
+      "PARTIAL": 0,
+      "GAP": 0
+    },
+    "community_role": {
+      "COVERED": 1,
+      "PARTIAL": 1,
+      "GAP": 0
+    },
+    "religious_obligation": {
+      "COVERED": 1,
+      "PARTIAL": 0,
+      "GAP": 0
+    },
+    "distribution_process": {
+      "COVERED": 0,
+      "PARTIAL": 0,
+      "GAP": 2
+    },
+    "adoption": {
+      "COVERED": 1,
+      "PARTIAL": 1,
+      "GAP": 0
+    },
+    "divorce_impact": {
+      "COVERED": 0,
+      "PARTIAL": 0,
+      "GAP": 2
+    },
+    "dispute_resolution": {
+      "COVERED": 0,
+      "PARTIAL": 0,
+      "GAP": 2
+    },
+    "contemporary_change": {
+      "COVERED": 1,
+      "PARTIAL": 0,
+      "GAP": 2
+    }
+  },
+  "rules": [
+    {
+      "id": "BAL-001",
+      "type": "lineage",
+      "verification_status": "VERIFIED",
+      "rule": "Sistem kekerabatan masyarakat adat Bali bersifat patrilineal (kapurusa/purusa), di mana garis keturunan ditarik dari pihak laki-laki atau wanita yang ditingkatkan statusnya menjadi purusa (Sentana Rajeg).",
+      "status": "COVERED",
+      "note": "Asas patrilineal/purusa dan sentana rajeg sebagai purusa.",
+      "matched_required": [
+        {
+          "pattern": "\\bpatrilineal\\.",
+          "line": 5
+        },
+        {
+          "pattern": "status_purusa\\(P\\)\\s*:-\\s*sentana_rajeg\\(P\\)\\.",
+          "line": 63
+        }
+      ],
+      "missing_required": [],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-002",
+      "type": "heir_status",
+      "verification_status": "VERIFIED",
+      "rule": "Anak laki-laki adalah ahli waris utama yang memiliki hak dan kewajiban (swadharma) atas harta peninggalan serta tanggung jawab keagamaan keluarga, mencakup pemeliharaan Sanggah/Merajan, pelaksanaan Pitra Yadnya (Ngaben), dan tanggung jawab sosial adat (Ayahan) di Banjar.",
+      "status": "COVERED",
+      "note": "Hak waris purusa + kewajiban swadharma/ngayah.",
+      "matched_required": [
+        {
+          "pattern": "status_purusa\\(P\\)\\s*:-\\s*male\\(P\\)\\.",
+          "line": 62
+        },
+        {
+          "pattern": "can_inherit\\(P,\\s*A\\)\\s*:-\\s*[\\s\\S]*asset_type\\(A,\\s*druwe_gabro\\)\\.",
+          "line": 68
+        },
+        {
+          "pattern": "gugur_hak_waris\\(P\\)\\s*:-\\s*menolak_ngaben\\(P\\)\\.",
+          "line": 95
+        },
+        {
+          "pattern": "gugur_hak_waris\\(P\\)\\s*:-\\s*not\\s+kewajiban_ngayah\\(P\\),\\s*status_purusa\\(P\\)\\.",
+          "line": 96
+        }
+      ],
+      "missing_required": [],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-003",
+      "type": "heir_status",
+      "verification_status": "VERIFIED",
+      "rule": "Anak perempuan dapat menjadi ahli waris (sentana rajeg) melalui perkawinan nyentana, di mana status hukumnya berubah dari Pradana menjadi Purusa, disamakan dengan anak laki-laki.",
+      "status": "COVERED",
+      "note": "Sentana rajeg ter-encode; syarat nyentana/camput tidak eksplisit penuh.",
+      "matched_required": [
+        {
+          "pattern": "status_purusa\\(P\\)\\s*:-\\s*sentana_rajeg\\(P\\)\\.",
+          "line": 63
+        }
+      ],
+      "missing_required": [],
+      "matched_optional": [
+        {
+          "pattern": "#defined\\s+keluarga_camput/1\\.",
+          "line": 25
+        }
+      ]
+    },
+    {
+      "id": "BAL-004",
+      "type": "asset_classification",
+      "verification_status": "VERIFIED",
+      "rule": "Druwe Tengah adalah harta bersama milik keluarga/kerabat yang tidak dapat dibagi secara individual (inalienable), meliputi Tanah Sanggah/Merajan, Tanah Tegal Laba Pura, dan benda pusaka (keris, pratima).",
+      "status": "COVERED",
+      "note": "Klasifikasi druwe tengah + inalienable (larangan jual).",
+      "matched_required": [
+        {
+          "pattern": "asset_type\\(tanah_sanggah,\\s*druwe_tengah\\)\\.",
+          "line": 28
+        },
+        {
+          "pattern": "asset_type\\(tanah_tegal_laba_pura,\\s*druwe_tengah\\)\\.",
+          "line": 29
+        },
+        {
+          "pattern": "asset_type\\(tanah_pkd,\\s*druwe_tengah\\)\\.",
+          "line": 31
+        },
+        {
+          "pattern": "conflict\\(A,\\s*sell\\)\\s*:-\\s*asset_type\\(A,\\s*druwe_tengah\\),\\s*action\\(A,\\s*sell\\)\\.",
+          "line": 128
+        }
+      ],
+      "missing_required": [],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-005",
+      "type": "asset_classification",
+      "verification_status": "VERIFIED",
+      "rule": "Harta Druwe Gabro (atau Gunakaya) adalah harta bersama yang diperoleh suami istri selama masa perkawinan.",
+      "status": "COVERED",
+      "note": "",
+      "matched_required": [
+        {
+          "pattern": "asset_type\\(harta_druwe_gabro,\\s*druwe_gabro\\)\\.",
+          "line": 35
+        },
+        {
+          "pattern": "asset_type\\(gunakaya,\\s*druwe_gabro\\)\\.",
+          "line": 36
+        }
+      ],
+      "missing_required": [],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-006",
+      "type": "asset_classification",
+      "verification_status": "VERIFIED",
+      "rule": "Harta Tetadan (Tatakan) adalah harta bawaan yang dibawa oleh suami atau istri ke dalam perkawinan, diperoleh sebelum menikah (hibah orang tua, warisan pribadi). Harta ini tetap menjadi hak individu masing-masing.",
+      "status": "COVERED",
+      "note": "",
+      "matched_required": [
+        {
+          "pattern": "asset_type\\(harta_tetadan,\\s*tetadan\\)\\.",
+          "line": 38
+        },
+        {
+          "pattern": "ownership_type\\(tetadan,\\s*individual\\)\\.",
+          "line": 48
+        }
+      ],
+      "missing_required": [],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-007",
+      "type": "asset_classification",
+      "verification_status": "VERIFIED",
+      "rule": "Harta Bekel adalah harta perbekalan yang diberikan orang tua kepada anak perempuan saat menikah keluar (ninggal kedaton). Ini bukan warisan dalam arti ahli waris, melainkan pemberian putus.",
+      "status": "COVERED",
+      "note": "Klasifikasi bekel sebagai pemberian putus.",
+      "matched_required": [
+        {
+          "pattern": "asset_type\\(harta_bekel,\\s*bekel\\)\\.",
+          "line": 41
+        },
+        {
+          "pattern": "ownership_type\\(bekel,\\s*pemberian_putus\\)\\.",
+          "line": 49
+        }
+      ],
+      "missing_required": [],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-008",
+      "type": "asset_transfer",
+      "verification_status": "VERIFIED",
+      "rule": "Jiwa Dana adalah pemberian harta dari orang tua kepada anak (bisa perempuan atau orang lain) atas dasar kasih sayang semasa orang tua masih hidup. Harus disaksikan Prajuru Adat agar sah.",
+      "status": "COVERED",
+      "note": "",
+      "matched_required": [
+        {
+          "pattern": "asset_type\\(jiwa_dana,\\s*jiwa_dana\\)\\.",
+          "line": 42
+        },
+        {
+          "pattern": "conflict\\(jiwa_dana,\\s*invalid_transfer\\)\\s*:-\\s*action\\(jiwa_dana,\\s*grant\\),\\s*not\\s*disaksikan_prajuru\\.",
+          "line": 134
+        }
+      ],
+      "missing_required": [],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-009",
+      "type": "asset_classification",
+      "verification_status": "VERIFIED",
+      "rule": "Harta Pusaka adalah harta yang memiliki nilai magis-religius (seperti keris leluhur, permata suci) yang tidak boleh dijual dan harus dijaga oleh ahli waris utama (Purusa).",
+      "status": "COVERED",
+      "note": "",
+      "matched_required": [
+        {
+          "pattern": "asset_type\\(harta_pusaka,\\s*pusaka_magis\\)\\.",
+          "line": 43
+        },
+        {
+          "pattern": "conflict\\(A,\\s*sell\\)\\s*:-\\s*asset_type\\(A,\\s*pusaka_magis\\),\\s*action\\(A,\\s*sell\\)\\.",
+          "line": 129
+        },
+        {
+          "pattern": "can_inherit\\(P,\\s*A\\)\\s*:-\\s*[\\s\\S]*asset_type\\(A,\\s*pusaka_magis\\),\\s*not\\s*kawin_keluar\\(P\\)\\.",
+          "line": 68
+        }
+      ],
+      "missing_required": [],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-010",
+      "type": "heir_priority",
+      "verification_status": "VERIFIED",
+      "rule": "Semua anak laki-laki berhak mendapat bagian waris. Anak yang menempati Umah Meten (rumah induk) dan merawat orang tua (biasanya bungsu atau sulung tergantung desa) sering mendapat bagian lebih besar atau rumah utama.",
+      "status": "COVERED",
+      "note": "Hak dasar anak laki-laki ada; porsi 'lebih besar' tidak dimodelkan numerik.",
+      "matched_required": [
+        {
+          "pattern": "status_purusa\\(P\\)\\s*:-\\s*male\\(P\\)\\.",
+          "line": 62
+        },
+        {
+          "pattern": "can_inherit\\(P,\\s*A\\)\\s*:-\\s*[\\s\\S]*asset_type\\(A,\\s*druwe_gabro\\)\\.",
+          "line": 68
+        }
+      ],
+      "missing_required": [],
+      "matched_optional": [
+        {
+          "pattern": "prioritas_sanggah\\(P,\\s*tanah_sanggah\\)\\s*:-\\s*ngamong_sanggah\\(P\\)\\.",
+          "line": 138
+        }
+      ]
+    },
+    {
+      "id": "BAL-011",
+      "type": "governance",
+      "verification_status": "VERIFIED",
+      "rule": "Anak laki-laki yang ditunjuk ngamong (bertanggung jawab atas) Sanggah Kemulan berhak atas tanah tempat sanggah tersebut berdiri dan tanah pelabanya.",
+      "status": "COVERED",
+      "note": "",
+      "matched_required": [
+        {
+          "pattern": "#defined\\s+ngamong_sanggah/1\\.",
+          "line": 137
+        },
+        {
+          "pattern": "prioritas_sanggah\\(P,\\s*tanah_sanggah\\)\\s*:-\\s*ngamong_sanggah\\(P\\)\\.",
+          "line": 138
+        },
+        {
+          "pattern": "can_inherit\\(P,\\s*tanah_sanggah\\)\\s*:-\\s*prioritas_sanggah\\(P,\\s*tanah_sanggah\\)\\.",
+          "line": 139
+        }
+      ],
+      "missing_required": [],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-012",
+      "type": "succession_exception",
+      "verification_status": "VERIFIED",
+      "rule": "Anak laki-laki yang berpindah agama (keluar dari Hindu) dianggap Ninggal Kedaton (keluar dari struktur keluarga adat) sehingga kehilangan hak sebagai ahli waris adat karena tidak bisa memenuhi kewajiban Sanggah.",
+      "status": "COVERED",
+      "note": "Konsekuensi ninggal kedaton ada; sebab pindah agama tidak diekspresikan langsung.",
+      "matched_required": [
+        {
+          "pattern": "gugur_hak_waris\\(P\\)\\s*:-\\s*ninggal_kedaton\\(P\\)\\.",
+          "line": 94
+        }
+      ],
+      "missing_required": [],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-013",
+      "type": "heir_rights_female",
+      "verification_status": "VERIFIED",
+      "rule": "Berdasarkan Keputusan Pesamuhan Agung III MUDP Bali No. 01/KEP/PSM-3/MDP Bali/X/2010, anak perempuan yang kawin keluar diakui sebagai Ahli Waris Terbatas.",
+      "status": "COVERED",
+      "note": "",
+      "matched_required": [
+        {
+          "pattern": "ahli_waris_terbatas\\(P\\)\\s*:-\\s*female\\(P\\),\\s*kawin_keluar\\(P\\)\\.",
+          "line": 83
+        },
+        {
+          "pattern": "can_inherit\\(P,\\s*A\\)\\s*:-\\s*[\\s\\S]*ahli_waris_terbatas\\(P\\),\\s*asset_type\\(A,\\s*druwe_gabro\\)\\.",
+          "line": 68
+        }
+      ],
+      "missing_required": [],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-014",
+      "type": "heir_rights_female",
+      "verification_status": "VERIFIED",
+      "rule": "Anak perempuan berhak mendapat bagian dari harta Gunakaya (harta perolehan orang tua), namun besarnya maksimal setengah (1/2) dari bagian anak laki-laki, atau sesuai kemampuan/kesepakatan keluarga.",
+      "status": "PARTIAL",
+      "note": "Hak dasar anak perempuan terencode, namun rasio maksimal 1/2 tidak eksplisit.",
+      "matched_required": [],
+      "missing_required": [
+        "(?:setengah|1/2|share_ratio|bagian_*)"
+      ],
+      "matched_optional": [
+        {
+          "pattern": "can_inherit\\(P,\\s*A\\)\\s*:-\\s*[\\s\\S]*ahli_waris_terbatas\\(P\\),\\s*asset_type\\(A,\\s*druwe_gabro\\)\\.",
+          "line": 68
+        }
+      ]
+    },
+    {
+      "id": "BAL-015",
+      "type": "heir_rights_female",
+      "verification_status": "VERIFIED",
+      "rule": "Anak perempuan (Pradana) yang kawin keluar tidak berhak mewarisi Harta Pusaka, Druwe Tengah, maupun Tanah Ayahan Desa, karena kewajiban adatnya sudah berpindah ke keluarga suami.",
+      "status": "COVERED",
+      "note": "",
+      "matched_required": [
+        {
+          "pattern": ":-\\s*female\\(P\\),\\s*kawin_keluar\\(P\\),\\s*can_inherit\\(P,\\s*A\\),\\s*asset_type\\(A,\\s*druwe_tengah\\)\\.",
+          "line": 90
+        },
+        {
+          "pattern": ":-\\s*female\\(P\\),\\s*kawin_keluar\\(P\\),\\s*can_inherit\\(P,\\s*A\\),\\s*asset_type\\(A,\\s*pusaka_magis\\)\\.",
+          "line": 91
+        }
+      ],
+      "missing_required": [],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-016",
+      "type": "transfer_restriction",
+      "verification_status": "VERIFIED",
+      "rule": "Harta Pusaka, Tanah Sanggah, dan Tanah Pekarangan Desa (PKD) dilarang keras untuk dijual (adol), karena merupakan milik leluhur dan titipan untuk generasi penerus (Druwe Tengah).",
+      "status": "COVERED",
+      "note": "",
+      "matched_required": [
+        {
+          "pattern": "conflict\\(A,\\s*sell\\)\\s*:-\\s*asset_type\\(A,\\s*druwe_tengah\\),\\s*action\\(A,\\s*sell\\)\\.",
+          "line": 128
+        },
+        {
+          "pattern": "conflict\\(A,\\s*sell\\)\\s*:-\\s*asset_type\\(A,\\s*pusaka_magis\\),\\s*action\\(A,\\s*sell\\)\\.",
+          "line": 129
+        }
+      ],
+      "missing_required": [],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-017",
+      "type": "ownership",
+      "verification_status": "VERIFIED",
+      "rule": "Ahli waris hanya memiliki hak menikmati hasil (hak pakai dan hak kelola) atas harta pusaka, bukan hak memiliki mutlak untuk memindahtangankan kepada pihak luar desa adat.",
+      "status": "PARTIAL",
+      "note": "Larangan transfer luar desa ada, namun konsep hak pakai/hak kelola tidak eksplisit.",
+      "matched_required": [],
+      "missing_required": [
+        "hak_pakai|hak_kelola"
+      ],
+      "matched_optional": [
+        {
+          "pattern": "ownership_type\\(pusaka_magis,\\s*komunal_ritual\\)\\.",
+          "line": 51
+        },
+        {
+          "pattern": "conflict\\(A,\\s*transfer_outside_desa\\)\\s*:-\\s*asset_type\\(A,\\s*druwe_tengah\\),\\s*action\\(A,\\s*transfer_outside_desa\\)\\.",
+          "line": 130
+        }
+      ]
+    },
+    {
+      "id": "BAL-018",
+      "type": "religious_property",
+      "verification_status": "VERIFIED",
+      "rule": "Tanah Pelaba Pura (tanah sawah/tegalan yang hasilnya untuk membiayai upacara Pura) tidak boleh dibagi waris menjadi hak milik pribadi, melainkan dikelola bergilir atau oleh penanggung jawab utama.",
+      "status": "COVERED",
+      "note": "",
+      "matched_required": [
+        {
+          "pattern": "asset_type\\(tanah_pelaba_pura,\\s*druwe_tengah\\)\\.",
+          "line": 33
+        },
+        {
+          "pattern": "conflict\\(A,\\s*split_individual\\)\\s*:-\\s*asset_type\\(A,\\s*tanah_pelaba_pura\\),\\s*action\\(A,\\s*split_individual\\)\\.",
+          "line": 131
+        }
+      ],
+      "missing_required": [],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-019",
+      "type": "community_role",
+      "verification_status": "VERIFIED",
+      "rule": "Pengangkatan anak (Sentana Peperasan) harus diketahui dan disaksikan oleh Prajuru Banjar/Desa Adat dan diumumkan dalam paruman agar sah secara adat.",
+      "status": "PARTIAL",
+      "note": "Syarat saksi prajuru spesifik untuk adopsi belum eksplisit; ada mekanisme saksi pada jiwa dana.",
+      "matched_required": [],
+      "missing_required": [
+        "adopsi\\([\\w_]+\\).*disaksikan_prajuru|disaksikan_prajuru.*adopsi"
+      ],
+      "matched_optional": [
+        {
+          "pattern": "adopsi_sah\\(P\\)\\s*:-\\s*adopsi\\(P\\),\\s*upacara_widhi_widana\\(P\\),\\s*tri_upasaksi\\(P\\)\\.",
+          "line": 101
+        },
+        {
+          "pattern": "conflict\\(jiwa_dana,\\s*invalid_transfer\\)\\s*:-\\s*action\\(jiwa_dana,\\s*grant\\),\\s*not\\s*disaksikan_prajuru\\.",
+          "line": 134
+        }
+      ]
+    },
+    {
+      "id": "BAL-020",
+      "type": "community_role",
+      "verification_status": "VERIFIED",
+      "rule": "Jika sebuah keluarga punah (camput) tanpa ahli waris (tidak ada purusa/sentana rajeg), maka Tanah Ayahan Desa akan ditarik kembali oleh Desa Adat (Desa Pakraman).",
+      "status": "COVERED",
+      "note": "",
+      "matched_required": [
+        {
+          "pattern": "ditarik_desa\\(tanah_ayahan_desa\\)\\s*:-\\s*keluarga_camput\\(_\\)\\.",
+          "line": 142
+        }
+      ],
+      "missing_required": [],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-021",
+      "type": "religious_obligation",
+      "verification_status": "VERIFIED",
+      "rule": "Hak waris berbanding lurus dengan kewajiban (Asas Ngayah): 'Siapa yang ngayah (bekerja/berbakti) dia yang mewaris.' Jika menolak ngaben orang tua, hak waris bisa dicabut.",
+      "status": "COVERED",
+      "note": "",
+      "matched_required": [
+        {
+          "pattern": "gugur_hak_waris\\(P\\)\\s*:-\\s*menolak_ngaben\\(P\\)\\.",
+          "line": 95
+        },
+        {
+          "pattern": "gugur_hak_waris\\(P\\)\\s*:-\\s*not\\s+kewajiban_ngayah\\(P\\),\\s*status_purusa\\(P\\)\\.",
+          "line": 96
+        }
+      ],
+      "missing_required": [],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-022",
+      "type": "distribution_process",
+      "verification_status": "VERIFIED",
+      "rule": "Harta peninggalan pewaris harus pertama-tama digunakan untuk membiayai upacara kematian (Ngaben/Pitra Yadnya) pewaris itu sendiri sebelum sisanya dibagi kepada ahli waris.",
+      "status": "GAP",
+      "note": "Prioritas biaya upacara sebelum distribusi belum ditemukan.",
+      "matched_required": [],
+      "missing_required": [
+        "biaya_ngaben|prioritas_pitra_yadnya|sebelum_sisa_dibagi"
+      ],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-023",
+      "type": "adoption",
+      "verification_status": "VERIFIED",
+      "rule": "Anak angkat baru sah menjadi ahli waris jika telah melalui upacara Widhi Widana (pemerasan) yang disaksikan Tri Upasaksi (Dewa, Manusa/Adat, Butha).",
+      "status": "COVERED",
+      "note": "",
+      "matched_required": [
+        {
+          "pattern": "adopsi_sah\\(P\\)\\s*:-\\s*adopsi\\(P\\),\\s*upacara_widhi_widana\\(P\\),\\s*tri_upasaksi\\(P\\)\\.",
+          "line": 101
+        }
+      ],
+      "missing_required": [],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-024",
+      "type": "adoption",
+      "verification_status": "VERIFIED",
+      "rule": "Anak angkat sah (Sentana Peperasan) memiliki status hukum yang sama persis dengan anak kandung (Sentana Gama), termasuk hak waris dan kewajiban merawat Sanggah.",
+      "status": "PARTIAL",
+      "note": "Hak waris anak angkat ada; kesetaraan kewajiban (sanggah/ngayah) belum eksplisit.",
+      "matched_required": [],
+      "missing_required": [
+        "adopsi_sah\\(P\\).*kewajiban_ngayah|kewajiban_sanggah.*adopsi_sah"
+      ],
+      "matched_optional": [
+        {
+          "pattern": "can_inherit\\(P,\\s*A\\)\\s*:-\\s*[\\s\\S]*adopsi_sah\\(P\\),\\s*asset_type\\(A,\\s*druwe_gabro\\)\\.",
+          "line": 68
+        },
+        {
+          "pattern": "can_inherit\\(P,\\s*A\\)\\s*:-\\s*[\\s\\S]*adopsi_sah\\(P\\),\\s*asset_type\\(A,\\s*druwe_tengah\\)\\.",
+          "line": 68
+        }
+      ]
+    },
+    {
+      "id": "BAL-025",
+      "type": "divorce_impact",
+      "verification_status": "VERIFIED",
+      "rule": "Istri yang bercerai kembali ke rumah asalnya (Mulih Daha) dan kehilangan hak atas harta bawaan suami serta harta leluhur suami.",
+      "status": "GAP",
+      "note": "Aturan dampak cerai khusus 'mulih daha' belum ditemukan.",
+      "matched_required": [],
+      "missing_required": [
+        "mulih_daha|cerai|janda_kehilangan_hak"
+      ],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-026",
+      "type": "divorce_impact",
+      "verification_status": "VERIFIED",
+      "rule": "Anak-anak dari hasil perkawinan tetap mengikut garis Purusa (ayah). Hak asuh dan hak waris anak tetap berada di keluarga ayah, kecuali anak masih menyusui bisa diasuh ibu sementara namun status hukum tetap di ayah.",
+      "status": "GAP",
+      "note": "Aturan pasca cerai untuk anak belum ditemukan.",
+      "matched_required": [],
+      "missing_required": [
+        "hak_asuh|anak_mengikut_ayah|garis_purusa_setelah_cerai"
+      ],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-027",
+      "type": "dispute_resolution",
+      "verification_status": "VERIFIED",
+      "rule": "Sengketa waris tahap pertama wajib diselesaikan di internal keluarga besar melalui musyawarah (Sangkep) dalam lingkup Dadia/Suka Duka.",
+      "status": "GAP",
+      "note": "Prosedur sengketa internal keluarga belum ditemukan.",
+      "matched_required": [],
+      "missing_required": [
+        "sangkep|musyawarah_keluarga|dadia|suka_duka"
+      ],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-028",
+      "type": "dispute_resolution",
+      "verification_status": "VERIFIED",
+      "rule": "Jika musyawarah keluarga gagal, sengketa maju ke tingkat Banjar Adat, kemudian Desa Adat (Kerta Desa) yang putusannya bersifat final secara adat. Jika masih tidak puas, baru diajukan ke Pengadilan Negeri (hukum nasional).",
+      "status": "GAP",
+      "note": "Prosedur eskalasi sengketa belum ditemukan.",
+      "matched_required": [],
+      "missing_required": [
+        "banjar|kerta_desa|pengadilan_negeri|eskalasi_sengketa"
+      ],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-029",
+      "type": "contemporary_change",
+      "verification_status": "VERIFIED",
+      "rule": "Perkawinan beda wangsa (kasta) kini tidak lagi menggugurkan hak waris secara otomatis seperti zaman kerajaan, asalkan kewajiban adat terpenuhi.",
+      "status": "GAP",
+      "note": "Perubahan kontemporer beda wangsa belum ditemukan.",
+      "matched_required": [],
+      "missing_required": [
+        "wangsa|beda_wangsa|nyeburin|kewajiban_adat_terpenuhi"
+      ],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-030",
+      "type": "contemporary_change",
+      "verification_status": "VERIFIED",
+      "rule": "Yurisprudensi MA dan praktik adat modern mulai mengakui hak janda untuk menikmati/menguasai harta warisan suami selama ia tidak kawin lagi (Janda Sentana), demi kelangsungan hidup anak-anaknya.",
+      "status": "COVERED",
+      "note": "",
+      "matched_required": [
+        {
+          "pattern": "hak_penguasaan\\(P,\\s*A\\)\\s*:-\\s*janda\\(P\\),\\s*[\\s\\S]*not\\s*menikah_lagi\\(P\\)\\.",
+          "line": 115
+        }
+      ],
+      "missing_required": [],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-031",
+      "type": "contemporary_change",
+      "verification_status": "VERIFIED",
+      "rule": "Perkawinan Pada Gelahang: bentuk perkawinan di mana suami dan istri sama-sama berstatus Purusa di rumah masing-masing (karena sama-sama anak tunggal). Hak waris dibagi dua, kewajiban juga dibagi dua, sebagai solusi kontemporer untuk mencegah kepunahan garis keturunan.",
+      "status": "GAP",
+      "note": "Aturan perkawinan pada gelahang belum ditemukan.",
+      "matched_required": [],
+      "missing_required": [
+        "pada_gelahang|dua_purusa|hak_waris_dibagi_dua"
+      ],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-032",
+      "type": "succession_exception",
+      "verification_status": "VERIFIED",
+      "rule": "Anak Astra (anak yang lahir di luar nikah atau dari perkawinan tidak sah secara adat) hanya memiliki hubungan perdata dengan ibunya, kecuali dilakukan pengakuan/pengesahan oleh ayah melalui upacara tertentu.",
+      "status": "COVERED",
+      "note": "",
+      "matched_required": [
+        {
+          "pattern": ":-\\s*astra\\(P\\),\\s*male\\(Ayah\\),\\s*parent\\(Ayah,\\s*P\\),\\s*not\\s*bisa_relasi_ayah\\(P\\),\\s*can_inherit\\(P,\\s*_\\)\\.",
+          "line": 112
+        },
+        {
+          "pattern": "bisa_relasi_ayah\\(P\\)\\s*:-\\s*pengesahan_ayah\\(P\\)\\.",
+          "line": 111
+        }
+      ],
+      "missing_required": [],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-033",
+      "type": "succession_exception",
+      "verification_status": "VERIFIED",
+      "rule": "Anak yang durhaka (Alpaka Guru) atau mencoba membunuh orang tuanya dapat kehilangan hak warisnya melalui keputusan sangkep keluarga.",
+      "status": "GAP",
+      "note": "Ground disinherit karena alpaka guru belum ditemukan.",
+      "matched_required": [],
+      "missing_required": [
+        "alpaka_guru|durhaka|mencoba_membunuh|keputusan_sangkep"
+      ],
+      "matched_optional": []
+    },
+    {
+      "id": "BAL-034",
+      "type": "distribution_process",
+      "verification_status": "VERIFIED",
+      "rule": "Dalam pembagian waris modern (MUDP 2010), sebelum harta dibagi kepada anak laki-laki dan perempuan, harus disisihkan sepertiga (1/3) atau secukupnya untuk Harta Pusaka dan biaya pelestarian Sanggah Merajan.",
+      "status": "GAP",
+      "note": "Mekanisme sisih 1/3 sebelum pembagian belum ditemukan.",
+      "matched_required": [],
+      "missing_required": [
+        "sepertiga|1/3|potongan_sanggah|prioritas_harta_pusaka"
+      ],
+      "matched_optional": []
+    }
+  ]
+}

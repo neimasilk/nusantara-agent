@@ -33,7 +33,7 @@
 | P-005 | Expand gold standard ke 100+ kasus (dari 82 pool, tambah 18+) | HUMAN | NEXT | Dr. Hendra + Dr. Indra |
 | P-006 | Generate ASP test cases untuk Bali domain (saat ini minim) | HUMAN/AI | NEXT | Rules ada, test cases belum |
 | P-007 | Generate ASP test cases untuk Jawa domain | HUMAN/AI | NEXT | Rules ada, test cases belum |
-| P-008 | Verifikasi ASP rules vs expert-verified JSON rules (consistency check) | AI | NEXT | bali.lp vs bali_rules.json |
+| P-008 | Verifikasi ASP rules vs expert-verified JSON rules (consistency check) | AI | IN_PROGRESS | Bali audited (21 covered, 4 partial, 9 gap): `docs/handoffs/20260218_p008_bali_asp_json_consistency.md` |
 
 ### Phase C: Core Experiment (Week 3-5)
 

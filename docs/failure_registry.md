@@ -245,6 +245,20 @@ Living document yang mencatat setiap kegagalan, hasil negatif, dan pendekatan ya
   - Updated benchmark: **85.71% accuracy on 14 agreed cases** (12/14): A=2/2, B=4/4, C=6/7, D=0/1
   - Remaining: 10 disputed cases need adjudication by qualified experts (Delphi Round 2 prepared)
 
+### F-015: ASP-JSON Rule Parity Gap on Bali Domain (P-008 Audit)
+
+- **Tanggal:** 2026-02-18
+- **Eksperimen:** 05_rule_engine (P-008 consistency check)
+- **Kategori:** LIMITATION_DISCOVERED
+- **Severity:** MAJOR
+- **Status:** UNRESOLVED
+- **Deskripsi:** Audit konsistensi `bali.lp` terhadap `bali_rules.json` menunjukkan hanya 21/34 rule `COVERED`, 4/34 `PARTIAL`, dan 9/34 `GAP`.
+- **Expected vs Actual:** Expected: seluruh rule expert-verified Bali terwakili penuh di ASP. Actual: rule proses distribusi, dampak perceraian, sengketa, dan beberapa perubahan kontemporer belum terencode.
+- **Root Cause:** Encoding awal fokus pada hard constraints inti (pewaris/jenis harta/larangan transfer), belum menutup rule prosedural dan kontemporer.
+- **Implikasi untuk Paper:** Klaim "expert-verified rules encoded in ASP" harus dikualifikasi untuk domain Bali sampai gap rule ditutup atau dinyatakan eksplisit sebagai batasan cakupan.
+- **Tindakan:** ACKNOWLEDGED
+- **Detail Tindakan:** Audit artefak disimpan di `docs/handoffs/20260218_p008_bali_asp_json_consistency.md` dan `experiments/05_rule_engine/consistency/bali_asp_json_consistency_2026-02-18.json`. Prioritas lanjut: tutup 4 rule `PARTIAL` dulu, lalu 9 rule `GAP`.
+
 ---
 
 ## Statistik Ringkasan
@@ -255,7 +269,7 @@ Living document yang mencatat setiap kegagalan, hasil negatif, dan pendekatan ya
 | ABANDONED_APPROACH | 0 | 0 | 0 | 0 |
 | TECHNICAL_FAILURE | 2 | 0 | 1 | 1 |
 | ASSUMPTION_VIOLATED | 1 | 1 | 0 | 0 |
-| LIMITATION_DISCOVERED | 9 | 3 | 6 | 0 |
-| **TOTAL** | **14** | **4** | **9** | **1** |
+| LIMITATION_DISCOVERED | 10 | 3 | 7 | 0 |
+| **TOTAL** | **15** | **4** | **10** | **1** |
 
-*Last updated: 2026-02-12 (IRA analysis reveals critical gold standard problem)*
+*Last updated: 2026-02-18 (P-008 Bali ASP-JSON consistency audit)*
