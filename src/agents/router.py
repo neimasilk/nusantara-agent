@@ -4,6 +4,11 @@ import re
 from typing import Any, Dict, Optional
 
 from dotenv import load_dotenv
+from src.config.domain_keywords import (
+    ROUTER_ADAT_KEYWORDS,
+    ROUTER_CONFLICT_KEYWORDS,
+    ROUTER_NATIONAL_KEYWORDS,
+)
 
 try:
     from langchain_openai import ChatOpenAI
@@ -32,6 +37,8 @@ def _get_llm() -> ChatOpenAI:
 
 def _json_or_raw(text: str) -> Dict:
     text = text.strip()
+    # Strip <think>...</think> blocks from reasoning models (e.g. deepseek-r1)
+    text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL).strip()
     if "```json" in text:
         start = text.index("```json") + len("```json")
         end = text.index("```", start)
@@ -48,43 +55,9 @@ def _json_or_raw(text: str) -> Dict:
 
 def _keyword_score(query: str) -> Dict[str, int]:
     q = query.lower()
-    national_terms = [
-        "kuhperdata",
-        "perdata",
-        "hukum nasional",
-        "yurisprudensi",
-        "mahkamah agung",
-        "putusan",
-        "perjanjian",
-        "wanprestasi",
-        "gono-gini",
-        "harta bersama",
-    ]
-    adat_terms = [
-        "adat",
-        "minangkabau",
-        "bali",
-        "jawa",
-        "pusako",
-        "mamak",
-        "kemenakan",
-        "ulayat",
-        "banjar",
-        "sentana",
-        "drue",
-        "drue tengah",
-    ]
-    conflict_terms = [
-        "konflik",
-        "bertentangan",
-        "vs",
-        "versus",
-        "bertabrakan",
-        "pluralisme",
-    ]
-    national = sum(1 for t in national_terms if t in q)
-    adat = sum(1 for t in adat_terms if t in q)
-    conflict = sum(1 for t in conflict_terms if t in q)
+    national = sum(1 for t in ROUTER_NATIONAL_KEYWORDS if t in q)
+    adat = sum(1 for t in ROUTER_ADAT_KEYWORDS if t in q)
+    conflict = sum(1 for t in ROUTER_CONFLICT_KEYWORDS if t in q)
     return {"national": national, "adat": adat, "conflict": conflict}
 
 

@@ -4,6 +4,46 @@ from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
 from src.agents.router import route_query
+from src.config.domain_keywords import (
+    ADAT_KEYWORDS,
+    BALI_ADOPTION_KEYWORDS,
+    BALI_ADOPTION_WITNESS_KEYWORDS,
+    BALI_FEMALE_CHILD_KEYWORDS,
+    BALI_KAWIN_KELUAR_KEYWORDS,
+    BALI_MALE_CHILD_KEYWORDS,
+    BALI_PURUSA_ASSET_KEYWORDS,
+    BALI_REMARRIAGE_KEYWORDS,
+    BALI_SELL_ACTION_KEYWORDS,
+    BALI_SENTANA_KEYWORDS,
+    BALI_WITNESS_KEYWORDS,
+    JAWA_ADOPTION_KEYWORDS,
+    JAWA_ADOPTION_VALID_KEYWORDS,
+    JAWA_CARE_KEYWORDS,
+    JAWA_CHILD_OUTSIDE_MARRIAGE_KEYWORDS,
+    JAWA_DIVORCE_KEYWORDS,
+    JAWA_FEMALE_CHILD_KEYWORDS,
+    JAWA_GONO_GINI_KEYWORDS,
+    JAWA_GRANDCHILD_REPLACEMENT_KEYWORDS,
+    JAWA_HARTA_ASAL_KEYWORDS,
+    JAWA_ISLAMIC_MODE_KEYWORDS,
+    JAWA_MALE_CHILD_KEYWORDS,
+    JAWA_PATERNAL_PROOF_KEYWORDS,
+    JAWA_PUSAKA_KEYWORDS,
+    JAWA_RAGIL_KEYWORDS,
+    JAWA_REMARRIAGE_KEYWORDS,
+    JAWA_TAKHARUJ_KEYWORDS,
+    MINANG_CONSENSUS_KEYWORDS,
+    MINANG_FEMALE_CHILD_KEYWORDS,
+    MINANG_HARTA_PENCAHARIAN_KEYWORDS,
+    MINANG_MALE_CHILD_KEYWORDS,
+    MINANG_SAWAH_LADANG_KEYWORDS,
+    MINANG_ULAYAT_LAND_KEYWORDS,
+    NASIONAL_DEBT_SETTLED_KEYWORDS,
+    NASIONAL_PARENT_KEYWORDS,
+    NASIONAL_SIBLING_KEYWORDS,
+    NASIONAL_SPOUSE_KEYWORDS,
+    NASIONAL_UNFAIR_DISTRIBUTION_KEYWORDS,
+)
 from src.kg_engine.search import SimpleKGSearch
 from src.symbolic.rule_engine import ClingoRuleEngine
 from src.agents.orchestrator import build_parallel_orchestrator
@@ -92,9 +132,9 @@ class NusantaraAgentPipeline:
     def _detect_adat_domains(self, query: str) -> List[str]:
         q = query.lower()
         domains = []
-        if any(x in q for x in ["minang", "pusako", "kemenakan", "mamak"]): domains.append("minangkabau")
-        if any(x in q for x in ["bali", "purusa", "sanggah", "banjar", "druwe"]): domains.append("bali")
-        if any(x in q for x in ["jawa", "gono-gini", "sigar semangka", "ragil", "wekas"]): domains.append("jawa")
+        if any(x in q for x in ADAT_KEYWORDS["minangkabau"]): domains.append("minangkabau")
+        if any(x in q for x in ADAT_KEYWORDS["bali"]): domains.append("bali")
+        if any(x in q for x in ADAT_KEYWORDS["jawa"]): domains.append("jawa")
         return domains
 
     def _extract_angka_wasiat(self, query: str) -> Optional[int]:
@@ -112,17 +152,17 @@ class NusantaraAgentPipeline:
             facts.append("ada_anak")
         
         # Detect spouse
-        if any(x in q for x in ["istri", "suami", "pasangan"]):
+        if any(x in q for x in NASIONAL_SPOUSE_KEYWORDS):
             facts.append("spouse(pasangan_hidup)")
             facts.append("menikah_sah")
         
         # Detect parents
-        if any(x in q for x in ["orang tua", "ayah", "ibu"]):
+        if any(x in q for x in NASIONAL_PARENT_KEYWORDS):
             facts.append("parent(orang_tua)")
             facts.append("ada_orangtua")
         
         # Detect siblings
-        if any(x in q for x in ["saudara", "kakak", "adik"]):
+        if any(x in q for x in NASIONAL_SIBLING_KEYWORDS):
             facts.append("sibling(saudara_pewaris)")
             facts.append("ada_saudara")
         
@@ -131,11 +171,11 @@ class NusantaraAgentPipeline:
             facts.append(f"nilai_wasiat({self._extract_angka_wasiat(query) or 40})")
         
         # Debt settlement
-        if "utang" in q and ("lunas" in q or "settled" in q or "dibayar" in q):
+        if "utang" in q and any(x in q for x in NASIONAL_DEBT_SETTLED_KEYWORDS):
             facts.append("debt_settled")
         
         # Unfair distribution detection
-        if any(x in q for x in ["tidak adil", "melanggar", "diabaikan", "tidak mendapat"]): 
+        if any(x in q for x in NASIONAL_UNFAIR_DISTRIBUTION_KEYWORDS): 
             facts.append("action(harta_waris_pewaris,bagi_tidak_adil_ke_anak)")
         
         # Conflict case: national vs adat rights
@@ -151,9 +191,9 @@ class NusantaraAgentPipeline:
         facts = []
         
         # Gender facts
-        if "anak perempuan" in q or "putri" in q:
+        if any(x in q for x in MINANG_FEMALE_CHILD_KEYWORDS):
             facts.append("female(anak_perempuan)")
-        if "anak laki" in q or "putra" in q:
+        if any(x in q for x in MINANG_MALE_CHILD_KEYWORDS):
             facts.append("male(anak_laki)")
         if "ibu" in q:
             facts.append("female(ibu)")
@@ -164,24 +204,24 @@ class NusantaraAgentPipeline:
             if "jual" in q: facts.append("action(rumah_gadang, sell)")
             if "gadai" in q: facts.append("action(rumah_gadang, pawn)")
             if "hibah" in q: facts.append("action(rumah_gadang, hibah)")
-        elif "sawah" in q or "ladang" in q:
+        elif any(x in q for x in MINANG_SAWAH_LADANG_KEYWORDS):
             facts.append("asset_type(sawah_ladang, pusako_tinggi)")
             if "jual" in q: facts.append("action(sawah_ladang, sell)")
             if "gadai" in q: facts.append("action(sawah_ladang, pawn)")
         else:
             # Default for tanah ulayat and other communal land
-            if "ulayat" in q or "tanah" in q or "tanah pusako" in q:
+            if any(x in q for x in MINANG_ULAYAT_LAND_KEYWORDS):
                 facts.append("asset_type(tanah_pusako, pusako_tinggi)")
                 if "jual" in q: facts.append("action(tanah_pusako, sell)")
                 if "gadai" in q: facts.append("action(tanah_pusako, pawn)")
         
         # Harta pencaharian detection
-        if any(x in q for x in ["pencaharian", "hasil kerja", "usaha bersama", "harta bersama"]):
+        if any(x in q for x in MINANG_HARTA_PENCAHARIAN_KEYWORDS):
             facts.append("asset_type(harta_pencaharian, pusako_rendah)")
             facts.append("parent(pewaris, anak_pewaris)")
         
         # Consensus detection
-        if any(x in q for x in ["mufakat", "setuju", "ijin", "disetujui", "kerapatan"]):
+        if any(x in q for x in MINANG_CONSENSUS_KEYWORDS):
             facts.append("consensus_reached")
         
         # Kemenakan relationship
@@ -206,15 +246,15 @@ class NusantaraAgentPipeline:
         facts = []
         
         # Gender and purusa status
-        if "putra" in q or "anak laki" in q:
+        if any(x in q for x in BALI_MALE_CHILD_KEYWORDS):
             facts.append("male(putra_ahli_waris)")
             facts.append("kewajiban_ngayah(putra_ahli_waris)")
             facts.append("status_purusa(putra_ahli_waris)")
         
         # Daughter who marries out
-        if "anak perempuan" in q or "putri" in q:
+        if any(x in q for x in BALI_FEMALE_CHILD_KEYWORDS):
             facts.append("female(putri_ahli_waris)")
-            if any(x in q for x in ["kawin keluar", "nikah luar", "menikah diluar"]):
+            if any(x in q for x in BALI_KAWIN_KELUAR_KEYWORDS):
                 facts.append("kawin_keluar(putri_ahli_waris)")
             if route_label == "conflict":
                 facts.append("larangan_waris_adat(putri_ahli_waris, gunakaya)")
@@ -222,13 +262,13 @@ class NusantaraAgentPipeline:
         # Widow
         if "janda" in q:
             facts.append("janda(istri_pewaris)")
-            if any(x in q for x in ["menikah lagi", "nikah lagi", "kawin lagi"]):
+            if any(x in q for x in BALI_REMARRIAGE_KEYWORDS):
                 facts.append("menikah_lagi(istri_pewaris)")
         
         # Asset classification
         if "tanah sanggah" in q:
             facts.append("asset_type(tanah_sanggah, druwe_tengah)")
-        elif "tanah purusa" in q or "harta purusa" in q:
+        elif any(x in q for x in BALI_PURUSA_ASSET_KEYWORDS):
             facts.append("asset_type(tanah_sanggah, druwe_tengah)")
         elif "druwe tengah" in q:
             facts.append("asset_type(benda_pusaka, druwe_tengah)")
@@ -236,23 +276,23 @@ class NusantaraAgentPipeline:
             facts.append("asset_type(gunakaya, druwe_gabro)")
         
         # Actions
-        if "jual" in q or "menjual" in q:
+        if any(x in q for x in BALI_SELL_ACTION_KEYWORDS):
             facts.append("action(benda_pusaka, sell)")
         
         # Prajuru witness (for adoptions/transfers)
-        if any(x in q for x in ["disaksikan", "saksi", "prajuru", "upacara"]):
+        if any(x in q for x in BALI_WITNESS_KEYWORDS):
             facts.append("disaksikan_prajuru")
         
         # Sentana rajeg (appointed heir)
-        if "sentana rajeg" in q or "diangkat" in q:
+        if any(x in q for x in BALI_SENTANA_KEYWORDS):
             facts.append("sentana_rajeg(penerus_ahli_waris)")
         
         # Adoption
-        if "anak angkat" in q or "adopsi" in q:
+        if any(x in q for x in BALI_ADOPTION_KEYWORDS):
             facts.append("adopsi(anak_angkat)")
             if "upacara" in q:
                 facts.append("upacara_widhi_widana(anak_angkat)")
-            if any(x in q for x in ["saksi", "disaksikan"]):
+            if any(x in q for x in BALI_ADOPTION_WITNESS_KEYWORDS):
                 facts.append("tri_upasaksi(anak_angkat)")
         
         return facts
@@ -264,10 +304,10 @@ class NusantaraAgentPipeline:
         
         # Children detection
         if "anak" in q:
-            if "anak laki" in q or "putra" in q:
+            if any(x in q for x in JAWA_MALE_CHILD_KEYWORDS):
                 facts.append("child(anak_laki)")
                 facts.append("male(anak_laki)")
-            elif "anak perempuan" in q or "putri" in q:
+            elif any(x in q for x in JAWA_FEMALE_CHILD_KEYWORDS):
                 facts.append("child(anak_perempuan)")
                 facts.append("female(anak_perempuan)")
             else:
@@ -275,24 +315,24 @@ class NusantaraAgentPipeline:
                 facts.append("child(anak_pewaris)")
         
         # Gono-gini (marital property)
-        if any(x in q for x in ["gono-gini", "gono gini", "harta bersama", "harta perkawinan"]):
+        if any(x in q for x in JAWA_GONO_GINI_KEYWORDS):
             facts.append("asset_type(harta_gono_gini, gono_gini)")
             facts.append("ahli_waris_anak(anak_pewaris)")
         
         # Harta asal (pre-marital property)
-        if "harta bawaan" in q or "harta asal" in q:
+        if any(x in q for x in JAWA_HARTA_ASAL_KEYWORDS):
             facts.append("asset_type(harta_bawaan, harta_asal)")
         
         # Pusaka (family heritage)
-        if "pusaka" in q or "rumah induk" in q:
+        if any(x in q for x in JAWA_PUSAKA_KEYWORDS):
             facts.append("asset_type(harta_pusaka, pusaka)")
             if "jual" in q:
                 facts.append("action(harta_pusaka, sell)")
         
         # Adoption
-        if "anak angkat" in q or "adopsi" in q:
+        if any(x in q for x in JAWA_ADOPTION_KEYWORDS):
             facts.append("anak_angkat(anak_angkat)")
-            if "terang tunai" in q or "sah" in q:
+            if any(x in q for x in JAWA_ADOPTION_VALID_KEYWORDS):
                 facts.append("adopsi_terang_tunai(anak_angkat)")
         
         # Step child
@@ -300,49 +340,49 @@ class NusantaraAgentPipeline:
             facts.append("anak_tiri(anak_tiri)")
         
         # Child out of wedlock
-        if "anak luar kawin" in q or "anak di luar nikah" in q:
+        if any(x in q for x in JAWA_CHILD_OUTSIDE_MARRIAGE_KEYWORDS):
             facts.append("anak_luar_kawin(anak_luar_kawin)")
-            if "pengesahan" in q or "bukti" in q:
+            if any(x in q for x in JAWA_PATERNAL_PROOF_KEYWORDS):
                 facts.append("bukti_darah_ayah(anak_luar_kawin)")
         
         # Widow/widower
         if "janda" in q:
             facts.append("janda(istri_pewaris)")
-            if any(x in q for x in ["menikah lagi", "nikah lagi", "kawin lagi"]):
+            if any(x in q for x in JAWA_REMARRIAGE_KEYWORDS):
                 facts.append("menikah_lagi(istri_pewaris)")
                 if "gono-gini" in q or "harta bersama" in q:
                     facts.append("action(harta_gono_gini, hold_without_distribution)")
         
         if "duda" in q:
             facts.append("duda(suami_pewaris)")
-            if any(x in q for x in ["menikah lagi", "nikah lagi", "kawin lagi"]):
+            if any(x in q for x in JAWA_REMARRIAGE_KEYWORDS):
                 facts.append("menikah_lagi(suami_pewaris)")
         
         # Anak ragil (youngest child who stays)
-        if "ragil" in q or "bungsu" in q or "penunggu rumah" in q:
+        if any(x in q for x in JAWA_RAGIL_KEYWORDS):
             facts.append("anak_ragil(anak_bungsu)")
             facts.append("penunggu_rumah(anak_bungsu)")
         
         # Child who cares for parents
-        if any(x in q for x in ["merawat", "menjaga", "tinggal serumah", "pengabdian"]):
+        if any(x in q for x in JAWA_CARE_KEYWORDS):
             facts.append("merawat_orangtua(anak_perawat)")
         
         # Islamic inheritance mode
-        if any(x in q for x in ["islam", "faraidh", "faraid", "hukum islam"]):
+        if any(x in q for x in JAWA_ISLAMIC_MODE_KEYWORDS):
             facts.append("faraidh_mode")
         
         # Divorce
-        if "cerai" in q or "perceraian" in q:
+        if any(x in q for x in JAWA_DIVORCE_KEYWORDS):
             facts.append("cerai_hidup")
         
         # Grandchild replacement (gantungan siwur)
-        if "cucu" in q and ("ganti" in q or "pengganti" in q or "ayahnya sudah meninggal" in q):
+        if "cucu" in q and any(x in q for x in JAWA_GRANDCHILD_REPLACEMENT_KEYWORDS):
             facts.append("cucu_pengganti(cucu_pengganti)")
             facts.append("orangtua_meninggal_lebih_dulu(orangtua_cucu)")
             facts.append("parent(orangtua_cucu, cucu_pengganti)")
         
         # Takharuj (family agreement)
-        if any(x in q for x in ["musyawarah", "mufakat", "takharuj", "kesepakatan keluarga"]):
+        if any(x in q for x in JAWA_TAKHARUJ_KEYWORDS):
             facts.append("takharuj_disepakati")
         
         return facts

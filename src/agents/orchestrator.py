@@ -1,8 +1,22 @@
 import json
 import os
-from typing import Annotated, Any, Dict, List, TypedDict
+from typing import Annotated, Any, Dict, List, Sequence, TypedDict
 
 from dotenv import load_dotenv
+from src.config.domain_keywords import (
+    HAM_EXTREME_KEYWORDS,
+    NATIONAL_DOMINANT_KEYWORDS,
+    OFFLINE_ADAT_KEYWORDS,
+    OFFLINE_ADMIN_CASE_KEYWORDS,
+    OFFLINE_CONFLICT_KEYWORDS,
+    OFFLINE_NATIONAL_KEYWORDS,
+    SUPERVISOR_BALI_KEYWORDS,
+    SUPERVISOR_HAM_EXTREME_KEYWORDS,
+    SUPERVISOR_JAWA_KEYWORDS,
+    SUPERVISOR_MINANG_KEYWORDS,
+    SUPERVISOR_MK_MDP_KEYWORDS,
+    SUPERVISOR_NATIONAL_KEYWORDS,
+)
 
 try:
     from langchain_openai import ChatOpenAI
@@ -36,7 +50,7 @@ except ImportError:
 load_dotenv()
 
 
-def _contains_any(text: str, keywords: List[str]) -> bool:
+def _contains_any(text: str, keywords: Sequence[str]) -> bool:
     lowered = text.lower()
     return any(keyword in lowered for keyword in keywords)
 
@@ -71,89 +85,13 @@ def _offline_supervisor_decision(query: str, rules: Dict[str, Any], route_label:
     all_atoms = nasional_output + adat_atoms
 
     has_symbolic_conflict = any("conflict" in atom.lower() for atom in all_atoms)
-    has_ham_extreme = _contains_any(
-        q,
-        [
-            "dilarang bersekolah",
-            "tidak boleh sekolah",
-            "larangan sekolah",
-            "kesehatan",
-            "puskesmas",
-            "di bawah umur",
-            "batas minimal",
-        ],
-    )
+    has_ham_extreme = _contains_any(q, HAM_EXTREME_KEYWORDS)
     # National law clearly dominant: administrative or clear statutory cases
-    has_national_dominant = _contains_any(
-        q,
-        [
-            "paspor",
-            "imigrasi",
-            "catatan sipil",
-            "penetapan pengadilan",
-            "poligami",
-            "perceraian",
-        ],
-    )
-    has_national_keywords = _contains_any(
-        q,
-        [
-            "kuhperdata",
-            "uu ",
-            "undang",
-            "pengadilan",
-            "putusan",
-            "shm",
-            "poligami",
-            "cerai",
-            "paspor",
-            "administrasi",
-            "akta",
-        ],
-    )
-    has_adat_keywords = _contains_any(
-        q,
-        [
-            "adat",
-            "minang",
-            "pusako",
-            "kemenakan",
-            "mamak",
-            "ulayat",
-            "bali",
-            "mdp",
-            "jawa",
-            "wekas",
-            "ragil",
-            "nyentana",
-        ],
-    )
-    has_conflict_keywords = _contains_any(
-        q,
-        [
-            "konflik",
-            "vs",
-            "versus",
-            "bertentangan",
-            "sengketa",
-            "ulayat",
-            "shm",
-            "wekas",
-            "nyentana",
-            "legitime",
-            "mdp",
-        ],
-    )
-    has_admin_case = _contains_any(
-        q,
-        [
-            "paspor",
-            "akta",
-            "catatan sipil",
-            "administrasi",
-            "dokumen",
-        ],
-    )
+    has_national_dominant = _contains_any(q, NATIONAL_DOMINANT_KEYWORDS)
+    has_national_keywords = _contains_any(q, OFFLINE_NATIONAL_KEYWORDS)
+    has_adat_keywords = _contains_any(q, OFFLINE_ADAT_KEYWORDS)
+    has_conflict_keywords = _contains_any(q, OFFLINE_CONFLICT_KEYWORDS)
+    has_admin_case = _contains_any(q, OFFLINE_ADMIN_CASE_KEYWORDS)
 
     label = "D"
     langkah = "5"
@@ -250,9 +188,10 @@ def _should_use_offline_fallback() -> bool:
     if force_offline:
         return True
 
-    has_api_key = bool(os.getenv("DEEPSEEK_API_KEY"))
+    from src.utils.llm import has_llm_credentials
+    has_creds = has_llm_credentials()
     deps_ready = _HAS_LANGCHAIN_OPENAI and _HAS_LANGCHAIN_CORE and _HAS_LANGGRAPH
-    return not (has_api_key and deps_ready)
+    return not (has_creds and deps_ready)
 
 
 class AgentState(TypedDict):
@@ -323,12 +262,12 @@ def _supervisor_agent(llm: ChatOpenAI, state: AgentState, route_label: str = Non
     
     # Cek domain triggers untuk konteks
     q_lower = query.lower()
-    has_minang_keywords = any(k in q_lower for k in ['minang', 'pusako', 'kemenakan', 'mamak', 'kaum'])
-    has_bali_keywords = any(k in q_lower for k in ['bali', 'purusa', 'sanggah', 'druwe', 'sentana'])
-    has_jawa_keywords = any(k in q_lower for k in ['jawa', 'gono-gini', 'ragil', 'wekas', 'sigar'])
-    has_national_keywords = any(k in q_lower for k in ['ham', 'uu ', 'undang', 'mahkamah konstitusi', 'mdp', 'putusan', 'sertifikat', 'shm', 'poligami', 'cerai', 'perceraian', 'kua', 'pengadilan'])
-    has_ham_extreme = any(k in q_lower for k in ['dilarang bersekolah', 'tidak boleh sekolah', 'larangan sekolah', 'kesehatan', 'puskesmas'])
-    has_mk_mdp = any(k in q_lower for k in ['mdp', 'mahkamah konstitusi', 'putusan mk'])
+    has_minang_keywords = any(k in q_lower for k in SUPERVISOR_MINANG_KEYWORDS)
+    has_bali_keywords = any(k in q_lower for k in SUPERVISOR_BALI_KEYWORDS)
+    has_jawa_keywords = any(k in q_lower for k in SUPERVISOR_JAWA_KEYWORDS)
+    has_national_keywords = any(k in q_lower for k in SUPERVISOR_NATIONAL_KEYWORDS)
+    has_ham_extreme = any(k in q_lower for k in SUPERVISOR_HAM_EXTREME_KEYWORDS)
+    has_mk_mdp = any(k in q_lower for k in SUPERVISOR_MK_MDP_KEYWORDS)
     
     # Logic adjustment for Router Mismatch
     router_warning = ""
