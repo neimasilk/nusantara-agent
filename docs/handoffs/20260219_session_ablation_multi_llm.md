@@ -94,30 +94,75 @@ Sesi ini menjalankan ablation study lengkap dengan 3 backend LLM, menghasilkan d
 ### Paper
 - `paper/sections_draft_error_analysis.tex` — Draft sections for paper
 
-## Pending Tasks (Tomorrow)
+## Late Update: Prompt 23 Results (Codex — #show Fix)
 
-### Prompt 23 — Codex (IN PROGRESS)
-Fix `#show` verbosity in ASP rules to restore accuracy ≥70%. Codex is currently working on this.
-**After completion:** re-run benchmarks and 3-way comparison.
+**Result: FIX FAILED.** Removing 30 `#show` directives made things WORSE:
 
-### Prompt 26 — Kimi CLI (BLOCKED on model download)
+| State | ASP+LLM Accuracy |
+|-------|------------------|
+| Before GAP rules (original) | **70.0%** |
+| After GAP rules (+24 rules, all #show) | 62.9% |
+| After GAP rules (reduced #show) | **55.7%** |
+
+- Codex removed 12 #show from minangkabau.lp, 12 from jawa.lp, 6 from bali.lp
+- ASP-only unchanged at 58.6%
+- 6/7 regression cases still wrong
+- Tests: 106/106 OK
+
+**Root cause diagnosis update:** The problem is NOT just `#show` verbosity. The new rule LOGIC itself generates different symbolic facts that change the LLM's reasoning context. Removing `#show` removes useful signal too, making it worse.
+
+## Pending Tasks (Tomorrow) — PRIORITY ORDER
+
+### 1. CRITICAL: Rollback 24 GAP Rules
+The 24 rules added by Gemini (Prompt 15) caused net negative impact. Options:
+- **Option A (recommended):** `git checkout 19aa843 -- src/symbolic/rules/` to rollback ALL rule files to pre-GAP state, restoring 70.0%. Then selectively re-add rules that don't hurt.
+- **Option B:** Manually identify which of the 24 rules are harmful and remove only those.
+
+**Prompt for Codex/Kimi:**
+```
+Rollback ASP rules to restore 70.0% accuracy:
+1. git checkout 19aa843 -- src/symbolic/rules/minangkabau.lp src/symbolic/rules/bali.lp src/symbolic/rules/jawa.lp
+2. Re-run: set NUSANTARA_LLM_BACKEND=ollama&& python experiments/09_ablation_study/run_dual_benchmark.py
+3. Confirm ASP+LLM ≥70%
+4. Run test suite: python scripts/run_test_suite.py
+5. Report results
+```
+
+### 2. Prompt 26 — Kimi CLI (BLOCKED on model download)
 Benchmark GPT-OSS 20B and Qwen3 14B with Ollama. Models still downloading (~20GB).
-**After download:** run Prompt 26 to benchmark new models.
+After download, run Prompt 26.
 
-### Follow-up Tasks
-1. **Re-run 3-way statistical comparison** after #show fix (Codex or Kimi)
-2. **Update paper main.tex** with:
-   - Domain analysis table
-   - Corrected ablation results (after #show fix)
-   - Integrate `sections_draft_error_analysis.tex`
-3. **Multi-model comparison** if GPT-OSS 20B or Qwen3 14B shows significant improvement
-4. **Target venue decision**: Legal AI conference (JURIX/ICAIL) vs Scopus Q2-Q3 journal
+### 3. Re-run 3-way Analysis (after rollback)
+- Re-run statistical comparison with restored 70.0% Ollama
+- Re-run domain analysis
+- McNemar test may be closer to significance with larger delta (70% vs 58.6% = 11.4pp)
+
+### 4. Update Paper
+- Integrate `paper/sections_draft_error_analysis.tex` into `paper/main.tex`
+- Update ablation table with corrected numbers
+- Add domain analysis table
+- Add negative finding: "100% rule coverage paradoxically decreased accuracy"
+
+### 5. Target Venue Decision
+Legal AI conference (JURIX/ICAIL) vs Scopus Q2-Q3 journal
+
+## Accuracy Timeline (All ASP+LLM Ollama runs)
+
+| Run | Rules State | Accuracy | Note |
+|-----|-------------|----------|------|
+| Run 1 (before GAP) | 71/95 rules | **70.0%** | Best result |
+| Run 2 (after GAP) | 95/95 rules, all #show | 62.9% | -7.1pp regression |
+| Run 3 (after #show fix) | 95/95 rules, reduced #show | 55.7% | -14.3pp from best |
+
+**Lesson learned:** More rules ≠ better performance. LLM-symbolic integration requires careful calibration of what symbolic information is exposed to the LLM. This is itself a publishable finding.
 
 ## Key Decisions Made
 - Paper framing: "Preliminary evidence" not "breakthrough" (n=70 insufficient for significance)
 - Main contribution: expert-verified ASP rule base, not accuracy numbers
 - Local 7B model competitive with commercial API → supports reproducibility
 - C→B misclassification is problem #1 across all systems
+- **NEW:** GAP rule closure was net negative — rollback recommended
+- **NEW:** "More rules ≠ better" is a valid negative finding for paper
 
 ## Test Suite
 106 tests passing throughout session. No regressions in test suite.
