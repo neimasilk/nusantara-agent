@@ -1,0 +1,578 @@
+{
+  "ASP-only": {
+    "Minangkabau": {
+      "accuracy": 0.7142857142857143,
+      "correct": 15,
+      "total": 21,
+      "wilson_95ci": [
+        0.500432261771624,
+        0.8618632425437179
+      ],
+      "per_label": {
+        "A": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "B": {
+          "support": 7,
+          "precision": 0.5454545454545454,
+          "recall": 0.8571428571428571
+        },
+        "C": {
+          "support": 14,
+          "precision": 0.9,
+          "recall": 0.6428571428571429
+        },
+        "D": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      },
+      "confusion_matrix": {
+        "C->C": 9,
+        "C->B": 5,
+        "B->B": 6,
+        "B->C": 1
+      }
+    },
+    "Jawa": {
+      "accuracy": 0.35294117647058826,
+      "correct": 6,
+      "total": 17,
+      "wilson_95ci": [
+        0.17309486143904904,
+        0.5870003327878818
+      ],
+      "per_label": {
+        "A": {
+          "support": 1,
+          "precision": 0.25,
+          "recall": 1.0
+        },
+        "B": {
+          "support": 10,
+          "precision": 0.6,
+          "recall": 0.3
+        },
+        "C": {
+          "support": 4,
+          "precision": 0.25,
+          "recall": 0.5
+        },
+        "D": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      },
+      "confusion_matrix": {
+        "A->A": 1,
+        "C->B": 2,
+        "C->C": 2,
+        "B->C": 4,
+        "B->B": 3,
+        "B->A": 3,
+        "D->C": 2
+      }
+    },
+    "Lintas": {
+      "accuracy": 0.5,
+      "correct": 2,
+      "total": 4,
+      "wilson_95ci": [
+        0.15003570882017148,
+        0.8499642911798285
+      ],
+      "per_label": {
+        "A": {
+          "support": 2,
+          "precision": 1.0,
+          "recall": 0.5
+        },
+        "B": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "C": {
+          "support": 2,
+          "precision": 0.5,
+          "recall": 0.5
+        },
+        "D": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      },
+      "confusion_matrix": {
+        "C->B": 1,
+        "A->A": 1,
+        "A->C": 1,
+        "C->C": 1
+      }
+    },
+    "Nasional": {
+      "accuracy": 0.42857142857142855,
+      "correct": 3,
+      "total": 7,
+      "wilson_95ci": [
+        0.15821692226262685,
+        0.7495457695909742
+      ],
+      "per_label": {
+        "A": {
+          "support": 3,
+          "precision": 0.5,
+          "recall": 0.6666666666666666
+        },
+        "B": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "C": {
+          "support": 4,
+          "precision": 1.0,
+          "recall": 0.25
+        },
+        "D": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      },
+      "confusion_matrix": {
+        "A->A": 2,
+        "C->C": 1,
+        "C->B": 1,
+        "C->A": 2,
+        "A->D": 1
+      }
+    },
+    "Bali": {
+      "accuracy": 0.7142857142857143,
+      "correct": 15,
+      "total": 21,
+      "wilson_95ci": [
+        0.500432261771624,
+        0.8618632425437179
+      ],
+      "per_label": {
+        "A": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "B": {
+          "support": 14,
+          "precision": 0.9090909090909091,
+          "recall": 0.7142857142857143
+        },
+        "C": {
+          "support": 7,
+          "precision": 0.625,
+          "recall": 0.7142857142857143
+        },
+        "D": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      },
+      "confusion_matrix": {
+        "C->C": 5,
+        "B->B": 10,
+        "B->C": 3,
+        "B->A": 1,
+        "C->B": 1,
+        "C->A": 1
+      }
+    }
+  },
+  "ASP+Ollama": {
+    "Minangkabau": {
+      "accuracy": 0.7619047619047619,
+      "correct": 16,
+      "total": 21,
+      "wilson_95ci": [
+        0.5490841802765407,
+        0.8937214361088772
+      ],
+      "per_label": {
+        "A": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "B": {
+          "support": 7,
+          "precision": 0.5833333333333334,
+          "recall": 1.0
+        },
+        "C": {
+          "support": 14,
+          "precision": 1.0,
+          "recall": 0.6428571428571429
+        },
+        "D": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      },
+      "confusion_matrix": {
+        "C->C": 9,
+        "C->B": 5,
+        "B->B": 7
+      }
+    },
+    "Jawa": {
+      "accuracy": 0.4117647058823529,
+      "correct": 7,
+      "total": 17,
+      "wilson_95ci": [
+        0.21610786039131386,
+        0.6399492561448445
+      ],
+      "per_label": {
+        "A": {
+          "support": 1,
+          "precision": 0.25,
+          "recall": 1.0
+        },
+        "B": {
+          "support": 10,
+          "precision": 0.625,
+          "recall": 0.5
+        },
+        "C": {
+          "support": 4,
+          "precision": 0.25,
+          "recall": 0.25
+        },
+        "D": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      },
+      "confusion_matrix": {
+        "A->A": 1,
+        "C->B": 2,
+        "C->C": 1,
+        "C->A": 1,
+        "B->B": 5,
+        "B->C": 2,
+        "B->A": 2,
+        "B->D": 1,
+        "D->B": 1,
+        "D->C": 1
+      }
+    },
+    "Lintas": {
+      "accuracy": 0.5,
+      "correct": 2,
+      "total": 4,
+      "wilson_95ci": [
+        0.15003570882017148,
+        0.8499642911798285
+      ],
+      "per_label": {
+        "A": {
+          "support": 2,
+          "precision": 0.5,
+          "recall": 0.5
+        },
+        "B": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "C": {
+          "support": 2,
+          "precision": 0.5,
+          "recall": 0.5
+        },
+        "D": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      },
+      "confusion_matrix": {
+        "C->A": 1,
+        "A->A": 1,
+        "A->C": 1,
+        "C->C": 1
+      }
+    },
+    "Nasional": {
+      "accuracy": 0.2857142857142857,
+      "correct": 2,
+      "total": 7,
+      "wilson_95ci": [
+        0.0822171657090155,
+        0.6410709098517873
+      ],
+      "per_label": {
+        "A": {
+          "support": 3,
+          "precision": 0.5,
+          "recall": 0.6666666666666666
+        },
+        "B": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "C": {
+          "support": 4,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "D": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      },
+      "confusion_matrix": {
+        "A->A": 2,
+        "C->D": 1,
+        "C->B": 1,
+        "C->A": 2,
+        "A->B": 1
+      }
+    },
+    "Bali": {
+      "accuracy": 0.8095238095238095,
+      "correct": 17,
+      "total": 21,
+      "wilson_95ci": [
+        0.599990134607267,
+        0.9233255938482269
+      ],
+      "per_label": {
+        "A": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "B": {
+          "support": 14,
+          "precision": 0.9166666666666666,
+          "recall": 0.7857142857142857
+        },
+        "C": {
+          "support": 7,
+          "precision": 0.8571428571428571,
+          "recall": 0.8571428571428571
+        },
+        "D": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      },
+      "confusion_matrix": {
+        "C->C": 6,
+        "B->B": 11,
+        "C->B": 1,
+        "B->A": 2,
+        "B->C": 1
+      }
+    }
+  },
+  "ASP+DeepSeek": {
+    "Minangkabau": {
+      "accuracy": 0.7142857142857143,
+      "correct": 15,
+      "total": 21,
+      "wilson_95ci": [
+        0.500432261771624,
+        0.8618632425437179
+      ],
+      "per_label": {
+        "A": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "B": {
+          "support": 7,
+          "precision": 0.5384615384615384,
+          "recall": 1.0
+        },
+        "C": {
+          "support": 14,
+          "precision": 1.0,
+          "recall": 0.5714285714285714
+        },
+        "D": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      },
+      "confusion_matrix": {
+        "C->C": 8,
+        "C->B": 6,
+        "B->B": 7
+      }
+    },
+    "Jawa": {
+      "accuracy": 0.5294117647058824,
+      "correct": 9,
+      "total": 17,
+      "wilson_95ci": [
+        0.30962897311549487,
+        0.738351988039119
+      ],
+      "per_label": {
+        "A": {
+          "support": 1,
+          "precision": 0.2,
+          "recall": 1.0
+        },
+        "B": {
+          "support": 10,
+          "precision": 0.625,
+          "recall": 0.5
+        },
+        "C": {
+          "support": 4,
+          "precision": 0.75,
+          "recall": 0.75
+        },
+        "D": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      },
+      "confusion_matrix": {
+        "A->A": 1,
+        "C->C": 3,
+        "C->B": 1,
+        "B->B": 5,
+        "B->A": 4,
+        "B->C": 1,
+        "D->B": 2
+      }
+    },
+    "Lintas": {
+      "accuracy": 0.5,
+      "correct": 2,
+      "total": 4,
+      "wilson_95ci": [
+        0.15003570882017148,
+        0.8499642911798285
+      ],
+      "per_label": {
+        "A": {
+          "support": 2,
+          "precision": 1.0,
+          "recall": 0.5
+        },
+        "B": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "C": {
+          "support": 2,
+          "precision": 0.5,
+          "recall": 0.5
+        },
+        "D": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      },
+      "confusion_matrix": {
+        "C->B": 1,
+        "A->A": 1,
+        "A->C": 1,
+        "C->C": 1
+      }
+    },
+    "Nasional": {
+      "accuracy": 0.7142857142857143,
+      "correct": 5,
+      "total": 7,
+      "wilson_95ci": [
+        0.35892909014821267,
+        0.9177828342909844
+      ],
+      "per_label": {
+        "A": {
+          "support": 3,
+          "precision": 0.6,
+          "recall": 1.0
+        },
+        "B": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "C": {
+          "support": 4,
+          "precision": 1.0,
+          "recall": 0.5
+        },
+        "D": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      },
+      "confusion_matrix": {
+        "A->A": 3,
+        "C->C": 2,
+        "C->A": 2
+      }
+    },
+    "Bali": {
+      "accuracy": 0.7619047619047619,
+      "correct": 16,
+      "total": 21,
+      "wilson_95ci": [
+        0.5490841802765407,
+        0.8937214361088772
+      ],
+      "per_label": {
+        "A": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "B": {
+          "support": 14,
+          "precision": 0.8461538461538461,
+          "recall": 0.7857142857142857
+        },
+        "C": {
+          "support": 7,
+          "precision": 0.8333333333333334,
+          "recall": 0.7142857142857143
+        },
+        "D": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      },
+      "confusion_matrix": {
+        "C->C": 5,
+        "B->B": 11,
+        "C->B": 2,
+        "B->A": 2,
+        "B->C": 1
+      }
+    }
+  }
+}

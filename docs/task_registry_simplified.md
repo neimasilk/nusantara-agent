@@ -33,7 +33,7 @@
 | P-005 | Expand gold standard ke 100+ kasus (dari 82 pool, tambah 18+) | HUMAN | NEXT | Dr. Hendra + Dr. Indra |
 | P-006 | Generate ASP test cases untuk Bali domain (saat ini minim) | HUMAN/AI | NEXT | Rules ada, test cases belum |
 | P-007 | Generate ASP test cases untuk Jawa domain | HUMAN/AI | NEXT | Rules ada, test cases belum |
-| P-008 | Verifikasi ASP rules vs expert-verified JSON rules (consistency check) | AI | IN_PROGRESS | Bali audited (21 covered, 4 partial, 9 gap): `docs/handoffs/20260218_p008_bali_asp_json_consistency.md` |
+| P-008 | Verifikasi ASP rules vs expert-verified JSON rules (consistency check) | AI | IN_PROGRESS | Update 2026-02-19: 30 rule `PARTIAL` sudah ditutup (Bali 4, Minangkabau 12, Jawa 14). Coverage terbaru: Bali 25/0/9, Minangkabau 17/0/8, Jawa 29/0/7 (COVERED/PARTIAL/GAP) -> total 71/95 (`74.74%`) COVERED. Lihat `docs/handoffs/20260218_p008_bali_asp_json_consistency.md`, `docs/handoffs/20260219_p008_minangkabau_asp_json_consistency.md`, `docs/handoffs/20260219_p008_jawa_asp_json_consistency.md`. |
 
 ### Phase C: Core Experiment (Week 3-5)
 

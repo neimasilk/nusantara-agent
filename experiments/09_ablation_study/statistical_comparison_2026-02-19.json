@@ -1,0 +1,166 @@
+{
+  "date": "2026-02-19",
+  "inputs": {
+    "asp_only": "D:\\documents\\nusantara-agent\\experiments\\09_ablation_study\\results_dual_asp_only_2026-02-19.json",
+    "asp_llm": "D:\\documents\\nusantara-agent\\experiments\\09_ablation_study\\results_dual_asp_llm_2026-02-19.json"
+  },
+  "n_common_cases": 70,
+  "case_id_alignment": {
+    "asp_only_not_in_llm": [],
+    "asp_llm_not_in_asp_only": []
+  },
+  "mcnemar": {
+    "table_2x2": {
+      "asp_correct_llm_correct": 37,
+      "asp_correct_llm_wrong": 4,
+      "asp_wrong_llm_correct": 12,
+      "asp_wrong_llm_wrong": 17
+    },
+    "discordant_pairs": 16,
+    "asp_only_better_count": 4,
+    "asp_llm_better_count": 12,
+    "exact_binomial_pvalue": 0.076812744140625,
+    "chi_square": 4.0,
+    "chi_square_pvalue": 0.04550026389635857,
+    "chi_square_continuity_corrected": 3.0625,
+    "chi_square_continuity_corrected_pvalue": 0.08011831372763421
+  },
+  "modes": {
+    "asp_only": {
+      "accuracy": 0.5857142857142857,
+      "cohens_kappa": 0.3309162821357944,
+      "confusion_matrix": {
+        "A": {
+          "A": 4,
+          "B": 0,
+          "C": 1,
+          "D": 1
+        },
+        "B": {
+          "A": 4,
+          "B": 19,
+          "C": 8,
+          "D": 0
+        },
+        "C": {
+          "A": 3,
+          "B": 10,
+          "C": 18,
+          "D": 0
+        },
+        "D": {
+          "A": 0,
+          "B": 0,
+          "C": 2,
+          "D": 0
+        }
+      },
+      "per_label_metrics": {
+        "A": {
+          "tp": 4,
+          "fp": 7,
+          "fn": 2,
+          "precision": 0.36363636363636365,
+          "recall": 0.6666666666666666,
+          "f1": 0.4705882352941177,
+          "support": 6
+        },
+        "B": {
+          "tp": 19,
+          "fp": 10,
+          "fn": 12,
+          "precision": 0.6551724137931034,
+          "recall": 0.6129032258064516,
+          "f1": 0.6333333333333333,
+          "support": 31
+        },
+        "C": {
+          "tp": 18,
+          "fp": 11,
+          "fn": 13,
+          "precision": 0.6206896551724138,
+          "recall": 0.5806451612903226,
+          "f1": 0.6000000000000001,
+          "support": 31
+        },
+        "D": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        }
+      }
+    },
+    "asp_llm": {
+      "accuracy": 0.7,
+      "cohens_kappa": 0.5227272727272726,
+      "confusion_matrix": {
+        "A": {
+          "A": 5,
+          "B": 0,
+          "C": 1,
+          "D": 0
+        },
+        "B": {
+          "A": 5,
+          "B": 24,
+          "C": 2,
+          "D": 0
+        },
+        "C": {
+          "A": 4,
+          "B": 7,
+          "C": 20,
+          "D": 0
+        },
+        "D": {
+          "A": 0,
+          "B": 1,
+          "C": 1,
+          "D": 0
+        }
+      },
+      "per_label_metrics": {
+        "A": {
+          "tp": 5,
+          "fp": 9,
+          "fn": 1,
+          "precision": 0.35714285714285715,
+          "recall": 0.8333333333333334,
+          "f1": 0.5,
+          "support": 6
+        },
+        "B": {
+          "tp": 24,
+          "fp": 8,
+          "fn": 7,
+          "precision": 0.75,
+          "recall": 0.7741935483870968,
+          "f1": 0.7619047619047619,
+          "support": 31
+        },
+        "C": {
+          "tp": 20,
+          "fp": 4,
+          "fn": 11,
+          "precision": 0.8333333333333334,
+          "recall": 0.6451612903225806,
+          "f1": 0.7272727272727272,
+          "support": 31
+        },
+        "D": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        }
+      }
+    }
+  }
+}

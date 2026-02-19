@@ -1,26 +1,26 @@
 {
   "manifest_version": "1.0",
-  "dataset_id": "gs_active_2026-02-16",
-  "as_of_date": "2026-02-16",
+  "dataset_id": "gs_active_2026-02-19",
+  "as_of_date": "2026-02-19",
   "owner": "nusantara-agent",
   "benchmark_file": {
     "path": "data/processed/gold_standard/gs_active_cases.json",
-    "sha256": "67954A18261B512809C5D1C3A2210BC7B89AD3BAE7206FBB2F35F498AF322161",
-    "last_write_time_utc": "2026-02-12T04:29:56Z",
-    "total_cases_actual": 24,
+    "sha256": "48B3B29DE23660334CEF1B638D1BF2340744B8BDE92D5B154557BD64BE276D89",
+    "last_write_time_utc": "2026-02-19T04:23:05Z",
+    "total_cases_actual": 74,
     "label_distribution": {
-      "DISPUTED": 10,
-      "B": 4,
-      "D": 1,
-      "C": 7,
-      "A": 2
+      "C": 31,
+      "A": 6,
+      "B": 31,
+      "DISPUTED": 4,
+      "D": 2
     },
-    "evaluable_cases_excluding_disputed": 14,
-    "evaluable_cases_excluding_split": 14
+    "evaluable_cases_excluding_disputed": 70,
+    "evaluable_cases_excluding_split": 70
   },
   "reference_claim": {
     "path": "docs/human_only/artifacts/gold_standard_consensus_report_complete_82_cases_2026-02-08.md",
-    "sha256": "459A1117DEC57BC81732285E6238249B44D127713FE385EEADE2067F6BB1AD57",
+    "sha256": "29E4852CE9A5065EBE2C94755C53F9E4F087FB8D748AA56D686B61D40841A3B6",
     "declared_total_cases": 82
   },
   "integrity_checks": {
@@ -34,6 +34,6 @@
   "provenance": {
     "source_summary": "Rebuilt from local repository artifacts without external API calls.",
     "generated_by": "scripts/rebuild_benchmark_manifest.py",
-    "generated_at_utc": "2026-02-16T10:19:04Z"
+    "generated_at_utc": "2026-02-19T04:23:28Z"
   }
 }

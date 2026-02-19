@@ -1,0 +1,254 @@
+{
+  "date": "2026-02-19",
+  "summary": {
+    "total_hard_cases": 12,
+    "gold_distribution": {
+      "A": 1,
+      "C": 6,
+      "B": 5
+    },
+    "failure_patterns": {
+      "National_misclassified_as_Conflict": 1,
+      "Conflict_misclassified_as_Adat": 4,
+      "Adat_misclassified_as_National": 3,
+      "Adat_misclassified_as_Conflict": 2,
+      "Conflict_misclassified_as_National": 2
+    },
+    "domain_distribution": {
+      "Lintas-Daerah": 1,
+      "Minangkabau": 4,
+      "Bali": 2,
+      "General/Unknown": 4,
+      "Jawa": 1
+    },
+    "key_issue_signals": {
+      "adat": 6,
+      "conflict": 2,
+      "unclear": 4
+    }
+  },
+  "hard_cases": [
+    {
+      "case_id": "CS-LIN-016",
+      "gold_label": "A",
+      "predictions": {
+        "asp_only": "C",
+        "ollama": "C",
+        "deepseek": "C"
+      },
+      "domain": "Lintas-Daerah",
+      "query_snippet": "Keluarga urban di Jakarta terdiri dari suami (Suku Minang) dan istri (Suku Jawa). Mereka memiliki aset di Jakarta. Saat suami wafat, terjadi perdebatan apakah menggunakan sistem matrilineal (adat suami) atau hukum perdata nasional.",
+      "key_issue_signals": "adat",
+      "failure_pattern": "National_misclassified_as_Conflict",
+      "reasoning_snippets": {
+        "asp_only": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Router menandai konflik nasional-adat.\", \"konflik_terdeteksi\": \"Ya\"}",
+        "ollama": "{\n  \"label\": \"C\",\n  \"langkah_keputusan\": \"4\",\n  \"alasan_utama\": \"Konflik terdeteksi antara hukum perdata nasional dan aturan adat Minangkabau. Hukum perdata nasional mengakui kesetaraan hak waris bagi",
+        "deepseek": "```json\n{\n  \"label\": \"C\",\n  \"langkah_keputusan\": \"4\",\n  \"alasan_utama\": \"Kasus ini merupakan konflik antara sistem hukum nasional (KUHPerdata) dan hukum adat Minangkabau. Data simbolik menunjukkan per"
+      }
+    },
+    {
+      "case_id": "CS-MIN-004",
+      "gold_label": "C",
+      "predictions": {
+        "asp_only": "B",
+        "ollama": "B",
+        "deepseek": "B"
+      },
+      "domain": "Minangkabau",
+      "query_snippet": "Sepasang suami istri di Minangkabau memiliki harta dari hasil usaha bersama (pencaharian). Suami meninggal tanpa meninggalkan wasiat/hibah tertulis. Kemenakan suami mengklaim harta tersebut harus kembali ke kaum sebagai harta pusaka, sementara anak kandung mengklaim harta tersebut milik mereka.",
+      "key_issue_signals": "conflict",
+      "failure_pattern": "Conflict_misclassified_as_Adat",
+      "reasoning_snippets": {
+        "asp_only": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}",
+        "ollama": "{\n  \"label\": \"B\",\n  \"langkah_keputusan\": \"3\",\n  \"alasan_utama\": \"Kasus ini tergolong ke dalam konflik internal adat Minangkabau, yang melibatkan warisan harta pencaharian. Meskipun alam sehat menunjuk",
+        "deepseek": "{\n  \"label\": \"B\",\n  \"langkah_keputusan\": \"3\",\n  \"alasan_utama\": \"Kasus ini murni sengketa internal dalam sistem hukum adat Minangkabau mengenai klasifikasi harta dan hak waris. Data simbolik menunjukk"
+      }
+    },
+    {
+      "case_id": "CS-MIN-005",
+      "gold_label": "C",
+      "predictions": {
+        "asp_only": "B",
+        "ollama": "B",
+        "deepseek": "B"
+      },
+      "domain": "Minangkabau",
+      "query_snippet": "Orang tua di Minangkabau menghibahkan harta hasil keringat sendiri (pusako rendah) kepada anak kandungnya melalui akta notaris. Kemenakan menggugat karena menurut adat, harta tersebut harusnya jatuh ke kemenakan.",
+      "key_issue_signals": "adat",
+      "failure_pattern": "Conflict_misclassified_as_Adat",
+      "reasoning_snippets": {
+        "asp_only": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}",
+        "ollama": "Berikut adalah analisis dan putusan berdasarkan informasi yang telah diberikan:\n\n```json\n{\n  \"label\": \"B\",\n  \"langkah_keputusan\": \"1|3\",\n  \"alasan_utama\": \"Dalam kasus ini, konflik terdeteksi antara p",
+        "deepseek": "{\n  \"label\": \"B\",\n  \"langkah_keputusan\": \"3\",\n  \"alasan_utama\": \"Kasus ini adalah sengketa internal komunitas adat Minangkabau mengenai harta pusako rendah (harta pencaharian) yang dihibahkan kepada a"
+      }
+    },
+    {
+      "case_id": "CS-MIN-015",
+      "gold_label": "C",
+      "predictions": {
+        "asp_only": "B",
+        "ollama": "B",
+        "deepseek": "B"
+      },
+      "domain": "Minangkabau",
+      "query_snippet": "Sepasang kekasih dari suku yang sama di Minangkabau menikah secara sah di KUA. Masyarakat adat menjatuhkan sanksi 'buang adat' (diusir dari nagari) karena perkawinan sesuku dianggap inkes menurut adat.",
+      "key_issue_signals": "adat",
+      "failure_pattern": "Conflict_misclassified_as_Adat",
+      "reasoning_snippets": {
+        "asp_only": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}",
+        "ollama": "{\n  \"label\": \"B\",\n  \"langkah_keputusan\": \"3\",\n  \"alasan_utama\": \"Kasus ini tergolong pura adat Minangkabau dan tidak melibatkan konflik dengan aturan hukum nasional atau asas HAM yang fundamental. Atu",
+        "deepseek": "{\n  \"label\": \"B\",\n  \"langkah_keputusan\": \"3\",\n  \"alasan_utama\": \"Kasus ini adalah murni domain internal komunitas adat Minangkabau. Meskipun perkawinan tercatat secara nasional di KUA, sanksi 'buang a"
+      }
+    },
+    {
+      "case_id": "GS-0014",
+      "gold_label": "B",
+      "predictions": {
+        "asp_only": "A",
+        "ollama": "A",
+        "deepseek": "A"
+      },
+      "domain": "Bali",
+      "query_snippet": "Selain itu, terdapat \"harta druwe gabro\" yang merupakan harta yang diperoleh suami istri selama masa perkawinan.",
+      "key_issue_signals": "unclear",
+      "failure_pattern": "Adat_misclassified_as_National",
+      "reasoning_snippets": {
+        "asp_only": "{\"label\": \"A\", \"langkah_keputusan\": \"2\", \"alasan_utama\": \"Output simbolik nasional tersedia tanpa sinyal adat.\", \"konflik_terdeteksi\": \"Tidak\"}",
+        "ollama": "{\n  \"label\": \"A\",\n  \"langkah_keputusan\": \"2\",\n  \"alasan_utama\": \"Sebagai Hakim Adjudikator yang menghargai pluralisme hukum Indonesia, jika tidak ditemukan konflik antara hukum nasional dan adat terka",
+        "deepseek": "```json\n{\n  \"label\": \"A\",\n  \"langkah_keputusan\": \"2\",\n  \"alasan_utama\": \"Kasus ini merupakan pure national law domain karena menyangkut harta bersama (harta druwe gabro) dalam perkawinan yang diatur s"
+      }
+    },
+    {
+      "case_id": "GS-0019",
+      "gold_label": "B",
+      "predictions": {
+        "asp_only": "A",
+        "ollama": "A",
+        "deepseek": "A"
+      },
+      "domain": "General/Unknown",
+      "query_snippet": "Harta gono-gini (harta bersama) adalah harta yang diperoleh suami dan istri selama masa perkawinan.",
+      "key_issue_signals": "unclear",
+      "failure_pattern": "Adat_misclassified_as_National",
+      "reasoning_snippets": {
+        "asp_only": "{\"label\": \"A\", \"langkah_keputusan\": \"2\", \"alasan_utama\": \"Router mengindikasikan domain nasional murni tanpa konflik simbolik.\", \"konflik_terdeteksi\": \"Tidak\"}",
+        "ollama": "{\n  \"label\": \"A\",\n  \"langkah_keputusan\": \"2\",\n  \"alasan_utama\": \"Harta gono-gini (harta bersama) adalah harta yang diperoleh suami dan istri selama masa perkawinan. Menurut hukum nasional, khususnya U",
+        "deepseek": "{\n  \"label\": \"A\",\n  \"langkah_keputusan\": \"2\",\n  \"alasan_utama\": \"Kasus ini murni diatur oleh hukum nasional (Kompilasi Hukum Islam dan UU Perkawinan) yang memberikan aturan jelas dan final mengenai ha"
+      }
+    },
+    {
+      "case_id": "GS-0020",
+      "gold_label": "B",
+      "predictions": {
+        "asp_only": "A",
+        "ollama": "A",
+        "deepseek": "A"
+      },
+      "domain": "General/Unknown",
+      "query_snippet": "Jika terjadi perceraian atau kematian, masing-masing pihak biasanya berhak atas separuh dari harta gono-gini.",
+      "key_issue_signals": "unclear",
+      "failure_pattern": "Adat_misclassified_as_National",
+      "reasoning_snippets": {
+        "asp_only": "{\"label\": \"A\", \"langkah_keputusan\": \"2\", \"alasan_utama\": \"Kasus administratif/formalitas nasional yang jelas tanpa konflik simbolik.\", \"konflik_terdeteksi\": \"Tidak\"}",
+        "ollama": "{\n  \"label\": \"A\",\n  \"langkah_keputusan\": \"2,5\",\n  \"alasan_utama\": \"Pemilihan A (Nasional) dilakukan karena tidak ditemukan bukti yang cukup untuk menyimpang dari default position. Meskipun harta gono-",
+        "deepseek": "{\n  \"label\": \"A\",\n  \"langkah_keputusan\": \"2\",\n  \"alasan_utama\": \"Pertanyaan mengenai pembagian harta gono-gini akibat perceraian atau kematian secara langsung merujuk pada aturan hukum nasional yang j"
+      }
+    },
+    {
+      "case_id": "GS-0028",
+      "gold_label": "B",
+      "predictions": {
+        "asp_only": "C",
+        "ollama": "C",
+        "deepseek": "C"
+      },
+      "domain": "Bali",
+      "query_snippet": "Status hukum anak perempuan tersebut ditingkatkan sehingga disamakan dengan anak laki-laki dalam hal pewarisan. Untuk melanjutkan keturunan, sentana rajeg biasanya melakukan perkawinan \"nyentana\" (atau \"nyeburin\"), di mana suaminya masuk ke dalam keluarga istri dan melepaskan hak waris di keluarga asalnya. Druwe Tengah: Hukum adat Bali mengenal konsep \"druwe tengah\" atau...",
+      "key_issue_signals": "adat",
+      "failure_pattern": "Adat_misclassified_as_Conflict",
+      "reasoning_snippets": {
+        "asp_only": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Rule engine mendeteksi konflik eksplisit antar norma.\", \"konflik_terdeteksi\": \"Ya\"}",
+        "ollama": "{\n  \"label\": \"C\",\n  \"langkah_keputusan\": \"4\",\n  \"alasan_utama\": \"Konflik terdeteksi di antara hukum nasional dan hukum adat. Hukum nasional menegakan kesetaraan dalam pewarisan harta waris, namun prak",
+        "deepseek": "{\n  \"label\": \"C\",\n  \"langkah_keputusan\": \"4\",\n  \"alasan_utama\": \"Data Simbolik secara eksplisit mendeteksi konflik norma antara hukum nasional dan hukum adat (conflict_norm(nasional_vs_adat,anak_perem"
+      }
+    },
+    {
+      "case_id": "GS-0030",
+      "gold_label": "B",
+      "predictions": {
+        "asp_only": "C",
+        "ollama": "C",
+        "deepseek": "C"
+      },
+      "domain": "Jawa",
+      "query_snippet": "Hukum Adat Waris Jawa: Gono-Gini dan Kekerabatan Bilateral Masyarakat Jawa menganut sistem kekerabatan bilateral atau parental. Dalam sistem ini, garis keturunan ditarik dari pihak ayah dan ibu secara seimbang. Kedudukan anak laki-laki dan anak perempuan dalam hukum waris adat pada dasarnya adalah sama atau sederajat sebagai ahli waris dari harta...",
+      "key_issue_signals": "adat",
+      "failure_pattern": "Adat_misclassified_as_Conflict",
+      "reasoning_snippets": {
+        "asp_only": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Rule engine mendeteksi konflik eksplisit antar norma.\", \"konflik_terdeteksi\": \"Ya\"}",
+        "ollama": "{\n  \"label\": \"C\",\n  \"langkah_keputusan\": \"4\",\n  \"alasan_utama\": \"Deteksi konflik antara hukum adat Jawa dan hukum waris nasional. Hukum adat Jawa mengatur penurunan keturunan dari pihak ibu dan ayah s",
+        "deepseek": "{\n  \"label\": \"C\",\n  \"langkah_keputusan\": \"4\",\n  \"alasan_utama\": \"Data Simbolik menunjukkan adanya conflict_norm(nasional_vs_adat, anak_perempuan, harta_waris_pewaris). Hukum waris nasional (Kompilasi "
+      }
+    },
+    {
+      "case_id": "GS-0033",
+      "gold_label": "C",
+      "predictions": {
+        "asp_only": "A",
+        "ollama": "A",
+        "deepseek": "A"
+      },
+      "domain": "General/Unknown",
+      "query_snippet": "**Konflik Norma:** Terdapat perbedaan penafsiran bagian istri. NLA menyatakan istri mendapat ⅓ dari harta warisan (setelah pemisahan harta bersama), sementara ALA menyatakan istri mendapat ¼ dari harta warisan secara langsung. **Trade-off:** \\- **NLA** mengikuti logika pemisahan harta bersama terlebih dahulu (½ untuk istri), baru kemudian membagi warisan. Ini lebih detail...",
+      "key_issue_signals": "conflict",
+      "failure_pattern": "Conflict_misclassified_as_National",
+      "reasoning_snippets": {
+        "asp_only": "{\"label\": \"A\", \"langkah_keputusan\": \"2\", \"alasan_utama\": \"Router mengindikasikan domain nasional murni tanpa konflik simbolik.\", \"konflik_terdeteksi\": \"Tidak\"}",
+        "ollama": "{\n  \"label\": \"A\",\n  \"langkah_keputusan\": \"2\",\n  \"alasan_utama\": \"Pilihan A (Nasional) dipilih karena hukum nasional memang memberikan aturan yang jelas dan tegas tentang bagian istri dalam warisan. NL",
+        "deepseek": "{\n  \"label\": \"A\",\n  \"langkah_keputusan\": \"2\",\n  \"alasan_utama\": \"Kasus ini merupakan konflik penafsiran internal dalam hukum nasional (KUHPerdata) antara NLA dan ALA mengenai cara menghitung bagian wa"
+      }
+    },
+    {
+      "case_id": "GS-0034",
+      "gold_label": "C",
+      "predictions": {
+        "asp_only": "A",
+        "ollama": "A",
+        "deepseek": "A"
+      },
+      "domain": "General/Unknown",
+      "query_snippet": "**Keputusan Pluralistik:** Kedua pendekatan sah dalam praktik hukum. **Langkah 1:** Pisahkan harta bersama. ½ untuk istri, ½ masuk warisan. **Langkah 2:** Bagi harta warisan (½ harta bersama \\+ harta pribadi). **Menurut ALA/Pasal 852:** Istri ¼, dua anak ¾ (masing-masing ⅜). **Menurut NLA:** Istri ⅓, dua anak ⅔ (masing-masing ⅓). Dalam...",
+      "key_issue_signals": "unclear",
+      "failure_pattern": "Conflict_misclassified_as_National",
+      "reasoning_snippets": {
+        "asp_only": "{\"label\": \"A\", \"langkah_keputusan\": \"2\", \"alasan_utama\": \"Router mengindikasikan domain nasional murni tanpa konflik simbolik.\", \"konflik_terdeteksi\": \"Tidak\"}",
+        "ollama": "```json\n{\n  \"label\": \"A\",\n  \"langkah_keputusan\": \"2\",\n  \"alasan_utama\": \"Pendekatan yang digunakan dalam putusan hukum terutama di Indonesia sering menggunakan Pasal 852 KUHPerdata, yaitu pendekatan A",
+        "deepseek": "{\n  \"label\": \"A\",\n  \"langkah_keputusan\": \"2\",\n  \"alasan_utama\": \"Kasus ini murni tunduk pada hukum nasional (KUHPerdata). Hukum adat tidak terlibat sama sekali dalam fakta kasus (tidak ada pihak yang "
+      }
+    },
+    {
+      "case_id": "GS-0041",
+      "gold_label": "C",
+      "predictions": {
+        "asp_only": "B",
+        "ollama": "B",
+        "deepseek": "B"
+      },
+      "domain": "Minangkabau",
+      "query_snippet": "Adat mengatur harta pusaka tinggi melalui mamak. Pendekatan ini menghormati otonomi hukum adat dalam lingkupnya sambil menjamin hak anak secara nasional.",
+      "key_issue_signals": "adat",
+      "failure_pattern": "Conflict_misclassified_as_Adat",
+      "reasoning_snippets": {
+        "asp_only": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}",
+        "ollama": "{\n  \"label\": \"B\",\n  \"langkah_keputusan\": \"1|3\",\n  \"alasan_utama\": \"Pendekatan ini menghormati otonomi hukum adat dalam lingkupnya. Karena kasus berkaitan dengan mamak yang merupakan aspek dari adat Mi",
+        "deepseek": "{\n  \"label\": \"B\",\n  \"langkah_keputusan\": \"3\",\n  \"alasan_utama\": \"Kasus ini murni berada dalam domain hukum adat Minangkabau (pure internal adat). Data Simbolik menunjukkan tidak ada konflik dengan huk"
+      }
+    }
+  ],
+  "recommendations": [
+    "CONFLICT (C) cases are over-represented in failures (6/12). Need better conflict detection rules or improved prompt engineering for ambiguous cases.",
+    "4 cases: Gold=C predicted as B. Systems struggle to detect conflicts when adat elements are prominent. Consider stronger conflict keyword detection.",
+    "All 3 systems fail together on these cases, indicating fundamental limitations in current rule set and/or prompt design.",
+    "Recommendation: Add these 12 cases to training/validation set for prompt engineering and evaluate impact of additional symbolic rules."
+  ]
+}

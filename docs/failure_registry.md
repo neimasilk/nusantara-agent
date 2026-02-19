@@ -259,6 +259,34 @@ Living document yang mencatat setiap kegagalan, hasil negatif, dan pendekatan ya
 - **Tindakan:** ACKNOWLEDGED
 - **Detail Tindakan:** Audit artefak disimpan di `docs/handoffs/20260218_p008_bali_asp_json_consistency.md` dan `experiments/05_rule_engine/consistency/bali_asp_json_consistency_2026-02-18.json`. Prioritas lanjut: tutup 4 rule `PARTIAL` dulu, lalu 9 rule `GAP`.
 
+### F-016: ASP-JSON Rule Parity Gap on Minangkabau Domain (P-008 Audit)
+
+- **Tanggal:** 2026-02-19
+- **Eksperimen:** 05_rule_engine (P-008 consistency check)
+- **Kategori:** LIMITATION_DISCOVERED
+- **Severity:** MAJOR
+- **Status:** UNRESOLVED
+- **Deskripsi:** Audit konsistensi `minangkabau.lp` terhadap `minangkabau_rules.json` menunjukkan hanya 5/25 rule `COVERED`, 12/25 `PARTIAL`, dan 8/25 `GAP`.
+- **Expected vs Actual:** Expected: seluruh rule expert-verified Minangkabau terwakili penuh di ASP. Actual: rule distribusi berbasis musyawarah/faraidh, resolusi sengketa adat, dualitas Sako-Pusako, dan prinsip suksesi fungsional belum terencode penuh.
+- **Root Cause:** Encoding saat ini fokus pada hard constraints inti (garis matrilineal, klasifikasi pusako, larangan transfer tertentu), belum menutup rule prosedural, institusional, dan fungsi sosial-simbolik.
+- **Implikasi untuk Paper:** Klaim "expert-verified rules encoded in ASP" untuk domain Minangkabau harus dikualifikasi sampai gap parity ditutup atau dinyatakan eksplisit sebagai batasan cakupan.
+- **Tindakan:** ACKNOWLEDGED
+- **Detail Tindakan:** Audit artefak disimpan di `docs/handoffs/20260219_p008_minangkabau_asp_json_consistency.md`. Prioritas lanjut: tutup rule distribusi/resolusi sengketa dulu, kemudian rule sosial-simbolik.
+
+### F-017: ASP-JSON Rule Parity Gap on Jawa Domain (P-008 Audit)
+
+- **Tanggal:** 2026-02-19
+- **Eksperimen:** 05_rule_engine (P-008 consistency check)
+- **Kategori:** LIMITATION_DISCOVERED
+- **Severity:** MAJOR
+- **Status:** UNRESOLVED
+- **Deskripsi:** Audit konsistensi `jawa.lp` terhadap `jawa_rules.json` menunjukkan 15/36 rule `COVERED`, 14/36 `PARTIAL`, dan 7/36 `GAP`.
+- **Expected vs Actual:** Expected: seluruh rule expert-verified Jawa terwakili penuh di ASP. Actual: rule poligami lintas perkawinan, resolusi sengketa berbasis desa, sebagian perubahan kontemporer, dan adat khusus (mis. Weling/Wekas, Bao Parmate) belum terencode penuh.
+- **Root Cause:** Encoding sudah kuat di hard constraints pewarisan inti, tetapi rule prosedural komunitas, dinamika kontemporer, dan kebiasaan non-distributif belum diprioritaskan.
+- **Implikasi untuk Paper:** Klaim kelengkapan encoding domain Jawa perlu dikualifikasi; parity gap ini harus dicatat sebagai batasan cakupan rule base saat ini.
+- **Tindakan:** ACKNOWLEDGED
+- **Detail Tindakan:** Audit artefak disimpan di `docs/handoffs/20260219_p008_jawa_asp_json_consistency.md`. Prioritas lanjut: tutup gap prosedural sengketa dan rule contemporary/custom terlebih dahulu.
+
 ---
 
 ## Statistik Ringkasan
@@ -269,7 +297,7 @@ Living document yang mencatat setiap kegagalan, hasil negatif, dan pendekatan ya
 | ABANDONED_APPROACH | 0 | 0 | 0 | 0 |
 | TECHNICAL_FAILURE | 2 | 0 | 1 | 1 |
 | ASSUMPTION_VIOLATED | 1 | 1 | 0 | 0 |
-| LIMITATION_DISCOVERED | 10 | 3 | 7 | 0 |
-| **TOTAL** | **15** | **4** | **10** | **1** |
+| LIMITATION_DISCOVERED | 12 | 3 | 9 | 0 |
+| **TOTAL** | **17** | **4** | **12** | **1** |
 
-*Last updated: 2026-02-18 (P-008 Bali ASP-JSON consistency audit)*
+*Last updated: 2026-02-19 (P-008 Minangkabau + Jawa ASP-JSON consistency audit)*
