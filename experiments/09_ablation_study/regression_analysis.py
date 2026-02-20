@@ -1,5 +1,6 @@
 import json
 import re
+import argparse
 from collections import Counter
 from pathlib import Path
 from typing import Dict, List, Tuple
@@ -105,8 +106,16 @@ def _render_cases(title: str, rows: List[Dict]) -> None:
 
 
 def main() -> int:
-    old_payload = _load_json(OLD_RESULTS_PATH)
-    new_payload = _load_json(NEW_RESULTS_PATH)
+    parser = argparse.ArgumentParser(description="Regression Analysis for Ablation Study")
+    parser.add_argument("--old", type=str, default=str(OLD_RESULTS_PATH), help="Path to old result JSON")
+    parser.add_argument("--new", type=str, default=str(NEW_RESULTS_PATH), help="Path to new result JSON")
+    args = parser.parse_args()
+
+    old_path = Path(args.old)
+    new_path = Path(args.new)
+
+    old_payload = _load_json(old_path)
+    new_payload = _load_json(new_path)
 
     old_map = _to_case_map(old_payload)
     new_map = _to_case_map(new_payload)
@@ -175,8 +184,8 @@ def main() -> int:
 
     total = len(case_ids)
     print("=== Regression Analysis: ASP+LLM Old vs New ===")
-    print(f"old_file: {OLD_RESULTS_PATH}")
-    print(f"new_file: {NEW_RESULTS_PATH}")
+    print(f"old_file: {old_path}")
+    print(f"new_file: {new_path}")
     print(f"cases_compared: {total}")
     print(
         "status_counts: "

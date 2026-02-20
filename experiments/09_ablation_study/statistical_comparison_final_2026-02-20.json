@@ -1,0 +1,619 @@
+{
+  "date": "2026-02-20",
+  "n_common_cases": 70,
+  "inputs": {
+    "asp_only": "D:\\documents\\nusantara-agent\\experiments\\09_ablation_study\\results_fixed_asp_only_2026-02-20.json",
+    "ollama": "D:\\documents\\nusantara-agent\\experiments\\09_ablation_study\\results_wordboundary_ollama_2026-02-20.json",
+    "deepseek": "D:\\documents\\nusantara-agent\\experiments\\09_ablation_study\\results_deepseek_rollback_2026-02-20.json"
+  },
+  "mcnemar_tests": [
+    {
+      "comparison": "asp_only_vs_ollama",
+      "table_2x2": {
+        "asp_only_correct_ollama_correct": 38,
+        "asp_only_correct_ollama_wrong": 3,
+        "asp_only_wrong_ollama_correct": 7,
+        "asp_only_wrong_ollama_wrong": 22
+      },
+      "discordant_pairs": 10,
+      "asp_only_only_better_count": 3,
+      "ollama_only_better_count": 7,
+      "exact_binomial_pvalue": 0.34375,
+      "chi_square": 1.6,
+      "chi_square_pvalue": 0.20590321073206466,
+      "chi_square_continuity_corrected": 0.9,
+      "chi_square_continuity_corrected_pvalue": 0.34278171114790873
+    },
+    {
+      "comparison": "asp_only_vs_deepseek",
+      "table_2x2": {
+        "asp_only_correct_deepseek_correct": 35,
+        "asp_only_correct_deepseek_wrong": 6,
+        "asp_only_wrong_deepseek_correct": 13,
+        "asp_only_wrong_deepseek_wrong": 16
+      },
+      "discordant_pairs": 19,
+      "asp_only_only_better_count": 6,
+      "deepseek_only_better_count": 13,
+      "exact_binomial_pvalue": 0.1670684814453125,
+      "chi_square": 2.5789473684210527,
+      "chi_square_pvalue": 0.10829365589900916,
+      "chi_square_continuity_corrected": 1.894736842105263,
+      "chi_square_continuity_corrected_pvalue": 0.16866861888781112
+    },
+    {
+      "comparison": "ollama_vs_deepseek",
+      "table_2x2": {
+        "ollama_correct_deepseek_correct": 41,
+        "ollama_correct_deepseek_wrong": 4,
+        "ollama_wrong_deepseek_correct": 7,
+        "ollama_wrong_deepseek_wrong": 18
+      },
+      "discordant_pairs": 11,
+      "ollama_only_better_count": 4,
+      "deepseek_only_better_count": 7,
+      "exact_binomial_pvalue": 0.548828125,
+      "chi_square": 0.8181818181818182,
+      "chi_square_pvalue": 0.36571229628151314,
+      "chi_square_continuity_corrected": 0.36363636363636365,
+      "chi_square_continuity_corrected_pvalue": 0.5464935954065822
+    }
+  ],
+  "fleiss_kappa": 0.6375321336760926,
+  "cross_model_agreement": {
+    "all_agree": {
+      "correct": 35,
+      "wrong": 13,
+      "total": 48,
+      "correct_cases": [
+        "CS-BAL-002",
+        "CS-BAL-009",
+        "CS-BAL-014",
+        "CS-JAW-011",
+        "CS-LIN-017",
+        "CS-LIN-018",
+        "CS-MIN-011",
+        "CS-MIN-013",
+        "CS-NAS-010",
+        "CS-NAS-022",
+        "CS-NAS-066",
+        "GS-0001",
+        "GS-0002",
+        "GS-0003",
+        "GS-0005",
+        "GS-0006",
+        "GS-0007",
+        "GS-0008",
+        "GS-0009",
+        "GS-0011",
+        "GS-0013",
+        "GS-0017",
+        "GS-0021",
+        "GS-0024",
+        "GS-0025",
+        "GS-0026",
+        "GS-0027",
+        "GS-0029",
+        "GS-0037",
+        "GS-0038",
+        "GS-0039",
+        "GS-0040",
+        "GS-0045",
+        "GS-0046",
+        "GS-0103"
+      ],
+      "wrong_cases": [
+        "CS-JAW-019",
+        "CS-LIN-016",
+        "CS-MIN-004",
+        "CS-MIN-005",
+        "GS-0019",
+        "GS-0020",
+        "GS-0028",
+        "GS-0030",
+        "GS-0031",
+        "GS-0033",
+        "GS-0034",
+        "GS-0041",
+        "GS-0054"
+      ]
+    },
+    "two_agree": {
+      "correct": 9,
+      "wrong": 10,
+      "total": 19,
+      "cases": [
+        {
+          "case_id": "CS-BAL-012",
+          "gold": "C",
+          "predictions": {
+            "asp_only": "C",
+            "ollama": "B",
+            "deepseek": "B"
+          },
+          "majority": "B",
+          "minority_system": "asp_only",
+          "minority_pred": "C",
+          "majority_correct": false
+        },
+        {
+          "case_id": "CS-JAW-006",
+          "gold": "A",
+          "predictions": {
+            "asp_only": "A",
+            "ollama": "B",
+            "deepseek": "B"
+          },
+          "majority": "B",
+          "minority_system": "asp_only",
+          "minority_pred": "A",
+          "majority_correct": false
+        },
+        {
+          "case_id": "CS-JAW-015",
+          "gold": "C",
+          "predictions": {
+            "asp_only": "B",
+            "ollama": "B",
+            "deepseek": "C"
+          },
+          "majority": "B",
+          "minority_system": "deepseek",
+          "minority_pred": "C",
+          "majority_correct": false
+        },
+        {
+          "case_id": "CS-LIN-052",
+          "gold": "C",
+          "predictions": {
+            "asp_only": "B",
+            "ollama": "B",
+            "deepseek": "C"
+          },
+          "majority": "B",
+          "minority_system": "deepseek",
+          "minority_pred": "C",
+          "majority_correct": false
+        },
+        {
+          "case_id": "CS-MIN-015",
+          "gold": "C",
+          "predictions": {
+            "asp_only": "B",
+            "ollama": "B",
+            "deepseek": "C"
+          },
+          "majority": "B",
+          "minority_system": "deepseek",
+          "minority_pred": "C",
+          "majority_correct": false
+        },
+        {
+          "case_id": "CS-MIN-025",
+          "gold": "C",
+          "predictions": {
+            "asp_only": "B",
+            "ollama": "B",
+            "deepseek": "C"
+          },
+          "majority": "B",
+          "minority_system": "deepseek",
+          "minority_pred": "C",
+          "majority_correct": false
+        },
+        {
+          "case_id": "CS-NAS-041",
+          "gold": "C",
+          "predictions": {
+            "asp_only": "B",
+            "ollama": "C",
+            "deepseek": "C"
+          },
+          "majority": "C",
+          "minority_system": "asp_only",
+          "minority_pred": "B",
+          "majority_correct": true
+        },
+        {
+          "case_id": "GS-0004",
+          "gold": "B",
+          "predictions": {
+            "asp_only": "C",
+            "ollama": "B",
+            "deepseek": "B"
+          },
+          "majority": "B",
+          "minority_system": "asp_only",
+          "minority_pred": "C",
+          "majority_correct": true
+        },
+        {
+          "case_id": "GS-0010",
+          "gold": "B",
+          "predictions": {
+            "asp_only": "C",
+            "ollama": "A",
+            "deepseek": "C"
+          },
+          "majority": "C",
+          "minority_system": "ollama",
+          "minority_pred": "A",
+          "majority_correct": false
+        },
+        {
+          "case_id": "GS-0012",
+          "gold": "B",
+          "predictions": {
+            "asp_only": "C",
+            "ollama": "B",
+            "deepseek": "B"
+          },
+          "majority": "B",
+          "minority_system": "asp_only",
+          "minority_pred": "C",
+          "majority_correct": true
+        },
+        {
+          "case_id": "GS-0014",
+          "gold": "B",
+          "predictions": {
+            "asp_only": "A",
+            "ollama": "B",
+            "deepseek": "B"
+          },
+          "majority": "B",
+          "minority_system": "asp_only",
+          "minority_pred": "A",
+          "majority_correct": true
+        },
+        {
+          "case_id": "GS-0015",
+          "gold": "B",
+          "predictions": {
+            "asp_only": "C",
+            "ollama": "C",
+            "deepseek": "B"
+          },
+          "majority": "C",
+          "minority_system": "deepseek",
+          "minority_pred": "B",
+          "majority_correct": false
+        },
+        {
+          "case_id": "GS-0018",
+          "gold": "B",
+          "predictions": {
+            "asp_only": "C",
+            "ollama": "C",
+            "deepseek": "B"
+          },
+          "majority": "C",
+          "minority_system": "deepseek",
+          "minority_pred": "B",
+          "majority_correct": false
+        },
+        {
+          "case_id": "GS-0035",
+          "gold": "C",
+          "predictions": {
+            "asp_only": "C",
+            "ollama": "C",
+            "deepseek": "B"
+          },
+          "majority": "C",
+          "minority_system": "deepseek",
+          "minority_pred": "B",
+          "majority_correct": true
+        },
+        {
+          "case_id": "GS-0036",
+          "gold": "C",
+          "predictions": {
+            "asp_only": "C",
+            "ollama": "C",
+            "deepseek": "B"
+          },
+          "majority": "C",
+          "minority_system": "deepseek",
+          "minority_pred": "B",
+          "majority_correct": true
+        },
+        {
+          "case_id": "GS-0042",
+          "gold": "A",
+          "predictions": {
+            "asp_only": "D",
+            "ollama": "A",
+            "deepseek": "A"
+          },
+          "majority": "A",
+          "minority_system": "asp_only",
+          "minority_pred": "D",
+          "majority_correct": true
+        },
+        {
+          "case_id": "GS-0048",
+          "gold": "C",
+          "predictions": {
+            "asp_only": "B",
+            "ollama": "C",
+            "deepseek": "C"
+          },
+          "majority": "C",
+          "minority_system": "asp_only",
+          "minority_pred": "B",
+          "majority_correct": true
+        },
+        {
+          "case_id": "GS-0055",
+          "gold": "D",
+          "predictions": {
+            "asp_only": "C",
+            "ollama": "C",
+            "deepseek": "B"
+          },
+          "majority": "C",
+          "minority_system": "deepseek",
+          "minority_pred": "B",
+          "majority_correct": false
+        },
+        {
+          "case_id": "GS-0102",
+          "gold": "C",
+          "predictions": {
+            "asp_only": "C",
+            "ollama": "C",
+            "deepseek": "B"
+          },
+          "majority": "C",
+          "minority_system": "deepseek",
+          "minority_pred": "B",
+          "majority_correct": true
+        }
+      ]
+    },
+    "all_disagree": {
+      "total": 3,
+      "cases": [
+        {
+          "case_id": "CS-JAW-030",
+          "gold": "C",
+          "predictions": {
+            "asp_only": "C",
+            "ollama": "A",
+            "deepseek": "B"
+          }
+        },
+        {
+          "case_id": "GS-0016",
+          "gold": "B",
+          "predictions": {
+            "asp_only": "C",
+            "ollama": "B",
+            "deepseek": "A"
+          }
+        },
+        {
+          "case_id": "GS-0049",
+          "gold": "C",
+          "predictions": {
+            "asp_only": "A",
+            "ollama": "B",
+            "deepseek": "C"
+          }
+        }
+      ]
+    },
+    "majority_vote": {
+      "applicable": 19,
+      "correct": 9,
+      "accuracy": 0.47368421052631576
+    }
+  },
+  "modes": {
+    "asp_only": {
+      "accuracy": 0.5857142857142857,
+      "cohens_kappa": 0.3309162821357944,
+      "confusion_matrix": {
+        "A": {
+          "A": 4,
+          "B": 0,
+          "C": 1,
+          "D": 1
+        },
+        "B": {
+          "A": 4,
+          "B": 19,
+          "C": 8,
+          "D": 0
+        },
+        "C": {
+          "A": 3,
+          "B": 10,
+          "C": 18,
+          "D": 0
+        },
+        "D": {
+          "A": 0,
+          "B": 0,
+          "C": 2,
+          "D": 0
+        }
+      },
+      "per_label_metrics": {
+        "A": {
+          "tp": 4,
+          "fp": 7,
+          "fn": 2,
+          "precision": 0.36363636363636365,
+          "recall": 0.6666666666666666,
+          "f1": 0.4705882352941177,
+          "support": 6
+        },
+        "B": {
+          "tp": 19,
+          "fp": 10,
+          "fn": 12,
+          "precision": 0.6551724137931034,
+          "recall": 0.6129032258064516,
+          "f1": 0.6333333333333333,
+          "support": 31
+        },
+        "C": {
+          "tp": 18,
+          "fp": 11,
+          "fn": 13,
+          "precision": 0.6206896551724138,
+          "recall": 0.5806451612903226,
+          "f1": 0.6000000000000001,
+          "support": 31
+        },
+        "D": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        }
+      }
+    },
+    "ollama": {
+      "accuracy": 0.6428571428571429,
+      "cohens_kappa": 0.4176372712146424,
+      "confusion_matrix": {
+        "A": {
+          "A": 4,
+          "B": 1,
+          "C": 1,
+          "D": 0
+        },
+        "B": {
+          "A": 4,
+          "B": 23,
+          "C": 4,
+          "D": 0
+        },
+        "C": {
+          "A": 3,
+          "B": 10,
+          "C": 18,
+          "D": 0
+        },
+        "D": {
+          "A": 0,
+          "B": 0,
+          "C": 2,
+          "D": 0
+        }
+      },
+      "per_label_metrics": {
+        "A": {
+          "tp": 4,
+          "fp": 7,
+          "fn": 2,
+          "precision": 0.36363636363636365,
+          "recall": 0.6666666666666666,
+          "f1": 0.4705882352941177,
+          "support": 6
+        },
+        "B": {
+          "tp": 23,
+          "fp": 11,
+          "fn": 8,
+          "precision": 0.6764705882352942,
+          "recall": 0.7419354838709677,
+          "f1": 0.7076923076923077,
+          "support": 31
+        },
+        "C": {
+          "tp": 18,
+          "fp": 7,
+          "fn": 13,
+          "precision": 0.72,
+          "recall": 0.5806451612903226,
+          "f1": 0.6428571428571428,
+          "support": 31
+        },
+        "D": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        }
+      }
+    },
+    "deepseek": {
+      "accuracy": 0.6857142857142857,
+      "cohens_kappa": 0.4832214765100671,
+      "confusion_matrix": {
+        "A": {
+          "A": 4,
+          "B": 1,
+          "C": 1,
+          "D": 0
+        },
+        "B": {
+          "A": 4,
+          "B": 24,
+          "C": 3,
+          "D": 0
+        },
+        "C": {
+          "A": 2,
+          "B": 9,
+          "C": 20,
+          "D": 0
+        },
+        "D": {
+          "A": 0,
+          "B": 1,
+          "C": 1,
+          "D": 0
+        }
+      },
+      "per_label_metrics": {
+        "A": {
+          "tp": 4,
+          "fp": 6,
+          "fn": 2,
+          "precision": 0.4,
+          "recall": 0.6666666666666666,
+          "f1": 0.5,
+          "support": 6
+        },
+        "B": {
+          "tp": 24,
+          "fp": 11,
+          "fn": 7,
+          "precision": 0.6857142857142857,
+          "recall": 0.7741935483870968,
+          "f1": 0.7272727272727272,
+          "support": 31
+        },
+        "C": {
+          "tp": 20,
+          "fp": 5,
+          "fn": 11,
+          "precision": 0.8,
+          "recall": 0.6451612903225806,
+          "f1": 0.7142857142857142,
+          "support": 31
+        },
+        "D": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        }
+      }
+    }
+  }
+}

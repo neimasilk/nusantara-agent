@@ -98,10 +98,13 @@ def get_llm() -> ChatOpenAI:
     base_url = os.getenv("NUSANTARA_LLM_BASE_URL", cfg["base_url_default"])
     model = os.getenv("NUSANTARA_LLM_MODEL", cfg["model_default"])
 
+    temperature = float(os.getenv("NUSANTARA_LLM_TEMPERATURE", "0"))
+
     llm_kwargs = {
         "api_key": api_key,
         "base_url": base_url,
         "model": model,
+        "temperature": temperature,
     }
 
     # Default: ignore system/user proxy env vars to avoid local dead-proxy issues.

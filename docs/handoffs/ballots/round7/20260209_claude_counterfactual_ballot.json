@@ -1,0 +1,75 @@
+{
+  "ballot_version": "1.0",
+  "agent_id": "claude_counterfactual",
+  "agent_weight": 1.00,
+  "round": 7,
+  "phase": "R1_BLIND",
+  "timestamp_utc": "2026-02-09T04:30:00Z",
+  "proposals": {
+    "P1": {
+      "vote": "hold",
+      "score": 2,
+      "confidence": 0.65,
+      "rationale": "Dependencies broken (clingo missing), router unfixed. Must run B1 comparator first.",
+      "blocker": {
+        "severity": "HIGH",
+        "description": "No B1 baseline comparison available; cannot assess if complex architecture adds value."
+      }
+    },
+    "P2": {
+      "vote": "approve",
+      "score": 4,
+      "confidence": 0.70,
+      "rationale": "Baseline b1_direct_prompting.py exists. Approve conditional on B1 >= 35% accuracy.",
+      "blocker": null
+    },
+    "P3": {
+      "vote": "approve",
+      "score": 4,
+      "confidence": 0.80,
+      "rationale": "Dual-track de-risks by exploring alternatives in parallel. Recommended fallback if voting ties.",
+      "blocker": null
+    },
+    "P4": {
+      "vote": "hold",
+      "score": 3,
+      "confidence": 0.55,
+      "rationale": "Fix infra parallel rather than freeze all tuning. Hybrid approach preferred.",
+      "blocker": null
+    }
+  },
+  "final_recommendation": {
+    "primary": "P3",
+    "fallback": "P2",
+    "conditions": [
+      "24h kill-test must complete with at least one Alt passing.",
+      "B1 baseline benchmark must be available for comparison.",
+      "If both Alts fail and B1 >= B0, pivot to P2."
+    ]
+  },
+  "top_3_risks": [
+    {
+      "id": "R1",
+      "description": "Sample size N=24 too small; Wilson CI spans 36.7pp.",
+      "severity": "HIGH",
+      "evidence_file": "data/benchmark_manifest.json",
+      "evidence_line": 10
+    },
+    {
+      "id": "R2",
+      "description": "Error concentration on label A (7/14 errors = 50%).",
+      "severity": "HIGH",
+      "evidence_file": "experiments/09_ablation_study/results_post_patch_n24_offline_2026-02-09.json"
+    },
+    {
+      "id": "R3",
+      "description": "Symbolic verifier inactive (clingo not installed).",
+      "severity": "MEDIUM",
+      "evidence_file": "docs/failure_registry.md"
+    }
+  ],
+  "kill_shot": {
+    "claim": "Complex architecture provides no added value over simple baseline due to: (1) router fails on A-priority cases, (2) symbolic verifier inactive, (3) N=24 too small to prove superiority.",
+    "counter_plan": "Run B1 baseline on N=24. If B1 >= 35% and >= B0, pivot to P2 with rule post-filter."
+  }
+}

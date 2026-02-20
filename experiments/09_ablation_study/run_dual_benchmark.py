@@ -1,6 +1,7 @@
 import argparse
 import json
 import os
+import re
 import sys
 import traceback
 from datetime import date
@@ -108,8 +109,9 @@ def _detect_runtime_backend(pipeline: NusantaraAgentPipeline) -> str:
 
 
 def _extract_predicted_label(agent_analysis: Any) -> str:
+    text = str(agent_analysis or "")
     try:
-        payload = _json_or_raw(str(agent_analysis or ""))
+        payload = _json_or_raw(text)
     except Exception:
         payload = {}
 
@@ -117,7 +119,12 @@ def _extract_predicted_label(agent_analysis: Any) -> str:
     if label in VALID_LABELS:
         return label
 
-    # Fallback defensif agar benchmark tetap jalan jika output bukan JSON valid.
+    # Fallback: regex extraction when JSON parsing fails due to trailing text
+    m = re.search(r'"label"\s*:\s*"([A-Da-d])"', text)
+    if m:
+        return m.group(1).upper()
+
+    # Last resort defensif agar benchmark tetap jalan.
     return "D"
 
 

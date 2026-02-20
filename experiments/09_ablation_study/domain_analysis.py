@@ -1,6 +1,7 @@
 import json
 import os
 import sys
+import argparse
 from collections import defaultdict
 from typing import Tuple
 
@@ -135,18 +136,24 @@ def analyze_file(file_path):
     return formatted
 
 def main():
+    parser = argparse.ArgumentParser(description="Domain Analysis for Ablation Study")
+    parser.add_argument("--asp-only", type=str, help="Path to ASP-only results")
+    parser.add_argument("--ollama", type=str, help="Path to Ollama results")
+    parser.add_argument("--deepseek", type=str, help="Path to DeepSeek results")
+    parser.add_argument("--output", type=str, help="Path to save domain analysis results JSON")
+    args = parser.parse_args()
+
     base_dir = os.path.join(ROOT, "experiments", "09_ablation_study")
     files = {
-        "ASP-only": "results_dual_asp_only_2026-02-19.json",
-        "ASP+Ollama": "results_dual_asp_llm_2026-02-19.json",
-        "ASP+DeepSeek": "results_deepseek_asp_llm_2026-02-19.json",
+        "ASP-only": args.asp_only or os.path.join(base_dir, "results_dual_asp_only_2026-02-19.json"),
+        "ASP+Ollama": args.ollama or os.path.join(base_dir, "results_dual_asp_llm_2026-02-19.json"),
+        "ASP+DeepSeek": args.deepseek or os.path.join(base_dir, "results_deepseek_asp_llm_2026-02-19.json"),
     }
 
     all_analysis = {}
 
-    for mode, filename in files.items():
-        path = os.path.join(base_dir, filename)
-        print(f"Analyzing {mode} ({filename})...")
+    for mode, path in files.items():
+        print(f"Analyzing {mode} ({path})...")
         analysis = analyze_file(path)
         if analysis:
             all_analysis[mode] = analysis
@@ -154,7 +161,7 @@ def main():
             print(f"  Warning: not found or no results.")
 
     # Save results
-    output_path = os.path.join(base_dir, "domain_analysis_results.json")
+    output_path = args.output or os.path.join(base_dir, "domain_analysis_results.json")
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(all_analysis, f, indent=2, ensure_ascii=False)
 

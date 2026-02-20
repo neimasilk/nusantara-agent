@@ -1,7 +1,8 @@
 import json
 import os
 import re
-from typing import Any, Dict, Optional
+from functools import lru_cache
+from typing import Any, Dict, Optional, Sequence
 
 from dotenv import load_dotenv
 from src.config.domain_keywords import (
@@ -35,6 +36,20 @@ def _get_llm() -> ChatOpenAI:
     return get_llm()
 
 
+@lru_cache(maxsize=256)
+def _keyword_pattern(keyword: str) -> re.Pattern[str]:
+    # Match whole keyword/phrase as a token span, not arbitrary substrings.
+    tokens = keyword.strip().lower().split()
+    if not tokens:
+        return re.compile(r"a^")
+    phrase = r"\s+".join(re.escape(token) for token in tokens)
+    return re.compile(rf"(?<!\w){phrase}(?!\w)", flags=re.IGNORECASE)
+
+
+def _count_keyword_hits(query: str, keywords: Sequence[str]) -> int:
+    return sum(1 for keyword in keywords if _keyword_pattern(keyword).search(query))
+
+
 def _json_or_raw(text: str) -> Dict:
     text = text.strip()
     # Strip <think>...</think> blocks from reasoning models (e.g. deepseek-r1)
@@ -54,10 +69,9 @@ def _json_or_raw(text: str) -> Dict:
 
 
 def _keyword_score(query: str) -> Dict[str, int]:
-    q = query.lower()
-    national = sum(1 for t in ROUTER_NATIONAL_KEYWORDS if t in q)
-    adat = sum(1 for t in ROUTER_ADAT_KEYWORDS if t in q)
-    conflict = sum(1 for t in ROUTER_CONFLICT_KEYWORDS if t in q)
+    national = _count_keyword_hits(query, ROUTER_NATIONAL_KEYWORDS)
+    adat = _count_keyword_hits(query, ROUTER_ADAT_KEYWORDS)
+    conflict = _count_keyword_hits(query, ROUTER_CONFLICT_KEYWORDS)
     return {"national": national, "adat": adat, "conflict": conflict}
 
 

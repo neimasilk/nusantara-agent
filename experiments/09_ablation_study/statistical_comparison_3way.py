@@ -5,6 +5,7 @@ Cross-model agreement, Majority Vote analysis.
 """
 
 import json
+import argparse
 from datetime import date
 from pathlib import Path
 from typing import Any, Dict, List, Tuple, Set
@@ -463,10 +464,23 @@ def _print_report(report: Dict[str, Any]) -> None:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description="3-Way Statistical Comparison")
+    parser.add_argument("--asp-only", type=str, default=str(DEFAULT_PATHS["asp_only"]), help="Path to ASP-only results")
+    parser.add_argument("--ollama", type=str, default=str(DEFAULT_PATHS["ollama"]), help="Path to Ollama results")
+    parser.add_argument("--deepseek", type=str, default=str(DEFAULT_PATHS["deepseek"]), help="Path to DeepSeek results")
+    parser.add_argument("--output", type=str, help="Path to save JSON report")
+    args = parser.parse_args()
+
+    active_paths = {
+        "asp_only": Path(args.asp_only),
+        "ollama": Path(args.ollama),
+        "deepseek": Path(args.deepseek),
+    }
+
     # Load all three results
     data = {}
     maps = {}
-    for name, path in DEFAULT_PATHS.items():
+    for name, path in active_paths.items():
         data[name] = _load_mode_results(path)
         maps[name] = _to_case_map(data[name]["results"])
 
@@ -508,19 +522,22 @@ def main() -> int:
 
     # Build report
     date_tag = date.today().isoformat()
-    out_path = ROOT / "experiments" / "09_ablation_study" / f"statistical_comparison_3way_{date_tag}.json"
+    if args.output:
+        out_path = Path(args.output)
+    else:
+        out_path = ROOT / "experiments" / "09_ablation_study" / f"statistical_comparison_3way_{date_tag}.json"
 
     report: Dict[str, Any] = {
         "date": date_tag,
         "n_common_cases": len(common_ids),
-        "inputs": {name: str(path.resolve()) for name, path in DEFAULT_PATHS.items()},
+        "inputs": {name: str(path.resolve()) for name, path in active_paths.items()},
         "mcnemar_tests": mcnemar_tests,
         "fleiss_kappa": fleiss_k,
         "cross_model_agreement": cross_agreement,
         "modes": {},
     }
 
-    for name in DEFAULT_PATHS.keys():
+    for name in active_paths.keys():
         report["modes"][name] = {
             "accuracy": accuracies[name],
             "cohens_kappa": kappas[name],
@@ -536,4 +553,4 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    main()

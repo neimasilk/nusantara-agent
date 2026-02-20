@@ -1,6 +1,6 @@
 import unittest
 
-from src.agents.router import classify_router_accuracy, route_query
+from src.agents.router import _keyword_score, classify_router_accuracy, route_query
 
 
 class RouterTests(unittest.TestCase):
@@ -54,6 +54,25 @@ class RouterTests(unittest.TestCase):
         """Edge case: uppercase keywords should still work."""
         result = route_query("KONFLIK HUKUM NASIONAL DAN ADAT", use_llm=False)
         self.assertEqual(result["label"], "conflict")
+
+    def test_keyword_boundary_avoids_bali_in_kembali(self):
+        """Keyword 'bali' should not match inside unrelated words like 'kembali'."""
+        scores = _keyword_score("Permohonan kembali atas sengketa waris keluarga.")
+        self.assertEqual(scores["adat"], 0)
+        result = route_query("Permohonan kembali atas sengketa waris keluarga.", use_llm=False)
+        self.assertEqual(result["label"], "consensus")
+
+    def test_keyword_boundary_avoids_jawa_in_penjawab(self):
+        """Keyword 'jawa' should not match inside words like 'penjawab'."""
+        scores = _keyword_score("Pendapat penjawab ahli waris diperlukan.")
+        self.assertEqual(scores["adat"], 0)
+
+    def test_keyword_boundary_handles_vs_token(self):
+        """Short keyword 'vs' must match as token, not as substring."""
+        false_scores = _keyword_score("Dokumen advsokat waris diteliti.")
+        self.assertEqual(false_scores["conflict"], 0)
+        true_scores = _keyword_score("Sengketa waris nasional vs adat.")
+        self.assertGreaterEqual(true_scores["conflict"], 1)
 
 
 if __name__ == "__main__":

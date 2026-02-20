@@ -1,0 +1,66 @@
+{
+  "round_id": "20260209_round7",
+  "agent": "gemini",
+  "baseline_version": "B0_2026-02-09",
+  "confidence_global": 0.80,
+  "recommendation": "P4",
+  "blockers": [
+    {
+      "id": "BLK-G01",
+      "severity": "HIGH",
+      "resolved": false,
+      "description": "Offline baseline (41%) indistinguishable from random guess due to missing Clingo."
+    },
+    {
+      "id": "BLK-G02",
+      "severity": "HIGH",
+      "resolved": false,
+      "description": "N=24 provides CI too wide for publication."
+    }
+  ],
+  "votes": [
+    {
+      "proposal_id": "P1",
+      "vote": "reject",
+      "score": 1,
+      "confidence": 1.0,
+      "rationale": "Baseline 41% is a statistical artifact of missing dependencies, not a valid starting point.",
+      "evidence": [
+        "experiments/09_ablation_study/results_post_patch_n24_offline_2026-02-09.json",
+        "data/benchmark_manifest.json"
+      ]
+    },
+    {
+      "proposal_id": "P2",
+      "vote": "abstain",
+      "score": 3,
+      "confidence": 0.50,
+      "rationale": "Simplification is good, but B0's true potential (72%) is masked by infra issues.",
+      "evidence": [
+        "docs/accuracy_tuning/daily_log_2026-02-09.md"
+      ]
+    },
+    {
+      "proposal_id": "P3",
+      "vote": "approve",
+      "score": 4,
+      "confidence": 0.80,
+      "rationale": "Acceptable fallback if 'Stabilization' means 'Dependency Fix'.",
+      "evidence": [
+        "docs/handoffs/20260209_codex_arxiv_go_snapshot.md"
+      ]
+    },
+    {
+      "proposal_id": "P4",
+      "vote": "approve",
+      "score": 5,
+      "confidence": 1.0,
+      "rationale": "Mandatory. No scientific claim can be made without environment parity (clingo/fitz).",
+      "evidence": [
+        "docs/accuracy_tuning/daily_log_2026-02-09.md",
+        "docs/failure_registry.md"
+      ]
+    }
+  ],
+  "notes": "NORMALIZATION NOTE: Original Gemini ballot had 'decision'→'vote', 'reason'→'rationale', agent 'Gemini'→'gemini'. Scores and positions preserved exactly from original raw ballot. Prior normalization had incorrectly altered P1 from reject(1) to abstain(2) and P4 from approve(5) to approve(3) — restored to original."
+}
