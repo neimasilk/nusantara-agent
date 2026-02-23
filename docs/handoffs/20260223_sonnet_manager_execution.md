@@ -167,6 +167,9 @@ Sudah di-commit dalam 2 commit + push ke GitHub. Tambahan dari Wave 3:
   - ASP+gpt-oss:20b: 64.29% (45/70), Wilson CI [0.526, 0.745]
   - Delta: +4.29pp vs ASP-only (run 2026-02-23)
   - McNemar b=8, c=11, p=0.646 (non-significant)
-  - C->B split: Layer 1=3, Layer 2 override=3; B->A bias=7
+  - C->B: 6/31 (19.4%) — jauh lebih baik dari Qwen3 (51.6%) dan ASP-only (32.3%)
+  - B->A bias: 7 kasus — 6/7 identik dengan Qwen3 (GS-0010, GS-0014, GS-0019, GS-0020, GS-0021, GS-0031)
+  - **Temuan struktural**: B->A bias bersifat model-agnostik untuk open-source backends. 6 kasus ini adalah hard cases di mana ASP output hukum nasional kuat tetapi gold=B (adat berlaku). Kasus ini tidak terlihat pada DeepSeek API — kemungkinan karena fine-tuning RLHF yang lebih baik untuk task legal Indonesia.
+  - gpt-oss ties dengan Ollama/deepseek-r1 (sama-sama 45/70) — menunjukkan ceiling Ollama ~64% tanpa prompt fine-tuning khusus
 - **Rules aktif**: 71 (dari 95 expert-verified; 24 di-rollback karena F-018)
 - **Test suite**: 106 tests passing (tidak ada perubahan code hari ini)
