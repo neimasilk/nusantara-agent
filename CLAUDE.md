@@ -80,29 +80,35 @@ All LLM calls go through the **DeepSeek API** using the OpenAI Python client wit
 
 Legacy registry: `docs/task_registry.md` (91 tasks, many cancelled/archived after pivot).
 
-## Current State (as of 2026-02-16) — HONEST ASSESSMENT
+## Current State (as of 2026-02-23) — HONEST ASSESSMENT
 
 ### What Works
 - **Rule Engine**: `ClingoRuleEngine` with ASP is functional (when `clingo` is installed)
 - **95 Expert-Verified Rules**: Minangkabau (25), Bali (34), Jawa (36) — all verified by domain experts
 - **82 Human-Labeled Cases**: From 2 qualified expert raters (Ahli-1 Dr. Hendra, Ahli-2 Dr. Indra), covering 3 adat domains + national law. Ahli-3 removed (under-qualified, S1 level only — see F-014).
-- **24 Active Benchmark Cases**: 14 agreed (Ahli-1 = Ahli-2), 10 disputed (pending Delphi Round 2 adjudication)
-- **LLM Accuracy: 85.71%** (12/14 on agreed cases) — A=2/2, B=4/4, C=6/7, D=0/1
-- **Inter-Rater Agreement**: Cohen's Kappa = 0.394 (fair) for Ahli-1 vs Ahli-2 on 24 cases
+- **74 Benchmark Cases**: 70 evaluable (agreed), 4 disputed (excluded from accuracy)
+- **ASP-only**: 58.6% (41/70), Wilson CI [0.469, 0.694]
+- **ASP+Ollama (Qwen-2.5-7B, temp=0)**: 64.3% (45/70), Wilson CI [0.526, 0.745]
+- **ASP+DeepSeek (temp=0)**: 68.6% (48/70), Wilson CI [0.570, 0.782]
+- **McNemar p-values**: 0.344, 0.167, 0.549 — semua NON-SIGNIFIKAN (n=70)
+- **Inter-system agreement**: Fleiss kappa = 0.638 (substantial)
+- **ASP rules aktif**: 71 dari 95 expert-verified (24 di-rollback, lihat F-018)
 - **Test Suite**: 106 tests passing (termasuk benchmark contract tests untuk label `DISPUTED/SPLIT`)
 - **Shared utils**: LLM init extracted to `src/utils/llm.py`, used by all agent modules
 
 ### What Doesn't Work
 - **D-label prediction: 0%** — system predicts C instead of D for insufficient-info cases
+- **Statistical power insufficient**: n=70 → power ~0.3; butuh ~344 kasus untuk power=0.8
+- **Dev/test contamination**: 70 kasus existing sudah terkontaminasi prompt tuning; belum ada clean test set
 - **Multi-Agent Debate: NEGATIVE RESULT** (F-009) — does not improve over sequential baseline
 - **Independent Evaluation: BLOCKED** — Exp 06 blocked on human annotation (ART-028, ART-030)
-- **Statistical Tests: NONE** — zero p-values, zero confidence intervals anywhere in project
-- **Scale**: Only 24 dual-labeled cases (Ahli-2 rated 24 out of Ahli-1's 72). Need Ahli-2 to rate remaining 48 for expansion.
+- **Scale insufficient for statistical power**: n=70 → power ~0.3; butuh ~344 kasus untuk confident claims. Kasus baru dari Ahli-2 belum tersedia.
 
 ### Key Negative Results
 - Exp 07: Advanced orchestration WORSE than baseline sequential (F-009)
-- F-011: Adding agents DECREASED accuracy from 68% to 54% (MITIGATED: now 85.71% after prompt tuning)
+- F-011: Adding agents DECREASED accuracy from 68% to 54% (MITIGATED: prompt tuning; canonical benchmark now 70 cases)
 - F-014: Ahli-3 had negative Cohen's Kappa — removed from gold standard
+- F-018: Penambahan 24 GAP rules menyebabkan regresi -7.1pp → di-rollback
 - F-008: Gold standard was initially self-referential
 - F-010: Auto-annotations have drift risk (circular evaluation)
 

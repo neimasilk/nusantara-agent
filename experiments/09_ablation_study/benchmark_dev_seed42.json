@@ -1,0 +1,1421 @@
+[
+  {
+    "id": "CS-MIN-011",
+    "query": "Seorang anggota kaum di Minangkabau mengonversi tanah ulayat kaum menjadi Sertifikat Hak Milik (SHM) atas nama pribadi tanpa melalui musyawarah mufakat kaum dan tanpa persetujuan Kerapatan Adat Nagari (KAN).",
+    "gold_label": "C",
+    "expert_votes": {
+      "ahli1": "C",
+      "ahli2": "C",
+      "ahli3": "A",
+      "ahli4": "B"
+    },
+    "consensus": "adjudicated",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Konversi tanah ulayat menjadi hak milik pribadi memerlukan pelepasan hak oleh pemangku adat. Tanpa persetujuan KAN proses dianggap cacat hukum karena melanggar hak komunal.",
+        "reference_1": "UU No. 5 Tahun 1960 (UUPA) tentang pengakuan hak ulayat",
+        "reference_2": "Yurisprudensi MA tentang pembatalan sertifikat di atas tanah ulayat",
+        "session_date": "2026-02-08",
+        "interviewer_name": "Tim Teknis Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T01:57:14Z"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Tanah ulayat adalah harta kolektif adat yang tidak dapat dikonversi menjadi SHM individual tanpa persetujuan KAN. Solusi memerlukan sintesis: pembatalan sertifikat dan musyawarah adat.",
+        "reference_1": "Pasal 3 UU No. 5 Tahun 1960 tentang UUPA",
+        "reference_2": "Perda Sumbar No. 6/2008 dan yurisprudensi MA No. 1806K/Pdt/2023",
+        "session_date": "2026-02-08",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T02:04:27Z"
+      },
+      "ahli3": {
+        "confidence": "Tinggi",
+        "rationale": "Konversi tanah ulayat menjadi SHM pribadi tanpa persetujuan KAN melanggar pengakuan hak ulayat dalam rezim agraria nasional. Inti sengketa berada pada penegakan hukum nasional atas tanah adat.",
+        "reference_1": "UU No. 5 Tahun 1960 tentang UUPA",
+        "reference_2": "Putusan Mahkamah Konstitusi No. 35/PUU-X/2012",
+        "session_date": "2026-02-08",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T02:10:00Z"
+      },
+      "ahli4": {
+        "confidence": "Tinggi",
+        "rationale": "Tanah ulayat merupakan harta kolektif kaum yang tidak dapat dialihkan secara individual tanpa musyawarah dan persetujuan KAN.",
+        "reference_1": "UUPA 1960 Pasal 3",
+        "reference_2": "Doktrin hak ulayat Minangkabau",
+        "session_date": "2026-02-09",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T02:30:28Z"
+      }
+    },
+    "adjudication_round2": "2026-02-19"
+  },
+  {
+    "id": "CS-MIN-004",
+    "query": "Sepasang suami istri di Minangkabau memiliki harta dari hasil usaha bersama (pencaharian). Suami meninggal tanpa meninggalkan wasiat/hibah tertulis. Kemenakan suami mengklaim harta tersebut harus kembali ke kaum sebagai harta pusaka, sementara anak kandung mengklaim harta tersebut milik mereka.",
+    "gold_label": "C",
+    "expert_votes": {
+      "ahli1": "A",
+      "ahli2": "C",
+      "ahli3": "C",
+      "ahli4": "C"
+    },
+    "consensus": "majority",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Harta pencaharian atau harta suarang jatuh kepada anak kandung dan janda, bukan kembali ke kaum. Kaum hanya berhak pada harta pusako tinggi.",
+        "reference_1": "Yurisprudensi Mahkamah Agung terkait waris Minangkabau modern",
+        "reference_2": "Prinsip 'Harta suarang dibagi, harta sekutu dibelah'",
+        "session_date": "2026-02-08",
+        "interviewer_name": "Tim Teknis Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T01:57:14Z"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Harta pencaharian Minangkabau diposisikan campuran menurut praktik yurisprudensi, bukan murni pusako maupun murni nasional. Diperlukan sintesis antara forum adat dan pembagian waris.",
+        "reference_1": "Kesepakatan Seminar Hukum Adat 1959",
+        "reference_2": "Yurisprudensi MA No. 217 K/Sip/1970 dan No. 180 K/Sip/1971",
+        "session_date": "2026-02-08",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T02:04:27Z"
+      },
+      "ahli3": {
+        "confidence": "Sedang",
+        "rationale": "Sengketa harta pencaharian Minangkabau mempertemukan klaim adat kemenakan dan klaim waris anak kandung dalam hukum nasional. Penyelesaian memerlukan sintesis lintas rezim.",
+        "reference_1": "A. Rasyid, harta pencaharian dalam adat Minangkabau",
+        "reference_2": "Pasal 852 KUHPerdata atau Pasal 176-183 KHI",
+        "session_date": "2026-02-08",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T02:10:00Z"
+      },
+      "ahli4": {
+        "confidence": "Sedang",
+        "rationale": "Harta pencaharian menurut hukum nasional merupakan harta bersama yang diwariskan kepada anak. Dalam adat Minangkabau dikenal pembedaan antara harta pusaka dan pencaharian.",
+        "reference_1": "UU Perkawinan No. 1/1974 Pasal 35",
+        "reference_2": "Doktrin adat Minangkabau tentang harta pencaharian",
+        "session_date": "2026-02-09",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T02:30:28Z"
+      }
+    }
+  },
+  {
+    "id": "CS-JAW-006",
+    "query": "Dalam sebuah pernikahan poligami yang sah di Jawa, terjadi perceraian dengan istri kedua. Terjadi sengketa pembagian harta yang diperoleh selama masa pernikahan kedua tersebut.",
+    "gold_label": "A",
+    "expert_votes": {
+      "ahli1": "A",
+      "ahli2": "A",
+      "ahli3": "C",
+      "ahli4": "A"
+    },
+    "consensus": "adjudicated",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "UU Perkawinan mengatur harta bersama dibagi proporsional saat perceraian. Tidak ada peniadaan hak istri kedua oleh adat dalam konteks ini.",
+        "reference_1": "UU No. 1 Tahun 1974 Pasal 35 dan 37",
+        "reference_2": "Putusan MA No. 1029 K/Pdt/1996",
+        "session_date": "2026-02-08",
+        "interviewer_name": "Tim Teknis Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T01:57:14Z"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Sengketa gono-gini dalam perceraian poligami telah diatur jelas dalam instrumen nasional. Penyelesaian cukup melalui hukum nasional tanpa kebutuhan sintesis adat.",
+        "reference_1": "Pasal 97 KHI",
+        "reference_2": "Putusan MA No. 1062 K/Sip/1973",
+        "session_date": "2026-02-08",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T02:04:27Z"
+      },
+      "ahli3": {
+        "confidence": "Sedang",
+        "rationale": "Pembagian gono-gini poligami diatur nasional namun penerimaan sosial tetap dipengaruhi prinsip keadilan Jawa. Sintesis diperlukan agar putusan legal efektif secara sosial.",
+        "reference_1": "Pasal 94-97 KHI",
+        "reference_2": "Soepomo, Bab-bab tentang Hukum Adat",
+        "session_date": "2026-02-08",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T02:10:00Z"
+      },
+      "ahli4": {
+        "confidence": "Tinggi",
+        "rationale": "Harta yang diperoleh selama perkawinan kedua merupakan harta bersama menurut hukum nasional.",
+        "reference_1": "UU Perkawinan No. 1/1974",
+        "reference_2": "Yurisprudensi MA tentang harta bersama",
+        "session_date": "2026-02-09",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T02:30:28Z"
+      }
+    },
+    "adjudication_round2": "2026-02-19"
+  },
+  {
+    "id": "CS-NAS-066",
+    "query": "Sebuah desa adat memberikan sanksi pengucilan (kasepekang) kepada satu keluarga karena pelanggaran norma adat. Dampaknya, anak-anak dari keluarga tersebut dilarang bersekolah di sekolah desa setempat dan dilarang mendapatkan layanan kesehatan di puskesmas pembantu desa.",
+    "gold_label": "A",
+    "expert_votes": {
+      "ahli1": "A",
+      "ahli2": "A",
+      "ahli3": "C",
+      "ahli4": "A"
+    },
+    "consensus": "adjudicated",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Sanksi adat tidak boleh melanggar hak konstitusional anak atas pendidikan dan kesehatan. Pembatasan layanan publik harus diintervensi negara.",
+        "reference_1": "UUD 1945 Pasal 28C dan 28H",
+        "reference_2": "UU No. 39 Tahun 1999 tentang HAM",
+        "session_date": "2026-02-08",
+        "interviewer_name": "Tim Teknis Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T01:57:14Z"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Sanksi adat yang menutup hak pendidikan dan kesehatan melanggar HAM serta dibatasi hukum nasional. Intervensi nasional menjadi dominan.",
+        "reference_1": "Pasal 66 UU No. 1/2023 (KUHP Baru)",
+        "reference_2": "Pasal 28C UUD 1945",
+        "session_date": "2026-02-08",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T02:04:27Z"
+      },
+      "ahli3": {
+        "confidence": "Tinggi",
+        "rationale": "Sanksi adat dapat diakui namun tidak boleh meniadakan hak konstitusional pendidikan dan kesehatan. Penyelesaian perlu sintesis pembatasan sanksi adat sesuai HAM.",
+        "reference_1": "Pasal 28H UUD 1945",
+        "reference_2": "Pasal 66 ayat 1 UU No. 1/2023",
+        "session_date": "2026-02-08",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T02:10:00Z"
+      },
+      "ahli4": {
+        "confidence": "Tinggi",
+        "rationale": "Sanksi adat tidak boleh melanggar hak dasar anak atas pendidikan dan kesehatan.",
+        "reference_1": "UUD 1945 Pasal 28B dan 28H",
+        "reference_2": "UU Perlindungan Anak",
+        "session_date": "2026-02-09",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T02:30:28Z"
+      }
+    },
+    "adjudication_round2": "2026-02-19"
+  },
+  {
+    "id": "CS-BAL-002",
+    "query": "Seorang anak perempuan tunggal di Bali mengklaim hak waris atas harta peninggalan ayahnya (harta purusa). Keluarga besar menolak dengan alasan hukum adat Bali menganut sistem patrilineal murni, padahal sudah ada Keputusan MDP 2010.",
+    "gold_label": "C",
+    "expert_votes": {
+      "ahli1": "C",
+      "ahli2": "A",
+      "ahli3": "C",
+      "ahli4": "C"
+    },
+    "consensus": "majority",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Sedang",
+        "rationale": "Terjadi benturan antara praktik patrilineal konservatif dan reformasi MDP 2010 yang membuka hak waris perempuan. Diperlukan sintesis agar hak perempuan terlindungi tanpa merusak tata adat secara total.",
+        "reference_1": "Keputusan Pesamuhan Agung MDP Bali No. 01/2010",
+        "reference_2": "Putusan MA yang mengakui hak perempuan Bali",
+        "session_date": "2026-02-08",
+        "interviewer_name": "Tim Teknis Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T01:57:14Z"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Hak waris perempuan Bali telah diakui oleh keputusan MUDP dan dikuatkan yurisprudensi nasional. Penolakan keluarga bertentangan dengan norma hukum yang berlaku.",
+        "reference_1": "Keputusan Pesamuhan Agung III MUDP Bali 2010",
+        "reference_2": "Putusan MA No. 1331 K/Pdt/2010",
+        "session_date": "2026-02-08",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T02:04:27Z"
+      },
+      "ahli3": {
+        "confidence": "Sedang",
+        "rationale": "Sengketa waris perempuan Bali memerlukan harmonisasi antara penafsiran adat dan tuntutan anti-diskriminasi konstitusional. Karena kedua rezim aktif, keputusan berada di domain sintesis.",
+        "reference_1": "Putusan Mahkamah Konstitusi terkait uji materi UU Perkawinan 2010",
+        "reference_2": "Awig-awig Desa Pakraman setempat",
+        "session_date": "2026-02-08",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T02:10:00Z"
+      },
+      "ahli4": {
+        "confidence": "Sedang",
+        "rationale": "Adat Bali patrilineal mengalami perkembangan melalui Keputusan MDP 2010. Diperlukan sintesis antara adat dan prinsip kesetaraan.",
+        "reference_1": "Keputusan MDP Bali 2010",
+        "reference_2": "Prinsip kesetaraan dalam hukum nasional",
+        "session_date": "2026-02-09",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T02:30:28Z"
+      }
+    }
+  },
+  {
+    "id": "CS-LIN-017",
+    "query": "Sebuah keluarga melakukan pengangkatan anak secara adat dengan upacara sakral yang disaksikan tetua. Namun, saat anak tersebut dewasa dan ingin mengurus paspor, pihak imigrasi menolak karena tidak ada penetapan pengadilan negeri.",
+    "gold_label": "A",
+    "expert_votes": {
+      "ahli1": "A",
+      "ahli2": "C",
+      "ahli3": "C",
+      "ahli4": "A",
+      "arbiter": "A"
+    },
+    "consensus": "majority",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Untuk administrasi negara seperti paspor, adopsi adat harus dikuatkan penetapan pengadilan. Negara memerlukan kepastian hukum tertulis.",
+        "reference_1": "SEMA No. 6 Tahun 1983 tentang Pengangkatan Anak",
+        "reference_2": "Perpres No. 96 Tahun 2018 tentang Adminduk",
+        "session_date": "2026-02-08",
+        "interviewer_name": "Tim Teknis Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T01:57:14Z"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Adopsi adat diakui sosial namun untuk administrasi negara harus melalui penetapan pengadilan. Perlu sintesis pengakuan adat dan legalisasi nasional.",
+        "reference_1": "UU No. 35/2014 tentang Perlindungan Anak",
+        "reference_2": "Perma No. 5/2019 tentang pengesahan pengangkatan anak",
+        "session_date": "2026-02-08",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T02:04:27Z"
+      },
+      "ahli3": {
+        "confidence": "Sedang",
+        "rationale": "Adopsi adat sah sosial tetapi administrasi negara mensyaratkan penetapan pengadilan. Diperlukan sintesis agar status anak valid di ranah adat dan negara.",
+        "reference_1": "UU No. 23 Tahun 2006 tentang Administrasi Kependudukan",
+        "reference_2": "Hukum adat setempat tentang pengangkatan anak",
+        "session_date": "2026-02-08",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T02:10:00Z"
+      },
+      "ahli4": {
+        "confidence": "Tinggi",
+        "rationale": "Administrasi kependudukan dan imigrasi mensyaratkan penetapan pengadilan untuk pengangkatan anak.",
+        "reference_1": "UU Administrasi Kependudukan",
+        "reference_2": "Peraturan Keimigrasian",
+        "session_date": "2026-02-09",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T02:30:28Z"
+      },
+      "arbiter": {
+        "confidence": "Tinggi",
+        "rationale": "Untuk keperluan administrasi negara yang bersifat publik dan kedaulatan seperti paspor hukum nasional memiliki hierarki absolut yang mensyaratkan bukti validitas hukum berupa penetapan pengadilan. Adopsi adat hanya memiliki akibat hukum privat atau sosial dan tidak memiliki kekuatan eksekutorial terhadap diskresi pejabat imigrasi tanpa proses legalisasi formal nasional.",
+        "reference_1": "UU No. 6 Tahun 2011 (Keimigrasian)",
+        "reference_2": "PP No. 2 Tahun 2022 (Pengangkatan Anak)",
+        "session_date": "2026-02-09",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T03:23:37Z"
+      }
+    }
+  },
+  {
+    "id": "CS-BAL-014",
+    "query": "Seorang janda di Bali yang tidak memiliki anak ingin tetap tinggal di rumah mendiang suaminya. Keluarga suami mengusirnya karena janda tersebut dianggap tidak lagi memiliki ikatan hukum setelah suami wafat.",
+    "gold_label": "B",
+    "expert_votes": {
+      "ahli1": "B",
+      "ahli2": "C",
+      "ahli3": "B",
+      "ahli4": "C",
+      "arbiter": "B"
+    },
+    "consensus": "majority",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Janda memiliki hak ngindung atau menikmati harta suami selama tidak menikah lagi dan menjaga kewajiban adat. Pengusiran sepihak bertentangan dengan perlindungan adat Bali.",
+        "reference_1": "Putusan MA No. 179 K/Pdt/1961",
+        "reference_2": "Awig-awig Desa Adat umum",
+        "session_date": "2026-02-08",
+        "interviewer_name": "Tim Teknis Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T01:57:14Z"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Hak janda diakui dalam norma adat Bali modern sekaligus perlindungan hukum nasional atas harta bersama. Solusi ideal adalah sintesis putusan pengadilan dan penetapan adat.",
+        "reference_1": "Keputusan Pesamuhan Agung III MUDP Bali 2010",
+        "reference_2": "Putusan MA No. 493/K/Pdt/2012",
+        "session_date": "2026-02-08",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T02:04:27Z"
+      },
+      "ahli3": {
+        "confidence": "Sedang",
+        "rationale": "Hak tinggal janda dan pembatasannya terutama diatur melalui awig-awig desa adat. Penyelesaian utama berada pada forum adat.",
+        "reference_1": "Awig-awig Desa Pakraman setempat",
+        "reference_2": "Gde Putra, kedudukan janda dalam hukum waris adat Bali",
+        "session_date": "2026-02-08",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T02:10:00Z"
+      },
+      "ahli4": {
+        "confidence": "Sedang",
+        "rationale": "Adat Bali mengatur posisi janda namun hukum nasional menjamin perlindungan tempat tinggal. Diperlukan sintesis.",
+        "reference_1": "Hukum adat Bali tentang janda",
+        "reference_2": "Prinsip perlindungan hak dalam hukum nasional",
+        "session_date": "2026-02-09",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T02:30:28Z"
+      },
+      "arbiter": {
+        "confidence": "Tinggi",
+        "rationale": "Perlindungan hak huni janda (hak ngindung) di Bali merupakan norma spesifik yang berakar pada awig-awig desa pakraman dan berlaku eksklusif dalam konteks kekerabatan patrilineal. Penyelesaian sengketa kepemilikan atau hunian warisan di lingkungan masyarakat adat Bali secara primer mengacu pada hukum adat setempat.",
+        "reference_1": "Kepgub Bali No. 1085/2018",
+        "reference_2": "Hukum Adat Bali (Ngindung/Nyerod)",
+        "session_date": "2026-02-09",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T03:23:37Z"
+      }
+    }
+  },
+  {
+    "id": "CS-LIN-018",
+    "query": "Di dalam wilayah hutan adat yang luas, terdapat beberapa bidang tanah yang sudah memiliki Sertifikat Hak Milik (SHM) individual milik pendatang. Masyarakat adat menuntut tanah tersebut dikembalikan ke ulayat.",
+    "gold_label": "C",
+    "expert_votes": {
+      "ahli1": "C",
+      "ahli2": "C",
+      "ahli3": "A",
+      "ahli4": "C"
+    },
+    "consensus": "majority",
+    "interview_notes": {
+      "ahli4": {
+        "confidence": "Sedang",
+        "rationale": "Sertifikat Hak Milik merupakan bukti hak yang kuat dan tidak dapat dibatalkan sepihak. Pengakuan hutan adat perlu disintesiskan melalui mekanisme hukum seperti negosiasi kompensasi atau gugatan pembatalan yang sah.",
+        "reference_1": "UUPA 1960",
+        "reference_2": "Putusan MK No. 35/PUU-X/2012",
+        "session_date": "2026-02-09",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T02:48:34Z"
+      }
+    }
+  },
+  {
+    "id": "CS-JAW-011",
+    "query": "Sengketa hak waris anak angkat di Jawa. Hukum Islam (KHI) menggunakan wasiat wajibah, sementara hukum adat Jawa (yurisprudensi MA) menyetarakan posisi anak angkat dengan anak kandung dalam hal harta bersama.",
+    "gold_label": "C",
+    "expert_votes": {
+      "ahli1": "C",
+      "ahli2": "C",
+      "ahli3": "C"
+    },
+    "consensus": "adjudicated",
+    "adjudication_round2": "2026-02-19"
+  },
+  {
+    "id": "CS-BAL-009",
+    "query": "Seorang krama desa adat di Bali mencoba mengklaim tanah Ayahan Desa yang ia tempati sebagai hak milik pribadi melalui program sertifikasi pemerintah (PTSL), namun ditentang oleh Desa Adat.",
+    "gold_label": "B",
+    "expert_votes": {
+      "ahli1": "B",
+      "ahli2": "B",
+      "ahli3": "C"
+    },
+    "consensus": "majority"
+  },
+  {
+    "id": "CS-NAS-022",
+    "query": "Pewaris memberikan seluruh hartanya kepada lembaga sosial melalui wasiat adat. Ahli waris inti menggugat berdasarkan konsep Legitime Portie (bagian mutlak) dalam hukum nasional.",
+    "gold_label": "C",
+    "expert_votes": {
+      "ahli1": "C",
+      "ahli2": "C",
+      "ahli3": "A"
+    },
+    "consensus": "majority"
+  },
+  {
+    "id": "CS-MIN-015",
+    "query": "Sepasang kekasih dari suku yang sama di Minangkabau menikah secara sah di KUA. Masyarakat adat menjatuhkan sanksi 'buang adat' (diusir dari nagari) karena perkawinan sesuku dianggap inkes menurut adat.",
+    "gold_label": "C",
+    "expert_votes": {
+      "ahli1": "C",
+      "ahli2": "C",
+      "ahli3": "A",
+      "ahli4": "A"
+    },
+    "consensus": "adjudicated",
+    "interview_notes": {
+      "ahli4": {
+        "confidence": "Tinggi",
+        "rationale": "Perkawinan yang sah menurut negara dilindungi hukum nasional dan tidak dapat dibatalkan oleh sanksi adat. Sanksi buang adat yang menghilangkan hak dasar bertentangan dengan prinsip HAM dan konstitusi.",
+        "reference_1": "UU Perkawinan No. 1 Tahun 1974",
+        "reference_2": "UUD 1945 Pasal 28B",
+        "session_date": "2026-02-09",
+        "interviewer_name": "Tim Nusantara-Agent",
+        "mode": "online_interview",
+        "ingested_at_utc": "2026-02-09T02:48:34Z"
+      }
+    },
+    "adjudication_round2": "2026-02-19"
+  },
+  {
+    "id": "CS-MIN-025",
+    "query": "Seorang Mamak Kepala Waris ingin meminjam uang ke bank untuk usaha kaum dengan menjaminkan aset kaum. Bank ragu terhadap kapasitas hukum mamak tersebut sebagai subjek hukum perdata perorangan.",
+    "gold_label": "C",
+    "expert_votes": {
+      "ahli1": "C",
+      "ahli2": "C",
+      "ahli3": "C"
+    },
+    "consensus": "unanimous"
+  },
+  {
+    "id": "CS-JAW-030",
+    "query": "Pewaris membagi harta kepada anak laki-laki dan perempuan secara sama rata (sigar semangka) sesuai pesan lisan. Anak laki-laki menggugat ingin menggunakan hukum Islam (2:1).",
+    "gold_label": "C",
+    "expert_votes": {
+      "ahli1": "C",
+      "ahli2": "C",
+      "ahli3": "C"
+    },
+    "consensus": "adjudicated",
+    "adjudication_round2": "2026-02-19"
+  },
+  {
+    "id": "GS-0001",
+    "query": "Dalam masyarakat Minangkabau, harta warisan dibedakan menjadi dua kategori utama: Harta Pusako Tinggi dan Harta Pusako Rendah.",
+    "gold_label": "B",
+    "expert_votes": {
+      "ahli1": "B",
+      "ahli2": "B"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Mendefinisikan konsep dasar hukum adat (pembagian jenis harta) tanpa indikasi konflik dengan hukum nasional.",
+        "reference_1": "Adat Minangkabau",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Skenario ini hanya menjelaskan kategori harta dalam sistem adat Minangkabau, tanpa adanya konflik dengan hukum nasional atau tuntutan dari pihak manapun. Ini murni deskripsi hukum adat.",
+        "reference_1": "Hukum adat Minangkabau tentang klasifikasi harta",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0002",
+    "query": "Harta Pusako Tinggi adalah harta turun-temurun yang dimiliki oleh suatu kaum secara kolektif dan diwariskan dari garis ibu (matrilineal).",
+    "gold_label": "B",
+    "expert_votes": {
+      "ahli1": "B",
+      "ahli2": "B"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Penjelasan murni tentang definisi Harta Pusako Tinggi menurut hukum adat.",
+        "reference_1": "Adat Minangkabau",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Deskripsi tentang definisi dan karakteristik Harta Pusako Tinggi dalam sistem matrilineal Minangkabau. Tidak ada konflik atau tuntutan hukum yang disebutkan.",
+        "reference_1": "Hukum adat Minangkabau tentang Pusako Tinggi",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0004",
+    "query": "Harta ini tidak boleh diperjualbelikan, kecuali dalam kondisi darurat yang diatur secara ketat oleh adat (seperti mayat terbujur di tengah rumah).",
+    "gold_label": "B",
+    "expert_votes": {
+      "ahli1": "B",
+      "ahli2": "B"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Aturan internal adat mengenai larangan jual beli pusako kecuali 4 syarat darurat. Murni yurisdiksi adat.",
+        "reference_1": "Pepatah Adat",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Prinsip adat tentang larangan jual beli harta pusako tinggi (\"dijua indak dimakan bali\"). Ini adalah norma internal adat tanpa dimensi nasional.",
+        "reference_1": "Prinsip adat Minangkabau \"dijua indak dimakan bali\"",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0005",
+    "query": "Sebaliknya, Harta Pusako Rendah adalah harta hasil pencaharian sendiri oleh orang tua selama masa perkawinan.",
+    "gold_label": "B",
+    "expert_votes": {
+      "ahli1": "B",
+      "ahli2": "B"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Definisi Harta Pusako Rendah sebagai harta pencaharian. Masih dalam koridor definisi adat.",
+        "reference_1": "Adat Minangkabau",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Definisi Harta Pusako Rendah (harta pencaharian) dalam sistem adat Minangkabau. Deskripsi normatif tanpa konflik.",
+        "reference_1": "Hukum adat Minangkabau tentang Pusako Rendah",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0006",
+    "query": "Berbeda dengan Pusako Tinggi, Pusako Rendah dapat diwariskan kepada anak kandung sesuai dengan ketentuan hukum Islam atau kesepakatan keluarga, yang seringkali memicu ketegangan antara hak kemenakan (berdasarkan adat matrilineal) dan hak anak (berdasarkan hukum nasional/Islam).",
+    "gold_label": "C",
+    "expert_votes": {
+      "ahli1": "C",
+      "ahli2": "C"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Teks secara eksplisit menyebutkan \"ketegangan\" antara hak kemenakan (Adat) dan hak anak (Nasional/Islam). Memerlukan sintesis.",
+        "reference_1": "Yurisprudensi MA",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Skenario secara eksplisit menyebutkan \"ketegangan antara hak kemenakan (adat) dan hak anak (hukum nasional/Islam)\". Ini adalah konflik aktif antara dua sistem hukum yang memerlukan sintesis.",
+        "reference_1": "Hukum adat Minangkabau; Kompilasi Hukum Islam (KHI)",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0025",
+    "query": "Dalam masyarakat Minangkabau, harta warisan dibedakan menjadi dua kategori utama: Harta Pusako Tinggi dan Harta Pusako Rendah. Harta Pusako Tinggi adalah harta turun-temurun yang dimiliki oleh suatu kaum secara kolektif dan diwariskan dari garis ibu (matrilineal). Pengelolaan harta ini berada di bawah otoritas Mamak Kepala Waris, namun kepemilikannya tetap pada anggota perempuan dalam kaum tersebut. Harta ini tidak boleh diperjualbelikan, kecuali dalam kondisi darurat yang diatur secara ketat oleh adat (seperti mayat terbujur di tengah rumah).",
+    "gold_label": "B",
+    "expert_votes": {
+      "ahli1": "B",
+      "ahli2": "B"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Repetisi definisi komprehensif mengenai Harta Pusako Tinggi. Murni deskripsi sistem adat.",
+        "reference_1": "Adat Minangkabau",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Kompilasi deskriptif tentang Harta Pusako Tinggi. Tidak ada konflik atau tuntutan hukum, hanya penjelasan sistem adat.",
+        "reference_1": "Hukum adat Minangkabau tentang Pusako Tinggi",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0026",
+    "query": "Sebaliknya, Harta Pusako Rendah adalah harta hasil pencaharian sendiri oleh orang tua selama masa perkawinan. Berbeda dengan Pusako Tinggi, Pusako Rendah dapat diwariskan kepada anak kandung sesuai dengan ketentuan hukum Islam atau kesepakatan keluarga, yang seringkali memicu ketegangan antara hak kemenakan (berdasarkan adat matrilineal) dan hak anak (berdasarkan hukum nasional/Islam).",
+    "gold_label": "C",
+    "expert_votes": {
+      "ahli1": "C",
+      "ahli2": "C"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Menjelaskan potensi konflik pewarisan Pusako Rendah antara Kemenakan (Adat) vs Anak (Nasional).",
+        "reference_1": "Yurisprudensi MA",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Sama seperti GS-0006, skenario menyebutkan \"ketegangan\" antara hak kemenakan (adat) dan hak anak (nasional/Islam). Ini indikasi jelas konflik norma.",
+        "reference_1": "Hukum adat Minangkabau; Kompilasi Hukum Islam (KHI)",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0033",
+    "query": "**Konflik Norma:** Terdapat perbedaan penafsiran bagian istri. NLA menyatakan istri mendapat ⅓ dari harta warisan (setelah pemisahan harta bersama), sementara ALA menyatakan istri mendapat ¼ dari harta warisan secara langsung. **Trade-off:** \\- **NLA** mengikuti logika pemisahan harta bersama terlebih dahulu (½ untuk istri), baru kemudian membagi warisan. Ini lebih detail namun kompleks. \\- **ALA** mengacu langsung pada Pasal 852 KUHPerdata untuk bagian tetap, lebih sederhana namun mungkin mengabaikan langkah pemisahan harta.",
+    "gold_label": "C",
+    "expert_votes": {
+      "ahli1": "C",
+      "ahli2": "C"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Sedang",
+        "rationale": "Perbandingan teknis pembagian waris antara pendekatan Nasional (NLA/KUHPerdata) vs Adat/Lokal (ALA). Melibatkan dua sistem.",
+        "reference_1": "KUHPerdata Ps 852",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Sedang",
+        "rationale": "Skenario menunjukkan perbedaan penafsiran dalam hukum nasional itu sendiri (antara pendekatan pemisahan harta bersama vs penerapan langsung Pasal 852). Ini bukan konflik adat-nasional, melainkan perbedaan interpretasi dalam sistem nasional. Namun karena melibatkan pilihan pendekatan hukum, tetap perlu sintesis atau harmonisasi internal.",
+        "reference_1": "KUHPerdata Pasal 852; UU No. 1 Tahun 1974",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0034",
+    "query": "**Keputusan Pluralistik:** Kedua pendekatan sah dalam praktik hukum. **Langkah 1:** Pisahkan harta bersama. ½ untuk istri, ½ masuk warisan. **Langkah 2:** Bagi harta warisan (½ harta bersama \\+ harta pribadi). **Menurut ALA/Pasal 852:** Istri ¼, dua anak ¾ (masing-masing ⅜). **Menurut NLA:** Istri ⅓, dua anak ⅔ (masing-masing ⅓). Dalam banyak putusan, pendekatan ALA (Pasal 852\\) lebih sering diterapkan langsung pada harta warisan setelah pemisahan. Konsultasi ahli diperlukan untuk kasus spesifik.",
+    "gold_label": "C",
+    "expert_votes": {
+      "ahli1": "C",
+      "ahli2": "C"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Sedang",
+        "rationale": "Diskusi tentang \"Keputusan Pluralistik\" dan perbandingan hitungan matematis antara KUHPerdata dan praktik lapangan.",
+        "reference_1": "KUHPerdata vs Praktik",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Sedang",
+        "rationale": "Sama dengan GS-0033, ini adalah perbedaan pendekatan dalam sistem hukum nasional, bukan konflik adat-nasional. Namun karena skenario menyebut \"Keputusan Pluralistik\", tetap relevan sebagai C.",
+        "reference_1": "KUHPerdata Pasal 852; Yurisprudensi MA",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0035",
+    "query": "**Jawaban Final:** Hak atas pusako tinggi beralih kepada kemenakan (anak saudara perempuan mamak) sebagai ahli waris menurut garis matrilineal, bukan kepada anak kandung mamak. **Konflik & Trade-off:** \\- **Hukum Adat vs. Hukum Nasional (Warisan Individual):** Hukum adat menjaga keutuhan harta kolektif kaum (garis ibu), sedangkan hukum nasional cenderung pada warisan individual kepada anak kandung.",
+    "gold_label": "C",
+    "expert_votes": {
+      "ahli1": "C",
+      "ahli2": "C"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Eksplisit menyebutkan \"Konflik & Trade-off: Hukum Adat vs Hukum Nasional\".",
+        "reference_1": "Konflik Norma",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Skenario secara eksplisit menyebut \"Konflik & Trade-off\" antara hukum adat (kemenakan) dan hukum nasional (anak kandung). Ini adalah konflik aktif yang memerlukan sintesis.",
+        "reference_1": "Hukum adat Minangkabau; KUHPerdata; KHI",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0037",
+    "query": "Konflik norma terjadi antara hukum nasional (UU Perkawinan/KUHPerdata) yang mengutamakan anak kandung, dengan hukum adat matrilineal Minangkabau yang mengutamakan kemenakan untuk harta pusako. **Trade-off:** \\- Pilih hukum nasional: anak kandung menang, tetapi mengabaikan struktur sosial adat dan prinsip kekerabatan matrilineal. \\- Pilih hukum adat: kemenakan menang, tetapi mengesampingkan hak anak kandung berdasarkan undang-undang dan prinsip keadilan individual.",
+    "gold_label": "C",
+    "expert_votes": {
+      "ahli1": "C",
+      "ahli2": "C"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Analisis langsung mengenai benturan norma UU Perkawinan vs Adat Matrilineal.",
+        "reference_1": "UU Perkawinan",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Skenario ini adalah definisi sempurna dari konflik norma nasional-adat, dengan trade-off yang dijelaskan secara gamblang. Jelas memerlukan sintesis.",
+        "reference_1": "UU No. 1 Tahun 1974; KUHPerdata; Hukum adat Minangkabau",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0040",
+    "query": "**Konflik Norma & Trade-off:** Konflik muncul karena dua logika berbeda: adat menekankan kelangsungan *kaum* (kelompok matrilineal) melalui mamak, sementara hukum nasional menjamin hak individual anak atas orang tua kandungnya. Trade-off-nya antara stabilitas sistem kekerabatan kolektif (adat) dengan kepastian dan perlindungan hukum individual (nasional). **Keputusan Pluralistik:** Kedua sistem dapat berjalan paralel dengan mengakui ruang berlakunya masing-masing. Hukum nasional mengatur harta pencaharian (pusako rendah) untuk anak kandung.",
+    "gold_label": "C",
+    "expert_votes": {
+      "ahli1": "C",
+      "ahli2": "C"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Teks membahas \"Konflik Norma\" antara stabilitas kaum (adat) dan hak individu (nasional).",
+        "reference_1": "Teori Hukum Adat",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Eksplisit menyebut \"Konflik Norma & Trade-off\" dan \"Keputusan Pluralistik\". Ini adalah contoh klasik kasus C.",
+        "reference_1": "Hukum adat Minangkabau; UU No. 1 Tahun 1974; KUHPerdata",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0041",
+    "query": "Adat mengatur harta pusaka tinggi melalui mamak. Pendekatan ini menghormati otonomi hukum adat dalam lingkupnya sambil menjamin hak anak secara nasional.",
+    "gold_label": "C",
+    "expert_votes": {
+      "ahli1": "C",
+      "ahli2": "C"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Sedang",
+        "rationale": "Mencoba mendamaikan otonomi adat (Mamak) dengan jaminan hak anak (Nasional).",
+        "reference_1": "Integrasi Hukum",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Sedang",
+        "rationale": "Skenario ini adalah kelanjutan dari sintesis yang diusulkan dalam GS-0040. Menunjukkan pembagian ranah antara adat (pusako tinggi) dan nasional (hak anak).",
+        "reference_1": "Hukum adat Minangkabau; UU No. 1 Tahun 1974",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0008",
+    "query": "Dalam sistem ini, anak laki-laki secara tradisional memiliki hak waris utama dan tanggung jawab keagamaan keluarga, seperti merawat orang tua, melaksanakan upacara pengabenan, dan memelihara sanggah/merajan keluarga.",
+    "gold_label": "B",
+    "expert_votes": {
+      "ahli1": "B",
+      "ahli2": "B"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Menjelaskan tanggung jawab adat (ngaben, merajan) yang melekat pada hak waris laki-laki.",
+        "reference_1": "Adat Bali",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Penjelasan tentang hak dan kewajiban anak laki-laki dalam sistem patrilineal Bali. Deskriptif, tanpa konflik.",
+        "reference_1": "Hukum adat Bali",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0009",
+    "query": "Sentana Rajeg: Jika sebuah keluarga tidak memiliki anak laki-laki, mereka dapat mengangkat seorang anak perempuan menjadi \"sentana rajeg\".",
+    "gold_label": "B",
+    "expert_votes": {
+      "ahli1": "B",
+      "ahli2": "B"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Definisi konsep Sentana Rajeg (pengangkatan anak perempuan). Mekanisme internal adat.",
+        "reference_1": "Awig-awig",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Deskripsi institusi Sentana Rajeg dalam adat Bali. Tidak ada konflik.",
+        "reference_1": "Hukum adat Bali tentang Sentana Rajeg",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0011",
+    "query": "Untuk melanjutkan keturunan, sentana rajeg biasanya melakukan perkawinan \"nyentana\" (atau \"nyeburin\"), di mana suaminya masuk ke dalam keluarga istri dan melepaskan hak waris di keluarga asalnya.",
+    "gold_label": "B",
+    "expert_votes": {
+      "ahli1": "B",
+      "ahli2": "B"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Menjelaskan perkawinan Nyentana. Murni pranata hukum adat.",
+        "reference_1": "Adat Bali",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Penjelasan tentang perkawinan nyentana sebagai konsekuensi dari Sentana Rajeg. Deskriptif.",
+        "reference_1": "Hukum adat Bali tentang perkawinan nyentana",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0013",
+    "query": "Harta ini dikelola untuk kepentingan bersama, terutama pembiayaan upacara-upacara adat dan keagamaan (yadnya).",
+    "gold_label": "B",
+    "expert_votes": {
+      "ahli1": "B",
+      "ahli2": "B"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Menjelaskan fungsi Druwe Tengah untuk Yadnya. Tidak ada konflik nasional.",
+        "reference_1": "Adat Bali",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Penjelasan fungsi Druwe Tengah. Murni adat.",
+        "reference_1": "Hukum adat Bali",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0014",
+    "query": "Selain itu, terdapat \"harta druwe gabro\" yang merupakan harta yang diperoleh suami istri selama masa perkawinan.",
+    "gold_label": "B",
+    "expert_votes": {
+      "ahli1": "B",
+      "ahli2": "B"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Definisi Druwe Gabro. Meskipun mirip gono-gini, istilah dan konteksnya masih adat.",
+        "reference_1": "Adat Bali",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Pengenalan konsep Druwe Gabro (harta bersama perkawinan) dalam adat Bali. Deskriptif.",
+        "reference_1": "Hukum adat Bali tentang Druwe Gabro",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0027",
+    "query": "Hukum Adat Waris Bali: Sentana Rajeg dan Druwe Tengah Sistem kekerabatan masyarakat adat Bali bersifat patrilineal (kapurusa), di mana garis keturunan ditarik dari pihak laki-laki. Dalam sistem ini, anak laki-laki secara tradisional memiliki hak waris utama dan tanggung jawab keagamaan keluarga, seperti merawat orang tua, melaksanakan upacara pengabenan, dan memelihara sanggah/merajan keluarga. Sentana Rajeg: Jika sebuah keluarga tidak memiliki anak laki-laki, mereka dapat mengangkat seorang anak perempuan menjadi \"sentana rajeg\".",
+    "gold_label": "B",
+    "expert_votes": {
+      "ahli1": "B",
+      "ahli2": "B"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Repetisi definisi sistem Kapurusa dan tanggung jawab keagamaan.",
+        "reference_1": "Adat Bali",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Kompilasi deskriptif tentang sistem kekerabatan Bali dan institusi Sentana Rajeg. Tidak ada konflik.",
+        "reference_1": "Hukum adat Bali",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0028",
+    "query": "Status hukum anak perempuan tersebut ditingkatkan sehingga disamakan dengan anak laki-laki dalam hal pewarisan. Untuk melanjutkan keturunan, sentana rajeg biasanya melakukan perkawinan \"nyentana\" (atau \"nyeburin\"), di mana suaminya masuk ke dalam keluarga istri dan melepaskan hak waris di keluarga asalnya. Druwe Tengah: Hukum adat Bali mengenal konsep \"druwe tengah\" atau \"duwe tengah\", yaitu harta bersama keluarga atau kerabat yang tidak dibagi secara individual.",
+    "gold_label": "B",
+    "expert_votes": {
+      "ahli1": "B",
+      "ahli2": "B"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Repetisi penjelasan status Sentana Rajeg dan Nyentana.",
+        "reference_1": "Adat Bali",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Lanjutan deskripsi tentang Sentana Rajeg dan pengenalan Druwe Tengah. Murni adat.",
+        "reference_1": "Hukum adat Bali",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0029",
+    "query": "Harta ini dikelola untuk kepentingan bersama, terutama pembiayaan upacara-upacara adat dan keagamaan (yadnya). Selain itu, terdapat \"harta druwe gabro\" yang merupakan harta yang diperoleh suami istri selama masa perkawinan.",
+    "gold_label": "B",
+    "expert_votes": {
+      "ahli1": "B",
+      "ahli2": "B"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Repetisi definisi Druwe Tengah dan Druwe Gabro.",
+        "reference_1": "Adat Bali",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Deskripsi fungsi Druwe Tengah dan pengenalan Druwe Gabro. Tidak ada konflik.",
+        "reference_1": "Hukum adat Bali",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0046",
+    "query": "\\- **KUHPerdata:** Anak angkat bukan ahli waris berdasarkan keturunan; hak waris hanya dapat diberikan melalui wasiat, memberikan kepastian hukum formal tetapi mengabaikan konteks sosial-budaya. **Keputusan Pluralistik:** Penyelesaian harus mempertimbangkan **komunitas hukum** si pewaris. Bagi masyarakat Bali yang masih memegang adat, hukum adat Bali seharusnya menjadi pedoman utama. Untuk mengantisipasi konflik dengan sistem nasional, disarankan melakukan pengangkatan secara resmi melalui penetapan pengadilan dan dibuatkan wasiat.",
+    "gold_label": "C",
+    "expert_votes": {
+      "ahli1": "C",
+      "ahli2": "C"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Membandingkan kepastian hukum formal KUHPerdata dengan konteks sosial budaya adat. Sintesis diperlukan.",
+        "reference_1": "Pluralisme Hukum",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Skenario menjelaskan perbedaan pendekatan antara adat dan KUHPerdata, serta mengusulkan solusi sintesis (penetapan pengadilan \\+ wasiat).",
+        "reference_1": "KUHPerdata; UU No. 23 Tahun 2006 tentang Administrasi Kependudukan ; PP No. 54 Tahun 2007",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0048",
+    "query": "**Konflik Norma:** Terjadi benturan antara penafsiran hukum adat baru yang lebih egaliter (MDP Bali 2010\\) yang mengakui hak perempuan, dengan hukum adat patrilineal tradisional Bali yang membatasi hak waris pada garis laki-laki. **Trade-off:** Di satu sisi, prinsip kesetaraan gender dan keadilan individu (didukung MDP 2010). Di sisi lain, kelestarian sistem kekerabatan adat dan kepastian hukum tradisional yang menjaga tanah sebagai harta turun-temurun (*druwe*).",
+    "gold_label": "C",
+    "expert_votes": {
+      "ahli1": "C",
+      "ahli2": "C"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Pertentangan antara Adat Tradisional (Patrilineal murni) vs Adat Reformasi/Nasional (MDP 2010/Kesetaraan).",
+        "reference_1": "Keputusan MDP 2010",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Konflik terjadi antara dua penafsiran dalam sistem adat itu sendiri (tradisional vs MDP 2010), namun MDP 2010 adalah hasil sintesis dengan nilai-nilai nasional (kesetaraan gender). Ini adalah konflik internal adat yang dipicu oleh pengaruh nasional.",
+        "reference_1": "Putusan MDP Bali 2010; Hukum adat Bali tradisional",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0049",
+    "query": "**Prioritas** adalah penyelesaian melalui **musyawarah di Desa Pakraman** dengan merujuk pada MDP 2010 dan *awig-awig*. **Sifat tanah** menjadi penentu kunci: jika merupakan **harta bersama (*gono-gini*)**, tuntutan perempuan lebih kuat. Jika **harta warisan turun-temurun (*druwe*)**, norma patrilineal tradisional lebih dominan. Jika musyawarah gagal, pengadilan akan memeriksa keabsahan MDP 2010, sifat tanah, dan prinsip keadilan, dengan KUHPerdata sebagai pembanding subsidiair.",
+    "gold_label": "C",
+    "expert_votes": {
+      "ahli1": "C",
+      "ahli2": "C"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Menjelaskan hierarki penyelesaian: Musyawarah Adat \\-\\> Pengadilan Nasional (dengan KUHPerdata sebagai pembanding).",
+        "reference_1": "Prosedur Sengketa",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Skenario ini adalah contoh konkret sintesis: musyawarah adat dengan rujukan MDP 2010, dan jika gagal, pengadilan nasional dengan KUHPerdata sebagai pembanding.",
+        "reference_1": "Putusan MDP Bali 2010; Awig-awig Desa Pakraman; KUHPerdata",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0102",
+    "query": "\\# Analisis Hukum: Makna \"Sentana\" dan Posisinya dalam Pewarisan Keluarga Bali Sebagai Hakim Supervisor dalam pluralisme hukum, saya akan menganalisis pertanyaan ini dengan mensintesis perspektif **hukum nasional (KUHPerdata)** dan **hukum adat Bali**, serta mengakui konflik norma yang ada beserta solusi pluralistiknya.",
+    "gold_label": "C",
+    "expert_votes": {
+      "ahli1": "C",
+      "ahli2": "C"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Sedang",
+        "rationale": "Analisis Hakim Supervisor yang \"mensintesis perspektif hukum nasional dan adat\".",
+        "reference_1": "Analisis Hakim",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Judul skenario sendiri menyebut \"mensintesis perspektif hukum nasional dan hukum adat Bali\" dan \"mengakui konflik norma\". Jelas ini kasus C.",
+        "reference_1": "Hukum adat Bali; KUHPerdata",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0103",
+    "query": "MAKNA \"SENTANA\" DALAM ADAT BALI\\*\\* **Sentana** (dari bahasa Sanskerta: *santāna* \\= keturunan) dalam adat Bali merujuk pada **ahli waris utama** yang bertanggung jawab melanjutkan garis keturunan (*purusa*) dan pelaksanaan upacara keagamaan keluarga (Hindu Bali). **Sentana laki-laki** (*purusa*) adalah penerus utama garis keluarga 2\\. **Sentana putri** diakui dalam kondisi tertentu (ketiadaan anak laki-laki) 3\\. Sistem ini bersifat **patrilineal** dengan variasi lokal (*desa, kala, patra*) \\#\\# \\*\\*II.",
+    "gold_label": "B",
+    "expert_votes": {
+      "ahli1": "B",
+      "ahli2": "B"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Definisi etimologis dan yuridis istilah \"Sentana\" dalam konteks Hindu Bali.",
+        "reference_1": "Kamus Adat",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Skenario ini hanya menjelaskan definisi dan konsep Sentana dalam adat Bali, tanpa menyebut konflik dengan hukum nasional. Murni deskriptif.",
+        "reference_1": "Hukum adat Bali tentang Sentana",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0015",
+    "query": "Hukum Adat Waris Jawa: Gono-Gini dan Kekerabatan Bilateral Masyarakat Jawa menganut sistem kekerabatan bilateral atau parental.",
+    "gold_label": "B",
+    "expert_votes": {
+      "ahli1": "B",
+      "ahli2": "B"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Definisi sistem kekerabatan bilateral Jawa.",
+        "reference_1": "Adat Jawa",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Deskripsi sistem kekerabatan Jawa. Tidak ada konflik.",
+        "reference_1": "Hukum adat Jawa tentang sistem bilateral",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0016",
+    "query": "Dalam sistem ini, garis keturunan ditarik dari pihak ayah dan ibu secara seimbang.",
+    "gold_label": "B",
+    "expert_votes": {
+      "ahli1": "B",
+      "ahli2": "B"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Penjelasan teknis garis keturunan bilateral.",
+        "reference_1": "Adat Jawa",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Lanjutan deskripsi sistem bilateral Jawa.",
+        "reference_1": "Hukum adat Jawa",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0017",
+    "query": "Kedudukan anak laki-laki dan anak perempuan dalam hukum waris adat pada dasarnya adalah sama atau sederajat sebagai ahli waris dari harta peninggalan orang tua.",
+    "gold_label": "B",
+    "expert_votes": {
+      "ahli1": "B",
+      "ahli2": "B"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Prinsip kesederajatan anak laki-laki dan perempuan dalam adat Jawa.",
+        "reference_1": "Adat Jawa",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Prinsip kesetaraan gender dalam waris adat Jawa. Deskriptif.",
+        "reference_1": "Hukum adat Jawa",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0018",
+    "query": "Harta Gono-Gini dan Harta Bawaan: Hukum adat Jawa membedakan antara \"harta gono-gini\" dan \"harta bawaan\".",
+    "gold_label": "B",
+    "expert_votes": {
+      "ahli1": "B",
+      "ahli2": "B"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Pembedaan kategori harta Gono-gini vs Bawaan dalam terminologi Jawa.",
+        "reference_1": "Adat Jawa",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Pengenalan konsep gono-gini dan harta bawaan dalam adat Jawa.",
+        "reference_1": "Hukum adat Jawa",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0024",
+    "query": "Namun, nilai utama dalam pembagian waris Jawa adalah \"rukun\" (harmoni) yang dicapai melalui musyawarah mufakat, di mana pembagian dapat disesuaikan berdasarkan kebutuhan dan pengabdian masing-masing ahli waris kepada orang tua.",
+    "gold_label": "B",
+    "expert_votes": {
+      "ahli1": "B",
+      "ahli2": "B"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Prinsip \"Rukun\" dan musyawarah sebagai nilai utama hukum adat Jawa.",
+        "reference_1": "Asas Hukum Adat",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Penjelasan nilai utama adat Jawa: rukun dan musyawarah. Deskriptif.",
+        "reference_1": "Hukum adat Jawa",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0030",
+    "query": "Hukum Adat Waris Jawa: Gono-Gini dan Kekerabatan Bilateral Masyarakat Jawa menganut sistem kekerabatan bilateral atau parental. Dalam sistem ini, garis keturunan ditarik dari pihak ayah dan ibu secara seimbang. Kedudukan anak laki-laki dan anak perempuan dalam hukum waris adat pada dasarnya adalah sama atau sederajat sebagai ahli waris dari harta peninggalan orang tua. Harta Gono-Gini dan Harta Bawaan: Hukum adat Jawa membedakan antara \"harta gono-gini\" dan \"harta bawaan\".",
+    "gold_label": "B",
+    "expert_votes": {
+      "ahli1": "B",
+      "ahli2": "B"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Kompilasi definisi sistem bilateral dan kesetaraan gender Jawa.",
+        "reference_1": "Adat Jawa",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Kompilasi deskriptif tentang sistem waris Jawa. Tidak ada konflik.",
+        "reference_1": "Hukum adat Jawa",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0031",
+    "query": "Harta gono-gini (harta bersama) adalah harta yang diperoleh suami dan istri selama masa perkawinan. Jika terjadi perceraian atau kematian, masing-masing pihak biasanya berhak atas separuh dari harta gono-gini. Sementara itu, \"harta bawaan\" (harta asal) adalah harta yang dimiliki masing-masing pihak sebelum perkawinan berlangsung atau diperoleh secara pribadi (misal dari warisan leluhur mereka sendiri).",
+    "gold_label": "B",
+    "expert_votes": {
+      "ahli1": "B",
+      "ahli2": "B"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Kompilasi definisi Gono-gini dan Bawaan.",
+        "reference_1": "Adat Jawa",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Tinggi",
+        "rationale": "Deskripsi lengkap tentang gono-gini dan harta bawaan. Sejalan dengan hukum nasional.",
+        "reference_1": "Hukum adat Jawa; UU No. 1 Tahun 1974 Pasal 35",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0054",
+    "query": "**Jawaban Final:** Konsep gono-gini (harta bersama perkawinan) dan harta bawaan (harta pribadi) dalam adat Jawa diakui secara hukum nasional (UU Perkawinan) dan adat. Namun, konteks yang diberikan hanya menjelaskan sistem pewarisan adat Minangkabau, bukan Jawa. **Konflik & Trade-off:** Terdapat ketegangan antara klaim NLA (yang menjelaskan hukum Jawa berdasarkan pengetahuan umum) dan ALA (yang menolak menjawab karena konteks tidak relevan).",
+    "gold_label": "D",
+    "expert_votes": {
+      "ahli1": "D",
+      "ahli2": "D"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Skenario menyatakan \"konteks yang diberikan hanya menjelaskan adat Minangkabau, bukan Jawa\" dan menolak menjawab. Informasi tidak konsisten/cukup.",
+        "reference_1": "\\-",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Sedang",
+        "rationale": "Skenario ini membingungkan karena menyebut konteks Minangkabau tapi membahas Jawa, dan ada ketegangan antara dua sumber. Informasi tidak cukup untuk menentukan label yang jelas.",
+        "reference_1": "\\-",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  },
+  {
+    "id": "GS-0055",
+    "query": "Trade-off-nya adalah antara memberikan informasi umum yang diakui secara hukum versus berpegang ketat pada sumber konteks yang tersedia. **Keputusan Pluralistik:** Dalam pluralisme hukum, pengadilan akan mengakui dan menerapkan hukum adat Jawa (gono-gini dan harta bawaan) selama tidak bertentangan dengan hukum nasional. Namun, untuk analisis spesifik, diperlukan konsultasi dengan ahli atau tetua adat Jawa dan pembuktian di pengadilan, karena konteks yang diberikan tidak memadai.",
+    "gold_label": "D",
+    "expert_votes": {
+      "ahli1": "D",
+      "ahli2": "D"
+    },
+    "consensus": "agreed",
+    "interview_notes": {
+      "ahli1": {
+        "confidence": "Tinggi",
+        "rationale": "Skenario menyebutkan \"konteks yang diberikan tidak memadai\" untuk analisis spesifik.",
+        "reference_1": "\\-",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      },
+      "ahli2": {
+        "confidence": "Sedang",
+        "rationale": "Skenario ini adalah diskusi metodologis, bukan kasus konkret dengan fakta yang jelas. Informasi tidak cukup untuk menentukan label.",
+        "reference_1": "\\-",
+        "session_date": "2026-02-19",
+        "mode": "batch2_labeling"
+      }
+    }
+  }
+]

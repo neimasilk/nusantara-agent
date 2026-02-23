@@ -287,17 +287,31 @@ Living document yang mencatat setiap kegagalan, hasil negatif, dan pendekatan ya
 - **Tindakan:** ACKNOWLEDGED
 - **Detail Tindakan:** Audit artefak disimpan di `docs/handoffs/20260219_p008_jawa_asp_json_consistency.md`. Prioritas lanjut: tutup gap prosedural sengketa dan rule contemporary/custom terlebih dahulu.
 
+### F-018: GAP Rules Regression (-7.1pp) — Rollback 24 Rules
+
+- **Tanggal:** 2026-02-20
+- **Eksperimen:** 09_ablation_study (P-008 rule coverage expansion)
+- **Kategori:** NEGATIVE_RESULT
+- **Severity:** MAJOR
+- **Status:** RESOLVED (rollback)
+- **Deskripsi:** Penambahan 24 GAP rules (dirancang via Prompt 15/Gemini) untuk mencapai 100% ASP coverage menyebabkan regresi akurasi. Sebelum penambahan: ASP+Ollama 70.0%. Setelah penambahan: turun ke 62.9% (-7.1pp). Setelah penghapusan `#show` directives yang tidak sengaja ter-remove: turun lebih jauh ke 55.7%. Rules di-rollback ke 71 rules original (commit rollback 2026-02-20).
+- **Expected vs Actual:** Expected: penambahan 24 rules menutup coverage gap dan meningkatkan atau mempertahankan akurasi. Actual: akurasi turun 7.1pp (Ollama) akibat rules baru meng-override prediksi rules lama yang sudah benar.
+- **Root Cause:** Rules baru terlalu umum (overspecification) — mendefinisikan kondisi yang seharusnya tidak meng-override hard constraints yang sudah tepat. ASP grounding memprioritaskan facts yang lebih baru/umum, sehingga rules spesifik yang sudah benar tumpang tindih dengan rules baru yang salah.
+- **Implikasi untuk Paper:** Tabel di paper mencantumkan 95 expert-verified rules tetapi hanya 71 yang di-encode aktif. Kalimat eksplisit diperlukan: "The remaining 24 rules caused accuracy regression when added and were rolled back; they are documented as limitations of the current encoding." Coverage 100% bukan target yang benar — precision > coverage untuk ASP rule base.
+- **Tindakan:** RESOLVED
+- **Detail Tindakan:** Rollback ke 71 rules original. Canonical benchmark final menggunakan 71 rules ini: ASP-only 58.6% (41/70), ASP+Ollama 64.3% (45/70), ASP+DeepSeek 68.6% (48/70). Lesson learned: setiap penambahan rules harus divalidasi dengan benchmark run sebelum di-commit.
+
 ---
 
 ## Statistik Ringkasan
 
 | Kategori | Count | Critical | Major | Minor |
 |----------|-------|----------|-------|-------|
-| NEGATIVE_RESULT | 2 | 0 | 2 | 0 |
+| NEGATIVE_RESULT | 3 | 0 | 3 | 0 |
 | ABANDONED_APPROACH | 0 | 0 | 0 | 0 |
 | TECHNICAL_FAILURE | 2 | 0 | 1 | 1 |
 | ASSUMPTION_VIOLATED | 1 | 1 | 0 | 0 |
 | LIMITATION_DISCOVERED | 12 | 3 | 9 | 0 |
-| **TOTAL** | **17** | **4** | **12** | **1** |
+| **TOTAL** | **18** | **4** | **13** | **1** |
 
-*Last updated: 2026-02-19 (P-008 Minangkabau + Jawa ASP-JSON consistency audit)*
+*Last updated: 2026-02-23 (F-018: GAP rules regression rollback)*

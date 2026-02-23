@@ -1,0 +1,129 @@
+{
+  "seed": 42,
+  "warning": "LOCKED TEST SET: Jangan gunakan untuk tuning apapun sampai milestone final.",
+  "dev_set": [
+    "CS-BAL-002",
+    "CS-BAL-009",
+    "CS-BAL-014",
+    "CS-JAW-006",
+    "CS-JAW-011",
+    "CS-JAW-030",
+    "CS-LIN-017",
+    "CS-LIN-018",
+    "CS-MIN-004",
+    "CS-MIN-011",
+    "CS-MIN-015",
+    "CS-MIN-025",
+    "CS-NAS-022",
+    "CS-NAS-066",
+    "GS-0001",
+    "GS-0002",
+    "GS-0004",
+    "GS-0005",
+    "GS-0006",
+    "GS-0008",
+    "GS-0009",
+    "GS-0011",
+    "GS-0013",
+    "GS-0014",
+    "GS-0015",
+    "GS-0016",
+    "GS-0017",
+    "GS-0018",
+    "GS-0024",
+    "GS-0025",
+    "GS-0026",
+    "GS-0027",
+    "GS-0028",
+    "GS-0029",
+    "GS-0030",
+    "GS-0031",
+    "GS-0033",
+    "GS-0034",
+    "GS-0035",
+    "GS-0037",
+    "GS-0040",
+    "GS-0041",
+    "GS-0046",
+    "GS-0048",
+    "GS-0049",
+    "GS-0054",
+    "GS-0055",
+    "GS-0102",
+    "GS-0103"
+  ],
+  "locked_test_set": [
+    "CS-BAL-012",
+    "CS-JAW-015",
+    "CS-JAW-019",
+    "CS-LIN-016",
+    "CS-LIN-052",
+    "CS-MIN-005",
+    "CS-MIN-013",
+    "CS-NAS-010",
+    "CS-NAS-041",
+    "GS-0003",
+    "GS-0007",
+    "GS-0010",
+    "GS-0012",
+    "GS-0019",
+    "GS-0020",
+    "GS-0021",
+    "GS-0036",
+    "GS-0038",
+    "GS-0039",
+    "GS-0042",
+    "GS-0045"
+  ],
+  "split_rationale": "Stratified split 70/30 using combined domain+label strata with largest-remainder allocation (seed=42) to preserve proportionality while fixing counts at 49/21.",
+  "diagnostics": {
+    "total_evaluable_cases": 70,
+    "dev_cases": 49,
+    "locked_test_cases": 21,
+    "label_distribution": {
+      "total": {
+        "C": 31,
+        "A": 6,
+        "B": 31,
+        "D": 2
+      },
+      "dev": {
+        "C": 21,
+        "B": 23,
+        "A": 3,
+        "D": 2
+      },
+      "locked_test": {
+        "C": 10,
+        "A": 3,
+        "B": 8
+      }
+    },
+    "domain_distribution": {
+      "total": {
+        "Minangkabau": 17,
+        "Jawa": 16,
+        "Lintas": 4,
+        "Nasional": 7,
+        "Bali": 15,
+        "Other": 11
+      },
+      "dev": {
+        "Bali": 11,
+        "Jawa": 11,
+        "Lintas": 2,
+        "Minangkabau": 12,
+        "Nasional": 5,
+        "Other": 8
+      },
+      "locked_test": {
+        "Bali": 4,
+        "Jawa": 5,
+        "Lintas": 2,
+        "Minangkabau": 5,
+        "Nasional": 2,
+        "Other": 3
+      }
+    }
+  }
+}

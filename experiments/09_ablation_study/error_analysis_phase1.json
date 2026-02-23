@@ -1,0 +1,220 @@
+{
+  "source_files": {
+    "asp_only": "experiments/09_ablation_study/results_fixed_asp_only_2026-02-20.json",
+    "ollama": "experiments/09_ablation_study/results_wordboundary_ollama_2026-02-20.json",
+    "deepseek": "experiments/09_ablation_study/results_deepseek_rollback_2026-02-20.json",
+    "gold_dataset": "data/processed/gold_standard/gs_active_cases.json",
+    "domain_map": "experiments/09_ablation_study/case_id_domain_map.json"
+  },
+  "summary": {
+    "ollama_total_cases": 70,
+    "ollama_wrong_total": 25,
+    "c_to_b_count": 10,
+    "d_recall_error_count": 2
+  },
+  "c_to_b_errors": [
+    {
+      "case_id": "CS-MIN-004",
+      "true_label": "C",
+      "predicted": "B",
+      "domain": "Minangkabau",
+      "query_snippet": "Sepasang suami istri di Minangkabau memiliki harta dari hasil usaha bersama (pencaharian). Suami meninggal tanpa meninggalkan wasiat/hibah tertulis. Kemenakan suami mengklaim harta tersebut harus kembali ke kaum sebagai "
+    },
+    {
+      "case_id": "CS-LIN-052",
+      "true_label": "C",
+      "predicted": "B",
+      "domain": "Lintas",
+      "query_snippet": "Sebuah lembaga adat ingin mengajukan kredit ke Bank Nasional dengan menjaminkan tanah ulayat mereka. Bank meminta bukti kepemilikan formal, sementara tanah tersebut tidak memiliki sertifikat individual melainkan pengakua"
+    },
+    {
+      "case_id": "CS-JAW-015",
+      "true_label": "C",
+      "predicted": "B",
+      "domain": "Jawa",
+      "query_snippet": "Seorang ayah di Jawa memberikan pesan terakhir (wekas) di depan saksi keluarga agar rumah utama diberikan kepada anak bungsunya karena telah merawatnya. Anak-anak lain menuntut pembagian rata sesuai hukum nasional."
+    },
+    {
+      "case_id": "CS-BAL-012",
+      "true_label": "C",
+      "predicted": "B",
+      "domain": "Bali",
+      "query_snippet": "Sengketa mengenai batas sanksi adat kasepekang di Bali. KUHP Baru (UU 1/2023) mulai mengakui sanksi adat, namun terdapat risiko pelanggaran hak asasi manusia mendasar."
+    },
+    {
+      "case_id": "CS-MIN-005",
+      "true_label": "C",
+      "predicted": "B",
+      "domain": "Minangkabau",
+      "query_snippet": "Orang tua di Minangkabau menghibahkan harta hasil keringat sendiri (pusako rendah) kepada anak kandungnya melalui akta notaris. Kemenakan menggugat karena menurut adat, harta tersebut harusnya jatuh ke kemenakan."
+    },
+    {
+      "case_id": "CS-MIN-015",
+      "true_label": "C",
+      "predicted": "B",
+      "domain": "Minangkabau",
+      "query_snippet": "Sepasang kekasih dari suku yang sama di Minangkabau menikah secara sah di KUA. Masyarakat adat menjatuhkan sanksi 'buang adat' (diusir dari nagari) karena perkawinan sesuku dianggap inkes menurut adat."
+    },
+    {
+      "case_id": "CS-JAW-019",
+      "true_label": "C",
+      "predicted": "B",
+      "domain": "Jawa",
+      "query_snippet": "Pembagian warisan di Jawa di mana anak bungsu (ragil) diberikan rumah utama karena tanggung jawabnya merawat orang tua. Kakak-kakaknya menuntut pembagian rumah tersebut dibagi rata secara hukum perdata."
+    },
+    {
+      "case_id": "CS-MIN-025",
+      "true_label": "C",
+      "predicted": "B",
+      "domain": "Minangkabau",
+      "query_snippet": "Seorang Mamak Kepala Waris ingin meminjam uang ke bank untuk usaha kaum dengan menjaminkan aset kaum. Bank ragu terhadap kapasitas hukum mamak tersebut sebagai subjek hukum perdata perorangan."
+    },
+    {
+      "case_id": "GS-0041",
+      "true_label": "C",
+      "predicted": "B",
+      "domain": "Nasional",
+      "query_snippet": "Adat mengatur harta pusaka tinggi melalui mamak. Pendekatan ini menghormati otonomi hukum adat dalam lingkupnya sambil menjamin hak anak secara nasional."
+    },
+    {
+      "case_id": "GS-0049",
+      "true_label": "C",
+      "predicted": "B",
+      "domain": "Jawa",
+      "query_snippet": "**Prioritas** adalah penyelesaian melalui **musyawarah di Desa Pakraman** dengan merujuk pada MDP 2010 dan *awig-awig*. **Sifat tanah** menjadi penentu kunci: jika merupakan **harta bersama (*gono-gini*)**, tuntutan pere"
+    }
+  ],
+  "d_recall_errors": [
+    {
+      "case_id": "GS-0054",
+      "true_label": "D",
+      "predicted": "C",
+      "domain": "Minangkabau",
+      "query_snippet": "**Jawaban Final:** Konsep gono-gini (harta bersama perkawinan) dan harta bawaan (harta pribadi) dalam adat Jawa diakui secara hukum nasional (UU Perkawinan) dan adat. Namun, konteks yang diberikan hanya menjelaskan siste",
+      "direction": "D_to_X"
+    },
+    {
+      "case_id": "GS-0055",
+      "true_label": "D",
+      "predicted": "C",
+      "domain": "Jawa",
+      "query_snippet": "Trade-off-nya adalah antara memberikan informasi umum yang diakui secara hukum versus berpegang ketat pada sumber konteks yang tersedia. **Keputusan Pluralistik:** Dalam pluralisme hukum, pengadilan akan mengakui dan men",
+      "direction": "D_to_X"
+    }
+  ],
+  "domain_breakdown": {
+    "Bali": {
+      "wrong_total": 2,
+      "c_to_b": 1,
+      "d_errors": 0,
+      "pair_counts": {
+        "B->C": 1,
+        "C->B": 1
+      }
+    },
+    "Jawa": {
+      "wrong_total": 12,
+      "c_to_b": 3,
+      "d_errors": 1,
+      "pair_counts": {
+        "A->B": 1,
+        "B->A": 3,
+        "B->C": 3,
+        "C->A": 1,
+        "C->B": 3,
+        "D->C": 1
+      }
+    },
+    "Lintas": {
+      "wrong_total": 2,
+      "c_to_b": 1,
+      "d_errors": 0,
+      "pair_counts": {
+        "A->C": 1,
+        "C->B": 1
+      }
+    },
+    "Minangkabau": {
+      "wrong_total": 5,
+      "c_to_b": 4,
+      "d_errors": 1,
+      "pair_counts": {
+        "C->B": 4,
+        "D->C": 1
+      }
+    },
+    "Nasional": {
+      "wrong_total": 3,
+      "c_to_b": 1,
+      "d_errors": 0,
+      "pair_counts": {
+        "C->A": 2,
+        "C->B": 1
+      }
+    },
+    "Other": {
+      "wrong_total": 1,
+      "c_to_b": 0,
+      "d_errors": 0,
+      "pair_counts": {
+        "B->A": 1
+      }
+    }
+  },
+  "top_patterns": [
+    {
+      "pattern": "C->B",
+      "count": 10,
+      "share_of_wrong": 0.4
+    },
+    {
+      "pattern": "B->A",
+      "count": 4,
+      "share_of_wrong": 0.16
+    },
+    {
+      "pattern": "B->C",
+      "count": 4,
+      "share_of_wrong": 0.16
+    },
+    {
+      "pattern": "C->A",
+      "count": 3,
+      "share_of_wrong": 0.12
+    },
+    {
+      "pattern": "D->C",
+      "count": 2,
+      "share_of_wrong": 0.08
+    },
+    {
+      "pattern": "A->B",
+      "count": 1,
+      "share_of_wrong": 0.04
+    },
+    {
+      "pattern": "C->B domain concentration",
+      "detail": {
+        "Minangkabau": 4,
+        "Lintas": 1,
+        "Jawa": 3,
+        "Bali": 1,
+        "Nasional": 1
+      }
+    },
+    {
+      "pattern": "all_systems_fail_overlap",
+      "count": 15,
+      "sample_case_ids": [
+        "CS-MIN-004",
+        "CS-LIN-016",
+        "CS-MIN-005",
+        "CS-JAW-019",
+        "GS-0033",
+        "GS-0034",
+        "GS-0041",
+        "GS-0010"
+      ]
+    }
+  ]
+}

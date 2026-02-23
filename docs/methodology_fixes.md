@@ -241,14 +241,16 @@ Cultural Consistency Score (CCS) adalah metrik custom yang belum divalidasi. Tan
 |---|----------|--------|----------|
 | 1 | Neuro-Symbolic claim | COMPLETED | 100% |
 | 2 | Circular evaluation | IN_PROGRESS | 15% |
-| 3 | Linear multi-agent | IN_PROGRESS | 40% |
+| 3 | Linear multi-agent | ABANDONED | — |
 | 4 | Scale too small | IN_PROGRESS | 15% |
-| 5 | Strawman baselines | PLANNED | 0% |
-| 6 | CCS unvalidated | PLANNED | 0% |
+| 5 | Strawman baselines | IN_PROGRESS | 50% |
+| 6 | CCS unvalidated | CANCELLED | — |
 
 Catatan Progress:
-- **Weakness #1**: SEMUA DOMAIN VERIFIED (2026-02-08) — Minangkabau 25 rules (ART-020 DONE), Bali 34 rules (ART-038 DONE), Jawa 36 rules (ART-039 DONE). Total 95 rules terverifikasi expert. Gap tersisa: encode Bali/Jawa ke ASP (ART-040/041 PENDING).
+- **Weakness #1**: SEMUA DOMAIN VERIFIED (2026-02-08) — Minangkabau 25 rules (ART-020 DONE), Bali 34 rules (ART-038 DONE), Jawa 36 rules (ART-039 DONE). Total 95 rules terverifikasi expert. 71 rules aktif di ASP (24 di-rollback, lihat F-018).
 - **Weakness #2**: Scaffolding Exp 06 selesai (ART-025, ART-029 DONE), namun ART-031 BLOCKED menunggu ART-028 (human annotation) dan ART-030 (putusan MA primer).
-- **Weakness #3**: Exp 07 dieksekusi dengan hasil negatif (F-009); perbaikan protokol debat masih diperlukan.
+- **Weakness #3**: ABANDONED — Exp 07 menghasilkan negative result (F-009). Advanced orchestration terbukti LEBIH BURUK dari baseline sequential. Dropped dari paper scope setelah strategic pivot 2026-02-12. Tidak akan dilanjutkan.
+- **Weakness #5**: Ablation 3-way sudah selesai (ASP-only vs ASP+Ollama vs ASP+DeepSeek, n=70). Semua McNemar non-signifikan. Focus paper: LLM+Rules vs LLM-only.
+- **Weakness #6**: CANCELLED — CCS metric tidak digunakan dalam post-pivot paper scope (2026-02-12). Paper berfokus pada accuracy/F1 klasifikasi A/B/C/D sebagai metrik evaluasi utama.
 
-*Last updated: 2026-02-08*
+*Last updated: 2026-02-23 (Weakness #3 → ABANDONED, Weakness #6 → CANCELLED, sesuai strategic pivot)*
