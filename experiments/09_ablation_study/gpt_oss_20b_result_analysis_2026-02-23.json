@@ -1,0 +1,52 @@
+{
+  "date": "2026-02-23",
+  "model": "gpt-oss:20b",
+  "backend": "ollama",
+  "n": 70,
+  "asp_only": {
+    "correct": 42,
+    "accuracy": 0.6,
+    "wilson_95ci": [
+      0.4829,
+      0.7067
+    ]
+  },
+  "asp_plus_llm": {
+    "correct": 45,
+    "accuracy": 0.6429,
+    "wilson_95ci": [
+      0.5259,
+      0.745
+    ]
+  },
+  "delta_pp": 4.29,
+  "mcnemar": {
+    "b": 8,
+    "c": 11,
+    "chi2": 0.2105,
+    "p_value": 0.6464,
+    "significant": false
+  },
+  "verdict": "POSITIVE_RESULT: ASP+gpt-oss:20b outperform ASP-only on this DEV benchmark (+4.29pp), but difference is statistically non-significant (McNemar p=0.6464).",
+  "error_patterns": {
+    "c_to_b_layer1": 3,
+    "c_to_b_layer2_override": 3,
+    "b_to_a_bias": 7,
+    "degraded_total": 8,
+    "improved_total": 11
+  },
+  "comparison_with_other_backends": {
+    "vs_asp_only_canonical": {
+      "delta_pp": 5.71,
+      "note": "baseline dari Feb-20"
+    },
+    "vs_deepseek_api": {
+      "accuracy": 0.6857,
+      "delta_pp_gptoss_vs_deepseek": -4.28
+    },
+    "vs_qwen3_14b": {
+      "accuracy": 0.5429,
+      "delta_pp_gptoss_vs_qwen3": 10.0
+    }
+  }
+}

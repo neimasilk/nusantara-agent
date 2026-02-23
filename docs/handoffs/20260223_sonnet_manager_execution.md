@@ -162,5 +162,11 @@ Sudah di-commit dalam 2 commit + push ke GitHub. Tambahan dari Wave 3:
   - ASP+Qwen3: 54.29% (38/70), Wilson CI [0.427, 0.654]
   - McNemar p=0.480 (non-significant)
   - B→A bias: 7 kasus; C→B Layer 2 override: 7 kasus
+- **gpt-oss:20b** (2026-02-23, positive vs ASP-only run hari yang sama):
+  - ASP-only: 60.00% (42/70), Wilson CI [0.483, 0.707]
+  - ASP+gpt-oss:20b: 64.29% (45/70), Wilson CI [0.526, 0.745]
+  - Delta: +4.29pp vs ASP-only (run 2026-02-23)
+  - McNemar b=8, c=11, p=0.646 (non-significant)
+  - C->B split: Layer 1=3, Layer 2 override=3; B->A bias=7
 - **Rules aktif**: 71 (dari 95 expert-verified; 24 di-rollback karena F-018)
 - **Test suite**: 106 tests passing (tidak ada perubahan code hari ini)
