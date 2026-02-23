@@ -1,0 +1,39 @@
+{
+  "date": "2026-02-23",
+  "model": "qwen3:14b",
+  "backend": "ollama",
+  "n": 70,
+  "asp_only": {
+    "correct": 42,
+    "accuracy": 0.6,
+    "wilson_95ci": [
+      0.4829,
+      0.7067
+    ]
+  },
+  "asp_plus_llm": {
+    "correct": 38,
+    "accuracy": 0.5429,
+    "wilson_95ci": [
+      0.427,
+      0.6543
+    ]
+  },
+  "delta_pp": -5.71,
+  "mcnemar": {
+    "b": 11,
+    "c": 7,
+    "chi2": 0.5,
+    "p_value": 0.4795,
+    "significant": false
+  },
+  "verdict": "NEGATIVE_RESULT: LLM layer hurts performance",
+  "root_cause": {
+    "b_to_a_bias": 7,
+    "c_to_b_layer2_override": 7,
+    "c_to_b_layer1_shared": 9,
+    "degraded_total": 11,
+    "improved_total": 7
+  },
+  "failure_registry_ref": "F-019"
+}

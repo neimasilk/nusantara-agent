@@ -87,14 +87,37 @@
 | P3 Polish System Overview | SELESAI | Kimi + Sonnet |
 | A1 Error analysis C→B | SELESAI | Codex |
 | A1b Two-layer diagnosis ke paper | SELESAI | Codex |
-| Number audit QC | PENDING (Kimi running) | Kimi |
+| Number audit QC | SELESAI (Kimi) | Kimi |
+| Qwen3-14B benchmark run | SELESAI — NEGATIVE RESULT | Sonnet |
+| F-019 failure registry | SELESAI | Sonnet |
+
+---
+
+## Wave 3: Qwen3-14B Benchmark (sesi ini)
+
+### Hasil benchmark
+- **ASP-only** (2026-02-23): 42/70 = **60.00%**, Wilson CI [0.483, 0.707]
+- **ASP+Qwen3-14B**: 38/70 = **54.29%**, Wilson CI [0.427, 0.654]
+- **Delta**: -5.71pp — LLM layer HURTS performance
+- **McNemar** ASP-only vs Qwen3: chi2=0.500, p=0.480 (non-significant)
+
+### Root cause (dua pola)
+1. **B→A bias (7 kasus)**: Qwen3 conflates "national law output hadir di ASP" dengan "national law governs" → mispredicts label A untuk kasus yang seharusnya B. Pattern ini tidak signifikan pada DeepSeek.
+2. **C→B Layer 2 override (7 kasus)**: Qwen3 mengabaikan sinyal konflik ASP yang sudah benar (`konflik_terdeteksi: Ya`, asp_pred=C) dan menghasilkan B dengan reasoning "tidak ada konflik nasional-adat eksplisit." Ini adalah prompt-level failure.
+3. Layer 1 shared failures (9 C→B kasus): ASP juga gagal, sama dengan sistem lain.
+
+### Artefak baru
+- `experiments/09_ablation_study/results_dual_asp_only_2026-02-23.json`
+- `experiments/09_ablation_study/results_dual_asp_llm_2026-02-23.json`
+- `experiments/09_ablation_study/qwen3_14b_negative_result_analysis_2026-02-23.json`
+- `docs/failure_registry.md` — ditambah F-019
 
 ---
 
 ## Blocker
 
 1. **Ahli-2 batch baru**: Semua klaim generalisasi bergantung pada labeled test set yang belum ada. X1, X2, X4 masih blocked.
-2. **Qwen3-14B benchmark**: File INVALID sudah di-rename, tapi run Qwen3 sesungguhnya belum dilakukan (X3 blocked).
+2. **Qwen3-14B benchmark**: SELESAI — negative result (F-019). X3 resolved sebagai negative result.
 3. **Rubric refinement documentation**: B3 dari Opus review — jump 58.3% → 94.0% agreement memerlukan dokumentasi di `docs/methodology/rubric_refinement_log.md`. Belum dikerjakan hari ini.
 4. **Test suite**: Tidak ada perubahan code, jadi tidak perlu dijalankan. Jika ada perubahan code di sesi berikutnya, jalankan `python scripts/run_test_suite.py` (106 tests harus tetap passing).
 
@@ -102,19 +125,13 @@
 
 ## Rencana Sesi Berikutnya
 
-### Prioritas 0: Commit hari ini
-Semua perubahan belum di-commit. File yang perlu di-stage:
-- `paper/main.tex` (major changes)
-- `docs/failure_registry.md` (F-018)
-- `docs/methodology_fixes.md` (weakness #3, #6)
-- `docs/methodology/dev_test_split_policy.md` (baru)
-- `docs/methodology/error_analysis_cb_pattern.md` (baru)
-- `docs/handoffs/20260223_sonnet_manager_execution.md` (baru)
-- `docs/handoffs/20260223_eagle_eye_opus_review.md` (baru)
-- `docs/handoffs/20260223_prompt_for_sonnet_manager.md` (baru)
-- `CLAUDE.md` (Current State update)
-- `experiments/09_ablation_study/results_qwen3_14b_INVALID_contains_deepseek_data.json` (rename)
-- `audit_round5.py` (untracked, perlu dikonfirmasi owner apakah perlu di-commit)
+### Prioritas 0: Commit sesi ini (SELESAI)
+Sudah di-commit dalam 2 commit + push ke GitHub. Tambahan dari Wave 3:
+- `docs/failure_registry.md` (F-019 Qwen3 negative result)
+- `docs/handoffs/20260223_sonnet_manager_execution.md` (update Wave 3)
+- `experiments/09_ablation_study/results_dual_asp_only_2026-02-23.json` (baru)
+- `experiments/09_ablation_study/results_dual_asp_llm_2026-02-23.json` (baru)
+- `experiments/09_ablation_study/qwen3_14b_negative_result_analysis_2026-02-23.json` (baru)
 
 ### Prioritas 1: Dokumentasi rubric refinement (B3 dari Opus)
 - Buat `docs/methodology/rubric_refinement_log.md`
@@ -140,5 +157,10 @@ Semua perubahan belum di-commit. File yang perlu di-stage:
   - ASP+DeepSeek: 68.57% (48/70), Wilson CI [0.570, 0.782], kappa=0.483
   - McNemar: ASP-only vs Ollama p=0.344, ASP-only vs DeepSeek p=0.167, Ollama vs DeepSeek p=0.549
   - Fleiss kappa antar sistem: 0.638
+- **Qwen3-14B** (2026-02-23, negative result — F-019):
+  - ASP-only: 60.00% (42/70), Wilson CI [0.483, 0.707]
+  - ASP+Qwen3: 54.29% (38/70), Wilson CI [0.427, 0.654]
+  - McNemar p=0.480 (non-significant)
+  - B→A bias: 7 kasus; C→B Layer 2 override: 7 kasus
 - **Rules aktif**: 71 (dari 95 expert-verified; 24 di-rollback karena F-018)
 - **Test suite**: 106 tests passing (tidak ada perubahan code hari ini)

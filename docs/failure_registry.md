@@ -301,17 +301,34 @@ Living document yang mencatat setiap kegagalan, hasil negatif, dan pendekatan ya
 - **Tindakan:** RESOLVED
 - **Detail Tindakan:** Rollback ke 71 rules original. Canonical benchmark final menggunakan 71 rules ini: ASP-only 58.6% (41/70), ASP+Ollama 64.3% (45/70), ASP+DeepSeek 68.6% (48/70). Lesson learned: setiap penambahan rules harus divalidasi dengan benchmark run sebelum di-commit.
 
+### F-019: Qwen3-14B LLM Layer Hurts Performance (-5.71pp vs ASP-only)
+
+- **Tanggal:** 2026-02-23
+- **Eksperimen:** 09_ablation_study (Qwen3-14B local benchmark, RTX 4080)
+- **Kategori:** NEGATIVE_RESULT
+- **Severity:** MAJOR
+- **Status:** ACKNOWLEDGED
+- **Deskripsi:** Menjalankan benchmark lengkap (n=70) dengan backend Qwen3-14B via Ollama menghasilkan penurunan akurasi dibanding ASP-only. ASP-only: 42/70=60.00% (Wilson CI [0.483, 0.707]). ASP+Qwen3-14B: 38/70=54.29% (Wilson CI [0.427, 0.654]). Net: -5.71pp. McNemar p=0.480 (non-significant). Ini berbeda dari DeepSeek (68.57%, +10pp vs ASP-only) dan Ollama/deepseek-r1 (64.29%, +5.71pp).
+- **Expected vs Actual:** Expected: Qwen3-14B sebagai model lokal baru setidaknya setara atau lebih baik dari ASP-only. Actual: LLM layer justru menurunkan akurasi — 11 kasus degraded vs hanya 7 kasus improved.
+- **Root Cause:** Dua pola kegagalan teridentifikasi:
+  1. **B→A bias (7 kasus):** Qwen3 salah menginterpretasikan kehadiran output hukum nasional dalam sinyal ASP sebagai indikasi "hukum nasional dominan" (label A), padahal kasus seharusnya B (hukum adat berlaku). Qwen3 conflates "national law is mentioned" dengan "national law governs." Pattern ini tidak terlihat pada DeepSeek di skala ini.
+  2. **C→B Layer 2 override (7 kasus):** Qwen3 mengabaikan sinyal konflik ASP (`konflik_terdeteksi: Ya`, asp_pred=C) dan tetap memilih B dengan reasoning "sengketa internal adat tanpa konflik nasional-adat." Ini adalah prompt-level failure — model tidak mengikuti sinyal simbolik yang sudah benar. DeepSeek memiliki 5 kasus serupa; Qwen3 memiliki 7.
+  3. Sisanya: 9 C→B error adalah Layer 1 (ASP juga gagal mendeteksi konflik) — sama dengan pattern pada sistem lain.
+- **Implikasi untuk Paper:** Qwen3-14B tidak dapat dimasukkan sebagai konfigurasi yang mengungguli baseline. Ini adalah negative result penting: tidak semua LLM backend memberikan improvement; pemilihan LLM backend berpengaruh signifikan pada hasil. Jika Qwen3 dilaporkan, framing harus: "local model Qwen3-14B produced a negative gain, suggesting the neuro-symbolic benefit depends on LLM calibration quality."
+- **Tindakan:** ACKNOWLEDGED
+- **Detail Tindakan:** Hasil disimpan di `experiments/09_ablation_study/results_dual_asp_llm_2026-02-23.json` (LLM) dan `results_dual_asp_only_2026-02-23.json` (ASP). Paper saat ini tidak memasukkan Qwen3-14B sebagai konfigurasi utama. F-019 dicatat untuk Limitations section. Jika waktu tersedia, investigasi prompt-level fix untuk B→A bias Qwen3 (instruksi eksplisit: "kehadiran output nasional dalam ASP bukan bukti nasional dominan").
+
 ---
 
 ## Statistik Ringkasan
 
 | Kategori | Count | Critical | Major | Minor |
 |----------|-------|----------|-------|-------|
-| NEGATIVE_RESULT | 3 | 0 | 3 | 0 |
+| NEGATIVE_RESULT | 4 | 0 | 4 | 0 |
 | ABANDONED_APPROACH | 0 | 0 | 0 | 0 |
 | TECHNICAL_FAILURE | 2 | 0 | 1 | 1 |
 | ASSUMPTION_VIOLATED | 1 | 1 | 0 | 0 |
 | LIMITATION_DISCOVERED | 12 | 3 | 9 | 0 |
-| **TOTAL** | **18** | **4** | **13** | **1** |
+| **TOTAL** | **19** | **4** | **14** | **1** |
 
-*Last updated: 2026-02-23 (F-018: GAP rules regression rollback)*
+*Last updated: 2026-02-23 (F-019: Qwen3-14B negative result)*
