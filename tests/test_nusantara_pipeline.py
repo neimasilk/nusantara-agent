@@ -1,6 +1,7 @@
 """Test deterministik untuk unified pipeline Nusantara-Agent."""
 
 import unittest
+import json
 from unittest.mock import patch
 
 
@@ -86,6 +87,47 @@ class NusantaraPipelineTests(unittest.TestCase):
         self.assertIn("graph_context", result)
         self.assertIn("vector_context", result)
         self.assertIsInstance(result["vector_context"], list)
+
+    def test_jawa_guard_overrides_a_to_b_without_national_hard_constraints(self):
+        pipeline = self._build_pipeline()
+        synthesis = json.dumps(
+            {
+                "label": "A",
+                "langkah_keputusan": "2",
+                "alasan_utama": "Dummy",
+                "konflik_terdeteksi": "Tidak",
+            },
+            ensure_ascii=False,
+        )
+        guarded = pipeline._apply_jawa_guard_v1(
+            synthesis,
+            query="Sengketa gono-gini adat Jawa tanpa kata nasional keras",
+            rule_results={"nasional": [], "adat": {"jawa": ["can_inherit(anak,harta_gono_gini)"]}},
+        )
+        payload = json.loads(guarded)
+        self.assertEqual(payload["label"], "B")
+        self.assertEqual(payload["langkah_keputusan"], "3")
+        self.assertEqual(payload.get("jawa_guard_v1"), "applied")
+
+    def test_jawa_guard_does_not_override_when_national_hard_constraint_exists(self):
+        pipeline = self._build_pipeline()
+        synthesis = json.dumps(
+            {
+                "label": "A",
+                "langkah_keputusan": "2",
+                "alasan_utama": "Dummy",
+                "konflik_terdeteksi": "Tidak",
+            },
+            ensure_ascii=False,
+        )
+        guarded = pipeline._apply_jawa_guard_v1(
+            synthesis,
+            query="Sengketa gono-gini adat Jawa terkait penetapan pengadilan",
+            rule_results={"nasional": [], "adat": {"jawa": []}},
+        )
+        payload = json.loads(guarded)
+        self.assertEqual(payload["label"], "A")
+        self.assertNotIn("jawa_guard_v1", payload)
 
 
 if __name__ == "__main__":

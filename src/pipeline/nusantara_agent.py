@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
-from src.agents.router import route_query
+from src.agents.router import _json_or_raw, route_query
 from src.config.domain_keywords import (
     ADAT_KEYWORDS,
     BALI_ADOPTION_KEYWORDS,
@@ -43,6 +43,8 @@ from src.config.domain_keywords import (
     NASIONAL_SIBLING_KEYWORDS,
     NASIONAL_SPOUSE_KEYWORDS,
     NASIONAL_UNFAIR_DISTRIBUTION_KEYWORDS,
+    SUPERVISOR_JAWA_BILATERAL_KEYWORDS,
+    SUPERVISOR_NATIONAL_HARD_KEYWORDS,
 )
 from src.kg_engine.search import SimpleKGSearch
 from src.symbolic.rule_engine import ClingoRuleEngine
@@ -512,6 +514,59 @@ class NusantaraAgentPipeline:
         models = engine.solve()
         return models[0] if models else []
 
+    @staticmethod
+    def _yes_signal(value: object) -> bool:
+        text = str(value or "").strip().lower()
+        return text in {"ya", "yes", "true", "1"}
+
+    @staticmethod
+    def _has_symbolic_conflict(rule_results: Dict[str, object]) -> bool:
+        nasional = rule_results.get("nasional", [])
+        adat = rule_results.get("adat", {})
+        nasional_atoms = [str(atom) for atom in nasional if isinstance(atom, str)]
+        adat_atoms: List[str] = []
+        if isinstance(adat, dict):
+            for domain_atoms in adat.values():
+                if isinstance(domain_atoms, list):
+                    adat_atoms.extend(str(atom) for atom in domain_atoms)
+        all_atoms = nasional_atoms + adat_atoms
+        return any("conflict" in atom.lower() for atom in all_atoms)
+
+    def _apply_jawa_guard_v1(self, synthesis: object, query: str, rule_results: Dict[str, object]) -> str:
+        text = str(synthesis or "")
+        try:
+            payload = _json_or_raw(text)
+        except Exception:
+            payload = {}
+        if not isinstance(payload, dict):
+            return text
+
+        label = str(payload.get("label", "")).upper().strip()
+        if label != "A":
+            return text
+
+        q_lower = query.lower()
+        has_jawa_bilateral = any(k in q_lower for k in SUPERVISOR_JAWA_BILATERAL_KEYWORDS)
+        has_national_hard = any(k in q_lower for k in SUPERVISOR_NATIONAL_HARD_KEYWORDS)
+        has_conflict_signal = self._yes_signal(payload.get("konflik_terdeteksi"))
+        has_symbolic_conflict = self._has_symbolic_conflict(rule_results)
+
+        if not has_jawa_bilateral:
+            return text
+        if has_national_hard or has_conflict_signal or has_symbolic_conflict:
+            return text
+
+        payload["label"] = "B"
+        payload["langkah_keputusan"] = "3"
+        alasan = str(payload.get("alasan_utama", "")).strip()
+        guard_note = (
+            "JAWA_GUARD_V1: konteks Jawa bilateral tanpa constraint nasional keras, "
+            "override A->B untuk mencegah bias nasional-dominan."
+        )
+        payload["alasan_utama"] = f"{alasan} {guard_note}".strip()
+        payload["jawa_guard_v1"] = "applied"
+        return json.dumps(payload, ensure_ascii=False)
+
     def process_query(self, query: str) -> Dict:
         route = route_query(query, use_llm=False)
         label = route["label"]
@@ -542,12 +597,17 @@ class NusantaraAgentPipeline:
         # Rebuild orchestrator with current route label (ART-092)
         self.orchestrator = build_parallel_orchestrator(route_label=label)
         agent_result = self.orchestrator.invoke(inputs)
+        guarded_synthesis = self._apply_jawa_guard_v1(
+            agent_result.get("final_synthesis", ""),
+            query=query,
+            rule_results=inputs["rule_results"],
+        )
 
         return {
             "query": query,
             "route": route,
             "rule_results": inputs["rule_results"],
-            "agent_analysis": agent_result.get("final_synthesis", ""),
+            "agent_analysis": guarded_synthesis,
             "graph_context": graph_ctx,
             "vector_context": vec_results,
             "intermediate_context": {

@@ -14,13 +14,18 @@
   - jika sinyal Jawa bilateral kuat dan constraint nasional keras tidak terdeteksi, jangan pilih A kecuali ada dasar nasional keras/konflik eksplisit.
 - Warning router kini memuat sinyal guard tersebut agar model mendapat prior yang eksplisit.
 
-3. `src/utils/reasoning_contract.py` (baru)
+3. `src/pipeline/nusantara_agent.py`
+- Ditambahkan **deterministic post-adjudication guard**:
+  - ketika output supervisor = `A`, konteks Jawa bilateral kuat, tanpa constraint nasional keras, dan tanpa conflict signal/symbolic conflict -> override ke `B`.
+  - output diberi marker `jawa_guard_v1="applied"` agar traceable.
+
+4. `src/utils/reasoning_contract.py` (baru)
 - Parser reasoning JSON robust.
 - Ringkasan kontrak metadata reasoning:
   - field wajib: `label`, `langkah_keputusan`, `alasan_utama`, `konflik_terdeteksi`.
   - flag `claimable_for_layer_diagnosis`.
 
-4. Integrasi gate ke runner benchmark
+5. Integrasi gate ke runner benchmark
 - `experiments/09_ablation_study/run_dual_benchmark.py`
   - menulis `reasoning_metadata_contract` pada output.
   - mode `scientific_claimable` untuk `asp_llm` sekarang fail-hard jika kontrak metadata tidak lengkap.
@@ -30,13 +35,14 @@
 - `experiments/09_ablation_study/run_single_mode.py`
   - menulis `reasoning_metadata_contract` pada checkpoint/output.
 
-5. Testing
+6. Testing
 - `tests/test_reasoning_contract.py` (baru): parser + summary contract.
+- `tests/test_nusantara_pipeline.py`: tambah test override/non-override Jawa guard.
 
 ## Validasi
 
 1. Full test suite:
-- `python scripts/run_test_suite.py` -> **126/126 PASS**.
+- `python scripts/run_test_suite.py` -> **128/128 PASS**.
 
 2. Smoke run dual benchmark (operasional):
 - Command: `python experiments/09_ablation_study/run_dual_benchmark.py --mode operational_offline --dataset-split dev`
