@@ -1,82 +1,154 @@
 # Rubric Refinement Log (Batch 1 -> Batch 2)
 
-**Status:** DRAFT - menunggu input owner
+**Status:** DRAFT-EVIDENCE (menunggu sign-off owner)
 **Tanggal dibuat:** 2026-02-24
-**Tujuan:** dokumentasi transparansi metodologi untuk reviewer Q1 terkait lonjakan agreement batch labeling.
+**Last update:** 2026-02-24
+**Tujuan:** dokumentasi metodologis agar lonjakan agreement 58.3% -> 94.0% dapat diaudit reviewer.
 
 ---
 
-## Ringkasan Fakta Terkonfirmasi
+## Ringkasan Eksekutif
 
-Sumber angka saat ini:
-- `paper/main.tex` (Table dataset status dan agreement profile)
-- `data/benchmark_manifest.json`
-- `docs/handoffs/20260224_prompt_lanjutan.md`
-
-Fakta yang sudah terkonfirmasi:
-1. Batch 1 (24 kasus) agreement = 58.3% (14/24), Cohen's kappa = 0.394.
-2. Batch 2 (50 kasus baru) agreement = 94.0% (47/50).
-3. Gap utama disagreement berada pada boundary label B vs C.
-4. Kenaikan agreement dari batch 1 ke batch 2 sangat besar dan harus dijelaskan eksplisit di paper/dokumen metodologi.
+Status jawaban 4 pertanyaan kritikal:
+1. **Q1 (apa yang berubah di rubrik):** sudah terjawab berbasis artefak.
+2. **Q2 (kapan perubahan dibuat):** terjawab parsial (timeline artefak tersedia, tanggal keputusan final owner belum eksplisit).
+3. **Q3 (apakah batch 2 independen):** terjawab parsial dengan bukti operasional kuat.
+4. **Q4 (siapa yang memutuskan):** masih butuh konfirmasi owner (belum ada notulensi keputusan final yang eksplisit).
 
 ---
 
-## Pertanyaan Owner (Wajib Diisi)
+## Bukti Primer yang Dipakai
 
-| ID | Pertanyaan | Status | Jawaban Owner | Catatan Bukti |
+1. `docs/ira_analysis_2026-02-12.md` (angka baseline 24 kasus: 14/24, kappa=0.394).
+2. `docs/human_only/artifacts/paket_kerja_4_jam_ahli2_batch1_ready_to_handout.md` (instruksi awal, belum ada rubric boundary test eksplisit).
+3. `docs/human_only/artifacts/paket_kerja_4_jam_ahli2_batch2_kalibrasi_ready_to_handout.md` (definisi label dikunci).
+4. `docs/human_only/artifacts/paket_kerja_4_jam_ahli2_batch3_kalibrasi_lanjutan_ready_to_handout.md` (aturan tambahan A/B vs C).
+5. `docs/human_only/artifacts/paket_kerja_4_jam_ahli2_batch5_ready_to_handout.md` (decision checklist Dominansi/Dualitas/Fakta).
+6. `docs/human_only/paket_labeling_50_kasus_baru.md` (paket expanded 50 kasus, rubric lengkap + instruksi blind labeling).
+7. `data/processed/gold_standard/gs_active_cases.json` (komposisi 24 CS + 50 GS, agreement GS=47/50).
+8. `git log` untuk jejak commit artefak rubric/instruksi (contoh: `3330118`, `80d562f`).
+
+---
+
+## Jawaban Owner (Draft Berbasis Evidence)
+
+| ID | Pertanyaan | Status | Jawaban Draft (Evidence) | Bukti |
 |---|---|---|---|---|
-| Q1 | Apa yang berubah di rubrik antara Batch 1 dan Batch 2? | PENDING |  |  |
-| Q2 | Kapan perubahan rubrik dibuat (tanggal/periode)? | PENDING |  |  |
-| Q3 | Apakah Batch 2 sepenuhnya independent dari Batch 1 (tanpa leakage kasus/label)? | PENDING |  |  |
-| Q4 | Siapa yang memutuskan perubahan rubrik (nama/peran)? | PENDING |  |  |
-
-Instruksi pengisian:
-- Isi kolom **Jawaban Owner** sejelas mungkin dan sebutkan artefak pendukung di **Catatan Bukti** (dokumen, chat, catatan meeting, commit).
+| Q1 | Apa yang berubah di rubrik antara Batch 1 dan Batch 2? | ANSWERED-EVIDENCE | Rubrik berubah dari instruksi label generik menjadi rubric terstruktur: definisi label dikunci, boundary test A vs C ditambahkan, contoh boundary cases ditambahkan, dan checklist keputusan dibuat eksplisit. | File 2-6 pada daftar bukti primer |
+| Q2 | Kapan perubahan rubrik dibuat? | PARTIAL | Refinement berlangsung bertahap: fase kalibrasi pada 2026-02-08, lalu paket expanded 50 kasus bertanggal 2026-02-19 sudah memakai rubric lengkap. Tanggal approval formal owner belum terdokumentasi eksplisit. | File 3-6 + metadata commit (`3330118`, `80d562f`) |
+| Q3 | Apakah Batch 2 sepenuhnya independent dari Batch 1? | PARTIAL-EVIDENCE | Bukti operasional menunjukkan independensi pada level data/protokol: pool kasus disjoint (24 `CS-*` vs 50 `GS-*`, overlap ID = 0), dan paket 50 kasus memuat instruksi "JANGAN melihat referensi atau label orang lain". Namun bukti ini belum bisa memverifikasi faktor di luar artefak (out-of-band leakage). | File 6-7 |
+| Q4 | Siapa yang memutuskan perubahan rubrik? | BLOCKED-OWNER | Eksekusi artefak di repo dilakukan oleh Mukhlis Amien (jejak commit), tetapi otoritas keputusan metodologis final (nama/peran) belum ditulis eksplisit di dokumen keputusan. | `git log` + butuh konfirmasi owner |
 
 ---
 
-## Decision Log Rubrik
+## Detail Q1: Perubahan Rubrik
 
-| Tanggal | Peristiwa | Perubahan Rubrik | Alasan Perubahan | Pengambil Keputusan | Evidence Link |
-|---|---|---|---|---|---|
-| TBD | Draft awal rubrik Batch 1 | TBD | TBD | TBD | TBD |
-| TBD | Refinement sebelum Batch 2 | TBD | TBD | TBD | TBD |
-| TBD | Finalisasi rubrik operasional | TBD | TBD | TBD | TBD |
+Perubahan yang terobservasi dari artefak:
+1. **Batch 1 (agreement prep):** form meminta label A/B/C/D tanpa boundary policy eksplisit.
+2. **Batch 2 kalibrasi:** definisi A/B/C/D dikunci sebagai standar wajib.
+3. **Batch 3 kalibrasi lanjutan:** jika memilih C wajib jelaskan dua komponen; jika memilih A/B wajib jelaskan kenapa tidak perlu sintesis.
+4. **Batch 5 ekspansi:** ditambahkan urutan cek keputusan (Dominansi -> Dualitas -> Fakta).
+5. **Expanded 50-case packet (2026-02-19):** rubric lengkap dengan "Panduan Batas Kritis (A vs C)" + contoh boundary A/C/B/D.
+
+Interpretasi metodologis:
+- Refinement berfokus pada error boundary utama B/C (dan A/C), bukan mengubah task definition inti.
+
+---
+
+## Detail Q2: Timeline Refinement
+
+| Tanggal | Event | Bukti |
+|---|---|---|
+| 2026-02-08 | Baseline agreement prep Ahli-2 Batch 1 (instruksi generik) | `paket_kerja_4_jam_ahli2_batch1_ready_to_handout.md` |
+| 2026-02-08 | Kalibrasi Batch 2 memperkenalkan definisi label dikunci | `paket_kerja_4_jam_ahli2_batch2_kalibrasi_ready_to_handout.md` |
+| 2026-02-08 | Kalibrasi Batch 3 menambahkan aturan justifikasi C vs A/B | `paket_kerja_4_jam_ahli2_batch3_kalibrasi_lanjutan_ready_to_handout.md` |
+| 2026-02-08 | Batch 5 menambahkan checklist keputusan Dominansi/Dualitas/Fakta | `paket_kerja_4_jam_ahli2_batch5_ready_to_handout.md` |
+| 2026-02-19 | Paket expanded 50 kasus memakai rubric lengkap + boundary tests + blind instruction | `paket_labeling_50_kasus_baru.md` |
+| 2026-02-23 | Artefak labeling/rubric di-commit ke repo (import dokumentasi) | Commit `80d562f` |
 
 Catatan:
-- Isi tabel ini kronologis. Reviewer biasanya menilai apakah perubahan rubric dilakukan sebelum labeling batch berikutnya dimulai.
+- Jejak di atas adalah **timeline artefak**. Tanggal keputusan formal owner untuk final approval rubric masih perlu dikonfirmasi.
 
 ---
 
-## Independence Audit (Batch 2)
+## Detail Q3: Independence Audit (Batch 2 Expanded)
 
-Checklist audit independensi:
-- [ ] Batch 2 tidak menggunakan kasus yang sama dari Batch 1.
-- [ ] Label Batch 1 tidak dibuka ulang saat melakukan labeling Batch 2.
-- [ ] Definisi label yang dipakai Batch 2 berasal dari rubric final yang terdokumentasi.
-- [ ] Tidak ada prompt/briefing yang memberi target distribusi label tertentu.
+### Bukti yang mendukung independensi
 
-Kesimpulan sementara:
-- **Belum dapat dinyatakan** sebelum Q1-Q4 di atas diisi.
+1. **Disjoint case pool:**
+   - Initial batch: 24 kasus dengan prefix `CS-*`.
+   - Expanded batch: 50 kasus dengan prefix `GS-*`.
+   - Overlap ID: **0**.
+
+2. **Blind-labeling instruction tertulis:**
+   - Paket 50 kasus memuat instruksi: *"JANGAN melihat referensi atau label orang lain"*.
+
+3. **Agreement expanded batch konsisten dengan klaim paper:**
+   - Ahli-1 vs Ahli-2 pada 50 kasus `GS-*`: **47/50 (94.0%)**.
+   - 3 mismatch: `GS-0022`, `GS-0023`, `GS-0032`.
+   - Ketiganya pattern **B vs C** dan status gold saat ini `DISPUTED`.
+
+### Batas bukti
+
+- Bukti di atas kuat pada level artefak repository, tetapi tidak bisa membuktikan secara absolut tidak adanya komunikasi informal di luar sistem dokumentasi.
+
+Kesimpulan audit saat ini:
+- **Independen secara operasional (artifact-level): YA.**
+- **Independen absolut (termasuk out-of-band): BELUM BISA DIPASTIKAN.**
 
 ---
 
-## Narasi Siap Pakai (Template untuk Paper/Response Reviewer)
+## Detail Q4: Decision Authority (Masih Blocked)
 
-Template (isi placeholder setelah Q1-Q4 lengkap):
+Yang sudah bisa dibuktikan:
+1. Artefak rubric dan paket labeling dilacak dalam commit oleh **Mukhlis Amien**.
+2. Ada catatan "Owner confirmed" pada keputusan metodologis lain (`docs/ira_analysis_2026-02-12.md`), tetapi belum ada kalimat serupa yang eksplisit untuk approval rubric final batch expanded.
 
-> Inter-rater agreement improved from 58.3% (kappa=0.394, 24 cases) in Batch 1 to 94.0% (47/50) in Batch 2 after a predefined rubric refinement focused on the B/C boundary. The refinement was approved on [DATE] by [DECISION MAKER], before Batch 2 labeling started, and Batch 2 was annotated independently from Batch 1 labels.
+Yang masih dibutuhkan:
+- Pernyataan singkat owner: siapa pengambil keputusan final refinement rubric (nama + peran), dan kapan disetujui.
 
-Gunakan template ini hanya setelah field [DATE] dan [DECISION MAKER] terisi berbasis bukti.
+---
+
+## Decision Log Rubrik (Evidence-Backed)
+
+| Tanggal | Peristiwa | Perubahan Rubrik | Alasan Perubahan | Pengambil Keputusan | Evidence |
+|---|---|---|---|---|---|
+| 2026-02-08 | Batch 1 agreement prep | Instruksi label masih generik | Persiapan agreement awal Ahli-2 | Belum eksplisit | Paket batch1 ready |
+| 2026-02-08 | Batch 2 kalibrasi | Definisi A/B/C/D dikunci | Menurunkan mismatch pasca 33.3% agreement awal | Belum eksplisit | Paket batch2 ready + report batch2 |
+| 2026-02-08 | Batch 3 kalibrasi lanjutan | Aturan justifikasi C vs A/B ditambahkan | Memperjelas boundary label | Belum eksplisit | Paket batch3 ready + report batch3 |
+| 2026-02-08 | Batch 5 ekspansi terarah | Checklist Dominansi/Dualitas/Fakta | Standarisasi reasoning lintas kasus baru | Belum eksplisit | Paket batch5 ready |
+| 2026-02-19 | Expanded batch 50 kasus | Rubric lengkap + boundary tests + contoh + blind instruction | Scale-up annotation dengan boundary policy lebih ketat | Belum eksplisit | Paket labeling 50 kasus |
+
+---
+
+## Checklist Audit Cepat
+
+- [x] Batch 2 menggunakan pool kasus yang berbeda dari Batch 1 (ID disjoint CS vs GS).
+- [x] Paket expanded memuat instruksi blind labeling.
+- [x] Rubrik final terdokumentasi (definisi + boundary tests + contoh).
+- [x] Tidak ada target distribusi label tertentu pada instruksi expanded.
+- [ ] Otoritas keputusan final refinement rubric tercatat eksplisit (nama/peran/tanggal).
+
+---
+
+## Narasi Siap Pakai (Paper / Response Reviewer)
+
+Versi konservatif (tanpa klaim authority final):
+
+> Inter-rater agreement improved from 58.3% (kappa=0.394, 24 cases) to 94.0% (47/50) after staged rubric refinement focused on decision boundaries (especially A/B vs C). The refined protocol introduced locked label definitions, explicit boundary tests, and standardized decision checks, and the expanded batch used a disjoint case pool with blind-labeling instructions.
+
+Versi final (pakai setelah owner isi Q4):
+
+> Inter-rater agreement improved from 58.3% (kappa=0.394, 24 cases) to 94.0% (47/50) after rubric refinement approved on [DATE] by [DECISION MAKER]. The refined protocol introduced locked label definitions, explicit A-vs-C boundary tests, and standardized decision checks; the expanded batch was annotated on a disjoint case pool under blind-labeling instructions.
 
 ---
 
 ## Action Items
 
-1. Owner mengisi Q1-Q4.
-2. Setelah Q1-Q4 terisi, update subsection "Rubric refinement" di `paper/main.tex` dengan detail yang bisa diaudit.
-3. Tambahkan referensi silang dari paper ke file ini (misalnya di appendix atau reproducibility docs).
-4. Kunci dokumen ini sebagai versi final untuk paket submission.
+1. Owner isi Q4: nama, peran, dan tanggal approval final rubric refinement.
+2. Setelah Q4 terisi, ubah status dokumen ini menjadi `FINAL`.
+3. Sinkronkan wording subsection "Rubric refinement" di `paper/main.tex` (jika belum).
+4. Simpan dokumen ini sebagai lampiran metodologi untuk paket submission.
 
 ---
 
@@ -84,4 +156,5 @@ Gunakan template ini hanya setelah field [DATE] dan [DECISION MAKER] terisi berb
 
 | Tanggal | Perubahan |
 |---|---|
-| 2026-02-24 | Draft awal dibuat untuk menangkap gap metodologi rubric refinement dan menyiapkan input owner. |
+| 2026-02-24 | Draft awal template dibuat (tanpa evidence detail). |
+| 2026-02-24 | Upgraded menjadi evidence-backed draft: Q1/Q2/Q3 terisi berbasis artefak, Q4 tetap menunggu owner sign-off. |
