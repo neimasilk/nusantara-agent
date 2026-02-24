@@ -1,6 +1,6 @@
 # Rubric Refinement Log (Batch 1 -> Batch 2)
 
-**Status:** DRAFT-EVIDENCE (menunggu sign-off owner)
+**Status:** FINAL (owner-confirmed for Q4)
 **Tanggal dibuat:** 2026-02-24
 **Last update:** 2026-02-24
 **Tujuan:** dokumentasi metodologis agar lonjakan agreement 58.3% -> 94.0% dapat diaudit reviewer.
@@ -13,7 +13,7 @@ Status jawaban 4 pertanyaan kritikal:
 1. **Q1 (apa yang berubah di rubrik):** sudah terjawab berbasis artefak.
 2. **Q2 (kapan perubahan dibuat):** terjawab parsial (timeline artefak tersedia, tanggal keputusan final owner belum eksplisit).
 3. **Q3 (apakah batch 2 independen):** terjawab parsial dengan bukti operasional kuat.
-4. **Q4 (siapa yang memutuskan):** masih butuh konfirmasi owner (belum ada notulensi keputusan final yang eksplisit).
+4. **Q4 (siapa yang memutuskan):** sudah dikonfirmasi owner.
 
 ---
 
@@ -37,7 +37,7 @@ Status jawaban 4 pertanyaan kritikal:
 | Q1 | Apa yang berubah di rubrik antara Batch 1 dan Batch 2? | ANSWERED-EVIDENCE | Rubrik berubah dari instruksi label generik menjadi rubric terstruktur: definisi label dikunci, boundary test A vs C ditambahkan, contoh boundary cases ditambahkan, dan checklist keputusan dibuat eksplisit. | File 2-6 pada daftar bukti primer |
 | Q2 | Kapan perubahan rubrik dibuat? | PARTIAL | Refinement berlangsung bertahap: fase kalibrasi pada 2026-02-08, lalu paket expanded 50 kasus bertanggal 2026-02-19 sudah memakai rubric lengkap. Tanggal approval formal owner belum terdokumentasi eksplisit. | File 3-6 + metadata commit (`3330118`, `80d562f`) |
 | Q3 | Apakah Batch 2 sepenuhnya independent dari Batch 1? | PARTIAL-EVIDENCE | Bukti operasional menunjukkan independensi pada level data/protokol: pool kasus disjoint (24 `CS-*` vs 50 `GS-*`, overlap ID = 0), dan paket 50 kasus memuat instruksi "JANGAN melihat referensi atau label orang lain". Namun bukti ini belum bisa memverifikasi faktor di luar artefak (out-of-band leakage). | File 6-7 |
-| Q4 | Siapa yang memutuskan perubahan rubrik? | BLOCKED-OWNER | Eksekusi artefak di repo dilakukan oleh Mukhlis Amien (jejak commit), tetapi otoritas keputusan metodologis final (nama/peran) belum ditulis eksplisit di dokumen keputusan. | `git log` + butuh konfirmasi owner |
+| Q4 | Siapa yang memutuskan perubahan rubrik? | ANSWERED-OWNER | Pengambil keputusan final refinement rubric: **Mukhlis Amien** (`amien@ubhinus.ac.id`), peran **Research Lead**. Konfirmasi diberikan pada **24 Februari 2026**. | Konfirmasi owner (sesi 2026-02-24) + jejak artefak |
 
 ---
 
@@ -98,14 +98,17 @@ Kesimpulan audit saat ini:
 
 ---
 
-## Detail Q4: Decision Authority (Masih Blocked)
+## Detail Q4: Decision Authority (Owner Confirmed)
 
-Yang sudah bisa dibuktikan:
-1. Artefak rubric dan paket labeling dilacak dalam commit oleh **Mukhlis Amien**.
-2. Ada catatan "Owner confirmed" pada keputusan metodologis lain (`docs/ira_analysis_2026-02-12.md`), tetapi belum ada kalimat serupa yang eksplisit untuk approval rubric final batch expanded.
+Konfirmasi owner yang diterima pada 2026-02-24:
+1. **Nama:** Mukhlis Amien
+2. **Kontak:** amien@ubhinus.ac.id
+3. **Peran:** Peneliti / Research Lead
+4. **Tanggal konfirmasi keputusan:** 24 Februari 2026
 
-Yang masih dibutuhkan:
-- Pernyataan singkat owner: siapa pengambil keputusan final refinement rubric (nama + peran), dan kapan disetujui.
+Implikasi:
+- Q4 ditutup sebagai **answered**.
+- Status dokumen dinaikkan menjadi **FINAL** untuk konteks metodologi yang saat ini terdokumentasi.
 
 ---
 
@@ -113,11 +116,12 @@ Yang masih dibutuhkan:
 
 | Tanggal | Peristiwa | Perubahan Rubrik | Alasan Perubahan | Pengambil Keputusan | Evidence |
 |---|---|---|---|---|---|
-| 2026-02-08 | Batch 1 agreement prep | Instruksi label masih generik | Persiapan agreement awal Ahli-2 | Belum eksplisit | Paket batch1 ready |
-| 2026-02-08 | Batch 2 kalibrasi | Definisi A/B/C/D dikunci | Menurunkan mismatch pasca 33.3% agreement awal | Belum eksplisit | Paket batch2 ready + report batch2 |
-| 2026-02-08 | Batch 3 kalibrasi lanjutan | Aturan justifikasi C vs A/B ditambahkan | Memperjelas boundary label | Belum eksplisit | Paket batch3 ready + report batch3 |
-| 2026-02-08 | Batch 5 ekspansi terarah | Checklist Dominansi/Dualitas/Fakta | Standarisasi reasoning lintas kasus baru | Belum eksplisit | Paket batch5 ready |
-| 2026-02-19 | Expanded batch 50 kasus | Rubric lengkap + boundary tests + contoh + blind instruction | Scale-up annotation dengan boundary policy lebih ketat | Belum eksplisit | Paket labeling 50 kasus |
+| 2026-02-08 | Batch 1 agreement prep | Instruksi label masih generik | Persiapan agreement awal Ahli-2 | Tim riset (operasional), final authority dikonfirmasi owner | Paket batch1 ready |
+| 2026-02-08 | Batch 2 kalibrasi | Definisi A/B/C/D dikunci | Menurunkan mismatch pasca 33.3% agreement awal | Tim riset (operasional), final authority dikonfirmasi owner | Paket batch2 ready + report batch2 |
+| 2026-02-08 | Batch 3 kalibrasi lanjutan | Aturan justifikasi C vs A/B ditambahkan | Memperjelas boundary label | Tim riset (operasional), final authority dikonfirmasi owner | Paket batch3 ready + report batch3 |
+| 2026-02-08 | Batch 5 ekspansi terarah | Checklist Dominansi/Dualitas/Fakta | Standarisasi reasoning lintas kasus baru | Tim riset (operasional), final authority dikonfirmasi owner | Paket batch5 ready |
+| 2026-02-19 | Expanded batch 50 kasus | Rubric lengkap + boundary tests + contoh + blind instruction | Scale-up annotation dengan boundary policy lebih ketat | Tim riset (operasional), final authority dikonfirmasi owner | Paket labeling 50 kasus |
+| 2026-02-24 | Konfirmasi authority | Penetapan pengambil keputusan final rubric refinement | Menutup gap metodologi untuk reviewer | **Mukhlis Amien (Research Lead)** | Konfirmasi owner sesi 2026-02-24 |
 
 ---
 
@@ -127,7 +131,7 @@ Yang masih dibutuhkan:
 - [x] Paket expanded memuat instruksi blind labeling.
 - [x] Rubrik final terdokumentasi (definisi + boundary tests + contoh).
 - [x] Tidak ada target distribusi label tertentu pada instruksi expanded.
-- [ ] Otoritas keputusan final refinement rubric tercatat eksplisit (nama/peran/tanggal).
+- [x] Otoritas keputusan final refinement rubric tercatat eksplisit (nama/peran/tanggal).
 
 ---
 
@@ -137,18 +141,16 @@ Versi konservatif (tanpa klaim authority final):
 
 > Inter-rater agreement improved from 58.3% (kappa=0.394, 24 cases) to 94.0% (47/50) after staged rubric refinement focused on decision boundaries (especially A/B vs C). The refined protocol introduced locked label definitions, explicit boundary tests, and standardized decision checks, and the expanded batch used a disjoint case pool with blind-labeling instructions.
 
-Versi final (pakai setelah owner isi Q4):
+Versi final:
 
-> Inter-rater agreement improved from 58.3% (kappa=0.394, 24 cases) to 94.0% (47/50) after rubric refinement approved on [DATE] by [DECISION MAKER]. The refined protocol introduced locked label definitions, explicit A-vs-C boundary tests, and standardized decision checks; the expanded batch was annotated on a disjoint case pool under blind-labeling instructions.
+> Inter-rater agreement improved from 58.3% (kappa=0.394, 24 cases) to 94.0% (47/50) after staged rubric refinement introducing locked label definitions, explicit A-vs-C boundary tests, and standardized decision checks. The expanded batch was annotated on a disjoint case pool under blind-labeling instructions. Final rubric-governance authority is documented as Mukhlis Amien (Research Lead), confirmed on 24 February 2026.
 
 ---
 
 ## Action Items
 
-1. Owner isi Q4: nama, peran, dan tanggal approval final rubric refinement.
-2. Setelah Q4 terisi, ubah status dokumen ini menjadi `FINAL`.
-3. Sinkronkan wording subsection "Rubric refinement" di `paper/main.tex` (jika belum).
-4. Simpan dokumen ini sebagai lampiran metodologi untuk paket submission.
+1. Pertahankan konsistensi narasi antara file ini dan `paper/main.tex` jika ada revisi lanjutan.
+2. Gunakan file ini sebagai lampiran metodologi untuk paket submission/rebuttal reviewer.
 
 ---
 
@@ -158,3 +160,4 @@ Versi final (pakai setelah owner isi Q4):
 |---|---|
 | 2026-02-24 | Draft awal template dibuat (tanpa evidence detail). |
 | 2026-02-24 | Upgraded menjadi evidence-backed draft: Q1/Q2/Q3 terisi berbasis artefak, Q4 tetap menunggu owner sign-off. |
+| 2026-02-24 | Q4 dikonfirmasi owner (Mukhlis Amien, Research Lead, 24 Februari 2026); status dokumen diubah menjadi FINAL. |
