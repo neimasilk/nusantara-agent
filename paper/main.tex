@@ -22,33 +22,33 @@ Project: Nusantara-Agent
 \maketitle
 
 \begin{abstract}
-We present \textit{Nusantara-Agent}, a neuro-symbolic framework for legal reasoning under Indonesian legal pluralism.
-The core contribution is a formally encoded customary-law rule base in Answer Set Programming (ASP), constructed from expert-verified rules across three domains: Minangkabau (25 rules), Bali (34 rules), and Jawa (36 rules).
-An LLM adjudication layer synthesizes symbolic outputs into final classifications.
-On a pilot benchmark of 74 dual-labeled legal scenarios (70 evaluable, 4 disputed), we compare three configurations: ASP-only (58.6\%, Wilson 95\% CI [0.469, 0.694]), ASP+Ollama/Qwen-2.5-7B (64.3\%, CI [0.526, 0.745]), and ASP+DeepSeek (68.6\%, CI [0.570, 0.782]).
-The observed improvements of +5.7 pp (Ollama) and +10.0 pp (DeepSeek) over the ASP-only baseline are statistically inconclusive at current scale: all pairwise McNemar tests are non-significant ($p \geq 0.17$, $n=70$), reflecting insufficient statistical power rather than absence of effect.
-High inter-system agreement (Fleiss' $\kappa = 0.638$) and per-label recall (ASP+Ollama: A=4/6, B=23/31, C=18/31, D=0/2) indicate consistent symbolic anchoring across LLM backends.
-These results suggest that expert-verified symbolic rules can serve as a reasoning anchor for LLM-based plural-law classification; confirming this at statistical power $\geq$0.8 requires approximately 344 evaluable cases.
+We present \textit{Nusantara-Agent}, a neuro-symbolic framework for legal reasoning in Indonesian legal pluralism, where national and customary (\textit{adat}) norms can conflict.
+Our primary contribution is resource-oriented: an expert-verified customary-law rule base encoded in Answer Set Programming (ASP) across three domains (Minangkabau 25 rules, Bali 34 rules, Jawa 36 rules), together with an auditable pilot benchmark protocol.
+An LLM adjudication layer is used as an interface over symbolic outputs.
+On 74 dual-expert-labeled scenarios (70 evaluable, 4 disputed), we compare ASP-only (58.6\%, Wilson 95\% CI [0.469, 0.694]), ASP+Ollama/deepseek-r1 (64.3\%, CI [0.526, 0.745]), and ASP+DeepSeek (68.6\%, CI [0.570, 0.782]).
+Observed gains over ASP-only (+5.7 pp and +10.0 pp) are directionally positive but statistically inconclusive at pilot scale: all pairwise McNemar tests are non-significant ($p \geq 0.17$, $n=70$).
+Inter-system agreement remains substantial (Fleiss' $\kappa = 0.638$), indicating stable rule-layer behavior across backends.
+We therefore position this work as a pilot benchmark and methodology paper, not a definitive efficacy claim; reaching statistical power $\geq$0.8 is estimated to require approximately 344 evaluable cases.
 \end{abstract}
 
 \section{Introduction}
 
-The Indonesian legal landscape is characterized by deep legal pluralism, where codified national law coexists with diverse systems of customary law (\textit{adat}). Reasoning within this environment requires more than simple document retrieval; it necessitates reconciling non-monotonic conflicts between overlapping legal regimes. For Artificial Intelligence, this presents a significant challenge: legal outcomes are often determined by cross-regime conflict-handling logic that is frequently implicit or procedurally complex.
+The Indonesian legal landscape is characterized by deep legal pluralism, where codified national law coexists with diverse systems of customary law (\textit{adat}). Reasoning in this setting is not only a retrieval problem; it requires reconciling non-monotonic conflicts between overlapping legal regimes. For AI systems, this is difficult because outcomes often depend on cross-regime conflict handling that is implicit, exception-heavy, and procedurally constrained.
 
 \paragraph{Research Gap.}
-Existing research in legal NLP has focused predominantly on monolithic, codified legal systems, particularly in Western jurisdictions. Tasks such as legal judgment prediction and contract extraction typically assume a single source of legal authority. In the Indonesian context, while there have been efforts in legal document classification, there is a marked absence of frameworks that formally encode the reasoning patterns of customary law. Specifically, no prior work has systematically formalized Indonesian \textit{adat} rules in Answer Set Programming (ASP)---a logic programming paradigm uniquely suited for handling the non-monotonic nature of plural legal reasoning.
+Existing legal NLP research focuses predominantly on monolithic, codified systems, mostly in Western jurisdictions. Typical tasks (judgment prediction, contract extraction, summarization) assume one dominant legal source. In the Indonesian context, legal document classification exists, but executable reasoning frameworks for customary law remain rare. In particular, there is no established benchmark line that combines expert-verified Indonesian \textit{adat} rules, formal ASP encoding, and auditable pilot evaluation for plural-law classification.
 
 \paragraph{Contributions.}
-In this paper, we present \textit{Nusantara-Agent}, a neuro-symbolic framework designed to bridge this gap by anchoring Large Language Model (LLM) adjudication with symbolic customary law rules. Our specific contributions are:
+This paper targets that gap with a resource-first neuro-symbolic contribution. We use ASP as the rule-centric reasoning core and treat the LLM layer as an adjudication interface. Our concrete contributions are:
 \begin{itemize}[nosep]
   \item A formally encoded, expert-verified ASP rule base covering three Indonesian customary law domains: Minangkabau (25 rules), Bali (34 rules), and Jawa (36 rules). Of these 95 rules, 71 are currently active in the reasoning engine.
-  \item A pilot neuro-symbolic pipeline and benchmark comprising 74 dual-expert-labeled legal scenarios (70 evaluable agreed cases, 4 disputed).
-  \item Empirical evidence that symbolic rule anchoring provides consistent behavior across different LLM backends (Fleiss' $\kappa = 0.638$, indicating substantial inter-system agreement).
-  \item Documentation of critical negative findings, including the ``Rule Over-specification Paradox'' (where excessive symbolic coverage degraded performance), the system's failure in uncertainty detection (0\% recall on D-labels), and the inherent statistical limitations of pilot-scale evaluation.
+  \item A pilot benchmark resource and reporting protocol over 74 dual-expert-labeled scenarios (70 evaluable agreed cases, 4 disputed), including manifest-based provenance and explicit claim-gating.
+  \item Cross-backend empirical results showing directional but non-conclusive gains and substantial inter-system agreement (Fleiss' $\kappa = 0.638$), supporting rule-layer stability as an anchor hypothesis.
+  \item Transparent documentation of negative findings, including the ``Rule Over-specification Paradox'', backend sensitivity, complete D-label failure (0\% recall), and pilot-scale statistical limits.
 \end{itemize}
 
 \paragraph{Scope and Limitations.}
-Following the strategic pivot on 2026-02-12, this manuscript focuses strictly on the formalization of rules, expert verification protocols, and pilot-scale evaluation. It is important to state upfront that the results presented are pilot observations; due to the small sample size ($n=70$), all pairwise McNemar tests comparing system configurations are statistically non-significant ($p \geq 0.17$). We do not claim large-scale generalization, but rather provide a framework for auditable, rule-centric reasoning in plural legal systems.
+Following the strategic pivot on 2026-02-12, this manuscript focuses on rule formalization, expert verification workflow, and pilot-scale evaluation. The current results are explicitly preliminary. First, statistical power is limited ($n=70$ evaluable; all pairwise McNemar comparisons are non-significant, $p \geq 0.17$). Second, the same 70 evaluable cases have been used during development and final reporting, so a fully clean held-out test set is not yet available in this pilot cycle. Accordingly, we frame the paper as a benchmark-and-methodology contribution for legal pluralism, while deferring strong efficacy and generalization claims to future unseen-case evaluation.
 
 \paragraph{Paper Roadmap.}
 The remainder of this paper is organized as follows: Section 2 reviews related work in neuro-symbolic AI and legal NLP; Section 3 defines the multi-label classification task; Section 4 provides a system overview of the \textit{Nusantara-Agent} architecture; Section 5 details the expert annotation protocol and dataset construction; Section 6 defines the evaluation metrics; Section 7 presents our experimental results and error analysis; Section 8 discusses limitations of the pilot study; Section 9 provides data and code availability; and Section 10 concludes with future directions.
@@ -84,7 +84,7 @@ Predictions are compared against expert labels with explicit agreement status.
 Nusantara-Agent is rule-centric: ASP formalization of expert-verified customary law is the primary modeling contribution.
 The LLM-based adjudication layer is used as a practical decision interface and is not the central novelty claim.
 
-This design choice is motivated by three requirements specific to legal reasoning in pluralistic jurisdictions: (1) auditability---ASP rules provide explicit, inspectable reasoning traces that satisfy legal domain expectations for transparency; (2) non-monotonic reasoning---ASP's native support for defaults and exceptions accommodates the defeasible nature of customary law norms; and (3) deployment flexibility---the system can operate without API calls in offline mode using deterministic heuristics. Empirical evidence supports this architecture: despite using different LLM backends (local 7B-parameter model versus commercial API), the three system configurations exhibit substantial inter-system agreement (Fleiss' $\kappa = 0.638$), indicating that the ASP rule layer dominates variance and serves as the primary reasoning anchor.
+This design choice is motivated by three requirements specific to legal reasoning in pluralistic jurisdictions: (1) auditability---ASP rules provide explicit, inspectable reasoning traces that satisfy legal domain expectations for transparency; (2) non-monotonic reasoning---ASP's native support for defaults and exceptions accommodates the defeasible nature of customary law norms; and (3) deployment flexibility---the system can operate without API calls in offline mode using deterministic heuristics. Pilot evidence is consistent with this architecture: despite using different LLM backends (local 7B-parameter model versus commercial API), the three system configurations exhibit substantial inter-system agreement (Fleiss' $\kappa = 0.638$), suggesting that the ASP rule layer contributes strongly to shared behavior across backends.
 
 \subsection{Core Neuro-Symbolic Components}
 \begin{itemize}[nosep]
@@ -262,7 +262,7 @@ $\rightarrow$ &
 We compare two operating modes on the 70 evaluable cases:
 \begin{itemize}[nosep]
   \item \textbf{ASP-only}: keyword router $\rightarrow$ ASP rule engine $\rightarrow$ offline heuristic supervisor (no LLM calls).
-  \item \textbf{ASP+LLM}: keyword router $\rightarrow$ ASP rule engine $\rightarrow$ LLM adjudication via Qwen-2.5-7B-Instruct (local Ollama).
+  \item \textbf{ASP+LLM}: keyword router $\rightarrow$ ASP rule engine $\rightarrow$ LLM adjudication via deepseek-r1 (local Ollama).
 \end{itemize}
 
 \begin{table}[h]
@@ -272,7 +272,7 @@ We compare two operating modes on the 70 evaluable cases:
 Mode & Accuracy & Wilson 95\% CI & Correct / Total \\
 \midrule
 ASP-only (offline) & 58.6\% & [0.469, 0.694] & 41 / 70 \\
-ASP+Ollama (Qwen-2.5-7B) & \textbf{64.3\%} & [0.526, 0.745] & 45 / 70 \\
+ASP+Ollama (deepseek-r1) & \textbf{64.3\%} & [0.526, 0.745] & 45 / 70 \\
 ASP+DeepSeek (API) & 68.6\% & [0.570, 0.782] & 48 / 70 \\
 \bottomrule
 \end{tabular}
@@ -309,7 +309,7 @@ Beyond the aggregate error patterns, we conduct a deeper analysis of \textbf{12 
 
 \subsubsection{Gold label distribution in hard cases}
 
-Table~\ref{tab:hardcases-dist} shows that conflict cases (C) are over-represented in failures, comprising 50.0\% of hard cases versus 44.3\% overall, confirming that detecting implicit national--adat conflicts remains the primary challenge.
+Table~\ref{tab:hardcases-dist} shows that conflict cases (C) are over-represented in failures, comprising 50.0\% of hard cases versus 44.3\% overall. This pattern suggests that detecting implicit national--adat conflicts is likely one of the primary challenges in the current benchmark.
 
 \begin{table}[h]
 \centering
@@ -367,7 +367,7 @@ All three systems fail on both D (``clarification required'') cases in the bench
 
 \subsubsection{Root cause summary}
 
-The fact that all three systems fail identically on these 12 cases indicates the problem lies in the \textbf{shared ASP rule set} or \textbf{router/prompt design}, not in LLM backend choice. The primary failure modes are:
+The fact that all three systems fail identically on these 12 cases suggests that the dominant error sources are in the \textbf{shared ASP rule set} and \textbf{router/prompt design}, rather than in backend-specific differences. The primary failure modes are:
 \begin{enumerate}[nosep]
   \item \textbf{Implicit conflict detection}: When conflict keywords are subtle (e.g., ``mendahului,'' ``tidak sah'') and ethnic keywords dominate, the router misses the conflict signal.
   \item \textbf{Domain ambiguity}: ``General'' cases without clear domain markers default to national-law pathways, missing adat dimensions.
@@ -409,7 +409,7 @@ ASP+Ollama shows larger observed gains over ASP-only for Bali (+9.6pp) and Nasio
 To assess whether results are robust to LLM choice, we evaluate three operating configurations on the identical 70-case benchmark:
 \begin{itemize}[nosep]
   \item \textbf{ASP-only}: offline heuristic supervisor (no LLM calls);
-  \item \textbf{ASP+Ollama}: Qwen-2.5-7B-Instruct via local Ollama;
+  \item \textbf{ASP+Ollama}: deepseek-r1 via local Ollama;
   \item \textbf{ASP+DeepSeek}: DeepSeek-Chat via API.
 \end{itemize}
 
@@ -425,7 +425,7 @@ To maintain methodological comparability, Table~\ref{tab:crossval} reports only 
 Mode & Accuracy & Wilson 95\% CI & Cohen's $\kappa$ & Agreement \\
 \midrule
 ASP-only (offline) & 58.6\% & [0.469, 0.694] & 0.331 & Fair \\
-ASP+Ollama (Qwen-2.5-7B) & 64.3\% & [0.526, 0.745] & 0.418 & Moderate \\
+ASP+Ollama (deepseek-r1) & 64.3\% & [0.526, 0.745] & 0.418 & Moderate \\
 ASP+DeepSeek (API) & \textbf{68.6\%} & [0.570, 0.782] & 0.483 & Moderate \\
 \bottomrule
 \end{tabular}
@@ -475,7 +475,7 @@ All 3 different & 2 & 2.9\% \\
 \label{tab:agreement}
 \end{table}
 
-The high unanimous agreement (67.1\%) with only 2.9\% complete disagreement suggests that the symbolic rule layer acts as a \textbf{strong prior} that dominates LLM variation. This is a desirable property for reproducibility: the system's behavior is anchored by the expert-verified ASP rules rather than being sensitive to LLM choice.
+The high unanimous agreement (67.1\%) with only 2.9\% complete disagreement is consistent with the symbolic rule layer acting as a \textbf{strong prior} across backends. In pilot terms, this is a reproducibility-positive signal: system behavior appears more anchored by expert-verified ASP rules than by backend-specific variation.
 
 \subsubsection{Majority vote analysis}
 
@@ -483,10 +483,10 @@ For cases where two systems agree and one differs, majority vote achieves only \
 
 \subsubsection{Implications}
 
-The cross-validation results support two key claims:
+The cross-validation results provide pilot-scale evidence for the following observations:
 \begin{enumerate}[nosep]
-  \item \textbf{Reproducibility}: A local 7B parameter model (Qwen-2.5-7B) achieves performance competitive with a commercial API (DeepSeek), with only a 4.3 percentage point gap that is not statistically significant. This supports deployment in resource-constrained settings where local inference is preferred.
-  \item \textbf{Rule-centric design}: The high inter-system agreement (Fleiss' $\kappa = 0.638$) confirms that the ASP rule layer, not the LLM backend, is the primary determinant of system behavior. This validates our design choice of treating the LLM as an adjudication interface rather than the core reasoning engine.
+  \item \textbf{Reproducibility feasibility}: In this pilot, a local Ollama backend (deepseek-r1) reaches performance close to a commercial API (DeepSeek), with a 4.3 percentage point gap that remains non-significant. This is feasibility evidence for resource-constrained deployment, not a definitive parity claim.
+  \item \textbf{Rule-centric design hypothesis}: The substantial inter-system agreement (Fleiss' $\kappa = 0.638$) is consistent with the ASP rule layer acting as a dominant anchor across backends. At current scale, this should be interpreted as directional support for a rule-centric design, not as a causal proof.
   \item \textbf{Exploratory backend sensitivity}: Two additional local Ollama backends run after the canonical freeze show divergent behavior under the same rule state and prompt. ASP+gpt-oss:20b reaches 45/70 (64.29\%), matching the canonical local Ollama/deepseek-r1 result (45/70), while ASP+Qwen3-14B drops to 38/70 (54.29\%). Against their same-day ASP-only paired baseline (42/70), these correspond to +4.29 pp (McNemar $p=0.646$) and $-5.71$ pp ($p=0.480$), respectively, indicating that neuro-symbolic gains remain backend-dependent.
   \item \textbf{Open-source B$\rightarrow$A bias}: gpt-oss:20b and Qwen3-14B share 6 identical B$\rightarrow$A failures (GS-0010, GS-0014, GS-0019, GS-0020, GS-0021, GS-0031), where strong national-law signals in ASP traces are over-interpreted as national-law dominance despite gold label B. This repeated pattern was not observed with the same concentration in the DeepSeek API run, suggesting backend calibration differences in legal conflict handling.
 \end{enumerate}
@@ -524,9 +524,10 @@ The dataset and source code are publicly available at:
 \end{center}
 
 \section{Conclusion and Next Steps}
-We present a pilot neuro-symbolic framework in which expert-verified ASP rules combined with LLM adjudication achieve an observed 64.3\%--68.6\% accuracy on a 70-case plural-law benchmark, versus 58.6\% for the ASP-only baseline (observed +5.7 pp to +10.0 pp).
-These differences are statistically inconclusive at current scale: all pairwise McNemar tests are non-significant ($n=70$, $p \geq 0.17$), reflecting insufficient statistical power rather than absence of effect.
-High inter-system agreement (Fleiss' $\kappa = 0.638$) supports that the ASP rule layer, not the LLM backend, is the primary determinant of system behavior.
+This paper contributes a pilot benchmark-and-methodology resource for AI reasoning in Indonesian legal pluralism: an expert-verified customary-law rule base encoded in ASP, an auditable neuro-symbolic pipeline, and transparent reporting of both positive and negative findings.
+On the current 70-case evaluable benchmark, ASP+LLM configurations show observed accuracies of 64.3\%--68.6\% versus 58.6\% for ASP-only (directional gain: +5.7 pp to +10.0 pp).
+These differences remain statistically inconclusive at pilot scale: all pairwise McNemar tests are non-significant ($n=70$, $p \geq 0.17$), and power is limited.
+Substantial inter-system agreement (Fleiss' $\kappa = 0.638$) is consistent with a rule-layer anchoring effect, but should be interpreted as preliminary evidence pending unseen-case validation.
 Immediate next steps are:
 \begin{enumerate}[nosep]
     \item expand the benchmark to at least 100 dual-expert-labeled cases to
