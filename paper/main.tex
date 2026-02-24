@@ -16,7 +16,7 @@
 Anonymous Authors\\
 Project: Nusantara-Agent
 }
-\date{Draft v0.5 -- 2026-02-23}
+\date{Draft v0.6 -- 2026-02-24}
 
 \begin{document}
 \maketitle
@@ -413,6 +413,7 @@ To assess whether results are robust to LLM choice, we evaluate three operating 
 \subsubsection{Accuracy comparison}
 
 Table~\ref{tab:crossval} reports accuracy and agreement metrics. ASP+DeepSeek achieves the highest accuracy at 68.6\%, followed by ASP+Ollama at 64.3\%, with ASP-only at 58.6\%.
+To maintain methodological comparability, Table~\ref{tab:crossval} reports only the canonical three-configuration snapshot (2026-02-20); additional exploratory backends from 2026-02-23 are discussed as sensitivity checks in Section~\ref{sec:limitations}.
 
 \begin{table}[h]
 \centering
@@ -483,9 +484,12 @@ The cross-validation results support two key claims:
 \begin{enumerate}[nosep]
   \item \textbf{Reproducibility}: A local 7B parameter model (Qwen-2.5-7B) achieves performance competitive with a commercial API (DeepSeek), with only a 4.3 percentage point gap that is not statistically significant. This supports deployment in resource-constrained settings where local inference is preferred.
   \item \textbf{Rule-centric design}: The high inter-system agreement (Fleiss' $\kappa = 0.638$) confirms that the ASP rule layer, not the LLM backend, is the primary determinant of system behavior. This validates our design choice of treating the LLM as an adjudication interface rather than the core reasoning engine.
+  \item \textbf{Exploratory backend sensitivity}: Two additional local Ollama backends run after the canonical freeze show divergent behavior under the same rule state and prompt. ASP+gpt-oss:20b reaches 45/70 (64.29\%), matching the canonical local Ollama/deepseek-r1 result (45/70), while ASP+Qwen3-14B drops to 38/70 (54.29\%). Against their same-day ASP-only paired baseline (42/70), these correspond to +4.29 pp (McNemar $p=0.646$) and $-5.71$ pp ($p=0.480$), respectively, indicating that neuro-symbolic gains remain backend-dependent.
+  \item \textbf{Open-source B$\rightarrow$A bias}: gpt-oss:20b and Qwen3-14B share 6 identical B$\rightarrow$A failures (GS-0010, GS-0014, GS-0019, GS-0020, GS-0021, GS-0031), where strong national-law signals in ASP traces are over-interpreted as national-law dominance despite gold label B. This repeated pattern was not observed with the same concentration in the DeepSeek API run, suggesting backend calibration differences in legal conflict handling.
 \end{enumerate}
 
 \section{Limitations}
+\label{sec:limitations}
 
 Despite the observed performance improvements in the neuro-symbolic configurations, several critical limitations must be acknowledged to frame the validity of this pilot study correctly.
 
@@ -500,6 +504,9 @@ The jump in inter-rater agreement from $58.3\%$ in the first batch ($24$ cases, 
 
 \paragraph{Rule Over-specification and Parity Gaps.}
 Our experiments revealed a ``Rule Over-specification Paradox'' (Failure F-018): increasing the ASP rule coverage from 71 to 95 rules paradoxically decreased system accuracy by $7.1$ pp. The additional rules were found to be too general, causing the ASP engine to over-report customary law dominance in conflict cases. This suggests that for neuro-symbolic systems, maximizing rule coverage is secondary to ensuring rule precision and proper calibration between symbolic and neural layers. Furthermore, parity audits (F-015, F-016, F-017) indicate that the current ASP rule base focuses primarily on ``hard'' inheritance constraints and lacks coverage for procedural and contemporary customary norms, particularly in the Jawa domain.
+
+\paragraph{Backend Dependence in Local Deployment.}
+Additional post-freeze backend runs indicate that local performance is sensitive to model calibration even under the same neuro-symbolic interface. While canonical ASP+Ollama (deepseek-r1) and exploratory ASP+gpt-oss:20b both reached 45/70 (64.29\%), ASP+Qwen3-14B dropped to 38/70 (54.29\%). All paired McNemar comparisons against their same-day ASP-only baseline remained non-significant (gpt-oss: $p=0.646$; Qwen3: $p=0.480$), so these results should be interpreted as directional evidence rather than confirmed effects. The repeated B$\rightarrow$A overlap across open-source backends (6 shared cases: GS-0010, GS-0014, GS-0019, GS-0020, GS-0021, GS-0031) suggests a structural prompt-calibration issue when national-law cues co-occur with adat-governed outcomes.
 
 \paragraph{Failure in Uncertainty Detection and Domain-Specific Weaknesses.}
 The system exhibited a complete failure in uncertainty detection (D-label), with $0\%$ recall across all configurations. The extreme class imbalance (only 2 D-label cases) and the lack of an explicit ``abstention'' mechanism in the prompt design prevented the models from identifying scenarios where clarification was required. Additionally, the Jawa domain remains a significant weakness, with an ASP-only accuracy of only $35.3\%$. The LLM layer frequently misclassified Jawa customary rules as national law (B$\rightarrow$A errors), suggesting that the models over-weight Civil Code terminology present in the case descriptions. These domain-specific disparities indicate that the framework's effectiveness is currently inconsistent across different Indonesian customary systems.
