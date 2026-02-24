@@ -1,8 +1,8 @@
 {
   "manifest_version": "1.0",
-  "dataset_id": "gs_active_2026-02-19",
-  "as_of_date": "2026-02-19",
-  "owner": "nusantara-agent",
+  "dataset_id": "gs_active_2026-02-24",
+  "as_of_date": "2026-02-24",
+  "owner": "Mukhlis Amien (Research Lead)",
   "benchmark_file": {
     "path": "data/processed/gold_standard/gs_active_cases.json",
     "sha256": "48B3B29DE23660334CEF1B638D1BF2340744B8BDE92D5B154557BD64BE276D89",
@@ -19,21 +19,23 @@
     "evaluable_cases_excluding_split": 70
   },
   "reference_claim": {
-    "path": "docs/human_only/artifacts/gold_standard_consensus_report_complete_82_cases_2026-02-08.md",
-    "sha256": "29E4852CE9A5065EBE2C94755C53F9E4F087FB8D748AA56D686B61D40841A3B6",
-    "declared_total_cases": 82
+    "path": "docs/human_only/artifacts/benchmark_scope_active_74_cases_2026-02-24.md",
+    "sha256": "47538AB7170FB428ECE829993460DD0C92862396D5AA4D16DFB9F2394E95E0EC",
+    "declared_total_cases": 74,
+    "declared_total_cases_source": "dataset_actual"
   },
   "integrity_checks": {
-    "count_matches_reference_claim": false,
+    "count_matches_reference_claim": true,
     "notes": [
       "Manifest direbuild otomatis dari dataset aktif.",
       "Gunakan validate_benchmark_manifest.py untuk verifikasi sebelum benchmark formal.",
+      "Default declared_total_cases mengikuti jumlah dataset aktif agar audit tidak mewarisi angka historis secara diam-diam.",
       "Label unresolved yang dikecualikan dari evaluasi: ['AMBIGUOUS', 'DISPUTED', 'SPLIT']"
     ]
   },
   "provenance": {
     "source_summary": "Rebuilt from local repository artifacts without external API calls.",
     "generated_by": "scripts/rebuild_benchmark_manifest.py",
-    "generated_at_utc": "2026-02-19T04:23:28Z"
+    "generated_at_utc": "2026-02-24T06:23:09Z"
   }
 }

@@ -19,7 +19,7 @@ Dokumen ini menetapkan framework testing operasional agar pipeline riset dapat d
   - `src/kg_engine/search.py`
   - utilitas parser di evaluator independen
 
-#### Coverage Aktual (2026-02-16)
+#### Coverage Aktual (2026-02-24)
 - `tests/test_token_usage.py` -> `src/utils/token_usage.py` (4 tests: `extract_token_usage`, `merge_usage`, fallback totals)
 - `tests/test_router.py` -> `src/agents/router.py` (9 tests: `route_query`, `classify_router_accuracy`, edge cases)
 - `tests/test_debate_json_parser.py` -> `src/agents/debate.py` (8 tests: `_json_or_raw`, fenced JSON, fallback paths)
@@ -30,8 +30,10 @@ Dokumen ini menetapkan framework testing operasional agar pipeline riset dapat d
 - `tests/test_orchestrator.py` -> `src/agents/orchestrator.py` (32 tests: offline supervisor decision logic)
 - `tests/test_nusantara_pipeline.py` -> `src/pipeline/nusantara_agent.py` (5 tests, offline with mocked orchestrator builder)
 - `tests/test_benchmark_contract.py` -> `src/utils/benchmark_contract.py` (5 tests: unresolved label policy + manifest compatibility)
+- `tests/test_dataset_split.py` -> `src/utils/dataset_split.py` (6 tests: split defaults, policy validation, strict filtering)
+- `tests/test_claim_gate.py` -> `scripts/claim_gate.py` (3 tests: canonical vs exploratory /70 ratio policy)
 
-**Total: 106 Deterministic Tests passed (`python -m unittest discover -s tests -p "test_*.py" -v`).**
+**Total: 118 Deterministic Tests passed (`python -m unittest discover -s tests -p "test_*.py" -v`).**
 
 ### Layer B — Script Syntax Smoke Check (wajib sebelum merge)
 - Seluruh skrip `src/` + eksperimen aktif harus lolos kompilasi syntax.
@@ -41,8 +43,9 @@ Dokumen ini menetapkan framework testing operasional agar pipeline riset dapat d
 - Jalankan subset query kecil (`N<=3`) untuk memastikan alur run tidak crash.
 - Output harus menghasilkan `summary.json` dan `run_index.json` yang valid JSON.
 - Untuk benchmark Exp 09:
-  - Mode `scientific_claimable` wajib fail-hard jika benchmark manifest tidak koheren (`count_matches_reference_claim=false`).
+  - Mode `scientific_claimable` wajib fail-hard jika benchmark manifest tidak koheren (hash/count/evaluable mismatch atau `count_matches_reference_claim=false`).
   - Mode `operational_offline` boleh dipakai untuk tracking harian, tetapi tidak boleh langsung jadi klaim paper.
+  - Snapshot validasi strict 2026-02-24: `python scripts/validate_benchmark_manifest.py --require-reference-match` -> `errors=0`, `warns=0`.
 
 ### Layer D — Scientific Review Gate (wajib untuk klaim paper)
 - Layer engineering lulus tidak otomatis berarti valid secara ilmiah.

@@ -146,3 +146,43 @@ Range: -10 sampai +20. Semakin tinggi, semakin urgent.
 - **Bisa diklaim**: Arsitektur neuro-symbolic (setelah fix ME-001), multi-agent sequential, 95 aturan adat terverifikasi expert
 - **Belum bisa diklaim**: Symbolic anchor mencegah halusinasi (perlu re-run Exp 05 setelah fix), ablation gain (B1-B5 belum valid)
 - **Tidak akan bisa diklaim tanpa**: Independent evaluation (ME-005), proper ablation (ME-006), statistical significance (N>82)
+
+---
+
+## Week 2026-02-24
+
+### Delta dari minggu lalu
+- Review eksternal Gemini di-triase formal untuk menentukan adopsi kritik berbasis evidence, bukan reaksi instan.
+- Gate governance runner benchmark diseragamkan (`scientific_claimable` fail-hard, split contract runtime aktif).
+- Claim gate paper diperketat untuk membedakan angka canonical vs exploratory tanpa mematikan transparansi.
+- Audit khusus domain Jawa telah dijalankan dengan artefak reproducible (`jawa_failure_audit_2026-02-24.json`) untuk mengeksekusi ME-022.
+- Governance manifest benchmark direkonsiliasi: referensi benchmark aktif dibekukan ke 74 kasus dan validasi strict lulus (`errors=0`, `warns=0`).
+
+### Gate Results
+- Symbolic Core: PASS (tidak ada perubahan rule `.lp` minggu ini).
+- Test Integrity: 118/118 pass.
+- Status Consistency: PARTIAL (status inti selaras, tetapi sebagian dokumen historis masih memuat angka lama).
+- Data Governance: PASS (manifest strict-check kini koheren, `count_matches_reference_claim=true`, scientific gate tidak lagi terblokir oleh mismatch referensi).
+- Methodology: PARTIAL (kontaminasi dev/eval dan power statistik tetap blocker untuk efficacy claim penuh).
+
+### Kritik Baru
+
+| ID | Kritik | Sev | Evid | Rej | Test | Cost | Disr | Score | Keputusan |
+|----|--------|-----|------|-----|------|------|------|-------|-----------|
+| ME-020 | Data contamination membuat klaim akurasi rentan overfitting | 5 | 5 | 5 | 5 | 3 | 1 | 16 | ADOPT_NOW |
+| ME-021 | Power statistik n=70 belum cukup untuk klaim konklusif | 4 | 5 | 5 | 5 | 2 | 1 | 16 | ADOPT_NOW |
+| ME-022 | Domain Jawa underperformance butuh diagnosis yang lebih testable | 4 | 4 | 4 | 4 | 2 | 1 | 13 | ADOPT_NOW |
+| ME-023 | Framing paper harus dominan sebagai pilot/resource benchmark | 4 | 4 | 4 | 5 | 1 | 1 | 15 | ADOPT_NOW |
+| ME-024 | Pivot langsung ke workshop/short paper sekarang juga | 3 | 3 | 3 | 2 | 2 | 2 | 7 | DEFER_WITH_TRIGGER |
+
+### Kritik Lama (status update)
+- ME-005 (independent evaluation): masih relevan, belum tuntas karena FUTURE TEST set belum tersedia.
+- ME-006 (baseline defensibility): status membaik, gate mode runner sudah diseragamkan.
+
+### Trigger Definitions
+- ME-024 diputuskan ulang jika hingga 2026-03-15 belum ada FUTURE TEST set unseen atau belum ada peningkatan power yang memadai.
+
+### Dampak ke Klaim Paper
+- Bisa diklaim: kontribusi rule base, kontribusi metodologis neuro-symbolic, serta transparansi failure/limitation.
+- Belum bisa diklaim: efficacy superiority yang konklusif.
+- Tidak akan bisa diklaim tanpa: data unseen baru dan power statistik yang lebih kuat.

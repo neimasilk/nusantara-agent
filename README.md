@@ -14,11 +14,13 @@
 - **Fail fast, pivot early:** Hasil negatif didokumentasikan sebagai kontribusi ilmiah.
 - **Serius dalam standar:** Semua klaim harus evidence-based dan reproducible.
 
-## Status Terkini (as of 2026-02-16)
+## Status Terkini (as of 2026-02-24)
 - `ClingoRuleEngine` aktif di `src/symbolic/rule_engine.py` dengan 95 aturan lintas 4 domain (`minangkabau`, `bali`, `jawa`, `nasional`).
-- Gold-standard pool: 82 kasus; benchmark aktif: 24 kasus (14 agreed, 10 disputed menunggu adjudikasi lanjutan).
+- Benchmark aktif: 74 kasus (70 evaluable + 4 `DISPUTED` di luar skor akurasi).
+- Manifest benchmark strict-check lulus (`python scripts/validate_benchmark_manifest.py --require-reference-match` -> `errors=0`, `warns=0`).
 - Multi-agent debate/self-correction dicatat sebagai hasil negatif (F-009) dan **bukan** jalur utama paper.
-- Test suite deterministic lulus `101/101` (`python scripts/run_test_suite.py`).
+- Test suite deterministic lulus `118/118` (`python scripts/run_test_suite.py`).
+- Runner benchmark memakai split contract terpusat (`full/dev/locked_test`) dan gate mode setara (`scientific_claimable` vs `operational_offline`).
 - Workflow default adalah offline-first; pemanggilan API berbayar hanya jika diperlukan dan disetujui owner.
 
 ## Milestone Prioritas
