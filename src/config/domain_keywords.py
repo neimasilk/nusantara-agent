@@ -46,6 +46,17 @@ CONFLICT_KEYWORDS = ROUTER_CONFLICT_KEYWORDS
 SUPERVISOR_MINANG_KEYWORDS = ("minang", "pusako", "kemenakan", "mamak", "kaum")
 SUPERVISOR_BALI_KEYWORDS = ("bali", "purusa", "sanggah", "druwe", "sentana")
 SUPERVISOR_JAWA_KEYWORDS = ("jawa", "gono-gini", "ragil", "wekas", "sigar")
+SUPERVISOR_JAWA_BILATERAL_KEYWORDS = (
+    "gono-gini",
+    "gono gini",
+    "harta bersama",
+    "harta perkawinan",
+    "sigar semangka",
+    "sepikul",
+    "segendongan",
+    "wekas",
+    "ragil",
+)
 SUPERVISOR_NATIONAL_KEYWORDS = (
     "ham",
     "uu ",
@@ -60,6 +71,19 @@ SUPERVISOR_NATIONAL_KEYWORDS = (
     "perceraian",
     "kua",
     "pengadilan",
+)
+SUPERVISOR_NATIONAL_HARD_KEYWORDS = (
+    "di bawah umur",
+    "batas minimal",
+    "batas usia",
+    "penetapan pengadilan",
+    "paspor",
+    "imigrasi",
+    "catatan sipil",
+    "akta",
+    "poligami",
+    "perceraian",
+    "cerai",
 )
 SUPERVISOR_HAM_EXTREME_KEYWORDS = (
     "dilarang bersekolah",

@@ -6,7 +6,7 @@ import sys
 import traceback
 from datetime import date
 from pathlib import Path
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List, Literal, Tuple
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -21,12 +21,19 @@ from src.utils.benchmark_contract import (
     is_evaluable_gold_label,
     resolve_manifest_evaluable_count,
 )
+from src.utils.dataset_split import (
+    DEFAULT_SPLIT_POLICY_PATH,
+    apply_dataset_split,
+    resolve_dataset_split_mode,
+)
+from src.utils.reasoning_contract import summarize_reasoning_contract
 
 
 DEFAULT_MANIFEST_PATH = ROOT / "data" / "benchmark_manifest.json"
 DEFAULT_DATASET_PATH = ROOT / "data" / "processed" / "gold_standard" / "gs_active_cases.json"
 DEFAULT_OUTPUT_DIR = ROOT / "experiments" / "09_ablation_study"
 VALID_LABELS = ("A", "B", "C", "D")
+EvaluationMode = Literal["scientific_claimable", "operational_offline"]
 
 
 def _path_for_report(path: Path) -> str:
@@ -102,6 +109,24 @@ def _validate_manifest_counts(
             print(f"[WARN] {msg}")
 
 
+def _resolve_strict_manifest(mode: EvaluationMode, strict_manifest: bool) -> bool:
+    if mode == "scientific_claimable":
+        return True
+    return strict_manifest
+
+
+def _enforce_mode_gate(manifest: Dict[str, Any], mode: EvaluationMode) -> None:
+    if mode != "scientific_claimable":
+        return
+    if not manifest:
+        raise RuntimeError("Mode scientific_claimable membutuhkan benchmark manifest yang valid.")
+    if manifest.get("integrity_checks", {}).get("count_matches_reference_claim") is False:
+        raise RuntimeError(
+            "Mode scientific_claimable ditolak: count_matches_reference_claim=false. "
+            "Promosikan dataset referensi atau gunakan mode operational_offline."
+        )
+
+
 def _detect_runtime_backend(pipeline: NusantaraAgentPipeline) -> str:
     if pipeline.orchestrator.__class__.__name__ == "_OfflineOrchestrator":
         return "offline_fallback"
@@ -173,10 +198,12 @@ def _compute_per_label_metrics(gold: List[str], pred: List[str]) -> Dict[str, Di
 
 def _run_mode(
     mode: str,
+    evaluation_mode: EvaluationMode,
     dataset: List[Dict[str, Any]],
     output_dir: Path,
     dataset_path: Path,
     skipped_labels: List[str],
+    split_meta: Dict[str, Any],
 ) -> Dict[str, Any]:
     if mode not in {"asp_only", "asp_llm"}:
         raise ValueError(f"Mode tidak didukung: {mode}")
@@ -184,7 +211,9 @@ def _run_mode(
     old_force_offline = os.getenv("NUSANTARA_FORCE_OFFLINE")
     mode_skipped = False
     skip_reason = ""
-    output_path = output_dir / f"results_dual_{mode}_{date.today().isoformat()}.json"
+    split_mode = str(split_meta.get("dataset_split_mode", "full"))
+    split_suffix = "" if split_mode == "full" else f"_{split_mode}"
+    output_path = output_dir / f"results_dual_{mode}{split_suffix}_{date.today().isoformat()}.json"
 
     try:
         if mode == "asp_only":
@@ -201,9 +230,15 @@ def _run_mode(
             payload = {
                 "date": date.today().isoformat(),
                 "mode": mode,
+                "evaluation_mode": evaluation_mode,
                 "skipped": True,
                 "skip_reason": skip_reason,
                 "source_dataset": _path_for_report(dataset_path),
+                "dataset_split_mode": split_mode,
+                "split_policy_path": split_meta.get("split_policy_path", ""),
+                "split_contract": split_meta,
+                "total_raw_cases": int(split_meta.get("total_raw_cases", len(dataset))),
+                "total_cases_after_split": int(split_meta.get("total_cases_after_split", len(dataset))),
             }
             output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
             print(f"[WARN] {skip_reason}")
@@ -221,10 +256,16 @@ def _run_mode(
             payload = {
                 "date": date.today().isoformat(),
                 "mode": mode,
+                "evaluation_mode": evaluation_mode,
                 "skipped": True,
                 "skip_reason": skip_reason,
                 "runtime_backend": runtime_backend,
                 "source_dataset": _path_for_report(dataset_path),
+                "dataset_split_mode": split_mode,
+                "split_policy_path": split_meta.get("split_policy_path", ""),
+                "split_contract": split_meta,
+                "total_raw_cases": int(split_meta.get("total_raw_cases", len(dataset))),
+                "total_cases_after_split": int(split_meta.get("total_cases_after_split", len(dataset))),
             }
             output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
             print(f"[WARN] {skip_reason}")
@@ -259,10 +300,16 @@ def _run_mode(
                     payload = {
                         "date": date.today().isoformat(),
                         "mode": mode,
+                        "evaluation_mode": evaluation_mode,
                         "skipped": True,
                         "skip_reason": skip_reason,
                         "runtime_backend": runtime_backend,
                         "source_dataset": _path_for_report(dataset_path),
+                        "dataset_split_mode": split_mode,
+                        "split_policy_path": split_meta.get("split_policy_path", ""),
+                        "split_contract": split_meta,
+                        "total_raw_cases": int(split_meta.get("total_raw_cases", len(dataset))),
+                        "total_cases_after_split": int(split_meta.get("total_cases_after_split", len(dataset))),
                         "failed_case_id": case_id,
                         "failed_case_index_1based": evaluated,
                         "error_traceback_last_20_lines": traceback.format_exc().splitlines()[-20:],
@@ -294,14 +341,20 @@ def _run_mode(
         accuracy = correct / evaluated if evaluated > 0 else 0.0
         ci_low, ci_high = _wilson_interval(correct, evaluated)
         per_label = _compute_per_label_metrics(gold_labels, pred_labels)
+        reasoning_contract = summarize_reasoning_contract(results)
 
         payload = {
             "date": date.today().isoformat(),
             "mode": mode,
+            "evaluation_mode": evaluation_mode,
             "skipped": False,
             "runtime_backend": runtime_backend,
             "source_dataset": _path_for_report(dataset_path),
-            "total_raw_cases": len(dataset),
+            "dataset_split_mode": split_mode,
+            "split_policy_path": split_meta.get("split_policy_path", ""),
+            "split_contract": split_meta,
+            "total_raw_cases": int(split_meta.get("total_raw_cases", len(dataset))),
+            "total_cases_after_split": int(split_meta.get("total_cases_after_split", len(dataset))),
             "unresolved_skipped": unresolved_skipped,
             "unresolved_labels": skipped_labels,
             "total_evaluated": evaluated,
@@ -312,8 +365,24 @@ def _run_mode(
                 "high": ci_high,
             },
             "per_label_metrics": per_label,
+            "reasoning_metadata_contract": reasoning_contract,
             "results": results,
         }
+        if (
+            mode == "asp_llm"
+            and evaluation_mode == "scientific_claimable"
+            and not reasoning_contract.get("claimable_for_layer_diagnosis", False)
+        ):
+            payload["contract_gate"] = {
+                "status": "failed",
+                "reason": (
+                    "Mode scientific_claimable ditolak: reasoning metadata tidak lengkap "
+                    "(wajib label/langkah_keputusan/alasan_utama/konflik_terdeteksi untuk semua kasus)."
+                ),
+            }
+            output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+            raise RuntimeError(payload["contract_gate"]["reason"])
+
         output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"[OK] Saved: {output_path}")
         return payload
@@ -376,10 +445,34 @@ def _build_parser() -> argparse.ArgumentParser:
         description="Dual benchmark runner: ASP-only (offline) vs ASP+LLM."
     )
     parser.add_argument(
+        "--mode",
+        choices=["scientific_claimable", "operational_offline"],
+        default="operational_offline",
+        help=(
+            "Mode evaluasi. scientific_claimable akan fail-hard jika manifest tidak koheren; "
+            "operational_offline untuk tracking operasional."
+        ),
+    )
+    parser.add_argument(
         "--gs-path",
         type=str,
         default="",
         help="Path dataset benchmark. Jika kosong pakai manifest lalu fallback default.",
+    )
+    parser.add_argument(
+        "--dataset-split",
+        choices=["full", "dev", "locked_test"],
+        default="",
+        help=(
+            "Filter split dataset: full/dev/locked_test. "
+            "Default otomatis: operational_offline->dev, scientific_claimable->full."
+        ),
+    )
+    parser.add_argument(
+        "--split-policy-path",
+        type=str,
+        default=str(DEFAULT_SPLIT_POLICY_PATH),
+        help="Path JSON split policy (default experiments/09_ablation_study/dataset_split.json).",
     )
     parser.add_argument(
         "--manifest-path",
@@ -396,8 +489,16 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--strict-manifest",
         action="store_true",
+        dest="strict_manifest",
         help="Hard-fail jika total/evaluable runtime tidak cocok benchmark manifest.",
     )
+    parser.add_argument(
+        "--no-strict-manifest",
+        action="store_false",
+        dest="strict_manifest",
+        help="Izinkan mismatch runtime_count vs manifest (hanya untuk operational_offline).",
+    )
+    parser.set_defaults(strict_manifest=True)
     return parser
 
 
@@ -407,34 +508,56 @@ def main() -> int:
     manifest_path = Path(args.manifest_path)
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
+    mode: EvaluationMode = args.mode
 
     manifest = _load_manifest(manifest_path)
+    strict_manifest = _resolve_strict_manifest(mode, args.strict_manifest)
+    _enforce_mode_gate(manifest, mode)
     dataset_path = _resolve_dataset_path(args.gs_path, manifest)
     dataset = _load_dataset(dataset_path)
-    _validate_manifest_counts(dataset, manifest, strict_manifest=args.strict_manifest)
+    _validate_manifest_counts(dataset, manifest, strict_manifest=strict_manifest)
+    split_mode = resolve_dataset_split_mode(mode, args.dataset_split)
+    split_policy = Path(args.split_policy_path)
+    working_dataset, split_meta = apply_dataset_split(dataset, split_mode, split_policy, strict=True)
+    if not working_dataset:
+        raise RuntimeError(
+            "Dataset split menghasilkan 0 kasus. "
+            f"Cek dataset_split='{split_mode}' dan split_policy='{split_policy}'."
+        )
+    split_meta = {
+        **split_meta,
+        "total_raw_cases": len(dataset),
+        "total_cases_after_split": len(working_dataset),
+    }
 
     skipped_labels = sorted(UNRESOLVED_GOLD_LABELS)
     print(
         "[INFO] Dataset loaded:",
         f"path={dataset_path}",
         f"total={len(dataset)}",
-        f"evaluable={count_evaluable_cases(dataset)}",
+        f"after_split={len(working_dataset)}",
+        f"evaluable_after_split={count_evaluable_cases(working_dataset)}",
+        f"dataset_split={split_mode}",
         f"skipped_labels={skipped_labels}",
     )
 
     asp_only_result = _run_mode(
         mode="asp_only",
-        dataset=dataset,
+        evaluation_mode=mode,
+        dataset=working_dataset,
         output_dir=output_dir,
         dataset_path=dataset_path,
         skipped_labels=skipped_labels,
+        split_meta=split_meta,
     )
     asp_llm_result = _run_mode(
         mode="asp_llm",
-        dataset=dataset,
+        evaluation_mode=mode,
+        dataset=working_dataset,
         output_dir=output_dir,
         dataset_path=dataset_path,
         skipped_labels=skipped_labels,
+        split_meta=split_meta,
     )
 
     table = _render_comparison_table([asp_only_result, asp_llm_result])

@@ -13,8 +13,10 @@ from src.config.domain_keywords import (
     SUPERVISOR_BALI_KEYWORDS,
     SUPERVISOR_HAM_EXTREME_KEYWORDS,
     SUPERVISOR_JAWA_KEYWORDS,
+    SUPERVISOR_JAWA_BILATERAL_KEYWORDS,
     SUPERVISOR_MINANG_KEYWORDS,
     SUPERVISOR_MK_MDP_KEYWORDS,
+    SUPERVISOR_NATIONAL_HARD_KEYWORDS,
     SUPERVISOR_NATIONAL_KEYWORDS,
 )
 
@@ -265,7 +267,9 @@ def _supervisor_agent(llm: ChatOpenAI, state: AgentState, route_label: str = Non
     has_minang_keywords = any(k in q_lower for k in SUPERVISOR_MINANG_KEYWORDS)
     has_bali_keywords = any(k in q_lower for k in SUPERVISOR_BALI_KEYWORDS)
     has_jawa_keywords = any(k in q_lower for k in SUPERVISOR_JAWA_KEYWORDS)
+    has_jawa_bilateral_keywords = any(k in q_lower for k in SUPERVISOR_JAWA_BILATERAL_KEYWORDS)
     has_national_keywords = any(k in q_lower for k in SUPERVISOR_NATIONAL_KEYWORDS)
+    has_national_hard_constraints = any(k in q_lower for k in SUPERVISOR_NATIONAL_HARD_KEYWORDS)
     has_ham_extreme = any(k in q_lower for k in SUPERVISOR_HAM_EXTREME_KEYWORDS)
     has_mk_mdp = any(k in q_lower for k in SUPERVISOR_MK_MDP_KEYWORDS)
     
@@ -277,6 +281,13 @@ def _supervisor_agent(llm: ChatOpenAI, state: AgentState, route_label: str = Non
             router_warning += " (SHM di atas tanah ulayat adalah indikator kuat KONFLIK/C)."
     elif route_label == "pure_national" and (has_minang_keywords or has_bali_keywords or has_jawa_keywords):
         router_warning = "WARNING: Router melabeli 'Nasional', tapi terdeteksi istilah Adat. PERTIMBANGKAN B atau C jika relevan."
+    if has_jawa_bilateral_keywords and not has_national_hard_constraints:
+        if router_warning:
+            router_warning += " "
+        router_warning += (
+            "JAWA_GUARD_V1: Jika konteks Jawa bilateral kuat (gono-gini/sigar semangka/wekas) "
+            "tanpa constraint nasional keras, JANGAN pilih A kecuali ada konflik eksplisit."
+        )
 
     prompt = (
         "Kamu adalah Hakim Adjudikator yang ahli dalam pluralisme hukum Indonesia.\n\n"
@@ -309,8 +320,15 @@ def _supervisor_agent(llm: ChatOpenAI, state: AgentState, route_label: str = Non
         "  - Konteks adat sebagai latar belakang cerita BUKAN alasan untuk memilih C.\n\n"
         "LANGKAH 3: Cek Pure Internal Adat\n"
         f"  - Domain adat terdeteksi: Minang={has_minang_keywords}, Bali={has_bali_keywords}, Jawa={has_jawa_keywords}\n"
+        f"  - Sinyal Jawa bilateral kuat: {has_jawa_bilateral_keywords}\n"
+        f"  - Constraint nasional keras terdeteksi: {has_national_hard_constraints}\n"
         "  - Jika kasus internal komunitas adat TANPA implikasi UU/HAM → B\n"
         "  - Contoh: Sengketa harta pusako antar-kaum, status kemenakan\n\n"
+        "JAWA GUARD V1 (Anti B→A)\n"
+        "  - Jika sinyal Jawa bilateral kuat (mis. gono-gini/sigar semangka/wekas) dan "
+        "constraint nasional keras TIDAK terdeteksi, maka default ke B.\n"
+        "  - Dalam kondisi tersebut, label A hanya boleh dipilih jika ada dasar nasional keras "
+        "yang eksplisit atau konflik normatif eksplisit yang tervalidasi data simbolik.\n\n"
         "LANGKAH 4: Cek Konflik Nasional vs Adat (Label C)\n"
         f"  - Putusan MK/MDP terdeteksi: {has_mk_mdp}\n"
         "  - Catatan: MDP (Majelis Desa Pakraman) adalah lembaga adat Bali yang sering mereformasi adat konservatif.\n"

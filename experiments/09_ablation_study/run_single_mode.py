@@ -28,6 +28,7 @@ from src.utils.benchmark_contract import (
     count_evaluable_cases,
     is_evaluable_gold_label,
 )
+from src.utils.reasoning_contract import summarize_reasoning_contract
 
 
 DEFAULT_DATASET_PATH = ROOT / "data" / "processed" / "gold_standard" / "gs_active_cases.json"
@@ -298,6 +299,7 @@ def run_asp_llm_benchmark(
                 "errors": errors,
                 "error_count": len(errors),
                 "timeout_count": sum(1 for e in errors if e.get("error") == "TIMEOUT"),
+                "reasoning_metadata_contract": summarize_reasoning_contract(results),
                 "results": results,
             }
             output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")

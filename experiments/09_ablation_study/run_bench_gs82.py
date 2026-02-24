@@ -2,6 +2,7 @@ import argparse
 import json
 import os
 import sys
+from pathlib import Path
 from typing import Dict, Literal
 
 # Tambahkan root ke sys.path untuk import src
@@ -15,6 +16,12 @@ from src.utils.benchmark_contract import (
     is_evaluable_gold_label,
     resolve_manifest_evaluable_count,
 )
+from src.utils.dataset_split import (
+    DEFAULT_SPLIT_POLICY_PATH,
+    apply_dataset_split,
+    resolve_dataset_split_mode,
+)
+from src.utils.reasoning_contract import summarize_reasoning_contract
 
 MANIFEST_PATH = "data/benchmark_manifest.json"
 LEGACY_GS_PATH = "data/processed/gold_standard/gs_active_cases.json"
@@ -148,10 +155,14 @@ def run_benchmark(
     strict_manifest: bool,
     mode: EvaluationMode,
     require_llm: bool,
+    dataset_split: str,
+    split_policy_path: str,
 ) -> None:
     strict_manifest = _resolve_strict_manifest(mode, strict_manifest)
     manifest = _load_manifest()
     gs_path = _resolve_gs_path(gs_path, manifest)
+    split_mode = resolve_dataset_split_mode(mode, dataset_split)
+    split_policy = Path(split_policy_path)
 
     _enforce_mode_gate(manifest, mode)
 
@@ -168,6 +179,12 @@ def run_benchmark(
         raise RuntimeError(f"Dataset format invalid: expected list, got {type(gs_data).__name__}")
 
     _validate_manifest_integrity(gs_data, manifest, strict_manifest)
+    working_data, split_meta = apply_dataset_split(gs_data, split_mode, split_policy, strict=True)
+    if not working_data:
+        raise RuntimeError(
+            "Dataset split menghasilkan 0 kasus. "
+            f"Cek dataset_split='{split_mode}' dan split_policy='{split_policy}'."
+        )
 
     pipeline = NusantaraAgentPipeline()
     runtime_backend = _detect_runtime_backend(pipeline)
@@ -182,9 +199,13 @@ def run_benchmark(
     total = 0
     unresolved_count = 0
 
-    print(f"Starting Benchmark on {len(gs_data)} cases (AGENT INTEGRATED)...")
+    print(
+        f"[INFO] Dataset split mode={split_mode} selected={len(working_data)}/{len(gs_data)} "
+        f"(policy={split_policy.as_posix()})"
+    )
+    print(f"Starting Benchmark on {len(working_data)} cases (AGENT INTEGRATED)...")
 
-    for entry in gs_data:
+    for entry in working_data:
         gold = str(entry.get("gold_label", "")).upper()
         if not is_evaluable_gold_label(gold):
             unresolved_count += 1
@@ -223,15 +244,35 @@ def run_benchmark(
         "runtime_backend": runtime_backend,
         "require_llm": require_llm,
         "source_dataset": gs_path,
+        "dataset_split_mode": split_mode,
+        "split_policy_path": split_policy.as_posix(),
+        "split_contract": split_meta,
         "total_raw_cases": len(gs_data),
+        "total_cases_after_split": len(working_data),
         "split_skipped": unresolved_count,  # Backward compatibility
         "unresolved_skipped": unresolved_count,
         "unresolved_labels": sorted(UNRESOLVED_GOLD_LABELS),
         "total_evaluated": total,
         "correct": correct,
         "accuracy": accuracy,
+        "reasoning_metadata_contract": summarize_reasoning_contract(results),
         "results": results
     }
+    if (
+        mode == "scientific_claimable"
+        and runtime_backend == "llm_langgraph"
+        and not summary["reasoning_metadata_contract"].get("claimable_for_layer_diagnosis", False)
+    ):
+        summary["contract_gate"] = {
+            "status": "failed",
+            "reason": (
+                "Mode scientific_claimable ditolak: reasoning metadata tidak lengkap "
+                "(wajib label/langkah_keputusan/alasan_utama/konflik_terdeteksi untuk semua kasus)."
+            ),
+        }
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(summary, f, indent=2)
+        raise RuntimeError(summary["contract_gate"]["reason"])
 
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(summary, f, indent=2)
@@ -259,6 +300,21 @@ def _build_parser() -> argparse.ArgumentParser:
         type=str,
         default="",
         help="Path dataset benchmark. Jika kosong, akan pakai manifest lalu fallback legacy path.",
+    )
+    parser.add_argument(
+        "--dataset-split",
+        choices=["full", "dev", "locked_test"],
+        default="",
+        help=(
+            "Filter split dataset: full/dev/locked_test. "
+            "Default otomatis: operational_offline->dev, scientific_claimable->full."
+        ),
+    )
+    parser.add_argument(
+        "--split-policy-path",
+        type=str,
+        default=str(DEFAULT_SPLIT_POLICY_PATH),
+        help="Path JSON split policy (default experiments/09_ablation_study/dataset_split.json).",
     )
     parser.add_argument(
         "--output",
@@ -305,4 +361,6 @@ if __name__ == "__main__":
         strict_manifest=args.strict_manifest,
         mode=args.mode,
         require_llm=args.require_llm,
+        dataset_split=args.dataset_split,
+        split_policy_path=args.split_policy_path,
     )
