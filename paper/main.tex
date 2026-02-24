@@ -33,40 +33,49 @@ We therefore position this work as a pilot benchmark and methodology paper, not 
 
 \section{Introduction}
 
-The Indonesian legal landscape is characterized by deep legal pluralism, where codified national law coexists with diverse systems of customary law (\textit{adat}). Reasoning in this setting is not only a retrieval problem; it requires reconciling non-monotonic conflicts between overlapping legal regimes. For AI systems, this is difficult because outcomes often depend on cross-regime conflict handling that is implicit, exception-heavy, and procedurally constrained.
+Indonesia is a high-friction test bed for legal AI because legal decisions often involve legal pluralism: codified national law coexists with multiple customary (\textit{adat}) normative systems. In such settings, legal reasoning is not only about retrieving relevant text. It must resolve conflicts across regimes, handle exceptions, and justify why one normative source is prioritized in a given case.
 
-\paragraph{Research Gap.}
-Existing legal NLP research focuses predominantly on monolithic, codified systems, mostly in Western jurisdictions. Typical tasks (judgment prediction, contract extraction, summarization) assume one dominant legal source. In the Indonesian context, legal document classification exists, but executable reasoning frameworks for customary law remain rare. In particular, there is no established benchmark line that combines expert-verified Indonesian \textit{adat} rules, formal ASP encoding, and auditable pilot evaluation for plural-law classification.
+\paragraph{Cross-disciplinary context.}
+This paper is intentionally written for three communities that rarely share technical language: legal scholars, customary-law and culture scholars, and computer scientists. We therefore clarify core terms early. In this paper, \textit{Natural Language Processing (NLP)} means computational methods to process legal text; \textit{Large Language Models (LLMs)} are neural models used here for text-level adjudication; and \textit{Answer Set Programming (ASP)} is a symbolic logic formalism for explicit rule-based reasoning under defaults and exceptions \cite{lifschitz2019asp,gebser2014clingo}. Our \textit{neuro-symbolic} design combines these roles: neural components map text into usable representations, while symbolic components provide auditable legal constraints \cite{garcez2023neurosymbolic}.
+
+\paragraph{Why this matters for each audience.}
+For legal readers, the core issue is doctrinal defensibility in plural-law conflicts, where opaque end-to-end neural predictions are difficult to audit. For customary-law and cultural readers, the core issue is representation fidelity: \textit{adat} norms cannot be treated as informal noise if they are normatively operative in practice \cite{hooker1978adat,burns2004leiden}. For computer-science readers, the core issue is methodological: current legal NLP benchmarks mostly assume one dominant legal regime, which underestimates conflict-handling complexity in plural systems.
+
+\paragraph{Research gap.}
+Prior legal NLP benchmarks focus mostly on monolithic legal systems and text-centric tasks such as judgment prediction, extraction, and summarization. Prior Indonesian legal-pluralism scholarship is rich in doctrinal and anthropological analysis but is typically not encoded as executable reasoning artifacts. The missing bridge is an auditable benchmark line that jointly provides: (1) expert-verified Indonesian \textit{adat} rules, (2) formal executable encoding, and (3) transparent pilot evaluation under explicit governance constraints.
 
 \paragraph{Contributions.}
-This paper targets that gap with a resource-first neuro-symbolic contribution. We use ASP as the rule-centric reasoning core and treat the LLM layer as an adjudication interface. Our concrete contributions are:
+This paper addresses that bridge as a resource-first neuro-symbolic study. We use ASP as the rule-centric reasoning core and treat the LLM layer as an adjudication interface. Our concrete contributions are:
 \begin{itemize}[nosep]
-  \item A formally encoded, expert-verified ASP rule base covering three Indonesian customary law domains: Minangkabau (25 rules), Bali (34 rules), and Jawa (36 rules). Of these 95 rules, 71 are currently active in the reasoning engine.
-  \item A pilot benchmark resource and reporting protocol over 74 dual-expert-labeled scenarios (70 evaluable agreed cases, 4 disputed), including manifest-based provenance and explicit claim-gating.
-  \item Cross-backend empirical results showing directional but non-conclusive gains and substantial inter-system agreement (Fleiss' $\kappa = 0.638$), supporting rule-layer stability as an anchor hypothesis.
-  \item Transparent documentation of negative findings, including the ``Rule Over-specification Paradox'', backend sensitivity, complete D-label failure (0\% recall), and pilot-scale statistical limits.
+  \item A formally encoded, expert-verified ASP rule base for three Indonesian customary-law domains: Minangkabau (25 rules), Bali (34 rules), and Jawa (36 rules). Of 95 verified rules, 71 are currently active in the reasoning engine.
+  \item A pilot benchmark resource and reporting protocol over 74 dual-expert-labeled scenarios (70 evaluable agreed cases, 4 disputed), including manifest-based provenance and explicit claim gating.
+  \item Cross-backend empirical evidence showing directionally positive but statistically inconclusive gains, plus substantial inter-system agreement (Fleiss' $\kappa = 0.638$), consistent with rule-layer anchoring.
+  \item Transparent negative-result reporting, including the ``Rule Over-specification Paradox'', backend sensitivity, complete D-label failure (0\% recall), and pilot-scale statistical limits.
 \end{itemize}
 
-\paragraph{Scope and Limitations.}
+\paragraph{Scope and limitations.}
 Following the strategic pivot on 2026-02-12, this manuscript focuses on rule formalization, expert verification workflow, and pilot-scale evaluation. The current results are explicitly preliminary. First, statistical power is limited ($n=70$ evaluable; all pairwise McNemar comparisons are non-significant, $p \geq 0.17$). Second, the same 70 evaluable cases have been used during development and final reporting, so a fully clean held-out test set is not yet available in this pilot cycle. Accordingly, we frame the paper as a benchmark-and-methodology contribution for legal pluralism, while deferring strong efficacy and generalization claims to future unseen-case evaluation.
 
-\paragraph{Paper Roadmap.}
-The remainder of this paper is organized as follows: Section 2 reviews related work in neuro-symbolic AI and legal NLP; Section 3 defines the multi-label classification task; Section 4 provides a system overview of the \textit{Nusantara-Agent} architecture; Section 5 details the expert annotation protocol and dataset construction; Section 6 defines the evaluation metrics; Section 7 presents our experimental results and error analysis; Section 8 discusses limitations of the pilot study; Section 9 provides data and code availability; and Section 10 concludes with future directions.
+\paragraph{Reader guide and paper roadmap.}
+Readers primarily interested in legal and cultural framing may focus on Sections 2, 3, 5, and 8. Readers focused on computational design and evaluation may focus on Sections 4, 6, and 7. The remainder of this paper is organized as follows: Section 2 reviews related work; Section 3 defines the multi-label classification task; Section 4 provides a system overview of the \textit{Nusantara-Agent} architecture; Section 5 details the expert annotation protocol and dataset construction; Section 6 defines the evaluation metrics; Section 7 presents experimental results and error analysis; Section 8 discusses limitations of the pilot study; Section 9 provides data and code availability; and Section 10 concludes with future directions.
 
 \section{Related Work}
-This work is situated at the intersection of neuro-symbolic AI, legal-domain NLP, and the formalization of Indonesian legal pluralism.
+This study sits at the intersection of legal pluralism scholarship, legal NLP, and neuro-symbolic AI. The core challenge is that each literature solves only part of the pipeline needed for auditable plural-law reasoning.
 
-\paragraph{Neuro-symbolic AI and Symbolic Reasoning.}
-The neuro-symbolic paradigm, which integrates neural learning with symbolic knowledge representation, has been identified as the ``3rd wave'' of AI \cite{garcez2023neurosymbolic}. While neural models excel at pattern recognition in unstructured text, they often struggle with the strict logical consistency and auditability required for legal adjudication. Answer Set Programming (ASP) provides a powerful declarative formalism for non-monotonic reasoning \cite{lifschitz2019asp}, with Clingo serving as a state-of-the-art solver \cite{gebser2014clingo}. ASP is uniquely suited for legal domains characterized by defaults, exceptions, and conflicting norms; however, purely symbolic systems face significant hurdles in mapping natural language legal scenarios to formal predicates without a neural processing layer.
+\paragraph{Legal pluralism and customary-law scholarship.}
+Indonesian legal anthropology and doctrinal studies have long documented that national law and \textit{adat} norms co-govern many real disputes \cite{hooker1978adat,burns2004leiden}. This literature explains normative coexistence, local legitimacy, and context-dependent conflict handling. However, it is mostly non-executable: the knowledge is rich for interpretation but difficult to run as machine-checkable reasoning rules.
 
-\paragraph{LLMs and Retrieval-Augmented Reasoning.}
-Foundational work in Large Language Models (LLMs) and prompting techniques—including Transformers, few-shot scaling, and chain-of-thought reasoning—has demonstrated impressive capabilities in text-based reasoning \cite{vaswani2017attention,brown2020language,wei2022cot,wang2022selfconsistency,yao2023react,yao2023tree,shinn2023reflexion}. To ground these models in factual data, researchers have developed various retrieval-augmented generation (RAG) and hierarchical retrieval strategies \cite{lewis2020rag,asai2023selfrag,gao2023ragsurvey,sarthi2024raptor,he2024gretriever}. Despite these advancements, LLMs remain susceptible to reasoning hallucinations when navigating the intricate, non-monolithic hierarchies of plural legal systems, necessitating a more robust symbolic anchoring mechanism.
+\paragraph{Legal NLP in predominantly monolithic regimes.}
+Mainstream legal NLP benchmarks have advanced tasks such as legal summarization, contract understanding, and judgment prediction \cite{guha2023legalbench,colombo2024saullm,sie-etal-2024-summarizing,liu-etal-2024-enhancing-legal,nigam-etal-2024-rethinking,xie-etal-2024-clc,mali-etal-2024-information,narendra-etal-2024-enhancing,hou-etal-2024-gaps,kwak-etal-2024-classify,taranukhin-etal-2024-empowering,tran-etal-2024-deberta,tyss-etal-2024-lexsumm,tyss-etal-2024-supporting}. For computer-science readers, these works establish strong text modeling baselines. For legal readers, however, most of these datasets assume one dominant authority structure and therefore do not stress-test cross-regime legal conflict.
 
-\paragraph{Legal NLP and Indonesian Legal Pluralism.}
-Existing legal NLP research focuses primarily on benchmarks for judgment prediction, contract extraction, and legal summarization within monolithic Western jurisdictions \cite{guha2023legalbench,colombo2024saullm,sie-etal-2024-summarizing,liu-etal-2024-enhancing-legal,nigam-etal-2024-rethinking,xie-etal-2024-clc,mali-etal-2024-information,narendra-etal-2024-enhancing,hou-etal-2024-gaps,kwak-etal-2024-classify,taranukhin-etal-2024-empowering,tran-etal-2024-deberta,tyss-etal-2024-lexsumm,tyss-etal-2024-supporting}. These tasks typically assume a single source of legal authority. In contrast, Indonesian legal pluralism—the coexistence of national law and diverse customary (\textit{adat}) systems—has been extensively studied in legal anthropology \cite{hooker1978adat,burns2004leiden}. While these studies provide rich qualitative insights into customary norms, they do not offer the formal, executable computational representations required for automated reasoning.
+\paragraph{LLM reasoning and retrieval interfaces.}
+The LLM and prompting literature shows strong gains in general reasoning and legal-text interaction \cite{vaswani2017attention,brown2020language,wei2022cot,wang2022selfconsistency,yao2023react,yao2023tree,shinn2023reflexion}. Retrieval-based extensions improve grounding by injecting external context \cite{lewis2020rag,asai2023selfrag,gao2023ragsurvey,sarthi2024raptor,he2024gretriever}. Yet in plural-law settings, retrieval and fluent generation are insufficient by themselves: the system must also enforce explicit conflict constraints and exception logic.
 
-\paragraph{Research Gap.}
-A critical research gap exists: no prior work has computationally formalized Indonesian customary law to enable auditable, neuro-symbolic reasoning. Nusantara-Agent addresses this by encoding expert-verified \textit{adat} rules in ASP to provide a symbolic anchor for LLM-based adjudication, thereby allowing consistent behavior in pluralistic legal environments.
+\paragraph{Neuro-symbolic reasoning for auditable legal decisions.}
+Neuro-symbolic AI combines neural flexibility with symbolic control \cite{garcez2023neurosymbolic}. ASP, in particular, provides non-monotonic rule semantics that align with legal defaults, exceptions, and contradictions \cite{lifschitz2019asp,gebser2014clingo}. This is attractive for legal and cultural stakeholders because reasoning traces are inspectable and norm references can be audited, but it still requires robust text-to-rule interfacing to operate on natural language cases.
+
+\paragraph{Positioning and gap closure.}
+The unresolved gap is the lack of an auditable benchmark-and-methodology line for Indonesian plural law that is legible to both legal and computational audiences. Nusantara-Agent addresses this by coupling expert-verified \textit{adat} formalization (symbolic layer) with LLM adjudication interfaces (neural layer), and by reporting pilot evidence with explicit statistical and governance limits.
 
 \section{Task Definition}
 Given a legal scenario $x$, the system predicts one of four policy labels:
@@ -547,3 +556,4 @@ Immediate next steps are:
 \bibliography{paper/references}
 
 \end{document}
+
