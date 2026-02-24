@@ -1,0 +1,981 @@
+{
+  "date": "2026-02-24",
+  "domain": "Jawa",
+  "jawa_case_ids": [
+    "CS-JAW-006",
+    "CS-JAW-011",
+    "CS-JAW-015",
+    "CS-JAW-019",
+    "CS-JAW-030",
+    "GS-0008",
+    "GS-0015",
+    "GS-0018",
+    "GS-0019",
+    "GS-0020",
+    "GS-0024",
+    "GS-0030",
+    "GS-0031",
+    "GS-0032",
+    "GS-0042",
+    "GS-0049",
+    "GS-0055"
+  ],
+  "jawa_case_count": 17,
+  "backend_files": {
+    "canonical_asp_only": "D:\\documents\\nusantara-agent\\experiments\\09_ablation_study\\results_fixed_asp_only_2026-02-20.json",
+    "canonical_ollama_deepseek_r1": "D:\\documents\\nusantara-agent\\experiments\\09_ablation_study\\results_wordboundary_ollama_2026-02-20.json",
+    "canonical_deepseek_api": "D:\\documents\\nusantara-agent\\experiments\\09_ablation_study\\results_deepseek_rollback_2026-02-20.json",
+    "exploratory_asp_only": "D:\\documents\\nusantara-agent\\experiments\\09_ablation_study\\results_dual_asp_only_2026-02-23.json",
+    "exploratory_gpt_oss_20b": "D:\\documents\\nusantara-agent\\experiments\\09_ablation_study\\results_dual_asp_llm_gpt_oss_20b_2026-02-23.json",
+    "exploratory_qwen3_14b": "D:\\documents\\nusantara-agent\\experiments\\09_ablation_study\\results_dual_asp_llm_qwen3_14b_2026-02-23.json"
+  },
+  "backend_metrics": {
+    "canonical_asp_only": {
+      "file": "D:\\documents\\nusantara-agent\\experiments\\09_ablation_study\\results_fixed_asp_only_2026-02-20.json",
+      "total_jawa_cases_in_run": 16,
+      "missing_jawa_case_ids": [
+        "GS-0032"
+      ],
+      "correct": 5,
+      "accuracy": 0.3125,
+      "label_support": {
+        "A": 2,
+        "B": 8,
+        "C": 5,
+        "D": 1
+      },
+      "confusion_counts": {
+        "A->A": 1,
+        "A->D": 1,
+        "B->A": 3,
+        "B->B": 2,
+        "B->C": 3,
+        "C->A": 1,
+        "C->B": 2,
+        "C->C": 2,
+        "D->C": 1
+      },
+      "transition_case_ids": {
+        "A->A": [
+          "CS-JAW-006"
+        ],
+        "A->D": [
+          "GS-0042"
+        ],
+        "B->A": [
+          "GS-0019",
+          "GS-0020",
+          "GS-0031"
+        ],
+        "B->B": [
+          "GS-0008",
+          "GS-0024"
+        ],
+        "B->C": [
+          "GS-0015",
+          "GS-0018",
+          "GS-0030"
+        ],
+        "C->A": [
+          "GS-0049"
+        ],
+        "C->B": [
+          "CS-JAW-015",
+          "CS-JAW-019"
+        ],
+        "C->C": [
+          "CS-JAW-011",
+          "CS-JAW-030"
+        ],
+        "D->C": [
+          "GS-0055"
+        ]
+      },
+      "error_layer_counts": {
+        "correct": 5,
+        "national_dominance_bias": 3,
+        "no_abstention_path": 1,
+        "other": 1,
+        "over_conflict_trigger": 3,
+        "router_or_fact_extraction": 3
+      },
+      "error_cases": [
+        {
+          "id": "GS-0042",
+          "gold": "A",
+          "predicted": "D",
+          "transition": "A->D",
+          "conflict_signal": "no",
+          "decision_step": "5",
+          "diagnosis": "other"
+        },
+        {
+          "id": "GS-0019",
+          "gold": "B",
+          "predicted": "A",
+          "transition": "B->A",
+          "conflict_signal": "no",
+          "decision_step": "2",
+          "diagnosis": "national_dominance_bias"
+        },
+        {
+          "id": "GS-0020",
+          "gold": "B",
+          "predicted": "A",
+          "transition": "B->A",
+          "conflict_signal": "no",
+          "decision_step": "2",
+          "diagnosis": "national_dominance_bias"
+        },
+        {
+          "id": "GS-0031",
+          "gold": "B",
+          "predicted": "A",
+          "transition": "B->A",
+          "conflict_signal": "no",
+          "decision_step": "2",
+          "diagnosis": "national_dominance_bias"
+        },
+        {
+          "id": "GS-0015",
+          "gold": "B",
+          "predicted": "C",
+          "transition": "B->C",
+          "conflict_signal": "yes",
+          "decision_step": "4",
+          "diagnosis": "over_conflict_trigger"
+        },
+        {
+          "id": "GS-0018",
+          "gold": "B",
+          "predicted": "C",
+          "transition": "B->C",
+          "conflict_signal": "yes",
+          "decision_step": "4",
+          "diagnosis": "over_conflict_trigger"
+        },
+        {
+          "id": "GS-0030",
+          "gold": "B",
+          "predicted": "C",
+          "transition": "B->C",
+          "conflict_signal": "yes",
+          "decision_step": "4",
+          "diagnosis": "over_conflict_trigger"
+        },
+        {
+          "id": "GS-0049",
+          "gold": "C",
+          "predicted": "A",
+          "transition": "C->A",
+          "conflict_signal": "no",
+          "decision_step": "2",
+          "diagnosis": "router_or_fact_extraction"
+        },
+        {
+          "id": "CS-JAW-015",
+          "gold": "C",
+          "predicted": "B",
+          "transition": "C->B",
+          "conflict_signal": "no",
+          "decision_step": "3",
+          "diagnosis": "router_or_fact_extraction"
+        },
+        {
+          "id": "CS-JAW-019",
+          "gold": "C",
+          "predicted": "B",
+          "transition": "C->B",
+          "conflict_signal": "no",
+          "decision_step": "3",
+          "diagnosis": "router_or_fact_extraction"
+        },
+        {
+          "id": "GS-0055",
+          "gold": "D",
+          "predicted": "C",
+          "transition": "D->C",
+          "conflict_signal": "yes",
+          "decision_step": "4",
+          "diagnosis": "no_abstention_path"
+        }
+      ]
+    },
+    "canonical_ollama_deepseek_r1": {
+      "file": "D:\\documents\\nusantara-agent\\experiments\\09_ablation_study\\results_wordboundary_ollama_2026-02-20.json",
+      "total_jawa_cases_in_run": 16,
+      "missing_jawa_case_ids": [
+        "GS-0032"
+      ],
+      "correct": 4,
+      "accuracy": 0.25,
+      "label_support": {
+        "A": 2,
+        "B": 8,
+        "C": 5,
+        "D": 1
+      },
+      "confusion_counts": {
+        "A->A": 1,
+        "A->B": 1,
+        "B->A": 3,
+        "B->B": 2,
+        "B->C": 3,
+        "C->A": 1,
+        "C->B": 3,
+        "C->C": 1,
+        "D->C": 1
+      },
+      "transition_case_ids": {
+        "A->A": [
+          "GS-0042"
+        ],
+        "A->B": [
+          "CS-JAW-006"
+        ],
+        "B->A": [
+          "GS-0019",
+          "GS-0020",
+          "GS-0031"
+        ],
+        "B->B": [
+          "GS-0008",
+          "GS-0024"
+        ],
+        "B->C": [
+          "GS-0015",
+          "GS-0018",
+          "GS-0030"
+        ],
+        "C->A": [
+          "CS-JAW-030"
+        ],
+        "C->B": [
+          "CS-JAW-015",
+          "CS-JAW-019",
+          "GS-0049"
+        ],
+        "C->C": [
+          "CS-JAW-011"
+        ],
+        "D->C": [
+          "GS-0055"
+        ]
+      },
+      "error_layer_counts": {
+        "adjudication_collapse_after_conflict": 1,
+        "correct": 4,
+        "national_dominance_bias": 3,
+        "no_abstention_path": 1,
+        "other": 1,
+        "over_conflict_trigger": 3,
+        "router_or_fact_extraction": 3
+      },
+      "error_cases": [
+        {
+          "id": "CS-JAW-006",
+          "gold": "A",
+          "predicted": "B",
+          "transition": "A->B",
+          "conflict_signal": "no",
+          "decision_step": "3",
+          "diagnosis": "other"
+        },
+        {
+          "id": "GS-0019",
+          "gold": "B",
+          "predicted": "A",
+          "transition": "B->A",
+          "conflict_signal": "no",
+          "decision_step": "2",
+          "diagnosis": "national_dominance_bias"
+        },
+        {
+          "id": "GS-0020",
+          "gold": "B",
+          "predicted": "A",
+          "transition": "B->A",
+          "conflict_signal": "no",
+          "decision_step": "2",
+          "diagnosis": "national_dominance_bias"
+        },
+        {
+          "id": "GS-0031",
+          "gold": "B",
+          "predicted": "A",
+          "transition": "B->A",
+          "conflict_signal": "no",
+          "decision_step": "2,5",
+          "diagnosis": "national_dominance_bias"
+        },
+        {
+          "id": "GS-0015",
+          "gold": "B",
+          "predicted": "C",
+          "transition": "B->C",
+          "conflict_signal": "yes",
+          "decision_step": "4",
+          "diagnosis": "over_conflict_trigger"
+        },
+        {
+          "id": "GS-0018",
+          "gold": "B",
+          "predicted": "C",
+          "transition": "B->C",
+          "conflict_signal": "yes",
+          "decision_step": "4",
+          "diagnosis": "over_conflict_trigger"
+        },
+        {
+          "id": "GS-0030",
+          "gold": "B",
+          "predicted": "C",
+          "transition": "B->C",
+          "conflict_signal": "yes",
+          "decision_step": "4",
+          "diagnosis": "over_conflict_trigger"
+        },
+        {
+          "id": "CS-JAW-030",
+          "gold": "C",
+          "predicted": "A",
+          "transition": "C->A",
+          "conflict_signal": "yes",
+          "decision_step": "4",
+          "diagnosis": "adjudication_collapse_after_conflict"
+        },
+        {
+          "id": "CS-JAW-015",
+          "gold": "C",
+          "predicted": "B",
+          "transition": "C->B",
+          "conflict_signal": "no",
+          "decision_step": "3",
+          "diagnosis": "router_or_fact_extraction"
+        },
+        {
+          "id": "CS-JAW-019",
+          "gold": "C",
+          "predicted": "B",
+          "transition": "C->B",
+          "conflict_signal": "no",
+          "decision_step": "3",
+          "diagnosis": "router_or_fact_extraction"
+        },
+        {
+          "id": "GS-0049",
+          "gold": "C",
+          "predicted": "B",
+          "transition": "C->B",
+          "conflict_signal": "no",
+          "decision_step": "1|2|3",
+          "diagnosis": "router_or_fact_extraction"
+        },
+        {
+          "id": "GS-0055",
+          "gold": "D",
+          "predicted": "C",
+          "transition": "D->C",
+          "conflict_signal": "yes",
+          "decision_step": "4",
+          "diagnosis": "no_abstention_path"
+        }
+      ]
+    },
+    "canonical_deepseek_api": {
+      "file": "D:\\documents\\nusantara-agent\\experiments\\09_ablation_study\\results_deepseek_rollback_2026-02-20.json",
+      "total_jawa_cases_in_run": 16,
+      "missing_jawa_case_ids": [
+        "GS-0032"
+      ],
+      "correct": 8,
+      "accuracy": 0.5,
+      "label_support": {
+        "A": 2,
+        "B": 8,
+        "C": 5,
+        "D": 1
+      },
+      "confusion_counts": {
+        "A->A": 1,
+        "A->B": 1,
+        "B->A": 3,
+        "B->B": 4,
+        "B->C": 1,
+        "C->B": 2,
+        "C->C": 3,
+        "D->B": 1
+      },
+      "transition_case_ids": {
+        "A->A": [
+          "GS-0042"
+        ],
+        "A->B": [
+          "CS-JAW-006"
+        ],
+        "B->A": [
+          "GS-0019",
+          "GS-0020",
+          "GS-0031"
+        ],
+        "B->B": [
+          "GS-0008",
+          "GS-0015",
+          "GS-0018",
+          "GS-0024"
+        ],
+        "B->C": [
+          "GS-0030"
+        ],
+        "C->B": [
+          "CS-JAW-019",
+          "CS-JAW-030"
+        ],
+        "C->C": [
+          "CS-JAW-011",
+          "CS-JAW-015",
+          "GS-0049"
+        ],
+        "D->B": [
+          "GS-0055"
+        ]
+      },
+      "error_layer_counts": {
+        "correct": 8,
+        "national_dominance_bias": 3,
+        "no_abstention_path": 1,
+        "other": 1,
+        "over_conflict_trigger": 1,
+        "router_or_fact_extraction": 2
+      },
+      "error_cases": [
+        {
+          "id": "CS-JAW-006",
+          "gold": "A",
+          "predicted": "B",
+          "transition": "A->B",
+          "conflict_signal": "no",
+          "decision_step": "3",
+          "diagnosis": "other"
+        },
+        {
+          "id": "GS-0019",
+          "gold": "B",
+          "predicted": "A",
+          "transition": "B->A",
+          "conflict_signal": "no",
+          "decision_step": "2",
+          "diagnosis": "national_dominance_bias"
+        },
+        {
+          "id": "GS-0020",
+          "gold": "B",
+          "predicted": "A",
+          "transition": "B->A",
+          "conflict_signal": "no",
+          "decision_step": "2",
+          "diagnosis": "national_dominance_bias"
+        },
+        {
+          "id": "GS-0031",
+          "gold": "B",
+          "predicted": "A",
+          "transition": "B->A",
+          "conflict_signal": "no",
+          "decision_step": "2",
+          "diagnosis": "national_dominance_bias"
+        },
+        {
+          "id": "GS-0030",
+          "gold": "B",
+          "predicted": "C",
+          "transition": "B->C",
+          "conflict_signal": "yes",
+          "decision_step": "4",
+          "diagnosis": "over_conflict_trigger"
+        },
+        {
+          "id": "CS-JAW-019",
+          "gold": "C",
+          "predicted": "B",
+          "transition": "C->B",
+          "conflict_signal": "no",
+          "decision_step": "3",
+          "diagnosis": "router_or_fact_extraction"
+        },
+        {
+          "id": "CS-JAW-030",
+          "gold": "C",
+          "predicted": "B",
+          "transition": "C->B",
+          "conflict_signal": "no",
+          "decision_step": "3",
+          "diagnosis": "router_or_fact_extraction"
+        },
+        {
+          "id": "GS-0055",
+          "gold": "D",
+          "predicted": "B",
+          "transition": "D->B",
+          "conflict_signal": "no",
+          "decision_step": "3",
+          "diagnosis": "no_abstention_path"
+        }
+      ]
+    },
+    "exploratory_asp_only": {
+      "file": "D:\\documents\\nusantara-agent\\experiments\\09_ablation_study\\results_dual_asp_only_2026-02-23.json",
+      "total_jawa_cases_in_run": 16,
+      "missing_jawa_case_ids": [
+        "GS-0032"
+      ],
+      "correct": 6,
+      "accuracy": 0.375,
+      "label_support": {
+        "A": 2,
+        "B": 8,
+        "C": 5,
+        "D": 1
+      },
+      "confusion_counts": {
+        "A->A": 2,
+        "B->A": 3,
+        "B->B": 2,
+        "B->C": 3,
+        "C->A": 1,
+        "C->B": 2,
+        "C->C": 2,
+        "D->C": 1
+      },
+      "transition_case_ids": {
+        "A->A": [
+          "CS-JAW-006",
+          "GS-0042"
+        ],
+        "B->A": [
+          "GS-0019",
+          "GS-0020",
+          "GS-0031"
+        ],
+        "B->B": [
+          "GS-0008",
+          "GS-0024"
+        ],
+        "B->C": [
+          "GS-0015",
+          "GS-0018",
+          "GS-0030"
+        ],
+        "C->A": [
+          "GS-0049"
+        ],
+        "C->B": [
+          "CS-JAW-015",
+          "CS-JAW-019"
+        ],
+        "C->C": [
+          "CS-JAW-011",
+          "CS-JAW-030"
+        ],
+        "D->C": [
+          "GS-0055"
+        ]
+      },
+      "error_layer_counts": {
+        "correct": 6,
+        "national_dominance_bias": 3,
+        "no_abstention_path": 1,
+        "over_conflict_trigger": 3,
+        "router_or_fact_extraction": 3
+      },
+      "error_cases": [
+        {
+          "id": "GS-0019",
+          "gold": "B",
+          "predicted": "A",
+          "transition": "B->A",
+          "conflict_signal": "no",
+          "decision_step": "2",
+          "diagnosis": "national_dominance_bias"
+        },
+        {
+          "id": "GS-0020",
+          "gold": "B",
+          "predicted": "A",
+          "transition": "B->A",
+          "conflict_signal": "no",
+          "decision_step": "2",
+          "diagnosis": "national_dominance_bias"
+        },
+        {
+          "id": "GS-0031",
+          "gold": "B",
+          "predicted": "A",
+          "transition": "B->A",
+          "conflict_signal": "no",
+          "decision_step": "2",
+          "diagnosis": "national_dominance_bias"
+        },
+        {
+          "id": "GS-0015",
+          "gold": "B",
+          "predicted": "C",
+          "transition": "B->C",
+          "conflict_signal": "yes",
+          "decision_step": "4",
+          "diagnosis": "over_conflict_trigger"
+        },
+        {
+          "id": "GS-0018",
+          "gold": "B",
+          "predicted": "C",
+          "transition": "B->C",
+          "conflict_signal": "yes",
+          "decision_step": "4",
+          "diagnosis": "over_conflict_trigger"
+        },
+        {
+          "id": "GS-0030",
+          "gold": "B",
+          "predicted": "C",
+          "transition": "B->C",
+          "conflict_signal": "yes",
+          "decision_step": "4",
+          "diagnosis": "over_conflict_trigger"
+        },
+        {
+          "id": "GS-0049",
+          "gold": "C",
+          "predicted": "A",
+          "transition": "C->A",
+          "conflict_signal": "no",
+          "decision_step": "2",
+          "diagnosis": "router_or_fact_extraction"
+        },
+        {
+          "id": "CS-JAW-015",
+          "gold": "C",
+          "predicted": "B",
+          "transition": "C->B",
+          "conflict_signal": "no",
+          "decision_step": "3",
+          "diagnosis": "router_or_fact_extraction"
+        },
+        {
+          "id": "CS-JAW-019",
+          "gold": "C",
+          "predicted": "B",
+          "transition": "C->B",
+          "conflict_signal": "no",
+          "decision_step": "3",
+          "diagnosis": "router_or_fact_extraction"
+        },
+        {
+          "id": "GS-0055",
+          "gold": "D",
+          "predicted": "C",
+          "transition": "D->C",
+          "conflict_signal": "yes",
+          "decision_step": "4",
+          "diagnosis": "no_abstention_path"
+        }
+      ]
+    },
+    "exploratory_gpt_oss_20b": {
+      "file": "D:\\documents\\nusantara-agent\\experiments\\09_ablation_study\\results_dual_asp_llm_gpt_oss_20b_2026-02-23.json",
+      "total_jawa_cases_in_run": 16,
+      "missing_jawa_case_ids": [
+        "GS-0032"
+      ],
+      "correct": 9,
+      "accuracy": 0.5625,
+      "label_support": {
+        "A": 2,
+        "B": 8,
+        "C": 5,
+        "D": 1
+      },
+      "confusion_counts": {
+        "A->A": 2,
+        "B->A": 3,
+        "B->B": 4,
+        "B->C": 1,
+        "C->C": 2,
+        "C->D": 3,
+        "D->D": 1
+      },
+      "transition_case_ids": {
+        "A->A": [
+          "CS-JAW-006",
+          "GS-0042"
+        ],
+        "B->A": [
+          "GS-0019",
+          "GS-0020",
+          "GS-0031"
+        ],
+        "B->B": [
+          "GS-0008",
+          "GS-0015",
+          "GS-0018",
+          "GS-0024"
+        ],
+        "B->C": [
+          "GS-0030"
+        ],
+        "C->C": [
+          "CS-JAW-011",
+          "GS-0049"
+        ],
+        "C->D": [
+          "CS-JAW-015",
+          "CS-JAW-019",
+          "CS-JAW-030"
+        ],
+        "D->D": [
+          "GS-0055"
+        ]
+      },
+      "error_layer_counts": {
+        "c_error_unknown_signal": 3,
+        "correct": 9,
+        "national_dominance_bias": 3,
+        "over_conflict_trigger": 1
+      },
+      "error_cases": [
+        {
+          "id": "GS-0019",
+          "gold": "B",
+          "predicted": "A",
+          "transition": "B->A",
+          "conflict_signal": "no",
+          "decision_step": "2",
+          "diagnosis": "national_dominance_bias"
+        },
+        {
+          "id": "GS-0020",
+          "gold": "B",
+          "predicted": "A",
+          "transition": "B->A",
+          "conflict_signal": "no",
+          "decision_step": "2",
+          "diagnosis": "national_dominance_bias"
+        },
+        {
+          "id": "GS-0031",
+          "gold": "B",
+          "predicted": "A",
+          "transition": "B->A",
+          "conflict_signal": "no",
+          "decision_step": "2",
+          "diagnosis": "national_dominance_bias"
+        },
+        {
+          "id": "GS-0030",
+          "gold": "B",
+          "predicted": "C",
+          "transition": "B->C",
+          "conflict_signal": "yes",
+          "decision_step": "4",
+          "diagnosis": "over_conflict_trigger"
+        },
+        {
+          "id": "CS-JAW-015",
+          "gold": "C",
+          "predicted": "D",
+          "transition": "C->D",
+          "conflict_signal": "unknown",
+          "decision_step": "unknown",
+          "diagnosis": "c_error_unknown_signal"
+        },
+        {
+          "id": "CS-JAW-019",
+          "gold": "C",
+          "predicted": "D",
+          "transition": "C->D",
+          "conflict_signal": "unknown",
+          "decision_step": "unknown",
+          "diagnosis": "c_error_unknown_signal"
+        },
+        {
+          "id": "CS-JAW-030",
+          "gold": "C",
+          "predicted": "D",
+          "transition": "C->D",
+          "conflict_signal": "unknown",
+          "decision_step": "unknown",
+          "diagnosis": "c_error_unknown_signal"
+        }
+      ]
+    },
+    "exploratory_qwen3_14b": {
+      "file": "D:\\documents\\nusantara-agent\\experiments\\09_ablation_study\\results_dual_asp_llm_qwen3_14b_2026-02-23.json",
+      "total_jawa_cases_in_run": 16,
+      "missing_jawa_case_ids": [
+        "GS-0032"
+      ],
+      "correct": 7,
+      "accuracy": 0.4375,
+      "label_support": {
+        "A": 2,
+        "B": 8,
+        "C": 5,
+        "D": 1
+      },
+      "confusion_counts": {
+        "A->A": 2,
+        "B->A": 3,
+        "B->B": 4,
+        "B->C": 1,
+        "C->B": 4,
+        "C->C": 1,
+        "D->C": 1
+      },
+      "transition_case_ids": {
+        "A->A": [
+          "CS-JAW-006",
+          "GS-0042"
+        ],
+        "B->A": [
+          "GS-0019",
+          "GS-0020",
+          "GS-0031"
+        ],
+        "B->B": [
+          "GS-0008",
+          "GS-0015",
+          "GS-0018",
+          "GS-0024"
+        ],
+        "B->C": [
+          "GS-0030"
+        ],
+        "C->B": [
+          "CS-JAW-015",
+          "CS-JAW-019",
+          "CS-JAW-030",
+          "GS-0049"
+        ],
+        "C->C": [
+          "CS-JAW-011"
+        ],
+        "D->C": [
+          "GS-0055"
+        ]
+      },
+      "error_layer_counts": {
+        "correct": 7,
+        "national_dominance_bias": 3,
+        "no_abstention_path": 1,
+        "over_conflict_trigger": 1,
+        "router_or_fact_extraction": 4
+      },
+      "error_cases": [
+        {
+          "id": "GS-0019",
+          "gold": "B",
+          "predicted": "A",
+          "transition": "B->A",
+          "conflict_signal": "no",
+          "decision_step": "2",
+          "diagnosis": "national_dominance_bias"
+        },
+        {
+          "id": "GS-0020",
+          "gold": "B",
+          "predicted": "A",
+          "transition": "B->A",
+          "conflict_signal": "no",
+          "decision_step": "2",
+          "diagnosis": "national_dominance_bias"
+        },
+        {
+          "id": "GS-0031",
+          "gold": "B",
+          "predicted": "A",
+          "transition": "B->A",
+          "conflict_signal": "no",
+          "decision_step": "2",
+          "diagnosis": "national_dominance_bias"
+        },
+        {
+          "id": "GS-0030",
+          "gold": "B",
+          "predicted": "C",
+          "transition": "B->C",
+          "conflict_signal": "yes",
+          "decision_step": "4",
+          "diagnosis": "over_conflict_trigger"
+        },
+        {
+          "id": "CS-JAW-015",
+          "gold": "C",
+          "predicted": "B",
+          "transition": "C->B",
+          "conflict_signal": "no",
+          "decision_step": "3",
+          "diagnosis": "router_or_fact_extraction"
+        },
+        {
+          "id": "CS-JAW-019",
+          "gold": "C",
+          "predicted": "B",
+          "transition": "C->B",
+          "conflict_signal": "no",
+          "decision_step": "3",
+          "diagnosis": "router_or_fact_extraction"
+        },
+        {
+          "id": "CS-JAW-030",
+          "gold": "C",
+          "predicted": "B",
+          "transition": "C->B",
+          "conflict_signal": "no",
+          "decision_step": "3",
+          "diagnosis": "router_or_fact_extraction"
+        },
+        {
+          "id": "GS-0049",
+          "gold": "C",
+          "predicted": "B",
+          "transition": "C->B",
+          "conflict_signal": "no",
+          "decision_step": "3",
+          "diagnosis": "router_or_fact_extraction"
+        },
+        {
+          "id": "GS-0055",
+          "gold": "D",
+          "predicted": "C",
+          "transition": "D->C",
+          "conflict_signal": "yes",
+          "decision_step": "4",
+          "diagnosis": "no_abstention_path"
+        }
+      ]
+    }
+  },
+  "cross_backend_overlap": {
+    "b_to_a_all_local_open_source": [
+      "GS-0019",
+      "GS-0020",
+      "GS-0031"
+    ],
+    "b_to_a_all_canonical": [
+      "GS-0019",
+      "GS-0020",
+      "GS-0031"
+    ]
+  },
+  "summary": {
+    "best_backend": "exploratory_gpt_oss_20b",
+    "best_accuracy": 0.5625,
+    "worst_backend": "canonical_ollama_deepseek_r1",
+    "worst_accuracy": 0.25
+  },
+  "recommendations": [
+    "Prioritaskan kalibrasi backend lokal (deepseek-r1/Qwen3) sebelum menambah aturan ASP baru; gap besar terhadap API menunjukkan isu kalibrasi adjudikator.",
+    "Untuk error C-domain Jawa, uji dulu perbaikan router/fact extraction (keyword-to-fact mapping) sebelum eksperimen prompt kompleks.",
+    "Bekukan tiga test regresi wajib Jawa: (1) B->A shared failures, (2) C dengan conflict signal harus tetap C, (3) kasus D tidak boleh dipaksa jadi A/B/C."
+  ]
+}
