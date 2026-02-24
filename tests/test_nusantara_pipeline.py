@@ -129,6 +129,26 @@ class NusantaraPipelineTests(unittest.TestCase):
         self.assertEqual(payload["label"], "A")
         self.assertNotIn("jawa_guard_v1", payload)
 
+    def test_jawa_guard_still_overrides_for_generic_perceraian_context(self):
+        pipeline = self._build_pipeline()
+        synthesis = json.dumps(
+            {
+                "label": "A",
+                "langkah_keputusan": "2",
+                "alasan_utama": "Dummy",
+                "konflik_terdeteksi": "Tidak",
+            },
+            ensure_ascii=False,
+        )
+        guarded = pipeline._apply_jawa_guard_v1(
+            synthesis,
+            query="Jika terjadi perceraian, pembagian harta gono-gini adat Jawa bagaimana?",
+            rule_results={"nasional": [], "adat": {"jawa": []}},
+        )
+        payload = json.loads(guarded)
+        self.assertEqual(payload["label"], "B")
+        self.assertEqual(payload.get("jawa_guard_v1"), "applied")
+
 
 if __name__ == "__main__":
     unittest.main()

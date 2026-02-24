@@ -1,0 +1,36 @@
+{
+  "date_utc": "2026-02-24T06:12:40.304356Z",
+  "backend": "deepseek",
+  "cases": [
+    {
+      "id": "GS-0019",
+      "gold": "B",
+      "old_pred": "A",
+      "new_pred": "B",
+      "guard": null,
+      "langkah": "3",
+      "konflik": "Tidak",
+      "alasan": "Kasus ini membahas konsep 'harta gono-gini' yang merupakan istilah khas dari hukum adat Jawa bilateral. Data Simbolik menunjukkan tidak ada output dari sistem adat, namun fakta hukum yang diajukan (harta gono-gini) secar"
+    },
+    {
+      "id": "GS-0020",
+      "gold": "B",
+      "old_pred": "A",
+      "new_pred": "B",
+      "guard": null,
+      "langkah": "3",
+      "konflik": "Tidak",
+      "alasan": "Pertanyaan spesifik membahas pembagian harta gono-gini (istilah Jawa bilateral) akibat perceraian atau kematian, tanpa menyebutkan konflik dengan hukum nasional atau tuntutan dari pihak berdasarkan sistem hukum yang berb"
+    },
+    {
+      "id": "GS-0031",
+      "gold": "B",
+      "old_pred": "A",
+      "new_pred": "B",
+      "guard": null,
+      "langkah": "3",
+      "konflik": "Tidak",
+      "alasan": "Kasus ini membahas konsep 'harta gono-gini' dan 'harta bawaan' yang merupakan konstruksi hukum adat Jawa bilateral. Data Simbolik menunjukkan output nasional yang umum (seperti hak waris pasangan hidup dan bagian atas ha"
+    }
+  ]
+}

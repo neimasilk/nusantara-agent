@@ -53,6 +53,12 @@
   - ASP-only dev: `49/49` lengkap, claimable `True`.
   - ASP+LLM dev: `49/49` lengkap, claimable `True`.
 
+3. Targeted regression check (shared B->A Jawa):
+- Output: `experiments/09_ablation_study/jawa_guard_targeted_check_2026-02-24.json`
+- Kasus: `GS-0019`, `GS-0020`, `GS-0031`
+- Baseline lama (canonical deepseek 2026-02-20): semua `A`
+- Hasil terbaru: semua `B` (3/3 sesuai gold B)
+
 ## Catatan
 
 - Untuk arsip historis, beberapa file eksploratori lama memang tidak memenuhi kontrak penuh:

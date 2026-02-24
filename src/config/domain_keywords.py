@@ -82,8 +82,6 @@ SUPERVISOR_NATIONAL_HARD_KEYWORDS = (
     "catatan sipil",
     "akta",
     "poligami",
-    "perceraian",
-    "cerai",
 )
 SUPERVISOR_HAM_EXTREME_KEYWORDS = (
     "dilarang bersekolah",
