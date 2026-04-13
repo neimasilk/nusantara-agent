@@ -16,7 +16,7 @@
 Anonymous Authors\\
 Project: Nusantara-Agent
 }
-\date{Draft v0.6 -- 2026-02-24}
+\date{Draft v0.7 -- 2026-03-04}
 
 \begin{document}
 \maketitle
@@ -267,7 +267,7 @@ $\rightarrow$ &
 \end{figure}
 
 \section{Experiments and Results}
-\subsection{Ablation: ASP-only vs ASP+LLM (2026-02-19)}
+\subsection{Ablation: ASP-only vs ASP+LLM (2026-02-20)}
 We compare two operating modes on the 70 evaluable cases:
 \begin{itemize}[nosep]
   \item \textbf{ASP-only}: keyword router $\rightarrow$ ASP rule engine $\rightarrow$ offline heuristic supervisor (no LLM calls).
@@ -281,8 +281,8 @@ We compare two operating modes on the 70 evaluable cases:
 Mode & Accuracy & Wilson 95\% CI & Correct / Total \\
 \midrule
 ASP-only (offline) & 58.6\% & [0.469, 0.694] & 41 / 70 \\
-ASP+Ollama (deepseek-r1) & \textbf{64.3\%} & [0.526, 0.745] & 45 / 70 \\
-ASP+DeepSeek (API) & 68.6\% & [0.570, 0.782] & 48 / 70 \\
+ASP+Ollama (deepseek-r1) & 64.3\% & [0.526, 0.745] & 45 / 70 \\
+ASP+DeepSeek (API) & \textbf{68.6\%} & [0.570, 0.782] & 48 / 70 \\
 \bottomrule
 \end{tabular}
 \caption{Ablation comparison on the 70-case evaluable benchmark.}
@@ -298,27 +298,27 @@ Increasing ASP rule coverage from 71 to 95 rules (100\% coverage) paradoxically 
 \centering
 \begin{tabular}{lcccccc}
 \toprule
- & \multicolumn{3}{c}{ASP-only} & \multicolumn{3}{c}{ASP+LLM} \\
+ & \multicolumn{3}{c}{ASP-only} & \multicolumn{3}{c}{ASP+DeepSeek} \\
 \cmidrule(lr){2-4} \cmidrule(lr){5-7}
 Label & P & R & Support & P & R & Support \\
 \midrule
-A & 0.36 & 0.67 & 6 & 0.36 & 0.83 & 6 \\
-B & 0.66 & 0.61 & 31 & 0.75 & 0.77 & 31 \\
-C & 0.62 & 0.58 & 31 & 0.83 & 0.65 & 31 \\
+A & 0.36 & 0.67 & 6 & 0.40 & 0.67 & 6 \\
+B & 0.66 & 0.61 & 31 & 0.69 & 0.77 & 31 \\
+C & 0.62 & 0.58 & 31 & 0.80 & 0.65 & 31 \\
 D & 0.00 & 0.00 & 2 & 0.00 & 0.00 & 2 \\
 \bottomrule
 \end{tabular}
-\caption{Per-label precision (P) and recall (R) for both modes on the 70-case benchmark.}
+\caption{Per-label precision (P) and recall (R) for ASP-only and ASP+DeepSeek on the 70-case benchmark (canonical 2026-02-20 snapshot).}
 \label{tab:labelperf}
 \end{table}
 
-\subsection{Extended Error Analysis: The 12 Hard Cases}
+\subsection{Extended Error Analysis: The 13 Hard Cases}
 
-Beyond the aggregate error patterns, we conduct a deeper analysis of \textbf{12 cases (17.1\%)} where all three system variants---ASP-only, ASP+Ollama, and ASP+DeepSeek---fail simultaneously. These ``hard cases'' reveal systematic limitations in the current rule set and router design.
+Beyond the aggregate error patterns, we conduct a deeper analysis of \textbf{13 cases (18.6\%)} where all three system variants---ASP-only, ASP+Ollama, and ASP+DeepSeek---fail simultaneously. These ``hard cases'' reveal systematic limitations in the current rule set and router design.
 
 \subsubsection{Gold label distribution in hard cases}
 
-Table~\ref{tab:hardcases-dist} shows that conflict cases (C) are over-represented in failures, comprising 50.0\% of hard cases versus 44.3\% overall. This pattern suggests that detecting implicit national--adat conflicts is likely one of the primary challenges in the current benchmark.
+Table~\ref{tab:hardcases-dist} shows the gold-label distribution of hard cases. Conflict cases (C) comprise 46.2\% of failures, roughly proportionate to their overall rate (44.3\%). The single D-label hard case is notably over-represented relative to its base rate (7.7\% vs.\ 2.9\% overall), consistent with the complete D-label recall failure discussed in Section~7.2.4. Overall, conflict misclassification remains the primary failure mode by volume.
 
 \begin{table}[h]
 \centering
@@ -326,19 +326,19 @@ Table~\ref{tab:hardcases-dist} shows that conflict cases (C) are over-represente
 \toprule
 Gold Label & Hard Cases & Overall & Ratio \\
 \midrule
-C (Conflict) & 6 (50.0\%) & 31 (44.3\%) & 1.13$\times$ \\
-B (Adat) & 5 (41.7\%) & 31 (44.3\%) & 0.94$\times$ \\
-A (National) & 1 (8.3\%) & 6 (8.6\%) & 0.97$\times$ \\
-D (Unclear) & 0 (0.0\%) & 2 (2.9\%) & 0.00$\times$ \\
+C (Conflict) & 6 (46.2\%) & 31 (44.3\%) & 1.04$\times$ \\
+B (Adat) & 5 (38.5\%) & 31 (44.3\%) & 0.87$\times$ \\
+A (National) & 1 (7.7\%) & 6 (8.6\%) & 0.90$\times$ \\
+D (Unclear) & 1 (7.7\%) & 2 (2.9\%) & 2.67$\times$ \\
 \bottomrule
 \end{tabular}
-\caption{Label distribution in 12 hard cases versus overall benchmark (N=70).}
+\caption{Label distribution in 13 hard cases versus overall benchmark (N=70).}
 \label{tab:hardcases-dist}
 \end{table}
 
 \subsubsection{Dominant failure patterns}
 
-Table~\ref{tab:failure-patterns} categorizes the failure modes. The dominant pattern is \textbf{C$\rightarrow$B misclassification} (33.3\% of hard cases): conflicts where ethnic keywords dominate the query text, causing the symbolic router to overwhelm conflict signals.
+Table~\ref{tab:failure-patterns} categorizes the failure modes. The dominant pattern is \textbf{C$\rightarrow$B misclassification} (30.8\% of hard cases): conflicts where ethnic keywords dominate the query text, causing the symbolic router to overwhelm conflict signals.
 
 \begin{table}[h]
 \centering
@@ -346,14 +346,15 @@ Table~\ref{tab:failure-patterns} categorizes the failure modes. The dominant pat
 \toprule
 Pattern & Description & Count & Percentage \\
 \midrule
-C$\rightarrow$B & Conflict misclassified as Adat & 4 & 33.3\% \\
-B$\rightarrow$A & Adat misclassified as National & 3 & 25.0\% \\
-B$\rightarrow$C & Adat misclassified as Conflict & 2 & 16.7\% \\
-C$\rightarrow$A & Conflict misclassified as National & 2 & 16.7\% \\
-A$\rightarrow$C & National misclassified as Conflict & 1 & 8.3\% \\
+C$\rightarrow$B & Conflict misclassified as Adat & 4 & 30.8\% \\
+B$\rightarrow$A & Adat misclassified as National & 3 & 23.1\% \\
+B$\rightarrow$C & Adat misclassified as Conflict & 2 & 15.4\% \\
+C$\rightarrow$A & Conflict misclassified as National & 2 & 15.4\% \\
+D$\rightarrow$C & Unclear misclassified as Conflict & 1 & 7.7\% \\
+A$\rightarrow$C & National misclassified as Conflict & 1 & 7.7\% \\
 \bottomrule
 \end{tabular}
-\caption{Failure patterns in 12 hard cases where all three systems fail.}
+\caption{Failure patterns in 13 hard cases where all three systems fail.}
 \label{tab:failure-patterns}
 \end{table}
 
@@ -361,7 +362,7 @@ The prevalence of C$\rightarrow$B errors suggests that when customary-law keywor
 
 \subsubsection{Domain-specific challenges}
 
-Minangkabau cases are over-represented in failures (33.3\% of hard cases), particularly around:
+Minangkabau cases are over-represented in failures (4 of 13 hard cases), particularly around:
 \begin{itemize}[nosep]
   \item \textit{Harta pusako} (inherited property) classification,
   \item Inter-ethnic marriage property regimes,
@@ -376,7 +377,7 @@ All three systems fail on both D (``clarification required'') cases in the bench
 
 \subsubsection{Root cause summary}
 
-The fact that all three systems fail identically on these 12 cases suggests that the dominant error sources are in the \textbf{shared ASP rule set} and \textbf{router/prompt design}, rather than in backend-specific differences. The primary failure modes are:
+The fact that all three systems fail identically on these 13 cases suggests that the dominant error sources are in the \textbf{shared ASP rule set} and \textbf{router/prompt design}, rather than in backend-specific differences. The primary failure modes are:
 \begin{enumerate}[nosep]
   \item \textbf{Implicit conflict detection}: When conflict keywords are subtle (e.g., ``mendahului,'' ``tidak sah'') and ethnic keywords dominate, the router misses the conflict signal.
   \item \textbf{Domain ambiguity}: ``General'' cases without clear domain markers default to national-law pathways, missing adat dimensions.
@@ -472,23 +473,23 @@ Despite using different LLM backends, the three systems exhibit \textbf{substant
 \toprule
 Agreement Pattern & Count & Percentage \\
 \midrule
-All 3 agree (correct) & 34 & 48.6\% \\
+All 3 agree (correct) & 35 & 50.0\% \\
 All 3 agree (wrong) & 13 & 18.6\% \\
 \midrule
-\textbf{All 3 agree (total)} & \textbf{47} & \textbf{67.1\%} \\
-2 agree, 1 different & 21 & 30.0\% \\
-All 3 different & 2 & 2.9\% \\
+\textbf{All 3 agree (total)} & \textbf{48} & \textbf{68.6\%} \\
+2 agree, 1 different & 19 & 27.1\% \\
+All 3 different & 3 & 4.3\% \\
 \bottomrule
 \end{tabular}
 \caption{Cross-model agreement among ASP-only, Ollama, and DeepSeek (N=70).}
 \label{tab:agreement}
 \end{table}
 
-The high unanimous agreement (67.1\%) with only 2.9\% complete disagreement is consistent with the symbolic rule layer acting as a \textbf{strong prior} across backends. In pilot terms, this is a reproducibility-positive signal: system behavior appears more anchored by expert-verified ASP rules than by backend-specific variation.
+The high unanimous agreement (68.6\%) with only 4.3\% complete disagreement is consistent with the symbolic rule layer acting as a \textbf{strong prior} across backends. In pilot terms, this is a reproducibility-positive signal: system behavior appears more anchored by expert-verified ASP rules than by backend-specific variation.
 
 \subsubsection{Majority vote analysis}
 
-For cases where two systems agree and one differs, majority vote achieves only \textbf{52.4\% accuracy} (11/21). This indicates that when systems disagree, the majority is \textbf{no more likely to be correct than random chance}. Consequently, simple ensemble strategies offer no improvement over single-system predictions in this setting.
+For cases where two systems agree and one differs, majority vote achieves only \textbf{47.4\% accuracy} (9/19). This indicates that when systems disagree, the majority is \textbf{no more likely to be correct than random chance}. Consequently, simple ensemble strategies offer no improvement over single-system predictions in this setting.
 
 \subsubsection{Implications}
 

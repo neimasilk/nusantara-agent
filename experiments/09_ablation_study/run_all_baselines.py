@@ -19,6 +19,11 @@ from src.utils.benchmark_contract import (
     is_evaluable_gold_label,
     resolve_manifest_evaluable_count,
 )
+from src.utils.dataset_split import (
+    DEFAULT_SPLIT_POLICY_PATH,
+    apply_dataset_split,
+    resolve_dataset_split_mode,
+)
 
 EvaluationMode = Literal["scientific_claimable", "operational_offline"]
 
@@ -440,6 +445,8 @@ def run_all_baselines(
     force_offline: bool,
     disable_external_llm: bool,
     include_human_b8: bool,
+    dataset_split: str,
+    split_policy_path: str,
 ) -> Dict:
     strict_manifest = _resolve_strict_manifest(mode, strict_manifest)
     manifest = _load_manifest()
@@ -448,6 +455,14 @@ def run_all_baselines(
     dataset_path = _resolve_dataset_path(gs_path, manifest)
     cases = _load_dataset(dataset_path)
     _validate_manifest_count(cases, manifest, strict_manifest)
+    split_mode = resolve_dataset_split_mode(mode, dataset_split)
+    split_policy = Path(split_policy_path)
+    working_cases, split_meta = apply_dataset_split(cases, split_mode, split_policy, strict=True)
+    if not working_cases:
+        raise RuntimeError(
+            "Dataset split menghasilkan 0 kasus. "
+            f"Cek dataset_split='{split_mode}' dan split_policy='{split_policy}'."
+        )
 
     old_force_offline = os.getenv("NUSANTARA_FORCE_OFFLINE")
     old_openai = os.getenv("OPENAI_API_KEY")
@@ -467,7 +482,7 @@ def run_all_baselines(
                     _run_single_baseline(
                         baseline_id=baseline_id,
                         module_name=module_name,
-                        cases=cases,
+                        cases=working_cases,
                         seed=seed,
                         output_dir=output_dir,
                         mode=mode,
@@ -478,7 +493,7 @@ def run_all_baselines(
         if include_human_b8:
             runs.append(
                 _run_human_baseline(
-                    cases=cases,
+                    cases=working_cases,
                     output_dir=output_dir,
                     mode=mode,
                     source_dataset=dataset_path.as_posix(),
@@ -491,6 +506,11 @@ def run_all_baselines(
             "force_offline": force_offline,
             "disable_external_llm": disable_external_llm,
             "source_dataset": dataset_path.as_posix(),
+            "dataset_split_mode": split_mode,
+            "split_policy_path": split_policy.as_posix(),
+            "split_contract": split_meta,
+            "total_raw_cases": len(cases),
+            "total_cases_after_split": len(working_cases),
             "n_baselines": len(BASELINE_MODULES),
             "human_baseline_included": include_human_b8,
             "n_seeds": len(seeds),
@@ -542,6 +562,21 @@ def _build_parser() -> argparse.ArgumentParser:
         type=str,
         default="",
         help="Path dataset benchmark. Jika kosong pakai manifest -> fallback legacy.",
+    )
+    parser.add_argument(
+        "--dataset-split",
+        choices=["full", "dev", "locked_test"],
+        default="",
+        help=(
+            "Filter split dataset: full/dev/locked_test. "
+            "Default otomatis: operational_offline->dev, scientific_claimable->full."
+        ),
+    )
+    parser.add_argument(
+        "--split-policy-path",
+        type=str,
+        default=str(DEFAULT_SPLIT_POLICY_PATH),
+        help="Path JSON split policy (default experiments/09_ablation_study/dataset_split.json).",
     )
     parser.add_argument(
         "--output-dir",
@@ -619,4 +654,6 @@ if __name__ == "__main__":
         force_offline=args.force_offline,
         disable_external_llm=args.disable_external_llm,
         include_human_b8=args.include_human_b8,
+        dataset_split=args.dataset_split,
+        split_policy_path=args.split_policy_path,
     )

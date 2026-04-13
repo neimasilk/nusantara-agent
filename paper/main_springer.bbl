@@ -1,0 +1,175 @@
+\begin{thebibliography}{31}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{\url{https://doi.org/#1}}
+\providecommand{\eprint}[2][]{\url{#2}}
+ \bibcommenthead
+
+\bibitem[{Asai et~al(2023)Asai, Wu, Wang, Sil, and
+  Hajishirzi}]{asai2023selfrag}
+Asai A, Wu Z, Wang Y, et~al (2023) Self-rag: Learning to retrieve, generate,
+  and critique through self-reflection. arXiv preprint arXiv:231011511
+
+\bibitem[{Brown et~al(2020)Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal,
+  Neelakantan, Shyam, Sastry, Askell et~al}]{brown2020language}
+Brown TB, Mann B, Ryder N, et~al (2020) Language models are few-shot learners.
+  In: Advances in Neural Information Processing Systems
+
+\bibitem[{Burns(2004)}]{burns2004leiden}
+Burns P (2004) The {Leiden} Legacy: Concepts of Law in Indonesia. KITLV Press,
+  Leiden
+
+\bibitem[{Colombo et~al(2024)Colombo, da~Costa, M{\"u}ller, Stanczak
+  et~al}]{colombo2024saullm}
+Colombo P, da~Costa P, M{\"u}ller M, et~al (2024) Saullm-7b: A pioneering
+  language model for law. arXiv preprint arXiv:240303883
+
+\bibitem[{Gao et~al(2023)Gao, Xiong, Gao, Jia, Pan, Bi, Dai, Sun, Wang, and
+  Wang}]{gao2023ragsurvey}
+Gao Y, Xiong Y, Gao X, et~al (2023) Retrieval-augmented generation for large
+  language models: A survey. arXiv preprint arXiv:231210997
+
+\bibitem[{Garcez and Lamb(2023)}]{garcez2023neurosymbolic}
+Garcez Ad, Lamb LC (2023) Neurosymbolic {AI}: The 3rd wave. Artificial
+  Intelligence Review 56(11):12387--12406. \doi{10.1007/s10462-023-10448-w}
+
+\bibitem[{Gebser et~al(2014)Gebser, Kaminski, Kaufmann, and
+  Schaub}]{gebser2014clingo}
+Gebser M, Kaminski R, Kaufmann B, et~al (2014) Clingo = {ASP} + control:
+  Preliminary report. Theory and Practice of Logic Programming 14(4-5):1--5
+
+\bibitem[{Guha et~al(2023)Guha, Nyarko, Ho, Re et~al}]{guha2023legalbench}
+Guha N, Nyarko J, Ho DE, et~al (2023) Legalbench: A collaboratively built
+  benchmark for measuring legal reasoning in large language models. arXiv
+  preprint arXiv:230811462
+
+\bibitem[{He et~al(2024)}]{he2024gretriever}
+He X, et~al (2024) G-retriever: Retrieval-augmented generation for textual
+  graph understanding and question answering. arXiv preprint arXiv:240207630
+
+\bibitem[{Hooker(1978)}]{hooker1978adat}
+Hooker MB (1978) Adat Law in Modern Indonesia. Oxford University Press, Kuala
+  Lumpur
+
+\bibitem[{Hou et~al(2024)Hou, Vashishtha, Chen, Chua, Arora, and
+  Bhatia}]{hou-etal-2024-gaps}
+Hou CP, Vashishtha S, Chen CH, et~al (2024) Gaps or hallucinations? {NLI}
+  metrics for legal {LLM} summarization. In: Proceedings of the Natural Legal
+  Language Processing Workshop 2024, pp 54--61
+
+\bibitem[{Kwak et~al(2024)Kwak, Baraniuk, Agarwal, Cristia, Hall, Pei,
+  Acuna-Agost, and Christodoulopoulos}]{kwak-etal-2024-classify}
+Kwak S, Baraniuk C, Agarwal K, et~al (2024) Classify first then extract: A
+  hybrid approach for improving information extraction from commercial lease
+  agreements. In: Proceedings of the Natural Legal Language Processing Workshop
+  2024, pp 62--68
+
+\bibitem[{Lachin(1992)}]{lachin1992power}
+Lachin JM (1992) Power and sample size evaluation for the {McNemar} test with
+  application to matched case-control studies. Statistics in Medicine
+  11(9):1239--1251. \doi{10.1002/sim.4780110909}
+
+\bibitem[{Lewis et~al(2020)Lewis, Perez, Piktus, Petroni, Karpukhin, Goyal,
+  K{\"u}ttler, Lewis, Yih, Rockt{\"a}schel, Riedel, and Kiela}]{lewis2020rag}
+Lewis P, Perez E, Piktus A, et~al (2020) Retrieval-augmented generation for
+  knowledge-intensive nlp tasks. In: Advances in Neural Information Processing
+  Systems
+
+\bibitem[{Lifschitz(2019)}]{lifschitz2019asp}
+Lifschitz V (2019) Answer Set Programming. Springer, Berlin, Heidelberg
+
+\bibitem[{Liu et~al(2024)Liu, Gupta, Agarwal, Kalia, Saran, Surendran,
+  Karmakar, Das, Mishra, and Kundu}]{liu-etal-2024-enhancing-legal}
+Liu S, Gupta S, Agarwal K, et~al (2024) Enhancing legal case outcome prediction
+  with {L}aw{N}eo and mistral{AI}: A comparative study. In: Proceedings of the
+  Natural Legal Language Processing Workshop 2024, pp 8--13
+
+\bibitem[{Mali et~al(2024)Mali, Acuna-Agost, Luo, Braun, Wehbe,
+  Christodoulopoulos et~al}]{mali-etal-2024-information}
+Mali P, Acuna-Agost R, Luo Z, et~al (2024) An information extraction system for
+  contracts by leveraging large language models. In: Proceedings of the Natural
+  Legal Language Processing Workshop 2024, pp 33--45
+
+\bibitem[{Narendra et~al(2024)Narendra, Tiwari, Kedia, Jindal, Abrol, and
+  Reddy}]{narendra-etal-2024-enhancing}
+Narendra T, Tiwari P, Kedia V, et~al (2024) Enhancing contract negotiations
+  with fine-tuned legal bert and retrieval-augmented generation. In:
+  Proceedings of the Natural Legal Language Processing Workshop 2024, pp 46--53
+
+\bibitem[{Nigam et~al(2024)Nigam, M~C, K, K, Kakkar, Kaur, and
+  Pruthi}]{nigam-etal-2024-rethinking}
+Nigam N, M~C A, K S, et~al (2024) Rethinking legal judgement prediction in the
+  era of large language models. In: Proceedings of the Natural Legal Language
+  Processing Workshop 2024, pp 14--24
+
+\bibitem[{Sarthi et~al(2024)Sarthi, Abdullah, Tuli, Khurana, Goyal
+  et~al}]{sarthi2024raptor}
+Sarthi P, Abdullah S, Tuli A, et~al (2024) Raptor: Recursive abstractive
+  processing for tree-organized retrieval. arXiv preprint arXiv:240118059
+
+\bibitem[{Shinn et~al(2023)Shinn, Cassano, Gopinath, Narasimhan, and
+  Yao}]{shinn2023reflexion}
+Shinn N, Cassano F, Gopinath A, et~al (2023) Reflexion: Language agents with
+  verbal reinforcement learning. arXiv preprint arXiv:230311366
+
+\bibitem[{Sie et~al(2024)Sie, Mertens, den Ouden, Erdem, and
+  Schilder}]{sie-etal-2024-summarizing}
+Sie R, Mertens T, den Ouden H, et~al (2024) Summarizing long regulatory
+  documents with {LLM}s. In: Proceedings of the Natural Legal Language
+  Processing Workshop 2024, pp 2--7
+
+\bibitem[{Taranukhin et~al(2024)Taranukhin, Chhikara, Singh, Shahzad, Tokarev,
+  Mineeva, Chokri, Kauchak, Muresan, and
+  Kallumadi}]{taranukhin-etal-2024-empowering}
+Taranukhin O, Chhikara P, Singh S, et~al (2024) Empowering air travelers
+  through generative {AI}: A study of a domain-specific {RAG} chatbot. In:
+  Proceedings of the Natural Legal Language Processing Workshop 2024, pp 69--78
+
+\bibitem[{Tran et~al(2024)Tran, Mainali, Lucic, Terpstra, Vosselman, Daniels,
+  van~den Herik, Visser, Scharnberg, Trapp, Geerlings, van~den Bosch, Bukhari,
+  and van~den Ham}]{tran-etal-2024-deberta}
+Tran A, Mainali N, Lucic A, et~al (2024) When {D}e{BERT}a beats behemoths: A
+  comparative study of smaller language models and large language models for
+  legal text classification in low-resource and privacy-focused environments.
+  In: Proceedings of the Natural Legal Language Processing Workshop 2024, pp
+  79--86
+
+\bibitem[{T.y.s.s et~al(2024)T.y.s.s, Knab, Zachary, Lee, Hsi, Surdeanu, Reddy
+  et~al}]{tyss-etal-2024-lexsumm}
+T.y.s.s S, Knab J, Zachary A, et~al (2024) Lexsumm and lext5: Benchmarking and
+  summarizing legal briefs in bankruptcy cases. In: Proceedings of the Natural
+  Legal Language Processing Workshop 2024, pp 227--236
+
+\bibitem[{Wang et~al(2022)Wang, Wei, Schuurmans, Le, Chi, Narang, Chowdhery,
+  and Zhou}]{wang2022selfconsistency}
+Wang X, Wei J, Schuurmans D, et~al (2022) Self-consistency improves chain of
+  thought reasoning in language models. arXiv preprint arXiv:220311171
+
+\bibitem[{Wei et~al(2022)Wei, Wang, Schuurmans, Bosma, Ichter, Xia, Chi, Le,
+  and Zhou}]{wei2022cot}
+Wei J, Wang X, Schuurmans D, et~al (2022) Chain-of-thought prompting elicits
+  reasoning in large language models. arXiv preprint arXiv:220111903
+
+\bibitem[{Wilson(1927)}]{wilson1927probable}
+Wilson EB (1927) Probable inference, the law of succession, and statistical
+  inference. Journal of the American Statistical Association 22(158):209--212.
+  \doi{10.1080/01621459.1927.10502953}
+
+\bibitem[{Xie et~al(2024)Xie, Fernandes, Aletras, Solan, and
+  Xu}]{xie-etal-2024-clc}
+Xie Y, Fernandes JCC, Aletras N, et~al (2024) {CLC}-{UKET}: Explainable charge
+  prediction for {UK} crown court cases with judgment documents. In:
+  Proceedings of the Natural Legal Language Processing Workshop 2024, pp 25--32
+
+\bibitem[{Yao et~al(2023{\natexlab{a}})Yao, Yu, Zhao, Shafran, Narasimhan, and
+  Cao}]{yao2023tree}
+Yao S, Yu D, Zhao J, et~al (2023{\natexlab{a}}) Tree of thoughts: Deliberate
+  problem solving with large language models. arXiv preprint arXiv:230510601
+
+\bibitem[{Yao et~al(2023{\natexlab{b}})Yao, Zhao, Yu, Du, Shafran, Narasimhan,
+  and Cao}]{yao2023react}
+Yao S, Zhao J, Yu D, et~al (2023{\natexlab{b}}) React: Synergizing reasoning
+  and acting in language models. arXiv preprint arXiv:221003629
+
+\end{thebibliography}

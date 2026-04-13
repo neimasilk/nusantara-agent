@@ -80,7 +80,7 @@ All LLM calls go through the **DeepSeek API** using the OpenAI Python client wit
 
 Legacy registry: `docs/task_registry.md` (91 tasks, many cancelled/archived after pivot).
 
-## Current State (as of 2026-02-23) — HONEST ASSESSMENT
+## Current State (as of 2026-03-04) — HONEST ASSESSMENT
 
 ### What Works
 - **Rule Engine**: `ClingoRuleEngine` with ASP is functional (when `clingo` is installed)
@@ -88,12 +88,12 @@ Legacy registry: `docs/task_registry.md` (91 tasks, many cancelled/archived afte
 - **82 Human-Labeled Cases**: From 2 qualified expert raters (Ahli-1 Dr. Hendra, Ahli-2 Dr. Indra), covering 3 adat domains + national law. Ahli-3 removed (under-qualified, S1 level only — see F-014).
 - **74 Benchmark Cases**: 70 evaluable (agreed), 4 disputed (excluded from accuracy)
 - **ASP-only**: 58.6% (41/70), Wilson CI [0.469, 0.694]
-- **ASP+Ollama (Qwen-2.5-7B, temp=0)**: 64.3% (45/70), Wilson CI [0.526, 0.745]
+- **ASP+Ollama (deepseek-r1, temp=0)**: 64.3% (45/70), Wilson CI [0.526, 0.745]
 - **ASP+DeepSeek (temp=0)**: 68.6% (48/70), Wilson CI [0.570, 0.782]
 - **McNemar p-values**: 0.344, 0.167, 0.549 — semua NON-SIGNIFIKAN (n=70)
 - **Inter-system agreement**: Fleiss kappa = 0.638 (substantial)
 - **ASP rules aktif**: 71 dari 95 expert-verified (24 di-rollback, lihat F-018)
-- **Test Suite**: 106 tests passing (termasuk benchmark contract tests untuk label `DISPUTED/SPLIT`)
+- **Test Suite**: 132 tests passing (termasuk benchmark contract tests untuk label `DISPUTED/SPLIT`)
 - **Shared utils**: LLM init extracted to `src/utils/llm.py`, used by all agent modules
 
 ### What Doesn't Work

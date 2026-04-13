@@ -1,0 +1,442 @@
+{
+  "date": "2026-02-24",
+  "mode": "asp_only",
+  "evaluation_mode": "scientific_claimable",
+  "skipped": false,
+  "runtime_backend": "offline_fallback",
+  "source_dataset": "data\\processed\\gold_standard\\gs_active_cases.json",
+  "dataset_split_mode": "dev",
+  "split_policy_path": "experiments\\09_ablation_study\\dataset_split.json",
+  "split_contract": {
+    "dataset_split_mode": "dev",
+    "split_policy_path": "experiments\\09_ablation_study\\dataset_split.json",
+    "split_policy_key": "dev_set",
+    "requested_case_ids": 49,
+    "selected_cases": 49,
+    "missing_case_ids": [],
+    "total_raw_cases": 74,
+    "total_cases_after_split": 49
+  },
+  "total_raw_cases": 74,
+  "total_cases_after_split": 49,
+  "unresolved_skipped": 0,
+  "unresolved_labels": [
+    "AMBIGUOUS",
+    "DISPUTED",
+    "SPLIT"
+  ],
+  "total_evaluated": 49,
+  "correct": 32,
+  "accuracy": 0.6530612244897959,
+  "accuracy_wilson_95ci": {
+    "low": 0.5131093521943979,
+    "high": 0.7707579039068555
+  },
+  "per_label_metrics": {
+    "A": {
+      "tp": 3,
+      "fp": 1,
+      "fn": 0,
+      "support": 3,
+      "precision": 0.75,
+      "recall": 1.0
+    },
+    "B": {
+      "tp": 16,
+      "fp": 8,
+      "fn": 7,
+      "support": 23,
+      "precision": 0.6666666666666666,
+      "recall": 0.6956521739130435
+    },
+    "C": {
+      "tp": 13,
+      "fp": 8,
+      "fn": 8,
+      "support": 21,
+      "precision": 0.6190476190476191,
+      "recall": 0.6190476190476191
+    },
+    "D": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "support": 2,
+      "precision": 0.0,
+      "recall": 0.0
+    }
+  },
+  "reasoning_metadata_contract": {
+    "required_fields": [
+      "label",
+      "langkah_keputusan",
+      "alasan_utama",
+      "konflik_terdeteksi"
+    ],
+    "total_results": 49,
+    "parseable_count": 49,
+    "parseable_ratio": 1.0,
+    "complete_count": 49,
+    "complete_ratio": 1.0,
+    "per_field_present_count": {
+      "label": 49,
+      "langkah_keputusan": 49,
+      "alasan_utama": 49,
+      "konflik_terdeteksi": 49
+    },
+    "missing_field_counts": {
+      "label": 0,
+      "langkah_keputusan": 0,
+      "alasan_utama": 0,
+      "konflik_terdeteksi": 0
+    },
+    "all_required_present": true,
+    "claimable_for_layer_diagnosis": true,
+    "incomplete_case_ids": []
+  },
+  "results": [
+    {
+      "id": "CS-MIN-011",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Ada kata kunci nasional kuat dalam konteks adat, diperlakukan sebagai konflik.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "CS-MIN-004",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "CS-JAW-006",
+      "gold": "A",
+      "predicted": "A",
+      "match": true,
+      "reasoning": "{\"label\": \"A\", \"langkah_keputusan\": \"2\", \"alasan_utama\": \"Kasus administratif/formalitas nasional yang jelas tanpa konflik simbolik.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "CS-NAS-066",
+      "gold": "A",
+      "predicted": "A",
+      "match": true,
+      "reasoning": "{\"label\": \"A\", \"langkah_keputusan\": \"1\", \"alasan_utama\": \"Pelanggaran HAM fundamental atau batas usia hukum diprioritaskan ke hukum nasional.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "CS-BAL-002",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Ada kata kunci nasional kuat dalam konteks adat, diperlakukan sebagai konflik.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "CS-LIN-017",
+      "gold": "A",
+      "predicted": "A",
+      "match": true,
+      "reasoning": "{\"label\": \"A\", \"langkah_keputusan\": \"2\", \"alasan_utama\": \"Kasus administratif/formalitas nasional yang jelas tanpa konflik simbolik.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "CS-BAL-014",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "CS-LIN-018",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Ada kata kunci nasional kuat dalam konteks adat, diperlakukan sebagai konflik.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "CS-JAW-011",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Rule engine mendeteksi konflik eksplisit antar norma.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "CS-BAL-009",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "CS-NAS-022",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Rule engine mendeteksi konflik eksplisit antar norma.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "CS-MIN-015",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "CS-MIN-025",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Indikator adat dominan pada query konsensus.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "CS-JAW-030",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Output simbolik dua sistem muncul bersamaan.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "GS-0001",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "GS-0002",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "GS-0004",
+      "gold": "B",
+      "predicted": "C",
+      "match": false,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Rule engine mendeteksi konflik eksplisit antar norma.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "GS-0005",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "GS-0006",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Router menandai konflik nasional-adat.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "GS-0025",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "GS-0026",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Router menandai konflik nasional-adat.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "GS-0033",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Router mengindikasikan domain nasional murni tanpa konflik simbolik. JAWA_GUARD_V1: konteks Jawa bilateral tanpa constraint nasional keras, override A->B untuk mencegah bias nasional-dominan.\", \"konflik_terdeteksi\": \"Tidak\", \"jawa_guard_v1\": \"applied\"}"
+    },
+    {
+      "id": "GS-0034",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Router mengindikasikan domain nasional murni tanpa konflik simbolik. JAWA_GUARD_V1: konteks Jawa bilateral tanpa constraint nasional keras, override A->B untuk mencegah bias nasional-dominan.\", \"konflik_terdeteksi\": \"Tidak\", \"jawa_guard_v1\": \"applied\"}"
+    },
+    {
+      "id": "GS-0035",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Router menandai konflik nasional-adat.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "GS-0037",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Router menandai konflik nasional-adat.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "GS-0040",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Router menandai konflik nasional-adat.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "GS-0041",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "GS-0008",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Indikator adat dominan pada query konsensus.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "GS-0009",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "GS-0011",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "GS-0013",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "GS-0014",
+      "gold": "B",
+      "predicted": "A",
+      "match": false,
+      "reasoning": "{\"label\": \"A\", \"langkah_keputusan\": \"2\", \"alasan_utama\": \"Output simbolik nasional tersedia tanpa sinyal adat.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "GS-0027",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "GS-0028",
+      "gold": "B",
+      "predicted": "C",
+      "match": false,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Rule engine mendeteksi konflik eksplisit antar norma.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "GS-0029",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "GS-0046",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Rule engine mendeteksi konflik eksplisit antar norma.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "GS-0048",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "GS-0049",
+      "gold": "C",
+      "predicted": "B",
+      "match": false,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Router mengindikasikan domain nasional murni tanpa konflik simbolik. JAWA_GUARD_V1: konteks Jawa bilateral tanpa constraint nasional keras, override A->B untuk mencegah bias nasional-dominan.\", \"konflik_terdeteksi\": \"Tidak\", \"jawa_guard_v1\": \"applied\"}"
+    },
+    {
+      "id": "GS-0102",
+      "gold": "C",
+      "predicted": "C",
+      "match": true,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Router menandai konflik nasional-adat.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "GS-0103",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "GS-0015",
+      "gold": "B",
+      "predicted": "C",
+      "match": false,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Router menandai konflik nasional-adat.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "GS-0016",
+      "gold": "B",
+      "predicted": "C",
+      "match": false,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Output simbolik dua sistem muncul bersamaan.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "GS-0017",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "GS-0018",
+      "gold": "B",
+      "predicted": "C",
+      "match": false,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Router menandai konflik nasional-adat.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "GS-0024",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus dominan adat dan tidak ada konflik eksplisit.\", \"konflik_terdeteksi\": \"Tidak\"}"
+    },
+    {
+      "id": "GS-0030",
+      "gold": "B",
+      "predicted": "C",
+      "match": false,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Rule engine mendeteksi konflik eksplisit antar norma.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "GS-0031",
+      "gold": "B",
+      "predicted": "B",
+      "match": true,
+      "reasoning": "{\"label\": \"B\", \"langkah_keputusan\": \"3\", \"alasan_utama\": \"Kasus administratif/formalitas nasional yang jelas tanpa konflik simbolik. JAWA_GUARD_V1: konteks Jawa bilateral tanpa constraint nasional keras, override A->B untuk mencegah bias nasional-dominan.\", \"konflik_terdeteksi\": \"Tidak\", \"jawa_guard_v1\": \"applied\"}"
+    },
+    {
+      "id": "GS-0054",
+      "gold": "D",
+      "predicted": "C",
+      "match": false,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Router menandai konflik nasional-adat.\", \"konflik_terdeteksi\": \"Ya\"}"
+    },
+    {
+      "id": "GS-0055",
+      "gold": "D",
+      "predicted": "C",
+      "match": false,
+      "reasoning": "{\"label\": \"C\", \"langkah_keputusan\": \"4\", \"alasan_utama\": \"Router menandai konflik nasional-adat.\", \"konflik_terdeteksi\": \"Ya\"}"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 # Dev/Test Split Policy
 
 **Tanggal Ditetapkan:** 2026-02-23
-**Ditetapkan oleh:** Opus 4.6 (strategic review) + Sonnet 4.6 (dokumentasi)
+**Ditetapkan oleh:** Mukhlis Amien (Research Lead, owner-confirmed 24 Februari 2026) dengan dukungan strategic review AI
 **Berlaku untuk:** Semua evaluasi benchmarking Exp 09 dan seterusnya
 
 ---

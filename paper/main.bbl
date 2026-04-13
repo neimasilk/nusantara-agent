@@ -1,0 +1,212 @@
+\begin{thebibliography}{10}
+
+\bibitem{asai2023selfrag}
+Akari Asai, Zeqiu Wu, Yizhong Wang, Avirup Sil, and Hannaneh Hajishirzi.
+\newblock Self-rag: Learning to retrieve, generate, and critique through
+  self-reflection.
+\newblock {\em arXiv preprint arXiv:2310.11511}, 2023.
+
+\bibitem{brown2020language}
+Tom~B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan,
+  Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda
+  Askell, et~al.
+\newblock Language models are few-shot learners.
+\newblock In {\em Advances in Neural Information Processing Systems}, 2020.
+
+\bibitem{burns2004leiden}
+Peter Burns.
+\newblock {\em The {Leiden} Legacy: Concepts of Law in Indonesia}.
+\newblock KITLV Press, Leiden, 2004.
+
+\bibitem{colombo2024saullm}
+Pierre Colombo, Pedro da~Costa, Martin M{\"u}ller, Karolina Stanczak, et~al.
+\newblock Saullm-7b: A pioneering language model for law.
+\newblock {\em arXiv preprint arXiv:2403.03883}, 2024.
+
+\bibitem{gao2023ragsurvey}
+Yunfan Gao, Yun Xiong, Xinyu Gao, Kang Jia, Jinliu Pan, Yuxian Bi, Yixiang Dai,
+  Jiawei Sun, Meng Wang, and Haofen Wang.
+\newblock Retrieval-augmented generation for large language models: A survey.
+\newblock {\em arXiv preprint arXiv:2312.10997}, 2023.
+
+\bibitem{garcez2023neurosymbolic}
+Artur~d'Avila Garcez and Luis~C. Lamb.
+\newblock Neurosymbolic {AI}: The 3rd wave.
+\newblock {\em Artificial Intelligence Review}, 56(11):12387--12406, 2023.
+
+\bibitem{gebser2014clingo}
+Martin Gebser, Roland Kaminski, Benjamin Kaufmann, and Torsten Schaub.
+\newblock Clingo = {ASP} + control: Preliminary report.
+\newblock {\em Theory and Practice of Logic Programming}, 14(4-5):1--5, 2014.
+
+\bibitem{guha2023legalbench}
+Neel Guha, Julian Nyarko, Daniel~E. Ho, Christopher Re, et~al.
+\newblock Legalbench: A collaboratively built benchmark for measuring legal
+  reasoning in large language models.
+\newblock {\em arXiv preprint arXiv:2308.11462}, 2023.
+
+\bibitem{he2024gretriever}
+Xiaoxin He et~al.
+\newblock G-retriever: Retrieval-augmented generation for textual graph
+  understanding and question answering.
+\newblock {\em arXiv preprint arXiv:2402.07630}, 2024.
+
+\bibitem{hooker1978adat}
+Michael~Barry Hooker.
+\newblock {\em Adat Law in Modern Indonesia}.
+\newblock Oxford University Press, Kuala Lumpur, 1978.
+
+\bibitem{hou-etal-2024-gaps}
+Chih-Ping Hou, Siddhant Vashishtha, Chia-Hsuan Chen, Alton Chua, Daman Arora,
+  and Parminder Bhatia.
+\newblock Gaps or hallucinations? {NLI} metrics for legal {LLM} summarization.
+\newblock In {\em Proceedings of the Natural Legal Language Processing Workshop
+  2024}, pages 54--61, 2024.
+
+\bibitem{kwak-etal-2024-classify}
+Sunhee Kwak, Chris Baraniuk, Kabir Agarwal, Julian Cristia, Dexter Hall, Bowen
+  Pei, Rodrigo Acuna-Agost, and Christos Christodoulopoulos.
+\newblock Classify first then extract: A hybrid approach for improving
+  information extraction from commercial lease agreements.
+\newblock In {\em Proceedings of the Natural Legal Language Processing Workshop
+  2024}, pages 62--68, 2024.
+
+\bibitem{lewis2020rag}
+Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir
+  Karpukhin, Naman Goyal, Heinrich K{\"u}ttler, Mike Lewis, Wen-tau Yih, Tim
+  Rockt{\"a}schel, Sebastian Riedel, and Douwe Kiela.
+\newblock Retrieval-augmented generation for knowledge-intensive nlp tasks.
+\newblock In {\em Advances in Neural Information Processing Systems}, 2020.
+
+\bibitem{lifschitz2019asp}
+Vladimir Lifschitz.
+\newblock {\em Answer Set Programming}.
+\newblock Springer, Berlin, Heidelberg, 2019.
+
+\bibitem{liu-etal-2024-enhancing-legal}
+Sijia Liu, Sanjeev Gupta, Kartik Agarwal, Kunal Kalia, Prakhar Saran, Ramnath
+  Surendran, Saptarshi Karmakar, Suman Das, Pawan Mishra, and Soumya Kundu.
+\newblock Enhancing legal case outcome prediction with {L}aw{N}eo and
+  mistral{AI}: A comparative study.
+\newblock In {\em Proceedings of the Natural Legal Language Processing Workshop
+  2024}, pages 8--13, 2024.
+
+\bibitem{mali-etal-2024-information}
+Pratik Mali, Rodrigo Acuna-Agost, Zhengyi Luo, Donald Braun, Leila Wehbe,
+  Christos Christodoulopoulos, et~al.
+\newblock An information extraction system for contracts by leveraging large
+  language models.
+\newblock In {\em Proceedings of the Natural Legal Language Processing Workshop
+  2024}, pages 33--45, 2024.
+
+\bibitem{narendra-etal-2024-enhancing}
+Tejas Narendra, Prashant Tiwari, Vishesh Kedia, Aviral Jindal, Sahil Abrol, and
+  Chandan~K. Reddy.
+\newblock Enhancing contract negotiations with fine-tuned legal bert and
+  retrieval-augmented generation.
+\newblock In {\em Proceedings of the Natural Legal Language Processing Workshop
+  2024}, pages 46--53, 2024.
+
+\bibitem{nigam-etal-2024-rethinking}
+Naman Nigam, Ayush M~C, Sriniketh K, Rupal K, Vinayak Kakkar, Arshia Kaur, and
+  Danish Pruthi.
+\newblock Rethinking legal judgement prediction in the era of large language
+  models.
+\newblock In {\em Proceedings of the Natural Legal Language Processing Workshop
+  2024}, pages 14--24, 2024.
+
+\bibitem{sarthi2024raptor}
+Parth Sarthi, Salman Abdullah, Aman Tuli, Mohit Khurana, Anjan Goyal, et~al.
+\newblock Raptor: Recursive abstractive processing for tree-organized
+  retrieval.
+\newblock {\em arXiv preprint arXiv:2401.18059}, 2024.
+
+\bibitem{shinn2023reflexion}
+Noah Shinn, Federico Cassano, Ashwin Gopinath, Karthik Narasimhan, and Shunyu
+  Yao.
+\newblock Reflexion: Language agents with verbal reinforcement learning.
+\newblock {\em arXiv preprint arXiv:2303.11366}, 2023.
+
+\bibitem{sie-etal-2024-summarizing}
+Rianne Sie, Tom Mertens, Henk den Ouden, Erman Erdem, and Frank Schilder.
+\newblock Summarizing long regulatory documents with {LLM}s.
+\newblock In {\em Proceedings of the Natural Legal Language Processing Workshop
+  2024}, pages 2--7, 2024.
+
+\bibitem{taranukhin-etal-2024-empowering}
+Oleg Taranukhin, Prerna Chhikara, Solanki Singh, Nida Shahzad, Mikhail Tokarev,
+  Evgeniya Mineeva, Ahmad Chokri, Dave Kauchak, Smaranda Muresan, and Surya
+  Kallumadi.
+\newblock Empowering air travelers through generative {AI}: A study of a
+  domain-specific {RAG} chatbot.
+\newblock In {\em Proceedings of the Natural Legal Language Processing Workshop
+  2024}, pages 69--78, 2024.
+
+\bibitem{tran-etal-2024-deberta}
+Andy Tran, Nischal Mainali, Ana Lucic, Bas Terpstra, Eduard Vosselman, Henk
+  Daniels, Jaap van~den Herik, Jaap Visser, Geertje Scharnberg, Sina Trapp,
+  Henk Geerlings, Antal van~den Bosch, Kazi~Sohag Bukhari, and Ricardo van~den
+  Ham.
+\newblock When {D}e{BERT}a beats behemoths: A comparative study of smaller
+  language models and large language models for legal text classification in
+  low-resource and privacy-focused environments.
+\newblock In {\em Proceedings of the Natural Legal Language Processing Workshop
+  2024}, pages 79--86, 2024.
+
+\bibitem{tyss-etal-2024-lexsumm}
+Santosh T.y.s.s, Jacob Knab, Andrew Zachary, Seohyeong Lee, Andrew Hsi, Mihai
+  Surdeanu, Siva Reddy, et~al.
+\newblock Lexsumm and lext5: Benchmarking and summarizing legal briefs in
+  bankruptcy cases.
+\newblock In {\em Proceedings of the Natural Legal Language Processing Workshop
+  2024}, pages 227--236, 2024.
+
+\bibitem{tyss-etal-2024-supporting}
+Santosh T.y.s.s, Siva Reddy, Mihai Surdeanu, Seohyeong Lee, Andrew Hsi, et~al.
+\newblock Towards supporting legal argumentation with natural language
+  processing and graph representation learning.
+\newblock In {\em Proceedings of the Natural Legal Language Processing Workshop
+  2024}, pages 237--243, 2024.
+
+\bibitem{vaswani2017attention}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N. Gomez, {\L}ukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need.
+\newblock In {\em Advances in Neural Information Processing Systems}, 2017.
+
+\bibitem{wang2022selfconsistency}
+Xuezhi Wang, Jason Wei, Dale Schuurmans, Quoc Le, Ed~Chi, Sharan Narang,
+  Aakanksha Chowdhery, and Denny Zhou.
+\newblock Self-consistency improves chain of thought reasoning in language
+  models.
+\newblock {\em arXiv preprint arXiv:2203.11171}, 2022.
+
+\bibitem{wei2022cot}
+Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia,
+  Ed~Chi, Quoc Le, and Denny Zhou.
+\newblock Chain-of-thought prompting elicits reasoning in large language
+  models.
+\newblock {\em arXiv preprint arXiv:2201.11903}, 2022.
+
+\bibitem{xie-etal-2024-clc}
+Yujie Xie, Jose Camacho-Collados Fernandes, Nikolaos Aletras, Lawrence~M.
+  Solan, and Han Xu.
+\newblock {CLC}-{UKET}: Explainable charge prediction for {UK} crown court
+  cases with judgment documents.
+\newblock In {\em Proceedings of the Natural Legal Language Processing Workshop
+  2024}, pages 25--32, 2024.
+
+\bibitem{yao2023tree}
+Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran, Karthik Narasimhan, and Yuan
+  Cao.
+\newblock Tree of thoughts: Deliberate problem solving with large language
+  models.
+\newblock {\em arXiv preprint arXiv:2305.10601}, 2023.
+
+\bibitem{yao2023react}
+Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik Narasimhan,
+  and Yuan Cao.
+\newblock React: Synergizing reasoning and acting in language models.
+\newblock {\em arXiv preprint arXiv:2210.03629}, 2023.
+
+\end{thebibliography}

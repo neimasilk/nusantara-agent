@@ -86,11 +86,21 @@ def check_key_numbers(paper_text: str) -> CheckResult:
                 f"{label}: expected {expected_pct:.1f}% or {expected_ratio[0]}/{expected_ratio[1]} not found"
             )
 
-    # Global /70 consistency: only canonical benchmark numerators are allowed.
+    # Global /70 consistency:
+    # - Canonical ratios are required for the primary claim path.
+    # - Exploratory ratios are allowed as non-blocking evidence in discussion/limitations.
     allowed_ratio70 = {(41, 70), (45, 70), (48, 70)}
-    unexpected_ratio70 = sorted({pair for pair in ratio70_all if pair not in allowed_ratio70})
+    exploratory_ratio70 = {(38, 70), (42, 70)}
+    unexpected_ratio70 = sorted(
+        {
+            pair
+            for pair in ratio70_all
+            if pair not in allowed_ratio70 and pair not in exploratory_ratio70
+        }
+    )
     if unexpected_ratio70:
         errors.append(f"unexpected benchmark ratio(s) /70 found: {unexpected_ratio70}")
+    exploratory_found = sorted({pair for pair in ratio70_all if pair in exploratory_ratio70})
 
     # Explicit percent-ratio pair consistency, e.g. "64.3% (45/70)".
     expected_pct_by_num70 = {41: 58.6, 45: 64.3, 48: 68.6}
@@ -123,6 +133,7 @@ def check_key_numbers(paper_text: str) -> CheckResult:
     for pattern in (
         r"benchmark\s+of\s+(\d+)",
         r"total\s+cases\s+in\s+benchmark\s*&\s*(\d+)",
+        r"total\s+benchmark\s+cases\s*&\s*(\d+)",
     ):
         for m in re.finditer(pattern, paper_text, flags=re.IGNORECASE):
             benchmark_values.add(int(m.group(1)))
@@ -136,6 +147,14 @@ def check_key_numbers(paper_text: str) -> CheckResult:
 
     if errors:
         return CheckResult("fail", "; ".join(errors), blocking=True)
+    if exploratory_found:
+        return CheckResult(
+            "warn",
+            "Key numbers consistent ("
+            + ", ".join(summary_parts)
+            + ", evaluable=70, benchmark=74); exploratory /70 ratios detected: "
+            + str(exploratory_found),
+        )
     return CheckResult(
         "pass",
         "Key numbers consistent (" + ", ".join(summary_parts) + ", evaluable=70, benchmark=74)",
@@ -197,10 +216,10 @@ def _print_result(result: CheckResult) -> None:
 
 
 def main() -> int:
-    paper_path = DEFAULT_PAPER_PATH
+    paper_path = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_PAPER_PATH
     bib_path = DEFAULT_BIB_PATH
 
-    print("[CLAIM GATE] Checking paper/main.tex...")
+    print(f"[CLAIM GATE] Checking {paper_path}...")
 
     if not paper_path.exists():
         print(f"❌ Paper file not found: {paper_path}")
