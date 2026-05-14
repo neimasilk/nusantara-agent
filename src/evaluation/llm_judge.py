@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class TripleEvaluator:
-    """Evaluator independen untuk menilai kualitas triple KG menggunakan LLM non-DeepSeek."""
+    """Independent evaluator for assessing Knowledge Graph triple quality using a non-DeepSeek LLM."""
     
     def __init__(self, provider: str = "openai", model: str = "gpt-4o"):
         self.provider = provider
@@ -23,34 +23,34 @@ class TripleEvaluator:
             return OpenAI(api_key=os.getenv("KIMI_API_KEY") or os.getenv("MOONSHOT_API_KEY"), 
                           base_url="https://api.moonshot.ai/v1")
         else:
-            raise ValueError(f"Provider {provider} tidak didukung.")
+            raise ValueError(f"Provider {provider} is not supported.")
 
     def evaluate_triples(self, source_text: str, extracted_triples: List[Dict], gold_triples: List[Dict]) -> Dict:
-        """Membandingkan triple hasil ekstraksi dengan gold standard."""
-        
+        """Compare AI-extracted triples against the gold standard."""
+
         system_prompt = (
-            "Kamu adalah pakar hukum adat Indonesia dan Knowledge Engineer. "
-            "Tugasmu mengevaluasi kualitas Knowledge Graph triples yang diekstrak oleh AI "
-            "dibandingkan dengan Gold Standard yang dibuat manusia."
+            "You are an expert in Indonesian adat law and a Knowledge Engineer. "
+            "Your task is to evaluate the quality of Knowledge Graph triples extracted by an AI "
+            "against a human-curated Gold Standard."
         )
-        
-        user_prompt = f"""TEKS SUMBER:
+
+        user_prompt = f"""SOURCE TEXT:
 {source_text}
 
-GOLD STANDARD TRIPLES (Kebenaran Mutlak):
+GOLD STANDARD TRIPLES (Absolute Ground Truth):
 {json.dumps(gold_triples, ensure_ascii=False, indent=2)}
 
-EXTRACTED TRIPLES (Hasil AI):
+EXTRACTED TRIPLES (AI Output):
 {json.dumps(extracted_triples, ensure_ascii=False, indent=2)}
 
-Tugas:
-Bandingkan EXTRACTED TRIPLES dengan GOLD STANDARD TRIPLES berdasarkan TEKS SUMBER.
-Berikan skor 0.0 - 1.0 untuk metrik berikut:
-1. Correctness: Apakah triple yang diekstrak benar secara faktual sesuai gold standard?
-2. Completeness: Berapa banyak informasi dari gold standard yang berhasil ditangkap oleh AI?
-3. Cultural Accuracy: Apakah terminologi budaya (head, relation, tail) digunakan dengan tepat?
+Task:
+Compare the EXTRACTED TRIPLES against the GOLD STANDARD TRIPLES with reference to the SOURCE TEXT.
+Assign a score from 0.0 to 1.0 for each of the following metrics:
+1. Correctness: Are the extracted triples factually accurate relative to the gold standard?
+2. Completeness: How much of the gold standard information was successfully captured by the AI?
+3. Cultural Accuracy: Are the cultural terminology entries (head, relation, tail) used appropriately?
 
-OUTPUT WAJIB JSON:
+Output MUST be JSON:
 {{
   "scores": {{
     "correctness": 0.0,
@@ -58,10 +58,10 @@ OUTPUT WAJIB JSON:
     "cultural_accuracy": 0.0
   }},
   "analysis": {{
-    "matches": ["list triple yang cocok"],
-    "misses": ["list triple gold standard yang terlewat"],
-    "hallucinations": ["list triple ekstraksi yang salah/tidak ada di teks"],
-    "suggestions": "saran perbaikan prompt"
+    "matches": ["list of matching triples"],
+    "misses": ["list of gold standard triples that were missed"],
+    "hallucinations": ["list of extracted triples that are incorrect or absent from the source text"],
+    "suggestions": "prompt improvement suggestions"
   }}
 }}
 """
@@ -80,6 +80,6 @@ OUTPUT WAJIB JSON:
             return {"error": str(e)}
 
 if __name__ == "__main__":
-    # Test simple
+    # Simple test
     evaluator = TripleEvaluator(provider="openai", model="gpt-4o-mini")
-    # Contoh penggunaan bisa ditambahkan di sini
+    # Example usage can be added here

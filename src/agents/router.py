@@ -81,7 +81,7 @@ def _heuristic_route(query: str) -> Dict:
     adat = scores["adat"]
     conflict = scores["conflict"]
 
-    # Logika klasifikasi lebih ketat
+    # Stricter classification logic
     if adat > 0 and national > 0:
         if conflict > 0 or adat >= 2:
             label = "conflict"
@@ -108,22 +108,22 @@ def _heuristic_route(query: str) -> Dict:
 
 def _llm_route(query: str, llm: ChatOpenAI) -> Dict:
     prompt = (
-        "Klasifikasikan query hukum ke salah satu label berikut:\n"
+        "Classify the legal query into one of the following labels:\n"
         "- pure_national\n"
         "- pure_adat\n"
         "- conflict\n"
         "- consensus\n\n"
-        "Definisi singkat:\n"
-        "- pure_national: hanya hukum nasional\n"
-        "- pure_adat: hanya hukum adat\n"
-        "- conflict: ada pertentangan eksplisit antara norma nasional dan adat\n"
-        "- consensus: menyebut keduanya tapi tidak konflik eksplisit\n\n"
+        "Brief definitions:\n"
+        "- pure_national: national law only\n"
+        "- pure_adat: adat law only\n"
+        "- conflict: explicit contradiction between national and adat norms\n"
+        "- consensus: references both systems but no explicit conflict\n\n"
         f"QUERY: {query}\n\n"
-        "Output WAJIB JSON:\n"
+        "Output MUST be JSON:\n"
         "{\n"
         '  "label": "pure_national | pure_adat | conflict | consensus",\n'
         '  "confidence": 0.0,\n'
-        '  "rationale": "ringkas"\n'
+        '  "rationale": "concise"\n'
         "}\n"
     )
     response = llm.invoke([SystemMessage(content=prompt)])
