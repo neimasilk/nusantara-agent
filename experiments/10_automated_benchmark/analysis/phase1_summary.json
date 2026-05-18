@@ -1,0 +1,945 @@
+{
+  "summary": {
+    "deepseek_cond1": {
+      "n_evaluated": 70,
+      "n_correct": 43,
+      "accuracy": 0.614,
+      "wilson_95ci": [
+        0.497,
+        0.72
+      ],
+      "cohen_kappa_vs_gold": 0.361,
+      "per_label": {
+        "A": {
+          "precision": 0.125,
+          "recall": 0.167,
+          "f1": 0.143,
+          "support": 6
+        },
+        "B": {
+          "precision": 0.923,
+          "recall": 0.387,
+          "f1": 0.545,
+          "support": 31
+        },
+        "C": {
+          "precision": 0.604,
+          "recall": 0.935,
+          "f1": 0.734,
+          "support": 31
+        },
+        "D": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.667,
+          "support": 2
+        }
+      },
+      "per_domain": {
+        "Minangkabau": {
+          "n": 17,
+          "accuracy": 0.824
+        },
+        "Jawa": {
+          "n": 16,
+          "accuracy": 0.562
+        },
+        "Nasional": {
+          "n": 7,
+          "accuracy": 0.571
+        },
+        "Bali": {
+          "n": 15,
+          "accuracy": 0.6
+        },
+        "Lintas": {
+          "n": 4,
+          "accuracy": 0.5
+        },
+        "Other": {
+          "n": 11,
+          "accuracy": 0.455
+        }
+      }
+    },
+    "deepseek_cond2": {
+      "n_evaluated": 70,
+      "n_correct": 35,
+      "accuracy": 0.5,
+      "wilson_95ci": [
+        0.386,
+        0.614
+      ],
+      "cohen_kappa_vs_gold": 0.206,
+      "per_label": {
+        "A": {
+          "precision": 0.385,
+          "recall": 0.833,
+          "f1": 0.526,
+          "support": 6
+        },
+        "B": {
+          "precision": 0.667,
+          "recall": 0.065,
+          "f1": 0.118,
+          "support": 31
+        },
+        "C": {
+          "precision": 0.509,
+          "recall": 0.871,
+          "f1": 0.643,
+          "support": 31
+        },
+        "D": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.667,
+          "support": 2
+        }
+      },
+      "per_domain": {
+        "Minangkabau": {
+          "n": 17,
+          "accuracy": 0.647
+        },
+        "Jawa": {
+          "n": 16,
+          "accuracy": 0.5
+        },
+        "Nasional": {
+          "n": 7,
+          "accuracy": 0.714
+        },
+        "Bali": {
+          "n": 15,
+          "accuracy": 0.467
+        },
+        "Lintas": {
+          "n": 4,
+          "accuracy": 0.75
+        },
+        "Other": {
+          "n": 11,
+          "accuracy": 0.091
+        }
+      }
+    },
+    "kimi_cond1": {
+      "n_evaluated": 70,
+      "n_correct": 47,
+      "accuracy": 0.671,
+      "wilson_95ci": [
+        0.555,
+        0.77
+      ],
+      "cohen_kappa_vs_gold": 0.47,
+      "per_label": {
+        "A": {
+          "precision": 0.2,
+          "recall": 0.333,
+          "f1": 0.25,
+          "support": 6
+        },
+        "B": {
+          "precision": 1.0,
+          "recall": 0.516,
+          "f1": 0.681,
+          "support": 31
+        },
+        "C": {
+          "precision": 0.667,
+          "recall": 0.903,
+          "f1": 0.767,
+          "support": 31
+        },
+        "D": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "support": 2
+        }
+      },
+      "per_domain": {
+        "Minangkabau": {
+          "n": 17,
+          "accuracy": 0.882
+        },
+        "Jawa": {
+          "n": 16,
+          "accuracy": 0.625
+        },
+        "Nasional": {
+          "n": 7,
+          "accuracy": 0.714
+        },
+        "Bali": {
+          "n": 15,
+          "accuracy": 0.733
+        },
+        "Lintas": {
+          "n": 4,
+          "accuracy": 0.5
+        },
+        "Other": {
+          "n": 11,
+          "accuracy": 0.364
+        }
+      }
+    },
+    "kimi_cond2": {
+      "n_evaluated": 70,
+      "n_correct": 46,
+      "accuracy": 0.657,
+      "wilson_95ci": [
+        0.54,
+        0.758
+      ],
+      "cohen_kappa_vs_gold": 0.465,
+      "per_label": {
+        "A": {
+          "precision": 0.286,
+          "recall": 0.667,
+          "f1": 0.4,
+          "support": 6
+        },
+        "B": {
+          "precision": 1.0,
+          "recall": 0.452,
+          "f1": 0.622,
+          "support": 31
+        },
+        "C": {
+          "precision": 0.675,
+          "recall": 0.871,
+          "f1": 0.761,
+          "support": 31
+        },
+        "D": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "support": 2
+        }
+      },
+      "per_domain": {
+        "Minangkabau": {
+          "n": 17,
+          "accuracy": 0.882
+        },
+        "Jawa": {
+          "n": 16,
+          "accuracy": 0.625
+        },
+        "Nasional": {
+          "n": 7,
+          "accuracy": 0.571
+        },
+        "Bali": {
+          "n": 15,
+          "accuracy": 0.667
+        },
+        "Lintas": {
+          "n": 4,
+          "accuracy": 0.75
+        },
+        "Other": {
+          "n": 11,
+          "accuracy": 0.364
+        }
+      }
+    },
+    "grok_cond1": {
+      "n_evaluated": 70,
+      "n_correct": 39,
+      "accuracy": 0.557,
+      "wilson_95ci": [
+        0.441,
+        0.668
+      ],
+      "cohen_kappa_vs_gold": 0.26,
+      "per_label": {
+        "A": {
+          "precision": 0.143,
+          "recall": 0.167,
+          "f1": 0.154,
+          "support": 6
+        },
+        "B": {
+          "precision": 1.0,
+          "recall": 0.258,
+          "f1": 0.41,
+          "support": 31
+        },
+        "C": {
+          "precision": 0.556,
+          "recall": 0.968,
+          "f1": 0.706,
+          "support": 31
+        },
+        "D": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        }
+      },
+      "per_domain": {
+        "Minangkabau": {
+          "n": 17,
+          "accuracy": 0.824
+        },
+        "Jawa": {
+          "n": 16,
+          "accuracy": 0.438
+        },
+        "Nasional": {
+          "n": 7,
+          "accuracy": 0.571
+        },
+        "Bali": {
+          "n": 15,
+          "accuracy": 0.533
+        },
+        "Lintas": {
+          "n": 4,
+          "accuracy": 0.5
+        },
+        "Other": {
+          "n": 11,
+          "accuracy": 0.364
+        }
+      }
+    },
+    "grok_cond2": {
+      "n_evaluated": 70,
+      "n_correct": 35,
+      "accuracy": 0.5,
+      "wilson_95ci": [
+        0.386,
+        0.614
+      ],
+      "cohen_kappa_vs_gold": 0.187,
+      "per_label": {
+        "A": {
+          "precision": 0.222,
+          "recall": 0.333,
+          "f1": 0.267,
+          "support": 6
+        },
+        "B": {
+          "precision": 1.0,
+          "recall": 0.129,
+          "f1": 0.229,
+          "support": 31
+        },
+        "C": {
+          "precision": 0.527,
+          "recall": 0.935,
+          "f1": 0.674,
+          "support": 31
+        },
+        "D": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        }
+      },
+      "per_domain": {
+        "Minangkabau": {
+          "n": 17,
+          "accuracy": 0.824
+        },
+        "Jawa": {
+          "n": 16,
+          "accuracy": 0.438
+        },
+        "Nasional": {
+          "n": 7,
+          "accuracy": 0.429
+        },
+        "Bali": {
+          "n": 15,
+          "accuracy": 0.533
+        },
+        "Lintas": {
+          "n": 4,
+          "accuracy": 0.5
+        },
+        "Other": {
+          "n": 11,
+          "accuracy": 0.091
+        }
+      }
+    },
+    "deepseek_cond3": {
+      "n_evaluated": 70,
+      "n_correct": 38,
+      "accuracy": 0.543,
+      "wilson_95ci": [
+        0.427,
+        0.654
+      ],
+      "cohen_kappa_vs_gold": 0.257,
+      "per_label": {
+        "A": {
+          "precision": 0.333,
+          "recall": 0.5,
+          "f1": 0.4,
+          "support": 6
+        },
+        "B": {
+          "precision": 0.833,
+          "recall": 0.161,
+          "f1": 0.27,
+          "support": 31
+        },
+        "C": {
+          "precision": 0.547,
+          "recall": 0.935,
+          "f1": 0.69,
+          "support": 31
+        },
+        "D": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "support": 2
+        }
+      },
+      "per_domain": {
+        "Minangkabau": {
+          "n": 17,
+          "accuracy": 0.647
+        },
+        "Jawa": {
+          "n": 16,
+          "accuracy": 0.562
+        },
+        "Nasional": {
+          "n": 7,
+          "accuracy": 0.571
+        },
+        "Bali": {
+          "n": 15,
+          "accuracy": 0.467
+        },
+        "Lintas": {
+          "n": 4,
+          "accuracy": 0.75
+        },
+        "Other": {
+          "n": 11,
+          "accuracy": 0.364
+        }
+      }
+    },
+    "kimi_cond3": {
+      "n_evaluated": 70,
+      "n_correct": 46,
+      "accuracy": 0.657,
+      "wilson_95ci": [
+        0.54,
+        0.758
+      ],
+      "cohen_kappa_vs_gold": 0.455,
+      "per_label": {
+        "A": {
+          "precision": 0.308,
+          "recall": 0.667,
+          "f1": 0.421,
+          "support": 6
+        },
+        "B": {
+          "precision": 1.0,
+          "recall": 0.452,
+          "f1": 0.622,
+          "support": 31
+        },
+        "C": {
+          "precision": 0.643,
+          "recall": 0.871,
+          "f1": 0.74,
+          "support": 31
+        },
+        "D": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.667,
+          "support": 2
+        }
+      },
+      "per_domain": {
+        "Minangkabau": {
+          "n": 17,
+          "accuracy": 0.882
+        },
+        "Jawa": {
+          "n": 16,
+          "accuracy": 0.562
+        },
+        "Nasional": {
+          "n": 7,
+          "accuracy": 0.714
+        },
+        "Bali": {
+          "n": 15,
+          "accuracy": 0.733
+        },
+        "Lintas": {
+          "n": 4,
+          "accuracy": 0.75
+        },
+        "Other": {
+          "n": 11,
+          "accuracy": 0.273
+        }
+      }
+    },
+    "grok_cond3": {
+      "n_evaluated": 70,
+      "n_correct": 38,
+      "accuracy": 0.543,
+      "wilson_95ci": [
+        0.427,
+        0.654
+      ],
+      "cohen_kappa_vs_gold": 0.257,
+      "per_label": {
+        "A": {
+          "precision": 0.222,
+          "recall": 0.333,
+          "f1": 0.267,
+          "support": 6
+        },
+        "B": {
+          "precision": 1.0,
+          "recall": 0.194,
+          "f1": 0.324,
+          "support": 31
+        },
+        "C": {
+          "precision": 0.566,
+          "recall": 0.968,
+          "f1": 0.714,
+          "support": 31
+        },
+        "D": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        }
+      },
+      "per_domain": {
+        "Minangkabau": {
+          "n": 17,
+          "accuracy": 0.882
+        },
+        "Jawa": {
+          "n": 16,
+          "accuracy": 0.438
+        },
+        "Nasional": {
+          "n": 7,
+          "accuracy": 0.571
+        },
+        "Bali": {
+          "n": 15,
+          "accuracy": 0.6
+        },
+        "Lintas": {
+          "n": 4,
+          "accuracy": 0.5
+        },
+        "Other": {
+          "n": 11,
+          "accuracy": 0.091
+        }
+      }
+    }
+  },
+  "pairwise_mcnemar": {
+    "deepseek_cond1 vs deepseek_cond2": {
+      "n_disagree": 16,
+      "b": 12,
+      "c": 4,
+      "p_value": 0.07681
+    },
+    "deepseek_cond1 vs kimi_cond1": {
+      "n_disagree": 18,
+      "b": 7,
+      "c": 11,
+      "p_value": 0.48068
+    },
+    "deepseek_cond1 vs kimi_cond2": {
+      "n_disagree": 17,
+      "b": 7,
+      "c": 10,
+      "p_value": 0.62906
+    },
+    "deepseek_cond1 vs grok_cond1": {
+      "n_disagree": 14,
+      "b": 9,
+      "c": 5,
+      "p_value": 0.42395
+    },
+    "deepseek_cond1 vs grok_cond2": {
+      "n_disagree": 14,
+      "b": 11,
+      "c": 3,
+      "p_value": 0.05737
+    },
+    "deepseek_cond1 vs deepseek_cond3": {
+      "n_disagree": 13,
+      "b": 9,
+      "c": 4,
+      "p_value": 0.26685
+    },
+    "deepseek_cond1 vs kimi_cond3": {
+      "n_disagree": 23,
+      "b": 10,
+      "c": 13,
+      "p_value": 0.67764
+    },
+    "deepseek_cond1 vs grok_cond3": {
+      "n_disagree": 13,
+      "b": 9,
+      "c": 4,
+      "p_value": 0.26685
+    },
+    "deepseek_cond2 vs kimi_cond1": {
+      "n_disagree": 24,
+      "b": 6,
+      "c": 18,
+      "p_value": 0.02266
+    },
+    "deepseek_cond2 vs kimi_cond2": {
+      "n_disagree": 21,
+      "b": 5,
+      "c": 16,
+      "p_value": 0.0266
+    },
+    "deepseek_cond2 vs grok_cond1": {
+      "n_disagree": 18,
+      "b": 7,
+      "c": 11,
+      "p_value": 0.48068
+    },
+    "deepseek_cond2 vs grok_cond2": {
+      "n_disagree": 14,
+      "b": 7,
+      "c": 7,
+      "p_value": 1.0
+    },
+    "deepseek_cond2 vs deepseek_cond3": {
+      "n_disagree": 7,
+      "b": 2,
+      "c": 5,
+      "p_value": 0.45312
+    },
+    "deepseek_cond2 vs kimi_cond3": {
+      "n_disagree": 21,
+      "b": 5,
+      "c": 16,
+      "p_value": 0.0266
+    },
+    "deepseek_cond2 vs grok_cond3": {
+      "n_disagree": 15,
+      "b": 6,
+      "c": 9,
+      "p_value": 0.60724
+    },
+    "kimi_cond1 vs kimi_cond2": {
+      "n_disagree": 11,
+      "b": 6,
+      "c": 5,
+      "p_value": 1.0
+    },
+    "kimi_cond1 vs grok_cond1": {
+      "n_disagree": 20,
+      "b": 14,
+      "c": 6,
+      "p_value": 0.11532
+    },
+    "kimi_cond1 vs grok_cond2": {
+      "n_disagree": 22,
+      "b": 17,
+      "c": 5,
+      "p_value": 0.0169
+    },
+    "kimi_cond1 vs deepseek_cond3": {
+      "n_disagree": 21,
+      "b": 15,
+      "c": 6,
+      "p_value": 0.07835
+    },
+    "kimi_cond1 vs kimi_cond3": {
+      "n_disagree": 7,
+      "b": 4,
+      "c": 3,
+      "p_value": 1.0
+    },
+    "kimi_cond1 vs grok_cond3": {
+      "n_disagree": 19,
+      "b": 14,
+      "c": 5,
+      "p_value": 0.06357
+    },
+    "kimi_cond2 vs grok_cond1": {
+      "n_disagree": 17,
+      "b": 12,
+      "c": 5,
+      "p_value": 0.14346
+    },
+    "kimi_cond2 vs grok_cond2": {
+      "n_disagree": 17,
+      "b": 14,
+      "c": 3,
+      "p_value": 0.01273
+    },
+    "kimi_cond2 vs deepseek_cond3": {
+      "n_disagree": 22,
+      "b": 15,
+      "c": 7,
+      "p_value": 0.1338
+    },
+    "kimi_cond2 vs kimi_cond3": {
+      "n_disagree": 8,
+      "b": 4,
+      "c": 4,
+      "p_value": 1.0
+    },
+    "kimi_cond2 vs grok_cond3": {
+      "n_disagree": 14,
+      "b": 11,
+      "c": 3,
+      "p_value": 0.05737
+    },
+    "grok_cond1 vs grok_cond2": {
+      "n_disagree": 8,
+      "b": 6,
+      "c": 2,
+      "p_value": 0.28906
+    },
+    "grok_cond1 vs deepseek_cond3": {
+      "n_disagree": 13,
+      "b": 7,
+      "c": 6,
+      "p_value": 1.0
+    },
+    "grok_cond1 vs kimi_cond3": {
+      "n_disagree": 21,
+      "b": 7,
+      "c": 14,
+      "p_value": 0.18925
+    },
+    "grok_cond1 vs grok_cond3": {
+      "n_disagree": 7,
+      "b": 4,
+      "c": 3,
+      "p_value": 1.0
+    },
+    "grok_cond2 vs deepseek_cond3": {
+      "n_disagree": 13,
+      "b": 5,
+      "c": 8,
+      "p_value": 0.58105
+    },
+    "grok_cond2 vs kimi_cond3": {
+      "n_disagree": 21,
+      "b": 5,
+      "c": 16,
+      "p_value": 0.0266
+    },
+    "grok_cond2 vs grok_cond3": {
+      "n_disagree": 3,
+      "b": 0,
+      "c": 3,
+      "p_value": 0.25
+    },
+    "deepseek_cond3 vs kimi_cond3": {
+      "n_disagree": 22,
+      "b": 7,
+      "c": 15,
+      "p_value": 0.1338
+    },
+    "deepseek_cond3 vs grok_cond3": {
+      "n_disagree": 14,
+      "b": 7,
+      "c": 7,
+      "p_value": 1.0
+    },
+    "kimi_cond3 vs grok_cond3": {
+      "n_disagree": 18,
+      "b": 13,
+      "c": 5,
+      "p_value": 0.09625
+    }
+  },
+  "fleiss_kappa_across_6_llm_conditions": 0.469,
+  "fleiss_kappa_models_plus_gold": 0.431,
+  "hard_cases_all_fail": [
+    {
+      "id": "CS-BAL-009",
+      "gold": "B",
+      "predictions": {
+        "deepseek_cond1": "C",
+        "deepseek_cond2": "C",
+        "kimi_cond1": "C",
+        "kimi_cond2": "C",
+        "grok_cond1": "C",
+        "grok_cond2": "C",
+        "deepseek_cond3": "C",
+        "kimi_cond3": "C",
+        "grok_cond3": "C"
+      },
+      "domain": "Bali"
+    },
+    {
+      "id": "CS-BAL-014",
+      "gold": "B",
+      "predictions": {
+        "deepseek_cond1": "C",
+        "deepseek_cond2": "C",
+        "kimi_cond1": "C",
+        "kimi_cond2": "C",
+        "grok_cond1": "C",
+        "grok_cond2": "C",
+        "deepseek_cond3": "C",
+        "kimi_cond3": "C",
+        "grok_cond3": "C"
+      },
+      "domain": "Bali"
+    },
+    {
+      "id": "CS-MIN-013",
+      "gold": "B",
+      "predictions": {
+        "deepseek_cond1": "C",
+        "deepseek_cond2": "C",
+        "kimi_cond1": "C",
+        "kimi_cond2": "C",
+        "grok_cond1": "C",
+        "grok_cond2": "C",
+        "deepseek_cond3": "C",
+        "kimi_cond3": "C",
+        "grok_cond3": "C"
+      },
+      "domain": "Minangkabau"
+    },
+    {
+      "id": "GS-0010",
+      "gold": "B",
+      "predictions": {
+        "deepseek_cond1": "A",
+        "deepseek_cond2": "C",
+        "kimi_cond1": "A",
+        "kimi_cond2": "A",
+        "grok_cond1": "A",
+        "grok_cond2": "C",
+        "deepseek_cond3": "A",
+        "kimi_cond3": "A",
+        "grok_cond3": "A"
+      },
+      "domain": "Other"
+    },
+    {
+      "id": "GS-0016",
+      "gold": "B",
+      "predictions": {
+        "deepseek_cond1": "A",
+        "deepseek_cond2": "A",
+        "kimi_cond1": "C",
+        "kimi_cond2": "C",
+        "grok_cond1": "D",
+        "grok_cond2": "D",
+        "deepseek_cond3": "D",
+        "kimi_cond3": "C",
+        "grok_cond3": "D"
+      },
+      "domain": "Other"
+    },
+    {
+      "id": "GS-0019",
+      "gold": "B",
+      "predictions": {
+        "deepseek_cond1": "A",
+        "deepseek_cond2": "A",
+        "kimi_cond1": "A",
+        "kimi_cond2": "A",
+        "grok_cond1": "A",
+        "grok_cond2": "A",
+        "deepseek_cond3": "A",
+        "kimi_cond3": "A",
+        "grok_cond3": "A"
+      },
+      "domain": "Jawa"
+    },
+    {
+      "id": "GS-0020",
+      "gold": "B",
+      "predictions": {
+        "deepseek_cond1": "A",
+        "deepseek_cond2": "A",
+        "kimi_cond1": "A",
+        "kimi_cond2": "A",
+        "grok_cond1": "A",
+        "grok_cond2": "A",
+        "deepseek_cond3": "A",
+        "kimi_cond3": "A",
+        "grok_cond3": "A"
+      },
+      "domain": "Jawa"
+    },
+    {
+      "id": "GS-0021",
+      "gold": "B",
+      "predictions": {
+        "deepseek_cond1": "A",
+        "deepseek_cond2": "A",
+        "kimi_cond1": "A",
+        "kimi_cond2": "A",
+        "grok_cond1": "A",
+        "grok_cond2": "A",
+        "deepseek_cond3": "A",
+        "kimi_cond3": "A",
+        "grok_cond3": "A"
+      },
+      "domain": "Other"
+    },
+    {
+      "id": "GS-0029",
+      "gold": "B",
+      "predictions": {
+        "deepseek_cond1": "C",
+        "deepseek_cond2": "C",
+        "kimi_cond1": "C",
+        "kimi_cond2": "C",
+        "grok_cond1": "C",
+        "grok_cond2": "C",
+        "deepseek_cond3": "C",
+        "kimi_cond3": "C",
+        "grok_cond3": "C"
+      },
+      "domain": "Other"
+    },
+    {
+      "id": "GS-0031",
+      "gold": "B",
+      "predictions": {
+        "deepseek_cond1": "A",
+        "deepseek_cond2": "A",
+        "kimi_cond1": "A",
+        "kimi_cond2": "A",
+        "grok_cond1": "A",
+        "grok_cond2": "A",
+        "deepseek_cond3": "A",
+        "kimi_cond3": "A",
+        "grok_cond3": "A"
+      },
+      "domain": "Jawa"
+    }
+  ],
+  "n_hard_cases": 10
+}

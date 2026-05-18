@@ -1,7 +1,10 @@
-# Environment Variables
+# Environment Variables (any extension — protects against .env.txt etc.)
 .env
+.env.*
 .env.local
 .env.*.local
+.env.txt
+*.env.txt
 
 # Python
 __pycache__/
@@ -35,3 +38,13 @@ logs/
 # OS
 .DS_Store
 Thumbs.db
+
+# Experiment 10 — large external data artifacts (downloaded, not authored here)
+experiments/10_automated_benchmark/indo-law.zip
+experiments/10_automated_benchmark/indo-law-main/
+experiments/10_automated_benchmark/samples/ledwindra-putusan-per-kasus.json
+experiments/10_automated_benchmark/samples/*.xml
+
+# Experiment 10 — run artifacts (kept local, summarized into analysis/)
+experiments/10_automated_benchmark/runs/
+experiments/10_automated_benchmark/harness/__pycache__/

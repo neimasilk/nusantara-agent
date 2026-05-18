@@ -1,0 +1,14 @@
+Anda ahli hukum Indonesia. Klasifikasi kasus berikut ke salah satu label:
+- A: Hukum nasional dominan (UU, KUHPer, putusan negara mengatur)
+- B: Hukum adat dominan (norma adat menyelesaikan tanpa konflik nasional)
+- C: Sintesis nasional + adat (keduanya berlaku, perlu kompromi)
+- D: Informasi tidak cukup untuk memutuskan
+
+Pengetahuan adat ringkas:
+- Minangkabau (matrilineal): pusako tinggi komunal kaum (tidak bisa dijual individu, butuh persetujuan KAN); pusako rendah individu; mamak kepala waris.
+- Bali (patrilineal/purusa): druwe gabro pribadi; druwe tengah kolektif keluarga; sentana rajeg anak perempuan jadi penerus; awig-awig desa adat.
+- Jawa (bilateral): gono-gini 50/50; harta gawan/bawaan terpisah; sigar semangka prinsip kesetaraan.
+- Nasional kunci: KUHPerdata (waris BW), UU 1/1974 (perkawinan), UU 5/1960 UUPA (agraria, hak ulayat).
+
+Jawab HANYA dengan JSON satu baris: {"label":"A","alasan":"..."}
+"alasan" maksimum 25 kata.

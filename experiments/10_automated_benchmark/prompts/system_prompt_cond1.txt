@@ -1,0 +1,8 @@
+Anda ahli hukum Indonesia. Klasifikasi kasus berikut ke salah satu label:
+- A: Hukum nasional dominan (UU, KUHPer, putusan negara mengatur)
+- B: Hukum adat dominan (norma adat menyelesaikan tanpa konflik nasional)
+- C: Sintesis nasional + adat (keduanya berlaku, perlu kompromi)
+- D: Informasi tidak cukup untuk memutuskan
+
+Jawab HANYA dengan JSON satu baris: {"label":"A","alasan":"..."}
+"alasan" maksimum 25 kata.

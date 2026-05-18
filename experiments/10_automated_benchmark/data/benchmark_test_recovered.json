@@ -1,0 +1,128 @@
+[
+  {
+    "id": "CS-BAL-012",
+    "query": "Kasepekang vs hak konstitusional warga.",
+    "gold_label": "C",
+    "source": "docs\\human_only\\artifacts\\paket_kerja_4_jam_ahli2_batch1_ready_to_handout.md"
+  },
+  {
+    "id": "CS-JAW-015",
+    "query": "Seorang ayah di Jawa memberikan pesan terakhir (wekas) di depan saksi keluarga agar rumah utama diberikan kepada anak bungsunya karena telah merawatnya. Anak-anak lain menuntut pembagian rata sesuai hukum nasional.",
+    "gold_label": "C",
+    "source": "docs\\human_only\\artifacts\\paket_interview_online_ahli1_terisi_2026-02-09.md"
+  },
+  {
+    "id": "CS-JAW-019",
+    "query": "Hak ragil (Adat) + Kompensasi harta lain untuk kakak (Nasional/Keadilan).",
+    "gold_label": "C",
+    "source": "docs\\human_only\\artifacts\\paket_kerja_4_jam_ahli3_batch1_terisi_2026-02-08.md"
+  },
+  {
+    "id": "CS-LIN-016",
+    "query": "Keluarga urban di Jakarta terdiri dari suami (Suku Minang) dan istri (Suku Jawa). Mereka memiliki aset di Jakarta. Saat suami wafat, terjadi perdebatan apakah menggunakan sistem matrilineal (adat suami) atau hukum perdata nasional.",
+    "gold_label": "A",
+    "source": "docs\\human_only\\artifacts\\keputusan_ahli_final.md"
+  },
+  {
+    "id": "CS-LIN-052",
+    "query": "Sebuah lembaga adat ingin mengajukan kredit ke Bank Nasional dengan menjaminkan tanah ulayat mereka. Bank meminta bukti kepemilikan formal, sementara tanah tersebut tidak memiliki sertifikat individual melainkan pengakuan adat kolektif.",
+    "gold_label": "C",
+    "source": "docs\\human_only\\artifacts\\keputusan_ahli_final.md"
+  },
+  {
+    "id": "CS-MIN-005",
+    "query": "Pusako rendah milik pribadi, sah via Notaris (Seminar Adat 1959 & Faraidh).",
+    "gold_label": "C",
+    "source": "docs\\human_only\\artifacts\\paket_kerja_4_jam_ahli3_batch1_terisi_2026-02-08.md"
+  },
+  {
+    "id": "CS-MIN-013",
+    "query": "Seorang mamak menjual tanah pusako tinggi dengan alasan darurat adat (menikahkan anak kemenakan perempuan). Hasil penjualannya dibelikan ruko di kota. Apakah ruko tersebut berstatus harta pencaharian atau tetap harta pusako?",
+    "gold_label": "B",
+    "source": "docs\\human_only\\artifacts\\paket_interview_online_ahli1_terisi_2026-02-09.md"
+  },
+  {
+    "id": "CS-NAS-010",
+    "query": "Terjadi perkawinan di bawah umur (15 tahun) yang dilakukan secara adat dan agama karena dispensasi adat setempat. Hal ini bertentangan dengan UU Perkawinan terbaru yang mensyaratkan batas minimal 19 tahun.",
+    "gold_label": "A",
+    "source": "docs\\human_only\\artifacts\\paket_interview_online_ahli1_terisi_2026-02-09.md"
+  },
+  {
+    "id": "CS-NAS-041",
+    "query": "Putusan Pengadilan (Nasional) + Proses FPIC sesuai standar internasional (Adat).",
+    "gold_label": "C",
+    "source": "docs\\human_only\\artifacts\\paket_kerja_4_jam_ahli3_batch1_terisi_2026-02-08.md"
+  },
+  {
+    "id": "GS-0003",
+    "query": "Pengelolaan harta ini berada di bawah otoritas Mamak Kepala Waris, namun kepemilikannya tetap pada anggota perempuan dalam kaum tersebut.",
+    "gold_label": "B",
+    "source": "docs\\human_only\\paket_labeling_50_kasus_baru.md"
+  },
+  {
+    "id": "GS-0007",
+    "query": "Hukum Adat Waris Bali: Sentana Rajeg dan Druwe Tengah Sistem kekerabatan masyarakat adat Bali bersifat patrilineal (kapurusa), di mana garis keturunan ditarik dari pihak laki-laki.",
+    "gold_label": "B",
+    "source": "docs\\human_only\\paket_labeling_50_kasus_baru.md"
+  },
+  {
+    "id": "GS-0010",
+    "query": "Status hukum anak perempuan tersebut ditingkatkan sehingga disamakan dengan anak laki-laki dalam hal pewarisan.",
+    "gold_label": "B",
+    "source": "docs\\human_only\\paket_labeling_50_kasus_baru.md"
+  },
+  {
+    "id": "GS-0012",
+    "query": "Druwe Tengah: Hukum adat Bali mengenal konsep \"druwe tengah\" atau \"duwe tengah\", yaitu harta bersama keluarga atau kerabat yang tidak dibagi secara individual.",
+    "gold_label": "B",
+    "source": "docs\\human_only\\paket_labeling_50_kasus_baru.md"
+  },
+  {
+    "id": "GS-0019",
+    "query": "Harta gono-gini (harta bersama) adalah harta yang diperoleh suami dan istri selama masa perkawinan.",
+    "gold_label": "B",
+    "source": "docs\\human_only\\paket_labeling_50_kasus_baru.md"
+  },
+  {
+    "id": "GS-0020",
+    "query": "Jika terjadi perceraian atau kematian, masing-masing pihak biasanya berhak atas separuh dari harta gono-gini.",
+    "gold_label": "B",
+    "source": "docs\\human_only\\paket_labeling_50_kasus_baru.md"
+  },
+  {
+    "id": "GS-0021",
+    "query": "Sementara itu, \"harta bawaan\" (harta asal) adalah harta yang dimiliki masing-masing pihak sebelum perkawinan berlangsung atau diperoleh secara pribadi (misal dari warisan leluhur mereka sendiri).",
+    "gold_label": "B",
+    "source": "docs\\human_only\\paket_labeling_50_kasus_baru.md"
+  },
+  {
+    "id": "GS-0036",
+    "query": "- **Trade-off:** Mengikuti adat mempertahankan identitas budaya dan stabilitas sosial kaum, tetapi berpotensi mengabaikan hubungan ekonomi langsung dengan anak kandung mamak. **Keputusan Pluralistik:** Dalam kerangka pluralisme hukum, keputusan harus mendahulukan hukum adat Minangkabau karena diakui secara nasional (sepanjang hidup dan tidak bertentangan hukum). Pusako tinggi adalah harta ulayat kolektif, sehingga mamak hanya pengelola. Ahli warisnya adalah kemenakan, sesuai sistem matrilineal.",
+    "gold_label": "C",
+    "source": "docs\\human_only\\paket_labeling_50_kasus_baru.md"
+  },
+  {
+    "id": "GS-0038",
+    "query": "**Keputusan pluralistik:** Prioritas utama adalah **hukum nasional (UU Perkawinan 1974)** untuk harta pencaharian (*pusako rendah*), sehingga anak kandung adalah ahli waris utama. Namun, penyelesaian terbaik diawali dengan **musyawarah keluarga** untuk mencapai kesepakatan, mengakomodasi nilai adat secara sukarela (misal, pemberian sebagian kepada kemenakan). Jika musyawarah gagal, Pengadilan akan memutus berdasarkan hukum nasional.",
+    "gold_label": "C",
+    "source": "docs\\human_only\\paket_labeling_50_kasus_baru.md"
+  },
+  {
+    "id": "GS-0039",
+    "query": "**Sintesis Perbandingan:** Peran mamak dalam adat Minangkabau berpusat pada hubungan avunkular (paman-kemenakan) dan pengelolaan harta pusaka tinggi (kolektif, matrilineal). Hak anak dalam hukum nasional (KUHPerdata) berporos pada hubungan parental (orang tua-anak) dan pewarisan individual atas harta pencaharian orang tuanya.",
+    "gold_label": "C",
+    "source": "docs\\human_only\\paket_labeling_50_kasus_baru.md"
+  },
+  {
+    "id": "GS-0042",
+    "query": "**Jawaban Final:** Syarat sah perjanjian menurut Pasal 1320 KUHPerdata adalah: (1) kesepakatan, (2) kecakapan, (3) objek tertentu, dan (4) kausa yang halal. Dampak ketidakpenuhannya dibedakan: pelanggaran syarat subjektif (1 & 2) membuat perjanjian **dapat dibatalkan** (voidable), sedangkan pelanggaran syarat objektif (3 & 4) membuatnya **batal demi hukum** (null void).",
+    "gold_label": "A",
+    "source": "docs\\human_only\\paket_labeling_50_kasus_baru.md"
+  },
+  {
+    "id": "GS-0045",
+    "query": "**Jawaban Final:** Dalam adat Bali, **sentana** adalah anak angkat yang diangkat untuk melanjutkan keturunan dan memelihara orang tua, terutama dalam keluarga tanpa anak laki-laki kandung. Posisinya dalam pewarisan menunjukkan **konflik norma** antara hukum adat dan hukum nasional (KUHPerdata). **Trade-off:** - **Hukum Adat Bali:** Mengakui sentana sebagai ahli waris utama orang tua angkat, khususnya untuk harta pencaharian (*gono-gini*). Penyelesaian sengketa di masyarakat adat cenderung mengikuti ini.",
+    "gold_label": "C",
+    "source": "docs\\human_only\\paket_labeling_50_kasus_baru.md"
+  }
+]
